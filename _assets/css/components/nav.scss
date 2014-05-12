@@ -1,9 +1,9 @@
-@import "home/variables";
-@import "home/mixins/clearfix-mixin";
+@import "variables";
+@import "mixins/clearfix-mixin";
 
-@import "home/placeholders/type";
-@import "home/placeholders/space";
-@import "home/placeholders/layout";
+@import "placeholders/type";
+@import "placeholders/space";
+@import "placeholders/layout";
 
 .nav {
   @extend %u-cf;

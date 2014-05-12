@@ -1,4 +1,4 @@
-@import "home/variables";
+@import "variables";
 
 $width: 900px;
 $small-width: 560px;
@@ -71,7 +71,7 @@ $extra-small-width: 440px;
     right: 10px;
     width: 28px;
     height: 28px;
-    background: $gray-lighten image-url("/assets/icons/invalid.png") center center no-repeat;
+    background: $gray-lighten image-url("icons/invalid.png") center center no-repeat;
   }
 }
 

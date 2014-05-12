@@ -1,7 +1,7 @@
 name: GoCardless
 description: GoCardless is the UK's #1 for Direct Debit, serving more companies than any other provider. Perfect for recurring billing and B2B invoicing.
 url: https://gocardless.com
-baseurl: /
+baseurl:
 email: help@gocardless.com
 twitter: gocardless
 phone: '020 7183 8674'
@@ -18,6 +18,7 @@ redcarpet:
 excerpt_length: 250
 
 assets:
+  cache: true
   baseurl: /assets
   sources:
     - _assets

@@ -1,9 +1,9 @@
 /*
- *= require home/shared/normalize
- *= require home/shared/appify
- *= require home/shared/scaffold
- *= require_directory ./shared
- *= require_directory ./components
- *= require_directory ./utils
- *= require_directory ./modules
+ *= require css/shared/normalize
+ *= require css/shared/appify
+ *= require css/shared/scaffold
+ *= require_directory ./css/shared
+ *= require_directory ./css/components
+ *= require_directory ./css/utils
+ *= require_directory ./css/modules
  */

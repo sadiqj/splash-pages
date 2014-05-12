@@ -1,4 +1,4 @@
-@import "home/mixins/icon-mixin";
+@import "mixins/icon-mixin";
 
 .how-to__header {
   position: relative;
@@ -15,47 +15,47 @@
 
 .how-to__header--user:before {
   left: -41px;
-  @include icon('/assets/home/how-to/icons-s/user-sm', 21px, 21px);
+  @include icon('how-to/icons-s/user-sm', 21px, 21px);
 }
 
 .how-to__header--payment:before {
   left: -41px;
   top: 3px;
-  @include icon('/assets/home/how-to/icons-s/payments-sm', 21px, 21px);
+  @include icon('how-to/icons-s/payments-sm', 21px, 21px);
 }
 
 .how-to__header--users:before {
   left: -69px;
-  @include icon('/assets/home/how-to/icons-s/users-sm', 49px, 24px);
+  @include icon('how-to/icons-s/users-sm', 49px, 24px);
 }
 
 .how-to__header--paid:before {
   left: -97px;
-  @include icon('/assets/home/how-to/icons-s/paid-sm', 77px, 26px);
+  @include icon('how-to/icons-s/paid-sm', 77px, 26px);
 }
 
 .how-to__header--logo:before {
   left: -41px;
   top: 4px;
-  @include icon('/assets/home/how-to/icons-s/logo-sm', 21px, 17px);
+  @include icon('how-to/icons-s/logo-sm', 21px, 17px);
 }
 
 .how-to__header--pending:before {
   left: -41px;
   top: 3px;
-  @include icon('/assets/home/how-to/icons-s/pending-sm', 21px, 21px);
+  @include icon('how-to/icons-s/pending-sm', 21px, 21px);
 }
 
 .how-to__header--support:before {
   left: -41px;
   top: 3px;
-  @include icon('/assets/home/how-to/icons-s/support-sm', 21px, 21px);
+  @include icon('how-to/icons-s/support-sm', 21px, 21px);
 }
 
 .how-to__header--bank:before {
   left: -43px;
   top: 1px;
-  @include icon('/assets/home/how-to/icons-s/bank-sm', 23px, 22px);
+  @include icon('how-to/icons-s/bank-sm', 23px, 22px);
 }
 
 .how-to__icon {
@@ -116,39 +116,39 @@
 }
 
 .how-to__icon__img--user {
-  @include icon('/assets/home/how-to/icons-l/user', 48px, 48px);
+  @include icon('how-to/icons-l/user', 48px, 48px);
 }
 
 .how-to__icon__img--payment {
-  @include icon('/assets/home/how-to/icons-l/payment', 46px, 48px);
+  @include icon('how-to/icons-l/payment', 46px, 48px);
 }
 
 .how-to__icon__img--users {
-  @include icon('/assets/home/how-to/icons-l/users', 100px, 48px);
+  @include icon('how-to/icons-l/users', 100px, 48px);
 }
 
 .how-to__icon__img--paid {
-  @include icon('/assets/home/how-to/icons-l/paid', 115px, 39px);
+  @include icon('how-to/icons-l/paid', 115px, 39px);
 }
 
 .how-to__icon__img--logo {
-  @include icon('/assets/home/how-to/icons-l/logo', 48px, 36px);
+  @include icon('how-to/icons-l/logo', 48px, 36px);
 }
 
 .how-to__icon__img--pending {
-  @include icon('/assets/home/how-to/icons-l/pending', 48px, 48px);
+  @include icon('how-to/icons-l/pending', 48px, 48px);
 }
 
 .how-to__icon__img--refund {
-  @include icon('/assets/home/how-to/icons-l/refund', 46px, 46px);
+  @include icon('how-to/icons-l/refund', 46px, 46px);
 }
 
 .how-to__icon__img--support {
-  @include icon('/assets/home/how-to/icons-l/support', 48px, 48px);
+  @include icon('how-to/icons-l/support', 48px, 48px);
 }
 
 .how-to__icon__img--bank {
-  @include icon('/assets/home/how-to/icons-l/bank', 52px, 52px);
+  @include icon('how-to/icons-l/bank', 52px, 52px);
 }
 
 // Overrides height if @include icon

@@ -1,4 +1,4 @@
-@import "home/mixins/icon-mixin";
+@import "mixins/icon-mixin";
 
 .benefits-container {
   background-color: #F1F1F1;
@@ -32,7 +32,7 @@
 }
 
 .benefits-container__content__hero {
-  @include icon('home/benefits/hero', 495px, 363px);
+  @include icon('benefits/hero', 495px, 363px);
 }
 
 .benefits-container__content__icon {
