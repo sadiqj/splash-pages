@@ -1,6 +1,6 @@
-@import "home/variables";
+@import "variables";
 
-@import "home/mixins/at2x-mixin";
+@import "mixins/at2x-mixin";
 
 .case-study {
     border: 1px solid $hr-border-color;
@@ -17,16 +17,16 @@
 
 
 .case-study--greater-anglia {
-    @include at2x("/assets/home/stories/greater-anglia/greater-anglia-logo", 241px, 38px, ".png");
+    @include at2x("stories/greater-anglia/greater-anglia-logo", 241px, 38px, ".png");
     background-position: 50% 50px;
 }
 
 .case-study--funding-circle {
-    @include at2x("/assets/home/stories/funding-circle/funding-circle-logo", 229px, 57px, ".png");
+    @include at2x("stories/funding-circle/funding-circle-logo", 229px, 57px, ".png");
     background-position: 50% 41px;
 }
 
 .case-study--has-bean-coffee {
-    @include at2x("/assets/home/stories/has-bean/has-bean-logo", 133px, 60px, ".png");
+    @include at2x("stories/has-bean/has-bean-logo", 133px, 60px, ".png");
     background-position: 50% 41px;
 }

@@ -1,4 +1,4 @@
-@import "home/mixins/at2x-mixin";
+@import "mixins/at2x-mixin";
 
 @mixin icon($image_name, $width, $height, $extention: '.png') {
   @include at2x($image_name, $width, $height, $extention);

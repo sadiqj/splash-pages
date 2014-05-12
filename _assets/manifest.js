@@ -11,45 +11,45 @@
 
 // ERROR TRACKING
 //= require components/raven-js/dist/raven
-//= require raven-config
+//= require js/raven-config
 
 // PLUGINS
-//= require lib/bootstrap/tooltip
-//= require lib/bootstrap/popover
-//= require lib/bootstrap/tab
-//= require lib/froogaloop
+//= require js/lib/bootstrap/tooltip
+//= require js/lib/bootstrap/popover
+//= require js/lib/bootstrap/tab
+//= require js/lib/froogaloop
 
-//= require connect-compatibility
-//= require directives/ng-gc-ga-event-tracker-directive
+//= require js/connect-compatibility
+//= require js/directives/ng-gc-ga-event-tracker-directive
 
 // -----------------------------------------------------------------------------
 // INTERNALLY AUTHORED DEPENDENCIES
 // -----------------------------------------------------------------------------
 
 // LIBS
-//= require modal/modal
-//= require mute-console/mute-console
+//= require js/modal/modal
+//= require js/mute-console/mute-console
 
 // GOCARDLESS
-//= require gocardless-global
-//= require module
-//= require utils
+//= require js/gocardless-global
+//= require js/module
+//= require js/utils
 
-//= require base-view
-//= require class-extends
+//= require js/base-view
+//= require js/class-extends
 
-//= require widgets/modals
-//= require widgets/modal-vimeo
-//= require widgets/demo-modal
-//= require widgets/popover
-//= require widgets/form-submit
-//= require widgets/value-show
-//= require widgets/affix
-//= require widgets/sticky-tabs
+//= require js/widgets/modals
+//= require js/widgets/modal-vimeo
+//= require js/widgets/demo-modal
+//= require js/widgets/popover
+//= require js/widgets/form-submit
+//= require js/widgets/value-show
+//= require js/widgets/affix
+//= require js/widgets/sticky-tabs
 
-//= require main
+//= require js/main
 
-//= require metrics/page-router
-//= require metrics/signup-funnel
-//= require metrics/request-demo-funnel
-//= require metrics/pageview-events
+//= require js/metrics/page-router
+//= require js/metrics/signup-funnel
+//= require js/metrics/request-demo-funnel
+//= require js/metrics/pageview-events

@@ -1,4 +1,4 @@
-@import "home/mixins/clearfix-mixin";
+@import "mixins/clearfix-mixin";
 
 .thumbnails {
   @include clearfix();

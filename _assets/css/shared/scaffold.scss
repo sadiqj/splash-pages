@@ -1,6 +1,6 @@
-@import "home/variables";
-@import "home/mixins/clearfix-mixin";
-@import "home/mixins/box-sizing-mixin";
+@import "variables";
+@import "mixins/clearfix-mixin";
+@import "mixins/box-sizing-mixin";
 
 *, :before, :after {
   @include box-sizing(border-box);
