@@ -1,0 +1,55 @@
+@import "home/variables";
+@import "home/mixins/clearfix-mixin";
+
+@import "home/placeholders/type";
+@import "home/placeholders/space";
+@import "home/placeholders/layout";
+
+.nav {
+  @extend %u-cf;
+  @extend %u-text-heading;
+  @extend %u-text-h6;
+  @extend %u-text-semi;
+}
+
+.nav__item {
+  @extend %u-margin-Rm;
+  float: left;
+  display: block;
+}
+
+.nav__item.is-active {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.nav-tabs {
+  li {
+    &.active {
+      a {
+        color: $text-color;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    a{
+      display: block;
+      padding: 8px 10px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.nav-tabs--gutter-L li a {
+  padding-left: 35px;
+}
+
+.nav-tabs__section-heading {
+  color: #9D9D9D;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding-left: 35px;
+}

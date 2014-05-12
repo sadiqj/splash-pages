@@ -1,0 +1,42 @@
+.tabbed-well {
+  border-radius: 3px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  background: #F1F1F1;
+  overflow: hidden;
+}
+
+.tabbed-well__nav {
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.tabbed-well__nav.active .tabbed-well__nav__target {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 2px 0 #FFF;
+}
+
+.tabbed-well__nav:last-child .tabbed-well__nav__target {
+  border-right: none;
+}
+
+.tabbed-well__nav__target {
+  display: block;
+  color: #777777;
+  padding: 8px 0;
+  border-right: 1px solid #DADADA;
+
+  &:hover {
+    text-decoration: none;
+    color: #777777;
+  }
+}
+
+.tabbed-well__content {
+  border-radius: 3px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+}

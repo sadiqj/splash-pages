@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{site.name}}</title>
+    <meta name=viewport content="width=device-width">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.url }}/atom.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gocardless">
+    {% if page.author %}
+      {% assign author = site.data.authors[page.author] %}
+      <meta name="author" content="{{ author.name }}" />
+      {% if author.twitter %}
+      <meta name="twitter:creator" content="@{{ author.twitter }}">
+      {% endif %}
+    {% endif %}
+
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+      <meta property="og:title" content="{{ page.title }}">
+      {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+      <meta name="og:description" content="{{ page.description }}">
+      {% else if content %}
+      <meta name="description" content="{{ content | strip_html | truncatewords: 25 }}">
+      <meta name="og:description" content="{{ content | strip_html | truncatewords: 25 }}">
+      {% endif %}
+    {% else %}
+      <meta name="description" content="{{site.description}}">
+    {% endif %}
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image }}">
+    <meta property="og:image" content="{{ page.image }}">
+    {% endif %}
+    <meta property="og:site_name" content="{{site.name}}">
+    <meta property="og:locale" content="en_GB" />
+    {% if page.date %}
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d" }}">
+    {% else %}
+    <meta property="og:type" content="blog">
+    {% endif %}
+
+    {% stylesheet manifest %}
+
+    <!--[if lt IE 9]>
+    <script src=//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+      <header class="header">
+        <div class="stripe u-cf">
+          <div class="container header__blog u-cf">
+            <div class="header__blog__logo u-cf">
+              <a href="{{site.baseurl}}/">
+                <img src="https://gc-blog.s3.amazonaws.com/assets/images/blog-logo@2x.png" width="261" height="31">
+              </a>
+            </div>
+            <div class="header__blog__button u-cf">
+              <!-- Twitter follow button -->
+              <a href="https://twitter.com/gocardless" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @gocardless</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+          </div>
+        </div>
+        <div class="header__gc stripe stripe--blue u-cf">
+          {% if page.url == '/index.html' %}
+            {% assign source = "b-cta-ih" %}
+          {% else %}
+            {% assign source = "b-cta-ph" %}
+          {% endif %}
+          {% include gc_info.html %}
+        </div>
+      </header>
+    </div>
+
+    <div role=main class="container main">
+    {{ content }}
+    </div>
+
+    <div class="footer__gc stripe stripe--blue u-cf">
+      {% assign source = "b-cta-f" %}
+      {% include gc_info.html %}
+    </div>
+
+    {% if paginator.page and page.url != '/archive/index.html' %}
+    <div class="container">
+      <div class="pagination u-cf u-text-h6">
+        <div class="u-pull-start">
+          {% if paginator.next_page %}
+          <a class="btn btn--pagination btn--older" href="{{site.baseurl}}/page{{paginator.next_page}}/">Older</a>
+          {% endif %}
+        </div>
+
+        <div class="u-pull-end">
+          {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+            <a class="btn btn--pagination btn--newer" href="{{site.baseurl}}/">Newer</a>
+            {% else %}
+            <a class="btn btn--pagination btn--newer" href="{{site.baseurl}}/page{{paginator.previous_page}}/">Newer</a>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <footer class="footer u-text-center ">
+      <div class="container">
+        <a href="https://gocardless.com/?s=b-f">
+          <img src="https://gc-blog.s3.amazonaws.com/assets/images/blog-footer@2x.png" width="191" height="59">
+        </a>
+      </div>
+    </footer>
+
+    {% javascript manifest %}
+
+    <script>
+      window._gaq || (window._gaq = []);
+      _gaq.unshift(
+        ['_setAccount','UA-22094249-2'],
+        ['_setDomainName', '.gocardless.com'],
+        ['_trackPageview']
+      );
+      (function(d,t){
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=true;
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)
+      }(document,'script'));
+
+      // GoCardless tracking code
+      (function(w, d, t, g, e, r){
+        w[g] || (w[g] = function(){ (w[g].q = w[g].q || []).push(arguments) });
+        w[g].l = + new Date;
+        e = d.createElement(t);
+        r = d.getElementsByTagName(t)[0];
+        e.async = true;
+        e.src = '//d1mmrmxi7sv2ut.cloudfront.net/gct.js';
+        r.parentNode.insertBefore(e, r);
+      }(window, document, 'script', 'gct'));
+      {% if site.env == 'production' %}
+      gct('initialize', 'mixpanel', {
+        token: '0ebe37c4ed96a0432e989cc20ca1db04',
+        debug: false,
+        cookieName: '_gc_visitorid'
+      });
+      {% else %}
+      gct('initialize', 'mixpanel', {
+        token: 'fa029f81daf1c512854b1345342c4e6c',
+        debug: true,
+        cookieName: '_gc_visitorid'
+      });
+      {% endif %}
+    </script>
+
+    <script>
+      // Google remarketing code
+      window.google_conversion_id = 999825953;
+      window.google_custom_params = window.google_tag_params;
+      window.google_remarketing_only = true;
+    </script>
+    <script src="//www.googleadservices.com/pagead/conversion.js"></script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/999825953/?value=0&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+  </body>
+</html>

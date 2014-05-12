@@ -1,0 +1,44 @@
+@import "home/mixins/icon-mixin";
+
+.icon-gc-logo-header {
+  @include icon('logos/gc-logo-blue', 149px, 17px);
+}
+
+.icon--check {
+  width: 46px;
+  float: right;
+  position: relative;
+  top: 12px;
+}
+
+.icon-benefits-clock {
+  @include icon('home/benefits/clock', 37px, 37px);
+}
+
+.icon-benefits-adjustments {
+  @include icon('home/benefits/adjustments', 37px, 37px);
+}
+
+.icon-benefits-lock {
+  @include icon('home/benefits/lock', 36px, 52px);
+}
+
+.icon-benefits-quote {
+  @include icon('home/benefits/quote', 60px, 56px);
+}
+
+.icon-dashboard-control {
+  @include icon('home/benefits/control', 53px, 38px);
+}
+
+.icon-dashboard-users {
+  @include icon('home/benefits/users', 48px, 42px);
+}
+
+.icon-dashboard-lock {
+  @include icon('home/benefits/lock--red', 36px, 52px);
+}
+
+.icon-home-flag {
+    width: 42px;
+}

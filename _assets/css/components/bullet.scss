@@ -1,0 +1,15 @@
+.bullet {
+  border-radius: 50%;
+  background-color: #ccc;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  font-weight: bold;
+  float: right;
+}
+
+.bullet--red {
+  background-color: #E34D36;
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+@import "home/variables";
+
+.site-gutter {
+  padding-left: $gutter-space-container;
+  padding-right: $gutter-space-container;
+}
+
+.site-gutter-R {
+  padding-right: $gutter-space-container;
+}
+
+.site-gutter-L {
+  padding-left: $gutter-space-container;
+}

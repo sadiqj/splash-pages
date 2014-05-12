@@ -1,0 +1,21 @@
+@import "home/mixins/clearfix-mixin";
+
+.thumbnails {
+  @include clearfix();
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.thumbnails__item {
+  float: left;
+  width: 227px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 28px;
+
+  &:nth-child(4n+1) {
+    clear: left;
+  }
+}

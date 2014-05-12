@@ -1,0 +1,41 @@
+@import "home/mixins/icon-mixin";
+
+.benefits-container {
+  background-color: #F1F1F1;
+}
+
+.benefits-container__wrapper {
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-container__header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.benefits-container__content {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px 2px 1px rgba(0, 0, 0, 0.12);
+}
+
+.benefits-container__content__divider {
+  border-top: 1px solid #ECECEC;
+}
+
+.benefits-container__content__hero-content {
+  position: relative;
+  top: 20px;
+}
+
+.benefits-container__content__hero {
+  @include icon('home/benefits/hero', 495px, 363px);
+}
+
+.benefits-container__content__icon {
+  position: relative;
+  top: -5px;
+}

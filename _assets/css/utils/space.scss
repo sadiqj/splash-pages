@@ -1,0 +1,446 @@
+@import "home/placeholders/space";
+
+// Used to adjust the default spacing between components
+// Use with great care!
+//
+// <type>-<location><size>
+//
+// A = all
+// T = top
+// R = right
+// B = bottom
+// L = left
+// H = horizontal
+// V = vertical
+//
+// n = none
+// s = small
+// m = medium
+// l = large
+
+//////////////
+// All padding
+
+.u-padding-Al {
+  @extend %u-padding-Al;
+}
+
+.u-padding-Axm {
+  @extend %u-padding-Axm;
+}
+
+.u-padding-Am {
+  @extend %u-padding-Am;
+}
+
+.u-padding-As {
+  @extend %u-padding-As;
+}
+
+.u-padding-Axs {
+  @extend %u-padding-Axs;
+}
+
+.u-padding-Axxs {
+  @extend %u-padding-Axxs;
+}
+
+.u-padding-An {
+  @extend %u-padding-An;
+}
+
+// All margin
+
+.u-margin-Al {
+  @extend %u-margin-Al;
+}
+
+.u-margin-Axm {
+  @extend %u-margin-Axm;
+}
+
+.u-margin-Am {
+  @extend %u-margin-Am;
+}
+
+.u-margin-As {
+  @extend %u-margin-As;
+}
+
+.u-margin-Axs {
+  @extend %u-margin-Axs;
+}
+
+.u-margin-Axxs {
+  @extend %u-margin-Axxs;
+}
+
+.u-margin-An {
+  @extend %u-margin-An;
+}
+
+//////////////////
+// Vertical margin
+
+.u-margin-Vl {
+  @extend %u-margin-Vl;
+}
+
+.u-margin-Vxm {
+  @extend %u-margin-Vxm;
+}
+
+.u-margin-Vm {
+  @extend %u-margin-Vm;
+}
+
+.u-margin-Vs {
+  @extend %u-margin-Vs;
+}
+
+.u-margin-Vxs {
+  @extend %u-margin-Vxs;
+}
+
+.u-margin-Vxxs {
+  @extend %u-margin-Vxxs;
+}
+
+.u-margin-Vn {
+  @extend %u-margin-Vn;
+}
+
+// Vertical padding
+
+.u-padding-Vl {
+  @extend %u-padding-Vl;
+}
+
+.u-padding-Vxm {
+  @extend %u-padding-Vxm;
+}
+
+.u-padding-Vm {
+  @extend %u-padding-Vm;
+}
+
+.u-padding-Vs {
+  @extend %u-padding-Vs;
+}
+
+.u-padding-Vxs {
+  @extend %u-padding-Vxs;
+}
+
+.u-padding-Vxxs {
+  @extend %u-padding-Vxxs;
+}
+
+.u-padding-Vn {
+  @extend %u-padding-Vn;
+}
+
+////////////////////
+// Horizontal margin
+
+.u-margin-Hl {
+  @extend %u-margin-Hl;
+}
+
+.u-margin-Hxm {
+  @extend %u-margin-Hxm;
+}
+
+.u-margin-Hm {
+  @extend %u-margin-Hm;
+}
+
+.u-margin-Hs {
+  @extend %u-margin-Hs;
+}
+
+.u-margin-Hxs {
+  @extend %u-margin-Hxs;
+}
+
+.u-margin-Hxxs {
+  @extend %u-margin-Hxxs;
+}
+
+.u-margin-Hn {
+  @extend %u-margin-Hn;
+}
+
+// Horizontal padding
+
+.u-padding-Hl {
+  @extend %u-padding-Hl;
+}
+
+.u-padding-Hxm {
+  @extend %u-padding-Hxm;
+}
+
+.u-padding-Hm {
+  @extend %u-padding-Hm;
+}
+
+.u-padding-Hs {
+  @extend %u-padding-Hs;
+}
+
+.u-padding-Hxs {
+  @extend %u-padding-Hxs;
+}
+
+.u-padding-Hxxs {
+  @extend %u-padding-Hxxs;
+}
+
+.u-padding-Hn {
+  @extend %u-padding-Hn;
+}
+
+/////////////
+// Top margin
+
+.u-margin-Tl {
+  @extend %u-margin-Tl;
+}
+
+.u-margin-Txm {
+  @extend %u-margin-Txm;
+}
+
+.u-margin-Tm {
+  @extend %u-margin-Tm;
+}
+
+.u-margin-Ts {
+  @extend %u-margin-Ts;
+}
+
+.u-margin-Txs {
+  @extend %u-margin-Txs;
+}
+
+.u-margin-Txxs {
+  @extend %u-margin-Txxs;
+}
+
+.u-margin-Tn {
+  @extend %u-margin-Tn;
+}
+
+// Top padding
+
+.u-padding-Tl {
+  @extend %u-padding-Tl;
+}
+
+.u-padding-Txm {
+  @extend %u-padding-Txm;
+}
+
+.u-padding-Tm {
+  @extend %u-padding-Tm;
+}
+
+.u-padding-Ts {
+  @extend %u-padding-Ts;
+}
+
+.u-padding-Txs {
+  @extend %u-padding-Txs;
+}
+
+.u-padding-Txxs {
+  @extend %u-padding-Txxs;
+}
+
+.u-padding-Tn {
+  @extend %u-padding-Tn;
+}
+
+////////////////
+// Bottom margin
+
+.u-margin-Bl {
+  @extend %u-margin-Bl;
+}
+
+.u-margin-Bxm {
+  @extend %u-margin-Bxm;
+}
+
+.u-margin-Bm {
+  @extend %u-margin-Bm;
+}
+
+.u-margin-Bs {
+  @extend %u-margin-Bs;
+}
+
+.u-margin-Bxs {
+  @extend %u-margin-Bxs;
+}
+
+.u-margin-Bxxs {
+  @extend %u-margin-Bxxs;
+}
+
+.u-margin-Bn {
+  @extend %u-margin-Bn;
+}
+
+// Bottom padding
+
+.u-padding-Bl {
+  @extend %u-padding-Bl;
+}
+
+.u-padding-Bxm {
+  @extend %u-padding-Bxm;
+}
+
+.u-padding-Bm {
+  @extend %u-padding-Bm;
+}
+
+.u-padding-Bs {
+  @extend %u-padding-Bs;
+}
+
+.u-padding-Bxs {
+  @extend %u-padding-Bxs;
+}
+
+.u-padding-Bxxs {
+  @extend %u-padding-Bxxs;
+}
+
+.u-padding-Bn {
+  @extend %u-padding-Bn;
+}
+
+///////////////
+// Right margin
+
+.u-margin-Rl {
+  @extend %u-margin-Rl;
+}
+
+.u-margin-Rxm {
+  @extend %u-margin-Rxm;
+}
+
+.u-margin-Rm {
+  @extend %u-margin-Rm;
+}
+
+.u-margin-Rs {
+  @extend %u-margin-Rs;
+}
+
+.u-margin-Rxs {
+  @extend %u-margin-Rxs;
+}
+
+.u-margin-Rxxs {
+  @extend %u-margin-Rxxs;
+}
+
+.u-margin-Rn {
+  @extend %u-margin-Rn;
+}
+
+// Right padding
+
+.u-padding-Rl {
+  @extend %u-padding-Rl;
+}
+
+.u-padding-Rxm {
+  @extend %u-padding-Rxm;
+}
+
+.u-padding-Rm {
+  @extend %u-padding-Rm;
+}
+
+.u-padding-Rs {
+  @extend %u-padding-Rs;
+}
+
+.u-padding-Rxs {
+  @extend %u-padding-Rxs;
+}
+
+.u-padding-Rxxs {
+  @extend %u-padding-Rxxs;
+}
+
+.u-padding-Rn {
+  @extend %u-padding-Rn;
+}
+
+//////////////
+// Left margin
+
+.u-margin-Ll {
+  @extend %u-margin-Ll;
+}
+
+.u-margin-Lxm {
+  @extend %u-margin-Lxm;
+}
+
+.u-margin-Lm {
+  @extend %u-margin-Lm;
+}
+
+.u-margin-Ls {
+  @extend %u-margin-Ls;
+}
+
+.u-margin-Lxs {
+  @extend %u-margin-Lxs;
+}
+
+.u-margin-Lxxs {
+  @extend %u-margin-Lxxs;
+}
+
+.u-margin-Ln {
+  @extend %u-margin-Ln;
+}
+
+// Left padding
+
+.u-padding-Ll {
+  @extend %u-padding-Ll;
+}
+
+.u-padding-Lxm {
+  @extend %u-padding-Lxm;
+}
+
+.u-padding-Lm {
+  @extend %u-padding-Lm;
+}
+
+.u-padding-Ls {
+  @extend %u-padding-Ls;
+}
+
+.u-padding-Lxs {
+  @extend %u-padding-Lxs;
+}
+
+.u-padding-Lxxs {
+  @extend %u-padding-Lxxs;
+}
+
+.u-padding-Ln {
+  @extend %u-padding-Ln;
+}
