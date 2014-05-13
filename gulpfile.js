@@ -1,9 +1,12 @@
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+
 var gulp = require('gulp');
-var pipe = require('pipe/gulp');
-var connect = require('gulp-connect');
 var concat = require('gulp-concat');
-var awspublish = require('gulp-awspublish');
-var jshint = require('gulp-jshint');
+var eslint = require('gulp-eslint');
+var csslint = require('gulp-csslint');
 var size = require('gulp-size');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
@@ -11,104 +14,132 @@ var filter = require('gulp-filter');
 var cache = require('gulp-cache');
 var useref = require('gulp-useref');
 var exec = require('gulp-exec');
-var rework = require('gulp-rework');
-var suitRework = require('rework-suit');
-var pseudos = require('rework-pseudos');
 var csso = require('gulp-csso');
-var streamAutoprefixer = require('gulp-autoprefixer');
-var autoprefixer = require('autoprefixer');
-var wiredep = require('wiredep');
+var rubySass = require('gulp-ruby-sass');
+var bowerFiles = require('gulp-bower-files');
+var flatten = require('gulp-flatten');
+var livereload = require('gulp-livereload');
+var gutil = require('gulp-util');
+var autoprefixer = require('gulp-autoprefixer');
+var through = require('through2');
+var nunjucks = require('nunjucks');
+var debug = require('debug')('gocardless');
+var _ = require('lodash');
+var chalk = require('chalk');
+var tempWrite = require('temp-write');
 
-var paths = {
-  jsSrc: './js/**/*.js'
-};
-
-gulp.task('jshint', function() {
-  return gulp.src(paths.jsSrc)
-      .pipe(jshint('./.jshintrc'))
-      .pipe(jshint.reporter('default'));
-})
-
-gulp.task('transpile', function() {
-  gulp.src(paths.jsSrc)
-      .pipe(pipe.traceur({
-        sourceMaps: true
-      }))
-      .pipe(gulp.dest('dist/js'))
-      .pipe(size());
+gulp.task('eslint', function() {
+  return gulp.src('assets/js/**/*.js')
+    .pipe(eslint('eslint.json'))
+    .pipe(eslint.reporter('default'));
 });
 
-gulp.task('libs', function() {
-  gulp.src([
-    './node_modules/requirejs/require.js',
-    './node_modules/traceur/bin/traceur-runtime.js',
-    './node_modules/pipe/node_modules/assert/dist/amd/assert.js',
-    './node_modules/q/q.js',
-    './node_modules/es6-shim/es6-shim.js'
-  ]).pipe(gulp.dest('dist/js'))
-    .pipe(size());
-
-  gulp.src([
-    './node_modules/di/dist/amd/*.js'
-  ]).pipe(gulp.dest('dist/js/di'))
-    .pipe(size());
+gulp.task('csslint', function() {
+  return gulp.src('assets/css/**/*.css')
+    .pipe(csslint('csslintrc.json'))
+    .pipe(csslint.reporter());
 });
 
-gulp.task('js', ['transpile', 'libs']);
+gulp.task('css', function () {
+  return gulp.src('assets/css/main.scss')
+    .pipe(rubySass({
+      style: 'expanded',
+      precision: 3,
+      bundleExec: true,
+      loadPath: ['assets/css'],
+      sourcemap: true
+    }))
+    .pipe(autoprefixer('last 1 version'))
+    .pipe(gulp.dest('.tmp/css'))
+    .pipe(size());;
+});
+
+gulp.task('assets', function () {
+  return gulp.src(['assets/*.*'])
+    .pipe(gulp.dest('dist'));
+});
 
 gulp.task('public', function() {
-  return gulp.src('./public/**/*', { base: './public' })
+  return gulp.src('public/**/*', { base: 'public' })
     .pipe(gulp.dest('dist'))
     .pipe(size());
 });
 
-gulp.task('css', function () {
-  return gulp.src([
-    './css/normalize.css',
-    './css/**/*.css'
-  ]).pipe(
-      streamAutoprefixer('> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1')
-    )
-    .pipe(rework(
-      rework.at2x(),
-      suitRework,
-      pseudos(),
-      {
-        sourcemap: false
-      }
-    ))
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest('dist/css'))
+gulp.task('html', ['css'], function () {
+  var jsFilter = filter('**/*.js');
+  var cssFilter = filter('**/*.css');
+
+  return gulp.src('templates/**/*.html')
+    .pipe(useref.assets({ searchPath: '{.tmp,assets}' }))
+    .pipe(jsFilter)
+    .pipe(uglify())
+    .pipe(jsFilter.restore())
+    .pipe(cssFilter)
+    // .pipe(csso())
+    .pipe(cssFilter.restore())
+    .pipe(useref.restore())
+    .pipe(useref())
+    .pipe(filter('**/*.html'))
+    .pipe(gulp.dest('.tmp/templates'))
     .pipe(size());
 });
 
-gulp.task('html', ['css', 'js'], function () {
-    var jsFilter = filter('*.js');
-    var cssFilter = filter('*.css');
-
-    return gulp.src('dist/**/*.html')
-        .pipe(useref.assets())
-        .pipe(jsFilter)
-        .pipe(uglify())
-        .pipe(jsFilter.restore())
-        .pipe(cssFilter)
-        .pipe(csso())
-        .pipe(cssFilter.restore())
-        .pipe(useref.restore())
-        .pipe(useref())
-        .pipe(gulp.dest('dist'))
-        .pipe(size());
+gulp.task('template', ['html'], function () {
+  return gulp.src('pages/**/*.html')
+    .pipe(template())
+    .pipe(gulp.dest('dist'))
+    .pipe(size());
 });
 
+var env = nunjucks.configure(path.join(__dirname, '.tmp', 'templates'), {
+  autoescape: false
+});
+
+function template(options) {
+  options = options || {};
+
+  return through.obj(function(file, enc, cb) {
+    var _this = this;
+
+    if (file.isNull()) {
+      this.push(file);
+      return cb();
+    }
+
+    if (file.isStream()) {
+      this.emit('error', new gutil.PluginError('template',
+                                               'Streaming not supported'));
+      return cb();
+    }
+
+    gutil.log('template:', 'checking file:', chalk.blue(file.path));
+
+    var options = _.extend({
+    });
+
+    var templateStr = file.contents.toString();
+
+    var res = env.renderString(templateStr, options);
+
+    gutil.log('template:', 'converted file:',
+              chalk.blue(file.path));
+
+    file.contents = new Buffer(res);
+    _this.push(file);
+
+    cb();
+  });
+}
+
 gulp.task('images', function () {
-    return gulp.src('./images/**/*')
-        .pipe(cache(imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })))
-        .pipe(gulp.dest('dist/images'))
-        .pipe(size());
+  return gulp.src('assets/images/**/*')
+    .pipe(cache(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/images'))
+    .pipe(size());
 });
 
 gulp.task('clean', function () {
@@ -116,64 +147,53 @@ gulp.task('clean', function () {
       .pipe(clean());
 });
 
-gulp.task('upload', function () {
-  var publisher = awspublish.create({
-    key: process.env.AWS_ACCESS_KEY,
-    secret: process.env.AWS_SECRET,
-    bucket: 'invadedbynorway.com',
-    region: 'eu-west-1'
-  });
-
-  //'Cache-Control': 'max-age=315360000, public'
-  var headers = {
-    'x-amz-acl': 'public-read'
-  };
-
-  // should work but retard headers are set
-  //.pipe(awspublish.gzip({ ext: '.gz' }))
-
-  // gzip and publish all js files (uploaded files will have a .gz extension)
-  // Set Content-Length, Content-Type and Cache-Control headers
-  // Set x-amz-acl to public-read by default
-  // Set Content-Encoding headers
-  return gulp.src('dist/**/*')
-    .pipe(publisher.publish(headers))
-    .pipe(publisher.sync())
-    .pipe(publisher.cache()) // create a cache file to speed up next uploads
-    .pipe(awspublish.reporter()); // print upload updates to console
+gulp.task('fonts', function () {
+  var streamqueue = require('streamqueue');
+  return streamqueue({ objectMode: true },
+    bowerFiles(),
+    gulp.src('assets/fonts/**/*')
+  )
+    .pipe(filter('**/*.{eot,svg,ttf,woff}'))
+    .pipe(flatten())
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe(size());
 });
 
-gulp.task('metalsmith', function() {
-  gulp.src(__dirname)
-    .pipe(exec('node scripts/metalsmith.js', {
-      silent: false
-    }));
+gulp.task('connect', function () {
+  var connect = require('connect');
+  var app = connect()
+      .use(require('connect-livereload')({ port: 35729 }))
+      .use(connect.static('dist'))
+      .use(connect.static('.tmp'));
+
+  require('http').createServer(app)
+    .listen(9000)
+    .on('listening', function () {
+      console.log('Started connect web server on http://localhost:9000');
+    });
 });
 
 gulp.task('watch', ['build', 'connect'], function () {
+  var server = livereload();
+
   gulp.watch([
-    './dist/**/*'
+    'dist/**/*'
   ], function (event) {
-      return gulp.src(event.path)
-        .pipe(connect.reload());
+    return gulp.src(event.path)
+      .pipe(connect.reload());
+  }).on('change', function (file) {
+    server.changed(file.path);
   });
 
-  gulp.watch(['./site/**/*.html', './templates/**/*.html'], ['metalsmith']);
-  gulp.watch('./public/**/*', ['public']);
-  gulp.watch('./css/**/*.css', ['css']);
-  gulp.watch('./js/**/*.js', ['js']);
-  gulp.watch('./images/**/*', ['images']);
+  gulp.watch(['pages/**/*.html', 'templates/**/*.html'], ['template']);
+  gulp.watch('public/**/*', ['public']);
+  gulp.watch('assets/css/**/*.css', ['css']);
+  gulp.watch('assets/js/**/*.js', ['js']);
+  gulp.watch('assets/images/**/*', ['images']);
 });
 
-gulp.task('connect', connect.server({
-  root: './dist',
-  port: 9000,
-  open: {
-    browser: 'Google Chrome'
-  },
-  livereload: true
-}));
+gulp.task('build', ['template', 'images', 'fonts', 'public', 'assets']);
 
-gulp.task('build', ['metalsmith', 'html', 'images', 'public']);
-
-gulp.task('publish', ['build', 'upload']);
+gulp.task('default', ['clean'], function () {
+  gulp.start('build');
+});

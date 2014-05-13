@@ -6,7 +6,8 @@
     "lodash": "~2.4.1",
     "jquery": "~1.11.0",
     "es5-shim": "~3.1.1",
-    "raven-js": "~1.1.15"
+    "raven-js": "~1.1.15",
+    "modernizr": "~2.8.1"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
