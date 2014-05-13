@@ -56,12 +56,12 @@ gulp.task('css', function () {
 
 gulp.task('assets', function () {
   return gulp.src(['assets/*.*'])
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('public', function() {
   return gulp.src('public/**/*', { base: 'public' })
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('build'))
     .pipe(size());
 });
 
@@ -87,7 +87,7 @@ gulp.task('html', ['css'], function () {
 gulp.task('template', ['html'], function () {
   return gulp.src('pages/**/*.html')
     .pipe(template())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('build'))
     .pipe(size());
 });
 
@@ -138,12 +138,12 @@ gulp.task('images', function () {
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('build/images'))
     .pipe(size());
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['dist'], { read: false })
+    return gulp.src(['build'], { read: false })
       .pipe(clean());
 });
 
@@ -155,7 +155,7 @@ gulp.task('fonts', function () {
   )
     .pipe(filter('**/*.{eot,svg,ttf,woff}'))
     .pipe(flatten())
-    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest('build/fonts'))
     .pipe(size());
 });
 
@@ -163,7 +163,7 @@ gulp.task('connect', function () {
   var connect = require('connect');
   var app = connect()
       .use(require('connect-livereload')({ port: 35729 }))
-      .use(connect.static('dist'))
+      .use(connect.static('build'))
       .use(connect.static('.tmp'));
 
   require('http').createServer(app)
@@ -177,7 +177,7 @@ gulp.task('watch', ['build', 'connect'], function () {
   var server = livereload();
 
   gulp.watch([
-    'dist/**/*'
+    'build/**/*'
   ], function (event) {
     return gulp.src(event.path)
       .pipe(connect.reload());
@@ -194,6 +194,6 @@ gulp.task('watch', ['build', 'connect'], function () {
 
 gulp.task('build', ['template', 'images', 'fonts', 'public', 'assets']);
 
-gulp.task('default', ['clean'], function () {
-  gulp.start('build');
+gulp.task('default', [], function () {
+  gulp.start('watch');
 });
