@@ -193,7 +193,16 @@ gulp.task('watch', ['build', 'connect'], function () {
 });
 
 gulp.task('unit', function() {
-  return gulp.src('assets/**/*.spec.js')
+  return gulp.src([
+      'assets/components/jasmine-helpers/*.js',
+      'assets/components/jquery/dist/jquery.js',
+      'assets/components/lodash/dist/lodash.compat.js',
+      'assets/components/angular/angular.js',
+      'assets/components/angular-mocks/angular-mocks.js',
+      'assets/components/es5-shim/es5-shim.js',
+      'assets/components/raven-js/dist/raven.js',
+      'assets/js/**/*.js'
+    ])
     .pipe(karma({
       configFile: 'karma-unit.conf.js',
       action: 'run'

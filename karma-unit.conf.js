@@ -6,7 +6,7 @@ if (!process.env.GC_SAUCE_LABS_KEY) {
 
 module.exports = function(config) {
   config.set({
-    basePath: 'assets',
+    basePath: './assets/js',
     preprocessors: {
       '**/*.html': ['ng-html2js']
     },
