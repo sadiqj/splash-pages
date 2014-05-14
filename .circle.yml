@@ -1,0 +1,14 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - make deploy target=live-production
+
+  staging:
+    branch: dev
+    commands:
+      - make deploy target=live-staging
+
+machine:
+  node:
+    version: 0.10.22

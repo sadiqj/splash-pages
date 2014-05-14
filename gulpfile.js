@@ -21,6 +21,7 @@ var flatten = require('gulp-flatten');
 var livereload = require('gulp-livereload');
 var gutil = require('gulp-util');
 var autoprefixer = require('gulp-autoprefixer');
+var karma = require('gulp-karma');
 var through = require('through2');
 var nunjucks = require('nunjucks');
 var debug = require('debug')('gocardless');
@@ -190,6 +191,19 @@ gulp.task('watch', ['build', 'connect'], function () {
   gulp.watch('assets/js/**/*.js', ['js']);
   gulp.watch('assets/images/**/*', ['images']);
 });
+
+gulp.task('unit', function() {
+  return gulp.src('assets/**/*.spec.js')
+    .pipe(karma({
+      configFile: 'karma-unit.conf.js',
+      action: 'run'
+    }))
+    .on('error', function(err) {
+      throw err;
+    });
+});
+
+gulp.task('test', ['unit']);
 
 gulp.task('build', ['template', 'images', 'fonts', 'public', 'assets']);
 

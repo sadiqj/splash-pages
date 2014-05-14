@@ -1,5 +1,17 @@
 /build
 .tmp
+.bundle
 node_modules
 .DS_Store
 .sass-cache
+npm-debug.log
+spec/coverage/
+spec/test_out/
+*.sublime-workspace
+test-results.xml
+selenium
+sauce_connect.log
+/.workon/log
+coverage
+reports
+libpeerconnection.log
