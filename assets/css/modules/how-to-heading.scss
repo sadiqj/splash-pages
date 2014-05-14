@@ -1,0 +1,58 @@
+@import "home/mixins/icon-mixin";
+.how-to-heading {
+  position: relative;
+  margin-bottom: 24px;
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    background-image-repeat: no-repeat;
+  }
+}
+
+.how-to-heading--user:before {
+  left: -41px;
+  @include icon('/assets/home/how-to/icons-s/user-sm', 21px, 21px);
+}
+
+.how-to-heading--payment:before {
+  left: -41px;
+  top: 3px;
+  @include icon('/assets/home/how-to/icons-s/payments-sm', 21px, 21px);
+}
+
+.how-to-heading--users:before {
+  left: -69px;
+  @include icon('/assets/home/how-to/icons-s/users-sm', 49px, 24px);
+}
+
+.how-to-heading--paid:before {
+  left: -97px;
+  @include icon('/assets/home/how-to/icons-s/paid-sm', 77px, 26px);
+}
+
+.how-to-heading--logo:before {
+  left: -41px;
+  top: 4px;
+  @include icon('/assets/home/how-to/icons-s/logo-sm', 21px, 17px);
+}
+
+.how-to-heading--pending:before {
+  left: -41px;
+  top: 3px;
+  @include icon('/assets/home/how-to/icons-s/pending-sm', 21px, 21px);
+}
+
+.how-to-heading--support:before {
+  left: -41px;
+  top: 3px;
+  @include icon('/assets/home/how-to/icons-s/support-sm', 21px, 21px);
+}
+
+.how-to-heading--bank:before {
+  left: -43px;
+  top: 1px;
+  @include icon('/assets/home/how-to/icons-s/bank-sm', 23px, 22px);
+}

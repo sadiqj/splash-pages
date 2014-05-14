@@ -13,3 +13,14 @@
   background-color: #E34D36;
   color: #fff;
 }
+
+.bullet--invert {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.bullet--h3 {
+  position: relative;
+  top: -3px;
+}

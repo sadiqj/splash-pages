@@ -1,7 +1,7 @@
 //////////////////////////
 // Link-specific utilities
 //////////////////////////
-@import "variables";
+@import "home/variables";
 
 // Link clean
 //
@@ -85,7 +85,7 @@
 // Style an inline element to look like a link
 
 .u-link {
-  color: $link-color;
+  color: $primary-blue;
   cursor: pointer;
   text-decoration: none;
 }
@@ -93,7 +93,7 @@
 .u-link:hover,
 .u-link:focus,
 .u-link:active {
-  color: $link-hover-color;
+  color: $primary-blue-darken;
   text-decoration: underline;
 }
 
@@ -105,7 +105,36 @@
 .u-link:hover:disabled,
 .u-link:focus:disabled,
 .u-link:active:disabled {
-  color: $link-color;
+  color: $primary-blue;
+  text-decoration: none;
+}
+
+// Inverted Link
+//
+// Style an inline element to look like an inverted link
+
+.u-link-invert {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.u-link-invert:hover,
+.u-link-invert:focus,
+.u-link-invert:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.u-link-invert:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.u-link-invert:hover:disabled,
+.u-link-invert:focus:disabled,
+.u-link-invert:active:disabled {
+  color: white;
   text-decoration: none;
 }
 

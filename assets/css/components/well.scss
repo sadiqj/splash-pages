@@ -1,4 +1,4 @@
-@import "variables";
+@import "home/variables";
 
 .well {
   padding: 15px $gutter-space-base;
@@ -40,7 +40,7 @@
 
 .well--hollow-blue {
   box-shadow: none;
-  border: 1px solid #3B6694;
+  border: 1px solid $primary-blue;
   background: transparent;
 }
 

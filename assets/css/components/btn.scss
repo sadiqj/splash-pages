@@ -1,4 +1,4 @@
-@import "variables";
+@import "home/variables";
 
 // A generic button class
 //
@@ -24,8 +24,8 @@
 
   border-style: solid;
   border-width: 1px;
-  background-color: $link-color;
-  border-color: $link-color;
+  background-color: $primary-blue;
+  border-color: $primary-blue;
   border-radius: $border-radius-base;
   text-align: center;
   font-size: $font-size-h6;
@@ -47,7 +47,7 @@
 
 .btn:active,
 .btn--active {
-  background-color: darken($link-color, 7%);
+  background-color: $primary-blue-darken;
 }
 
 .btn[disabled],

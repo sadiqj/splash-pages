@@ -29,16 +29,16 @@ $page-min-width: 780px + $gutter-space-container * 2;
 ////////////////////////////////////////////////////////////////////////////////
 
 $black-blue: #4E4E4E;
-$black-blue-lighten: darken($black-blue, 7%);
+$black-blue-lighten: lighten($black-blue, 7%);
 $black-blue-darken: darken($black-blue, 7%);
 
 $dark-blue: #203844;
-$dark-blue-lighten: darken($dark-blue, 7%); // #4D616C
+$dark-blue-lighten: lighten($dark-blue, 7%); // #4D616C
 $dark-blue-darken: darken($dark-blue, 7%);
 
-$primary-blue: #2891cd;
-$primary-blue-lighten: lighten($primary-blue, 7%);
-$primary-blue-darken: darken($primary-blue, 7%); // #2F95D6
+$primary-blue: #395D8D;
+$primary-blue-lighten: lighten($primary-blue, 5%);
+$primary-blue-darken: darken($primary-blue, 5%); // #2F95D6
 
 $primary-red: #E14E3D;
 $primary-red-lighten: lighten($primary-red, 7%);
@@ -80,8 +80,8 @@ $subheader-color: #657483;
 
 $text-color: #4E4E4E;
 
-$link-color: #3B6694;
-$link-hover-color: darken(#3B6694, 5%);
+$link-color: #395D8D;
+$link-hover-color: darken(#395D8D, 5%);
 
 $btn-color: #FFFFFF;
 
@@ -98,3 +98,5 @@ $input-disabled-color: #444;
 
 $text-color-invert: #fff;
 $text-color-invert-secondary: #D2D9E0;
+
+$horizontal-ruler-top-invert-color: #4f6f91;

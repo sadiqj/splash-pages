@@ -1,4 +1,4 @@
-@import "variables";
+@import "home/variables";
 
 .image-grid-item {
   display: block;
@@ -7,7 +7,7 @@
   border-radius: 3px;
   text-align: center;
   &:hover {
-    border-color: $link-color;
+    border-color: $primary-blue;
   }
 }
 

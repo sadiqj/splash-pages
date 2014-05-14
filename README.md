@@ -6,7 +6,7 @@ $ bundle install
 $ gulp watch
 ```
 
-[http://localhost:8000/index.html](http://localhost:8000/index.html)
+[http://localhost:9000/index.html](http://localhost:9000/index.html)
 
 # Deploying manually
 

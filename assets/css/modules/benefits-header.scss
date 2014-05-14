@@ -1,9 +1,11 @@
+@import "home/variables";
+
 .benefits-header--green {
   color: #46A93C;
 }
 
 .benefits-header--blue {
-  color: #395D8D;
+  color: $primary-blue;
 }
 
 .benefits-header--red {

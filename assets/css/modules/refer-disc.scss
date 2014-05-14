@@ -1,0 +1,10 @@
+@import "home/variables";
+
+.refer-disc {
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  border-radius: 50%;
+  font-size: $font-size-hero;
+  border: 2px solid $primary-blue;
+}
