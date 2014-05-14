@@ -1,0 +1,44 @@
+{
+  "name": "splash-pages",
+  "version": "0.0.1",
+  "description": "GoCardless Splash Pages",
+  "homepage": "http://gocardless.com",
+  "repository": "git@github.com:gocardless/splash-pages.git",
+  "dependencies": {
+    "gulp-cache": "^0.1.1",
+    "gulp-clean": "^0.2.4",
+    "gulp-concat": "^2.1.7",
+    "gulp-csso": "^0.2.6",
+    "gulp-exec": "^2.0.1",
+    "gulp-filter": "^0.4.1",
+    "gulp-imagemin": "^0.5.0",
+    "gulp-eslint": "^0.1.6",
+    "gulp-csslint": "^0.1.4",
+    "gulp-size": "^0.3.1",
+    "gulp-uglify": "^0.3.0",
+    "gulp-useref": "^0.4.3",
+    "gulp-util": "^2.2.9",
+    "gulp-bower-files": "^0.2.1",
+    "gulp-flatten": "^0.0.2",
+    "gulp-livereload": "^1.2.0",
+    "gulp-ruby-sass": "^0.4.3",
+    "gulp-autoprefixer": "^0.0.7",
+    "nunjucks": "^1.0.5",
+    "wiredep": "^1.4.4",
+    "opn": "^0.1.1",
+    "streamqueue": "^0.0.7",
+    "lodash": "^2.4.1",
+    "debug": "^0.8.1",
+    "connect": "^2.14.4",
+    "connect-livereload": "^0.4.0",
+    "streamqueue": "^0.0.7",
+    "through2": "^0.4.1",
+    "chalk": "^0.4.0",
+    "temp-write": "^0.3.0"
+  },
+  "scripts": {
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }} - GoCardless</title>
+    <meta name="description" content="{% block description %}GoCardless is the UK\'s #1 for Direct Debit, serving more companies than any other provider. Perfect for recurring billing and B2B invoicing.{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:image" content="logos/gocardless-square.png">
+    <meta name="og:image:secure_url" content="logos/gocardless-square.png">
+    <meta name="google-site-verification" content="Y80kah87ghJhwiDqw-5ap234p9wCcGt6kMRxvnamtHU">
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.js -->
+    <script src="components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://plus.google.com/+Gocardless" rel="publisher">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6271452/780042/css/fonts.css">
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div>
+      {% block content %}{% endblock %}
+    </div>
+
+    <!-- build:js js/vendor.js -->
+    <script src="components/jquery/dist/jquery.js"></script>
+    <script src="components/lodash/dist/lodash.compat.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/es5-shim/es5-shim.js"></script>
+    <script src="components/raven-js/dist/raven.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/main.js -->
+    <script src="js/raven-config.js"></script>
+    <script src="js/lib/bootstrap/tooltip.js"></script>
+    <script src="js/lib/bootstrap/popover.js"></script>
+    <script src="js/lib/bootstrap/tab.js"></script>
+    <script src="js/lib/froogaloop.js"></script>
+    <script src="js/connect-compatibility.js"></script>
+    <script src="js/directives/ng-gc-ga-event-tracker-directive.js"></script>
+    <script src="js/modal/modal.js"></script>
+    <script src="js/mute-console/mute-console.js"></script>
+    <script src="js/gocardless-global.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/base-view.js"></script>
+    <script src="js/class-extends.js"></script>
+    <script src="js/widgets/modals.js"></script>
+    <script src="js/widgets/modal-vimeo.js"></script>
+    <script src="js/widgets/demo-modal.js"></script>
+    <script src="js/widgets/popover.js"></script>
+    <script src="js/widgets/form-submit.js"></script>
+    <script src="js/widgets/value-show.js"></script>
+    <script src="js/widgets/affix.js"></script>
+    <script src="js/widgets/sticky-tabs.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/metrics/page-router.js"></script>
+    <script src="js/metrics/signup-funnel.js"></script>
+    <script src="js/metrics/request-demo-funnel.js"></script>
+    <script src="js/metrics/pageview-events.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,8 +1,5 @@
-/_drafts
-/_site
-.bundle
+/build
+.tmp
 node_modules
 .DS_Store
-.rvmrc
-.ruby-version
-.jekyll-assets-cache
+.sass-cache
