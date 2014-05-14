@@ -1,5 +1,5 @@
-@import "home/mixins/icon-mixin";
-@import "home/mixins/clearfix-mixin";
+@import "mixins/icon-mixin";
+@import "mixins/clearfix-mixin";
 
 .how-to-thumbnails {
   @include clearfix();
@@ -99,39 +99,39 @@
 }
 
 .how-to-thumbnails__icon__img--user {
-  @include icon('/assets/home/how-to/icons-l/user', 48px, 48px);
+  @include icon('/images/how-to/icons-l/user', 48px, 48px);
 }
 
 .how-to-thumbnails__icon__img--payment {
-  @include icon('/assets/home/how-to/icons-l/payment', 46px, 48px);
+  @include icon('/images/how-to/icons-l/payment', 46px, 48px);
 }
 
 .how-to-thumbnails__icon__img--users {
-  @include icon('/assets/home/how-to/icons-l/users', 100px, 48px);
+  @include icon('/images/how-to/icons-l/users', 100px, 48px);
 }
 
 .how-to-thumbnails__icon__img--paid {
-  @include icon('/assets/home/how-to/icons-l/paid', 115px, 39px);
+  @include icon('/images/how-to/icons-l/paid', 115px, 39px);
 }
 
 .how-to-thumbnails__icon__img--logo {
-  @include icon('/assets/home/how-to/icons-l/logo', 48px, 36px);
+  @include icon('/images/how-to/icons-l/logo', 48px, 36px);
 }
 
 .how-to-thumbnails__icon__img--pending {
-  @include icon('/assets/home/how-to/icons-l/pending', 48px, 48px);
+  @include icon('/images/how-to/icons-l/pending', 48px, 48px);
 }
 
 .how-to-thumbnails__icon__img--refund {
-  @include icon('/assets/home/how-to/icons-l/refund', 46px, 46px);
+  @include icon('/images/how-to/icons-l/refund', 46px, 46px);
 }
 
 .how-to-thumbnails__icon__img--support {
-  @include icon('/assets/home/how-to/icons-l/support', 48px, 48px);
+  @include icon('/images/how-to/icons-l/support', 48px, 48px);
 }
 
 .how-to-thumbnails__icon__img--bank {
-  @include icon('/assets/home/how-to/icons-l/bank', 52px, 52px);
+  @include icon('/images/how-to/icons-l/bank', 52px, 52px);
 }
 
 // Overrides height if @include icon

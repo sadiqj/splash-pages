@@ -31,8 +31,10 @@ var tempWrite = require('temp-write');
 
 gulp.task('eslint', function() {
   return gulp.src('assets/js/**/*.js')
-    .pipe(eslint('eslint.json'))
-    .pipe(eslint.reporter('default'));
+    .pipe(eslint({
+      config: 'eslint.json'
+    }))
+    .pipe(eslint.format('stylish'));
 });
 
 gulp.task('csslint', function() {
@@ -45,7 +47,7 @@ gulp.task('css', function () {
   return gulp.src('assets/css/main.scss')
     .pipe(rubySass({
       style: 'expanded',
-      precision: 3,
+      precision: 10,
       bundleExec: true,
       loadPath: ['assets/css'],
       sourcemap: true
@@ -87,9 +89,25 @@ gulp.task('html', ['css'], function () {
     .pipe(size());
 });
 
+function templateMetadata() {
+  var isProduction = (process.env.NODE_ENV == 'production');
+  var mixpanelToken = isProduction ? '0ebe37c4ed96a0432e989cc20ca1db04' :
+    'fa029f81daf1c512854b1345342c4e6c';
+
+  return {
+    ENV_PRODUCTION: isProduction,
+    MIXPANEL_TOKEN: mixpanelToken,
+    TRADING_ADDRESS: '22-25 Finsbury Square, London, EC2A 1DX',
+    SUPPORT_CONTACT_NUMBER: '020 7183 8674',
+    SUPPORT_EMAIL: 'help@gocardless.com',
+    GITHUB_LINK: 'http://github.com/gocardless',
+    TWITTER_LINK: 'https://twitter.com/gocardless'
+  };
+}
+
 gulp.task('template', ['html'], function () {
   return gulp.src('pages/**/*.html')
-    .pipe(template())
+    .pipe(template({}, templateMetadata()))
     .pipe(gulp.dest('build'))
     .pipe(size());
 });
@@ -98,7 +116,7 @@ var env = nunjucks.configure(path.join(__dirname, '.tmp', 'templates'), {
   autoescape: false
 });
 
-function template(options) {
+function template(options, metadata) {
   options = options || {};
 
   return through.obj(function(file, enc, cb) {
@@ -117,12 +135,13 @@ function template(options) {
 
     gutil.log('template:', 'checking file:', chalk.blue(file.path));
 
-    var options = _.extend({
-    });
+    var templateData = _.extend({
+      filename: file.path
+    }, metadata);
 
     var templateStr = file.contents.toString();
 
-    var res = env.renderString(templateStr, options);
+    var res = env.renderString(templateStr, templateData);
 
     gutil.log('template:', 'converted file:',
               chalk.blue(file.path));
@@ -190,8 +209,7 @@ gulp.task('watch', ['build', 'connect', 'serve'], function () {
 
   gulp.watch(['pages/**/*.html', 'templates/**/*.html'], ['template']);
   gulp.watch('public/**/*', ['public']);
-  gulp.watch('assets/css/**/*.css', ['css']);
-  gulp.watch('assets/js/**/*.js', ['js']);
+  gulp.watch('assets/css/**/*.css', ['html']);
   gulp.watch('assets/images/**/*', ['images']);
 });
 
@@ -217,7 +235,7 @@ gulp.task('unit', function() {
 
 gulp.task('test', ['unit']);
 
-gulp.task('build', ['template', 'images', 'fonts', 'public', 'assets']);
+gulp.task('build', ['template', 'fonts', 'public', 'assets']);
 
 gulp.task('default', function () {
   gulp.start('watch');
