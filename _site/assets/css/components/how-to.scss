@@ -1,0 +1,160 @@
+@import "mixins/icon-mixin";
+
+.how-to__header {
+  position: relative;
+  margin-bottom: 24px;
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    background-image-repeat: no-repeat;
+  }
+}
+
+.how-to__header--user:before {
+  left: -41px;
+  @include icon('how-to/icons-s/user-sm', 21px, 21px);
+}
+
+.how-to__header--payment:before {
+  left: -41px;
+  top: 3px;
+  @include icon('how-to/icons-s/payments-sm', 21px, 21px);
+}
+
+.how-to__header--users:before {
+  left: -69px;
+  @include icon('how-to/icons-s/users-sm', 49px, 24px);
+}
+
+.how-to__header--paid:before {
+  left: -97px;
+  @include icon('how-to/icons-s/paid-sm', 77px, 26px);
+}
+
+.how-to__header--logo:before {
+  left: -41px;
+  top: 4px;
+  @include icon('how-to/icons-s/logo-sm', 21px, 17px);
+}
+
+.how-to__header--pending:before {
+  left: -41px;
+  top: 3px;
+  @include icon('how-to/icons-s/pending-sm', 21px, 21px);
+}
+
+.how-to__header--support:before {
+  left: -41px;
+  top: 3px;
+  @include icon('how-to/icons-s/support-sm', 21px, 21px);
+}
+
+.how-to__header--bank:before {
+  left: -43px;
+  top: 1px;
+  @include icon('how-to/icons-s/bank-sm', 23px, 22px);
+}
+
+.how-to__icon {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 121px;
+  background-color: #EEE;
+  border-radius: 3px;
+}
+
+.how-to__icon--green {
+  background-color: #92C633;
+  &:hover { background-color: darken(#92C633, 5%); }
+}
+
+.how-to__icon--turquoise {
+  background-color: #3ABEBE;
+  &:hover { background-color: darken(#3ABEBE, 5%); }
+}
+
+.how-to__icon--salmon {
+  background-color: #D76D94;
+  &:hover { background-color: darken(#D76D94, 5%); }
+}
+
+.how-to__icon--purple {
+  background-color: #7E4883;
+  &:hover { background-color: darken(#7E4883, 5%); }
+}
+
+.how-to__icon--yellow {
+  background-color: #E9CD58;
+  &:hover { background-color: darken(#E9CD58, 5%); }
+}
+
+.how-to__icon--blue {
+  background-color: #39608F;
+  &:hover { background-color: darken(#39608F, 5%); }
+}
+
+.how-to__icon--orange {
+  background-color: #E97462;
+  &:hover { background-color: darken(#E97462, 5%); }
+}
+
+.how-to__desc {
+  color: #999;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0 0 0;
+}
+
+.how-to__img {
+  margin: 20px 0 20px 0;
+}
+
+.how-to__icon__img--user {
+  @include icon('how-to/icons-l/user', 48px, 48px);
+}
+
+.how-to__icon__img--payment {
+  @include icon('how-to/icons-l/payment', 46px, 48px);
+}
+
+.how-to__icon__img--users {
+  @include icon('how-to/icons-l/users', 100px, 48px);
+}
+
+.how-to__icon__img--paid {
+  @include icon('how-to/icons-l/paid', 115px, 39px);
+}
+
+.how-to__icon__img--logo {
+  @include icon('how-to/icons-l/logo', 48px, 36px);
+}
+
+.how-to__icon__img--pending {
+  @include icon('how-to/icons-l/pending', 48px, 48px);
+}
+
+.how-to__icon__img--refund {
+  @include icon('how-to/icons-l/refund', 46px, 46px);
+}
+
+.how-to__icon__img--support {
+  @include icon('how-to/icons-l/support', 48px, 48px);
+}
+
+.how-to__icon__img--bank {
+  @include icon('how-to/icons-l/bank', 52px, 52px);
+}
+
+// Overrides height if @include icon
+.how-to__icon__img {
+  display: block;
+  margin: auto;
+  height: 121px;
+  background-position: center;
+}

@@ -1,0 +1,12 @@
+@import "placeholders/type";
+@import "placeholders/space";
+
+.hero-heading {
+  @extend %u-margin-Bs;
+  @extend %u-text-heading;
+  @extend %u-text-heavy;
+  @extend %u-text-center;
+  font-size: 35px;
+  margin-top: 36px;
+  line-height: 46px;
+}

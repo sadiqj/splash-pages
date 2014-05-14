@@ -1,0 +1,34 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %} - GoCardless</title>
+    <meta name="description" content="{% block description %}GoCardless is the UK\'s #1 for Direct Debit, serving more companies than any other provider. Perfect for recurring billing and B2B invoicing.{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css /css/main.css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+
+    <meta name="og:image" content="logos/gocardless-square.png">
+    <meta name="og:image:secure_url" content="logos/gocardless-square.png">
+    <meta name="google-site-verification" content="Y80kah87ghJhwiDqw-5ap234p9wCcGt6kMRxvnamtHU">
+    <link href="https://plus.google.com/+Gocardless" rel="publisher">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6271452/780042/css/fonts.css">
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div>
+      {{ contents | safe }}
+    </div>
+
+    <!--<script src="/js/traceur-runtime.js"></script>
+    <script src="/js/es6-shim.js"></script>
+    <script src="/js/require.js" data-main="/js/main"></script>-->
+  </body>
+</html>
