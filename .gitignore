@@ -11,7 +11,7 @@ spec/test_out/
 test-results.xml
 selenium
 sauce_connect.log
-/.workon/log
-coverage
-reports
+.workon/log
+/coverage
+/reports
 libpeerconnection.log
