@@ -11,4 +11,4 @@ deployment:
 
 machine:
   node:
-    version: 0.10.26
+    version: 0.10.22

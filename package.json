@@ -47,7 +47,7 @@
     "test": "gulp test"
   },
   "engines": {
-    "node": "^0.10.26"
+    "node": "^0.10.0"
   },
   "devDependencies": {
     "gulp-karma": "0.0.4",
