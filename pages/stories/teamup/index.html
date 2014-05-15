@@ -1,0 +1,94 @@
+{% extends "default.html" %}
+
+{% block title %}Teamup - Customer Stories{% endblock %}
+
+{% block content %}
+  <div class="grid grid--center">
+  <h1 class="page-heading u-margin-Bl"><%= link_to "Teamup", "http://goteamup.com",:rel => 'nofollow' %> offers merchants a simple and reliable way to take online payments with GoCardless
+  </h1>
+    <div class="grid__cell u-2of12 u-padding-Bl">
+      <%= image_tag "home/stories/teamup/headshot.jpg", class: 'u-border-circle'%>
+    </div>
+    <div class="grid__cell u-8of12">
+      <h2 class="u-text-heading">&ldquo;Previously we offered card payments but the high fees and failure rates meant this wasn’t a good fit for our members - GoCardless is cheaper and more reliable&rdquo;</h2>
+      <span class="testimonial--citation">
+        Rupert Baker, TeamUp co-founder
+      </span>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bs">
+      <h3 class="section-heading">
+        GoCardless helped them&hellip;
+      </h3>
+      <p class="para">
+        <ul class="list">
+          <li><strong>Easily integrate a payments system</strong> within their own service</li>
+          <li><strong>Offer merchants a single source for all their management needs</strong></li>
+          <li><strong>Grow their business by 200%</strong></li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bl">
+
+      <h3 class="section-heading">
+        Challenge
+      </h3>
+        <div class="section-subheading">
+        “Previously we only offered card payments but the high fees and failure rates meant this wasn’t a good fit for our merchants”
+        </div>
+      <p class="para">
+        <%= link_to "Teamup", "http://goteamup.com",:rel => 'nofollow' %> is an online management service for fitness businesses. It aims to be a single source for organising and automating all the administration required for fitness businesses to run smoothly.  One key feature for their users was the ability to take subscription payments from their members. “Previously we offered card payments but the high fees and failure rates meant this wasn’t a good fit for our members.”
+      </p>
+
+      <h3 class="section-heading">
+        Solution
+      </h3>
+      <div class="section-subheading">
+         “GoCardless was cheaper and more reliable and our merchants saw Direct Debit as a more secure way of collecting payments”
+      </div>
+      <p class="para">
+       After considering several different options, TeamUp decided to sign up to GoCardless’s partner programme as “GoCardless was cheaper and more reliable, and our merchants saw Direct Debit as a more secure way of collecting payments.”
+      </p>
+      <p class="para">
+      Working with GoCardless’s support team, TeamUp found the integration very easy and within a few months had moved all of their customers over.   Rupert, one of the TeamUp founders, says “GoCardless’s support team are really good and always there when you need them.  The responsiveness of the developer feedback is fantastic – we always get an answer within 2 or 3 minutes.”
+      </p>
+      <h3 class="section-heading">
+        Benefits
+      </h3>
+      <div class="section-subheading">
+      “With GoCardless and TeamUp I spend just an hour a month managing payments”
+      </div>
+      <p class="para">
+        "Partnering with GoCardless has enabled us to provide our merchants with the full service that we were aiming for."  Merchants are able to benefit from the simple GoCardless Direct Debit system which is automatically integrated into their website, CRM and reporting by TeamUp.
+      </p>
+      <p class="para">
+        One of their merchants, Crossfit Tonbridge was very pleased to find that TeamUp offered a simpler way of collecting payments, particularly as it took just minutes to get started; GoCardless "took very little time and was very easy to set up.”
+      </p>
+      <p class="para">
+        Crossfit Tonbridge can now check the status of their payments simply by logging into TeamUp, where members' other information is also stored. MD Alex Clarke says "With GoCardless and TeamUp I spend just an hour a month managing payments. I know exactly what's going on and it’s so easy to use."
+      </p>
+      <p class="para">
+        Moreover, TeamUp have also found that their partnership with GoCardless has had some unexpected benefits: “Some of our customers use GoCardless elsewhere and come to us specifically wanting to use them.”
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Tl">
+    <div class="grid__cell u-10of12">
+      <h1 class="section-heading">Read more customer stories...</h1>
+    </div>
+  </div>
+
+  {% include "stories/_all_stories.html" %}
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}

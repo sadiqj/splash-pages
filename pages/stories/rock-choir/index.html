@@ -1,0 +1,90 @@
+{% extends "default.html" %}
+
+{% block title %}Rock Choir - Customer Stories{% endblock %}
+
+{% block content %}
+  <div class="grid grid--center u-margin-Bl">
+   <h1 class="page-heading u-margin-Bl">Rock Choir cut failed payments to 1% by switching to online Direct Debit with GoCardless</h1>
+    <div class="grid__cell u-2of12">
+      <%= image_tag "home/stories/rock-choir/headshot.jpg", class: 'u-border-circle'%>
+    </div>
+    <div class="grid__cell u-8of12">
+
+        <h2 class="u-text-heading">&ldquo;Rather than chasing people to update their details, we can now retry failed payments at the click of a button&rdquo;</h2>
+        <span class="testimonial--citation">
+          Dave Lusher, Rock Choir
+        </span>
+        <br>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bs">
+      <h3 class="section-heading">
+        GoCardless helped them&hellip;
+      </h3>
+      <p class="para">
+        <ul class="list">
+          <li><strong>Reduce payment failure rates</strong> to 1%</li>
+          <li><strong>Retry failed payments instantly</strong></li>
+          <li><strong>Grow past 16,000</strong> members</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12">
+      <h3 class="section-heading">
+       Challenge
+      </h3>
+      <div class="section-subheading">
+      “I seemed to spend all my time chasing people”
+      </div>
+      <p class="para">
+        <%= link_to "Rock Choir", "http://www.rockchoir.com/",:rel => 'nofollow' %> is the UK’s leading contemporary choir group. With members all around the country, collecting regular monthly payments became a logistical nightmare. “We originally asked members to pay by card, but the failure rates on these approached 5% every month.”  This was largely due to card expiry &amp; cancellation.
+      </p>
+      <p class="para">
+        “I seemed to spend all my time chasing people to update their card details - there was no way of retrying these payments,” explained director David Lusher.
+      </p>
+
+      <h3 class="section-heading">
+        Solution
+      </h3>
+      <div class="section-subheading">
+      “Members can now easily set up and manage their payments”
+      </div>
+      <p class="para">
+        Rock Choir realised that the high retention rates associated with Direct Debit may offer the solution they needed.  After considering various providers, Rock Choir integrated GoCardless into their website. “Members can now easily set up and manage their payments from our custom CRM.”
+      </p>
+
+      <h3 class="section-heading">
+       Benefits
+      </h3>
+      <div class="section-subheading">
+      “The whole payments process is much less time consuming”
+      </div>
+      <p class="para">
+        Thanks to GoCardless, recurring failure rates were slashed to around 1%, dramatically reducing the administrative burden.  Retrying failed payments also became much simpler.  “Rather than chasing people to update their details, we can now retry failed payments at the click of a button”.
+      </p>
+      <p class="para">
+        “Since using GoCardless, the whole payments process is much less time consuming and has allowed us to focus on strategy and expansion.”
+      </p>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Tl">
+    <div class="grid__cell u-10of12">
+      <h1 class="section-heading">Read more customer stories...</h1>
+    </div>
+  </div>
+
+  {% include "stories/_all_stories.html" %}
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}

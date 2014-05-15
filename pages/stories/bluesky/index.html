@@ -1,0 +1,87 @@
+{% extends "default.html" %}
+
+{% block title %}Bluesky Business - Customer Stories{% endblock %}
+
+{% block content %}
+  <div class="grid grid--center">
+  <h1 class="page-heading u-margin-Bl">Bluesky Business reduced late payments by 62.5% in one month with GoCardless
+  </h1>
+    <div class="grid__cell u-2of12 u-padding-Bl">
+      <%= image_tag "home/stories/bluesky/headshot.jpg", class: 'u-border-circle'%>
+    </div>
+    <div class="grid__cell u-8of12">
+      <h2 class="u-text-heading">&ldquo;GoCardless saves us time and gives us control over our cashflow. Now we can spend our time growing our business.&rdquo;</h2>
+      <span class="testimonial--citation">
+        Emma Mills, Director, Bluesky Business Services
+      </span>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bs">
+      <h3 class="section-heading">
+        GoCardless helped them&hellip;
+      </h3>
+      <p class="para">
+        <ul class="list">
+          <li><strong>Reduce debtor days</strong> by 50% - within a month</li>
+          <li><strong>Reduce late payments</strong> by 62.5%</li>
+          <li><strong>Sign up 70% of customers to pay on time in just a month</strong></li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bl">
+      <h3 class="section-heading">
+        Challenge
+      </h3>
+      <div class="section-subheading">
+      “We used to spend two full days a month just chasing clients for payment”
+      </div>
+      <p class="para">
+        <%= link_to "Bluesky Business", "http://www.bluesky-business.co.uk",:rel => 'nofollow' %> provide professional book-keeping and accounting services. As a growing business, it was important for them to maintain a strong cashflow to finance new hires, and maintain a clear sales ledger and forecast.
+      <p class="para">
+        “Only 20% of our customers were paying within the required 30 days. We used to spend two full days a month just chasing clients for payment up to three months late," says Emma Mills, Director.
+      </p>
+
+      <h3 class="section-heading">
+        Solution
+      </h3>
+      <div class="section-subheading">
+       “GoCardless gave us the automated Direct Debit solution we needed”
+      </div>
+      <p class="para">
+        Bluesky needed an assured payment system that integrated with their Sage 50 accounts, and quickly turned to the GoCardless add-on. Now, when each invoice is due, it is automatically collected from client's accounts, and marked as "paid" in Sage.
+      </p>
+
+      <h3 class="section-heading">
+        Benefits
+      </h3>
+      <div class="section-subheading">
+      “Our cashflow and business have been transformed since we started using GoCardless”
+      </div>
+      <p class="para">
+        Within a month of switching to GoCardless, 70% of Bluesky's clients signed up to pay by Direct Debit.
+      </p>
+      <p class="para">
+        "Our cashflow and business have been transformed since we started using GoCardless. Within a month our average debtor days had halved and 70% of our customers were paying on time. This means we waste less time chasing payments so we've got the time now to really grow the business".
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Tl">
+    <div class="grid__cell u-10of12">
+      <h1 class="section-heading">Read more customer stories...</h1>
+    </div>
+  </div>
+
+  {% include "stories/_all_stories.html" %}
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}

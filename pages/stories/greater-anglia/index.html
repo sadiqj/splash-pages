@@ -1,0 +1,90 @@
+{% extends "default.html" %}
+
+{% block title %}Greater Anglia - Customer Stories{% endblock %}
+
+{% block content %}
+  <div class="grid grid--center">
+  <h1 class="page-heading u-margin-Bl">Greater Anglia saved £21,000 by switching to online Direct Debit with GoCardless</h1>
+    <div class="grid__cell u-2of12 u-padding-Bl">
+      <%= image_tag "home/stories/greater-anglia/headshot.jpg", class: 'u-border-circle'%>
+    </div>
+    <div class="grid__cell u-8of12">
+      <h2 class="u-text-heading">&ldquo;GoCardless have taken all of the pain out of setting up and managing Direct Debit&rdquo;</h2>
+      <span class="testimonial--citation">
+        Graham Beton, Greater Anglia Railways
+      </span>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bs">
+      <h3 class="section-heading">
+        GoCardless helped them&hellip;
+      </h3>
+      <p class="para">
+        <ul class="list">
+          <li><strong>Save 26 hours</strong> of management time a month</li>
+          <li>Remove the need for paper mandates, <strong>saving £300 per month</strong></li>
+          <li><strong>Avoid a £21,000 upgrade</strong> to their server infrastructure</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bl">
+      <h3 class="section-heading">
+        Challenge
+      </h3>
+      <div class="section-subheading">
+      “Collecting payments was complicated and very manual”
+      </div>
+      <p class="para">
+        <%= link_to "Greater Anglia", "http://www.greateranglia.co.uk",:rel => 'nofollow' %>, the East Anglia rail franchise, uses Direct Debit to take monthly payments allowing commuters to spread the cost of an annual season ticket.
+
+      <p class="para">
+        Before using GoCardless, they managed their Direct Debit in-house for eight years.  “Collecting payments was complicated and very manual, and keeping up with Direct Debit scheme rule changes was very time-consuming.” It was also hard for the team to link their legacy Direct Debit management processes with their online offering.
+      </p>
+
+      <h3 class="section-heading">
+        Solution
+      </h3>
+      <div class="section-subheading">
+       “Customers can now set up new season tickets entirely online”
+      </div>
+      <p class="para">
+        Greater Anglia realised they needed an outsourced solution that could adapt to their growing online sales.  They quickly identified GoCardless as “by far the best option for online Direct Debit”.
+      </p>
+      <p class="para">
+        One key advantage was that because of our superior technology, GoCardless was the only provider who could enable Greater Anglia’s customers to set up new season ticket customers entirely online and link this back to their CRM and accounts.
+      </p>
+
+      <h3 class="section-heading">
+        Benefits
+      </h3>
+      <div class="section-subheading">
+      “Switching to GoCardless has saved us time and money”
+      </div>
+      <p class="para">
+        Switching to GoCardless' online system eliminated the need for paper mandates and statements, saving Greater Anglia <strong>£300 every month</strong> and reducing management time by <strong>26 hours</strong>. Greater Anglia also avoided a costly upgrade to their server infrastructure otherwise needed to comply with the new Direct Debit rules.
+      </p>
+      <p class="para">
+        Greater Anglia have been delighted with the service since making the switch: “Their system is incredibly simple and their expertise is second to none."
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Tl">
+    <div class="grid__cell u-10of12">
+      <h1 class="section-heading">Read more customer stories...</h1>
+    </div>
+  </div>
+
+  {% include "stories/_all_stories.html" %}
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}

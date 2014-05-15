@@ -1,0 +1,91 @@
+{% extends "default.html" %}
+
+{% block title %}Zest Digital - Customer Stories{% endblock %}
+
+{% block content %}
+  <div class="grid grid--center">
+  <h1 class="page-heading u-margin-Bl">Zest Digital took control of its cashflow with GoCardless and doubled in size</h1>
+    <div class="grid__cell u-2of12 u-padding-Bl">
+      <%= image_tag "home/stories/zest-digital/headshot.jpg", class: 'u-border-circle'%>
+    </div>
+    <div class="grid__cell u-8of12">
+      <h2 class="u-text-heading">&ldquo;I spoke with a number of Direct Debit providers and GoCardless were by far the best.&rdquo;</h2>
+      <span class="testimonial--citation">
+        Alex Minchin, Zest Digital
+      </span>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bs">
+      <h3 class="section-heading">
+        GoCardless helped them&hellip;
+      </h3>
+      <p class="para">
+        <ul class="list">
+          <li><strong>Reduce aged debt</strong> by 58% in 2 months</li>
+          <li><strong>Cut average debtor days</strong> by 39% in 2 months</li>
+          <li><strong>Grow the team</strong> by 100%, with more reliable cash reserves</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bl">
+      <h3 class="section-heading">
+        Challenge
+      </h3>
+      <div class="section-subheading">
+      “Chasing payments was a waste of time”
+      </div>
+      <p class="para">
+      <%= link_to "Zest Digital", "http://www.zestdigital.co/", :rel => 'nofollow' %> is a  digital marketing agency based in Oxfordshire. By automating processes wherever possible, the company has served hundreds of clients with just a handful of staff. A year ago, MD Alex Minchin realised that an overhaul of their payment process was needed to help them grow.
+      </p>
+
+      <p class="para">
+      "We used to get paid by manual bank transfers but managing invoices and chasing payments was a waste of time," says Alex. With average debtor days of 76 days, Zest's growth was stifled by poor cashflow and they were unable to hire new staff despite a growing order book.
+      </p>
+
+
+      <h3 class="section-heading">
+        Solution
+      </h3>
+      <div class="section-subheading">
+      “GoCardless were by far the best”
+      </div>
+      <p class="para">
+       Alex believed that Direct Debit was the most reliable solution and after considering several Direct Debit providers, selected GoCardless.  "I spoke with a number of Direct Debit providers and GoCardless were by far the best. All the others had large up-front fees and seemed much more difficult to integrate."
+      </p>
+
+      <p class="para">
+      They now take payments automatically through the Dashboard. The Zest team has also integrated GoCardless with their CRM to automate payment reminders.
+      <h3 class="section-heading">
+        Benefits
+      </h3>
+      <div class="section-subheading">
+      “We’re now in control of what comes in and when”
+      </div>
+      <p class="para">
+       Within two months of joining GoCardless, Zest were able to reduce their aged debt by 58% and cut average debtor days by 39%.
+      </p>
+      <p class="para">
+      "We're now in control of what comes in, and when. As a result, we've bucked the trend for flat growth in the industry and doubled in size in just 6 months."
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Tl">
+    <div class="grid__cell u-10of12">
+      <h1 class="section-heading">Read more customer stories...</h1>
+    </div>
+  </div>
+
+  {% include "stories/_all_stories.html" %}
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}

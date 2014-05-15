@@ -1,0 +1,90 @@
+{% extends "default.html" %}
+
+{% block title %}Agent Analytics - Customer Stories{% endblock %}
+
+{% block content %}
+  <div class="grid grid--center">
+  <h1 class="page-heading u-margin-Bl">Agent Analytics transformed its business thanks to GoCardless</h1>
+    <div class="grid__cell u-2of12 u-padding-Bl">
+      <%= image_tag "home/stories/agent-analytics/headshot.jpg", class: 'u-border-circle'%>
+    </div>
+    <div class="grid__cell u-8of12">
+      <h2 class="u-text-heading">&ldquo;GoCardless is one of those things you set and forget – I know it’s there and I know it’s doing its job.&rdquo;</h2>
+      <span class="testimonial--citation">
+        Tim, founder of Agent Analytics
+      </span>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bs">
+      <h3 class="section-heading">
+        GoCardless helped them&hellip;
+      </h3>
+      <p class="para">
+        <ul class="list">
+          <li><strong>Grow their customer base</strong> 150%</li>
+          <li><strong>Increase turnover</strong> to £350,000</li>
+          <li><strong>Reduce late or overdue bills</strong> to 1%</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bl">
+
+      <h3 class="section-heading">
+        Challenge
+      </h3>
+        <div class="section-subheading">
+        “We wanted a system with the ability to scale”
+        </div>
+      <p class="para">
+        <%= link_to "Agent Analytics", "http://agentanalytics.net/", rel: 'nofollow' %> provides business intelligence and automated marketing services to estate agents.  As a startup with ambitious plans for expansion, Agent Analytics required a payment system which was able to grow with the business.
+      </p>
+      <p class="para">
+          “We wanted a system with the ability to scale which was as streamlined and free of paper as possible and which could be integrated with our accounting system.”
+      </p>
+
+      <h3 class="section-heading">
+        Solution
+      </h3>
+      <div class="section-subheading">
+         “GoCardless offered online Direct Debit without the setup fees and manual admin”
+      </div>
+      <p class="para">
+       Agent Analytics discovered GoCardless through one of our partners, Directli.  “When we found out that GoCardless offered online direct debit without the set up fees and manual admin I had experienced previously and was FSA approved I was keen to sign up.”
+      </p>
+      <p class="para">
+       Agent Analytics now ask all customers to pay using GoCardless and manage their Direct Debits through Directli.
+      </p>
+
+      <h3 class="section-heading">
+      Benefits
+      </h3>
+      <div class="section-subheading">
+      “GoCardless was one of those things that you can set and forget – I know it’s there and I know it’s doing its job”
+      </div>
+      <p class="para">
+        Since joining GoCardless a year ago, Agent Analytics have grown from collecting around 20 payments a month to 300 – all without an accounts department. Their annual turnover has also grown significantly and is now £350,000.
+      </p>
+      <p class="para">“We are confident we can keep growing and reach 1000 customers by the end of this year with the launch of two exciting new products – and the help of GoCardless. It's one of those things that you can set and forget – I know it’s there and I know it’s doing its job.  It’s an enabler and I want to keep expanding our business with it.”
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Tl">
+    <div class="grid__cell u-10of12">
+      <h1 class="section-heading">Read more customer stories...</h1>
+    </div>
+  </div>
+
+  {% include "stories/_all_stories.html" %}
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "default.html" %}
+
+{% block title %}VoIP - Customer Stories{% endblock %}
+
+{% block content %}
+  <div class="grid grid--center">
+    <div class="grid__cell u-10of12 u-padding-Bl">
+      <h1 class="page-heading">Case study: VoIP</h1>
+      <h3 class="section-heading">
+        Some of the biggest names in the</b> VoIP industry <b>are choosing
+        </b>Direct Debit<b> with GoCardless. Here's why…</b>
+      </h3>
+
+      <p class="para"><b>Vary payments based on VoIP usage</b></p>
+      <p class="para">
+        Customers’ usage fees change on a monthly basis. GoCardless lets you easily vary the amount and frequency with which you bill.
+      </p>
+
+      <p class="para"><b>Gain certainty over your cash flow</b></p>
+      <p class="para">
+        You have to pay your Wholesalers on time, but your customers aren't always as diligent. Direct Debit puts you in <strong>control of when you’re paid.</strong>
+      </p>
+
+      <h3 class="section-heading">
+        Meet one of our happy customers…
+      </h4>
+
+      <p class="para">
+        <a href="http://www.zensystems.co.uk/">Zen Systems</a> offer a range of network and telecommunication solutions across the UK. With customers’ VoIP fees varying on  a monthly basis, and wholesale costs attached to each, Zen Systems needed a flexible but reliable way of collecting invoices.
+      </p>
+      <p class="para">
+        “When you start getting large volumes of customers, there is an associated cost of sale with those services,” says Adam Howard-Dobson, Services Director. With some customers taking up to 3 months to pay, the uncertainty was damaging the business and administrative time was wasted collecting payments.
+      </p>
+
+      <h3 class="section-heading">
+        Payments are now collected on time, hassle-free
+      </h3>
+
+      <p class="para">
+        Adam knew that Direct Debit would put them in control of their cash flow. With GoCardless, setting up customers took less than a minute. Invoices are now paid on time, meaning their monthly costs of sale are covered up front.
+      </p>
+
+      <p class="para">
+        “We now require that all VoIP customers sign up with GoCardless,” says Adam. Admin time spent collecting payments has all but disappeared and with invoices paid on time, cash flow issues are a thing of the past.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="grid grid--center u-margin-Ts">
+    <div class="grid__cell u-2of12 u-padding-Bl">
+      <%= image_tag "home/stories/voip/adam-headshot.jpg", class: 'u-border-circle'%>
+    </div>
+    <div class="grid__cell u-8of12">
+      <h2 class="u-text-heading">&ldquo;We now require that all VoIP customers sign up with GoCardless.&rdquo;</h2>
+      <span class="testimonial--citation">
+        Adam Howard-Dobson, Zen Systems
+      </span>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Tl">
+    <div class="grid__cell u-10of12">
+      <h1 class="section-heading">Read more customer stories...</h1>
+    </div>
+  </div>
+
+  {% include "stories/_all_stories.html" %}
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}
