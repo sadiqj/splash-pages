@@ -5,7 +5,8 @@
     'ngGcGaEventTrackerDirective',
     'ngGcSignupFunnel',
     'ngGcRequestDemoFunnel',
-    'ngGcPageViewEvetns'
+    'ngGcPageViewEvetns',
+    'ngGcCookiesInit'
   ]);
 
   angular.element(document).ready(function setup() {
@@ -20,7 +21,7 @@
   var Home = root.GoCardless.module('home');
 
   Home.vimeoModals = new Widgets.Views.ModalVimeo();
-  
+
   Home.demoModals = new Widgets.Views.DemoModal({
     el: "[data-modal-demo]"
   });

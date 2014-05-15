@@ -1147,7 +1147,8 @@ function parseKeyValue(/**string*/keyValue) {
       key_value = keyValue.split('=');
       key = tryDecodeURIComponent(key_value[0]);
       if ( isDefined(key) ) {
-        var val = isDefined(key_value[1]) ? tryDecodeURIComponent(key_value[1]) : true;
+        var val = isDefined(key_value[1]) ?
+          tryDecodeURIComponent(key_value[1]) : true;
         if (!obj[key]) {
           obj[key] = val;
         } else if(isArray(obj[key])) {

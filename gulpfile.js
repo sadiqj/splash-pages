@@ -209,6 +209,7 @@ gulp.task('unit', function() {
       'assets/components/jquery/dist/jquery.js',
       'assets/components/lodash/dist/lodash.compat.js',
       'assets/components/angular/angular.js',
+      'assets/components/angular-cookies/angular-cookies.js',
       'assets/components/es5-shim/es5-shim.js',
 
       'assets/components/jasmine-helpers/*.js',
@@ -238,6 +239,8 @@ gulp.task('unit', function() {
       'assets/js/widgets/affix.js',
       'assets/js/widgets/sticky-tabs.js',
       'assets/js/metrics/**/*.js',
+      'assets/js/cookies.js',
+      'assets/js/url-parameter-service.js',
       'assets/js/**/*spec.js'
     ])
     .pipe(karma({
