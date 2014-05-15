@@ -1,0 +1,42 @@
+{% extends "default.html" %}
+
+{% block title %}Demo{% endblock %}
+{% block description %}Watch a 15 minute demo of GoCardless in action{% endblock %}
+
+{% block content %}
+
+  <h1 class="u-text-normal u-margin-Tl u-text-heading u-text-h1 benefits-header--blue u-text-center">Discover how we can help your business</h1>
+  <h2 class="u-text-meta u-text-heading u-text-h2 u-text-center u-margin-Bl">Watch GoCardless in action with a 10 minute demo</h2>
+
+  <div class="grid">
+    <div class="grid__cell u-12of12 u-margin-Bn">
+      <a href="https://player.vimeo.com/video/72433004" target="_blank" data-modal-video="true" data-target="#sage-video" data-modal-class="modal" data-ng-gc-ga-event-tracker="{
+            category: 'video',
+            action: 'plays',
+            label: 'sage'
+          }">
+          <img alt="Demo preview" src="/assets/home/products/demo-preview.png">
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="grid">
+    <div class="grid__cell u-1of2 u-padding-Vm">
+      <h3 class="u-text-h3 u-text-heading align-btn">
+        Want to learn more? <b>Get started now</b>
+      </h3>
+    </div>
+
+    <div class="grid__cell u-1of2 u-padding-Vm u-text-end">
+      <a href="/pricing" class="btn btn--info-hollow">View our pricing</a>
+      <a href="/merchants/new" class="btn btn--info u-margin-Ls">Sign up</a>
+    </div>
+  </div>
+
+  <div id="sage-video" class="u-hidden">
+    <iframe src="https://player.vimeo.com/video/92138615?api=1" style="margin-bottom:-6px;" width="900" height="562" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+
+{% endblock %}
