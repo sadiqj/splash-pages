@@ -8,16 +8,13 @@
     "chalk": "^0.4.0",
     "connect": "^2.14.4",
     "connect-livereload": "^0.4.0",
-    "debug": "^0.8.1",
     "gulp-autoprefixer": "^0.0.7",
-    "gulp-bower-files": "^0.2.1",
     "gulp-cache": "^0.1.1",
     "gulp-clean": "^0.2.4",
     "gulp-concat": "^2.1.7",
     "gulp-csslint": "^0.1.4",
     "gulp-csso": "^0.2.6",
     "gulp-eslint": "^0.1.6",
-    "gulp-exec": "^2.0.1",
     "gulp-filter": "^0.4.1",
     "gulp-flatten": "^0.0.2",
     "gulp-imagemin": "^0.5.0",
@@ -26,7 +23,7 @@
     "gulp-size": "^0.3.1",
     "gulp-uglify": "^0.3.0",
     "gulp-useref": "^0.4.3",
-    "gulp-util": "^2.2.9",
+    "gulp-karma": "0.0.4",
     "karma": "^0.12.16",
     "karma-chrome-launcher": "~0.1.1",
     "karma-coverage": "^0.2.1",
@@ -44,19 +41,13 @@
     "opn": "^0.1.1",
     "protractor": "^0.22.0",
     "streamqueue": "^0.0.7",
-    "temp-write": "^0.3.0",
-    "through2": "^0.4.1",
-    "wiredep": "^1.4.4"
+    "through2": "^0.4.1"
   },
   "scripts": {
     "postinstall": "bundle install",
     "test": "gulp test"
   },
   "engines": {
-    "node": ">=0.10.0"
-  },
-  "devDependencies": {
-    "gulp-karma": "0.0.4",
-    "karma": "^0.12.16"
+    "node": "0.10.0"
   }
 }

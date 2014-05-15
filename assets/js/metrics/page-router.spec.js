@@ -68,18 +68,18 @@ describe('ngGcPageRouterService', function() {
 
   describe('stacked wildcard', function() {
     beforeEach(function() {
-      setup('"https://gocardless.comhttps://gocardless.com/direct-debit"');
+      setup('/direct-debit');
     });
 
-    it('"https://gocardless.comhttps://gocardless.com/direct-debit" match', function() {
+    it('/direct-debit match', function() {
       var calledNever;
       var calledMatch;
 
-      ngGcPageRouter('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa*', function() {
+      ngGcPageRouter('/direct-debit/sepa*', function() {
         calledNever = true;
       });
 
-      ngGcPageRouter('"https://gocardless.comhttps://gocardless.com/direct-debit"*', function() {
+      ngGcPageRouter('/direct-debit*', function() {
         calledMatch = true;
       });
 
@@ -90,18 +90,18 @@ describe('ngGcPageRouterService', function() {
 
   describe('reverse stacked wildcard', function() {
     beforeEach(function() {
-      setup('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa');
+      setup('/direct-debit/sepa');
     });
 
-    it('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa match', function() {
+    it('/direct-debit/sepa match', function() {
       var calledMatch;
       var calledNever;
 
-      ngGcPageRouter('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa*', function() {
+      ngGcPageRouter('/direct-debit/sepa*', function() {
         calledMatch = true;
       });
 
-      ngGcPageRouter('"https://gocardless.comhttps://gocardless.com/direct-debit"*', function() {
+      ngGcPageRouter('/direct-debit*', function() {
         calledNever = true;
       });
 
@@ -112,29 +112,29 @@ describe('ngGcPageRouterService', function() {
 
   describe('is called with sanitized location', function() {
     beforeEach(function() {
-      setup('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa/');
+      setup('/direct-debit/sepa/');
     });
 
-    it('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa match', function() {
+    it('/direct-debit/sepa match', function() {
       var calledMatch;
-      ngGcPageRouter('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa', function(location) {
+      ngGcPageRouter('/direct-debit/sepa', function(location) {
         calledMatch = location;
       });
 
-      expect(calledMatch).toEqual('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa');
+      expect(calledMatch).toEqual('/direct-debit/sepa');
     });
   });
 
   describe('only call wildcard when path is not registered', function() {
     beforeEach(function() {
-      setup('"https://gocardless.comhttps://gocardless.com/direct-debit"');
+      setup('/direct-debit');
     });
 
-    it('"https://gocardless.comhttps://gocardless.com/direct-debit"/sepa match', function() {
+    it('/direct-debit/sepa match', function() {
       var calledMatch;
       var calledNever;
 
-      ngGcPageRouter('"https://gocardless.comhttps://gocardless.com/direct-debit"', function() {
+      ngGcPageRouter('/direct-debit', function() {
         calledMatch = true;
       });
 
@@ -149,7 +149,7 @@ describe('ngGcPageRouterService', function() {
 
   describe('wildcard called when path is not previously matched', function() {
     beforeEach(function() {
-      setup('"https://gocardless.comhttps://gocardless.com/direct-debit"');
+      setup('/direct-debit');
     });
 
     it('/*', function() {
