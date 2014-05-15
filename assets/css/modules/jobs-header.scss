@@ -1,17 +1,17 @@
 .jobs-header {
-    height: 568px;
-    background-color: #000;
-    background-image: url("/images/jobs/jobs-bg.jpg");
+  height: 568px;
+  background-color: #000;
+  background-image: url(image_path("home/jobs/jobs-bg.jpg"));
 }
 
 .jobs-header__headline {
-    padding-top: 414px;
-    color: #fff;
+  padding-top: 414px;
+  color: #fff;
 }
 
 .jobs-header__subheading {
-    width: 65%;
-    margin: 0 auto;
-    margin-top: 8px;
-    color: #BABEC0;
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 8px;
+  color: #BABEC0;
 }
