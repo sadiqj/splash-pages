@@ -13,21 +13,16 @@ var imagemin = require('gulp-imagemin');
 var filter = require('gulp-filter');
 var cache = require('gulp-cache');
 var useref = require('gulp-useref');
-var exec = require('gulp-exec');
 var csso = require('gulp-csso');
 var rubySass = require('gulp-ruby-sass');
-var bowerFiles = require('gulp-bower-files');
 var flatten = require('gulp-flatten');
 var livereload = require('gulp-livereload');
-var gutil = require('gulp-util');
 var autoprefixer = require('gulp-autoprefixer');
 var karma = require('gulp-karma');
 var through = require('through2');
 var nunjucks = require('nunjucks');
-var debug = require('debug')('gocardless');
 var _ = require('lodash');
 var chalk = require('chalk');
-var tempWrite = require('temp-write');
 
 gulp.task('eslint', function() {
   return gulp.src('assets/js/**/*.js')
@@ -128,12 +123,10 @@ function template(options, metadata) {
     }
 
     if (file.isStream()) {
-      this.emit('error', new gutil.PluginError('template',
-                                               'Streaming not supported'));
-      return cb();
+      throw new Error('Streaming not supported');
     }
 
-    gutil.log('template:', 'checking file:', chalk.blue(file.path));
+    console.log('template:', 'checking file:', chalk.blue(file.path));
 
     var templateData = _.extend({
       filename: file.path
@@ -143,8 +136,7 @@ function template(options, metadata) {
 
     var res = env.renderString(templateStr, templateData);
 
-    gutil.log('template:', 'converted file:',
-              chalk.blue(file.path));
+    console.log('template:', 'converted file:', chalk.blue(file.path));
 
     file.contents = new Buffer(res);
     _this.push(file);
@@ -172,7 +164,6 @@ gulp.task('clean', function () {
 gulp.task('fonts', function () {
   var streamqueue = require('streamqueue');
   return streamqueue({ objectMode: true },
-    bowerFiles(),
     gulp.src('assets/fonts/**/*')
   )
     .pipe(filter('**/*.{eot,svg,ttf,woff}'))
