@@ -3,30 +3,30 @@
 @import "mixins/at2x-mixin";
 
 .case-study {
-    border: 1px solid $hr-border-color;
-    text-align: center;
-    border-radius: 4px;
-    background-repeat: no-repeat;
+  border: 1px solid $hr-border-color;
+  text-align: center;
+  border-radius: 4px;
+  background-repeat: no-repeat;
 }
 
 .case-study__text {
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 73px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 73px;
 }
 
 
 .case-study--greater-anglia {
-    @include at2x("/stories/greater-anglia/greater-anglia-logo", 241px, 38px, ".png");
-    background-position: 50% 50px;
+  @include at2x("/images/stories/greater-anglia/greater-anglia-logo", 241px, 38px, ".png");
+  background-position: 50% 50px;
 }
 
 .case-study--funding-circle {
-    @include at2x("/stories/funding-circle/funding-circle-logo", 229px, 57px, ".png");
-    background-position: 50% 41px;
+  @include at2x("/images/stories/funding-circle/funding-circle-logo", 229px, 57px, ".png");
+  background-position: 50% 41px;
 }
 
 .case-study--has-bean-coffee {
-    @include at2x("/stories/has-bean/has-bean-logo", 133px, 60px, ".png");
-    background-position: 50% 41px;
+  @include at2x("/images/stories/has-bean/has-bean-logo", 133px, 60px, ".png");
+  background-position: 50% 41px;
 }

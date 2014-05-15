@@ -101,15 +101,20 @@ function templateMetadata() {
 }
 
 gulp.task('template', ['html'], function () {
-  return gulp.src('pages/**/*.html')
+  return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
     .pipe(gulp.dest('build'))
     .pipe(size());
 });
 
-var env = nunjucks.configure(path.join(__dirname, '.tmp', 'templates'), {
+var env = nunjucks.configure([
+  path.join(__dirname, '.tmp', 'templates'),
+  path.join(__dirname, 'pages'),
+  path.join(__dirname, 'macros'),
+  path.join(__dirname, 'includes')
+], {
   autoescape: false
-});
+})
 
 function template(options, metadata) {
   options = options || {};
