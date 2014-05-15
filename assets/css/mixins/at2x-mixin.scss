@@ -1,6 +1,6 @@
-@mixin at2x($image_name, $width, $height, $extention: '.png') {
+@mixin at2x($image_name, $width, $height, $extention: ".png") {
   $img: $image_name + $extention;
-  $x2img: $image_name + '@2x' + $extention;
+  $x2img: $image_name + "@2x" + $extention;
 
   background-image: url($img);
 

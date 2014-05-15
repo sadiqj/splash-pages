@@ -76,7 +76,7 @@ gulp.task('html', ['css'], function () {
   return gulp.src('templates/**/*.html')
     .pipe(useref.assets({ searchPath: '{.tmp,assets}' }))
     .pipe(jsFilter)
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(jsFilter.restore())
     .pipe(cssFilter)
     // .pipe(csso())
@@ -155,11 +155,11 @@ function template(options, metadata) {
 
 gulp.task('images', function () {
   return gulp.src('assets/images/**/*')
-    .pipe(cache(imagemin({
-      optimizationLevel: 3,
-      progressive: true,
-      interlaced: true
-    })))
+    // .pipe(cache(imagemin({
+    //   optimizationLevel: 3,
+    //   progressive: true,
+    //   interlaced: true
+    // })))
     .pipe(gulp.dest('build/images'))
     .pipe(size());
 });
@@ -182,7 +182,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('serve', ['build', 'connect'], function () {
-  require('opn')('http://localhost:9000');
+  require('opn')('http://gocardless.dev:9000');
 });
 
 gulp.task('connect', function () {
@@ -194,7 +194,7 @@ gulp.task('connect', function () {
   require('http').createServer(app)
     .listen(9000)
     .on('listening', function () {
-      console.log('Started connect web server on http://localhost:9000');
+      console.log('Started connect web server on http://gocardless.dev:9000');
     });
 });
 
@@ -235,7 +235,7 @@ gulp.task('unit', function() {
 
 gulp.task('test', ['unit']);
 
-gulp.task('build', ['template', 'fonts', 'public', 'assets']);
+gulp.task('build', ['template', 'images', 'fonts', 'public', 'assets']);
 
 gulp.task('default', function () {
   gulp.start('watch');

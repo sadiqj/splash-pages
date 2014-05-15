@@ -163,7 +163,7 @@
         r.parentNode.insertBefore(e, r);
       }(window, document, 'script', 'gct'));
       gct('initialize', 'mixpanel', {
-        token: {{ MIXPANEL_TOKEN }},
+        token: '{{ MIXPANEL_TOKEN }}',
         debug: {{ false if ENV_PRODUCTION else true }},
         cookieName: '_gc_visitorid'
       });
@@ -313,11 +313,11 @@
     <script src="js/widgets/value-show.js"></script>
     <script src="js/widgets/affix.js"></script>
     <script src="js/widgets/sticky-tabs.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/metrics/page-router.js"></script>
     <script src="js/metrics/signup-funnel.js"></script>
     <script src="js/metrics/request-demo-funnel.js"></script>
     <script src="js/metrics/pageview-events.js"></script>
+    <script src="js/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>

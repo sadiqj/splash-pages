@@ -1,7 +1,7 @@
 @import "mixins/icon-mixin";
 
 .icon-gc-logo-header {
-  @include icon('/images/logos/gc-logo-blue', 149px, 17px);
+  @include icon("/images/logos/gc-logo-blue", 149px, 17px);
 }
 
 .icon--check {
@@ -12,31 +12,31 @@
 }
 
 .icon-benefits-clock {
-  @include icon('/images/benefits/clock', 37px, 37px);
+  @include icon("/images/benefits/clock", 37px, 37px);
 }
 
 .icon-benefits-adjustments {
-  @include icon('/images/benefits/adjustments', 37px, 37px);
+  @include icon("/images/benefits/adjustments", 37px, 37px);
 }
 
 .icon-benefits-lock {
-  @include icon('/images/benefits/lock', 36px, 52px);
+  @include icon("/images/benefits/lock", 36px, 52px);
 }
 
 .icon-benefits-quote {
-  @include icon('/images/benefits/quote', 60px, 56px);
+  @include icon("/images/benefits/quote", 60px, 56px);
 }
 
 .icon-dashboard-control {
-  @include icon('/images/benefits/control', 53px, 38px);
+  @include icon("/images/benefits/control", 53px, 38px);
 }
 
 .icon-dashboard-users {
-  @include icon('/images/benefits/users', 48px, 42px);
+  @include icon("/images/benefits/users", 48px, 42px);
 }
 
 .icon-dashboard-lock {
-  @include icon('/images/benefits/lock--red', 36px, 52px);
+  @include icon("/images/benefits/lock--red", 36px, 52px);
 }
 
 .icon-home-flag {
@@ -44,5 +44,5 @@
 }
 
 .icon-stars-europe {
-  @include icon('/images/icons-l/stars-europe-icon-l', 144px, 144px);
+  @include icon("/images/icons-l/stars-europe-icon-l", 144px, 144px);
 }

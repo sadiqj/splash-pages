@@ -18,7 +18,7 @@
 
     StickyTabs.prototype.setupTabs = function() {
       var hash = window.location.hash;
-      hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+      hash && $('.nav [href="' + hash + '"]').tab('show');
 
       $(this.$tabs).click(function () {
         $(this).tab('show');
@@ -42,7 +42,7 @@
       $(window).on('hashchange', function() {
         var hash = window.location.hash;
         // get the menu element
-        var menuItem = $tabs.filter('[href=' + hash + ']');
+        var menuItem = $tabs.filter('[href="' + hash + '"]');
         // call bootstrap to show the tab
         menuItem.tab('show');
       }).trigger('hashchange');

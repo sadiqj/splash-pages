@@ -26,7 +26,7 @@
 // modifier suffix that can be used to adjust grids in different contexts (e.g.
 // viewport dimensions).
 
-@mixin griddle-build($units, $modifier: '') {
+@mixin griddle-build($units, $modifier: "") {
 
     /* Proportional units
        ========================================================================== */
