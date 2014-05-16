@@ -12,7 +12,12 @@
   <div class="grid grid--center">
     <div class="grid__cell u-1of2">
 
-      <form accept-charset="UTF-8" action="/prospect/sage" class="spacer-box horizontal-spacer-medium border border--bottom border--light stripe--mist ng-pristine ng-valid" data-remote="true" data-sales-prospect-form="true" method="post" ng-gc-ga-event-tracker="{
+      <form accept-charset="UTF-8" action="/api/prospects/sage"
+        class="spacer-box horizontal-spacer-medium border border--bottom border--light stripe--mist ng-pristine ng-valid"
+        data-remote="true"
+        data-sales-prospect-form="true" method="post"
+        ng-gc-form-submit
+        ng-gc-ga-event-tracker="{
             event: 'submit',
             category: 'forms',
             action: 'submit-form',

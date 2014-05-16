@@ -195,6 +195,7 @@ gulp.task('unit', function() {
     'assets/js/connect-compatibility.js',
 
     'assets/js/directives/ng-gc-ga-event-tracker-directive.js',
+    'assets/js/directives/ng-gc-form-submit-directive.js',
     'assets/js/modal/modal.js',
     'assets/js/mute-console/mute-console.js',
     'assets/js/gocardless-global.js',
