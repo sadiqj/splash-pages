@@ -1,9 +1,9 @@
 # Re-write existing GC aws credentials to work with awc-cli
-AWS_ACCESS_KEY_ID ?= $(GC_AWS_ACCESS_KEY)
-AWS_SECRET_ACCESS_KEY ?= $(GC_AWS_SECRET)
+export AWS_ACCESS_KEY_ID ?= $(GC_AWS_ACCESS_KEY)
+export AWS_SECRET_ACCESS_KEY ?= $(GC_AWS_SECRET)
 
-AWS_DEFAULT_REGION = eu-west-1
-AWS_DEFAULT_OUTPUT = text
+export AWS_DEFAULT_REGION = eu-west-1
+export AWS_DEFAULT_OUTPUT = text
 
 LIVE_PRODUCTION = "live-production"
 LIVE_PRODUCTION_BUCKET = "s3://gocardless.com/"
