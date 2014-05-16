@@ -47,7 +47,7 @@ gulp.task('css', function () {
       loadPath: ['assets/css'],
       sourcemap: true
     }))
-    .pipe(autoprefixer('last 1 version'))
+    .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('.tmp/css'))
     .pipe(size());
 });
@@ -164,11 +164,11 @@ gulp.task('connect', function () {
 gulp.task('watch', ['build', 'connect', 'serve'], function () {
   var server = livereload();
 
-  gulp.watch([
-    'build/**/*'
-  ]).on('change', function (file) {
-    server.changed(file.path);
-  });
+  // gulp.watch([
+  //   'build/**/*'
+  // ]).on('change', function (file) {
+  //   server.changed(file.path);
+  // });
 
   gulp.watch(['pages/**/*.html', 'templates/**/*.html'], ['template']);
   // gulp.watch('public/**/*', ['public']);
