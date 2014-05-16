@@ -1,17 +1,16 @@
 # Re-write existing GC aws credentials to work with awc-cli
 export AWS_ACCESS_KEY_ID ?= $(GC_AWS_ACCESS_KEY)
 export AWS_SECRET_ACCESS_KEY ?= $(GC_AWS_SECRET)
-
 export AWS_DEFAULT_REGION = eu-west-1
 export AWS_DEFAULT_OUTPUT = text
 
-LIVE_PRODUCTION = "live-production"
+LIVE_PRODUCTION = live-production
 LIVE_PRODUCTION_BUCKET = "s3://gocardless.com/"
 LIVE_STAGING_BUCKET = "s3://staging.gocardless.com/"
 LIVE_PRODUCTION_URL = "https://gocardless.com"
 LIVE_STAGING_URL = "https://staging.gocardless.com"
 
-ifeq ($(target), LIVE_PRODUCTION)
+ifeq ($(target), $(LIVE_PRODUCTION))
 	TARGET_BUCKET = $(LIVE_PRODUCTION_BUCKET)
 	TARGET_URL = $(LIVE_PRODUCTION_URL)
 else
