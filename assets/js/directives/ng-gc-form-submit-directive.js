@@ -32,6 +32,10 @@ angular.module('ngGcFormSubmitDirective', [])
           // var options = scope.$eval(attrs.ngGcSubmitForm);
           // console.log(options);
 
+          scope.prospectForm = {
+            size: '0-100'
+          };
+
           function onSubmit(event) {
             var formValues = serialiseForm(event.target);
 
@@ -43,13 +47,23 @@ angular.module('ngGcFormSubmitDirective', [])
               url: event.target.action,
               data: formValues,
               contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-              dataType: 'html'
-            }).done(function done(response) {
-              console.log(response);
+              dataType: 'json',
+              beforeSend: function beforeSend() {
+                scope.$isSubmitting = true;
+              }
+            }).done(function done() {
+              scope.$apply(function() {
+                scope.$isSuccess = true;
+                scope.$isError = false;
+              });
             }).fail(function fail(response) {
-              console.log(response);
+              scope.$apply(function() {
+                scope.$isSuccess = false;
+                scope.$isError = response.responseText;
+              });
             }).always(function() {
               document.title = oldTitle;
+              scope.$isSubmitting = false;
             });
 
             event.preventDefault();

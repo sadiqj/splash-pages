@@ -18,7 +18,7 @@ angular.module('ngGcURLParameterService', [
 
     function parseKeyValue(keyValue) {
       var obj = {}, key_value, key;
-      _.forEach((keyValue || "").split('&'), function(keyValue){
+      _.forEach((keyValue || '').split('&'), function(keyValue){
         if (keyValue) {
           key_value = keyValue.split('=');
           key = tryDecodeURIComponent(key_value[0]);
