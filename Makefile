@@ -20,10 +20,7 @@ else
 endif
 
 BUILD_TARGET = "build/"
-DEPLOY_CMD_ARGS =	--acl=public-read \
-					--delete \
-					--cache-control="max-age=0, no-cache" \
-					--include "*"
+DEPLOY_CMD_ARGS = --acl public-read --cache-control "max-age=0, no-cache"
 DEPLOY_CMD = aws s3 sync $(BUILD_TARGET) $(TARGET_BUCKET) $(DEPLOY_CMD_ARGS)
 
 clean:
