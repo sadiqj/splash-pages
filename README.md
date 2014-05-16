@@ -2,7 +2,6 @@
 
 ```
 $ npm install
-$ bundle install
 $ gulp watch
 ```
 
