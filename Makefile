@@ -30,7 +30,7 @@ clean:
 	rm -rf $(BUILD_TARGET)
 
 build: clean
-	gulp build
+	node_modules/.bin/gulp build
 
 deploy: build
 	@echo "Deploying $(target) to $(TARGET_URL)"
