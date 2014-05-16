@@ -10,7 +10,8 @@
 
   <div class="grid grid--center">
     <div class="grid__cell u-1of2">
-      <form accept-charset="UTF-8" action="/api/prospects/sales" method="post"
+      <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
+        name="prospectForm"
         ng-gc-form-submit
         ng-gc-ga-event-tracker="{
             event: 'submit',
@@ -18,23 +19,15 @@
             action: 'submit-form',
             label: 'RaD'
           }">
+
         {% include "_prospect_form_fields.html" %}
 
-        <input class="btn btn--info btn--block u-margin-Tl" name="commit" type="submit" value="Request A Demo">
+        <button class="btn btn--info btn--block u-margin-Tl"
+          type="submit"
+          ng-disabled="prospectForm.$pristine || $isSubmitting">
+          Request A Demo
+        </button>
       </form>
-
-      <div data-sales-prospect-form-success
-       class="notice notice--success u-margin-Bl" hidden>
-        <div data-value-show="0-100" data-target="contact-sales">
-          <b>Thank you</b>, you will receive an invitation shortly.
-        </div>
-        <div data-value-show="100-500" data-target="contact-sales">
-          <b>Thank you</b>, a member of the GoCardless team will be in touch soon.
-        </div>
-        <div data-value-show="500+" data-target="contact-sales">
-          <b>Thank you</b>, a member of the GoCardless team will be in touch soon.
-        </div>
-      </div>
     </div>
   </div>
 

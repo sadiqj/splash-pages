@@ -207,8 +207,6 @@ gulp.task('unit', function() {
     'assets/js/widgets/modal-vimeo.js',
     'assets/js/widgets/demo-modal.js',
     'assets/js/widgets/popover.js',
-    'assets/js/widgets/form-submit.js',
-    'assets/js/widgets/value-show.js',
     'assets/js/widgets/affix.js',
     'assets/js/widgets/sticky-tabs.js',
     'assets/js/metrics/**/*.js',

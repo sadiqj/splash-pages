@@ -10,11 +10,10 @@
 
   <div class="grid grid--center">
     <div class="grid__cell u-1of2">
-      <form accept-charset="UTF-8" action="/api/prospects/sepa"
+      <form accept-charset="UTF-8" action="/api/v1/prospects/sepa"
         class="spacer-box horizontal-spacer-medium border border--bottom border--light stripe--mist ng-pristine ng-valid"
-        data-remote="true"
-        data-sales-prospect-form="true"
         method="post"
+        name="prospectForm"
         ng-gc-form-submit
         ng-gc-ga-event-tracker="{
           event: 'submit',
@@ -24,21 +23,12 @@
         }">
         {% include "_prospect_form_fields.html" %}
 
-        <input class="btn btn--info btn--block u-margin-Tl" name="commit" type="submit" value="Request Sepa Updates">
+        <button class="btn btn--info btn--block u-margin-Tl"
+          type="submit"
+          ng-disabled="prospectForm.$pristine || $isSubmitting">
+          Request SEPA Updates
+        </button>
       </form>
-    </div>
-  </div>
-
-  <div data-sales-prospect-form-success
-    class="notice notice--success u-margin-Bl" hidden>
-    <div data-value-show="0-100" data-target="contact-sales">
-      <b>Thank you</b>, we will be in touch within 24 hours.
-    </div>
-    <div data-value-show="100-500" data-target="contact-sales">
-      <b>Thank you</b>, we will be in touch within 24 hours.
-    </div>
-    <div data-value-show="500+" data-target="contact-sales">
-      <b>Thank you</b>, we will be in touch within 24 hours.
     </div>
   </div>
 

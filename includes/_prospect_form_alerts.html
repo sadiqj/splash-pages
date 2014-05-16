@@ -1,0 +1,20 @@
+<div ng-show="$isError" class="notice notice--error u-margin-Bm">
+  {{ $isError }}
+</div>
+
+<div ng-show="$isSuccess" class="notice notice--success u-margin-Bm">
+  <div ng-switch="prospectForm.size">
+    <div ng-switch-when="0-100">
+     <b>Thank you</b>, you will receive an invitation shortly.
+    </div>
+    <div ng-switch-when="100-500">
+      <b>Thank you</b>, a member of the GoCardless team will be in touch soon.
+    </div>
+    <div ng-switch-when="500+">
+      <b>Thank you</b>, a member of the GoCardless team will be in touch soon.
+    </div>
+    <div ng-switch-default>
+      <b>Thank you</b>, someone will be in touch within 24 hours.
+    </div>
+  </div>
+</div>
