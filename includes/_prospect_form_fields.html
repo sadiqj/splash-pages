@@ -10,9 +10,9 @@
 <label class="label label--stacked" for="prospect_phone_number">Work phone</label>
 <input class="input input--stacked" id="prospect_phone_number" name="prospect[phone_number]" placeholder="02071838674" required="required" type="text">
 
-<label class="label label--stacked" for="prospect_size">How many payments did you take last month?</label>
-<select class="u-full" data-value="[data-target='contact-sales']" id="prospect_size" name="prospect[size]" required="required"><option value="0-100">0-100</option>
-<option value="100-500">100-500</option>
-<option value="500+">500+</option></select>
-
-<input class="btn btn--info btn--block u-margin-Tl" name="commit" type="submit" value="Submit">
+{% block prospect_forms %}
+  <label class="label label--stacked" for="prospect_size">How many payments did you take last month?</label>
+  <select class="u-full" data-value="[data-target='contact-sales']" id="prospect_size" name="prospect[size]" required="required"><option value="0-100">0-100</option>
+  <option value="100-500">100-500</option>
+  <option value="500+">500+</option></select>
+{% endblock %}

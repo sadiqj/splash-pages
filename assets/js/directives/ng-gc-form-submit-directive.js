@@ -28,16 +28,15 @@ angular.module('ngGcFormSubmitDirective', [])
       }
 
       return {
-        link: function link(scope, element, attrs) {
-          var options = scope.$eval(attrs.ngGcSubmitForm);
-
-          console.log(options);
+        link: function link(scope, element) {
+          // var options = scope.$eval(attrs.ngGcSubmitForm);
+          // console.log(options);
 
           function onSubmit(event) {
             var formValues = serialiseForm(event.target);
 
             var oldTitle = $window.document.title;
-            document.title = 'Saving form...';
+            document.title = 'Saving...';
 
             $.ajax({
               type: 'POST',
