@@ -12,7 +12,7 @@
   <div class="grid grid--center">
     <div class="grid__cell u-1of2">
 
-      <form accept-charset="UTF-8" action="/api/prospects/sage"
+      <form accept-charset="UTF-8" action="/api/v1/prospects/sage"
         class="spacer-box horizontal-spacer-medium border border--bottom border--light stripe--mist ng-pristine ng-valid"
         method="post"
         name="prospectForm"
@@ -27,7 +27,7 @@
 
         <button class="btn btn--info btn--block u-margin-Tl"
           type="submit"
-          ng-disabled="prospectForm.$pristine || !prospectForm.file.$viewValue || $isSubmitting">
+          ng-disabled="prospectForm.$pristine || $isSubmitting">
           Request Sage Demo
         </button>
       </form>

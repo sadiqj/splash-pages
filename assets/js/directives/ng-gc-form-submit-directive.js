@@ -29,9 +29,6 @@ angular.module('ngGcFormSubmitDirective', [])
 
       return {
         link: function link(scope, element) {
-          // var options = scope.$eval(attrs.ngGcSubmitForm);
-          // console.log(options);
-
           scope.prospectForm = {
             size: '0-100'
           };
@@ -41,16 +38,14 @@ angular.module('ngGcFormSubmitDirective', [])
 
             var oldTitle = $window.document.title;
             document.title = 'Saving...';
+            scope.$isSubmitting = true;
 
             $.ajax({
               type: 'POST',
               url: event.target.action,
               data: formValues,
               contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-              dataType: 'json',
-              beforeSend: function beforeSend() {
-                scope.$isSubmitting = true;
-              }
+              dataType: 'json'
             }).done(function done() {
               scope.$apply(function() {
                 scope.$isSuccess = true;
@@ -63,7 +58,9 @@ angular.module('ngGcFormSubmitDirective', [])
               });
             }).always(function() {
               document.title = oldTitle;
-              scope.$isSubmitting = false;
+              scope.$apply(function() {
+                scope.$isSubmitting = false;
+              });
             });
 
             event.preventDefault();
