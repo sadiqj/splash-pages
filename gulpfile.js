@@ -13,6 +13,9 @@ var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 var karma = require('gulp-karma');
 
+var httpProxy = require('http-proxy');
+var APIProxy = httpProxy.createProxyServer();
+
 var template = require('./tasks/template');
 
 // var concat = require('gulp-concat');
@@ -140,6 +143,15 @@ gulp.task('connect', function () {
   var connect = require('connect');
   var app = connect()
       .use(require('connect-livereload')({ port: 35729 }))
+      .use(function(req, res, next) {
+        if (req.url.match(/^\/api\//)) {
+          APIProxy.web(req, res, {
+            target: 'http://gocardless.dev:3000'
+          });
+        } else {
+          return next();
+        }
+      })
       .use(connect.static('build'));
 
   require('http').createServer(app)

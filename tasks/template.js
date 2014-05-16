@@ -14,6 +14,15 @@ var env = nunjucks.configure([
   autoescape: false
 });
 
+function render(file, metadata) {
+  console.log('template:', 'checking file:', chalk.blue(file.path));
+  var res = env.renderString(file.contents.toString(), metadata);
+  console.log('template:', 'converted file:', chalk.blue(file.path));
+
+  file.contents = new Buffer(res);
+  return file;
+}
+
 function template(options, metadata) {
   options = options || {};
 
@@ -27,12 +36,7 @@ function template(options, metadata) {
       throw new Error('Streaming not supported');
     }
 
-    console.log('template:', 'checking file:', chalk.blue(file.path));
-    var res = env.renderString(file.contents.toString(), metadata);
-    console.log('template:', 'converted file:', chalk.blue(file.path));
-
-    file.contents = new Buffer(res);
-    this.push(file);
+    this.push(render(file, metadata));
 
     cb();
   });
