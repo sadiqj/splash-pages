@@ -46,7 +46,7 @@ angular.module('ngGcFormSubmitDirective', [])
               data: formValues,
               contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
               dataType: 'json'
-            }).done(function done() {
+            }).done(function done(response) {
               scope.$apply(function() {
                 scope.$isSuccess = true;
                 scope.$isError = false;
