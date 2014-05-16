@@ -11,12 +11,15 @@
 
   <div class="grid grid--center">
     <div class="grid__cell u-1of2">
-      <form accept-charset="UTF-8" action="/prospect/pricing_quote" data-sales-prospect-form="true" method="post" ng-gc-ga-event-tracker="{
-            event: 'submit',
-            category: 'forms',
-            action: 'submit-form',
-            label: 'pricing-quote'
-          }" class="ng-pristine ng-valid">
+      <form accept-charset="UTF-8" action="/api/prospects/pricing_quote" data-sales-prospect-form="true" method="post"
+        class="ng-pristine ng-valid"
+        ng-gc-form-submit
+        ng-gc-ga-event-tracker="{
+          event: 'submit',
+          category: 'forms',
+          action: 'submit-form',
+          label: 'pricing-quote'
+        }">
 
         <div data-sales-prospect-form-errors="" class="notice notice--error u-margin-Bm" hidden=""></div>
         <!-- honeypot field -->

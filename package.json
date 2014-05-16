@@ -36,6 +36,7 @@
     "karma-phantomjs-launcher": "~0.1.1",
     "karma-safari-launcher": "~0.1.1",
     "karma-sauce-launcher": "^0.2.8",
+    "http-proxy": "^1.1.4",
     "lodash": "^2.4.1",
     "nunjucks": "^1.0.5",
     "opn": "^0.1.1",
