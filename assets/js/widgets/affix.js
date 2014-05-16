@@ -60,11 +60,6 @@
         height: height
       });
 
-      // HACK to make first enter animation work
-      if (!utils.isElementInViewport($containerEl[0])) {
-        $el.addClass('is-animating-leave-active');
-      }
-
       // There are a shit ton of edge cases when stuff is either not visible
       // but should be or scroll is incorrectly determied
       //

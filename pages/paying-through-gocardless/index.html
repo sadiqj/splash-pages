@@ -1,7 +1,191 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Why pay with Direct Debit?{% endblock %}
 
-{% block content %}
+{% block body %}
+
+  <div class="benefits-container">
+    <div class="benefits-container__wrapper">
+      <div class="benefits-container__header">
+        <div class="u-cf">
+          <div class="u-pull-start">
+            <a href="/">
+              <i class="icon-gc-logo-header logo-header"></i>
+            </a>
+          </div>
+          <div class="u-pull-end">
+            <span class="u-text-h5">
+              <b>Got any questions?</b> Call us now: {{ SUPPORT_CONTACT_NUMBER }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="benefits-container__content">
+        <div class="u-padding-Vl">
+          <div class="u-padding-Tm u-padding-Bs u-text-center">
+            <h1 class="u-text-normal u-text-heading u-text-h1 benefits-header--blue">GoCardless, the easy way to pay</h1>
+            <h2 class="u-text-light u-text-meta u-text-heading u-text-h2 u-margin-Ts u-margin-Bs">We're the UK's leading Direct Debit provider, making it<br>
+            safer, quicker and easier to pay bills and invoices online.</h2>
+          </div>
+          <div class="u-cf u-padding-Txxs u-background-gradient-reverse">
+            <div class="u-pull-start u-1of2 benefits-container__content__hero-content">
+              <div class="u-padding-Hxm">
+                <div class="u-padding-Hxs">
+                  <div class="u-cf u-padding-Ts u-padding-Bm">
+                    <div class="u-padding-Txxs">
+                      <div class="u-pull-start u-1of7">
+                        <div class="u-padding-Rm">
+                        <i class="icon-benefits-clock benefits-container__content__icon"></i>
+                        </div>
+                      </div>
+                      <div class="u-overflow-hidden">
+                        <h2 class="u-text-heading u-margin-Bxs benefits-header--green">Pay in 30 seconds</h2>
+                        <p class="u-text-h3">Our secure online payment pages take less than a minute to fill in, and once set up you never have to lift a finger again.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-cf u-padding-Tm">
+                    <div class="u-padding-Bl">
+                      <div class="u-pull-start u-1of7">
+                        <div class="u-padding-Rm">
+                        <i class="icon-benefits-adjustments benefits-container__content__icon"></i>
+                        </div>
+                      </div>
+                      <div class="u-overflow-hidden">
+                        <h2 class="u-text-heading u-margin-Bxs benefits-header--red">You are in control</h2>
+                        <p class="u-text-h3">View and manage all your outgoing payments just by <a class="u-text-underline" href="https://gocardless.com/users/sign_in">logging in to your GoCardless dashboard</a>. Cancel payments at any time.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-pull-start u-1of2">
+              <div class="benefits-container__content__hero u-pull-start"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="u-padding-Hxm">
+          <div class="u-padding-Hxs">
+            <div class="u-text-center u-padding-Vl">
+              <div>
+                <i class="icon-benefits-lock u-margin-Bs"></i>
+              </div>
+              <h2 class="u-text-heading u-margin-Bxs benefits-header--blue">Safe &amp; Secure</h2>
+              <p class="u-text-h3">We take security seriously. All our data is stored<br>
+              securely and encrypted with military grade algorithms.</p>
+            </div>
+
+            <div class="grid u-padding-Bl">
+              <div class="grid__cell u-1of3 u-padding-Txs u-padding-Bl">
+                <div class="benefits-container__content__divider u-padding-Tl">
+                  <p class="u-margin-Txs"><b>Direct Debit Guarantee</b></p>
+                  <p>If anything goes wrong with a transaction, payers are entitled to an instant refund from their bank. <a class="u-text-underline" href="/direct-debit/guarantee">more&hellip;</a></p>
+                </div>
+              </div>
+              <div class="grid__cell u-1of3 u-padding-Txs u-padding-Bl">
+                <div class="benefits-container__content__divider u-padding-Tl">
+                  <p class="u-margin-Txs"><b>Military grade encryption</b></p>
+                  <p>All sensitive details are RSA encrypted, and only communicated over secure  channels. <a class="u-text-underline" href="https://gocardless.com/security">more &hellip;</a></p>
+                </div>
+              </div>
+              <div class="grid__cell u-1of3 u-padding-Txs u-padding-Bl">
+                <div class="benefits-container__content__divider u-padding-Tl">
+                  <p class="u-margin-Txs"><b>Authorised by the FCA</b></p>
+                  <p>GoCardless is an Authorised Payment Institution regulated by the Financial Conduct Authority.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="u-text-center u-padding-Vl benefits-container__content__divider">
+          <div class="u-padding-Bl">
+            <i class="icon-benefits-quote u-margin-Bs"></i>
+            <h2 class="u-text-heading u-margin-Bxs benefits-header--green">Over 250,00 people have paid with GoCardless</h2>
+            <p class="u-text-h3">People love paying by GoCardless because it's easy and secure.<br>Here's what some of our customers have said about us.</p>
+          </div>
+        </div>
+
+        <div class="u-padding-Bl">
+          <div class="benefits-quote u-cf u-padding-Bl">
+            <div class="u-pull-start benefits-quote__avatar benefits-quote__avatar--arrow-start">
+              <img alt="Roxannevarza" class="u-border-circle" src="/assets/home/stories/customer-stories/roxannevarza.jpg">
+            </div>
+            <div class="u-overflow-hidden benefits-quote__content u-text-h2">
+              Just tried @gocardless and kind of LOVE it! If you ever need to pay anyone or get paid, may want to try it out
+              <p class="u-text-h6">
+                <a href="https://twitter.com/roxannevarza/status/222064834169159681">
+                  @roxannevarza via twitter
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits-quote u-cf u-padding-Vl">
+            <div class="u-pull-end benefits-quote__avatar benefits-quote__avatar--arrow-end">
+              <img alt="Danhowells" class="u-border-circle" src="/assets/home/stories/customer-stories/danhowells.jpg">
+            </div>
+            <div class="u-overflow-hidden benefits-quote__content u-text-h2">
+              .@almonk just sent me a "pay link" from @gocardless - first time I used it and it's super slick...
+              <p class="u-text-h6">
+                <a href="https://twitter.com/howells/status/275554280331681793">
+                  @howells via twitter
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits-quote u-cf u-padding-Vl">
+            <div class="u-pull-start benefits-quote__avatar benefits-quote__avatar--arrow-start">
+              <img alt="Helloitsolly" class="u-border-circle" src="/assets/home/stories/customer-stories/helloitsolly.jpg">
+            </div>
+            <div class="u-overflow-hidden benefits-quote__content u-text-h2">
+              Giving @GoCardless a go... Incredibly simple signup and low fees &amp; the site’s beautiful
+              <p class="u-text-h6">
+                <a href="https://twitter.com/helloitsolly/status/271426713639071745">
+                  @helloitsolly via twitter
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits-quote u-cf u-padding-Vl">
+            <div class="u-pull-end benefits-quote__avatar benefits-quote__avatar--arrow-end">
+              <img alt="Simonjerob" class="u-border-circle" src="/assets/home/stories/customer-stories/simonjerob.jpg">
+            </div>
+            <div class="u-overflow-hidden benefits-quote__content u-text-h2">
+              First time using @GoCardless and its so quick and smooth. Easy DD set up for my apartment maintenance fee
+              <p class="u-text-h6">
+                <a href="https://twitter.com/simonjerob/status/431351904048668672">
+                  @simonjerob via twitter
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits-quote u-cf u-padding-Vl">
+            <div class="u-pull-start benefits-quote__avatar benefits-quote__avatar--arrow-start">
+              <img alt="De" class="u-border-circle" src="/assets/home/stories/customer-stories/de.jpg">
+            </div>
+            <div class="u-overflow-hidden benefits-quote__content u-text-h2">
+              My clients are loving @GoCardless! So nice to have a non-PayPal, decent, reliable service they can pay me with
+              <p class="u-text-h6">
+                <a href="https://twitter.com/de/status/289010618772631552">
+                  @de via twitter
+                </a>
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="benefits-container__wrapper u-margin-Ts">
+      {% include "_site_footer.html" %}
+    </div>
+  </div>
 
 {% endblock %}

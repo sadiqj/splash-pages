@@ -204,9 +204,9 @@ gulp.task('watch', ['build', 'connect', 'serve'], function () {
   });
 
   gulp.watch(['pages/**/*.html', 'templates/**/*.html'], ['template']);
-  gulp.watch('public/**/*', ['public']);
+  // gulp.watch('public/**/*', ['public']);
   gulp.watch('assets/css/**/*.css', ['html']);
-  gulp.watch('assets/images/**/*', ['images']);
+  // gulp.watch('assets/images/**/*', ['images']);
 });
 
 gulp.task('unit', function() {
