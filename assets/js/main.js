@@ -4,6 +4,7 @@
   angular.module('home', [
     'ngGcGaEventTrackerDirective',
     'ngGcFormSubmitDirective',
+    'ngGcHrefActiveDirective',
     'ngGcSignupFunnel',
     'ngGcRequestDemoFunnel',
     'ngGcPageViewEvetns',

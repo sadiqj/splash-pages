@@ -18,6 +18,9 @@ var APIProxy = httpProxy.createProxyServer();
 
 var template = require('./tasks/template');
 
+var redirect = require('./tasks/redirect');
+var redirects = require('./redirects.json');
+
 // var concat = require('gulp-concat');
 // var uglify = require('gulp-uglify');
 // var imagemin = require('gulp-imagemin');
@@ -104,6 +107,13 @@ function templateMetadata() {
 gulp.task('template', ['html'], function () {
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
+    .pipe(gulp.dest('build'))
+    .pipe(size());
+});
+
+gulp.task('redirects', function () {
+  return gulp.src(['redirects.json'])
+    .pipe(redirect(redirects))
     .pipe(gulp.dest('build'))
     .pipe(size());
 });
@@ -196,6 +206,7 @@ gulp.task('unit', function() {
 
     'assets/js/directives/ng-gc-ga-event-tracker-directive.js',
     'assets/js/directives/ng-gc-form-submit-directive.js',
+    'assets/js/directives/ng-gc-href-active-directive.js',
     'assets/js/modal/modal.js',
     'assets/js/mute-console/mute-console.js',
     'assets/js/gocardless-global.js',
@@ -225,7 +236,7 @@ gulp.task('unit', function() {
 
 gulp.task('test', ['unit']);
 
-gulp.task('build', ['template', 'images', 'fonts', 'public', 'assets']);
+gulp.task('build', ['template', 'redirects', 'images', 'fonts', 'public', 'assets']);
 
 gulp.task('default', function () {
   gulp.start('watch');
