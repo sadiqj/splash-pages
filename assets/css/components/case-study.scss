@@ -21,11 +21,6 @@
   background-position: 50% 50px;
 }
 
-.case-study--funding-circle {
-  @include at2x("/images/stories/funding-circle/funding-circle-logo", 229px, 57px, ".png");
-  background-position: 50% 41px;
-}
-
 .case-study--has-bean-coffee {
   @include at2x("/images/stories/has-bean/has-bean-logo", 133px, 60px, ".png");
   background-position: 50% 41px;
