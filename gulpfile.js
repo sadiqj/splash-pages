@@ -107,6 +107,12 @@ function templateMetadata() {
 gulp.task('template', ['html'], function () {
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
+    .pipe(gulp.dest('build'))
+    .pipe(size());
+});
+
+gulp.task('redirects', function () {
+  return gulp.src(['redirects.json'])
     .pipe(redirect(redirects))
     .pipe(gulp.dest('build'))
     .pipe(size());
@@ -230,7 +236,7 @@ gulp.task('unit', function() {
 
 gulp.task('test', ['unit']);
 
-gulp.task('build', ['template', 'images', 'fonts', 'public', 'assets']);
+gulp.task('build', ['template', 'redirects', 'images', 'fonts', 'public', 'assets']);
 
 gulp.task('default', function () {
   gulp.start('watch');

@@ -11,6 +11,11 @@
   visibility: hidden !important;
 }
 
+.u-is-visible {
+  display: block !important;
+  visibility: visible !important;
+}
+
 // Completely remove from the flow but leave available to screen readers.
 
 .u-is-hidden-visually {

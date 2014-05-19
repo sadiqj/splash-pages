@@ -1,8 +1,14 @@
-<div ng-show="$isError" class="notice notice--error u-margin-Bm">
+<div class="u-is-hidden notice notice--error u-margin-Bm"
+  ng-class="{
+    'u-is-visible': $isError
+  }">
   {{ $isError }}
 </div>
 
-<div ng-show="$isSuccess" class="notice notice--success u-margin-Bm">
+<div class="u-is-hidden notice notice--success u-margin-Bm"
+  ng-class="{
+    'u-is-visible': $isSuccess
+  }">
   <div ng-switch="prospectForm.size">
     <div ng-switch-when="0-100">
      <b>Thank you</b>, you will receive an invitation shortly.
