@@ -1,0 +1,37 @@
+.nav-tabs {
+  li {
+    &.active {
+      a {
+        color: $text-color;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    a.is-active {
+      color: $text-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.nav-tabs--gutter-L li a {
+  padding-left: 35px;
+}
+
+.nav-tabs__section-heading {
+  color: #9D9D9D;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding-left: 35px;
+}
