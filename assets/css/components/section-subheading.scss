@@ -1,11 +1,8 @@
-@import "placeholders/type";
-@import "placeholders/space";
-
 .section-subheading {
-  @extend %u-text-heavy;
-  @extend %u-text-h4;
-  @extend %u-margin-Tm;
-  @extend %u-margin-Bxxs;
+  font-weight: 700;
+  font-size: $font-size-h4;
+  margin-top: $space-medium;
+  margin-bottom: $space-xxsmall;
 }
 
 .section-subheading__icon {

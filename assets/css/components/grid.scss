@@ -76,8 +76,6 @@
  */
 
 .grid__cell {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block; /* 1 */
   font-size: $font-size-base; /* 2 */

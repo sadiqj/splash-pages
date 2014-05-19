@@ -1,20 +1,19 @@
-@import "placeholders/type";
-@import "placeholders/space";
-
 .section-heading {
-  @extend %u-margin-Tm;
-  @extend %u-margin-Bxs;
-  @extend %u-text-heading;
-  @extend %u-text-semi;
-  @extend %u-text-h3;
-  @extend %u-text-primary;
+  margin-top: $space-medium;
+  margin-bottom: $space-xsmall;
+  font-family: $font-family-heading;
+  color: $header-color;
+  font-weight: 500;
+  font-size: $font-size-h3;
+  color: $primary-blue;
 }
 
 .section-heading__bullet {
-  @extend %u-text-heading;
-  @extend %u-text-semi;
-  @extend %u-text-h3;
-  @extend %u-text-primary;
+  font-family: $font-family-heading;
+  color: $header-color;
+  font-weight: 500;
+  font-size: $font-size-h3;
+  color: $primary-blue;
   margin-top: 14px;
   margin-bottom: 4px;
 }

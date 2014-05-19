@@ -1,10 +1,8 @@
-@import "placeholders/type";
-@import "placeholders/space";
-
 .page-heading {
-  @extend %u-margin-Bs;
-  @extend %u-text-heading;
-  @extend %u-text-heavy;
-  @extend %u-text-h1;
+  margin-bottom: $space-small;
+  font-family: $font-family-heading;
+  color: $header-color;
+  font-weight: 700;
+  font-size: $font-size-h1;
   margin-top: 36px;
 }

@@ -1,5 +1,3 @@
-@import "placeholders/space";
-
 // Used to adjust the default spacing between components
 // Use with great care!
 //
@@ -22,425 +20,453 @@
 // All padding
 
 .u-padding-Al {
-  @extend %u-padding-Al;
+  padding: $space-large;
 }
 
 .u-padding-Axm {
-  @extend %u-padding-Axm;
+  padding: $space-xmedium;
 }
 
 .u-padding-Am {
-  @extend %u-padding-Am;
+  padding: $space-medium;
 }
 
 .u-padding-As {
-  @extend %u-padding-As;
+  padding: $space-small;
 }
 
 .u-padding-Axs {
-  @extend %u-padding-Axs;
+  padding: $space-xsmall;
 }
 
 .u-padding-Axxs {
-  @extend %u-padding-Axxs;
+  padding: $space-xxsmall;
 }
 
 .u-padding-An {
-  @extend %u-padding-An;
+  padding: 0;
 }
 
 // All margin
 
 .u-margin-Al {
-  @extend %u-margin-Al;
+  margin: $space-large;
 }
 
 .u-margin-Axm {
-  @extend %u-margin-Axm;
+  margin: $space-xmedium;
 }
 
 .u-margin-Am {
-  @extend %u-margin-Am;
+  margin: $space-medium;
 }
 
 .u-margin-As {
-  @extend %u-margin-As;
+  margin: $space-small;
 }
 
 .u-margin-Axs {
-  @extend %u-margin-Axs;
+  margin: $space-xsmall;
 }
 
 .u-margin-Axxs {
-  @extend %u-margin-Axxs;
+  margin: $space-xxsmall;
 }
 
 .u-margin-An {
-  @extend %u-margin-An;
+  margin: 0;
 }
 
 //////////////////
 // Vertical margin
 
 .u-margin-Vl {
-  @extend %u-margin-Vl;
+  margin-top: $space-large;
+  margin-bottom: $space-large;
 }
 
 .u-margin-Vxm {
-  @extend %u-margin-Vxm;
+  margin-top: $space-xmedium;
+  margin-bottom: $space-xmedium;
 }
 
 .u-margin-Vm {
-  @extend %u-margin-Vm;
+  margin-top: $space-medium;
+  margin-bottom: $space-medium;
 }
 
 .u-margin-Vs {
-  @extend %u-margin-Vs;
+  margin-top: $space-small;
+  margin-bottom: $space-small;
 }
 
 .u-margin-Vxs {
-  @extend %u-margin-Vxs;
+  margin-top: $space-xsmall;
+  margin-bottom: $space-xsmall;
 }
 
 .u-margin-Vxxs {
-  @extend %u-margin-Vxxs;
+  margin-top: $space-xxsmall;
+  margin-bottom: $space-xxsmall;
 }
 
 .u-margin-Vn {
-  @extend %u-margin-Vn;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 // Vertical padding
 
 .u-padding-Vl {
-  @extend %u-padding-Vl;
+  padding-top: $space-large;
+  padding-bottom: $space-large;
 }
 
 .u-padding-Vxm {
-  @extend %u-padding-Vxm;
+  padding-top: $space-xmedium;
+  padding-bottom: $space-xmedium;
 }
 
 .u-padding-Vm {
-  @extend %u-padding-Vm;
+  padding-top: $space-medium;
+  padding-bottom: $space-medium;
 }
 
 .u-padding-Vs {
-  @extend %u-padding-Vs;
+  padding-top: $space-small;
+  padding-bottom: $space-small;
 }
 
 .u-padding-Vxs {
-  @extend %u-padding-Vxs;
+  padding-top: $space-xsmall;
+  padding-bottom: $space-xsmall;
 }
 
 .u-padding-Vxxs {
-  @extend %u-padding-Vxxs;
+  padding-top: $space-xxsmall;
+  padding-bottom: $space-xxsmall;
 }
 
 .u-padding-Vn {
-  @extend %u-padding-Vn;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 ////////////////////
 // Horizontal margin
 
 .u-margin-Hl {
-  @extend %u-margin-Hl;
+  margin-left: $space-large;
+  margin-right: $space-large;
 }
 
 .u-margin-Hxm {
-  @extend %u-margin-Hxm;
+  margin-left: $space-xmedium;
+  margin-right: $space-xmedium;
 }
 
 .u-margin-Hm {
-  @extend %u-margin-Hm;
+  margin-left: $space-medium;
+  margin-right: $space-medium;
 }
 
 .u-margin-Hs {
-  @extend %u-margin-Hs;
+  margin-left: $space-small;
+  margin-right: $space-small;
 }
 
 .u-margin-Hxs {
-  @extend %u-margin-Hxs;
+  margin-left: $space-xsmall;
+  margin-right: $space-xsmall;
 }
 
 .u-margin-Hxxs {
-  @extend %u-margin-Hxxs;
+  margin-left: $space-xxsmall;
+  margin-right: $space-xxsmall;
 }
 
 .u-margin-Hn {
-  @extend %u-margin-Hn;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 // Horizontal padding
 
 .u-padding-Hl {
-  @extend %u-padding-Hl;
+  padding-left: $space-large;
+  padding-right: $space-large;
 }
 
 .u-padding-Hxm {
-  @extend %u-padding-Hxm;
+  padding-left: $space-xmedium;
+  padding-right: $space-xmedium;
 }
 
 .u-padding-Hm {
-  @extend %u-padding-Hm;
+  padding-left: $space-medium;
+  padding-right: $space-medium;
 }
 
 .u-padding-Hs {
-  @extend %u-padding-Hs;
+  padding-left: $space-small;
+  padding-right: $space-small;
 }
 
 .u-padding-Hxs {
-  @extend %u-padding-Hxs;
+  padding-left: $space-xsmall;
+  padding-right: $space-xsmall;
 }
 
 .u-padding-Hxxs {
-  @extend %u-padding-Hxxs;
+  padding-left: $space-xxsmall;
+  padding-right: $space-xxsmall;
 }
 
 .u-padding-Hn {
-  @extend %u-padding-Hn;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /////////////
 // Top margin
 
 .u-margin-Tl {
-  @extend %u-margin-Tl;
+  margin-top: $space-large;
 }
 
 .u-margin-Txm {
-  @extend %u-margin-Txm;
+  margin-top: $space-xmedium;
 }
 
 .u-margin-Tm {
-  @extend %u-margin-Tm;
+  margin-top: $space-medium;
 }
 
 .u-margin-Ts {
-  @extend %u-margin-Ts;
+  margin-top: $space-small;
 }
 
 .u-margin-Txs {
-  @extend %u-margin-Txs;
+  margin-top: $space-xsmall;
 }
 
 .u-margin-Txxs {
-  @extend %u-margin-Txxs;
+  margin-top: $space-xxsmall;
 }
 
 .u-margin-Tn {
-  @extend %u-margin-Tn;
+  margin-top: 0;
 }
 
 // Top padding
 
 .u-padding-Tl {
-  @extend %u-padding-Tl;
+  padding-top: $space-large;
 }
 
 .u-padding-Txm {
-  @extend %u-padding-Txm;
+  padding-top: $space-xmedium;
 }
 
 .u-padding-Tm {
-  @extend %u-padding-Tm;
+  padding-top: $space-medium;
 }
 
 .u-padding-Ts {
-  @extend %u-padding-Ts;
+  padding-top: $space-small;
 }
 
 .u-padding-Txs {
-  @extend %u-padding-Txs;
+  padding-top: $space-xsmall;
 }
 
 .u-padding-Txxs {
-  @extend %u-padding-Txxs;
+  padding-top: $space-xxsmall;
 }
 
 .u-padding-Tn {
-  @extend %u-padding-Tn;
+  padding-top: 0;
 }
 
 ////////////////
 // Bottom margin
 
 .u-margin-Bl {
-  @extend %u-margin-Bl;
+  margin-bottom: $space-large;
 }
 
 .u-margin-Bxm {
-  @extend %u-margin-Bxm;
+  margin-bottom: $space-xmedium;
 }
 
 .u-margin-Bm {
-  @extend %u-margin-Bm;
+  margin-bottom: $space-medium;
 }
 
 .u-margin-Bs {
-  @extend %u-margin-Bs;
+  margin-bottom: $space-small;
 }
 
 .u-margin-Bxs {
-  @extend %u-margin-Bxs;
+  margin-bottom: $space-xsmall;
 }
 
 .u-margin-Bxxs {
-  @extend %u-margin-Bxxs;
+  margin-bottom: $space-xxsmall;
 }
 
 .u-margin-Bn {
-  @extend %u-margin-Bn;
+  margin-bottom: 0;
 }
 
 // Bottom padding
 
 .u-padding-Bl {
-  @extend %u-padding-Bl;
+  padding-bottom: $space-large;
 }
 
 .u-padding-Bxm {
-  @extend %u-padding-Bxm;
+  padding-bottom: $space-xmedium;
 }
 
 .u-padding-Bm {
-  @extend %u-padding-Bm;
+  padding-bottom: $space-medium;
 }
 
 .u-padding-Bs {
-  @extend %u-padding-Bs;
+  padding-bottom: $space-small;
 }
 
 .u-padding-Bxs {
-  @extend %u-padding-Bxs;
+  padding-bottom: $space-xsmall;
 }
 
 .u-padding-Bxxs {
-  @extend %u-padding-Bxxs;
+  padding-bottom: $space-xxsmall;
 }
 
 .u-padding-Bn {
-  @extend %u-padding-Bn;
+  padding-bottom: 0;
 }
 
 ///////////////
 // Right margin
 
 .u-margin-Rl {
-  @extend %u-margin-Rl;
+  margin-right: $space-large;
 }
 
 .u-margin-Rxm {
-  @extend %u-margin-Rxm;
+  margin-right: $space-xmedium;
 }
 
 .u-margin-Rm {
-  @extend %u-margin-Rm;
+  margin-right: $space-medium;
 }
 
 .u-margin-Rs {
-  @extend %u-margin-Rs;
+  margin-right: $space-small;
 }
 
 .u-margin-Rxs {
-  @extend %u-margin-Rxs;
+  margin-right: $space-xsmall;
 }
 
 .u-margin-Rxxs {
-  @extend %u-margin-Rxxs;
+  margin-right: $space-xxsmall;
 }
 
 .u-margin-Rn {
-  @extend %u-margin-Rn;
+  margin-right: 0;
 }
 
 // Right padding
 
 .u-padding-Rl {
-  @extend %u-padding-Rl;
+  padding-right: $space-large;
 }
 
 .u-padding-Rxm {
-  @extend %u-padding-Rxm;
+  padding-right: $space-xmedium;
 }
 
 .u-padding-Rm {
-  @extend %u-padding-Rm;
+  padding-right: $space-medium;
 }
 
 .u-padding-Rs {
-  @extend %u-padding-Rs;
+  padding-right: $space-small;
 }
 
 .u-padding-Rxs {
-  @extend %u-padding-Rxs;
+  padding-right: $space-xsmall;
 }
 
 .u-padding-Rxxs {
-  @extend %u-padding-Rxxs;
+  padding-right: $space-xxsmall;
 }
 
 .u-padding-Rn {
-  @extend %u-padding-Rn;
+  padding-right: 0;
 }
 
 //////////////
 // Left margin
 
 .u-margin-Ll {
-  @extend %u-margin-Ll;
+  margin-left: $space-large;
 }
 
 .u-margin-Lxm {
-  @extend %u-margin-Lxm;
+  margin-left: $space-xmedium;
 }
 
 .u-margin-Lm {
-  @extend %u-margin-Lm;
+  margin-left: $space-medium;
 }
 
 .u-margin-Ls {
-  @extend %u-margin-Ls;
+  margin-left: $space-small;
 }
 
 .u-margin-Lxs {
-  @extend %u-margin-Lxs;
+  margin-left: $space-xsmall;
 }
 
 .u-margin-Lxxs {
-  @extend %u-margin-Lxxs;
+  margin-left: $space-xxsmall;
 }
 
 .u-margin-Ln {
-  @extend %u-margin-Ln;
+  margin-left: 0;
 }
 
 // Left padding
 
 .u-padding-Ll {
-  @extend %u-padding-Ll;
+  padding-left: $space-large;
 }
 
 .u-padding-Lxm {
-  @extend %u-padding-Lxm;
+  padding-left: $space-xmedium;
 }
 
 .u-padding-Lm {
-  @extend %u-padding-Lm;
+  padding-left: $space-medium;
 }
 
 .u-padding-Ls {
-  @extend %u-padding-Ls;
+  padding-left: $space-small;
 }
 
 .u-padding-Lxs {
-  @extend %u-padding-Lxs;
+  padding-left: $space-xsmall;
 }
 
 .u-padding-Lxxs {
-  @extend %u-padding-Lxxs;
+  padding-left: $space-xxsmall;
 }
 
 .u-padding-Ln {
-  @extend %u-padding-Ln;
+  padding-left: 0;
 }
