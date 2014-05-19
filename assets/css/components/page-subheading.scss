@@ -1,9 +1,7 @@
-@import "placeholders/type";
-@import "placeholders/space";
-
 .page-subheading {
-  @extend %u-margin-Bl;
-  @extend %u-text-subheading;
-  @extend %u-text-h2;
+  margin-bottom: $space-large;
+  font-family: $font-family-heading;
+  color: $subheader-color;
+  font-size: $font-size-h2;
   font-weight: normal;
 }

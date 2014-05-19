@@ -21,6 +21,15 @@ $gutter-space-container: 35px;
 
 ////////////////////////////////////////////////////////////////////////////////
 
+$space-large: 27px;
+$space-xmedium: 22px;
+$space-medium: 20px;
+$space-small: 12px;
+$space-xsmall: 9px;
+$space-xxsmall: 6px;
+
+////////////////////////////////////////////////////////////////////////////////
+
 $site-max-width: 940px + $gutter-space-container * 2;
 $site-min-width: 820px + $gutter-space-container * 2;
 $page-max-width: 780px + $gutter-space-container * 2;
@@ -100,3 +109,6 @@ $text-color-invert: #fff;
 $text-color-invert-secondary: #D2D9E0;
 
 $horizontal-ruler-top-invert-color: #4f6f91;
+
+$placeholder-color: #999;
+

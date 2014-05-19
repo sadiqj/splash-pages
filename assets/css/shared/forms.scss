@@ -1,7 +1,4 @@
 @import "variables";
-@import "mixins/placeholder-mixin";
-
-$placeholder-color: #999;
 
 /*
  * Allow only vertical resizing of textareas.
@@ -30,5 +27,24 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 input, textarea {
-  @include placeholder($placeholder-color);
+  // Have to be styled seperately
+
+  // FF < 19
+  &:-moz-placeholder {
+    color: $placeholder-color;
+  }
+
+  // FF >= 19
+  &::-moz-placeholder {
+    color: $placeholder-color;
+  }
+
+  // IE 10
+  &:-ms-input-placeholder {
+    color: $placeholder-color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
 }

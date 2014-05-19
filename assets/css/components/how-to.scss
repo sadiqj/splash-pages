@@ -116,39 +116,39 @@
 }
 
 .how-to__icon__img--user {
-  @include icon("/how-to/icons-l/user", 48px, 48px);
+  @include icon("/how-to/icons/user", 48px, 48px);
 }
 
 .how-to__icon__img--payment {
-  @include icon("/how-to/icons-l/payment", 46px, 48px);
+  @include icon("/how-to/icons/payment", 46px, 48px);
 }
 
 .how-to__icon__img--users {
-  @include icon("/how-to/icons-l/users", 100px, 48px);
+  @include icon("/how-to/icons/users", 100px, 48px);
 }
 
 .how-to__icon__img--paid {
-  @include icon("/how-to/icons-l/paid", 115px, 39px);
+  @include icon("/how-to/icons/paid", 115px, 39px);
 }
 
 .how-to__icon__img--logo {
-  @include icon("/how-to/icons-l/logo", 48px, 36px);
+  @include icon("/how-to/icons/logo", 48px, 36px);
 }
 
 .how-to__icon__img--pending {
-  @include icon("/how-to/icons-l/pending", 48px, 48px);
+  @include icon("/how-to/icons/pending", 48px, 48px);
 }
 
 .how-to__icon__img--refund {
-  @include icon("/how-to/icons-l/refund", 46px, 46px);
+  @include icon("/how-to/icons/refund", 46px, 46px);
 }
 
 .how-to__icon__img--support {
-  @include icon("/how-to/icons-l/support", 48px, 48px);
+  @include icon("/how-to/icons/support", 48px, 48px);
 }
 
 .how-to__icon__img--bank {
-  @include icon("/how-to/icons-l/bank", 52px, 52px);
+  @include icon("/how-to/icons/bank", 52px, 52px);
 }
 
 // Overrides height if @include icon

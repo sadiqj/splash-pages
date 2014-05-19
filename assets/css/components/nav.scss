@@ -1,19 +1,23 @@
 @import "variables";
 @import "mixins/clearfix-mixin";
 
-@import "placeholders/type";
-@import "placeholders/space";
-@import "placeholders/layout";
-
 .nav {
-  @extend %u-cf;
-  @extend %u-text-heading;
-  @extend %u-text-h6;
-  @extend %u-text-semi;
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+  font-family: $font-family-heading;
+  color: $header-color;
+  font-size: $font-size-h6;
+  font-weight: 500;
 }
 
 .nav__item {
-  @extend %u-margin-Rm;
+  margin-right: $space-medium;
   float: left;
   display: block;
 }
