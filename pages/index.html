@@ -1,7 +1,6 @@
 {% extends "default.html" %}
 
 {% block title %}The UK’s #1 for online Direct Debit{% endblock %}
-{% block page_container_class %}{% endblock %}
 
 {% block content %}
 
@@ -10,34 +9,14 @@
   <div class="grid grid--center u-margin-Bm u-margin-Tl">
     <div class="grid__cell u-8of12">
       <div class="grid">
-        <div class="grid__cell u-1of6">
-          <img alt="Star@2x" class="icon--check" src="/images/home/star@2x.png">
-        </div>
-        <div class="grid__cell u-5of6 u-margin-Bm">
-          <h3 class="u-text-h3 u-text-heading u-text-semi u-margin-Bxxs u-margin-Ts">The UK’s #1 for online Direct Debit</h3>
-          <p class="para--bullet">Used by over 5,000 organisations including <a href="/stories/greater-anglia" class="u-text-underline">Greater Anglia Railways</a>. More people choose us than any other provider.</p>
-        </div>
 
-        <div class="grid__cell u-1of6">
-          <img alt="Flag@2x" class="icon--check icon-home-flag" src="/images/home/flag@2x.png">
-        </div>
-        <div class="grid__cell u-5of6 u-margin-Bm">
-          <h3 class="u-text-h3 u-text-heading u-text-semi u-margin-Bxxs u-margin-Ts">Industry leading product</h3>
-          <p class="para--bullet">Our <a href="/features/dashboard" class="u-text-underline">online dashboard</a> and <a href="/features/api" class="u-text-underline">API</a> offer simple online customer setup, payment management and real-time reporting.</p>
-        </div>
+        {% include "_key_benefits.html" %}
 
-        <div class="grid__cell u-1of6">
-          <img alt="Mortorboard@2x" class="icon--check" src="/images/home/mortorboard@2x.png">
-        </div>
-        <div class="grid__cell u-5of6 u-margin-Bm">
-          <h3 class="u-text-h3 u-text-heading u-text-semi u-margin-Bxxs u-margin-Ts">Direct Debit experts</h3>
-          <p class="para--bullet">Authors of the <a href="/direct-debit" class="u-text-underline">industry leading guide to Direct Debit</a>. Regulated by the FCA as an Authorised Payments Institution.</p>
-        </div>
       </div>
     </div>
   </div>
 
-  <div class="page-container">
+
     <div class="grid grid--center u-margin-Bm u-margin-Tl">
       <div class="grid__cell u-6of12">
         <div class="grid">
@@ -61,6 +40,5 @@
       </p>
       </div>
     </div>
-  </div>
 
 {% endblock %}
