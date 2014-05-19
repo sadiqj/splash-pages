@@ -1,0 +1,61 @@
+@import "variables";
+@import "components/page-subheading";
+@import "components/label";
+@import "components/input";
+@import "components/btn";
+
+#application {
+  background-color: white;
+
+  button, input, label, textarea {
+    font-family: $font-family-base;
+    color: $text-color;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .heading {
+    @extend .page-subheading;
+    text-align: center;
+    float: none;
+  }
+
+  .required-fields, .asterisk {
+    display: none;
+  }
+
+  #application_form {
+    width: 380px;
+    margin: 0 auto;
+    .button {
+      @extend .btn;
+      @extend .btn--info;
+      @extend .btn--block;
+      text-shadow: none;
+    }
+  }
+
+  #main_fields, #custom_fields {
+    .field {
+      margin-bottom: 0;
+    }
+    .field label {
+      @extend .label;
+      @extend .label--stacked;
+      float: none;
+      text-align: left;
+      width: 100%;
+      margin-right: 0;
+      line-height: 1.46777;
+    }
+    .field input[type='text'] {
+      @extend .input;
+      @extend .input--stacked;
+      box-sizing: border-box;
+      width: 100% !important;
+    }
+    br {
+      display: none;
+    }
+  }
+}
