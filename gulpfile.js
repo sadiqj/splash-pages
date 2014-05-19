@@ -18,6 +18,9 @@ var APIProxy = httpProxy.createProxyServer();
 
 var template = require('./tasks/template');
 
+var redirect = require('./tasks/redirect');
+var redirects = require('./redirects.json');
+
 // var concat = require('gulp-concat');
 // var uglify = require('gulp-uglify');
 // var imagemin = require('gulp-imagemin');
@@ -104,6 +107,7 @@ function templateMetadata() {
 gulp.task('template', ['html'], function () {
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
+    .pipe(redirect(redirects))
     .pipe(gulp.dest('build'))
     .pipe(size());
 });
