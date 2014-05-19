@@ -33,14 +33,14 @@
 
       <div class="tabbed-well__content">
         <article class="tab-pane active" id="subscriptions-tab">
-  <pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
+<pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
 
-  <span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_subscription_url</span><span class="p">(</span>
-    <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"15.00"</span><span class="p">,</span>
-    <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Premium Account"</span><span class="p">,</span>
-    <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
-    <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p"></span>
-  <span class="p">)</span></pre>
+<span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_subscription_url</span><span class="p">(</span>
+  <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"15.00"</span><span class="p">,</span>
+  <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Premium Account"</span><span class="p">,</span>
+  <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
+  <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p"></span>
+<span class="p">)</span></pre>
         </article>
         <article class="tab-pane" id="setup-direct-debit-tab">
   <pre class="highlight ruby"><span class="c1"># A pre-authorization for up to £100.00 every month</span>
