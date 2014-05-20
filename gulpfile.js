@@ -235,15 +235,30 @@ gulp.task('unit', function() {
   });
 });
 
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
+
+function bucket() {
+  if (isProduction()) {
+    return 'gocardless.com';
+  } else {
+    return 'staging.gocardless.com';
+  }
+}
+
 gulp.task('deploy', ['clean', 'build'], function() {
   return gulp.src('build/**/*')
-    .pipe(deploy())
-    .pipe(size());
+    .pipe(deploy({
+      Bucket: bucket()
+    }));
 });
 
 gulp.task('test', ['unit']);
 
-gulp.task('build', ['template', 'redirects', 'images', 'fonts', 'public', 'assets']);
+gulp.task('build', [
+  'template', 'redirects', 'images', 'fonts', 'public', 'assets'
+]);
 
 gulp.task('default', function () {
   gulp.start('watch');
