@@ -19,7 +19,7 @@
     "gulp-flatten": "^0.0.2",
     "gulp-imagemin": "^0.5.0",
     "gulp-livereload": "^1.2.0",
-    "gulp-ruby-sass": "^0.5.0",
+    "gulp-sass": "^0.7.1",
     "gulp-size": "^0.3.1",
     "gulp-uglify": "^0.3.0",
     "gulp-useref": "^0.4.3",
@@ -45,7 +45,6 @@
     "through2": "^0.4.1"
   },
   "scripts": {
-    "postinstall": "bundle install",
     "test": "gulp test"
   },
   "engines": {
