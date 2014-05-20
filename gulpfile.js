@@ -7,7 +7,7 @@ var csslint = require('gulp-csslint');
 var size = require('gulp-size');
 var filter = require('gulp-filter');
 var useref = require('gulp-useref');
-var rubySass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var flatten = require('gulp-flatten');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
@@ -43,7 +43,7 @@ gulp.task('csslint', function() {
 
 gulp.task('css', function () {
   return gulp.src('assets/css/main.scss')
-    .pipe(rubySass({
+    .pipe(sass({
       style: 'expanded',
       precision: 10,
       bundleExec: true,
