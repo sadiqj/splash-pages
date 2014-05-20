@@ -5104,6 +5104,11 @@
         }
       }
     },
+    "mime": {
+      "version": "1.2.11",
+      "from": "mime@1.2.11",
+      "resolved": "https://registry.npmjs.org/mime/-/mime-1.2.11.tgz"
+    },
     "debug": {
       "version": "0.8.1",
       "from": "debug@~0.8.1",
