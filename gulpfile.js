@@ -17,6 +17,7 @@ var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
 
 var template = require('./tasks/template');
+var deploy = require('./tasks/deploy');
 
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
@@ -232,6 +233,12 @@ gulp.task('unit', function() {
   .on('error', function(err) {
     throw err;
   });
+});
+
+gulp.task('deploy', ['clean', 'build'], function() {
+  return gulp.src('build/**/*')
+    .pipe(deploy())
+    .pipe(size());
 });
 
 gulp.task('test', ['unit']);
