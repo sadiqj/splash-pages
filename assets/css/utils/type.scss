@@ -21,6 +21,10 @@
   font-weight: 400;
 }
 
+.u-text-light {
+  font-weight: 200;
+}
+
 .u-text-heading {
   font-family: $font-family-heading;
   color: $header-color;
@@ -126,6 +130,10 @@ h6, .u-text-h6 {
 //
 .u-text-meta {
   color: $gray;
+}
+
+.u-text-meta-dark {
+  color: $dark-gray;
 }
 
 .u-text-invert {

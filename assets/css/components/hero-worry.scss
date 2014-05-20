@@ -1,0 +1,33 @@
+@import "mixins/at2x-mixin";
+
+.hero-worry {
+  height: 500px;
+  background: $hero-background-color;
+}
+
+.hero-worry--gradient {
+  background: linear-gradient(to bottom, #dee2e7, #1c436c);
+}
+
+.hero-worry--girl {
+  background: url("/images/hero/hero-girl-bg@2x.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.hero-worry__heading {
+  height: 377px;
+  font-weight: 200;
+  padding: 115px 0;
+  line-height: 48px;
+}
+
+.hero-worry__modal {
+  position: relative;
+  right: -45px;
+}
+
+.hero-worry__logo {
+  margin-top: 20px;
+}

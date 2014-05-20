@@ -136,3 +136,10 @@
   display: block;
   width: 100%;
 }
+
+.btn--double {
+  border-radius: $border-radius-double;
+  font-size: $font-size-h3;
+  border-width: 2px;
+  line-height: 44px;
+}
