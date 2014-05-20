@@ -58,7 +58,7 @@ gulp.task('css', function () {
 // Adds a CSS file for Greenhouse application forms
 gulp.task('greenhouse-css', function () {
   return gulp.src('assets/css/greenhouse-forms.scss')
-    .pipe(rubySass({
+    .pipe(sass({
       style: 'expanded',
       precision: 10,
       bundleExec: true,
