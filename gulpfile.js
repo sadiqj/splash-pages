@@ -155,7 +155,12 @@ gulp.task('connect', function () {
   var app = connect()
       .use(require('connect-livereload')({ port: 35729 }))
       .use(function(req, res, next) {
-        if (req.url.match(/^\/api\//)) {
+        if (req.url.match(/^\/api\//) ||
+            req.url.match(/^\/admin\//) ||
+            req.url.match(/^\/web\//) ||
+            req.url.match(/^\/merchants\//) ||
+            req.url.match(/^\/users\//) ||
+            req.url.match(/^\/connect\//)) {
           APIProxy.web(req, res, {
             target: 'http://gocardless.dev:3000'
           });
