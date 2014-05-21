@@ -20,6 +20,9 @@
 }
 
 .hero-worry__modal {
+  @include at2x('/images/products/take-payment-modal-cropped', 495px, 377px);
+  width: 495px;
+  height: 377px;
   position: relative;
   right: -45px;
   top: 8px;
