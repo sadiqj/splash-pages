@@ -104,28 +104,15 @@ var upload = (function(buildUploadParams, MD5, MSG) {
     }
 
     // Upload the file to s3.
-    client.putObject(params, function(err, res){
+    client.putObject(params, function(err){
       if (err) {
         log(MSG.ERR_UPLOAD, err, err.stack);
         return cb();
       }
 
-      // The etag head in the response from s3 has double quotes around
-      // it. Strip them out.
-      var remoteHash = res.ETag.replace(/^"|"$/g, '');
-      // Get an md5 of the local file so we can verify the upload.
-      var localHash = MD5(file.contents);
-
-      if (remoteHash !== localHash) {
-        log(MSG.ERR_CHECKSUM, 'Upload', localHash, remoteHash);
-        cb();
-      }
-      else {
-        var msg = util.format(MSG.UPLOAD_SUCCESS, dest, params.Bucket,
-          dest, localHash);
-        log(msg);
-        cb();
-      }
+      var msg = util.format(MSG.UPLOAD_SUCCESS, dest, params.Bucket, dest);
+      log(msg);
+      cb();
     });
   };
 })(buildUploadParams, MD5, MSG);
