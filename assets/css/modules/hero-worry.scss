@@ -1,0 +1,39 @@
+@import "mixins/at2x-mixin";
+
+.hero-worry {
+  height: 500px;
+  min-width: 1024px;
+}
+
+.hero-worry--girl {
+  background: url("/images/hero/hero-girl-bg@2x.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@media all and (min-width: 1600px) {
+  .hero-worry--girl {
+    background-position: 50% 30%;
+  }
+}
+
+.hero-worry__heading {
+  height: 377px;
+  font-weight: 200;
+  padding: 115px 0;
+  line-height: 48px;
+}
+
+.hero-worry__modal {
+  @include at2x('/images/products/take-payment-modal-cropped', 495px, 377px);
+  width: 495px;
+  height: 377px;
+  position: relative;
+  right: -45px;
+  top: 8px;
+}
+
+.hero-worry__logo {
+  margin-top: 20px;
+}
