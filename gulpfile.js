@@ -22,11 +22,10 @@ var deploy = require('./tasks/deploy');
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
 
-// var concat = require('gulp-concat');
-// var uglify = require('gulp-uglify');
-// var imagemin = require('gulp-imagemin');
-// var cache = require('gulp-cache');
-// var csso = require('gulp-csso');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+var csso = require('gulp-csso');
 
 gulp.task('eslint', function() {
   return gulp.src('assets/js/**/*.js')
@@ -68,18 +67,10 @@ gulp.task('public', function() {
 });
 
 gulp.task('html', ['css'], function () {
-  var jsFilter = filter('**/*.js');
-  var cssFilter = filter('**/*.css');
   var htmlFilter = filter('**/*.html');
 
   return gulp.src('templates/**/*.html')
     .pipe(useref.assets({ searchPath: '{.tmp,assets}' }))
-    .pipe(jsFilter)
-    // .pipe(uglify())
-    .pipe(jsFilter.restore())
-    .pipe(cssFilter)
-    // .pipe(csso())
-    .pipe(cssFilter.restore())
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('build'))
@@ -119,13 +110,19 @@ gulp.task('redirects', function () {
     .pipe(size());
 });
 
+gulp.task('imagemin', function () {
+  return gulp.src('assets/images/**/*')
+    .pipe(cache(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('assets/images'))
+    .pipe(size());
+});
+
 gulp.task('images', function () {
   return gulp.src('assets/images/**/*')
-    // .pipe(cache(imagemin({
-    //   optimizationLevel: 3,
-    //   progressive: true,
-    //   interlaced: true
-    // })))
     .pipe(gulp.dest('build/images'))
     .pipe(size());
 });
@@ -253,17 +250,35 @@ function bucket() {
   }
 }
 
-gulp.task('deploy', ['clean', 'build'], function() {
+gulp.task('deploy', ['clean', 'production'], function() {
   return gulp.src('build/**/*')
     .pipe(deploy({
       Bucket: bucket()
     }));
 });
 
+gulp.task('compress-css', function () {
+  return gulp.src('build/css/**/*.css')
+    .pipe(csso())
+    .pipe(gulp.dest('build/css'))
+    .pipe(size());
+});
+
+gulp.task('compress-js', function () {
+  return gulp.src('build/js/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'))
+    .pipe(size());
+});
+
 gulp.task('test', ['unit']);
 
 gulp.task('build', [
   'template', 'redirects', 'images', 'fonts', 'public', 'assets'
+]);
+
+gulp.task('production', [
+  'build', 'compress-css', 'compress-js'
 ]);
 
 gulp.task('default', function () {
