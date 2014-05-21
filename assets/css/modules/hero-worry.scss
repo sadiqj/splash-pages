@@ -2,11 +2,7 @@
 
 .hero-worry {
   height: 500px;
-  background: $hero-background-color;
-}
-
-.hero-worry--gradient {
-  background: linear-gradient(to bottom, #dee2e7, #1c436c);
+  min-width: 1024px;
 }
 
 .hero-worry--girl {
