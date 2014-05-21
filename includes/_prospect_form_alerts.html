@@ -1,13 +1,13 @@
 <div class="u-is-hidden notice notice--error u-margin-Bm"
   ng-class="{
-    'u-is-visible': $isError
+    'u-is-visible': prospectForm.$isError
   }">
-  {{ $isError }}
+  <div ng-bind="prospectForm.$isError"></div>
 </div>
 
 <div class="u-is-hidden notice notice--success u-margin-Bm"
   ng-class="{
-    'u-is-visible': $isSuccess
+    'u-is-visible': prospectForm.$isSuccess
   }">
   <div ng-switch="prospectForm.size">
     <div ng-switch-when="0-100">

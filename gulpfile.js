@@ -160,6 +160,7 @@ gulp.task('connect', function () {
             req.url.match(/^\/web\//) ||
             req.url.match(/^\/merchants\//) ||
             req.url.match(/^\/users\//) ||
+            req.url.match(/^\/assets\//) ||
             req.url.match(/^\/connect\//)) {
           APIProxy.web(req, res, {
             target: 'http://gocardless.dev:3000'
