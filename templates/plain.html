@@ -160,11 +160,11 @@
           }
 
           // XXX
-          // Clean this crap up!
-          // XXX
-
+          var prospect;
           try {
             var prospect = JSON.parse(window.localStorage.getItem('prospect'));
+          } catch (e) {}
+          if (prospect) {
             olark('api.visitor.updateFullName', {
               fullName: prospect['prospect[name]']
             });
@@ -177,8 +177,6 @@
             olark('api.visitor.updateCustomFields', {
               size: prospect['prospect[size]']
             });
-          } catch (e) {
-            // ignore
           }
         })();
       </script>
