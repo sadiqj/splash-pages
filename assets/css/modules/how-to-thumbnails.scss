@@ -99,39 +99,39 @@
 }
 
 .how-to-thumbnails__icon__img--user {
-  @include icon("/images/how-to/icons/user", 48px, 48px);
+  @include icon("/images/how-to/icons-l/user", 48px, 48px);
 }
 
 .how-to-thumbnails__icon__img--payment {
-  @include icon("/images/how-to/icons/payment", 46px, 48px);
+  @include icon("/images/how-to/icons-l/payment", 46px, 48px);
 }
 
 .how-to-thumbnails__icon__img--users {
-  @include icon("/images/how-to/icons/users", 100px, 48px);
+  @include icon("/images/how-to/icons-l/users", 100px, 48px);
 }
 
 .how-to-thumbnails__icon__img--paid {
-  @include icon("/images/how-to/icons/paid", 115px, 39px);
+  @include icon("/images/how-to/icons-l/paid", 115px, 39px);
 }
 
 .how-to-thumbnails__icon__img--logo {
-  @include icon("/images/how-to/icons/logo", 48px, 36px);
+  @include icon("/images/how-to/icons-l/logo", 48px, 36px);
 }
 
 .how-to-thumbnails__icon__img--pending {
-  @include icon("/images/how-to/icons/pending", 48px, 48px);
+  @include icon("/images/how-to/icons-l/pending", 48px, 48px);
 }
 
 .how-to-thumbnails__icon__img--refund {
-  @include icon("/images/how-to/icons/refund", 46px, 46px);
+  @include icon("/images/how-to/icons-l/refund", 46px, 46px);
 }
 
 .how-to-thumbnails__icon__img--support {
-  @include icon("/images/how-to/icons/support", 48px, 48px);
+  @include icon("/images/how-to/icons-l/support", 48px, 48px);
 }
 
 .how-to-thumbnails__icon__img--bank {
-  @include icon("/images/how-to/icons/bank", 52px, 52px);
+  @include icon("/images/how-to/icons-l/bank", 52px, 52px);
 }
 
 // Overrides height if @include icon
