@@ -1,20 +1,19 @@
 # Setup to run locally
 
-1. Install Node.JS: http://nodejs.org/download/ (v.0.10.x)
+- Install Node.JS: http://nodejs.org/download/ (v.0.10.x)
 
-2. Edit your ~/.bash_profile or ~/.zshrc:
+- Edit your ~/.bash_profile or ~/.zshrc:
 ```
 PATH=node_modules/.bin:$PATH
 ```
 
-3. Install required packages:
+- Install required packages:
 ```
 $ npm install
 ```
 
 # Running locally:
 
-4. Run server
 ```
 $ gulp watch
 ```
