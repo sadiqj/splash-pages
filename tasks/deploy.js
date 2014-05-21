@@ -16,13 +16,6 @@ var MSG = {
   ERR_CHECKSUM: '%s error: expected hash: %s but found %s for %s'
 };
 
-AWS.config.update({
-  sslEnabled: true,
-  region: 'eu-west-1',
-  accessKeyId: process.env.GC_AWS_ACCESS_KEY,
-  secretAccessKey: process.env.GC_AWS_SECRET
-});
-
 function log() {
   console.log.apply(null, arguments);
 }
@@ -136,8 +129,17 @@ var sync = (function(upload, buildBaseParams, MSG) {
 })(upload, buildBaseParams, MSG);
 
 var deploy = (function(sync, AWS, through) {
-  return function deploy(options) {
-    options = _.clone(options, true);
+  return function deploy(AWSOptions, s3Options) {
+    AWSOptions = _.clone(AWSOptions, true);
+    s3Options = _.clone(s3Options, true);
+
+    AWS.config.update(_.extend({
+      sslEnabled: true,
+      region: process.env.AWS_DEFAULT_REGION || 'us-west-1',
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    }, AWSOptions));
+
     var client = new AWS.S3();
 
     return through.obj(function(file, enc, cb) {
@@ -149,7 +151,7 @@ var deploy = (function(sync, AWS, through) {
         throw new Error('Streaming not supported');
       }
 
-      sync(client, file, options, cb);
+      sync(client, file, s3Options, cb);
     });
   };
 })(sync, AWS, through);

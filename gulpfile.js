@@ -27,6 +27,10 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var csso = require('gulp-csso');
 
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
+
 gulp.task('eslint', function() {
   return gulp.src('assets/js/**/*.js')
     .pipe(eslint({
@@ -80,13 +84,12 @@ gulp.task('html', ['css'], function () {
 });
 
 function templateMetadata() {
-  var isProduction = process.env.NODE_ENV === 'production';
   var mixpanelProduction = '0ebe37c4ed96a0432e989cc20ca1db04';
   var mixpanelTest = 'fa029f81daf1c512854b1345342c4e6c';
-  var mixpanelToken = isProduction ? mixpanelProduction : mixpanelTest;
+  var mixpanelToken = isProduction() ? mixpanelProduction : mixpanelTest;
 
   return {
-    ENV_PRODUCTION: isProduction,
+    ENV_PRODUCTION: isProduction(),
     MIXPANEL_TOKEN: mixpanelToken,
     TRADING_ADDRESS: '22-25 Finsbury Square<br>London, EC2A 1DX',
     SUPPORT_CONTACT_NUMBER: '020 7183 8674',
@@ -238,22 +241,14 @@ gulp.task('unit', function() {
   });
 });
 
-function isProduction() {
-  return process.env.NODE_ENV === 'production';
-}
-
-function bucket() {
-  if (isProduction()) {
-    return 'gocardless.com';
-  } else {
-    return 'staging.gocardless.com';
-  }
-}
-
 gulp.task('deploy', ['clean', 'production'], function() {
   return gulp.src('build/**/*')
     .pipe(deploy({
-      Bucket: bucket()
+      region: 'eu-west-1',
+      accessKeyId: process.env.GC_AWS_ACCESS_KEY,
+      secretAccessKey: process.env.GC_AWS_SECRET
+    }, {
+      Bucket: process.env.AWS_S3_BUCKET,
     }));
 });
 
