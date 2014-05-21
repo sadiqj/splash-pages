@@ -5,7 +5,6 @@
 {% block body %}
 
   <div id="home-a" class="u-hidden">
-
     <div>
       <div class="frame-container site-container site-gutter u-cf align-btn-small u-padding-Vxs">
         <div class="u-pull-start">
@@ -52,45 +51,42 @@
     <div class="horizontal-ruler-top">
       <div class="site-container frame-container frame-container--end">
         <div class="{% block page_container_class %}page-container{% endblock %}">
-          {% block content %}
 
-            <h1 class="u-text-normal u-margin-Tl u-text-heading u-text-h1 benefits-header--blue u-text-center">GoCardless is the UK’s leading<br>online Direct Debit provider</h1>
+          <h1 class="u-text-normal u-margin-Tl u-text-heading u-text-h1 benefits-header--blue u-text-center">GoCardless is the UK’s leading<br>online Direct Debit provider</h1>
 
-            <div class="grid grid--center u-margin-Bm u-margin-Tl">
-              <div class="grid__cell u-8of12">
-                <div class="grid">
+          <div class="grid grid--center u-margin-Bm u-margin-Tl">
+            <div class="grid__cell u-8of12">
+              <div class="grid">
 
-                  {% include "_key_benefits.html" %}
+                {% include "_key_benefits.html" %}
 
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid--center u-margin-Bm u-margin-Tl">
+            <div class="grid__cell u-6of12">
+              <div class="grid">
+                <div class="grid__cell u-1of2">
+                  <a href="/watch-a-demo" class="btn btn--block btn--info">Watch a demo</a>
+                </div>
+
+                <div class="grid__cell u-1of2">
+                  <a href="/features" class="btn btn--block btn--info-hollow u-margin-Ls">Find out more</a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="grid grid--center u-margin-Bm u-margin-Tl">
-              <div class="grid__cell u-6of12">
-                <div class="grid">
-                  <div class="grid__cell u-1of2">
-                    <a href="/request-a-demo" class="btn btn--block btn--info">Request a demo</a>
-                  </div>
-
-                  <div class="grid__cell u-1of2">
-                    <a href="/features" class="btn btn--block btn--info-hollow u-margin-Ls">Find out more</a>
-                  </div>
-                </div>
-              </div>
+          <div class="grid grid--center u-margin-Bm u-margin-Ts">
+            <div class="grid__cell u-12of12 u-text-center">
+            <hr>
+            <p>
+              <b>SEPA is coming.</b> We're bringing Simple Direct Debit to Europe&hellip;
+              <a href="/europe" class="u-text-underline">Register your interest</a>
+            </p>
             </div>
-
-            <div class="grid grid--center u-margin-Bm u-margin-Ts">
-              <div class="grid__cell u-12of12 u-text-center">
-              <hr>
-              <p>
-                <b>SEPA is coming.</b> We're bringing Simple Direct Debit to Europe&hellip;
-                <a href="/europe" class="u-text-underline">Register your interest</a>
-              </p>
-              </div>
-            </div>
-
-            {% endblock %}
+          </div>
 
         </div>
       </div>
