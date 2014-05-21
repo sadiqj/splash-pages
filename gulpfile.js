@@ -140,12 +140,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('fonts', function () {
-  var streamqueue = require('streamqueue');
-  return streamqueue({ objectMode: true },
-    gulp.src('assets/fonts/**/*')
-  )
-    .pipe(filter('**/*.{eot,svg,ttf,woff}'))
-    .pipe(flatten())
+  return gulp.src('assets/fonts/**/*')
     .pipe(gulp.dest('build/fonts'))
     .pipe(size());
 });
