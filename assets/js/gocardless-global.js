@@ -1,8 +1,8 @@
-(function(root) {
+(function(global) {
   'use strict';
 
   if (!('GoCardless' in window)) {
-    return root.GoCardless = {};
+    return global.GoCardless = {};
   }
 
 })(this);
