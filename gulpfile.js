@@ -142,7 +142,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('serve', ['build', 'connect'], function () {
-  require('opn')('http://gocardless.dev:9000');
+  require('opn')('http://localhost:9000');
 });
 
 gulp.task('connect', function () {
