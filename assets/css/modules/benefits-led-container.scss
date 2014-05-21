@@ -1,4 +1,5 @@
 @import "mixins/icon-mixin";
+@import "mixins/at2x-mixin";
 
 .benefits-led-container {
   background: white;
@@ -14,4 +15,10 @@
 
 .benefits-led-container__service-icon {
   @include icon('/images/icons/service-icon', 56px, 56px);
+}
+
+.benefits-led-container__publications {
+  @include at2x('/images/press/publications', 970px, 45px, ".jpg");
+  width: 970px;
+  height: 45px;
 }
