@@ -6,7 +6,7 @@ angular.module('ngGcRequestDemoFunnel', [
   'ngGcPageRouter', '$window',
   function ngGcRequestDemoFunnel(ngGcPageRouter, $window) {
 
-    ngGcPageRouter('/request-a-demo', function(path) {
+    ngGcPageRouter('/watch-a-demo', function(path) {
       $window.gct('track', 'Pageview', {
         'Path': path,
         'Property': 'website',

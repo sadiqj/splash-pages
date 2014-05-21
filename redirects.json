@@ -26,5 +26,6 @@
   "/partners/index.html": "https://gocardless.com/features/integrations",
   "/partners/whmch/index.html": "github.com/gocardless/gocardless-whmcs",
   "/partners/whmcs-details/index.html": "github.com/gocardless/gocardless-whmcs",
-  "/team/index.html": "https://gocardless.com/about"
+  "/team/index.html": "https://gocardless.com/about",
+  "/request-a-demo/index.html": "https://gocardless.com/watch-a-demo"
 }
