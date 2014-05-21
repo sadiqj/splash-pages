@@ -1,0 +1,23 @@
+.section-heading {
+  margin-top: $space-medium;
+  margin-bottom: $space-xsmall;
+  font-family: $font-family-heading;
+  color: $header-color;
+  font-weight: 500;
+  font-size: $font-size-h3;
+  color: $primary-blue;
+}
+
+.section-heading__bullet {
+  font-family: $font-family-heading;
+  color: $header-color;
+  font-weight: 500;
+  font-size: $font-size-h3;
+  color: $primary-blue;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.section-heading--red {
+  color: #E14E3D;
+}

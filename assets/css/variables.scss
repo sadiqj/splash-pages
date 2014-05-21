@@ -1,0 +1,114 @@
+$font-family-base:      Arial, sans-serif;
+$font-family-heading:   "Gotham SSm A", "Gotham SSm B", $font-family-base;
+$font-family-label:     "Gotham SSm A", "Gotham SSm B", $font-family-base;
+$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$font-size-base: 15px;
+$line-height-base: 1.466666667;
+
+$font-size-hero: 42px;
+$font-size-h1: 30px;
+$font-size-h2: 20px;
+$font-size-h3: 17px;
+$font-size-h4: $font-size-base;
+$font-size-h5: 13px;
+$font-size-h6: 12px;
+$font-size-h7: 11px;
+
+$border-radius-base: 3px;
+$gutter-space-base: 20px;
+$gutter-space-container: 35px;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$space-large: 27px;
+$space-xmedium: 22px;
+$space-medium: 20px;
+$space-small: 12px;
+$space-xsmall: 9px;
+$space-xxsmall: 6px;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$site-max-width: 940px + $gutter-space-container * 2;
+$site-min-width: 820px + $gutter-space-container * 2;
+$page-max-width: 780px + $gutter-space-container * 2;
+$page-min-width: 780px + $gutter-space-container * 2;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$black-blue: #4E4E4E;
+$black-blue-lighten: lighten($black-blue, 7%);
+$black-blue-darken: darken($black-blue, 7%);
+
+$dark-blue: #203844;
+$dark-blue-lighten: lighten($dark-blue, 7%); // #4D616C
+$dark-blue-darken: darken($dark-blue, 7%);
+
+$primary-blue: #395D8D;
+$primary-blue-lighten: lighten($primary-blue, 5%);
+$primary-blue-darken: darken($primary-blue, 5%); // #2F95D6
+
+$primary-red: #E14E3D;
+$primary-red-lighten: lighten($primary-red, 7%);
+$primary-red-darken: darken($primary-red, 7%);
+
+$primary-orange: #F7C55A;
+$primary-orange-lighten: lighten($primary-orange, 7%);
+$primary-orange-darken: darken($primary-orange, 7%); // #DD9F1F
+
+$primary-green: #94C43E;
+$primary-green-lighten: lighten($primary-green, 7%);
+$primary-green-darken: darken($primary-green, 10%); // #8EB335
+
+$secondary-blue: #144A66;
+$secondary-blue-lighten: lighten($secondary-blue, 7%);
+$secondary-blue-darken: darken($secondary-blue, 7%);
+
+$light-blue: #EAF7FD;
+$light-blue-lighten: lighten($light-blue, 2%);
+$light-blue-darken: darken($light-blue, 7%);
+
+$light-gray: #EAEDEF;
+$light-gray-lighten: lighten($light-gray, 7%);
+$light-gray-darken: darken($light-gray, 5%);
+
+$gray: #A7ADB3;
+$gray-lighten: #D2D9DD;
+$gray-darken: darken($gray, 7%);
+
+$blue-gray: #4E4E4E;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$site-background-color: #F8F8F8;
+
+$header-color: #141E27;
+
+$subheader-color: #657483;
+
+$text-color: #4E4E4E;
+
+$link-color: #395D8D;
+$link-hover-color: darken(#395D8D, 5%);
+
+$btn-color: #FFFFFF;
+
+$hr-border-color: #EDEDED;
+
+$well-background: #FCF8E3;
+$well-border: #FBEED5;
+
+$input-border: #D2D6DB;
+
+$input-disabled-background: #ddd;
+$input-disabled-border: #aaa;
+$input-disabled-color: #444;
+
+$text-color-invert: #fff;
+$text-color-invert-secondary: #D2D9E0;
+
+$horizontal-ruler-top-invert-color: #4f6f91;
+
+$placeholder-color: #999;
+

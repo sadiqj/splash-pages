@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixins/clearfix-mixin";
+
+.nav {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+  font-family: $font-family-heading;
+  color: $header-color;
+  font-size: $font-size-h6;
+  font-weight: 500;
+}
+
+.nav__item {
+  margin-right: $space-medium;
+  float: left;
+  display: block;
+}
+
+.nav__item.is-active {
+  color: $text-color;
+  text-decoration: none;
+}

@@ -1,10 +1,26 @@
 # Running locally:
 
-    $ bundle install
-    $ jekyll serve --watch
+```
+$ npm install
+$ gulp watch
+```
 
-[http://localhost:4000/index.html](http://localhost:4000/index.html)
+[http://localhost:9000/index.html](http://localhost:9000/index.html)
 
-# Deploying
+# Deploying manually
 
-`cap production deploy`
+Set up AWS credentials (web ops):
+```
+export GC_AWS_ACCESS_KEY=ask webops
+export GC_AWS_ACCESS_KEY=ask webops
+```
+
+Testing:
+```
+$ make deploy target=live-staging
+```
+
+Production:
+```
+$ make deploy target=live-production
+```

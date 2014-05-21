@@ -1,0 +1,50 @@
+@import "variables";
+
+/*
+ * Allow only vertical resizing of textareas.
+ * Reset height since textareas have rows
+ */
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Fix for Firefox
+select {
+  padding: 3px 0 1px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input, textarea {
+  // Have to be styled seperately
+
+  // FF < 19
+  &:-moz-placeholder {
+    color: $placeholder-color;
+  }
+
+  // FF >= 19
+  &::-moz-placeholder {
+    color: $placeholder-color;
+  }
+
+  // IE 10
+  &:-ms-input-placeholder {
+    color: $placeholder-color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
+}

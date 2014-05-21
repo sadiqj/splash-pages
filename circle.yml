@@ -1,0 +1,14 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - node_modules/.bin/gulp deploy
+
+  staging:
+    branch: dev
+    commands:
+      - node_modules/.bin/gulp deploy
+
+machine:
+  node:
+    version: 0.10.22

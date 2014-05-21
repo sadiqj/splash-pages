@@ -1,0 +1,138 @@
+@import "variables";
+
+// A generic button class
+//
+// .disabled      - A disabled button
+// [disabled]     - A disabled button
+// :hover         - Subtle darker highlight on hover
+// :active        - Show button as pressed
+// .btn--small    - A small button
+// .btn--mini     - A mini button
+// .btn--info     - A info colored button
+// .btn--block    - A full sized button
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 36px;
+  min-height: 36px;
+  white-space: nowrap;
+
+  border-style: solid;
+  border-width: 1px;
+  background-color: $primary-blue;
+  border-color: $primary-blue;
+  border-radius: $border-radius-base;
+  text-align: center;
+  font-size: $font-size-h6;
+  font-family: $font-family-label;
+  font-weight: 500;
+  color: $btn-color;
+  cursor: pointer;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $btn-color;
+  }
+}
+
+.btn:active,
+.btn--active {
+  background-color: $primary-blue-darken;
+}
+
+.btn[disabled],
+.btn--disabled,
+.btn[disabled]:hover,
+.btn--disabled:hover,
+.btn[disabled]:active,
+.btn--disabled:active {
+  cursor: default;
+  background: transparent;
+  background-color: transparent;
+  background-image: transparent;
+  color: #A8A8A8;
+  border-color: #DDD;
+  text-decoration: none;
+}
+
+// Sizes
+
+.btn--small {
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 26px;
+  min-height: 28px;
+}
+
+// Depends on .btn
+
+.btn--info {
+  color: #FFF;
+  background: #E14E3D;
+  border-color: #E14E3D;
+
+  &:hover {
+    color: #FFF;
+  }
+}
+
+.btn--info:active,
+.btn--info--active {
+  background: darken(#E14E3D, 5%);
+  border-color: darken(#E14E3D, 5%);
+}
+
+.btn--info-hollow {
+  border-color: #E14E3D;
+  background: transparent;
+  color: #E14E3D;
+
+  &:hover {
+    color: #E14E3D;
+  }
+}
+
+.btn--info-hollow:active,
+.btn--info-hollow--active {
+  background: none;
+  border-color: darken(#E14E3D, 5%);
+}
+
+.btn--hollow {
+  border-color: #3B6693;
+  background: transparent;
+  color: #3B6693;
+
+  &:hover {
+    color: #3B6693;
+  }
+}
+
+.btn--invert-hollow {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn--hollow:active,
+.btn--hollow--active {
+  background: none;
+  border-color: darken(#3B6693, 5%);
+}
+
+// Depends on .btn
+
+.btn--block {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,55 @@
+{% extends "default.html" %}
+
+{% block title %}SEPA Direct Debit{% endblock %}
+{% block page_container_class %}{% endblock %}
+
+{% block content %}
+
+  <div class="gradient-fill-dark">
+    <div class="europe-header">
+      <div class="u-padding-Vl">
+        <div class="u-padding-Vl u-text-center">
+
+          <i class="icon icon-stars-europe"></i>
+
+          <h2 class="u-text-heading u-margin-Tl u-margin-Bxs u-text-h1 u-text-invert u-text-center">
+          Accept Direct Debit across Europe.
+          </h2>
+          <h2 class="u-text-heading u-margin-Vs u-text-h3 u-text-invert-secondary">
+          One of the first companies to offer Direct Debit across Europe.<br>Currently in beta.</b>
+          </h2>
+
+          <a href="/request-sepa-updates" class="u-margin-Vs btn btn--invert-hollow">Register your interest</a>
+
+          <p class="u-text-invert u-margin-Tm u-margin-Bn">
+            <b><a href="/blog/sepa-direct-debit-explained" class="u-link-invert">An introduction to SEPA</a></b>
+            &nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;
+            <b><a href="/direct-debit/sepa" class="u-link-invert">SEPA: a user guide</a></b>
+            &nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;
+            <b><a href="/blog/sepa-direct-debit-details" class="u-link-invert">Under the hood</a></b>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid--center u-margin-Bn u-margin-Tl">
+    <div class="grid__cell u-6of12">
+      <div class="grid">
+
+        <div class="grid__cell u-1of6">
+          <img alt="Scale" class="icon--check icon-home-flag" src="/images/pricing/scale@2x.png">
+        </div>
+        <div class="grid__cell u-5of6 u-margin-Bm">
+          <h3 class="u-text-h3 u-text-heading u-text-semi u-margin-Bxxs u-margin-Ts">Scale pricing for larger merchants</h3>
+          <p class="para--bullet">We offer scale pricing for merchants processing more than 500 payments per month. <a class="u-text-underline" href="/pricing">Find out more on our pricing.</a></p>
+        </div>
+
+        {% include "_key_benefits.html" %}
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

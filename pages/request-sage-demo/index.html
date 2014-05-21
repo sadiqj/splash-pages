@@ -1,0 +1,40 @@
+{% extends "default.html" %}
+
+{% block title %}Request More Info{% endblock %}
+{% block description %}Request a demo of how your business can collect Direct Debit payments with the GoCardless addon for Sage 50{% endblock %}
+
+{% block content %}
+
+  <h1 class="page-heading u-text-center">GoCardless for Sage 50</h1>
+  <h2 class="page-subheading u-text-center">Request more info about our Sage 50 add-on<br>
+  by leaving your details in the form below</h2>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-1of2">
+
+      <form accept-charset="UTF-8" action="/api/v1/prospects/sage"
+        class="spacer-box horizontal-spacer-medium border border--bottom border--light stripe--mist ng-pristine ng-valid"
+        method="post"
+        name="prospectForm"
+        ng-gc-form-submit
+        ng-gc-ga-event-tracker="{
+            event: 'submit',
+            category: 'forms',
+            action: 'submit-form',
+            label: 'sage'
+          }">
+        {% include "_prospect_form_fields.html" %}
+
+        <button class="btn btn--info btn--block u-margin-Tl"
+          type="submit"
+          ng-disabled="prospectForm.$pristine || prospectForm.$isSubmitting">
+          Request Sage Demo
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  {% include "_lead_capture_alternative_contact.html" %}
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "default.html" %}
+
+{% block title %}Example Checkout{% endblock %}
+
+{% block content %}
+
+  <div class="u-text-center">
+    <div class="u-margin-Bl">
+      <header>
+        <h3 class="page-heading">What your customers see</h3>
+      </header>
+
+      <p class="u-padding-Bm">
+        Customers set up Direct Debits by entering their details on our secure online checkout pages.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="grid__cell u-1of3 u-padding-Bl">
+        <div class="row u-text-center">
+          <h2 class="u-text-heading">Example<br>One-off payments</h2>
+          <p class="para">Collect a single, one-off payment&nbsp;of&nbsp;£2.99.</p>
+          <form accept-charset="UTF-8" action="/api/v1/example_checkout/one_off"
+            method="post" class="ng-pristine ng-valid">
+            <input class="btn btn--info btn--small" name="commit" type="submit" value="View Example">
+          </form>
+        </div>
+      </div>
+      <div class="grid__cell u-1of3 u-padding-Bl">
+        <div class="row u-text-center">
+          <h2 class="u-text-heading">Example<br>Subscriptions</h2>
+          <p class="para">Collect £99 each month, with no&nbsp;end&nbsp;date.</p>
+          <form accept-charset="UTF-8" action="/api/v1/example_checkout/subscription"
+            method="post" class="ng-pristine ng-valid">
+            <input class="btn btn--info btn--small" name="commit" type="submit" value="View Example">
+          </form>
+        </div>
+      </div>
+      <div class="grid__cell u-1of3 u-padding-Bl">
+        <div class="row u-text-center">
+          <h2 class="u-text-heading">Example<br>Variable Direct Debits</h2>
+          <p class="para">Pre-authorize future one-off or recurring payments.</p>
+          <form accept-charset="UTF-8" action="/api/v1/example_checkout/pre_auth"
+            method="post" class="ng-pristine ng-valid">
+            <input class="btn btn--info btn--small" name="commit" type="submit" value="View Example">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <p class="u-text-meta">
+      (You won't be charged if you set up a payment in the examples above)
+    </p>
+  </div>
+
+{% endblock %}

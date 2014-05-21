@@ -1,0 +1,110 @@
+{% extends "default.html" %}
+
+{% block title %}Features{% endblock %}
+{% block description %}Learn about different ways your business can collect Direct Debit payments online using GoCardless{% endblock %}
+{% block page_container_class %}{% endblock %}
+
+{% block content %}
+
+  <div class="grid u-padding-Tl">
+    <div class="grid__cell u-1of2 u-padding-Tl">
+      <div class="site-gutter">
+        <h2 class="u-text-heading u-margin-Tl u-margin-Bxs benefits-header--blue">
+          Direct Debit without the hassle
+        </h2>
+        <ul>
+          <li>
+            <p class="u-margin-Tm u-margin-Bxxs"><b>Setup customers on Direct Debit in seconds</b></p>
+            <p>Request Paperless Direct Debit authorisation from customers by email or from your site</p>
+          </li>
+          <li>
+            <p class="u-margin-Tm u-margin-Bxxs"><b>Submit and track payments online</b></p>
+            <p>Take payments at the click of a button and see real-time status updates </p>
+          </li>
+          <li>
+            <p class="u-margin-Tm u-margin-Bxxs"><b>Let us take care of compliance</b></p>
+            <p>We store bank details securely & can send notifications for you</p>
+          </li>
+        </ul>
+
+        <a href="/features/dashboard" class="u-margin-Tm btn btn--hollow">Find out more about our dashboards</a>
+      </div>
+    </div>
+    <div class="grid__cell u-1of2 u-padding-Tl">
+      <div class="site-gutter-L">
+        <img src="/images/features/section-1-hero@2x.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="gradient-fill-dark">
+    <div class="grid u-padding-Vl">
+      <div class="grid__cell u-1of2 u-padding-Vl">
+        <div class="site-gutter-R">
+          <img src="/images/features/section-2-hero@2x.png">
+        </div>
+      </div>
+      <div class="grid__cell u-1of2 u-padding-Vl">
+        <div class="site-gutter">
+          <h2 class="u-text-heading u-margin-Tl u-margin-Bxs u-text-invert">
+            Perfect for recurring billing, subscriptions & B2B invoicing
+          </h2>
+
+          <ul>
+            <li>
+              <p class="u-text-invert u-margin-Tm u-margin-Bxxs"><b>Forget monthly invoicing and payment runs</b></p>
+              <p class="u-text-invert-secondary">Automate repeat payments and collect from account customers at the click of a button</p>
+            </li>
+            <li>
+              <p class="u-text-invert u-margin-Tm u-margin-Bxxs"><b>Make cashflow issues a thing of the past</b></p>
+              <p class="u-text-invert-secondary">No more late payments. With Direct Debit you control when you get paid</p>
+            </li>
+            <li>
+              <p class="u-text-invert u-margin-Tm u-margin-Bxxs"><b>Reduce failed payments to 3x lower than cards</b></p>
+              <p class="u-text-invert-secondary">Expect monthly failures of less than 1% vs 3%+ with cards. Automatically retry failed payments</p>
+            </li>
+          </ul>
+
+          <a href="/features/dashboard" class="u-margin-Tm btn btn--invert-hollow">Learn more about our dashboards</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid u-padding-Tl">
+    <div class="grid__cell u-1of2 u-padding-Tl">
+      <div class="site-gutter">
+        <h2 class="u-text-heading u-margin-Tl u-margin-Bxs benefits-header--blue">
+          Integrated with your website
+        </h2>
+        <ul>
+          <li>
+            <p class="u-margin-Tm u-margin-Bxxs"><b>Add a checkout button to your site or emails</b></p>
+            <p>We provide you with your own branded online payment page. Link to this from your site or emails in seconds</p>
+          </li>
+          <li>
+            <p class="u-margin-Tm u-margin-Bxxs"><b>Integrated with your accountancy software</b></p>
+            <p>Have payments automatically reconcile with <a href="/features/integrations" class="u-text-underline">Sage, Xero, FreeAgent and KashFlow</a>
+            </p>
+          </li>
+          <li>
+            <p class="u-margin-Tm u-margin-Bxxs"><b>Use our clean, RESTful API</b></p>
+            <p>Clean, modern REST API with webhooks and full documentation</p>
+          </li>
+        </ul>
+
+        <a href="/features/api" class="u-margin-Tm btn btn--hollow">Learn more about our API</a>
+      </div>
+    </div>
+    <div class="grid__cell u-1of2 u-padding-Tl">
+      <div class="site-gutter-L">
+        <img src="/images/features/section-3-hero@2x.png">
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footer_content %}
+  {% include "_affixed_cta_component.html" %}
+{% endblock %}

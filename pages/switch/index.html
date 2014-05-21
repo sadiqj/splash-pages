@@ -1,0 +1,61 @@
+{% extends "default.html" %}
+
+{% block title %}Switch to GoCardless today{% endblock %}
+{% block page_container_class %}{% endblock %}
+
+{% block content %}
+
+  <div class="u-margin-Tn">
+      <img alt="Switch to gc" src="/images/switch/switch-to-gc.png">
+  </div>
+
+  <h1 class="u-text-normal u-margin-Tn u-text-heading u-text-h1 benefits-header--blue u-text-center">
+      Switch your Direct Debit to GoCardless today<br>
+  </h1>
+
+  <h2 class="u-text-meta u-text-heading u-text-h2 u-text-center u-margin-Ts u-margin-Bm">
+      Free, automatic transfer for all AccessPay &amp; Wessex Group customers<br>
+  </h2>
+
+  <div class="grid grid--center u-margin-Bm u-margin-Ts">
+    <div class="grid__cell u-7of12 u-text-center">
+     <h3 class="u-margin-Bs">Call us today on 020 7183 8674 to chat to one of our experts.</h3>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid grid--center u-margin-Bm u-margin-Tl">
+    <div class="grid__cell u-5of12">
+      <div class="grid">
+        <div class="grid__cell u-1of2">
+          <a href="/request-a-demo" class="btn btn--block btn--info">Request a demo</a>
+        </div>
+
+        <div class="grid__cell u-1of2">
+          <a href="/features" class="btn btn--block btn--info-hollow u-margin-Ls">Find out more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="grid grid--center u-margin-Bn u-margin-Tl">
+    <div class="grid__cell u-6of12">
+      <div class="grid">
+
+        <div class="grid__cell u-1of6">
+          <img alt="Scale@2x" class="icon--check icon-home-flag" src="/images/pricing/scale@2x.png">
+        </div>
+        <div class="grid__cell u-5of6 u-margin-Bm">
+          <h3 class="u-text-h3 u-text-heading u-text-semi u-margin-Bxxs u-margin-Ts">Scale pricing for larger merchants</h3>
+          <p class="para--bullet">We offer scale pricing for merchants processing more than 500 payments per month. <a class="u-text-underline" href="/pricing">Find out more on our pricing.</a></p>
+        </div>
+
+        {% include "_key_benefits.html" %}
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

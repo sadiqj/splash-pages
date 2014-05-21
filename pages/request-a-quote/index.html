@@ -1,0 +1,64 @@
+{% extends "default.html" %}
+
+{% block title %}Request a quote{% endblock %}
+{% block description %}Request a personalised pricing quote for online Direct Debit payments from GoCardless{% endblock %}
+
+{% block content %}
+
+  <h1 class="page-heading u-text-center">Get a quote</h1>
+  <h2 class="page-subheading u-text-center">Find out how much you can save -<br />
+  we'll email you a quote within 24 hours.</h2>
+
+  <div class="grid grid--center">
+    <div class="grid__cell u-1of2">
+      <form accept-charset="UTF-8" action="/api/v1/prospects/pricing_quote"
+        method="post"
+        class="ng-pristine ng-valid"
+        name="prospectForm"
+        ng-gc-form-submit
+        ng-gc-ga-event-tracker="{
+          event: 'submit',
+          category: 'forms',
+          action: 'submit-form',
+          label: 'pricing-quote'
+        }">
+
+        {% include "_prospect_form_alerts.html" %}
+        {% include "_shared_prospect_form_fields.html" %}
+
+        <label class="label label--stacked" for="prospect_metadata_atv">How much is your average payment?</label>
+        <input class="input input--stacked" id="prospect_metadata_atv" name="prospect[metadata][atv]"
+          placeholder="£50" required="required" type="text">
+
+        <label class="label label--stacked" for="prospect_size">How many payments did you take last month?</label>
+        <select class="u-full input--stacked" id="prospect_size" name="prospect[size]" required>
+          <option value="250-500">250-500</option>
+          <option value="500-1000">500-1000</option>
+          <option value="1000-2000">1000-2000</option>
+          <option value="2000+">2000+</option>
+        </select>
+
+        <label class="label label--stacked" for="prospect_metadata_uses_dd">Do you use Direct Debit already?</label>
+        <select class="u-full input--stacked" id="prospect_metadata_uses_dd" name="prospect[metadata][uses_dd]" required>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+
+        <button class="btn btn--info btn--block u-margin-Tl"
+          type="submit"
+          ng-disabled="prospectForm.$pristine || prospectForm.$isSubmitting">
+          Request A Quote
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="u-margin-Tm u-padding-Tm u-text-center">
+    <p>
+      <strong>Want to talk to an expert?</strong>
+      Call us on {{ SUPPORT_CONTACT_NUMBER }}
+    </p>
+    <p><a href="https://help.gocardless.com/">Looking for merchant support?</a></p>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+@import "mixins/at2x-mixin";
+
+.europe-header {
+  @include at2x("/images/bg/europe-map-bg-trans", 853px, 710px);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
