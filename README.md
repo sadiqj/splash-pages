@@ -77,8 +77,7 @@ Deploys happen once CI tests pass. Circle CI will email about any failure.
 
 ## Production
 
-### !!! DANGER DANGER !!!
-### !!! DO NOT COMMIT/PUSH STRAIGHT TO MASTER !!!
+#### ! DO NOT COMMIT/PUSH STRAIGHT TO MASTER !
 
 Production is deployed once tests on the `master` branch pass. Merge `dev` into
 `master` with `--no-ff` to deploy.
