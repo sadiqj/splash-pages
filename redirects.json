@@ -1,7 +1,7 @@
 {
   "/docs/index.html": "https://developer.gocardless.com",
   "/faq/index.html": "https://gocardless.com/faq/merchats",
-  "/payment-timings/index.html": "help.gocardless.com/payment-timings",
+  "/payment-timings/index.html": "https://help.gocardless.com/payment-timings",
   "/tour/index.html": "https://gocardless.com/features/dashboard",
   "/invoicing/index.html": "https://gocardless.com/features/dashboard",
   "/recurring-payments/index.html": "https://gocardless.com/features/dashboard",
