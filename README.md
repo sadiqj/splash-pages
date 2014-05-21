@@ -66,6 +66,21 @@ You need to run gocardless at: gocardless.dev:3000
 
 [http://localhost:9000/index.html](http://localhost:9000/index.html)
 
+# Deploying
+
+## Staging
+
+Once a pull-request is merged it goes onto `dev` and gets deployed.
+Deploys happen once CI tests pass. Circle CI will email about any failure.
+
+## Production
+
+### !!! DANGER DANGER !!!
+### !!! DO NOT COMMIT/PUSH STRAIGHT TO MASTER !!!
+
+Production is deployed once tests on the `master` branch pass. Merge `dev` into
+`master` with `--no-ff` to deploy.
+
 # Deploying manually
 
 Set up AWS credentials (web ops):
