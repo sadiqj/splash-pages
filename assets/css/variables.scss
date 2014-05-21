@@ -19,6 +19,8 @@ $border-radius-base: 3px;
 $gutter-space-base: 20px;
 $gutter-space-container: 35px;
 
+$border-radius-double: $border-radius-base * 2;
+
 ////////////////////////////////////////////////////////////////////////////////
 
 $space-large: 27px;
@@ -57,9 +59,9 @@ $primary-orange: #F7C55A;
 $primary-orange-lighten: lighten($primary-orange, 7%);
 $primary-orange-darken: darken($primary-orange, 7%); // #DD9F1F
 
-$primary-green: #94C43E;
+$primary-green: #3BA031;
 $primary-green-lighten: lighten($primary-green, 7%);
-$primary-green-darken: darken($primary-green, 10%); // #8EB335
+$primary-green-darken: darken($primary-green, 10%);
 
 $secondary-blue: #144A66;
 $secondary-blue-lighten: lighten($secondary-blue, 7%);
@@ -76,6 +78,10 @@ $light-gray-darken: darken($light-gray, 5%);
 $gray: #A7ADB3;
 $gray-lighten: #D2D9DD;
 $gray-darken: darken($gray, 7%);
+
+$dark-gray: #767676;
+$dark-gray-lighten: lighten($dark-gray, 7%);
+$dark-gray-darken: darken($dark-gray, 5%);
 
 $blue-gray: #4E4E4E;
 
@@ -111,4 +117,6 @@ $text-color-invert-secondary: #D2D9E0;
 $horizontal-ruler-top-invert-color: #4f6f91;
 
 $placeholder-color: #999;
+
+$hero-background-color: #1C436C;
 
