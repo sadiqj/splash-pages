@@ -12,6 +12,12 @@
   background-repeat: no-repeat;
 }
 
+@media all and (min-width: 1600px) {
+  .hero-worry--girl {
+    background-position: 50% 30%;
+  }
+}
+
 .hero-worry__heading {
   height: 377px;
   font-weight: 200;
