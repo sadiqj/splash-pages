@@ -1,5 +1,4 @@
 @import "mixins/icon-mixin";
-@import "mixins/at2x-mixin";
 
 .benefits-led-container {
   background: white;
@@ -18,7 +17,22 @@
 }
 
 .benefits-led-container__publications {
-  @include at2x('/images/press/publications', 970px, 48px, ".jpg");
-  width: 970px;
-  height: 48px;
+  @include icon('/images/press/publications', 970px, 48px, ".jpg");
+}
+
+.benefits-led-container__heading--primary-blue {
+  color: $primary-blue;
+}
+
+.benefits-led-container__heading--primary-red {
+  color: $primary-red;
+}
+
+.benefits-led-container__heading--primary-green {
+  color: $primary-green;
+}
+
+.benefits-led-container__link--red,
+.benefits-led-container__link--red:hover {
+  color: $primary-red;
 }

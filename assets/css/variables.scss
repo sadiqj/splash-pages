@@ -59,13 +59,9 @@ $primary-orange: #F7C55A;
 $primary-orange-lighten: lighten($primary-orange, 7%);
 $primary-orange-darken: darken($primary-orange, 7%); // #DD9F1F
 
-$primary-green: #94C43E;
+$primary-green: #3BA031;
 $primary-green-lighten: lighten($primary-green, 7%);
-$primary-green-darken: darken($primary-green, 10%); // #8EB335
-
-$secondary-green: #3BA031;
-$secondary-green-lighten: lighten($secondary-green, 7%);
-$secondary-green-darken: darken($secondary-green, 10%);
+$primary-green-darken: darken($primary-green, 10%);
 
 $secondary-blue: #144A66;
 $secondary-blue-lighten: lighten($secondary-blue, 7%);
