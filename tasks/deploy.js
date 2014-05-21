@@ -16,13 +16,6 @@ var MSG = {
   ERR_CHECKSUM: '%s error: expected hash: %s but found %s for %s'
 };
 
-AWS.config.update({
-  sslEnabled: true,
-  region: 'eu-west-1',
-  accessKeyId: process.env.GC_AWS_ACCESS_KEY,
-  secretAccessKey: process.env.GC_AWS_SECRET
-});
-
 function log() {
   console.log.apply(null, arguments);
 }
@@ -104,28 +97,15 @@ var upload = (function(buildUploadParams, MD5, MSG) {
     }
 
     // Upload the file to s3.
-    client.putObject(params, function(err, res){
+    client.putObject(params, function(err){
       if (err) {
         log(MSG.ERR_UPLOAD, err, err.stack);
         return cb();
       }
 
-      // The etag head in the response from s3 has double quotes around
-      // it. Strip them out.
-      var remoteHash = res.ETag.replace(/^"|"$/g, '');
-      // Get an md5 of the local file so we can verify the upload.
-      var localHash = MD5(file.contents);
-
-      if (remoteHash !== localHash) {
-        log(MSG.ERR_CHECKSUM, 'Upload', localHash, remoteHash);
-        cb();
-      }
-      else {
-        var msg = util.format(MSG.UPLOAD_SUCCESS, dest, params.Bucket,
-          dest, localHash);
-        log(msg);
-        cb();
-      }
+      var msg = util.format(MSG.UPLOAD_SUCCESS, dest, params.Bucket, dest);
+      log(msg);
+      cb();
     });
   };
 })(buildUploadParams, MD5, MSG);
@@ -149,8 +129,17 @@ var sync = (function(upload, buildBaseParams, MSG) {
 })(upload, buildBaseParams, MSG);
 
 var deploy = (function(sync, AWS, through) {
-  return function deploy(options) {
-    options = _.clone(options, true);
+  return function deploy(AWSOptions, s3Options) {
+    AWSOptions = _.clone(AWSOptions, true);
+    s3Options = _.clone(s3Options, true);
+
+    AWS.config.update(_.extend({
+      sslEnabled: true,
+      region: process.env.AWS_DEFAULT_REGION || 'us-west-1',
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    }, AWSOptions));
+
     var client = new AWS.S3();
 
     return through.obj(function(file, enc, cb) {
@@ -162,7 +151,7 @@ var deploy = (function(sync, AWS, through) {
         throw new Error('Streaming not supported');
       }
 
-      sync(client, file, options, cb);
+      sync(client, file, s3Options, cb);
     });
   };
 })(sync, AWS, through);
