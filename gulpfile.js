@@ -22,11 +22,14 @@ var deploy = require('./tasks/deploy');
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
 
-// var concat = require('gulp-concat');
-// var uglify = require('gulp-uglify');
-// var imagemin = require('gulp-imagemin');
-// var cache = require('gulp-cache');
-// var csso = require('gulp-csso');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+var csso = require('gulp-csso');
+
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
 
 gulp.task('eslint', function() {
   return gulp.src('assets/js/**/*.js')
@@ -46,19 +49,23 @@ gulp.task('css', function () {
   return gulp.src('assets/css/main.scss')
     .pipe(sass({
       style: 'expanded',
-      precision: 10,
-      bundleExec: true,
       loadPath: ['assets/css'],
-      sourcemap: true
     }))
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('.tmp/css'))
     .pipe(size());
 });
 
-gulp.task('assets', function () {
-  return gulp.src(['assets/*.*'])
-    .pipe(gulp.dest('build'));
+// Adds a CSS file for Greenhouse application forms
+gulp.task('greenhouse-css', function () {
+  return gulp.src('assets/css/greenhouse-forms.scss')
+    .pipe(sass({
+      style: 'expanded',
+      loadPath: ['assets/css']
+    }))
+    .pipe(autoprefixer('last 2 version'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(size());
 });
 
 gulp.task('public', function() {
@@ -68,18 +75,10 @@ gulp.task('public', function() {
 });
 
 gulp.task('html', ['css'], function () {
-  var jsFilter = filter('**/*.js');
-  var cssFilter = filter('**/*.css');
   var htmlFilter = filter('**/*.html');
 
   return gulp.src('templates/**/*.html')
     .pipe(useref.assets({ searchPath: '{.tmp,assets}' }))
-    .pipe(jsFilter)
-    // .pipe(uglify())
-    .pipe(jsFilter.restore())
-    .pipe(cssFilter)
-    // .pipe(csso())
-    .pipe(cssFilter.restore())
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('build'))
@@ -89,13 +88,12 @@ gulp.task('html', ['css'], function () {
 });
 
 function templateMetadata() {
-  var isProduction = process.env.NODE_ENV === 'production';
   var mixpanelProduction = '0ebe37c4ed96a0432e989cc20ca1db04';
   var mixpanelTest = 'fa029f81daf1c512854b1345342c4e6c';
-  var mixpanelToken = isProduction ? mixpanelProduction : mixpanelTest;
+  var mixpanelToken = isProduction() ? mixpanelProduction : mixpanelTest;
 
   return {
-    ENV_PRODUCTION: isProduction,
+    ENV_PRODUCTION: isProduction(),
     MIXPANEL_TOKEN: mixpanelToken,
     TRADING_ADDRESS: '22-25 Finsbury Square<br>London, EC2A 1DX',
     SUPPORT_CONTACT_NUMBER: '020 7183 8674',
@@ -119,13 +117,19 @@ gulp.task('redirects', function () {
     .pipe(size());
 });
 
+gulp.task('imagemin', function () {
+  return gulp.src('assets/images/**/*')
+    .pipe(cache(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('assets/images'))
+    .pipe(size());
+});
+
 gulp.task('images', function () {
   return gulp.src('assets/images/**/*')
-    // .pipe(cache(imagemin({
-    //   optimizationLevel: 3,
-    //   progressive: true,
-    //   interlaced: true
-    // })))
     .pipe(gulp.dest('build/images'))
     .pipe(size());
 });
@@ -147,7 +151,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('serve', ['build', 'connect'], function () {
-  require('opn')('http://gocardless.dev:9000');
+  require('opn')('http://localhost:9000');
 });
 
 gulp.task('connect', function () {
@@ -181,16 +185,22 @@ gulp.task('connect', function () {
 gulp.task('watch', ['build', 'connect', 'serve'], function () {
   var server = livereload();
 
-  // gulp.watch([
-  //   'build/**/*'
-  // ]).on('change', function (file) {
-  //   server.changed(file.path);
-  // });
+  gulp.watch([
+    'build/**/*'
+  ]).on('change', function (file) {
+    server.changed(file.path);
+  });
 
-  gulp.watch(['pages/**/*.html', 'templates/**/*.html'], ['template']);
-  // gulp.watch('public/**/*', ['public']);
-  gulp.watch('assets/css/**/*.css', ['html']);
-  // gulp.watch('assets/images/**/*', ['images']);
+  gulp.watch([
+    'pages/**/*.html',
+    'templates/**/*.html',
+    'assets/css/**/*.scss',
+    'assets/js/**/*.js'
+  ], ['template']);
+
+  gulp.watch('public/**/*', ['public']);
+  gulp.watch('assets/fonts/**/*', ['fonts']);
+  gulp.watch('assets/images/**/*', ['images']);
 });
 
 gulp.task('unit', function() {
@@ -241,29 +251,35 @@ gulp.task('unit', function() {
   });
 });
 
-function isProduction() {
-  return process.env.NODE_ENV === 'production';
-}
-
-function bucket() {
-  if (isProduction()) {
-    return 'gocardless.com';
-  } else {
-    return 'staging.gocardless.com';
-  }
-}
-
 gulp.task('deploy', ['clean', 'build'], function() {
   return gulp.src('build/**/*')
     .pipe(deploy({
-      Bucket: bucket()
+      region: 'eu-west-1',
+      accessKeyId: process.env.GC_AWS_ACCESS_KEY,
+      secretAccessKey: process.env.GC_AWS_SECRET
+    }, {
+      Bucket: process.env.AWS_S3_BUCKET,
     }));
+});
+
+gulp.task('compress-css', function () {
+  return gulp.src('build/css/**/*.css')
+    .pipe(csso())
+    .pipe(gulp.dest('build/css'))
+    .pipe(size());
+});
+
+gulp.task('compress-js', function () {
+  return gulp.src('build/js/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'))
+    .pipe(size());
 });
 
 gulp.task('test', ['unit']);
 
 gulp.task('build', [
-  'template', 'redirects', 'images', 'fonts', 'public', 'assets'
+  'template', 'redirects', 'images', 'fonts', 'public'
 ]);
 
 gulp.task('default', function () {

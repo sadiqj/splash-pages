@@ -4,6 +4,10 @@
   @include icon("/images/logos/gc-logo-blue", 149px, 17px);
 }
 
+.icon-gc-logo-invert {
+  @include icon("/images/logos/gc-logo-white", 134px, 14px);
+}
+
 .icon--check {
   width: 46px;
   float: right;

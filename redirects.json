@@ -1,7 +1,7 @@
 {
   "/docs/index.html": "https://developer.gocardless.com",
   "/faq/index.html": "https://gocardless.com/faq/merchats",
-  "/payment-timings/index.html": "help.gocardless.com/payment-timings",
+  "/payment-timings/index.html": "https://help.gocardless.com/payment-timings",
   "/tour/index.html": "https://gocardless.com/features/dashboard",
   "/invoicing/index.html": "https://gocardless.com/features/dashboard",
   "/recurring-payments/index.html": "https://gocardless.com/features/dashboard",
@@ -24,8 +24,8 @@
   "/using_customer/index.html": "https://gocardless.com/example-checkout",
   "/testimonials/index.html": "https://gocardless.com/stories",
   "/partners/index.html": "https://gocardless.com/features/integrations",
-  "/partners/whmch/index.html": "github.com/gocardless/gocardless-whmcs",
-  "/partners/whmcs-details/index.html": "github.com/gocardless/gocardless-whmcs",
+  "/partners/whmch/index.html": "https://github.com/gocardless/gocardless-whmcs",
+  "/partners/whmcs-details/index.html": "https://github.com/gocardless/gocardless-whmcs",
   "/team/index.html": "https://gocardless.com/about",
   "/request-a-demo/index.html": "https://gocardless.com/watch-a-demo"
 }
