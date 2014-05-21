@@ -49,10 +49,7 @@ gulp.task('css', function () {
   return gulp.src('assets/css/main.scss')
     .pipe(sass({
       style: 'expanded',
-      precision: 10,
-      bundleExec: true,
       loadPath: ['assets/css'],
-      sourcemap: true
     }))
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('.tmp/css'))
@@ -64,10 +61,7 @@ gulp.task('greenhouse-css', function () {
   return gulp.src('assets/css/greenhouse-forms.scss')
     .pipe(sass({
       style: 'expanded',
-      precision: 10,
-      bundleExec: true,
-      loadPath: ['assets/css'],
-      sourcemap: true
+      loadPath: ['assets/css']
     }))
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('build/css'))
