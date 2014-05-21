@@ -35,12 +35,15 @@ Shared template includes/partials: `includes/`
 # Troubleshooting
 
 1. `gulp watch` fails
+
 Try running `npm install`. Packages might be out of date.
 
 2. `gulp` not found
+
 Make sure you have reloaded your terminal after `2.` under `Setup to run locally`
 
 3. Too many open file error
+
 The task that watches the files you are working on can open a large number of
 files, this can hit the maximum limit in OS X.
 
