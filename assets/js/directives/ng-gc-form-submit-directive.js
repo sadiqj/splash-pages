@@ -28,7 +28,7 @@ angular.module('ngGcFormSubmitDirective', [])
 
       return {
         link: function link(scope, element) {
-          scope.prospectForm = {
+          scope.prospectFormData = {
             size: '0-100'
           };
 
@@ -37,7 +37,7 @@ angular.module('ngGcFormSubmitDirective', [])
 
             var oldTitle = $window.document.title;
             document.title = 'Saving...';
-            scope.$isSubmitting = true;
+            scope.prospectForm.$isSubmitting = true;
 
             $.ajax({
               type: 'POST',
@@ -57,18 +57,22 @@ angular.module('ngGcFormSubmitDirective', [])
               window.scrollTo(0, 0);
 
               scope.$apply(function() {
-                scope.$isSuccess = true;
-                scope.$isError = false;
+                scope.prospectForm.$isSuccess = true;
+                scope.prospectForm.$isError = false;
+
+                // Clear state
+                scope.prospectFormData = {};
+                scope.prospectForm.$setPristine();
               });
             }).fail(function fail(response) {
               scope.$apply(function() {
-                scope.$isSuccess = false;
-                scope.$isError = response.responseText;
+                scope.prospectForm.$isSuccess = false;
+                scope.prospectForm.$isError = response.responseText;
               });
             }).always(function() {
               document.title = oldTitle;
               scope.$apply(function() {
-                scope.$isSubmitting = false;
+                scope.prospectForm.$isSubmitting = false;
               });
             });
 

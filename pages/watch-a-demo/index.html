@@ -1,11 +1,11 @@
 {% extends "default.html" %}
 
-{% block title %}Request a demo{% endblock %}
+{% block title %}Watch a demo{% endblock %}
 {% block description %}Watch a free 15 minute demo on how GoCardless makes Direct Debit easy, simple and cheap.{% endblock %}
 
 {% block content %}
 
-  <h1 class="page-heading u-text-center">Request a demo</h1>
+  <h1 class="page-heading u-text-center">Watch a demo</h1>
   <h2 class="page-subheading u-text-center">Find out more about GoCardless by<br>joining a 15 minute interactive demo</h2>
 
   <div class="grid grid--center">
@@ -24,8 +24,8 @@
 
         <button class="btn btn--info btn--block u-margin-Tl"
           type="submit"
-          ng-disabled="prospectForm.$pristine || $isSubmitting">
-          Request A Demo
+          ng-disabled="prospectForm.$pristine || prospectForm.$isSubmitting">
+          Watch a demo
         </button>
       </form>
     </div>

@@ -23,7 +23,7 @@ function redirect(redirects) {
 
     Object.keys(redirects).forEach(function(redirect) {
       var target = redirects[redirect];
-      var outputFilePath = path.join(file.base, redirect, 'index.html');
+      var outputFilePath = path.join(file.base, redirect);
 
       self.push(new gutil.File({
         base: file.base,

@@ -2,12 +2,12 @@ deployment:
   production:
     branch: master
     commands:
-      - make deploy target=live-production
+      - node_modules/.bin/gulp deploy
 
   staging:
     branch: dev
     commands:
-      - make deploy target=live-staging
+      - node_modules/.bin/gulp deploy
 
 machine:
   node:

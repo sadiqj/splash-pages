@@ -7,7 +7,7 @@ var csslint = require('gulp-csslint');
 var size = require('gulp-size');
 var filter = require('gulp-filter');
 var useref = require('gulp-useref');
-var rubySass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var flatten = require('gulp-flatten');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
@@ -17,6 +17,7 @@ var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
 
 var template = require('./tasks/template');
+var deploy = require('./tasks/deploy');
 
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
@@ -43,7 +44,7 @@ gulp.task('csslint', function() {
 
 gulp.task('css', function () {
   return gulp.src('assets/css/main.scss')
-    .pipe(rubySass({
+    .pipe(sass({
       style: 'expanded',
       precision: 10,
       bundleExec: true,
@@ -154,7 +155,13 @@ gulp.task('connect', function () {
   var app = connect()
       .use(require('connect-livereload')({ port: 35729 }))
       .use(function(req, res, next) {
-        if (req.url.match(/^\/api\//)) {
+        if (req.url.match(/^\/api\//) ||
+            req.url.match(/^\/admin\//) ||
+            req.url.match(/^\/web\//) ||
+            req.url.match(/^\/merchants\//) ||
+            req.url.match(/^\/users\//) ||
+            req.url.match(/^\/assets\//) ||
+            req.url.match(/^\/connect\//)) {
           APIProxy.web(req, res, {
             target: 'http://gocardless.dev:3000'
           });
@@ -234,9 +241,30 @@ gulp.task('unit', function() {
   });
 });
 
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
+
+function bucket() {
+  if (isProduction()) {
+    return 'gocardless.com';
+  } else {
+    return 'staging.gocardless.com';
+  }
+}
+
+gulp.task('deploy', ['clean', 'build'], function() {
+  return gulp.src('build/**/*')
+    .pipe(deploy({
+      Bucket: bucket()
+    }));
+});
+
 gulp.task('test', ['unit']);
 
-gulp.task('build', ['template', 'redirects', 'images', 'fonts', 'public', 'assets']);
+gulp.task('build', [
+  'template', 'redirects', 'images', 'fonts', 'public', 'assets'
+]);
 
 gulp.task('default', function () {
   gulp.start('watch');
