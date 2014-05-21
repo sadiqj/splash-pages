@@ -5076,6 +5076,39 @@
         }
       }
     },
+    "aws-sdk": {
+      "version": "2.0.0-rc.17",
+      "from": "aws-sdk@2.0.0-rc.17",
+      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.0.0-rc.17.tgz",
+      "dependencies": {
+        "aws-sdk-apis": {
+          "version": "2.0.10",
+          "from": "aws-sdk-apis@2.x",
+          "resolved": "https://registry.npmjs.org/aws-sdk-apis/-/aws-sdk-apis-2.0.10.tgz"
+        },
+        "xml2js": {
+          "version": "0.2.4",
+          "from": "xml2js@0.2.4",
+          "resolved": "https://registry.npmjs.org/xml2js/-/xml2js-0.2.4.tgz",
+          "dependencies": {
+            "sax": {
+              "version": "0.6.0",
+              "from": "sax@>=0.4.2",
+              "resolved": "https://registry.npmjs.org/sax/-/sax-0.6.0.tgz"
+            }
+          }
+        },
+        "xmlbuilder": {
+          "version": "0.4.2",
+          "from": "xmlbuilder@0.4.2"
+        }
+      }
+    },
+    "mime": {
+      "version": "1.2.11",
+      "from": "mime@1.2.11",
+      "resolved": "https://registry.npmjs.org/mime/-/mime-1.2.11.tgz"
+    },
     "debug": {
       "version": "0.8.1",
       "from": "debug@~0.8.1",

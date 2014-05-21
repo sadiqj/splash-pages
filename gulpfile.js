@@ -17,15 +17,19 @@ var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
 
 var template = require('./tasks/template');
+var deploy = require('./tasks/deploy');
 
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
 
-// var concat = require('gulp-concat');
-// var uglify = require('gulp-uglify');
-// var imagemin = require('gulp-imagemin');
-// var cache = require('gulp-cache');
-// var csso = require('gulp-csso');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+var csso = require('gulp-csso');
+
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
 
 gulp.task('eslint', function() {
   return gulp.src('assets/js/**/*.js')
@@ -82,18 +86,10 @@ gulp.task('public', function() {
 });
 
 gulp.task('html', ['css'], function () {
-  var jsFilter = filter('**/*.js');
-  var cssFilter = filter('**/*.css');
   var htmlFilter = filter('**/*.html');
 
   return gulp.src('templates/**/*.html')
     .pipe(useref.assets({ searchPath: '{.tmp,assets}' }))
-    .pipe(jsFilter)
-    // .pipe(uglify())
-    .pipe(jsFilter.restore())
-    .pipe(cssFilter)
-    // .pipe(csso())
-    .pipe(cssFilter.restore())
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('build'))
@@ -103,13 +99,12 @@ gulp.task('html', ['css'], function () {
 });
 
 function templateMetadata() {
-  var isProduction = process.env.NODE_ENV === 'production';
   var mixpanelProduction = '0ebe37c4ed96a0432e989cc20ca1db04';
   var mixpanelTest = 'fa029f81daf1c512854b1345342c4e6c';
-  var mixpanelToken = isProduction ? mixpanelProduction : mixpanelTest;
+  var mixpanelToken = isProduction() ? mixpanelProduction : mixpanelTest;
 
   return {
-    ENV_PRODUCTION: isProduction,
+    ENV_PRODUCTION: isProduction(),
     MIXPANEL_TOKEN: mixpanelToken,
     TRADING_ADDRESS: '22-25 Finsbury Square<br>London, EC2A 1DX',
     SUPPORT_CONTACT_NUMBER: '020 7183 8674',
@@ -133,13 +128,19 @@ gulp.task('redirects', function () {
     .pipe(size());
 });
 
+gulp.task('imagemin', function () {
+  return gulp.src('assets/images/**/*')
+    .pipe(cache(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('assets/images'))
+    .pipe(size());
+});
+
 gulp.task('images', function () {
   return gulp.src('assets/images/**/*')
-    // .pipe(cache(imagemin({
-    //   optimizationLevel: 3,
-    //   progressive: true,
-    //   interlaced: true
-    // })))
     .pipe(gulp.dest('build/images'))
     .pipe(size());
 });
@@ -169,7 +170,13 @@ gulp.task('connect', function () {
   var app = connect()
       .use(require('connect-livereload')({ port: 35729 }))
       .use(function(req, res, next) {
-        if (req.url.match(/^\/api\//)) {
+        if (req.url.match(/^\/api\//) ||
+            req.url.match(/^\/admin\//) ||
+            req.url.match(/^\/web\//) ||
+            req.url.match(/^\/merchants\//) ||
+            req.url.match(/^\/users\//) ||
+            req.url.match(/^\/assets\//) ||
+            req.url.match(/^\/connect\//)) {
           APIProxy.web(req, res, {
             target: 'http://gocardless.dev:3000'
           });
@@ -249,9 +256,40 @@ gulp.task('unit', function() {
   });
 });
 
+gulp.task('deploy', ['clean', 'production'], function() {
+  return gulp.src('build/**/*')
+    .pipe(deploy({
+      region: 'eu-west-1',
+      accessKeyId: process.env.GC_AWS_ACCESS_KEY,
+      secretAccessKey: process.env.GC_AWS_SECRET
+    }, {
+      Bucket: process.env.AWS_S3_BUCKET,
+    }));
+});
+
+gulp.task('compress-css', function () {
+  return gulp.src('build/css/**/*.css')
+    .pipe(csso())
+    .pipe(gulp.dest('build/css'))
+    .pipe(size());
+});
+
+gulp.task('compress-js', function () {
+  return gulp.src('build/js/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'))
+    .pipe(size());
+});
+
 gulp.task('test', ['unit']);
 
-gulp.task('build', ['template', 'redirects', 'images', 'fonts', 'public', 'assets']);
+gulp.task('build', [
+  'template', 'redirects', 'images', 'fonts', 'public', 'assets'
+]);
+
+gulp.task('production', [
+  'build', 'compress-css', 'compress-js'
+]);
 
 gulp.task('default', function () {
   gulp.start('watch');

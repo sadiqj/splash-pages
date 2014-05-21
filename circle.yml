@@ -2,12 +2,12 @@ deployment:
   production:
     branch: master
     commands:
-      - make deploy target=live-production
+      - AWS_S3_BUCKET=gocardless.com node_modules/.bin/gulp deploy
 
   staging:
     branch: dev
     commands:
-      - make deploy target=live-staging
+      - AWS_S3_BUCKET=staging.gocardless.com node_modules/.bin/gulp deploy
 
 machine:
   node:
