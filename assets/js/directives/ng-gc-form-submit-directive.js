@@ -28,7 +28,7 @@ angular.module('ngGcFormSubmitDirective', [])
 
       return {
         link: function link(scope, element) {
-          scope.prospectForm = {
+          scope.prospectFormData = {
             size: '0-100'
           };
 
@@ -59,6 +59,10 @@ angular.module('ngGcFormSubmitDirective', [])
               scope.$apply(function() {
                 scope.prospectForm.$isSuccess = true;
                 scope.prospectForm.$isError = false;
+
+                // Clear state
+                scope.prospectFormData = {};
+                scope.prospectForm.$setPristine();
               });
             }).fail(function fail(response) {
               scope.$apply(function() {

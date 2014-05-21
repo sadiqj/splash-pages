@@ -57,9 +57,3 @@ $input-height: 38px;
   height: auto;
   min-height: $input-height;
 }
-
-// Angular form validity
-.input.ng-dirty.ng-invalid {
-  box-shadow: inset 0 0 0 1px $primary-red,
-              0 0 3px $primary-red;
-}
