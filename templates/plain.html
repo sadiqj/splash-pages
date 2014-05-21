@@ -134,34 +134,53 @@
       olark.identify('8523-793-10-2725');/*]]>*/olark.configure('box.start_hidden', true);</script><noscript><a href="https://www.olark.com/site/8523-793-10-2725/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
       <!-- end olark code -->
 
-      <script type="text/javascript">
-        olark('api.visitor.getDetails', function(details) {
-          var organization = details.organization;
-          olark('api.chat.updateVisitorNickname', { snippet: organization } );
-        });
-
-        olark('api.chat.onMessageToOperator', function(event) {
-          window.gct('track', 'Chat', {
-            'Type': 'Message to operator'
+      <script>
+        (function() {
+          olark('api.visitor.getDetails', function(details) {
+            var organization = details.organization;
+            olark('api.chat.updateVisitorNickname', { snippet: organization } );
           });
-        });
 
-        olark('api.chat.onCommandFromOperator', function(event) {
-          if (event.command.name == 'lead') {
+          olark('api.chat.onMessageToOperator', function(event) {
             window.gct('track', 'Chat', {
-              'Type': 'Lead'
+              'Type': 'Message to operator'
             });
+          });
+
+          olark('api.chat.onCommandFromOperator', function(event) {
+            if (event.command.name == 'lead') {
+              window.gct('track', 'Chat', {
+                'Type': 'Lead'
+              });
+            }
+          });
+
+          if (location.search.match(/chat\=1/)) {
+            setTimeout(function() { olark('api.box.expand'); }, 2000);
           }
-        });
 
-        if (location.search.match(/chat\=1/)) {
-          setTimeout(function() { olark('api.box.expand'); }, 2000);
-        }
+          // XXX
+          // Clean this crap up!
+          // XXX
 
-        olark('api.visitor.updateFullName', { fullName: '' });
-        olark('api.visitor.updateEmailAddress', { emailAddress: '' });
-        olark('api.visitor.updatePhoneNumber', { phoneNumber: '' });
-        olark('api.visitor.updateCustomFields', { size: '' });
+          try {
+            var prospect = JSON.parse(window.localStorage.getItem('prospect'));
+            olark('api.visitor.updateFullName', {
+              fullName: prospect['prospect[name]']
+            });
+            olark('api.visitor.updateEmailAddress', {
+              emailAddress: prospect['prospect[email]']
+            });
+            olark('api.visitor.updatePhoneNumber', {
+              phoneNumber: prospect['prospect[phone]']
+            });
+            olark('api.visitor.updateCustomFields', {
+              size: prospect['prospect[size]']
+            });
+          } catch (e) {
+            // ignore
+          }
+        })();
       </script>
     {% endif %}
 
