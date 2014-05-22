@@ -269,7 +269,7 @@ gulp.task('deploy', ['clean', 'build'], function() {
 gulp.task('test', ['unit']);
 
 gulp.task('build', [
-  'template', 'redirects', 'images', 'fonts', 'public'
+  'template', 'redirects', 'images', 'fonts', 'public', 'greenhouse-css'
 ]);
 
 gulp.task('default', function () {
