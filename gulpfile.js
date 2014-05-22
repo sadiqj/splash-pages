@@ -12,6 +12,7 @@ var flatten = require('gulp-flatten');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 var karma = require('gulp-karma');
+var gif = require('gulp-if');
 
 var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
@@ -75,10 +76,18 @@ gulp.task('public', function() {
 });
 
 gulp.task('html', ['css'], function () {
+  var jsFilter = filter('**/*.js');
+  var cssFilter = filter('**/*.css');
   var htmlFilter = filter('**/*.html');
 
   return gulp.src('templates/**/*.html')
     .pipe(useref.assets({ searchPath: '{.tmp,assets}' }))
+    .pipe(jsFilter)
+    .pipe(gif(isProduction(), uglify()))
+    .pipe(jsFilter.restore())
+    .pipe(cssFilter)
+    .pipe(gif(isProduction(), csso()))
+    .pipe(cssFilter.restore())
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('build'))
@@ -255,20 +264,6 @@ gulp.task('deploy', ['clean', 'build'], function() {
     }, {
       Bucket: process.env.AWS_S3_BUCKET,
     }));
-});
-
-gulp.task('compress-css', function () {
-  return gulp.src('build/css/**/*.css')
-    .pipe(csso())
-    .pipe(gulp.dest('build/css'))
-    .pipe(size());
-});
-
-gulp.task('compress-js', function () {
-  return gulp.src('build/js/**/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
-    .pipe(size());
 });
 
 gulp.task('test', ['unit']);
