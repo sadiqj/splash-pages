@@ -24,8 +24,20 @@
 
   <hr>
 
-  <div class="grid u-margin-Bl u-margin-Tl">
+  <div ng-init="test.isVisible = false">
+    <div ng-click="test.isVisible = !test.isVisible">
+      test 2
+    </div>
+    <div class="u-is-hidden" ng-class="{
+      'u-is-visible': test.isVisible
+    }">
+      test 1
+    </div>
+  </div>
 
+  <ng-gc-team-member header="test" name="Hiroki Takeuchi" content="awd" img-src="/images/team/hiroki@2x.jpg"></ng-gc-team-member>
+
+  <div class="grid u-margin-Bl u-margin-Tl">
     <a href="javascript:;" class="team-member" data-popover="" data-content="Before founding GoCardless, Hiroki worked closely with Global Financial
       Institutions at McKinsey &amp; Company.
       <br><br>
