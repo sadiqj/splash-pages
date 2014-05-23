@@ -82,6 +82,7 @@
       @extend .btn;
       @extend .btn--info;
       @extend .btn--block;
+      font-weight: bold;
       text-shadow: none;
     }
     hr {
@@ -107,11 +108,14 @@
       margin-right: 0;
       line-height: 1.46777;
     }
-    .field input[type='text'] {
+    .field input[type='text'], {
       @extend .input;
       @extend .input--stacked;
       box-sizing: border-box;
       width: 100% !important;
+    }
+    .field select {
+      margin-bottom: 18px;
     }
     .field .field-error-msg {
       padding: 0;
@@ -133,6 +137,23 @@
         margin-top: 0;
         margin-bottom: 0;
       }
+      .progress-bar .upload {
+        width: 378px;
+        padding: 0;
+        .progress {
+          @extend .input;
+          height: 100%;
+          padding: 0;
+          border: 1px solid #D2D6DB;
+          .bar {
+            height: 15px;
+            background: #3BA031;
+          }
+        }
+      }
+      #resume_filename {
+        font-family: monospace;
+      }
     }
     br {
       display: none;
@@ -140,6 +161,10 @@
   }
 }
 
-#footer, .addthis_toolbox {
+#footer, .addthis_toolbox, #view-more {
   display: none;
+}
+
+#application_confirmation {
+  text-align: center;
 }

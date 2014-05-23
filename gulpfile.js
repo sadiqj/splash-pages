@@ -12,6 +12,7 @@ var flatten = require('gulp-flatten');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 var karma = require('gulp-karma');
+var gif = require('gulp-if');
 
 var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
@@ -75,10 +76,18 @@ gulp.task('public', function() {
 });
 
 gulp.task('html', ['css'], function () {
+  var jsFilter = filter('**/*.js');
+  var cssFilter = filter('**/*.css');
   var htmlFilter = filter('**/*.html');
 
   return gulp.src('templates/**/*.html')
     .pipe(useref.assets({ searchPath: '{.tmp,assets}' }))
+    .pipe(jsFilter)
+    .pipe(gif(isProduction(), uglify()))
+    .pipe(jsFilter.restore())
+    .pipe(cssFilter)
+    .pipe(gif(isProduction(), csso()))
+    .pipe(cssFilter.restore())
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('build'))
@@ -140,12 +149,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('fonts', function () {
-  var streamqueue = require('streamqueue');
-  return streamqueue({ objectMode: true },
-    gulp.src('assets/fonts/**/*')
-  )
-    .pipe(filter('**/*.{eot,svg,ttf,woff}'))
-    .pipe(flatten())
+  return gulp.src('assets/fonts/**/*')
     .pipe(gulp.dest('build/fonts'))
     .pipe(size());
 });
@@ -210,6 +214,7 @@ gulp.task('unit', function() {
     'assets/components/angular/angular.js',
     'assets/components/angular-cookies/angular-cookies.js',
     'assets/components/es5-shim/es5-shim.js',
+    'assets/components/mute-console/mute-console.js',
 
     'assets/components/jasmine-helpers/*.js',
     'assets/components/angular-mocks/angular-mocks.js',
@@ -217,16 +222,12 @@ gulp.task('unit', function() {
     'assets/js/lib/bootstrap/tab.js',
     'assets/js/lib/froogaloop.js',
 
-    'assets/js/connect-compatibility.js',
-
     'assets/js/directives/ng-gc-ga-event-tracker-directive.js',
     'assets/js/directives/ng-gc-form-submit-directive.js',
     'assets/js/directives/ng-gc-href-active-directive.js',
     'assets/js/modal/modal.js',
-    'assets/js/mute-console/mute-console.js',
     'assets/js/gocardless-global.js',
     'assets/js/module.js',
-    'assets/js/utils.js',
     'assets/js/base-view.js',
     'assets/js/class-extends.js',
     'assets/js/widgets/modals.js',
@@ -260,24 +261,10 @@ gulp.task('deploy', ['clean', 'build'], function() {
     }));
 });
 
-gulp.task('compress-css', function () {
-  return gulp.src('build/css/**/*.css')
-    .pipe(csso())
-    .pipe(gulp.dest('build/css'))
-    .pipe(size());
-});
-
-gulp.task('compress-js', function () {
-  return gulp.src('build/js/**/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
-    .pipe(size());
-});
-
 gulp.task('test', ['unit']);
 
 gulp.task('build', [
-  'template', 'redirects', 'images', 'fonts', 'public'
+  'template', 'redirects', 'images', 'fonts', 'public', 'greenhouse-css'
 ]);
 
 gulp.task('default', function () {

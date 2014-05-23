@@ -1,20 +1,19 @@
 # Setup to run locally
 
-1. Install Node.JS: http://nodejs.org/download/ (v.0.10.x)
+- Install Node.JS: http://nodejs.org/download/ (v.0.10.x)
 
-2. Edit your ~/.bash_profile or ~/.zshrc:
+- Edit your ~/.bash_profile or ~/.zshrc:
 ```
 PATH=node_modules/.bin:$PATH
 ```
 
-3. Install required packages:
+- Install required packages:
 ```
 $ npm install
 ```
 
 # Running locally:
 
-4. Run server
 ```
 $ gulp watch
 ```
@@ -36,12 +35,15 @@ Shared template includes/partials: `includes/`
 # Troubleshooting
 
 1. `gulp watch` fails
+
 Try running `npm install`. Packages might be out of date.
 
 2. `gulp` not found
+
 Make sure you have reloaded your terminal after `2.` under `Setup to run locally`
 
 3. Too many open file error
+
 The task that watches the files you are working on can open a large number of
 files, this can hit the maximum limit in OS X.
 
@@ -65,6 +67,20 @@ launchctl limit maxfiles
 You need to run gocardless at: gocardless.dev:3000
 
 [http://localhost:9000/index.html](http://localhost:9000/index.html)
+
+# Deploying
+
+## Staging
+
+Once a pull-request is merged it goes onto `dev` and gets deployed.
+Deploys happen once CI tests pass. Circle CI will email about any failure.
+
+## Production
+
+#### ! DO NOT COMMIT/PUSH STRAIGHT TO MASTER !
+
+Production is deployed once tests on the `master` branch pass. Merge `dev` into
+`master` with `--no-ff` to deploy.
 
 # Deploying manually
 

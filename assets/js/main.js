@@ -13,9 +13,15 @@
     'gc.toggle'
   ]);
 
+  function isSupportedBrowser() {
+    var hasJSON = 'JSON' in window && 'parse' in JSON;
+    var supportMode = location.search.match(/supportMode/);
+    return hasJSON && !supportMode;
+  }
+
   angular.element(document).ready(function setup() {
     // Only give decent browser a js experience
-    if (window.isSupportedBrowser()) {
+    if (isSupportedBrowser()) {
       // Bootstrap Angular
       angular.bootstrap(document, ['home']);
     }

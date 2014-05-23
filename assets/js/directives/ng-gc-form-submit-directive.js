@@ -39,6 +39,11 @@ angular.module('ngGcFormSubmitDirective', [])
             document.title = 'Saving...';
             scope.prospectForm.$isSubmitting = true;
 
+            // UGH fix me
+            // XXX
+            $window.localStorage.setItem('prospect',
+              JSON.stringify(formValues));
+
             $.ajax({
               type: 'POST',
               url: event.target.action,
