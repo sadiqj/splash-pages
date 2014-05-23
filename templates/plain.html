@@ -11,13 +11,22 @@
     <meta name="og:image:secure_url" content="https://gocardless.com/images/logos/gocardless-square.png">
     <meta name="google-site-verification" content="Y80kah87ghJhwiDqw-5ap234p9wCcGt6kMRxvnamtHU">
     <link href="https://plus.google.com/+Gocardless" rel="publisher">
-
+    <!--[if lt IE 9]>
+    <script>
+      (function() {
+        var elems = 'article aside details figcaption figure footer header hgroup main nav section summary'.split(' ');
+        var length = elems.length;
+        var index = 0;
+        for(;index < length; index++){
+          document.createElement(elems[index]);
+        }
+      })();
+    </script>
+    <![endif]-->
     <!-- build:css /css/main.css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
-    <link rel="stylesheet" href="//cloud.typography.com/6271452/780042/css/fonts.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
-
+    <link rel="stylesheet" href="/fonts/168784/EC358C0D0D27798ED.css">
     {% if ENV_PRODUCTION %}
       <script src="//cdn.optimizely.com/js/125150657.js"></script>
     {% endif %}
