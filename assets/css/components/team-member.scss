@@ -51,6 +51,10 @@
   color: $primary-blue;
 }
 
+.team-member:hover {
+  cursor: pointer;
+}
+
 .team-member:hover h4 {
   text-decoration: underline
 }
