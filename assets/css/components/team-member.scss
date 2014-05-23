@@ -46,3 +46,11 @@
   font-size:14px;
   margin-bottom: 6px;
 }
+
+.team-member h4 {
+  color: $primary-blue;
+}
+
+.team-member:hover h4 {
+  text-decoration: underline
+}

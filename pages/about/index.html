@@ -26,14 +26,14 @@
 
   <div class="grid u-margin-Bl u-margin-Tl">
 
-    <div ng-init="member.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
-      <div toggle="member.isVisible">
+    <div ng-init="hiroki.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="hiroki.isVisible">
         <img src="/images/team/hiroki@2x.jpg" alt="Hiroki Takeuchi">
           <h4 class="section-subheading u-margin-Ts">
             Hiroki Takeuchi
           </h4>
       </div>
-      <popover show="member.isVisible" class="team-member__popover">
+      <popover show="hiroki.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': hiroki.isVisible }" ng-class="{ 'u-is-visible': hiroki.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Hiroki Takeuchi</h3>
         <p>
@@ -53,7 +53,7 @@
             Matt Robinson
           </h4>
       </div>
-      <popover show="matt.isVisible" class="team-member__popover">
+      <popover show="matt.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': matt.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Matt Robinson</h3>
         <p>
@@ -73,7 +73,7 @@
             Harry Marr
           </h4>
       </div>
-      <popover show="harry.isVisible" class="team-member__popover">
+      <popover show="harry.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': harry.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Harry Marr</h3>
         <p>
@@ -93,7 +93,7 @@
             Grey Baker
           </h4>
       </div>
-      <popover show="grey.isVisible" class="team-member__popover">
+      <popover show="grey.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': grey.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Grey Baker</h3>
         <p>
@@ -113,7 +113,7 @@
             Alan Kennedy
           </h4>
       </div>
-      <popover show="alan.isVisible" class="team-member__popover">
+      <popover show="alan.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': alan.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Alan Kennedy</h3>
         <p>
@@ -132,7 +132,7 @@
             Philip Harrison
           </h4>
       </div>
-      <popover show="philip.isVisible" class="team-member__popover">
+      <popover show="philip.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': philip.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Philip Harrison</h3>
         <p>
@@ -156,7 +156,7 @@
             Tim Rogers
           </h4>
       </div>
-      <popover show="tim.isVisible" class="team-member__popover">
+      <popover show="tim.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': tim.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Tim Rogers</h3>
         <p>
@@ -176,7 +176,7 @@
             Nabeel Qureshi
           </h4>
       </div>
-      <popover show="nabeel.isVisible" class="team-member__popover">
+      <popover show="nabeel.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': nabeel.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Nabeel Qureshi</h3>
         <p>
@@ -196,7 +196,7 @@
             Alasdair Monk
           </h4>
       </div>
-      <popover show="al.isVisible" class="team-member__popover">
+      <popover show="al.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': al.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Alasdair Monk</h3>
         <p>
@@ -217,7 +217,7 @@
             Steve Domin
           </h4>
       </div>
-      <popover show="steve.isVisible" class="team-member__popover">
+      <popover show="steve.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': steve.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Steve Domin</h3>
         <p>
@@ -235,7 +235,7 @@
             Andy Appleton
           </h4>
       </div>
-      <popover show="andy.isVisible" class="team-member__popover">
+      <popover show="andy.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': andy.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Andy Appleton</h3>
         <p>
@@ -255,7 +255,7 @@
             Maria Campbell
           </h4>
       </div>
-      <popover show="maria.isVisible" class="team-member__popover">
+      <popover show="maria.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': maria.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Maria Campbell</h3>
         <p>
@@ -277,7 +277,7 @@
             Kit Brennan
           </h4>
       </div>
-      <popover show="kit.isVisible" class="team-member__popover">
+      <popover show="kit.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': kit.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Kit Brennan</h3>
         <p>
@@ -295,7 +295,7 @@
             Alina Solovjova
           </h4>
       </div>
-      <popover show="alina.isVisible" class="team-member__popover">
+      <popover show="alina.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': alina.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Alina Solovjova</h3>
         <p>
@@ -315,7 +315,7 @@
             Ricky Shafier
           </h4>
       </div>
-      <popover show="ricky.isVisible" class="team-member__popover">
+      <popover show="ricky.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': ricky.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Ricky Shafier</h3>
         <p>
@@ -335,7 +335,7 @@
             Ben Sims
           </h4>
       </div>
-      <popover show="ben.isVisible" class="team-member__popover">
+      <popover show="ben.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': ben.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Ben Sims</h3>
         <p>
@@ -353,7 +353,7 @@
             James Berry
           </h4>
       </div>
-      <popover show="james.isVisible" class="team-member__popover">
+      <popover show="james.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': james.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">James Berry</h3>
         <p>
@@ -367,14 +367,14 @@
       </popover>
     </div>
 
-    <div ng-init="daniel.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
-      <div toggle="daniel.isVisible">
+    <div ng-init="dan.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="dan.isVisible">
         <img src="/images/team/dan@2x.jpg" alt="Daniel Lyons">
           <h4 class="section-subheading u-margin-Ts">
             Daniel Lyons
           </h4>
       </div>
-      <popover show="daniel.isVisible" class="team-member__popover">
+      <popover show="dan.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': dan.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Daniel Lyons</h3>
         <p>
@@ -399,7 +399,7 @@
             Helen Taylor
           </h4>
       </div>
-      <popover show="helen.isVisible" class="team-member__popover">
+      <popover show="helen.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': helen.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Helen Taylor</h3>
         <p>
@@ -417,7 +417,7 @@
             Jonathon McGovern
           </h4>
       </div>
-      <popover show="jonno.isVisible" class="team-member__popover">
+      <popover show="jonno.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': jonno.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Jonathon McGovern</h3>
         <p>
@@ -435,7 +435,7 @@
             Jamie English
           </h4>
       </div>
-      <popover show="jamie.isVisible" class="team-member__popover">
+      <popover show="jamie.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': jamie.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Jamie English</h3>
         <p>
@@ -453,7 +453,7 @@
             Jacob Pargin
           </h4>
       </div>
-      <popover show="jacob.isVisible" class="team-member__popover">
+      <popover show="jacob.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': jacob.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Jacob Pargin</h3>
         <p>
@@ -471,7 +471,7 @@
             Charlotte Robinson
           </h4>
       </div>
-      <popover show="charlotte.isVisible" class="team-member__popover">
+      <popover show="charlotte.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': charlotte.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Charlotte Robinson</h3>
         <p>
@@ -489,7 +489,7 @@
             Amelia Munsey
           </h4>
       </div>
-      <popover show="amelia.isVisible" class="team-member__popover">
+      <popover show="amelia.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': amelia.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Amelia Munsey</h3>
         <p>
@@ -511,7 +511,7 @@
             Andrew Thompson
           </h4>
       </div>
-      <popover show="andrew.isVisible" class="team-member__popover">
+      <popover show="andrew.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': andrew.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Andrew Thompson</h3>
         <p>
@@ -529,7 +529,7 @@
             Chris Sinjakli
           </h4>
       </div>
-      <popover show="chris.isVisible" class="team-member__popover">
+      <popover show="chris.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': chris.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Chris Sinjakli</h3>
         <p>
@@ -547,7 +547,7 @@
             James Cunningham
           </h4>
       </div>
-      <popover show="jc.isVisible" class="team-member__popover">
+      <popover show="jc.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': jc.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">James Cunningham</h3>
         <p>
@@ -565,7 +565,7 @@
             Milz Dechnik
           </h4>
       </div>
-      <popover show="milz.isVisible" class="team-member__popover">
+      <popover show="milz.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': milz.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Milz Dechnik</h3>
         <p>
@@ -583,7 +583,7 @@
             Matt Cummins
           </h4>
       </div>
-      <popover show="mattc.isVisible" class="team-member__popover">
+      <popover show="mattc.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': mattc.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Matt Cummins</h3>
         <p>
@@ -601,7 +601,7 @@
             James Jackson
           </h4>
       </div>
-      <popover show="jamesj.isVisible" class="team-member__popover">
+      <popover show="jamesj.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': jamesj.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">James Jackson</h3>
         <p>
@@ -623,7 +623,7 @@
             Astrid Hugentobler
           </h4>
       </div>
-      <popover show="astrid.isVisible" class="team-member__popover">
+      <popover show="astrid.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': astrid.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Astrid Hugentobler</h3>
         <p>
@@ -641,7 +641,7 @@
             James Shedden
           </h4>
       </div>
-      <popover show="jamess.isVisible" class="team-member__popover">
+      <popover show="jamess.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': jamess.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">James Shedden</h3>
         <p>
@@ -659,7 +659,7 @@
             Ravin Thambapillai
           </h4>
       </div>
-      <popover show="ravin.isVisible" class="team-member__popover">
+      <popover show="ravin.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': ravin.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Ravin Thambapillai</h3>
         <p>
@@ -679,7 +679,7 @@
             Angus Bayley
           </h4>
       </div>
-      <popover show="angus.isVisible" class="team-member__popover">
+      <popover show="angus.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': angus.isVisible }">
         <div class="arrow"></div>
         <h3 class="team-member__popover-title">Angus Bayley</h3>
         <p>
