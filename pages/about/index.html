@@ -24,32 +24,29 @@
 
   <hr>
 
-  <div ng-init="test.isVisible = false">
-    <div ng-click="test.isVisible = !test.isVisible">
-      test 2
-    </div>
-    <div class="u-is-hidden" ng-class="{
-      'u-is-visible': test.isVisible
-    }">
-      test 1
-    </div>
-  </div>
-
-  <ng-gc-team-member header="test" name="Hiroki Takeuchi" content="awd" img-src="/images/team/hiroki@2x.jpg"></ng-gc-team-member>
+  <!--<ng-gc-team-member header="test" name="Hiroki Takeuchi" content="awd" img-src="/images/team/hiroki@2x.jpg"></ng-gc-team-member>-->
 
   <div class="grid u-margin-Bl u-margin-Tl">
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Before founding GoCardless, Hiroki worked closely with Global Financial
-      Institutions at McKinsey &amp; Company.
-      <br><br>
-      Hiroki studied Mathematics at Oxford University, and has interned at
-      J.P. Morgan and Auctomatic." data-original-title="Hiroki Takeuchi">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+
+      <div ng-init="test.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div ng-click="test.isVisible = !test.isVisible">
         <img src="/images/team/hiroki@2x.jpg" alt="Hiroki Takeuchi">
-        <h4 class="section-subheading u-margin-Ts">
-          Hiroki Takeuchi
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Hiroki Takeuchi
+          </h4>
       </div>
-    </a>
+      <div class="u-is-hidden team-member__popover" ng-class="{ 'u-is-visible': test.isVisible }">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Hiroki Takeuchi</h3>
+        <p>
+          Before founding GoCardless, Hiroki worked closely with Global Financial
+          Institutions at McKinsey &amp; Company.
+          <br><br>
+          Hiroki studied Mathematics at Oxford University, and has interned at
+          J.P. Morgan and Auctomatic.
+        </p>
+      </div>
+    </div>
 
     <a href="javascript:;" class="team-member" data-popover="" data-content="Prior to founding GoCardless, Matt worked at McKinsey &amp; Company,
       and studied Law at Oxford University.
