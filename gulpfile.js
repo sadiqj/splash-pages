@@ -214,6 +214,7 @@ gulp.task('unit', function() {
     'assets/components/angular/angular.js',
     'assets/components/angular-cookies/angular-cookies.js',
     'assets/components/es5-shim/es5-shim.js',
+    'assets/components/mute-console/mute-console.js',
 
     'assets/components/jasmine-helpers/*.js',
     'assets/components/angular-mocks/angular-mocks.js',
@@ -223,16 +224,12 @@ gulp.task('unit', function() {
     'assets/js/lib/bootstrap/tab.js',
     'assets/js/lib/froogaloop.js',
 
-    'assets/js/connect-compatibility.js',
-
     'assets/js/directives/ng-gc-ga-event-tracker-directive.js',
     'assets/js/directives/ng-gc-form-submit-directive.js',
     'assets/js/directives/ng-gc-href-active-directive.js',
     'assets/js/modal/modal.js',
-    'assets/js/mute-console/mute-console.js',
     'assets/js/gocardless-global.js',
     'assets/js/module.js',
-    'assets/js/utils.js',
     'assets/js/base-view.js',
     'assets/js/class-extends.js',
     'assets/js/widgets/modals.js',
