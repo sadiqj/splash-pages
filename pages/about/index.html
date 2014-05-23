@@ -28,7 +28,7 @@
 
   <div class="grid u-margin-Bl u-margin-Tl">
 
-      <div ng-init="test.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+    <!--<div ng-init="test.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
       <div ng-click="test.isVisible = !test.isVisible">
         <img src="/images/team/hiroki@2x.jpg" alt="Hiroki Takeuchi">
           <h4 class="section-subheading u-margin-Ts">
@@ -46,124 +46,209 @@
           J.P. Morgan and Auctomatic.
         </p>
       </div>
+    </div>-->
+
+    <div ng-init="member.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="member.isVisible">
+        <img src="/images/team/hiroki@2x.jpg" alt="Hiroki Takeuchi">
+          <h4 class="section-subheading u-margin-Ts">
+            Hiroki Takeuchi
+          </h4>
+      </div>
+      <popover show="member.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Hiroki Takeuchi</h3>
+        <p>
+          Before founding GoCardless, Hiroki worked closely with Global Financial
+          Institutions at McKinsey &amp; Company.
+          <br><br>
+          Hiroki studied Mathematics at Oxford University, and has interned at
+          J.P. Morgan and Auctomatic.
+        </p>
+      </popover>
     </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Prior to founding GoCardless, Matt worked at McKinsey &amp; Company,
-      and studied Law at Oxford University.
-      <br><br>
-      Matt started his first business at age 16, which funded his
-      university degree." data-original-title="Matt Robinson">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+    <div ng-init="matt.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="matt.isVisible">
         <img src="/images/team/matt@2x.jpg" alt="Matt Robinson">
-        <h4 class="section-subheading u-margin-Ts">
-          Matt Robinson
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Matt Robinson
+          </h4>
       </div>
-    </a>
+      <popover show="matt.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Matt Robinson</h3>
+        <p>
+          Prior to founding GoCardless, Matt worked at McKinsey &amp; Company,
+          and studied Law at Oxford University.
+          <br><br>
+          Matt started his first business at age 16, which funded his
+          university degree.
+        </p>
+      </popover>
+    </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Before joining GoCardless, Harry worked at Conversocial,
-      iPlatform, and ran a development agency.
-      <br><br>
-      He created popular open source project MongoEngine, and
-      studied Computer Science at Leeds University." data-original-title="Harry Marr">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+    <div ng-init="harry.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="harry.isVisible">
         <img src="/images/team/harry@2x.jpg" alt="Harry Marr">
-        <h4 class="section-subheading u-margin-Ts">
-          Harry Marr
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Harry Marr
+          </h4>
       </div>
-    </a>
+      <popover show="harry.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Harry Marr</h3>
+        <p>
+          Before joining GoCardless, Harry worked at Conversocial,
+          iPlatform, and ran a development agency.
+          <br><br>
+          He created popular open source project MongoEngine, and
+          studied Computer Science at Leeds University.
+        </p>
+      </popover>
+    </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Before joining GoCardless, Grey worked for McKinsey where he
-      specialised in Retail Banking.
-      <br><br>
-      Grey holds an MPhil in Economics from Cambridge, where he graduated top
-      of his year. He spends his spare time learning to program." data-original-title="Grey Baker">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+    <div ng-init="grey.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="grey.isVisible">
         <img src="/images/team/grey@2x.jpg" alt="Grey Baker">
-        <h4 class="section-subheading u-margin-Ts">
-          Grey Baker
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Grey Baker
+          </h4>
       </div>
-    </a>
+      <popover show="grey.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Grey Baker</h3>
+        <p>
+          Before joining GoCardless, Grey worked for McKinsey where he
+          specialised in Retail Banking.
+          <br><br>
+          Grey holds an MPhil in Economics from Cambridge, where he graduated top
+          of his year. He spends his spare time learning to program.
+        </p>
+      </popover>
+    </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Alan previously worked at LeapCR. He also worked for clients such as
-      Sky at Unboxed Consulting.
-      <br><br>
-      Alan studied Computer Science at UCL." data-original-title="Alan Kennedy">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+    <div ng-init="alan.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="alan.isVisible">
         <img src="/images/team/alan@2x.png" alt="Alan Kennedy">
-        <h4 class="section-subheading u-margin-Ts">
-          Alan Kennedy
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Alan Kennedy
+          </h4>
       </div>
-    </a>
+      <popover show="alan.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Alan Kennedy</h3>
+        <p>
+          Alan previously worked at LeapCR. He also worked for clients such as
+          Sky at Unboxed Consulting.
+          <br><br>
+          Alan studied Computer Science at UCL.
+        </p>
+      </popover>
+    </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Before joining GoCardless, Philip ran a design agency and
-      co-founded a production company specialising in Mac education.
-      <br><br>
-      Philip studied Economics at Jönköping International Business
-      School and spends his spare time geeking out in Javascript." data-original-title="Philip Harrison">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+    <div ng-init="philip.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="philip.isVisible">
         <img src="/images/team/philip@2x.png" alt="Philip Harrison">
-        <h4 class="section-subheading u-margin-Ts">
-          Philip Harrison
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Philip Harrison
+          </h4>
       </div>
-    </a>
+      <popover show="philip.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Philip Harrison</h3>
+        <p>
+          Before joining GoCardless, Philip ran a design agency and
+          co-founded a production company specialising in Mac education.
+          <br><br>
+          Philip studied Economics at Jönköping International Business
+          School and spends his spare time geeking out in Javascript.
+        </p>
+      </popover>
+    </div>
+
   </div>
 
   <div class="grid u-margin-Bl u-margin-Tl">
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Alongside working at GoCardless, Tim is currently studying BSc Government
-      at the London School of Economics.
-      <br><br>
-      He has been involved in a number of early-stage startups and is a keen
-      Ruby developer." data-original-title="Tim Rogers">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+
+    <div ng-init="tim.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="tim.isVisible">
         <img src="/images/team/tim@2x.jpg" alt="Tim Rogers">
-        <h4 class="section-subheading u-margin-Ts">
-          Tim Rogers
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Tim Rogers
+          </h4>
       </div>
-    </a>
+      <popover show="tim.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Tim Rogers</h3>
+        <p>
+          Alongside working at GoCardless, Tim is currently studying BSc Government
+          at the London School of Economics.
+          <br><br>
+          He has been involved in a number of early-stage startups and is a keen
+          Ruby developer.
+        </p>
+      </popover>
+    </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Before joining GoCardless, Nabeel worked at Accenture and the
-      Bank of England.
-      <br><br>
-      He graduated with a first from Oxford in Philosophy, Politics
-      and Economics, and spends his spare time programming." data-original-title="Nabeel Qureshi">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+    <div ng-init="nabeel.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="nabeel.isVisible">
         <img src="/images/team/nabeel@2x.png" alt="Nabeel Qureshi">
-        <h4 class="section-subheading u-margin-Ts">
-          Nabeel Qureshi
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Nabeel Qureshi
+          </h4>
       </div>
-    </a>
+      <popover show="nabeel.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Nabeel Qureshi</h3>
+        <p>
+          Before joining GoCardless, Nabeel worked at Accenture and the
+          Bank of England.
+          <br><br>
+          He graduated with a first from Oxford in Philosophy, Politics
+          and Economics, and spends his spare time programming.
+        </p>
+      </popover>
+    </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Alasdair studied Applied Information Technology at Reading where he
-      achieved a first class honours degree and finished top of his class.
-      He now leads our design team.
-      <br><br>
-      Before GoCardless, he worked independently with a range of clients from
-      tech startups to established advertising and design studios." data-original-title="Alasdair Monk">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+    <div ng-init="al.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="al.isVisible">
         <img src="/images/team/al@2x.png" alt="Alasdair Monk">
-        <h4 class="section-subheading u-margin-Ts">
-          Alasdair Monk
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Alasdair Monk
+          </h4>
       </div>
-    </a>
+      <popover show="al.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Alasdair Monk</h3>
+        <p>
+          Alasdair studied Applied Information Technology at Reading where he
+          achieved a first class honours degree and finished top of his class.
+          He now leads our design team.
+          <br><br>
+          Before GoCardless, he worked independently with a range of clients from
+          tech startups to established advertising and design studios.
+        </p>
+      </popover>
+    </div>
 
-    <a href="javascript:;" class="team-member" data-popover="" data-content="Steve previously worked at Kpsule and interned at MXP4. He also worked
-      for a number of Paris-based startups and agencies while studying
-      computer science at Supinfo International University." data-original-title="Steve Domin">
-      <div class="grid__cell u-1of6 u-padding-Bs">
+     <div ng-init="steve.isVisible = fstevese" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="steve.isVisible">
         <img src="/images/team/steve@2x.png" alt="Steve Domin">
-        <h4 class="section-subheading u-margin-Ts">
-          Steve Domin
-        </h4>
+          <h4 class="section-subheading u-margin-Ts">
+            Steve Domin
+          </h4>
       </div>
-    </a>
+      <popover show="steve.isVisible" class="team-member__popover">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Steve Domin</h3>
+        <p>
+          Steve previously worked at Kpsule and interned at MXP4. He also worked
+          for a number of Paris-based startups and agencies while studying
+          computer science at Supinfo International University.
+        </p>
+      </popover>
+    </div>
 
     <a href="javascript:;" class="team-member" data-popover="" data-content="Andy joined GoCardless from Mint Digital, a creative agency in London.
       <br/><br/>
