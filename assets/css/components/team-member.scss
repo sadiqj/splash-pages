@@ -47,14 +47,10 @@
   margin-bottom: 6px;
 }
 
-.team-member h4 {
+.team-member__heading {
   color: $primary-blue;
 }
 
 .team-member:hover {
   cursor: pointer;
-}
-
-.team-member:hover h4 {
-  text-decoration: underline
 }
