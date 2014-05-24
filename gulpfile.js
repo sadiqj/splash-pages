@@ -219,8 +219,6 @@ gulp.task('unit', function() {
     'assets/components/jasmine-helpers/*.js',
     'assets/components/angular-mocks/angular-mocks.js',
 
-    'assets/js/lib/bootstrap/tooltip.js',
-    'assets/js/lib/bootstrap/popover.js',
     'assets/js/lib/bootstrap/tab.js',
     'assets/js/lib/froogaloop.js',
 

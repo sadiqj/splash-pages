@@ -1,0 +1,15 @@
+{
+  "name": "dialog.js",
+  "version": "0.9.1",
+  "main": "dialog.js",
+  "ignore": [
+    "**/.*",
+    "**/*spec.js",
+    "node_modules",
+    "components",
+    "package.json",
+    "Gruntfile.js",
+    "readme.md",
+    "karma.conf.js"
+  ]
+}

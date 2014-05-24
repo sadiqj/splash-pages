@@ -1,0 +1,29 @@
+{
+  "name": "object-factory.js",
+  "main": "object-factory.js",
+  "dependencies": {
+    "bower-redefine": "git@github.com:gocardless-client/bower-redefine.git",
+    "bower-eddy-x": "git@github.com:gocardless-client/bower-eddy-x.git"
+  },
+  "ignore": [
+    "**/.*",
+    "*.spec.js",
+    "example",
+    "node_modules",
+    "components",
+    "package.json",
+    "Gruntfile.js",
+    "readme.md",
+    "karma.conf.js"
+  ],
+  "homepage": "https://github.com/gocardless/object-factory.js",
+  "_release": "22ba9ef645",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "22ba9ef645daa26228d29b71cedf1cfe562b9a7d"
+  },
+  "_source": "git@github.com:gocardless/object-factory.js.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:gocardless/object-factory.js.git"
+}
