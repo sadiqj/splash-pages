@@ -26,7 +26,9 @@
     <!-- build:css /css/main.css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
-    <link rel="stylesheet" href="/fonts/168784/EC358C0D0D27798ED.css">
+    <!-- build:css /css/fonts.css -->
+    <link rel="stylesheet" href="fonts/168784/EC358C0D0D27798ED.css">
+    <!-- endbuild -->
     {% if ENV_PRODUCTION %}
       <script src="//cdn.optimizely.com/js/125150657.js"></script>
     {% endif %}
@@ -39,22 +41,19 @@
 
     {% block body %}Provide body!{% endblock %}
 
+    <!-- GoCardless Tracker (Mixpanel) -->
     <script>
-      (function(w, d, t, g, e, r){
+      (function(w, g, e, r){
         w[g] || (w[g] = function(){ (w[g].q = w[g].q || []).push(arguments) });
         w[g].l = + new Date;
-        e = d.createElement(t);
-        r = d.getElementsByTagName(t)[0];
-        e.async = true;
-        e.src = '//d1mmrmxi7sv2ut.cloudfront.net/gct.js';
-        r.parentNode.insertBefore(e, r);
-      }(window, document, 'script', 'gct'));
+      }(window, 'gct'));
       gct('initialize', 'mixpanel', {
         token: '{{ MIXPANEL_TOKEN }}',
         debug: {{ false if ENV_PRODUCTION else true }},
         cookieName: '_gc_visitorid'
       });
     </script>
+    <script src="//d1mmrmxi7sv2ut.cloudfront.net/gct.js" async></script>
 
     <!-- build:js /js/vendor.js -->
     <script src="components/jquery/dist/jquery.js"></script>
@@ -95,68 +94,19 @@
     <!-- endbuild -->
 
     {% if ENV_PRODUCTION %}
+      <!-- Google Analytics -->
       <script>
-      // NEW Universal Analytics
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-22094249-2', {'cookieDomain': 'gocardless.com'});ga('send','pageview');
-
-      // OLD
-      window._gaq || (window._gaq = []);
-      _gaq.push(['_setAccount','UA-22094249-2']);
-      _gaq.push(['_setDomainName', '.gocardless.com']);
-      _gaq.push(['_trackPageview']);
-      (function(d,t){
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=true;
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)
-      }(document,'script'));
+        window._gaq || (window._gaq = []);
+        _gaq.push(['_setAccount','UA-22094249-2']);
+        _gaq.push(['_setDomainName', '.gocardless.com']);
+        _gaq.push(['_trackPageview']);
       </script>
+      <script src="//www.google-analytics.com/ga.js" async></script>
 
-      <script>
-        window.google_conversion_id = 999825953;
-        window.google_custom_params = window.google_tag_params;
-        window.google_remarketing_only = true;
-      </script>
+      <!-- CrazyEgg -->
+      <script src="//dnn506yrbagrg.cloudfront.net/pages/scripts/0021/5893.js" async></script>
 
-      <script src="//www.googleadservices.com/pagead/conversion.js"></script>
-
-      <noscript>
-        <div style="display:inline;">
-          <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/999825953/?value=0&amp;guid=ON&amp;script=0">
-        </div>
-      </noscript>
-
-      <script>
-        window.adroll_adv_id = "2OX4TELEEJEKBDJMXSPIUH";
-        window.adroll_pix_id = "6PSKQJDHHFGBTOARCJGTQ6";
-        (function(){
-          __adroll_loaded=true;
-
-          (function(d, t){
-            var g = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-            g.async=true;
-            g.src = '//s.adroll.com/j/roundtrip.js';
-            s.parentNode.insertBefore(g,s)
-          }(document, 'script'));
-        })();
-      </script>
-
-      <script>
-      (function(){
-        var a = document.createElement('script');
-        var b = document.getElementsByTagName('script')[0];
-        a.src = '//dnn506yrbagrg.cloudfront.net/pages/scripts/0021/5893.js?'+Math.floor(new Date().getTime()/3600000);
-        a.async = true;
-        b.parentNode.insertBefore(a,b)
-      })();
-      </script>
-
-      <!-- begin olark code -->
+      <!-- Olark -->
       <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
       f[z]=function(){
       (a.s=a.s||[]).push(arguments)};var a=f[z]._={
@@ -175,13 +125,16 @@
       loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
       /* custom configuration goes here (www.olark.com/documentation) */
       olark.identify('8523-793-10-2725');/*]]>*/olark.configure('box.start_hidden', true);</script><noscript><a href="https://www.olark.com/site/8523-793-10-2725/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-      <!-- end olark code -->
 
       <script>
         (function() {
           olark('api.visitor.getDetails', function(details) {
             var organization = details.organization;
-            olark('api.chat.updateVisitorNickname', { snippet: organization } );
+            if (organization) {
+              olark('api.chat.updateVisitorNickname', {
+                snippet: organization
+              });
+            }
           });
 
           olark('api.chat.onMessageToOperator', function(event) {
@@ -199,7 +152,9 @@
           });
 
           if (location.search.match(/chat\=1/)) {
-            setTimeout(function() { olark('api.box.expand'); }, 2000);
+            setTimeout(function() {
+              olark('api.box.expand');
+            }, 2000);
           }
 
           // XXX
@@ -207,22 +162,42 @@
           try {
             var prospect = JSON.parse(window.localStorage.getItem('prospect'));
           } catch (e) {}
-          if (prospect) {
+
+          if (prospect && prospect['prospect[name]']) {
             olark('api.visitor.updateFullName', {
               fullName: prospect['prospect[name]']
             });
+          }
+          if (prospect && prospect['prospect[email]']) {
             olark('api.visitor.updateEmailAddress', {
               emailAddress: prospect['prospect[email]']
             });
+          }
+          if (prospect && prospect['prospect[phone]']) {
             olark('api.visitor.updatePhoneNumber', {
               phoneNumber: prospect['prospect[phone]']
             });
+          }
+          if (prospect && prospect['prospect[size]']) {
             olark('api.visitor.updateCustomFields', {
               size: prospect['prospect[size]']
             });
           }
         })();
       </script>
+
+      <!-- Google remarketing (calls document.write...) -->
+      <script>
+        window.google_conversion_id = 999825953;
+        window.google_custom_params = window.google_tag_params;
+        window.google_remarketing_only = true;
+      </script>
+      <script src="//www.googleadservices.com/pagead/conversion.js"></script>
+      <noscript>
+        <div style="display:inline;">
+          <img height="1" width="1" style="border-style:none;" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/999825953/?value=0&amp;guid=ON&amp;script=0">
+        </div>
+      </noscript>
     {% endif %}
   </body>
 </html>
