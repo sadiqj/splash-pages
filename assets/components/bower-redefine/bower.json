@@ -1,0 +1,9 @@
+{
+  "name": "bower-redefine",
+  "version": "0.0.1",
+  "main": "redefine.js",
+  "ignore": [
+    "**/.*",
+    "readme.md"
+  ]
+}

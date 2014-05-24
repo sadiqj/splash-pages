@@ -8,7 +8,9 @@
     'ngGcSignupFunnel',
     'ngGcRequestDemoFunnel',
     'ngGcPageViewEvetns',
-    'ngGcCookiesInit'
+    'ngGcCookiesInit',
+    'gc.popover',
+    'gc.toggle'
   ]);
 
   function isSupportedBrowser() {
