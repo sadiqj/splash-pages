@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var util = require('util');
+
 var Crawler = require('simplecrawler');
 var cheerio = require('cheerio');
 
@@ -20,6 +22,7 @@ crawler.stripWWWDomain = true;
 crawler.domainWhitelist = [site]
 crawler.scanSubdomains = false;
 crawler.maxResourceSize = (1024 * 1024) / 2; // 0.5mb
+crawler.stripQuerystring = true; // optimizely is tagging all of the things...
 
 // Requirements:
 // - Fetch all linked resources on staging.gocardless.com
@@ -33,38 +36,49 @@ crawler.addFetchCondition(function(parsedURL) {
     !parsedURL.uriPath.match(/^(\/blog\/|\/direct-debit\/)/gi);
 });
 
-var errors = 0;
+var errors = [];
 
 crawler
   .on('crawlstart',function(queueItem, responseBuffer, response) {
-    console.log('Started crawling %s', site);
+    var msg = util.format('Started crawling %s', site);
+    console.log(msg);
   })
   .on('fetch404',function(queueItem) {
-    errors += 1;
-    console.error('✖ Not found linked from %s to %s', queueItem.referrer, queueItem.url);
+    var msg = util.format('✖ Not found linked from %s to %s', queueItem.referrer, queueItem.url);
+    errors.push(msg);
+    console.error(msg);
   })
   .on('fetchredirect', function(queueItem, parsedURL) {
-    errors += 1;
-    console.error('↗ Redirect from %s to %s://%s%s', queueItem.url, parsedURL.protocol, parsedURL.host, parsedURL.path);
+    var msg = util.format('✖ Redirect from %s to %s://%s%s', queueItem.url, parsedURL.protocol, parsedURL.host, parsedURL.path);
+    errors.push(msg);
+    console.error(msg);
   })
   .on('fetcherror', function(queueItem) {
-    errors += 1;
-    console.error('✖ Error fetching from %s to %s', queueItem.referrer, queueItem.url);
+    var msg = util.format('✖ Error fetching from %s to %s', queueItem.referrer, queueItem.url);
+    errors.push(msg);
+    console.error(msg);
   })
   .on('fetchtimeout', function(queueItem) {
-    errors += 1;
-    console.error('✖ Timeout fetching from %s to %s', queueItem.referrer, queueItem.url);
+    var msg = util.format('✖ Timeout fetching from %s to %s', queueItem.referrer, queueItem.url);
+    errors.push(msg);
+    console.error(msg);
   })
   .on('fetchclienterror', function(queueItem) {
-    console.error('✖ Client error fetching from %s to %s', queueItem.referrer, queueItem.url);
-    errors += 1;
+    var msg = util.format('✖ Client error fetching from %s to %s', queueItem.referrer, queueItem.url);
+    errors.push(msg);
+    console.error(msg);
   })
   .on('fetchcomplete',function(queueItem, responseBuffer, response) {
-    console.log('✓ %s (%d bytes %s type)', queueItem.url, responseBuffer.length, response.headers['content-type']);
+    var msg = util.format('✓ %s (%d bytes %s type)', queueItem.url, responseBuffer.length, response.headers['content-type']);
+    console.log(msg);
   })
   .on('complete', function() {
-    if (errors > 0) {
-      throw new Error('✖ %s errors', errors);
+    if (errors.length > 0) {
+      console.error('\n✖ Failed checking links with %d errors', errors.length);
+      errors.map(function(error) {
+        console.error('✖ %s', error)
+      });
+      throw new Error('Failed checking links');
     } else {
       console.log('✓ Yay! No broken links for: %s', site);
     }
