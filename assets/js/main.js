@@ -1,4 +1,4 @@
-(function(root) {
+(function main() {
   'use strict';
 
   angular.module('home', [
@@ -27,8 +27,8 @@
     }
   });
 
-  var Widgets = root.GoCardless.module('widgets');
-  var Home = root.GoCardless.module('home');
+  var Widgets = window.GoCardless.module('widgets');
+  var Home = window.GoCardless.module('home');
 
   Home.vimeoModals = new Widgets.Views.ModalVimeo();
 
@@ -38,10 +38,8 @@
 
   Home.stickyTabs = new Widgets.Views.StickyTabs();
 
-  Home.popover = new Widgets.Views.PopOver();
-
   Home.affix = new Widgets.Views.Affix({
     el: '[data-affix-footer-fixed]'
   });
 
-})(this);
+}());

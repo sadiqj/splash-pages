@@ -10,7 +10,7 @@
   "id-unique": true,
   "src-not-empty": true,
   "head-script-disabled": true,
-  "img-alt-require": true,
+  "img-alt-require": false,
   "doctype-html5": true,
   "id-class-value": false,
   "style-disabled": true

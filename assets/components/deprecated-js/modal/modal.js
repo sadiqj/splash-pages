@@ -1,4 +1,6 @@
-/*global modal:false console:false define:true module:true */
+/*eslint-disable */
+/* DEPRECATE */
+
 var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 (function(name, context, definition) {

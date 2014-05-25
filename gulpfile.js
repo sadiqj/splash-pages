@@ -22,9 +22,9 @@ var APIProxy = httpProxy.createProxyServer();
 var template = require('./tasks/template');
 var deploy = require('./tasks/deploy');
 var htmllint = require('./tasks/html-lint');
-
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
+var eslintConfig = require('./eslint.json');
 
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
@@ -36,10 +36,8 @@ function isProduction() {
 }
 
 gulp.task('eslint', function() {
-  return gulp.src('assets/js/**/*.js')
-    .pipe(eslint({
-      config: 'eslint.json'
-    }))
+  return gulp.src(['assets/js/**/*.js', '!assets/js/**/*spec.js'])
+    .pipe(eslint(eslintConfig))
     .pipe(eslint.format('stylish'));
 });
 
@@ -116,7 +114,7 @@ gulp.task('template', ['html'], function () {
 
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
-    .pipe(htmllint())
+    //.pipe(htmllint())
     .pipe(htmlhint({
       htmlhintrc: 'htmlhintrc.json'
     }))
@@ -239,7 +237,6 @@ gulp.task('unit', function() {
     'assets/js/widgets/modals.js',
     'assets/js/widgets/modal-vimeo.js',
     'assets/js/widgets/demo-modal.js',
-    'assets/js/widgets/popover.js',
     'assets/js/widgets/affix.js',
     'assets/js/widgets/sticky-tabs.js',
     'assets/js/metrics/**/*.js',

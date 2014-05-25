@@ -1,3 +1,6 @@
+/*eslint-disable */
+/* DEPRECATE */
+
 /* ========================================================================
  * Bootstrap: tab.js v3.1.0
  * http://getbootstrap.com/javascript/#tabs
