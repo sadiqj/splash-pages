@@ -28,22 +28,20 @@
         }
 
         return {
-          link: function link(scope, element) {
-            scope.prospectFormData = {
-              size: '0-100'
-            };
+          link: function link(scope, element, attrs) {
+            var options = _.extend({
+              form: {},
+              data: {},
+              onCreate: function() {}
+            }, scope.$eval(attrs.ngGcFormSubmit));
+            var defaultFormData = _.clone(options.data);
 
             function onSubmit(event) {
               var formValues = serialiseForm($(event.target));
 
               var oldTitle = $window.document.title;
               document.title = 'Saving...';
-              scope.prospectForm.$isSubmitting = true;
-
-              // UGH fix me
-              // XXX
-              $window.localStorage.setItem('prospect',
-                JSON.stringify(formValues));
+              options.form.$isSubmitting = true;
 
               $.ajax({
                 type: 'POST',
@@ -52,33 +50,45 @@
                 contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
                 dataType: 'json'
               }).done(function done(response) {
-                // XXX HACK
-                // MOVE TO CALLBACK
-                if (response && response.chat === true) {
-                  $window.location.search = '?chat=1';
-                }
-                // XXX HACK
-
                 // Scroll to top showing notification
                 window.scrollTo(0, 0);
 
                 scope.$apply(function apply() {
-                  scope.prospectForm.$isSuccess = true;
-                  scope.prospectForm.$isError = false;
+                  options.form.$isSuccess = true;
+                  options.form.$isError = false;
 
                   // Clear state
-                  scope.prospectFormData = {};
-                  scope.prospectForm.$setPristine();
+                  options.form.$setPristine();
+
+                  // Set initial state on form
+                  _.each(_.keys(options.data), function(key) {
+                    if (key in defaultFormData) {
+                      options.data[key] = defaultFormData[key];
+                    } else {
+                      options.data[key] = null;
+                    }
+                  });
+
+                  options.onCreate(null, {
+                    response: response,
+                    prospect: formValues
+                  });
                 });
               }).fail(function fail(response) {
                 scope.$apply(function apply() {
-                  scope.prospectForm.$isSuccess = false;
-                  scope.prospectForm.$isError = response.responseText;
+                  options.form.$isSuccess = false;
+                  var error = (response.responseJSON &&
+                    response.responseJSON.error) || response.responseText;
+                  options.form.$isError = error;
+
+                  options.onCreate({
+                    response: response.responseText
+                  });
                 });
               }).always(function always() {
                 document.title = oldTitle;
                 scope.$apply(function apply() {
-                  scope.prospectForm.$isSubmitting = false;
+                  options.form.$isSubmitting = false;
                 });
               });
 
