@@ -22,6 +22,7 @@ var APIProxy = httpProxy.createProxyServer();
 var template = require('./tasks/template');
 var deploy = require('./tasks/deploy');
 var htmllint = require('./tasks/html-lint');
+var htmlHintFailReporter= require('./tasks/html-hint-fail-reporter');
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
 var eslintConfig = require('./eslint.json');
@@ -50,6 +51,7 @@ gulp.task('css', function () {
     .pipe(autoprefixer('last 2 version'))
     .pipe(csslint('csslintrc.json'))
     .pipe(csslint.reporter())
+    .pipe(csslint.failReporter())
     .pipe(gulp.dest('.tmp/css'))
     .pipe(size());
 });
@@ -110,8 +112,6 @@ function templateMetadata() {
 }
 
 gulp.task('template', ['html'], function () {
-  var htmlFilter = filter('**/*.html');
-
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
     //.pipe(htmllint())
@@ -119,6 +119,7 @@ gulp.task('template', ['html'], function () {
       htmlhintrc: 'htmlhintrc.json'
     }))
     .pipe(htmlhint.reporter())
+    .pipe(htmlHintFailReporter())
     .pipe(gulp.dest('build'))
     .pipe(size());
 });
