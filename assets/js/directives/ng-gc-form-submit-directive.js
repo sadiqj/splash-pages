@@ -32,7 +32,7 @@
             var options = _.extend({
               form: {},
               data: {},
-              onCreate: function() {}
+              onCreate: function onCreate() {}
             }, scope.$eval(attrs.ngGcFormSubmit));
             var defaultFormData = _.clone(options.data);
 
@@ -61,7 +61,7 @@
                   options.form.$setPristine();
 
                   // Set initial state on form
-                  _.each(_.keys(options.data), function(key) {
+                  _.each(_.keys(options.data), function eachKey(key) {
                     if (key in defaultFormData) {
                       options.data[key] = defaultFormData[key];
                     } else {
@@ -77,8 +77,8 @@
               }).fail(function fail(response) {
                 scope.$apply(function apply() {
                   options.form.$isSuccess = false;
-                  var error = (response.responseJSON &&
-                    response.responseJSON.error) || response.responseText;
+                  var error = response.responseJSON &&
+                    response.responseJSON.error || response.responseText;
                   options.form.$isError = error;
 
                   options.onCreate({
