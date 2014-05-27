@@ -168,9 +168,7 @@ gulp.task('fonts', function () {
     .pipe(size());
 });
 
-gulp.task('serve', ['build', 'connect'], function () {
-  require('opn')('http://localhost:9000');
-});
+gulp.task('serve', ['build', 'connect']);
 
 gulp.task('connect', function () {
   var connect = require('connect');
@@ -196,6 +194,7 @@ gulp.task('connect', function () {
   require('http').createServer(app)
     .listen(9000)
     .on('listening', function () {
+      require('opn')('http://localhost:9000');
       console.log('Started connect web server on http://gocardless.dev:9000');
     });
 });

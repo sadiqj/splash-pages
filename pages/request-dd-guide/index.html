@@ -12,7 +12,12 @@
         method="post"
         class="ng-pristine ng-valid"
         name="prospectForm"
-        ng-gc-form-submit
+        ng-controller="NgGcProspectForm"
+        ng-gc-form-submit="{
+          onCreate: onProspectCreate,
+          form: prospectForm,
+          data: prospectForm.data
+        }"
         ng-gc-ga-event-tracker="{
           event: 'submit',
           category: 'forms',

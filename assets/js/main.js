@@ -10,7 +10,9 @@
     'ngGcPageViewEvetns',
     'ngGcCookiesInit',
     'gc.popover',
-    'gc.toggle'
+    'gc.toggle',
+    'ngGcProspectFormCtrl',
+    'ngGcWatchDemoFormCtrl'
   ]);
 
   function isSupportedBrowser() {
