@@ -13,15 +13,19 @@ var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 var karma = require('gulp-karma');
 var gif = require('gulp-if');
+var uncss = require('gulp-uncss');
+var htmlhint = require('gulp-htmlhint');
 
 var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
 
 var template = require('./tasks/template');
 var deploy = require('./tasks/deploy');
-
+var htmllint = require('./tasks/html-lint');
+var htmlHintFailReporter= require('./tasks/html-hint-fail-reporter');
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
+var eslintConfig = require('./eslint.json');
 
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
@@ -33,17 +37,9 @@ function isProduction() {
 }
 
 gulp.task('eslint', function() {
-  return gulp.src('assets/js/**/*.js')
-    .pipe(eslint({
-      config: 'eslint.json'
-    }))
+  return gulp.src(['assets/js/**/*.js', '!assets/js/**/*spec.js'])
+    .pipe(eslint(eslintConfig))
     .pipe(eslint.format('stylish'));
-});
-
-gulp.task('csslint', function() {
-  return gulp.src('assets/css/**/*.css')
-    .pipe(csslint('csslintrc.json'))
-    .pipe(csslint.reporter());
 });
 
 gulp.task('css', function () {
@@ -53,6 +49,9 @@ gulp.task('css', function () {
       loadPath: ['assets/css'],
     }))
     .pipe(autoprefixer('last 2 version'))
+    .pipe(csslint('csslintrc.json'))
+    .pipe(csslint.reporter())
+    .pipe(csslint.failReporter())
     .pipe(gulp.dest('.tmp/css'))
     .pipe(size());
 });
@@ -115,6 +114,13 @@ function templateMetadata() {
 gulp.task('template', ['html'], function () {
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
+    // .pipe(htmllint())
+    // .pipe(htmllint.reporter())
+    .pipe(htmlhint({
+      htmlhintrc: 'htmlhintrc.json'
+    }))
+    .pipe(htmlhint.reporter())
+    .pipe(htmlHintFailReporter())
     .pipe(gulp.dest('build'))
     .pipe(size());
 });
@@ -233,7 +239,6 @@ gulp.task('unit', function() {
     'assets/js/widgets/modals.js',
     'assets/js/widgets/modal-vimeo.js',
     'assets/js/widgets/demo-modal.js',
-    'assets/js/widgets/popover.js',
     'assets/js/widgets/affix.js',
     'assets/js/widgets/sticky-tabs.js',
     'assets/js/metrics/**/*.js',
@@ -250,7 +255,7 @@ gulp.task('unit', function() {
   });
 });
 
-gulp.task('deploy', ['clean', 'build'], function() {
+gulp.task('deploy', ['build'], function() {
   return gulp.src('build/**/*')
     .pipe(deploy({
       region: 'eu-west-1',
@@ -261,11 +266,22 @@ gulp.task('deploy', ['clean', 'build'], function() {
     }));
 });
 
-gulp.task('test', ['unit']);
+gulp.task('test', ['unit', 'eslint']);
 
-gulp.task('build', [
-  'template', 'redirects', 'images', 'fonts', 'public', 'greenhouse-css'
+// Get around async tasks in Gulp
+// We need to run and finish 'clean'
+// before the build starts
+gulp.task('build-steps', [
+  'template',
+  'redirects',
+  'images',
+  'fonts',
+  'public',
+  'greenhouse-css'
 ]);
+gulp.task('build', ['clean'], function() {
+  return gulp.start('build-steps');
+});
 
 gulp.task('default', function () {
   gulp.start('watch');

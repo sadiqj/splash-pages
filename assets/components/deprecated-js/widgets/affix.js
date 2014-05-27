@@ -1,3 +1,6 @@
+/*eslint-disable */
+/* DEPRECATE */
+
 (function() {
   'use strict';
 

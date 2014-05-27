@@ -1,3 +1,6 @@
+/*eslint-disable */
+/* DEPRECATE */
+
 // module builder
 // to create a module:
 //   module = GoCardless.module("module")
