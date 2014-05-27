@@ -36,10 +36,18 @@ function isProduction() {
   return process.env.NODE_ENV === 'production';
 }
 
-gulp.task('eslint', function() {
+gulp.task('eslint-reporter', function() {
   return gulp.src(['assets/js/**/*.js', '!assets/js/**/*spec.js'])
     .pipe(eslint(eslintConfig))
-    .pipe(eslint.format('stylish'));
+    .pipe(eslint.format());
+});
+
+// HACK
+gulp.task('eslint-fail-build', function() {
+  return gulp.src(['assets/js/**/*.js', '!assets/js/**/*spec.js'])
+    .pipe(eslint(eslintConfig))
+    .pipe(eslint.failOnError())
+    .pipe(eslint.format());
 });
 
 gulp.task('css', function () {
@@ -266,7 +274,7 @@ gulp.task('deploy', ['build'], function() {
     }));
 });
 
-gulp.task('test', ['unit', 'eslint']);
+gulp.task('test', ['unit', 'eslint-reporter', 'eslint-fail-build']);
 
 // Get around async tasks in Gulp
 // We need to run and finish 'clean'

@@ -50,7 +50,9 @@
 
         function sanitizeWildcard(pathToMatch) {
           var wildcardPattern = new RegExp('\\*$');
-          if (!pathToMatch.match(wildcardPattern)) { return false; }
+          if (!pathToMatch.match(wildcardPattern)) {
+            return false;
+          }
           return pathToMatch.replace(wildcardPattern, '');
         }
 
@@ -61,7 +63,9 @@
             .keys()
             .some(function someParentWildcard(page) {
               page = sanitizeWildcard(page);
-              if (!page) { return false; }
+              if (!page) {
+                return false;
+              }
               if (page.length > pathToMatch.length &&
                   page.match(wildcardPattern)) {
                 parentWildcard = page;
@@ -73,7 +77,9 @@
 
         function matchWildcard(pathToMatch, currentPath) {
           pathToMatch = sanitizeWildcard(pathToMatch);
-          if (!pathToMatch || pages.contains(currentPath)) { return false; }
+          if (!pathToMatch || pages.contains(currentPath)) {
+            return false;
+          }
 
           var parentWildcard = getParentWildcard(pathToMatch);
           var canMatch = !parentWildcard ||
