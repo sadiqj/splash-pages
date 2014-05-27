@@ -1,0 +1,23 @@
+Usage: scss.js [entry files] {OPTIONS}
+
+Standard Options:
+
+    --outfile, -o     Write the scss output to this file.
+                      If unspecified, scss prints to stdout.
+
+    --include-path    Specify scss @import search path, can be set multiple times.
+
+    --image-path      Specify scss path used in image path helpers.
+
+    --output-style    Specify scss output style, either 'compressed' or 'nested'
+                      due to limitation in libsass.
+
+    --source-comments Set to 'map' to enable source map comments.
+
+    --source-map      Can be 'true' or relative path. When 'true' the 'outfile is used.
+
+    --version, -v     Show version.
+
+    --help, -h        Show this message.
+
+Specify a parameter.
