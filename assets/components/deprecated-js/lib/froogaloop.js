@@ -1,3 +1,6 @@
+/*eslint-disable */
+/* DEPRECATE */
+
 // Init style shamelessly stolen from jQuery http://jquery.com
 var Froogaloop = (function(){
     // Define a local copy of Froogaloop

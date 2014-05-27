@@ -11,11 +11,15 @@
 
   <div class="grid grid--center">
     <div class="grid__cell u-1of2">
-      <form accept-charset="UTF-8" action="/api/v1/prospects/pricing_quote"
-        method="post"
+      <form accept-charset="UTF-8" action="/api/v1/prospects/pricing_quote" method="post"
         class="ng-pristine ng-valid"
         name="prospectForm"
-        ng-gc-form-submit
+        ng-controller="NgGcProspectForm"
+        ng-gc-form-submit="{
+          onCreate: onProspectCreate,
+          form: prospectForm,
+          data: prospectForm.data
+        }"
         ng-gc-ga-event-tracker="{
           event: 'submit',
           category: 'forms',
