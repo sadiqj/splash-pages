@@ -262,7 +262,7 @@ gulp.task('unit', function() {
   });
 });
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', ['clean', 'build'], function() {
   return gulp.src('build/**/*')
     .pipe(deploy({
       region: 'eu-west-1',
@@ -275,20 +275,9 @@ gulp.task('deploy', ['build'], function() {
 
 gulp.task('test', ['unit', 'eslint-reporter', 'eslint-fail-build']);
 
-// Get around async tasks in Gulp
-// We need to run and finish 'clean'
-// before the build starts
-gulp.task('build-steps', [
-  'template',
-  'redirects',
-  'images',
-  'fonts',
-  'public',
-  'greenhouse-css'
+gulp.task('build', [
+  'template', 'redirects', 'images', 'fonts', 'public', 'greenhouse-css'
 ]);
-gulp.task('build', ['clean'], function() {
-  return gulp.start('build-steps');
-});
 
 gulp.task('default', function () {
   gulp.start('watch');
