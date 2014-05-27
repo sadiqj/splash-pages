@@ -114,7 +114,8 @@ function templateMetadata() {
 gulp.task('template', ['html'], function () {
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
-    //.pipe(htmllint())
+    // .pipe(htmllint())
+    // .pipe(htmllint.reporter())
     .pipe(htmlhint({
       htmlhintrc: 'htmlhintrc.json'
     }))
