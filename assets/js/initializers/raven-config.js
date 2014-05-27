@@ -1,4 +1,6 @@
-(function() {
+(function ravenConfig() {
+  'use strict';
+
   var ravenOptions = {
     ignoreUrls: [
       // Facebook flakiness
@@ -49,8 +51,8 @@
     ]
   };
 
-  this.Raven.config(
+  window.Raven.config(
     'https://8dc7d05bc3d1423198ed27819b591f4c@exceptions.gocardless.com/14',
     ravenOptions
   ).install();
-}).call(this);
+}());

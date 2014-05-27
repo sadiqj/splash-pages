@@ -12,7 +12,12 @@
     <div class="grid__cell u-1of2">
       <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
         name="prospectForm"
-        ng-gc-form-submit
+        ng-controller="NgGcWatchDemoForm"
+        ng-gc-form-submit="{
+          onCreate: onWatchDemoProspectCreate,
+          form: prospectForm,
+          data: prospectForm.data
+        }"
         ng-gc-ga-event-tracker="{
             event: 'submit',
             category: 'forms',

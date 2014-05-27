@@ -14,10 +14,7 @@
 .btn {
   display: inline-block;
   vertical-align: middle;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 0 25px;
   line-height: 36px;
   min-height: 36px;
   white-space: nowrap;
@@ -34,7 +31,6 @@
   color: $btn-color;
   cursor: pointer;
   -webkit-appearance: none;
-  vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;

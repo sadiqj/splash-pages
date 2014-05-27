@@ -1,9 +1,9 @@
 'use strict';
 
 var path = require('path');
+
 var through = require('through2');
 var nunjucks = require('nunjucks');
-var chalk = require('chalk');
 
 var env = nunjucks.configure([
   path.join(__dirname, '..', '.tmp', 'templates'),
@@ -15,9 +15,9 @@ var env = nunjucks.configure([
 });
 
 function render(file, metadata) {
-  console.log('template:', 'checking file:', chalk.blue(file.path));
+  console.log('template:', 'checking file:', file.path);
   var res = env.renderString(file.contents.toString(), metadata);
-  console.log('template:', 'converted file:', chalk.blue(file.path));
+  console.log('template:', 'converted file:', file.path);
 
   file.contents = new Buffer(res);
   return file;

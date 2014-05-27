@@ -3,12 +3,14 @@ deployment:
     branch: master
     commands:
       - AWS_S3_BUCKET=gocardless.com node_modules/.bin/gulp deploy
+      - ./tasks/link-checker.js gocardless.com
 
   staging:
     branch: dev
     commands:
       - AWS_S3_BUCKET=staging.gocardless.com node_modules/.bin/gulp deploy
+      - ./tasks/link-checker.js staging.gocardless.com
 
 machine:
   node:
-    version: 0.10.22
+    version: 0.10.28

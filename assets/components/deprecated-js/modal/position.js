@@ -1,4 +1,6 @@
-/*global modal:false */
+/*eslint-disable */
+/* DEPRECATE */
+
 (function(modal) {
   var getOffsetPosition, getSize, getStyles;
   getOffsetPosition = function($el) {

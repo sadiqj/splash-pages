@@ -10,10 +10,9 @@ var AWS = require('aws-sdk');
 var _ = require('lodash');
 
 var MSG = {
-  SKIP_MATCHES: 'File Matches, skipped %s',
-  UPLOAD_SUCCESS: 'Uploaded: %s/%s (%s)',
-  ERR_UPLOAD: 'Upload error: %s (%s)',
-  ERR_CHECKSUM: '%s error: expected hash: %s but found %s for %s'
+  SKIP_MATCHES: '✓ %s',
+  UPLOAD_SUCCESS: '↗ %s/%s',
+  ERR_UPLOAD: '✖ %s (%s)'
 };
 
 function log() {
@@ -103,7 +102,7 @@ var upload = (function(buildUploadParams, MD5, MSG) {
         return cb();
       }
 
-      var msg = util.format(MSG.UPLOAD_SUCCESS, dest, params.Bucket, dest);
+      var msg = util.format(MSG.UPLOAD_SUCCESS, params.Bucket, dest);
       log(msg);
       cb();
     });
