@@ -6275,6 +6275,172 @@
     "esprima": {
       "version": "1.2.2",
       "from": "esprima@^1.1.0-dev"
+    },
+    "browserify-shim": {
+      "version": "3.5.0",
+      "from": "browserify-shim@^3.5.0",
+      "resolved": "https://registry.npmjs.org/browserify-shim/-/browserify-shim-3.5.0.tgz",
+      "dependencies": {
+        "exposify": {
+          "version": "0.1.4",
+          "from": "exposify@~0.1.2",
+          "resolved": "https://registry.npmjs.org/exposify/-/exposify-0.1.4.tgz",
+          "dependencies": {
+            "transformify": {
+              "version": "0.1.2",
+              "from": "transformify@~0.1.1",
+              "resolved": "https://registry.npmjs.org/transformify/-/transformify-0.1.2.tgz",
+              "dependencies": {
+                "readable-stream": {
+                  "version": "1.1.13-1",
+                  "from": "readable-stream@~1.1.9",
+                  "dependencies": {
+                    "core-util-is": {
+                      "version": "1.0.1",
+                      "from": "core-util-is@~1.0.0"
+                    },
+                    "isarray": {
+                      "version": "0.0.1",
+                      "from": "isarray@0.0.1"
+                    },
+                    "string_decoder": {
+                      "version": "0.10.25-1",
+                      "from": "string_decoder@~0.10.x"
+                    },
+                    "inherits": {
+                      "version": "2.0.1",
+                      "from": "inherits@~2.0.1"
+                    }
+                  }
+                }
+              }
+            },
+            "through2": {
+              "version": "0.4.2",
+              "from": "through2@~0.4.0",
+              "dependencies": {
+                "readable-stream": {
+                  "version": "1.0.27-1",
+                  "from": "readable-stream@~1.0.17",
+                  "dependencies": {
+                    "core-util-is": {
+                      "version": "1.0.1",
+                      "from": "core-util-is@~1.0.0"
+                    },
+                    "isarray": {
+                      "version": "0.0.1",
+                      "from": "isarray@0.0.1"
+                    },
+                    "string_decoder": {
+                      "version": "0.10.25-1",
+                      "from": "string_decoder@~0.10.x"
+                    },
+                    "inherits": {
+                      "version": "2.0.1",
+                      "from": "inherits@~2.0.1"
+                    }
+                  }
+                },
+                "xtend": {
+                  "version": "2.1.2",
+                  "from": "xtend@~2.1.1",
+                  "dependencies": {
+                    "object-keys": {
+                      "version": "0.4.0",
+                      "from": "object-keys@~0.4.0"
+                    }
+                  }
+                }
+              }
+            },
+            "detective": {
+              "version": "2.3.0",
+              "from": "detective@~2.3.0",
+              "resolved": "https://registry.npmjs.org/detective/-/detective-2.3.0.tgz",
+              "dependencies": {
+                "esprima": {
+                  "version": "1.0.2",
+                  "from": "esprima@1.0.2",
+                  "resolved": "https://registry.npmjs.org/esprima/-/esprima-1.0.2.tgz"
+                },
+                "escodegen": {
+                  "version": "0.0.15",
+                  "from": "escodegen@0.0.15",
+                  "resolved": "https://registry.npmjs.org/escodegen/-/escodegen-0.0.15.tgz",
+                  "dependencies": {
+                    "source-map": {
+                      "version": "0.1.33",
+                      "from": "source-map@>= 0.1.2",
+                      "dependencies": {
+                        "amdefine": {
+                          "version": "0.1.0",
+                          "from": "amdefine@>=0.0.4"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "mothership": {
+          "version": "0.2.0",
+          "from": "mothership@~0.2.0",
+          "resolved": "https://registry.npmjs.org/mothership/-/mothership-0.2.0.tgz",
+          "dependencies": {
+            "find-parent-dir": {
+              "version": "0.3.0",
+              "from": "find-parent-dir@~0.3.0",
+              "resolved": "https://registry.npmjs.org/find-parent-dir/-/find-parent-dir-0.3.0.tgz"
+            }
+          }
+        },
+        "rename-function-calls": {
+          "version": "0.1.0",
+          "from": "rename-function-calls@~0.1.0",
+          "resolved": "https://registry.npmjs.org/rename-function-calls/-/rename-function-calls-0.1.0.tgz",
+          "dependencies": {
+            "detective": {
+              "version": "2.4.0",
+              "from": "detective@git://github.com/thlorenz/node-detective#fix-noargs",
+              "resolved": "git://github.com/thlorenz/node-detective#4dffbc2ccdf969538c7911b542250b65b8f148c5",
+              "dependencies": {
+                "escodegen": {
+                  "version": "0.0.15",
+                  "from": "escodegen@0.0.15",
+                  "resolved": "https://registry.npmjs.org/escodegen/-/escodegen-0.0.15.tgz",
+                  "dependencies": {
+                    "source-map": {
+                      "version": "0.1.33",
+                      "from": "source-map@>= 0.1.2",
+                      "dependencies": {
+                        "amdefine": {
+                          "version": "0.1.0",
+                          "from": "amdefine@>=0.0.4"
+                        }
+                      }
+                    }
+                  }
+                },
+                "esprima-six": {
+                  "version": "0.0.3",
+                  "from": "esprima-six@0.0.3",
+                  "resolved": "https://registry.npmjs.org/esprima-six/-/esprima-six-0.0.3.tgz"
+                }
+              }
+            }
+          }
+        },
+        "resolve": {
+          "version": "0.6.3",
+          "from": "resolve@~0.6.1"
+        },
+        "through": {
+          "version": "2.3.4",
+          "from": "through@~2.3.4"
+        }
+      }
     }
   }
 }

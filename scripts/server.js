@@ -6,6 +6,7 @@ var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
 
 function shouldProxyPath(path) {
+  path = path || '';
   return path.match(/^\/api\//) ||
     path.match(/^\/admin\//) ||
     path.match(/^\/web\//) ||
@@ -18,7 +19,7 @@ function shouldProxyPath(path) {
 var connect = require('connect');
 var app = connect()
   .use(function(req, res, next) {
-    if (shouldProxyPath(req.path)) {
+    if (shouldProxyPath(req.url)) {
       return APIProxy.web(req, res, {
         target: 'http://gocardless.dev:3000'
       });

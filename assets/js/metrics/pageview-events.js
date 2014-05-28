@@ -1,26 +1,26 @@
-(function pageViewEvents() {
-  'use strict';
+'use strict';
 
-  angular.module('ngGcPageViewEvetns', [
-    'ngGcPageRouterService'
-  ]).run([
-    'ngGcPageRouter', '$window',
-    function ngGcPageViewEvetns(ngGcPageRouter, $window) {
+require('./page-router');
 
-      ngGcPageRouter('/prospect/request-dd-guide', function trackPageView() {
-        // skip me
+angular.module('ngGcPageViewEvents', [
+  'ngGcPageRouterService'
+]).run([
+  'ngGcPageRouter', '$window',
+  function ngGcPageViewEvents(ngGcPageRouter, $window) {
+
+    ngGcPageRouter('/prospect/request-dd-guide', function trackPageView() {
+      // skip me
+    });
+
+    // match all pages not already tracked
+    ngGcPageRouter('/*', function trackPageView(path) {
+      $window.gct('track', 'Pageview', {
+        'Path': path,
+        'Property': 'website',
+        'Type': 'information'
       });
+    });
 
-      // match all pages not already tracked
-      ngGcPageRouter('/*', function trackPageView(path) {
-        $window.gct('track', 'Pageview', {
-          'Path': path,
-          'Property': 'website',
-          'Type': 'information'
-        });
-      });
+  }
 
-    }
-
-  ]);
-}());
+]);

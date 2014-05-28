@@ -1,26 +1,27 @@
-(function cookies() {
-  'use strict';
+'use strict';
 
-  angular.module('ngGcCookiesInit', [
-    'ngCookies', 'ngGcURLParameterService'
-  ]).run([
-      '$cookies', 'ngGcURLParameter',
-      function ngGcCookiesInit($cookies, ngGcURLParameter) {
-        var referrer = (ngGcURLParameter.get('r') || '').toUpperCase();
-        var gclid = !!ngGcURLParameter.get('gclid');
+require('angular-cookies');
+require('../services/url-parameter-service');
 
-        function setCookie(cookie, value) {
-          $cookies[cookie] = value;
-        }
+angular.module('ngGcCookiesInit', [
+  'ngCookies', 'ngGcURLParameterService'
+]).run([
+    '$cookies', 'ngGcURLParameter',
+    function ngGcCookiesInit($cookies, ngGcURLParameter) {
+      var referrer = (ngGcURLParameter.get('r') || '').toUpperCase();
+      var gclid = !!ngGcURLParameter.get('gclid');
 
-        if (referrer) {
-          setCookie('referral_code', referrer);
-        }
-
-        if (gclid) {
-          setCookie('google_ppc_click', gclid);
-        }
-
+      function setCookie(cookie, value) {
+        $cookies[cookie] = value;
       }
-    ]);
-}());
+
+      if (referrer) {
+        setCookie('referral_code', referrer);
+      }
+
+      if (gclid) {
+        setCookie('google_ppc_click', gclid);
+      }
+
+    }
+  ]);

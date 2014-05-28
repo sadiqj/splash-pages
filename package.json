@@ -45,10 +45,37 @@
     "brfs": "^1.1.1",
     "browserify": "^4.1.6",
     "front-matter": "^0.2.0",
-    "esprima": "^1.1.0-dev"
+    "esprima": "^1.1.0-dev",
+    "browserify-shim": "^3.5.0",
+    "watchify": "^0.10.1"
   },
   "scripts": {
     "test": "make test"
+  },
+  "browser": {
+    "angular": "./assets/components/angular/angular.js",
+    "angular-cookies": "./assets/components/angular-cookies/angular-cookies.js",
+    "lodash": "./assets/components/lodash/dist/lodash.compat.js",
+    "jquery": "./assets/components/jquery/dist/jquery.js",
+    "es5-shim": "./assets/components/es5-shim/es5-shim.js",
+    "raven": "./assets/components/raven-js/dist/raven.js",
+    "mute-console": "./assets/components/mute-console/mute-console.js",
+    "popover-directive": "./assets/components/ng-gc-components/ng-gc-popover-directive/popover-directive.js",
+    "ng-gc-toggle-directive": "./assets/components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive.js",
+    "dialog-controller": "./assets/components/ng-gc-components/ng-gc-dialog-directive/dialog-controller.js",
+    "dialog": "./assets/components/dialog.js/dialog.js",
+    "froogaloop": "./assets/components/deprecated-js/lib/froogaloop.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "main": "./assets/js/main.js",
+  "browserify-shim": {
+    "angular": "angular",
+    "froogaloop": "Froogaloop",
+    "raven": "Raven"
   },
   "engines": {
     "node": "0.10.0"

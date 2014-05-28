@@ -1,52 +1,52 @@
-(function gaEventTrackerDirective() {
-  'use strict';
+'use strict';
 
-  describe('ngGcGaEventTrackerDirective', function() {
-    beforeEach(module('ngGcGaEventTrackerDirective'));
+require('./ng-gc-ga-event-tracker-directive');
 
-    var scope, elm, $rootScope, $compile, $window;
+describe('ngGcGaEventTrackerDirective', function() {
+  beforeEach(module('ngGcGaEventTrackerDirective'));
 
-    function setup(options) {
-      scope = $rootScope.$new();
-      scope.options = options;
-      elm = angular.element(
-        '<form name="form" ng-gc-ga-event-tracker=options>' +
-        '</form>'
-      );
-      $compile(elm)(scope);
-      scope.$digest();
-    }
+  var scope, elm, $rootScope, $compile, $window;
 
-    beforeEach(inject(function($injector) {
-      $rootScope = $injector.get('$rootScope');
-      $compile = $injector.get('$compile');
-      $window = $injector.get('$window');
-    }));
+  function setup(options) {
+    scope = $rootScope.$new();
+    scope.options = options;
+    elm = angular.element(
+      '<form name="form" ng-gc-ga-event-tracker=options>' +
+      '</form>'
+    );
+    $compile(elm)(scope);
+    scope.$digest();
+  }
 
-    it('checks options', function() {
-      expect(function() {
-        setup({
-          event: 'click',
-          category: 'forms',
-          action: 'click-form',
-          label: ''
-        });
-      }).toThrow('Invalid options: event, category, action, label');
-    });
+  beforeEach(inject(function($injector) {
+    $rootScope = $injector.get('$rootScope');
+    $compile = $injector.get('$compile');
+    $window = $injector.get('$window');
+  }));
 
-    it('binds click', function() {
+  it('checks options', function() {
+    expect(function() {
       setup({
         event: 'click',
         category: 'forms',
         action: 'click-form',
-        label: 'signup'
+        label: ''
       });
-
-      elm.trigger('click');
-
-      expect($window._gaq[1]).toEqualData([
-        '_trackEvent', 'forms', 'click-form', 'signup'
-      ]);
-    });
+    }).toThrow('Invalid options: event, category, action, label');
   });
-}());
+
+  it('binds click', function() {
+    setup({
+      event: 'click',
+      category: 'forms',
+      action: 'click-form',
+      label: 'signup'
+    });
+
+    elm.trigger('click');
+
+    expect($window._gaq[1]).toEqualData([
+      '_trackEvent', 'forms', 'click-form', 'signup'
+    ]);
+  });
+});

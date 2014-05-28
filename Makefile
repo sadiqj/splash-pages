@@ -2,6 +2,12 @@
 export AWS_ACCESS_KEY_ID ?= $(GC_AWS_ACCESS_KEY)
 export AWS_SECRET_ACCESS_KEY ?= $(GC_AWS_SECRET)
 
+BROWSERIFY_ARG=--transform brfs --entry assets/js/main.js --outfile $(OUTPUT)/js/main.js \
+	--noparse=jquery,lodash,angular,angular-cookies,es5-shim,raven,dialog,mute-console,froogaloop,dialog \
+	--bare
+
+CSSLINT_ERRORS = --errors=qualified-headings,shorthand,text-indent,display-property-grouping,empty-rules,underscore-property-hack,overqualified-elements,duplicate-background-image
+
 OUTPUT=build
 
 .PHONY: clean build public images fonts redirects scss-build js-main nunjucks
@@ -15,8 +21,6 @@ scss:
 
 autoprefixer:
 	autoprefixer --browsers "last 2 versions" --cascade
-
-CSSLINT_ERRORS = --errors=qualified-headings,shorthand,text-indent,display-property-grouping,empty-rules,underscore-property-hack,overqualified-elements,duplicate-background-image
 
 csslint:
 	csslint --quiet $(CSSLINT_ERRORS) $(OUTPUT)/css/main.css
@@ -58,22 +62,26 @@ nunjucks:
 		--search-path macros --search-path includes --input pages \
 		--output $(OUTPUT) --cwd pages --require-metadata conf/metadata.js
 
-watch:
+server: build
 	scripts/server.js
+
+watchify:
+	watchify $(BROWSERIFY_ARG) --debug
+
+watch: server watchify
 	scripts/watch.js
+
+test-watch:
 	karma start --auto-watch --no-single-run
 
 test: eslint
 	karma start
 
-js-main:
+js:
 	mkdir -p $(OUTPUT)/js
-	browserify -t brfs assets/js/main.js -o $(OUTPUT)/js/main.js \
-		--detect-globals=false \
-		--noparse=jquery.js,lodash.compat.js,angular.js,angular-cookies.js,es5-shim.js,raven.js,dialog.js,mute-console.js \
-		--no-bundle-external
+	browserify $(BROWSERIFY_ARG)
 
-build: clean fonts images public scss-build csslint redirects nunjucks htmlhint js-main
+build: clean fonts images public scss-build csslint redirects nunjucks htmlhint js
 
 deploy: build
 	./scripts/s3-deploy.js $(OUTPUT)/** --cwd $(OUTPUT) \

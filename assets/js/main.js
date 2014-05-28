@@ -1,85 +1,71 @@
-// <script src="components/jquery/dist/jquery.js"></script>
-// <script src="components/lodash/dist/lodash.compat.js"></script>
-// <script src="components/angular/angular.js"></script>
-// <script src="components/angular-cookies/angular-cookies.js"></script>
-// <script src="components/es5-shim/es5-shim.js"></script>
-// <script src="components/raven-js/dist/raven.js"></script>
-// <script src="components/ng-gc-components/ng-gc-popover-directive/popover-directive.js"></script>
-// <script src="components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive.js"></script>
-// <script src="components/ng-gc-components/ng-gc-dialog-directive/dialog-controller.js"></script>
-// <script src="components/dialog.js/dialog.js"></script>
-// <script src="components/mute-console/mute-console.js"></script>
+'use strict';
 
-// <script src="components/deprecated-js/lib/bootstrap/tab.js"></script>
-// <script src="components/deprecated-js/lib/froogaloop.js"></script>
-// <script src="components/deprecated-js/modal/modal.js"></script>
-// <script src="components/deprecated-js/gocardless-global.js"></script>
-// <script src="components/deprecated-js/module.js"></script>
-// <script src="components/deprecated-js/base-view.js"></script>
-// <script src="components/deprecated-js/class-extends.js"></script>
-// <script src="components/deprecated-js/widgets/modals.js"></script>
-// <script src="components/deprecated-js/widgets/modal-vimeo.js"></script>
-// <script src="components/deprecated-js/widgets/demo-modal.js"></script>
-// <script src="components/deprecated-js/widgets/affix.js"></script>
-// <script src="components/deprecated-js/widgets/sticky-tabs.js"></script>
-// <script src="js/initializers/raven-config.js"></script>
-// <script src="js/initializers/cookies.js"></script>
-// <script src="js/services/url-parameter-service.js"></script>
-// <script src="js/directives/ng-gc-ga-event-tracker-directive.js"></script>
-// <script src="js/directives/ng-gc-form-submit-directive.js"></script>
-// <script src="js/directives/ng-gc-href-active-directive.js"></script>
-// <script src="js/controllers/ng-gc-prospect-form-controller.js"></script>
-// <script src="js/controllers/ng-gc-watch-demo-form-controller.js"></script>
-// <script src="js/metrics/page-router.js"></script>
-// <script src="js/metrics/signup-funnel.js"></script>
-// <script src="js/metrics/request-demo-funnel.js"></script>
-// <script src="js/metrics/pageview-events.js"></script>
-// <script src="js/main.js"></script>
+require('es5-shim');
+require('mute-console');
 
-(function main() {
-  'use strict';
+var angular = require('angular');
 
-  angular.module('home', [
-    'ngGcGaEventTrackerDirective',
-    'ngGcFormSubmitDirective',
-    'ngGcHrefActiveDirective',
-    'ngGcSignupFunnel',
-    'ngGcRequestDemoFunnel',
-    'ngGcPageViewEvetns',
-    'ngGcCookiesInit',
-    'gc.popover',
-    'gc.toggle',
-    'ngGcProspectFormCtrl',
-    'ngGcWatchDemoFormCtrl'
-  ]);
+require('./initializers/raven-config')
+require('./initializers/cookies');
 
-  function isSupportedBrowser() {
-    var hasJSON = 'JSON' in window && 'parse' in JSON;
-    var supportMode = location.search.match(/supportMode/);
-    return hasJSON && !supportMode;
+require('./directives/ng-gc-form-submit-directive');
+require('./directives/ng-gc-href-active-directive');
+require('./directives/ng-gc-ga-event-tracker-directive');
+require('./directives/ng-gc-form-submit-directive');
+
+require('./controllers/ng-gc-prospect-form-controller');
+require('./controllers/ng-gc-watch-demo-form-controller');
+
+require('./metrics/pageview-events');
+require('./metrics/request-demo-funnel');
+require('./metrics/signup-funnel');
+
+require('../components/ng-gc-components/ng-gc-dialog-directive/dialog-controller');
+require('../components/ng-gc-components/ng-gc-popover-directive/popover-directive');
+require('../components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive');
+
+var ModalVimeo = require('../components/deprecated-js/widgets/modal-vimeo');
+var DemoModal = require('../components/deprecated-js/widgets/demo-modal');
+var StickyTabs = require('../components/deprecated-js/widgets/sticky-tabs');
+var Affix = require('../components/deprecated-js/widgets/affix');
+require('../components/deprecated-js/lib/bootstrap/tab.js');
+
+angular.module('home', [
+  'ngGcGaEventTrackerDirective',
+  'ngGcFormSubmitDirective',
+  'ngGcHrefActiveDirective',
+  'ngGcSignupFunnel',
+  'ngGcRequestDemoFunnel',
+  'ngGcPageViewEvents',
+  'ngGcCookiesInit',
+  'gc.popover',
+  'gc.toggle',
+  'ngGcProspectFormCtrl',
+  'ngGcWatchDemoFormCtrl'
+]);
+
+function isSupportedBrowser() {
+  var hasJSON = 'JSON' in window && 'parse' in JSON;
+  var supportMode = location.search.match(/supportMode/);
+  return hasJSON && !supportMode;
+}
+
+angular.element(document).ready(function setup() {
+  // Only give decent browser a js experience
+  if (isSupportedBrowser()) {
+    // Bootstrap Angular
+    angular.bootstrap(document, ['home']);
   }
+});
 
-  angular.element(document).ready(function setup() {
-    // Only give decent browser a js experience
-    if (isSupportedBrowser()) {
-      // Bootstrap Angular
-      angular.bootstrap(document, ['home']);
-    }
-  });
+new ModalVimeo();
 
-  var Widgets = window.GoCardless.module('widgets');
-  var Home = window.GoCardless.module('home');
+new DemoModal({
+  el: '[data-modal-demo]'
+});
 
-  Home.vimeoModals = new Widgets.Views.ModalVimeo();
+new StickyTabs();
 
-  Home.demoModals = new Widgets.Views.DemoModal({
-    el: '[data-modal-demo]'
-  });
-
-  Home.stickyTabs = new Widgets.Views.StickyTabs();
-
-  Home.affix = new Widgets.Views.Affix({
-    el: '[data-affix-footer-fixed]'
-  });
-
-}());
+new Affix({
+  el: '[data-affix-footer-fixed]'
+});
