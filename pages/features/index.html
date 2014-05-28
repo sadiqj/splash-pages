@@ -1,12 +1,11 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Features{% endblock %}
 {% block description %}Learn about different ways your business can collect Direct Debit payments online using GoCardless{% endblock %}
-{% block page_container_class %}{% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <div class="grid u-padding-Tl">
+  <!--<div class="grid u-padding-Tl">
     <div class="grid__cell u-1of2 u-padding-Tl">
       <div class="site-gutter">
         <h2 class="u-text-heading u-margin-Tl u-margin-Bxs benefits-header--blue">
@@ -101,10 +100,59 @@
         <img src="/images/features/section-3-hero@2x.png">
       </div>
     </div>
+  </div>-->
+
+<div class="features-intro">
+  <div class="features-intro__container">
+
+    <div class="frame-container site-container site-gutter u-cf align-btn-small u-padding-Vxs">
+      <div class="u-pull-start">
+        <a href="/">
+          <i class="icon-gc-logo-header logo-header"></i>
+        </a>
+      </div>
+      <div class="u-pull-end">
+        <nav class="nav u-pull-start">
+          <a class="nav__item"
+            href="/" ng-gc-href-active>
+            Home
+          </a>
+          <a class="nav__item"
+            href="/features" ng-gc-href-active>
+            Features
+          </a>
+          <a class="nav__item"
+            href="/stories" ng-gc-href-active>
+            Customers
+          </a>
+          <a class="nav__item"
+             href="/pricing" ng-gc-href-active>
+            Pricing
+          </a>
+          <a class="nav__item"
+             href="/guides" ng-gc-href-active>
+            Guides
+          </a>
+        </nav>
+
+        <ul class="u-cf u-pull-start">
+          <li class="u-pull-start">
+            <a href="/users/sign_in" class="btn btn--hollow btn--small" id="login">Login</a>
+          </li>
+          <li class="u-pull-start u-margin-Ls">
+            <a href="/merchants/new" class="btn btn--small" id="nav_sign_up">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
+</div>
 
-{% endblock %}
+<div class="benefits-container">
+  <div class="benefits-container__wrapper u-margin-Ts">
+    {% include "_site_footer.html" %}
+  </div>
+</div>
 
-{% block footer_content %}
-  {% include "_affixed_cta_component.html" %}
 {% endblock %}
