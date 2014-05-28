@@ -1,0 +1,23 @@
+.direct-debit-benefits-container__heading--primary-blue {
+  color: $primary-blue;
+}
+
+.direct-debit-benefits-container__heading--primary-red {
+  color: $primary-red;
+}
+
+.direct-debit-benefits-container__heading--primary-green {
+  color: $primary-green;
+}
+
+.direct-debit-benefits-container__divider {
+  width: 10px;
+  height: 190px;
+  margin: 0 20px;
+  background: url('/images/direct-debit-benefits/direct-debit-benefits_divider.jpg') no-repeat 50% 50%;
+  display: inline-block;
+}
+
+.direct-debit-benefits-container__divider-invert {
+  background: url('/images/direct-debit-benefits/direct-debit-benefits_divider-invert.png') no-repeat 50% 50%;
+}
