@@ -5,7 +5,7 @@ require('mute-console');
 
 var angular = require('angular');
 
-require('./initializers/raven-config')
+require('./initializers/raven-config');
 require('./initializers/cookies');
 
 require('./directives/ng-gc-form-submit-directive');
@@ -58,14 +58,13 @@ angular.element(document).ready(function setup() {
   }
 });
 
-new ModalVimeo();
-
-new DemoModal({
-  el: '[data-modal-demo]'
-});
-
-new StickyTabs();
-
-new Affix({
-  el: '[data-affix-footer-fixed]'
-});
+module.exports = {
+  modalVimeo: new ModalVimeo(),
+  demoModal: new DemoModal({
+    el: '[data-modal-demo]'
+  }),
+  stickyTabs: new StickyTabs(),
+  affix: new Affix({
+    el: '[data-affix-footer-fixed]'
+  })
+};
