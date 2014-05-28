@@ -15,7 +15,7 @@ $ npm install
 # Running locally:
 
 ```
-$ gulp watch
+$ make watch
 ```
 
 # Structure (what to change)
@@ -34,11 +34,11 @@ Shared template includes/partials: `includes/`
 
 # Troubleshooting
 
-1. `gulp watch` fails
+1. `make watch` fails
 
 Try running `npm install`. Packages might be out of date.
 
-2. `gulp` not found
+2. `command` not found
 
 Make sure you have reloaded your terminal after `2.` under `Setup to run locally`
 
@@ -92,10 +92,10 @@ export GC_AWS_ACCESS_KEY=ask webops
 
 Testing:
 ```
-$ AWS_S3_BUCKET=staging.gocardless.com gulp deploy
+$ AWS_S3_BUCKET=staging.gocardless.com make deploy
 ```
 
 Production:
 ```
-$ AWS_S3_BUCKET=gocardless.com gulp deploy
+$ AWS_S3_BUCKET=gocardless.com make deploy
 ```

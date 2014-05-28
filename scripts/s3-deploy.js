@@ -4,15 +4,24 @@
 
 var util = require('util');
 var crypto = require('crypto');
+var fs = require('fs');
+var path = require('path');
 
 var through = require('through2');
 var mime = require('mime');
-var redirects = require('./../redirects.json');
+var glob = require('glob');
+var redirects = require('./../conf/redirects.json');
 var AWS = require('aws-sdk');
 var _ = require('lodash');
 var argv = require('minimist')(process.argv.slice(2));
 
 process.stdout.on('error', process.exit);
+
+var options = {
+  bucket: argv.bucket,
+  region: argv.r || argv.region || 'us-west-1',
+  cwd: argv.cwd || ''
+};
 
 function errorExit(err) {
   if (err.stack) {
@@ -26,7 +35,7 @@ function errorExit(err) {
 
 var MSG = {
   SKIP_MATCHES: 'File Matches, skipped %s',
-  UPLOAD_SUCCESS: 'Uploaded: %s/%s (%s)',
+  UPLOAD_SUCCESS: 'Uploaded: %s/%s',
   ERR_UPLOAD: 'Upload error: %s (%s)',
   ERR_CHECKSUM: '%s error: expected hash: %s but found %s for %s'
 };
@@ -72,7 +81,7 @@ var redirect = (function(redirects) {
 
 function buildBaseParams(file) {
   var dest = file.path.replace(file.base, '');
-
+  dest = dest.replace(/^\//, '');
   return {
     Key: dest
   };
@@ -97,7 +106,7 @@ var buildUploadParams = (function(base64MD5, redirect, buildBaseParams) {
 })(base64MD5, redirect, buildBaseParams);
 
 var upload = (function(buildUploadParams, MD5, MSG) {
-  return function upload(client, file, options, cb) {
+  return function upload(client, file, options) {
     options = _.extend({
       ACL : 'public-read'
     }, options);
@@ -106,27 +115,23 @@ var upload = (function(buildUploadParams, MD5, MSG) {
     var dest = params.Key;
 
     if (params.WebsiteRedirectLocation) {
-      log('!!!!!!!!!!!!');
-      log('Redirecting:', dest, 'to:', params.WebsiteRedirectLocation);
-      log('!!!!!!!!!!!!');
+      log('!!! Redirecting:', dest, 'to:', params.WebsiteRedirectLocation);
     }
 
     // Upload the file to s3.
     client.putObject(params, function(err){
       if (err) {
         log(MSG.ERR_UPLOAD, err, err.stack);
-        return cb();
       }
 
-      var msg = util.format(MSG.UPLOAD_SUCCESS, dest, params.Bucket, dest);
+      var msg = util.format(MSG.UPLOAD_SUCCESS, params.Bucket, dest);
       log(msg);
-      cb();
     });
   };
 })(buildUploadParams, MD5, MSG);
 
 var sync = (function(upload, buildBaseParams, MSG) {
-  return function sync(client, file, options, cb) {
+  return function sync(client, file, options) {
     var params = _.extend({
       IfNoneMatch: MD5(file.contents),
       IfUnmodifiedSince: file.stat.mtime
@@ -135,13 +140,42 @@ var sync = (function(upload, buildBaseParams, MSG) {
     client.headObject(params, function(err) {
       if (err && (err.statusCode === 304 || err.statusCode === 412)) {
         log(MSG.SKIP_MATCHES, params.Key);
-        return cb();
+        return;
       }
 
-      upload(client, file, options, cb);
+      upload(client, file, options);
     });
   };
 })(upload, buildBaseParams, MSG);
+
+function readFile(filepath, cb) {
+  var stat = fs.statSync(filepath);
+  if (stat.isFile()) {
+    fs.readFile(filepath, {
+      encoding: null
+    }, function(err, data) {
+      if (err) {
+        errorExit('Failed to read file: ' + filepath);
+      }
+      cb({
+        stat: stat,
+        contents: data,
+        base: path.join(process.cwd(), options.cwd),
+        path: path.join(process.cwd(), filepath)
+      });
+    });
+  }
+  else if (stat.isDirectory()) {
+    fs.readdir(filepath, function(err, files) {
+      if (err) {
+        errorExit('Failed to read files: ' + err);
+      }
+      files.forEach(function(filename){
+        readFile(path.join(filepath, filename), cb);
+      });
+    });
+  }
+}
 
 var deploy = (function(sync, AWS, through) {
   return function deploy(files, AWSOptions, s3Options) {
@@ -150,7 +184,6 @@ var deploy = (function(sync, AWS, through) {
 
     AWS.config.update(_.extend({
       sslEnabled: true,
-      region: process.env.AWS_DEFAULT_REGION || 'us-west-1',
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
     }, AWSOptions));
@@ -158,19 +191,8 @@ var deploy = (function(sync, AWS, through) {
     var client = new AWS.S3();
 
     files.forEach(function(path) {
-      fs.readFile(path, {
-        encoding: null
-      }, function(err, data) {
-        if (err) {
-          errorExit('Failed to read file: ' + path);
-        }
-        var stat = fs.statSync(path);
-        sync(client, {
-          base: process.cwd(),
-          path: path,
-          contents: data,
-          stat: stat
-        }, s3Options, cb);
+      readFile(path, function(fileObject) {
+        sync(client, fileObject, s3Options);
       });
     });
   };
@@ -181,10 +203,12 @@ var files = _.flatten(argv._
     return glob.sync(pattern);
   }));
 
+console.log('Deploying files: %s', files);
+console.log('> Target S3 bucket: %s (%s region)',
+  options.bucket, options.region);
+
 deploy(files, {
-  region: 'eu-west-1',
-  accessKeyId: process.env.GC_AWS_ACCESS_KEY,
-  secretAccessKey: process.env.GC_AWS_SECRET
+  region:  argv.r || argv.region
 }, {
-  Bucket: process.env.AWS_S3_BUCKET,
+  Bucket:  options.bucket,
 });

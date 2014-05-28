@@ -3,7 +3,6 @@
 var util = require('util');
 
 var Crawler = require('simplecrawler');
-var cheerio = require('cheerio');
 
 if (process.argv.length < 3) {
   throw new Error('You must specify a url to check');

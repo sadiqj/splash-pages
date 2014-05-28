@@ -3,10 +3,15 @@
 'use strict';
 
 var path = require('path');
-var through = require('through2');
+var fs = require('fs');
+
+var through2 = require('through2');
 var nunjucks = require('nunjucks');
-var chalk = require('chalk');
+var _ = require('lodash');
 var argv = require('minimist')(process.argv.slice(2));
+var RSVP = require('rsvp');
+var mkdirp = require('mkdirp');
+var frontMatter = require('front-matter');
 
 process.stdout.on('error', process.exit);
 
@@ -20,44 +25,89 @@ function errorExit(err) {
   process.exit(1);
 }
 
-var files = _.flatten(argv._
-  .filter(Boolean).map(function(pattern) {
-    return glob.sync(pattern);
-  }));
+function stream(filepath, outfile, compile) {
+  return fs.createReadStream(filepath).pipe(through2.obj({
+    allowHalfOpen: false
+  }, function(file, enc, cb) {
+    var _this = this;
+    var parsed = frontMatter(file.toString());
 
-var env = nunjucks.configure([
-  path.join(__dirname, '..', '.tmp', 'templates'),
-  path.join(__dirname, '..', 'pages'),
-  path.join(__dirname, '..', 'macros'),
-  path.join(__dirname, '..', 'includes')
-], {
+    compile(new Buffer(parsed.body), parsed.attributes)
+      .then(function(result) {
+        _this.push(new Buffer(result));
+        cb();
+      }, function(reason) {
+        errorExit(reason);
+      });
+  }));
+}
+
+var searchPaths = _.flatten([argv['search-path'] || '']);
+searchPaths = searchPaths.map(function(searchPath) {
+  return new nunjucks.FileSystemLoader(path.join(process.cwd(), searchPath));
+});
+
+var env = new nunjucks.Environment(searchPaths, {
   autoescape: false
 });
 
-function render(file, metadata) {
-  console.log('template:', 'checking file:', chalk.blue(file.path));
-  var res = env.renderString(file.contents.toString(), metadata);
-  console.log('template:', 'converted file:', chalk.blue(file.path));
+function compileTemplate(file, metadata) {
+  var deferred = RSVP.defer();
 
-  file.contents = new Buffer(res);
-  return file;
-}
-
-function template(options, metadata) {
-  options = options || {};
-
-  return through.obj(function(file, enc, cb) {
-    if (file.isNull()) {
-      this.push(file);
-      return cb();
+  env.renderString(file.toString(), metadata, function(err, result) {
+    if (err) {
+      deferred.reject(err);
     }
-
-    if (file.isStream()) {
-      throw new Error('Streaming not supported');
-    }
-
-    this.push(render(file, metadata));
-
-    cb();
+    deferred.resolve(result);
   });
+
+  return deferred.promise;
 }
+
+function templateMetadata() {
+  var metadata = {};
+  var metadataFile = argv['require-metadata'];
+  if (metadataFile) {
+    try {
+      metadata = require(path.join(process.cwd(), metadataFile));
+    } catch (e) {
+      console.error('Failed to load %s', metadataFile);
+    }
+  }
+  return metadata;
+}
+
+var globalMetadata = templateMetadata();
+
+function findFiles(filepath, cb) {
+  var stat = fs.statSync(filepath);
+  if (stat.isFile()) {
+    cb(filepath);
+  } else if (stat.isDirectory()) {
+    fs.readdirSync(filepath).forEach(function(filename){
+      findFiles(path.join(filepath, filename), cb);
+    });
+  }
+}
+
+findFiles((argv.i || argv.input), function(filepath) {
+  // ignore files starting with _
+  if (path.basename(filepath).match(/^\_/) ||
+      !path.extname(filepath).match('.html')) {
+    return;
+  }
+
+  var cwd = process.cwd();
+  var inputCwd = path.join(cwd, argv.cwd || '');
+  var outfile = path.join(cwd, filepath).replace(inputCwd, '');
+  var output = argv.o || argv.output;
+  outfile = path.join(output, outfile);
+  mkdirp.sync(path.dirname(outfile));
+
+  console.log('Compiling %s (%s)', filepath, outfile);
+
+  stream(filepath, outfile, function(file, fileMetadata) {
+    var metadata = _.extend(globalMetadata, fileMetadata);
+    return compileTemplate(file, metadata);
+  }).pipe(fs.createWriteStream(outfile));
+});

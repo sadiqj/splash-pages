@@ -47,7 +47,7 @@ function redirect(redirects) {
     var outfolder = (argv.o || argv.output) || '';
     var outfile = path.join(process.cwd(), outfolder, redirect);
     mkdirp.sync(path.dirname(outfile));
-    fs.writeFileSync(outfile, testTmpl(target))
+    fs.writeFileSync(outfile, testTmpl(target));
   });
 }
 
