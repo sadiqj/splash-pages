@@ -18,6 +18,10 @@
   }
 }
 
+.hero-worry__logo {
+  @include icon("/images/logos/gc-logo-white", 134px, 14px);
+}
+
 .hero-worry__heading {
   height: 377px;
   font-weight: 200;
