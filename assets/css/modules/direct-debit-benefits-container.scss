@@ -1,3 +1,5 @@
+@import "mixins/icon-mixin";
+
 .direct-debit-benefits-container__heading--primary-blue {
   color: $primary-blue;
 }
@@ -20,4 +22,12 @@
 
 .direct-debit-benefits-container__divider-invert {
   background: url('/images/direct-debit-benefits/direct-debit-benefits_divider-invert.png') no-repeat 50% 50%;
+}
+
+.direct-debit-benefits-container__icon {
+  margin-top: 12px;
+}
+
+.direct-debit-benefits-container__icon--people {
+  @include icon('/images/icons/people-icon', 59px, 50px);
 }
