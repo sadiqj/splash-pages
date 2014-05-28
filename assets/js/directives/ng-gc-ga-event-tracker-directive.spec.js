@@ -1,5 +1,6 @@
 'use strict';
 
+var angular = require('angular');
 require('./ng-gc-ga-event-tracker-directive');
 
 describe('ngGcGaEventTrackerDirective', function() {

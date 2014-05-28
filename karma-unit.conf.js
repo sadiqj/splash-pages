@@ -7,9 +7,10 @@ module.exports = function(config) {
       // hack https://github.com/cjohansen/karma-browserifast
       '/**/*.browserify': 'browserify'
     },
+    files: [
+    ],
     browserify: {
       files: [
-        'assets/js/main.js',
         'assets/js/**/*spec.js'
       ],
       transform: ['brfs']

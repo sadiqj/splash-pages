@@ -1,5 +1,6 @@
 'use strict';
 
+var angular = require('angular');
 require('angular-cookies');
 require('../services/url-parameter-service');
 

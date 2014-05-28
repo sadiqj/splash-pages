@@ -3,8 +3,6 @@
 require('es5-shim');
 require('mute-console');
 
-var angular = require('angular');
-
 require('./initializers/raven-config');
 require('./initializers/cookies');
 
@@ -29,6 +27,8 @@ var DemoModal = require('../components/deprecated-js/widgets/demo-modal');
 var StickyTabs = require('../components/deprecated-js/widgets/sticky-tabs');
 var Affix = require('../components/deprecated-js/widgets/affix');
 require('../components/deprecated-js/lib/bootstrap/tab.js');
+
+var angular = require('angular');
 
 angular.module('home', [
   'ngGcGaEventTrackerDirective',

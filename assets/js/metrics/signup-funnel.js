@@ -1,5 +1,6 @@
 'use strict';
 
+var angular = require('angular');
 require('./page-router');
 
 angular.module('ngGcSignupFunnel', [

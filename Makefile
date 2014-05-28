@@ -72,10 +72,10 @@ watch: server watchify
 	scripts/watch.js
 
 test-watch:
-	karma start --auto-watch --no-single-run
+	karma start karma-unit.conf.js --auto-watch --no-single-run
 
 test: eslint
-	karma start
+	karma start karma-unit.conf.js
 
 js:
 	mkdir -p $(OUTPUT)/js
