@@ -55,6 +55,7 @@
   "browser": {
     "angular": "./assets/components/angular/angular.js",
     "angular-cookies": "./assets/components/angular-cookies/angular-cookies.js",
+    "angular-mocks": "./assets/components/angular-mocks/angular-mocks.js",
     "lodash": "./assets/components/lodash/dist/lodash.compat.js",
     "jquery": "./assets/components/jquery/dist/jquery.js",
     "es5-shim": "./assets/components/es5-shim/es5-shim.js",
@@ -65,11 +66,6 @@
     "dialog-controller": "./assets/components/ng-gc-components/ng-gc-dialog-directive/dialog-controller.js",
     "dialog": "./assets/components/dialog.js/dialog.js",
     "froogaloop": "./assets/components/deprecated-js/lib/froogaloop.js"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
   },
   "main": "./assets/js/main.js",
   "browserify-shim": {

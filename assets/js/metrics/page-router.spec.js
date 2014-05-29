@@ -1,15 +1,17 @@
 'use strict';
 
+var angular = require('angular')
+
+require('angular-mocks');
 require('./page-router');
 
 describe('ngGcPageRouterService', function() {
-
-  beforeEach(module('ngGcPageRouterService'));
+  beforeEach(angular.mock.module('ngGcPageRouterService'));
   var ngGcPageRouter;
 
   function setup(page) {
     page = page || '/test.html';
-    module(function($provide) {
+    angular.mock.module(function($provide) {
       $provide.value('$window', {
         location: {
           pathname: page
@@ -17,7 +19,7 @@ describe('ngGcPageRouterService', function() {
       });
     });
 
-    inject(function(_ngGcPageRouter_) {
+    angular.mock.inject(function(_ngGcPageRouter_) {
       ngGcPageRouter = _ngGcPageRouter_;
     });
   }

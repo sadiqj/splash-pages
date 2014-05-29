@@ -2,7 +2,7 @@
 export AWS_ACCESS_KEY_ID ?= $(GC_AWS_ACCESS_KEY)
 export AWS_SECRET_ACCESS_KEY ?= $(GC_AWS_SECRET)
 
-BROWSERIFY_ARG=--transform brfs --entry assets/js/main.js --outfile $(OUTPUT)/js/main.js \
+BROWSERIFY_ARG=--transform brfs --transform browserify-shim --entry assets/js/main.js --outfile $(OUTPUT)/js/main.js \
 	--noparse=jquery,lodash,angular,angular-cookies,es5-shim,raven,dialog,mute-console,froogaloop,dialog \
 	--bare
 
@@ -10,7 +10,10 @@ CSSLINT_ERRORS = --errors=qualified-headings,shorthand,text-indent,display-prope
 
 OUTPUT=build
 
-.PHONY: clean build public images fonts redirects scss-build js-main nunjucks
+.PHONY: clean build public images fonts redirects scss-build js-main nunjucks eslint test
+
+watch: server watchify
+	scripts/watch.js
 
 clean:
 	rm -rf $(OUTPUT)
@@ -68,14 +71,11 @@ server: build
 watchify:
 	watchify $(BROWSERIFY_ARG) --debug
 
-watch: server watchify
-	scripts/watch.js
-
 test-watch:
-	karma start karma-unit.conf.js --auto-watch --no-single-run
+	karma start --auto-watch --no-single-run
 
 test: eslint
-	karma start karma-unit.conf.js
+	karma start
 
 js:
 	mkdir -p $(OUTPUT)/js

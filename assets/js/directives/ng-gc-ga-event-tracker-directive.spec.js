@@ -1,10 +1,12 @@
 'use strict';
 
 var angular = require('angular');
+
+require('angular-mocks');
 require('./ng-gc-ga-event-tracker-directive');
 
 describe('ngGcGaEventTrackerDirective', function() {
-  beforeEach(module('ngGcGaEventTrackerDirective'));
+  beforeEach(angular.mock.module('ngGcGaEventTrackerDirective'));
 
   var scope, elm, $rootScope, $compile, $window;
 
@@ -15,11 +17,12 @@ describe('ngGcGaEventTrackerDirective', function() {
       '<form name="form" ng-gc-ga-event-tracker=options>' +
       '</form>'
     );
+    console.log(elm);
     $compile(elm)(scope);
     scope.$digest();
   }
 
-  beforeEach(inject(function($injector) {
+  beforeEach(angular.mock.inject(function($injector) {
     $rootScope = $injector.get('$rootScope');
     $compile = $injector.get('$compile');
     $window = $injector.get('$window');

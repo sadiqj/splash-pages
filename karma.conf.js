@@ -3,18 +3,20 @@
 module.exports = function(config) {
   config.set({
     basePath: './assets/js',
-    frameworks: ['browserify', 'jasmine'],
+    frameworks: ['jasmine', 'browserify'],
     preprocessors: {
       // Hack https://github.com/cjohansen/karma-browserifast
       '/**/*.browserify': 'browserify'
     },
     files: [
+      'assets/components/jasmine-helpers/*.js',
+      'assets/components/jquery/dist/jquery.js'
     ],
     browserify: {
       files: [
         '**/*spec.js'
       ],
-      transform: ['brfs']
+      transform: ['brfs', 'browserify-shim']
     },
     browsers: ['PhantomJS'],
     reporters: ['dots', 'growl'],
