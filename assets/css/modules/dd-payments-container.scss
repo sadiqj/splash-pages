@@ -1,0 +1,41 @@
+@import "mixins/icon-mixin";
+
+.dd-payments-container__divider {
+  width: 10px;
+  height: 190px;
+  margin: 0 20px;
+  background: url('/images/dd-payments/dd-payments_divider.jpg') no-repeat 50% 50%;
+  display: inline-block;
+}
+
+.dd-payments-container__divider-invert {
+  background: url('/images/dd-payments/dd-payments_divider-invert.png') no-repeat 50% 50%;
+}
+
+// Would be good to abstract these at some point and stick in /images/icons
+// but for timebeing the dimensions of the non-retina versions are designed
+// specifically for this page:
+
+.dd-payments-container__icon--cashflow {
+  @include icon('/images/dd-payments/dd-payments_icon--cashflow', 50px, 50px);
+}
+
+.dd-payments-container__icon--success {
+  @include icon('/images/dd-payments/dd-payments_icon--success', 50px, 50px);
+}
+
+.dd-payments-container__icon--admin {
+  @include icon('/images/dd-payments/dd-payments_icon--admin', 50px, 50px);
+}
+
+.dd-payments-container__icon--settings-invert {
+  @include icon('/images/dd-payments/dd-payments_icon--settings-invert', 50px, 50px);
+}
+
+.dd-payments-container__icon--coins-invert {
+  @include icon('/images/dd-payments/dd-payments_icon--coins-invert', 50px, 50px);
+}
+
+.dd-payments-container__icon--connect-invert {
+  @include icon('/images/dd-payments/dd-payments_icon--connect-invert', 50px, 50px);
+}

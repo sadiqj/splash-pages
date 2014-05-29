@@ -47,25 +47,25 @@ $dark-blue: #203844;
 $dark-blue-lighten: lighten($dark-blue, 7%); // #4D616C
 $dark-blue-darken: darken($dark-blue, 7%);
 
-$primary-blue: #395D8D;
-$primary-blue-lighten: lighten($primary-blue, 5%);
-$primary-blue-darken: darken($primary-blue, 5%); // #2F95D6
+$primary-color: #395D8D;
+$primary-color-lighten: lighten($primary-color, 5%);
+$primary-color-darken: darken($primary-color, 5%); // #2F95D6
 
-$primary-red: #E14E3D;
-$primary-red-lighten: lighten($primary-red, 7%);
-$primary-red-darken: darken($primary-red, 7%);
+$secondary-color: #E14E3D;
+$secondary-color-lighten: lighten($secondary-color, 7%);
+$secondary-color-darken: darken($secondary-color, 7%);
 
 $primary-orange: #F7C55A;
 $primary-orange-lighten: lighten($primary-orange, 7%);
 $primary-orange-darken: darken($primary-orange, 7%); // #DD9F1F
 
-$primary-green: #3BA031;
-$primary-green-lighten: lighten($primary-green, 7%);
-$primary-green-darken: darken($primary-green, 10%);
+$accent-color: #3BA031;
+$accent-color-lighten: lighten($accent-color, 7%);
+$accent-color-darken: darken($accent-color, 10%);
 
-$secondary-blue: #144A66;
-$secondary-blue-lighten: lighten($secondary-blue, 7%);
-$secondary-blue-darken: darken($secondary-blue, 7%);
+$secondary-color-blue: #144A66;
+$secondary-color-blue-lighten: lighten($secondary-color-blue, 7%);
+$secondary-color-blue-darken: darken($secondary-color-blue, 7%);
 
 $light-blue: #EAF7FD;
 $light-blue-lighten: lighten($light-blue, 2%);
