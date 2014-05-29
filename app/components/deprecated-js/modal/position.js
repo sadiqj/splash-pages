@@ -1,5 +1,4 @@
 var Modal = require('./modal');
-var $ = require('jquery');
 
 var getOffsetPosition = function($el) {
   var offset;

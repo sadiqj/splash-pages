@@ -1,7 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
-
 var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 (function(name, context, definition) {

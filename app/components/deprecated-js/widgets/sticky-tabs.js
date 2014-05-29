@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 var classExtends = require('../class-extends');
 var BaseView = require('../base-view');
 

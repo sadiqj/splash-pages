@@ -8,6 +8,7 @@
     "aws-sdk": "^2.0.0-rc.17",
     "html5-lint": "^0.2.2",
     "http-proxy": "^1.1.4",
+    "gulp": "^3.6.2",
     "karma": "^0.12.16",
     "karma-cli": "^0.0.4",
     "karma-chrome-launcher": "^0.1.1",
@@ -38,7 +39,7 @@
     "connect": "^2.17.0",
     "eslint": "^0.6.2",
     "csslint": "^0.10.0",
-    "fb-flo": "^0.1.0",
+    "fb-flo": "^0.2.0",
     "rsvp": "^3.0.6",
     "mkdirp": "^0.5.0",
     "htmlhint": "^0.9.5",
@@ -46,28 +47,24 @@
     "browserify": "^4.1.6",
     "front-matter": "^0.2.0",
     "esprima": "^1.1.0-dev",
-    "browserify-shim": "^3.5.0",
-    "watchify": "^0.10.1"
+    "browserify-shim": "^3.5.0"
   },
   "scripts": {
     "test": "make test"
   },
   "browser": {
-    "angular": "./assets/components/angular/angular.js",
-    "angular-cookies": "./assets/components/angular-cookies/angular-cookies.js",
-    "angular-mocks": "./assets/components/angular-mocks/angular-mocks.js",
-    "lodash": "./assets/components/lodash/dist/lodash.compat.js",
-    "jquery": "./assets/components/jquery/dist/jquery.js",
-    "es5-shim": "./assets/components/es5-shim/es5-shim.js",
-    "raven": "./assets/components/raven-js/dist/raven.js",
-    "mute-console": "./assets/components/mute-console/mute-console.js",
-    "popover-directive": "./assets/components/ng-gc-components/ng-gc-popover-directive/popover-directive.js",
-    "ng-gc-toggle-directive": "./assets/components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive.js",
-    "dialog-controller": "./assets/components/ng-gc-components/ng-gc-dialog-directive/dialog-controller.js",
-    "dialog": "./assets/components/dialog.js/dialog.js",
-    "froogaloop": "./assets/components/deprecated-js/lib/froogaloop.js"
+    "angular": "./app/components/angular/angular.js",
+    "angular-cookies": "./app/components/angular-cookies/angular-cookies.js",
+    "angular-mocks": "./app/components/angular-mocks/angular-mocks.js",
+    "lodash": "./app/components/lodash/dist/lodash.compat.js",
+    "raven": "./app/components/raven-js/dist/raven.js",
+    "popover-directive": "./app/components/ng-gc-components/ng-gc-popover-directive/popover-directive.js",
+    "ng-gc-toggle-directive": "./app/components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive.js",
+    "dialog-controller": "./app/components/ng-gc-components/ng-gc-dialog-directive/dialog-controller.js",
+    "dialog": "./app/components/dialog.js/dialog.js",
+    "froogaloop": "./app/components/deprecated-js/lib/froogaloop.js"
   },
-  "main": "./assets/js/main.js",
+  "main": "./app/js/main.js",
   "browserify-shim": {
     "angular": "angular",
     "froogaloop": "Froogaloop",

@@ -20,17 +20,17 @@ $ make watch
 
 # Structure (what to change)
 
-The site url structure maps the `pages/` folder excluding the index.html file.
+The site url structure maps the `app/pages/` folder excluding the index.html file.
 
-`pages/features/index.html` would end up at `gocardless.com/features/`
+`app/pages/features/index.html` would end up at `gocardless.com/features/`
 
-CSS: `assets/css/`
-JS: `assets/js/`
-Images: `assets/images/`
-Fonts: `assets/fonts/`
-Static assets: `public/`
-Page templates: `templates/`
-Shared template includes/partials: `includes/`
+CSS: `app/css/`
+JS: `app/js/`
+Images: `app/images/`
+Fonts: `app/fonts/`
+Static app: `app/public/`
+Page templates: `app/templates/`
+Shared template includes/partials: `app/includes/`
 
 # Troubleshooting
 

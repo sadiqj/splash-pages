@@ -1,7 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
-
 function BaseView(options) {
   this.options = options != null ? options : {};
   this.el = this.options.el || this.el;

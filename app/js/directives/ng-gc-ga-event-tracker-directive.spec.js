@@ -17,7 +17,6 @@ describe('ngGcGaEventTrackerDirective', function() {
       '<form name="form" ng-gc-ga-event-tracker=options>' +
       '</form>'
     );
-    console.log(elm);
     $compile(elm)(scope);
     scope.$digest();
   }

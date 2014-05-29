@@ -6,8 +6,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
-var $ = require('jquery');
-
 'use strict';
 
 // TAB CLASS DEFINITION

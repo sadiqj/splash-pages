@@ -3,7 +3,6 @@
 var classExtends = require('../class-extends');
 var Modals = require('./modals');
 var Froogaloop = require('froogaloop');
-var $ = require('jquery');
 
 function ModalVimeo() {
   this.setModal = this.setModal.bind(this);

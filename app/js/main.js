@@ -1,8 +1,5 @@
 'use strict';
 
-require('es5-shim');
-require('mute-console');
-
 require('./initializers/raven-config');
 require('./initializers/cookies');
 
