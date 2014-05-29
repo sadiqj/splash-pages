@@ -32,12 +32,12 @@ body {
  * Links
  */
 a {
-  color: $primary-blue;
+  color: $primary-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: $primary-blue-darken;
+  color: $primary-color-darken;
   text-decoration: underline;
   cursor: pointer;
 }
