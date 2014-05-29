@@ -1,0 +1,92 @@
+{% extends "default.html" %}
+
+{% block title %}GoCardless: take payments online with Direct Debit{% endblock %}
+{% block page_container_class %}{% endblock %}
+
+{% block content %}
+
+  <div class="dd-payments-container">
+
+    <div class="site-gutter u-padding-Vl">
+      <h1 class="u-text-normal u-margin-Tl u-text-heading u-text-h1 u-color-primary u-text-center">Take recurring payments online with Direct Debit</h1>
+      <h2 class="u-color-meta u-text-heading u-text-h2 u-text-center u-margin-Ts u-margin-Bl">Cheaper and more reliable than card networks, more flexible than standing orders</h2>
+    </div>
+
+    <div class="grid u-center u-text-center u-padding-Bl u-margin-Bl">
+      <div class="grid__cell u-3of12 u-text-center">
+        <i class="u-margin-Ts dd-payments-container__icon--cashflow u-margin-Bs"></i>
+        <h3 class="u-text-heading u-padding-Bxxs u-color-accent">No more cashflow issues</h3>
+        <p>Make late payments a thing of the past. With Direct Debit, you control when
+        you get paid.</p>
+      </div>
+      <div class="grid__cell u-1of12 u-text-center dd-payments-container__divider"></div>
+      <div class="grid__cell u-3of12 u-text-center">
+        <i class="u-margin-Ts dd-payments-container__icon--success u-margin-Bs"></i>
+        <h3 class="u-text-heading u-padding-Bxxs u-color-primary">Lower failure rates</h3>
+        <p>Monthly failure rates of less than 1% - that’s 3x lower than cards. Automatically retry
+        failed payments.</p>
+      </div>
+      <div class="grid__cell u-1of12 u-text-center dd-payments-container__divider"></div>
+      <div class="grid__cell u-3of12 u-text-center">
+        <i class="u-margin-Ts dd-payments-container__icon--admin u-margin-Bs"></i>
+        <h3 class="u-text-heading u-padding-Bxxs u-color-secondary">Low cost, low admin</h3>
+        <p>Cheaper than card networks, and with GoCardless accepting Direct Debit
+        is effortless.</p>
+      </div>
+    </div>
+
+    <div class="gradient-fill-dark u-padding-Tl">
+      <h1 class="u-text-heading u-text-h1 u-color-invert u-text-center u-margin-Vl">GoCardless is the easiest way to accept Direct Debit</h1>
+
+      <div class="grid u-center u-text-center u-padding-Tl u-margin-Bl">
+        <div class="grid__cell u-3of12 u-text-center">
+          <i class="u-margin-Ts dd-payments-container__icon--settings-invert u-margin-Bs"></i>
+          <h3 class="u-text-heading u-padding-Bxxs u-color-invert">Really simple setup</h3>
+          <p class="u-color-invert-secondary">
+          Automate repeat payments and collect from account customers at the click of a button</p>
+        </div>
+        <div class="grid__cell u-1of12 u-text-center dd-payments-container__divider dd-payments-container__divider-invert"></div>
+        <div class="grid__cell u-3of12 u-text-center">
+          <i class="u-margin-Ts dd-payments-container__icon--coins-invert u-margin-Bs"></i>
+          <h3 class="u-text-heading u-padding-Bxxs u-color-invert">Transparent, low pricing</h3>
+          <p class="u-color-invert-secondary">
+          Transaction fees of just 1%, capped at £2. No other fees, ever. Scale pricing available.</p>
+        </div>
+        <div class="grid__cell u-1of12 u-text-center dd-payments-container__divider dd-payments-container__divider-invert"></div>
+        <div class="grid__cell u-3of12 u-text-center">
+          <i class="u-margin-Ts dd-payments-container__icon--connect-invert u-margin-Bs"></i>
+          <h3 class="u-text-heading u-padding-Bxxs u-color-invert">Integrates seamlessly</h3>
+          <p class="u-color-invert-secondary">
+          Through our RESTful API, GoCardless integrates perfectly with your website.</p>
+        </div>
+      </div>
+
+      <div class="u-5of12 u-center u-padding-Vm u-margin-Vm">
+        <div class="grid u-padding-Vm">
+          <div class="grid__cell u-1of2">
+            <a href="/watch-a-demo" class="btn btn--block btn--info btn--large">Watch a demo</a>
+          </div>
+          <div class="grid__cell u-1of2">
+            <a href="/features" class="btn btn--block btn--invert-hollow btn--large">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-gutter">
+        <img src="/images/dd-payments/dd-payments_screenshot@2x.png" class="u-margin-Tl">
+      </div>
+    </div>
+
+    <div class="site-gutter">
+      <div class="u-padding-Vl u-margin-Vl u-text-center">
+        <h2 class="u-text-heading u-color-meta">The best way to learn more is to try it out – start taking payments today</h2>
+        <a href="/merchants/new" class="btn btn--block btn--hollow btn--large u-2of12 u-center u-margin-Tl">Sign up</a>
+      </div>
+
+      <hr class="horizontal-ruler-top-double u-margin-Vn u-padding-Bl">
+      <p class="u-text-h2 u-text-heading u-color-meta u-text-center u-padding-Vl">Still want to learn more about Direct Debit? <a href="/guides" class="u-text-underline u-link-secondary">Read our industry-leading guides</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
