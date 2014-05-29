@@ -23,7 +23,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
     }
   };
   activeModal = false;
-  doc = context.document;
+  doc = window.document;
   preventModalClose = false;
   api = {};
   config = {
