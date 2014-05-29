@@ -1,3 +1,5 @@
+@import "mixins/icon-mixin";
+
 .features-container__intro {
   min-height: 100%;
   background: linear-gradient(45deg, #6897C6 15%, #122539 100%);
@@ -23,6 +25,59 @@
 }
 
 .features-container__integrate {
-  background: linear-gradient(45deg, #61B0FF 0%, #3DE1D8 100%);
+  background: linear-gradient(45deg, #61B0FF 0%, #3DE1D8 75%);
+}
+
+.features-container__hr--solid {
+  border-top: 2px solid #E8E8E8;
+}
+
+.features-container__hr--transparent {
+  border-top: 2px solid #FFFFFF;
+  opacity: 0.25;
+}
+
+// This line-height is getting used in a lot of Tom's new designs now
+// in combination with the hero & light headings, so could be abstracted?
+.features-container__heading {
+  line-height: 48px;
+}
+
+.features-container__cell {
+  background: url('/images/features/features-container_placeholder-icon.jpg') no-repeat;
+  background-position: 0 2px;
+  padding-left: 34px;
+}
+
+.features-container--blue-gray {
+  color: $blue-gray;
+}
+
+.features-container__link {
+  text-decoration: underline;
+}
+
+.features-container__integrations-image {
+  margin-top: 95px;
+}
+
+.features-container__add-customers {
+  position: absolute;
+  bottom: 0;
+}
+
+.features-container__fixed-height-cell {
+  height: 376px;
+}
+
+.features-container__icon--cart {
+  @include icon('/images/features/features-container__icon--cart', 45px, 45px);
+}
+
+.features-container__intro-screen {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -505px;
 }
 
