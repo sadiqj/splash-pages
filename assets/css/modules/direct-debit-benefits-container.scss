@@ -1,18 +1,6 @@
 @import "mixins/icon-mixin";
 @import "mixins/at2x-mixin";
 
-.direct-debit-benefits-container__heading--primary-blue {
-  color: $primary-blue;
-}
-
-.direct-debit-benefits-container__heading--primary-red {
-  color: $primary-red;
-}
-
-.direct-debit-benefits-container__heading--primary-green {
-  color: $primary-green;
-}
-
 .direct-debit-benefits-container__divider {
   width: 10px;
   height: 190px;
@@ -30,11 +18,6 @@
   @include at2x('/images/direct-debit-benefits/direct-debit-benefits_screenshot', 916px, 241px);
   width: 916px;
   height: 241px;
-  display: block;
-}
-
-.direct-debit-benefits-container__icon {
-  margin-top: 12px;
 }
 
 // Would be good to abstract these at some point and stick in /images/icons

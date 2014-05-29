@@ -84,7 +84,7 @@
 // Style an inline element to look like a link
 
 .u-link {
-  color: $primary-blue;
+  color: $primary-color;
   cursor: pointer;
   text-decoration: none;
 }
@@ -92,7 +92,7 @@
 .u-link:hover,
 .u-link:focus,
 .u-link:active {
-  color: $primary-blue-darken;
+  color: $primary-color-darken;
   text-decoration: underline;
 }
 
@@ -104,7 +104,7 @@
 .u-link:hover:disabled,
 .u-link:focus:disabled,
 .u-link:active:disabled {
-  color: $primary-blue;
+  color: $primary-color;
   text-decoration: none;
 }
 
@@ -135,5 +135,22 @@
 .u-link-invert:active:disabled {
   color: white;
   text-decoration: none;
+}
+
+// Links based on u-text-* styles: added here to ensure colour persists on hover.
+
+.u-link-primary,
+.u-link-primary:hover {
+  color: $primary-color;
+}
+
+.u-link-secondary,
+.u-link-secondary:hover {
+  color: $secondary-color;
+}
+
+.u-link-accent,
+.u-link-accent:hover {
+  color: $primary-color;
 }
 
