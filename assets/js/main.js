@@ -1,4 +1,4 @@
-(function(root) {
+(function main() {
   'use strict';
 
   angular.module('home', [
@@ -8,19 +8,29 @@
     'ngGcSignupFunnel',
     'ngGcRequestDemoFunnel',
     'ngGcPageViewEvetns',
-    'ngGcCookiesInit'
+    'ngGcCookiesInit',
+    'gc.popover',
+    'gc.toggle',
+    'ngGcProspectFormCtrl',
+    'ngGcWatchDemoFormCtrl'
   ]);
+
+  function isSupportedBrowser() {
+    var hasJSON = 'JSON' in window && 'parse' in JSON;
+    var supportMode = location.search.match(/supportMode/);
+    return hasJSON && !supportMode;
+  }
 
   angular.element(document).ready(function setup() {
     // Only give decent browser a js experience
-    if (window.isSupportedBrowser()) {
+    if (isSupportedBrowser()) {
       // Bootstrap Angular
       angular.bootstrap(document, ['home']);
     }
   });
 
-  var Widgets = root.GoCardless.module('widgets');
-  var Home = root.GoCardless.module('home');
+  var Widgets = window.GoCardless.module('widgets');
+  var Home = window.GoCardless.module('home');
 
   Home.vimeoModals = new Widgets.Views.ModalVimeo();
 
@@ -30,10 +40,8 @@
 
   Home.stickyTabs = new Widgets.Views.StickyTabs();
 
-  Home.popover = new Widgets.Views.PopOver();
-
   Home.affix = new Widgets.Views.Affix({
     el: '[data-affix-footer-fixed]'
   });
 
-})(this);
+}());

@@ -13,15 +13,19 @@ var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 var karma = require('gulp-karma');
 var gif = require('gulp-if');
+var uncss = require('gulp-uncss');
+var htmlhint = require('gulp-htmlhint');
 
 var httpProxy = require('http-proxy');
 var APIProxy = httpProxy.createProxyServer();
 
 var template = require('./tasks/template');
 var deploy = require('./tasks/deploy');
-
+var htmllint = require('./tasks/html-lint');
+var htmlHintFailReporter= require('./tasks/html-hint-fail-reporter');
 var redirect = require('./tasks/redirect');
 var redirects = require('./redirects.json');
+var eslintConfig = require('./eslint.json');
 
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
@@ -32,18 +36,18 @@ function isProduction() {
   return process.env.NODE_ENV === 'production';
 }
 
-gulp.task('eslint', function() {
-  return gulp.src('assets/js/**/*.js')
-    .pipe(eslint({
-      config: 'eslint.json'
-    }))
-    .pipe(eslint.format('stylish'));
+gulp.task('eslint-reporter', function() {
+  return gulp.src(['assets/js/**/*.js', '!assets/js/**/*spec.js'])
+    .pipe(eslint(eslintConfig))
+    .pipe(eslint.format());
 });
 
-gulp.task('csslint', function() {
-  return gulp.src('assets/css/**/*.css')
-    .pipe(csslint('csslintrc.json'))
-    .pipe(csslint.reporter());
+// HACK
+gulp.task('eslint-fail-build', function() {
+  return gulp.src(['assets/js/**/*.js', '!assets/js/**/*spec.js'])
+    .pipe(eslint(eslintConfig))
+    .pipe(eslint.failOnError())
+    .pipe(eslint.format());
 });
 
 gulp.task('css', function () {
@@ -53,6 +57,9 @@ gulp.task('css', function () {
       loadPath: ['assets/css'],
     }))
     .pipe(autoprefixer('last 2 version'))
+    .pipe(csslint('csslintrc.json'))
+    .pipe(csslint.reporter())
+    .pipe(csslint.failReporter())
     .pipe(gulp.dest('.tmp/css'))
     .pipe(size());
 });
@@ -115,6 +122,13 @@ function templateMetadata() {
 gulp.task('template', ['html'], function () {
   return gulp.src(['pages/**/*.html', '!pages/**/_*.html'])
     .pipe(template({}, templateMetadata()))
+    // .pipe(htmllint())
+    // .pipe(htmllint.reporter())
+    .pipe(htmlhint({
+      htmlhintrc: 'htmlhintrc.json'
+    }))
+    .pipe(htmlhint.reporter())
+    .pipe(htmlHintFailReporter())
     .pipe(gulp.dest('build'))
     .pipe(size());
 });
@@ -154,9 +168,7 @@ gulp.task('fonts', function () {
     .pipe(size());
 });
 
-gulp.task('serve', ['build', 'connect'], function () {
-  require('opn')('http://localhost:9000');
-});
+gulp.task('serve', ['build', 'connect']);
 
 gulp.task('connect', function () {
   var connect = require('connect');
@@ -182,6 +194,7 @@ gulp.task('connect', function () {
   require('http').createServer(app)
     .listen(9000)
     .on('listening', function () {
+      require('opn')('http://localhost:9000');
       console.log('Started connect web server on http://gocardless.dev:9000');
     });
 });
@@ -214,31 +227,25 @@ gulp.task('unit', function() {
     'assets/components/angular/angular.js',
     'assets/components/angular-cookies/angular-cookies.js',
     'assets/components/es5-shim/es5-shim.js',
+    'assets/components/mute-console/mute-console.js',
 
     'assets/components/jasmine-helpers/*.js',
     'assets/components/angular-mocks/angular-mocks.js',
 
-    'assets/js/lib/bootstrap/tooltip.js',
-    'assets/js/lib/bootstrap/popover.js',
     'assets/js/lib/bootstrap/tab.js',
     'assets/js/lib/froogaloop.js',
-
-    'assets/js/connect-compatibility.js',
 
     'assets/js/directives/ng-gc-ga-event-tracker-directive.js',
     'assets/js/directives/ng-gc-form-submit-directive.js',
     'assets/js/directives/ng-gc-href-active-directive.js',
     'assets/js/modal/modal.js',
-    'assets/js/mute-console/mute-console.js',
     'assets/js/gocardless-global.js',
     'assets/js/module.js',
-    'assets/js/utils.js',
     'assets/js/base-view.js',
     'assets/js/class-extends.js',
     'assets/js/widgets/modals.js',
     'assets/js/widgets/modal-vimeo.js',
     'assets/js/widgets/demo-modal.js',
-    'assets/js/widgets/popover.js',
     'assets/js/widgets/affix.js',
     'assets/js/widgets/sticky-tabs.js',
     'assets/js/metrics/**/*.js',
@@ -266,7 +273,7 @@ gulp.task('deploy', ['clean', 'build'], function() {
     }));
 });
 
-gulp.task('test', ['unit']);
+gulp.task('test', ['unit', 'eslint-reporter', 'eslint-fail-build']);
 
 gulp.task('build', [
   'template', 'redirects', 'images', 'fonts', 'public', 'greenhouse-css'

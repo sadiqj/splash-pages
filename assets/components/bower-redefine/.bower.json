@@ -1,0 +1,18 @@
+{
+  "name": "bower-redefine",
+  "main": "redefine.js",
+  "ignore": [
+    "**/.*",
+    "readme.md"
+  ],
+  "homepage": "https://github.com/gocardless-client/bower-redefine",
+  "_release": "05029ab287",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "05029ab287f82a7bab288cf8eb70d14a6115300b"
+  },
+  "_source": "git@github.com:gocardless-client/bower-redefine.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:gocardless-client/bower-redefine.git"
+}
