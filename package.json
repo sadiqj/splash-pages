@@ -62,7 +62,7 @@
     "ng-gc-toggle-directive": "./app/components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive.js",
     "dialog-controller": "./app/components/ng-gc-components/ng-gc-dialog-directive/dialog-controller.js",
     "dialog": "./app/components/dialog.js/dialog.js",
-    "froogaloop": "./app/components/deprecated-js/lib/froogaloop.js"
+    "froogaloop": "./app/js/deprecated-js/lib/froogaloop.js"
   },
   "main": "./app/js/main.js",
   "browserify-shim": {

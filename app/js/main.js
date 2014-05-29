@@ -19,11 +19,11 @@ require('../components/ng-gc-components/ng-gc-dialog-directive/dialog-controller
 require('../components/ng-gc-components/ng-gc-popover-directive/popover-directive');
 require('../components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive');
 
-var ModalVimeo = require('../components/deprecated-js/widgets/modal-vimeo');
-var DemoModal = require('../components/deprecated-js/widgets/demo-modal');
-var StickyTabs = require('../components/deprecated-js/widgets/sticky-tabs');
-var Affix = require('../components/deprecated-js/widgets/affix');
-require('../components/deprecated-js/lib/bootstrap/tab.js');
+var ModalVimeo = require('../js/deprecated-js/widgets/modal-vimeo');
+var DemoModal = require('../js/deprecated-js/widgets/demo-modal');
+var StickyTabs = require('../js/deprecated-js/widgets/sticky-tabs');
+var Affix = require('../js/deprecated-js/widgets/affix');
+require('../js/deprecated-js/lib/bootstrap/tab.js');
 
 var angular = require('angular');
 
