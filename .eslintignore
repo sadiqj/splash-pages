@@ -6,3 +6,4 @@ scripts
 conf
 gulpfile.js
 build
+app/js/deprecated-js
