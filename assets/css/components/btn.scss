@@ -21,8 +21,8 @@
 
   border-style: solid;
   border-width: 1px;
-  background-color: $primary-blue;
-  border-color: $primary-blue;
+  background-color: $primary-color;
+  border-color: $primary-color;
   border-radius: $border-radius-base;
   text-align: center;
   font-size: $font-size-h6;
@@ -43,7 +43,7 @@
 
 .btn:active,
 .btn--active {
-  background-color: $primary-blue-darken;
+  background-color: $primary-color-darken;
 }
 
 .btn[disabled],
