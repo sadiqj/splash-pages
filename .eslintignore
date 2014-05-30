@@ -1,3 +1,9 @@
 node_modules
-assets/components
+app/components
 *spec.js
+tasks
+scripts
+conf
+gulpfile.js
+build
+app/js/deprecated-js
