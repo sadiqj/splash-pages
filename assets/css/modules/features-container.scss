@@ -1,12 +1,13 @@
 @import "mixins/icon-mixin";
 
 .features-container__intro {
-  min-height: 810px;
+  min-height: 700px;
   height: 100%;
   background: linear-gradient(45deg, #6897C6 0%, #3B648F 50%, #122539 100%);
 }
 
-.features-container__twoclicks {
+.features-container__header {
+  opacity: 0.66
 }
 
 .features-container__effortless {
@@ -106,6 +107,6 @@
 .features-container__intro-copy {
   position: absolute;
   top: 50%;
-  margin-top: -295px;
+  margin-top: -280px;
   width: 100%;
 }
