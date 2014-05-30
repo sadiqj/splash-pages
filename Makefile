@@ -2,6 +2,8 @@
 export AWS_ACCESS_KEY_ID ?= $(GC_AWS_ACCESS_KEY)
 export AWS_SECRET_ACCESS_KEY ?= $(GC_AWS_SECRET)
 
+BIN=node_modules/.bin
+
 BROWSERIFY_ARG= --transform brfs --transform browserify-shim --entry app/js/main.js \
 	--noparse=lodash --noparse=dialog \
 	--detect-globals=false --insert-globals=false --insert-global-vars='' > build/js/main.js
@@ -19,18 +21,18 @@ clean:
 	rm -rf $(OUTPUT)
 
 csslint:
-	csslint $(CSSLINT_ERRORS) $(OUTPUT)/css/main.css
-	csslint $(CSSLINT_ERRORS) $(OUTPUT)/css/greenhouse-forms.css
+	$(BIN)/csslint $(CSSLINT_ERRORS) $(OUTPUT)/css/main.css
+	$(BIN)/csslint $(CSSLINT_ERRORS) $(OUTPUT)/css/greenhouse-forms.css
 
 scss-main:
-	node-sass --include-path app/css --output-style nested --source-comments=normal \
+	$(BIN)/node-sass --include-path app/css --output-style nested --source-comments=normal \
 		app/css/main.scss --output $(OUTPUT)/css/main.css
-	autoprefixer --browsers "last 2 versions" --cascade $(OUTPUT)/css/main.css --output $(OUTPUT)/css/main.css
+	$(BIN)/autoprefixer --browsers "last 2 versions" --cascade $(OUTPUT)/css/main.css --output $(OUTPUT)/css/main.css
 
 scss-greenhouse-forms:
-	node-sass --include-path app/css --output-style nested --source-comments=normal \
+	$(BIN)/node-sass --include-path app/css --output-style nested --source-comments=normal \
 		app/css/greenhouse-forms.scss --output $(OUTPUT)/css/greenhouse-forms.css
-	autoprefixer --browsers "last 2 versions" --cascade $(OUTPUT)/css/greenhouse-forms.css --output $(OUTPUT)/css/greenhouse-forms.css
+	$(BIN)/autoprefixer --browsers "last 2 versions" --cascade $(OUTPUT)/css/greenhouse-forms.css --output $(OUTPUT)/css/greenhouse-forms.css
 
 css-out:
 	mkdir -p $(OUTPUT)/css
@@ -38,7 +40,7 @@ css-out:
 css: css-out scss-main scss-greenhouse-forms
 
 eslint:
-	eslint .
+	$(BIN)/eslint .
 
 public:
 	cp -R app/public/ $(OUTPUT)/
@@ -53,7 +55,7 @@ redirects:
 	scripts/redirects.js --redirects conf/redirects.json --output $(OUTPUT)
 
 htmlhint:
-	htmlhint $(OUTPUT)
+	$(BIN)/htmlhint $(OUTPUT)
 
 nunjucks:
 	./scripts/nunjucks.js --search-path app/templates --search-path app/pages \
@@ -64,17 +66,17 @@ server: build
 	scripts/server.js
 
 test-watch:
-	karma start --auto-watch --no-single-run
+	$(BIN)/karma start --auto-watch --no-single-run
 
 test: eslint
-	karma start
+	$(BIN)/karma start
 
 js-out:
 	mkdir -p $(OUTPUT)/js
 
 js-main: js-out
-	browserify $(BROWSERIFY_ARG)
-	uglifyjs build/js/main.js --output build/js/main.js \
+	$(BIN)/browserify $(BROWSERIFY_ARG)
+	$(BIN)/uglifyjs build/js/main.js --output build/js/main.js \
 		--source-map build/js/main.map.js \
 		--source-map-include-sources=true \
 		--source-map-root='build/' \
@@ -84,7 +86,7 @@ js-vendor: js-out
 	cat app/components/jquery/dist/jquery.js app/components/es5-shim/es5-shim.js \
 		app/components/mute-console/mute-console.js \
 		app/js/vendor.js > build/js/vendor.js
-	uglifyjs build/js/vendor.js --output build/js/vendor.js \
+	$(BIN)/uglifyjs build/js/vendor.js --output build/js/vendor.js \
 		--source-map build/js/vendor.map.js \
 		--source-map-include-sources=true \
 		--source-map-root='build/' \
@@ -93,9 +95,9 @@ js-vendor: js-out
 js: js-main js-vendor
 
 csso:
-	csso build/css/fonts.css build/css/fonts.css
-	csso build/css/main.css build/css/main.css
-	csso build/css/greenhouse-forms.css build/css/greenhouse-forms.css
+	$(BIN)/csso build/css/fonts.css build/css/fonts.css
+	$(BIN)/csso build/css/main.css build/css/main.css
+	$(BIN)/csso build/css/greenhouse-forms.css build/css/greenhouse-forms.css
 
 build: clean fonts images public css csslint redirects nunjucks htmlhint js
 
