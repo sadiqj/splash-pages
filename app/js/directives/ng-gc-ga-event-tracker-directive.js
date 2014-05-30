@@ -47,7 +47,7 @@ angular.module('ngGcGaEventTrackerDirective', [])
             });
 
             // Called when GA has sent the event
-            $window._gaq.push(['_set', 'hitCallback', function undbind(){
+            $window._gaq.push(['_set', 'hitCallback', function onPush(){
               undbind();
             }]);
 
