@@ -18,24 +18,19 @@ watch:
 clean:
 	rm -rf $(OUTPUT)
 
-scss:
-	./scripts/sassc --stdin --load-path app/css --style nested \
-		--precision 6 --line-numbers --line-comments
-
-autoprefixer:
-	autoprefixer --browsers "last 2 versions" --cascade
-
 csslint:
-	csslint --quiet $(CSSLINT_ERRORS) $(OUTPUT)/css/main.css
-	csslint --quiet $(CSSLINT_ERRORS) $(OUTPUT)/css/greenhouse-forms.css
+	csslint $(CSSLINT_ERRORS) $(OUTPUT)/css/main.css
+	csslint $(CSSLINT_ERRORS) $(OUTPUT)/css/greenhouse-forms.css
 
 scss-main:
-	cat app/css/main.scss | make --quiet scss | \
-		make --quiet autoprefixer > $(OUTPUT)/css/main.css
+	node-sass --include-path app/css --output-style nested --source-comments=normal \
+		app/css/main.scss --output $(OUTPUT)/css/main.css
+	autoprefixer --browsers "last 2 versions" --cascade $(OUTPUT)/css/main.css --output $(OUTPUT)/css/main.css
 
 scss-greenhouse-forms:
-	cat app/css/greenhouse-forms.scss | make --quiet scss | \
-		make --quiet autoprefixer > $(OUTPUT)/css/greenhouse-forms.css
+	node-sass --include-path app/css --output-style nested --source-comments=normal \
+		app/css/greenhouse-forms.scss --output $(OUTPUT)/css/greenhouse-forms.css
+	autoprefixer --browsers "last 2 versions" --cascade $(OUTPUT)/css/greenhouse-forms.css --output $(OUTPUT)/css/greenhouse-forms.css
 
 css-out:
 	mkdir -p $(OUTPUT)/css
