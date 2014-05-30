@@ -15,30 +15,30 @@ $ npm install
 # Running locally:
 
 ```
-$ gulp watch
+$ make watch
 ```
 
 # Structure (what to change)
 
-The site url structure maps the `pages/` folder excluding the index.html file.
+The site url structure maps the `app/pages/` folder excluding the index.html file.
 
-`pages/features/index.html` would end up at `gocardless.com/features/`
+`app/pages/features/index.html` would end up at `gocardless.com/features/`
 
-CSS: `assets/css/`
-JS: `assets/js/`
-Images: `assets/images/`
-Fonts: `assets/fonts/`
-Static assets: `public/`
-Page templates: `templates/`
-Shared template includes/partials: `includes/`
+CSS: `app/css/`
+JS: `app/js/`
+Images: `app/images/`
+Fonts: `app/fonts/`
+Static app: `app/public/`
+Page templates: `app/templates/`
+Shared template includes/partials: `app/includes/`
 
 # Troubleshooting
 
-1. `gulp watch` fails
+1. `make watch` fails
 
 Try running `npm install`. Packages might be out of date.
 
-2. `gulp` not found
+2. `command` not found
 
 Make sure you have reloaded your terminal after `2.` under `Setup to run locally`
 
@@ -92,10 +92,10 @@ export GC_AWS_ACCESS_KEY=ask webops
 
 Testing:
 ```
-$ AWS_S3_BUCKET=staging.gocardless.com gulp deploy
+$ AWS_S3_BUCKET=staging.gocardless.com make deploy
 ```
 
 Production:
 ```
-$ AWS_S3_BUCKET=gocardless.com gulp deploy
+$ AWS_S3_BUCKET=gocardless.com make deploy
 ```
