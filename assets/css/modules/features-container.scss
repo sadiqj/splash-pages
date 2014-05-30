@@ -3,7 +3,7 @@
 .features-container__intro {
   min-height: 810px;
   height: 100%;
-  background: linear-gradient(45deg, #6897C6 15%, #122539 100%);
+  background: linear-gradient(45deg, #6897C6 0%, #3B648F 50%, #122539 100%);
 }
 
 .features-container__twoclicks {
@@ -63,8 +63,28 @@
   height: 376px;
 }
 
+.features-container__icon--wallet {
+  @include icon('/images/features/features-container__icon--wallet', 45px, 45px);
+}
+
+.features-container__icon--calendar {
+  @include icon('/images/features/features-container__icon--calendar', 45px, 45px);
+}
+
+.features-container__icon--receipt {
+  @include icon('/images/features/features-container__icon--receipt', 45px, 45px);
+}
+
 .features-container__icon--cart {
   @include icon('/images/features/features-container__icon--cart', 45px, 45px);
+}
+
+.features-container__icon--database {
+  @include icon('/images/features/features-container__icon--database', 45px, 45px);
+}
+
+.features-container__icon--partner {
+  @include icon('/images/features/features-container__icon--partner', 45px, 45px);
 }
 
 .features-container__intro-screen {
@@ -80,20 +100,12 @@
 
 .features-container__logo {
   position: relative;
-  top: 6px;
-}
-
-.features-container__intro-top {
-  height: 100%;
-}
-
-.features-container__intro-bottom {
-  height: 0;
+  top: 3px;
 }
 
 .features-container__intro-copy {
   position: absolute;
   top: 50%;
-  margin-top: -300px;
+  margin-top: -295px;
   width: 100%;
 }
