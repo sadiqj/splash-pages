@@ -1,12 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
-var exec = require('child_process').exec;
 
 gulp.task('watch', function (cb) {
-  var child = exec('make watch');
-  child.stderr.pipe(process.stderr);
-  child.stdout.pipe(process.stdout);
+  console.error('DEPRECATED COMMAND, PLEASE USE: make watch');
 });
 
 gulp.task('default', function () {

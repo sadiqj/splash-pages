@@ -97,8 +97,13 @@ js-vendor: js-out
 
 js: js-main js-vendor
 
+csso:
+	csso build/css/fonts.css build/css/fonts.css
+	csso build/css/main.css build/css/main.css
+	csso build/css/greenhouse-forms.css build/css/greenhouse-forms.css
+
 build: clean fonts images public css csslint redirects nunjucks htmlhint js
 
-deploy: build
+deploy: build csso
 	scripts/s3-deploy.js $(OUTPUT)/** --cwd $(OUTPUT) \
 		--region eu-west-1 --bucket $(AWS_S3_BUCKET)
