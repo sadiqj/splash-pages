@@ -23,12 +23,11 @@
 }
 
 .features-container__hr--solid {
-  border-top: 2px solid #E8E8E8;
+  border-top: 1px solid #E8E8E8;
 }
 
 .features-container__hr--transparent {
-  border-top: 2px solid #FFFFFF;
-  opacity: 0.25;
+  border-top: 1px solid rgba(255,255,255,0.4);
 }
 
 // This line-height is getting used in a lot of Tom's new designs now
@@ -58,6 +57,7 @@
 .features-container__add-customers {
   position: absolute;
   bottom: 0;
+  right: 25px;
 }
 
 .features-container__fixed-height-cell {
@@ -109,4 +109,8 @@
   top: 50%;
   margin-top: -280px;
   width: 100%;
+}
+
+.features-container__phone-demo {
+  margin-right: -25px;
 }
