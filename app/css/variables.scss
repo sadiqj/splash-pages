@@ -83,8 +83,6 @@ $dark-gray: #767676;
 $dark-gray-lighten: lighten($dark-gray, 7%);
 $dark-gray-darken: darken($dark-gray, 5%);
 
-$blue-gray: #4E4E4E;
-
 ////////////////////////////////////////////////////////////////////////////////
 
 $site-background-color: #F8F8F8;
@@ -93,7 +91,7 @@ $header-color: #141E27;
 
 $subheader-color: #657483;
 
-$text-color: #4E4E4E;
+$text-color: $black-blue;
 
 $link-color: #395D8D;
 $link-hover-color: darken(#395D8D, 5%);

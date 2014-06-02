@@ -1,19 +1,22 @@
 'use strict';
 
-var angular = require('angular');
-var _ = require('lodash');
+angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
+  function ngGcSmoothScrollDirective() {
 
-angular.module('ngGcSmoothScrollDirective', [])
-  .directive('ngGcSmoothScroll', [
-    '$window',
-    function ngGcSmoothScrollDirective($window) {
-      /**
-       * Serlialises all the fields in the specified form,
-       * for posting in an AJAX request.
-       *
-       * @param {jQueryElement} $form Form element
-       * @return {Object} Form values
-       */
+    return {
+      link: function link(scope, element) {
 
-    }
-  ]);
+
+
+        element.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({
+              scrollTop: $('#features-container__target').offset().top
+          }, 500);
+          return false;
+        });
+      }
+    };
+
+  }
+]);

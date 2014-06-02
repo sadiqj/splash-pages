@@ -1,9 +1,18 @@
 @import "mixins/icon-mixin";
 
+.features-container {
+  min-width: 1065px;
+  height: 100%;
+}
+
 .features-container__intro {
   min-height: 700px;
   height: 100%;
   background: linear-gradient(45deg, #6897C6 0%, #3B648F 50%, #122539 100%);
+}
+
+.features-container__twoclicks {
+  background: #ffffff;
 }
 
 .features-container__header {
@@ -37,13 +46,35 @@
 }
 
 .features-container__cell {
-  background: url('/images/features/features-container_placeholder-icon.jpg') no-repeat;
-  background-position: 0 2px;
   padding-left: 34px;
 }
 
-.features-container--blue-gray {
-  color: $blue-gray;
+.features-container__cell--speed {
+  background: url('/images/features/features-container__icon--speed@2x.png') no-repeat;
+  background-size: 17px 17px;
+  background-position: 0 2px;
+}
+
+.features-container__cell--link {
+  background: url('/images/features/features-container__icon--link@2x.png') no-repeat;
+  background-size: 17px 17px;
+  background-position: 0 2px;
+}
+
+.features-container__cell--upload {
+  background: url('/images/features/features-container__icon--upload@2x.png') no-repeat;
+  background-size: 17px 17px;
+  background-position: 0 2px;
+}
+
+.features-container__cell--calendar {
+  background: url('/images/features/features-container__icon--calendar-small@2x.png') no-repeat;
+  background-size: 17px 17px;
+  background-position: 0 2px;
+}
+
+.features-container--text-color {
+  color: $text-color;
 }
 
 .features-container__link {

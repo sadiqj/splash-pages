@@ -7,6 +7,7 @@ require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-href-active-directive');
 require('./directives/ng-gc-ga-event-tracker-directive');
 require('./directives/ng-gc-form-submit-directive');
+require('./directives/ng-gc-smooth-scroll-directive');
 
 require('./controllers/ng-gc-prospect-form-controller');
 require('./controllers/ng-gc-watch-demo-form-controller');
@@ -38,7 +39,8 @@ angular.module('home', [
   'gc.popover',
   'gc.toggle',
   'ngGcProspectFormCtrl',
-  'ngGcWatchDemoFormCtrl'
+  'ngGcWatchDemoFormCtrl',
+  'ngGcSmoothScrollDirective'
 ]);
 
 function isSupportedBrowser() {

@@ -5,218 +5,219 @@
 
 {% block body %}
 
+<div class="features-container">
 
-<div class="features-container__intro u-relative">
-  <div class="site-container features-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
-    <div class="u-pull-start">
-      <a href="/">
-        <i class="icon-gc-logo-invert features-container__logo"></i>
-      </a>
+  <div class="features-container__intro u-relative">
+    <div class="site-container features-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
+      <div class="u-pull-start">
+        <a href="/">
+          <i class="icon-gc-logo-invert features-container__logo"></i>
+        </a>
+      </div>
+      <div class="u-pull-end">
+        <nav class="nav u-pull-start">
+          <a class="nav__item u-link-invert"
+            href="/">
+            Home
+          </a>
+          <a class="nav__item u-link-invert features-container__active-link"
+            href="/features">
+            Features
+          </a>
+          <a class="nav__item u-link-invert"
+            href="/stories">
+            Customers
+          </a>
+          <a class="nav__item u-link-invert"
+             href="/pricing">
+            Pricing
+          </a>
+          <a class="nav__item u-link-invert"
+             href="/guides">
+            Guides
+          </a>
+        </nav>
+
+        <ul class="u-cf u-pull-start">
+          <li class="u-pull-start">
+            <a href="/users/sign_in" class="btn btn--invert-hollow btn--small" id="login">Login</a>
+          </li>
+          <li class="u-pull-start u-margin-Ls">
+            <a href="/merchants/new" class="btn btn--invert-hollow btn--small" id="nav_sign_up">Sign up</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="u-pull-end">
-      <nav class="nav u-pull-start">
-        <a class="nav__item u-link-invert"
-          href="/">
-          Home
-        </a>
-        <a class="nav__item u-link-invert features-container__active-link"
-          href="/features">
-          Features
-        </a>
-        <a class="nav__item u-link-invert"
-          href="/stories">
-          Customers
-        </a>
-        <a class="nav__item u-link-invert"
-           href="/pricing">
-          Pricing
-        </a>
-        <a class="nav__item u-link-invert"
-           href="/guides">
-          Guides
-        </a>
-      </nav>
+    <div class="features-container__intro-copy">
+      <div class="u-6of12 u-center u-text-center u-color-invert u-padding-Vl">
+        <h1 class="u-text-hero u-text-heading u-color-invert u-padding-Bl">Dashboard</h1>
 
-      <ul class="u-cf u-pull-start">
-        <li class="u-pull-start">
-          <a href="/users/sign_in" class="btn btn--invert-hollow btn--small" id="login">Login</a>
-        </li>
-        <li class="u-pull-start u-margin-Ls">
-          <a href="/merchants/new" class="btn btn--invert-hollow btn--small" id="nav_sign_up">Sign up</a>
-        </li>
-      </ul>
+        <h2 class="u-text-hero features-container__heading u-text-heading u-color-invert u-text-light u-padding-Vl">There's no easier way<br>to accept Direct Debit</h2>
+
+        <a ng-gc-smooth-scroll href="" class="u-link-invert u-text-h3 u-block u-padding-Tl"><strong>Find out why</strong></a>
+
+      </div>
+    </div>
+    <div class="site-container site-gutter features-container__intro-screen">
+      <img src="/images/features/features-container__intro-screen@2x.png">
     </div>
   </div>
-  <div class="features-container__intro-copy">
-    <div class="u-6of12 u-center u-text-center u-color-invert u-padding-Vl">
-      <h1 class="u-text-hero u-text-heading u-color-invert u-padding-Bl">Dashboard</h1>
 
-      <h2 class="u-text-hero features-container__heading u-text-heading u-color-invert u-text-light u-padding-Vl">There's no easier way<br>to accept Direct Debit</h2>
+  <div class="features-container__twoclicks u-padding-Vl" id="features-container__target">
 
-      <a href="" class="u-link-invert u-text-h3 u-block u-padding-Tl"><strong>Find out why</strong></a>
+    <div class="site-container site-gutter u-padding-Vl u-margin-Vl">
 
-    </div>
-  </div>
-  <div class="site-container site-gutter features-container__intro-screen">
-    <img src="/images/features/features-container__intro-screen@2x.png">
-  </div>
-</div>
-
-<div class="features-container__twoclicks u-padding-Vl">
-
-  <div class="site-container site-gutter u-padding-Vl u-margin-Vl">
-
-    <div class="grid u-center">
-      <div class="grid__cell u-1of2 u-padding-Bl u-margin-Bl">
-        <h1 class="u-text-hero features-container__heading features-container--blue-gray u-text-heading u-text-light u-padding-Bl">Add customers<br>in 2 clicks</h1>
-        <p class="features-container--blue-gray u-text-light u-text-heading u-text-h2 u-1of2 u-padding-Tl u-margin-Bl">Getting your customers up and running is easy, with options for individual or multiple imports.</p>
-      </div>
-      <div class="grid__cell u-1of2 u-relative features-container__fixed-height-cell">
-        <img src="/images/features/features-container_add-customers@2x.png" class="u-pull-end features-container__add-customers">
-      </div>
-    </div>
-    <hr class="features-container__hr--solid u-margin-Tn">
-
-    <div class="grid u-center u-padding-Tl u-padding-Bm">
-      <div class="grid__cell features-container__cell u-1of2">
-        <h3 class="u-color-meta">Individually</h3>
-        <p class="u-9of12 u-color-meta u-text-h3">Ask your customers for a Direct Debit in two clicks. We'll email them asking them to complete our payment pages.</p>
-      </div>
-      <div class="grid__cell features-container__cell u-1of2">
-        <h3 class="u-color-meta">From a link</h3>
-        <p class="u-9of12 u-color-meta u-text-h3">Link to our payment pages directly from your website. We'll redirect your customer back to you after they pay.</p>
-      </div>
-    </div>
-
-    <div class="grid u-center">
-      <div class="grid__cell features-container__cell u-1of2">
-        <h3 class="u-color-meta">In bulk</h3>
-        <p class="u-9of12 u-color-meta u-text-h3">Add hundreds of customers at once with a CSV. We'll request each of them to complete our payment pages.</p>
-      </div>
-      <div class="grid__cell features-container__cell u-1of2">
-        <h3 class="u-color-meta">Using plans</h3>
-        <p class="u-9of12 u-color-meta u-text-h3">Create custom plans to collect recurring payments every month. Multiple customers can be added to any plan.</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="features-container__effortless u-padding-Vl">
-
-  <div class="site-container u-padding-Vl u-margin-Vl">
-
-    <h1 class="u-text-center u-text-hero u-text-heading u-color-invert u-text-light u-padding-Bl u-margin-Bl">Take payments effortlessly</h1>
-
-    <div class="grid u-color-invert u-padding-Bl">
-      <div class="grid__cell u-1of3 u-text-center">
-        <i class="features-container__icon--wallet u-margin-Bs"></i>
-        <h3>One-off payments</h3>
-        <p class="u-text-h3">Take varying or ad hoc payments any time with just a couple of clicks</p>
-      </div>
-      <div class="grid__cell u-1of3 u-text-center">
-        <i class="features-container__icon--calendar u-margin-Bs"></i>
-        <h3>Recurring payments</h3>
-        <p class="u-text-h3">Automate recurring payments with simple, editable payment plans</p>
-      </div>
-      <div class="grid__cell u-1of3 u-text-center">
-        <i class="features-container__icon--receipt u-margin-Bs"></i>
-        <h3>Bulk payments</h3>
-        <p class="u-text-h3">Take payment from hundreds of customers at once with a CSV</p>
-      </div>
-    </div>
-
-    <hr class="features-container__hr--transparent u-margin-Vl">
-
-    <div class="grid u-padding-Tl">
-      <div class="grid__cell u-1of2">
-        <h1 class="u-text-hero features-container__heading u-text-heading u-color-invert u-text-light u-padding-Bl">Your own branded<br>payment pages</h1>
-        <p class="u-text-light u-text-heading u-color-invert u-text-h2 u-1of2 u-padding-Vl">Customers will see your logo at the top of our secure payment pages.</p>
-        <a href="" class="u-link-invert features-container__link u-text-h3">See an example</a>
-      </div>
-      <div class="grid__cell u-1of2">
-        <img src="/images/features/features-container_phone-demo@2x.png" class="u-10of12 u-pull-end features-container__phone-demo">
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="features-container__reports u-padding-Vm">
-  <div class="site-container">
-    <div class="grid">
-      <div class="grid__cell u-1of2 u-padding-Tl u-margin-Tl">
-        <h1 class="u-text-hero features-container__heading features-container--blue-gray u-text-heading u-text-light u-padding-Bl u-margin-Bs">Get real-time<br>reports</h1>
-
-        <div class="u-8of12">
-          <div class="u-margin-Bm">
-            <h3 class="u-color-meta">Up to the second status reports</h3>
-            <p class="u-color-meta u-text-h3">Comprehensive, easy-to-use information on all of your payments and customers</p>
-          </div>
-
-          <div class="u-margin-Bm">
-            <h3 class="u-color-meta">Email notifications</h3>
-            <p class="u-color-meta u-text-h3">Immediate notification when a payment fails or a customer cancels.</p>
-          </div>
-
-          <div class="u-margin-Bm">
-            <h3 class="u-color-meta">Export your data</h3>
-            <p class="u-color-meta u-text-h3">View your data the way you want to and import it into other apps</p>
-          </div>
+      <div class="grid u-center">
+        <div class="grid__cell u-1of2 u-padding-Bl u-margin-Bl">
+          <h1 class="u-text-hero features-container__heading features-container--text-color u-text-heading u-text-light u-padding-Bl">Add customers<br>in 2 clicks</h1>
+          <p class="features-container--text-color u-text-light u-text-heading u-text-h2 u-1of2 u-padding-Tl u-margin-Bl">Getting your customers up and running is easy, with options for individual or multiple imports.</p>
         </div>
-
+        <div class="grid__cell u-1of2 u-relative features-container__fixed-height-cell">
+          <img src="/images/features/features-container_add-customers@2x.png" class="u-pull-end features-container__add-customers">
+        </div>
       </div>
-      <div class="grid__cell u-1of2">
-        <img src="/images/features/features-container_pipeline.jpg" class="u-pull-end">
+      <hr class="features-container__hr--solid u-margin-Tn">
+
+      <div class="grid u-center u-padding-Tl u-padding-Bm">
+        <div class="grid__cell features-container__cell u-1of2 features-container__cell--speed">
+          <h3>Individually</h3>
+          <p class="u-9of12 u-text-h3">Ask your customers for a Direct Debit in two clicks. We'll email them asking them to complete our payment pages.</p>
+        </div>
+        <div class="grid__cell features-container__cell u-1of2 features-container__cell--link">
+          <h3>From a link</h3>
+          <p class="u-9of12 u-text-h3">Link to our payment pages directly from your website. We'll redirect your customer back to you after they pay.</p>
+        </div>
+      </div>
+
+      <div class="grid u-center">
+        <div class="grid__cell features-container__cell u-1of2 features-container__cell--upload">
+          <h3>In bulk</h3>
+          <p class="u-9of12 u-text-h3">Add hundreds of customers at once with a CSV. We'll request each of them to complete our payment pages.</p>
+        </div>
+        <div class="grid__cell features-container__cell u-1of2 features-container__cell--calendar">
+          <h3>Using plans</h3>
+          <p class="u-9of12 u-text-h3">Create custom plans to collect recurring payments every month. Multiple customers can be added to any plan.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="features-container__effortless u-padding-Vl">
+
+    <div class="site-container u-padding-Vl u-margin-Vl">
+
+      <h1 class="u-text-center u-text-hero u-text-heading u-color-invert u-text-light u-padding-Bl u-margin-Bl">Take payments effortlessly</h1>
+
+      <div class="grid u-color-invert u-padding-Bl">
+        <div class="grid__cell u-1of3 u-text-center">
+          <i class="features-container__icon--wallet u-margin-Bs"></i>
+          <h3>One-off payments</h3>
+          <p class="u-10of12 u-center u-text-h3">Take varying or ad hoc payments any time with just a couple of clicks</p>
+        </div>
+        <div class="grid__cell u-1of3 u-text-center">
+          <i class="features-container__icon--calendar u-margin-Bs"></i>
+          <h3>Recurring payments</h3>
+          <p class="u-10of12 u-center u-text-h3">Automate recurring payments with simple, editable payment plans</p>
+        </div>
+        <div class="grid__cell u-1of3 u-text-center">
+          <i class="features-container__icon--receipt u-margin-Bs"></i>
+          <h3>Bulk payments</h3>
+          <p class="u-10of12 u-center u-text-h3">Take payment from hundreds of customers at once with a CSV</p>
+        </div>
+      </div>
+
+      <hr class="features-container__hr--transparent u-margin-Vl">
+
+      <div class="grid u-padding-Tl">
+        <div class="grid__cell u-1of2">
+          <h1 class="u-text-hero features-container__heading u-text-heading u-color-invert u-text-light u-padding-Bl">Your own branded<br>payment pages</h1>
+          <p class="u-text-light u-text-heading u-color-invert u-text-h2 u-4of5 u-padding-Vl">Customers will see your logo at the top of our secure payment pages.</p>
+          <a href="https://sandbox.gocardless.com/connect/bills/new?bill%5Bamount%5D=2.99&bill%5Bdescription%5D=One-off%20payment%20%28e.g.%2C%20to%20register%20a%20domain%20name%29&bill%5Bmerchant_id%5D=49&bill%5Bname%5D=Example%20One-Off%20Payment&client_id=rdk6CODM0n40VWW%2BDk0NGxWcSReYTTpPx2AR%2FwCnMKnXfKyYXqQYgtnJ67M%2B2vzG&nonce=%2FOHIaCcvlywR5299TuzJoXSDo6ilMIOF4AouSuyMwofj7XUAi9%2Fe6QxkJnTn&signature=91ea84ca056be927363e960f36d11752e615e02c1d0e41f1d3d180599a90f7e4&timestamp=2014-06-02T16%3A21%3A50Z" class="u-link-invert features-container__link u-text-h3" target="_blank">See an example</a>
+        </div>
+        <div class="grid__cell u-1of2">
+          <img src="/images/features/features-container_phone-demo@2x.png" class="u-10of12 u-pull-end features-container__phone-demo">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="features-container__reports u-padding-Vm">
+    <div class="site-container">
+      <div class="grid">
+        <div class="grid__cell u-1of2 u-padding-Tl u-margin-Tl">
+          <h1 class="u-text-hero features-container__heading features-container--text-color u-text-heading u-text-light u-padding-Bl u-margin-Bs">Get real-time<br>reports</h1>
+
+          <div class="u-8of12">
+            <div class="u-margin-Bm">
+              <h3>Up to the second status reports</h3>
+              <p class="u-text-h3">Comprehensive, easy-to-use information on all of your payments and customers</p>
+            </div>
+
+            <div class="u-margin-Bm">
+              <h3>Email notifications</h3>
+              <p class="u-text-h3">Immediate notification when a payment fails or a customer cancels.</p>
+            </div>
+
+            <div class="u-margin-Bm">
+              <h3>Export your data</h3>
+              <p class="u-text-h3">View your data the way you want to and import it into other apps</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="grid__cell u-1of2">
+          <img src="/images/features/features-container_timeline@2x.png" class="u-pull-end">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="features-container__integrate u-padding-Vl">
-  <div class="site-container u-padding-Vl u-margin-Vl">
-    <h1 class="u-text-center u-text-hero u-text-heading u-color-invert u-text-light u-padding-Bl u-margin-Bl">Integrate with your website</h1>
+  <div class="features-container__integrate u-padding-Vl">
+    <div class="site-container u-padding-Vl u-margin-Vl">
+      <h1 class="u-text-center u-text-hero u-text-heading u-color-invert u-text-light u-padding-Bl u-margin-Bl">Integrate with your website</h1>
 
-    <div class="grid u-color-invert u-padding-Bl">
-      <div class="grid__cell u-1of3 u-text-center">
-        <i class="features-container__icon--cart u-margin-Bs"></i>
-        <h3>Add a checkout button to your site</h3>
-        <p class="u-text-h3">We provide you with your own branded online payment page.<br>
-        <a href="" class="u-link-invert features-container__link u-text-h3">See an example</a></p>
+      <div class="grid u-color-invert u-padding-Bl">
+        <div class="grid__cell u-1of3 u-text-center">
+          <i class="features-container__icon--cart u-margin-Bs"></i>
+          <h3>Add a checkout button to your site</h3>
+          <p class="u-11of12 u-center u-text-h3">We provide you with your own branded online payment page.<br>
+          <a href="https://sandbox.gocardless.com/connect/bills/new?bill%5Bamount%5D=2.99&bill%5Bdescription%5D=One-off%20payment%20%28e.g.%2C%20to%20register%20a%20domain%20name%29&bill%5Bmerchant_id%5D=49&bill%5Bname%5D=Example%20One-Off%20Payment&client_id=rdk6CODM0n40VWW%2BDk0NGxWcSReYTTpPx2AR%2FwCnMKnXfKyYXqQYgtnJ67M%2B2vzG&nonce=%2FOHIaCcvlywR5299TuzJoXSDo6ilMIOF4AouSuyMwofj7XUAi9%2Fe6QxkJnTn&signature=91ea84ca056be927363e960f36d11752e615e02c1d0e41f1d3d180599a90f7e4&timestamp=2014-06-02T16%3A21%3A50Z" class="u-link-invert features-container__link u-text-h3" target="_blank">See an example</a></p>
+        </div>
+        <div class="grid__cell u-1of3 u-text-center">
+          <i class="features-container__icon--database u-margin-Bs"></i>
+          <h3>Use our clean, RESTful API</h3>
+          <p class="u-11of12 u-center u-text-h3">Clean, modern REST API with webhooks and full documentation.<br>
+          <a href="/features/api" class="u-link-invert features-container__link u-text-h3">Learn more about our API</a></p>
+        </div>
+        <div class="grid__cell u-1of3 u-text-center">
+          <i class="features-container__icon--partner u-margin-Bs"></i>
+          <h3>Become a partner</h3>
+          <p class="u-11of12 u-center u-text-h3">Join a growing ecosystem of businesses powered by GoCardless<br>
+          <a href="https://developer.gocardless.com/#partner-guide" class="u-link-invert features-container__link u-text-h3">View partner documentation</a></p>
+        </div>
       </div>
-      <div class="grid__cell u-1of3 u-text-center">
-        <i class="features-container__icon--database u-margin-Bs"></i>
-        <h3>Use our clean, RESTful API</h3>
-        <p class="u-text-h3">Clean, modern REST API with webhooks and full documentation.<br>
-        <a href="" class="u-link-invert features-container__link u-text-h3">Learn more about our API</a></p>
+
+      <hr class="features-container__hr--transparent u-margin-Vl">
+
+      <div class="grid u-padding-Tl">
+        <div class="grid__cell u-1of2">
+          <h1 class="u-text-hero features-container__heading u-text-heading u-color-invert u-text-light u-padding-Bl">Built to work with<br>your accounting<br>software</h1>
+          <p class="u-text-light u-text-heading u-color-invert u-text-h2 u-2of3 u-padding-Tl">Take and automatically reconcile payments from within your accounting software.</p>
+        </div>
+        <div class="grid__cell u-1of2">
+          <img src="/images/features/features-container_integrations@2x.png" class="u-pull-end features-container__integrations-image">
+        </div>
       </div>
-      <div class="grid__cell u-1of3 u-text-center">
-        <i class="features-container__icon--partner u-margin-Bs"></i>
-        <h3>Become a partner</h3>
-        <p class="u-text-h3">Join a growing ecosystem of businesses powered by GoCardless<br>
-        <a href="" class="u-link-invert features-container__link u-text-h3">View partner documentation</a></p>
-      </div>
+
     </div>
-
-    <hr class="features-container__hr--transparent u-margin-Vl">
-
-    <div class="grid u-padding-Tl">
-      <div class="grid__cell u-1of2">
-        <h1 class="u-text-hero features-container__heading u-text-heading u-color-invert u-text-light u-padding-Bl">Built to work with<br>your accounting<br>software</h1>
-        <p class="u-text-light u-text-heading u-color-invert u-text-h2 u-1of2 u-padding-Tl">Take and automatically reconcile payments from within your accounting software.</p>
-      </div>
-      <div class="grid__cell u-1of2">
-        <img src="/images/features/features-container_integrations@2x.png" class="u-pull-end features-container__integrations-image">
-      </div>
-    </div>
-
   </div>
-</div>
 
-<div class="benefits-container">
-  <div class="benefits-container__wrapper u-padding-Ts">
+  <div class="site-container u-padding-Ts">
     {% include "_site_footer.html" %}
   </div>
+
 </div>
 
 {% endblock %}
