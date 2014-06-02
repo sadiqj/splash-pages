@@ -1,25 +1,25 @@
 'use strict';
 
-var classExtends = require('../class-extends');
 var Modals = require('./modals');
 var Froogaloop = require('froogaloop');
 
-function ModalVimeo() {
+function ModalVimeo(options) {
   this.setModal = this.setModal.bind(this);
-  return ModalVimeo.__super__.constructor.apply(this, arguments);
+  Modals.call(this, options);
 }
 
-classExtends(ModalVimeo, Modals);
+ModalVimeo.prototype = Object.create(Modals.prototype);
+ModalVimeo.prototype.constructor = ModalVimeo;
 
 ModalVimeo.prototype.el = '[data-modal-vimeo]';
 
 ModalVimeo.prototype.ready = function() {
-  ModalVimeo.__super__.ready.apply(this, arguments);
+  Modals.prototype.ready.apply(this, arguments);
   return this.initAutoplay();
 };
 
 ModalVimeo.prototype.setModal = function() {
-  ModalVimeo.__super__.setModal.apply(this, arguments);
+  Modals.prototype.setModal.apply(this, arguments);
   return this.initVimeoPlayer();
 };
 

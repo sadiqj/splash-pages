@@ -1,18 +1,18 @@
 'use strict';
 
-var classExtends = require('../class-extends');
 var BaseView = require('../base-view');
 var Modal = require('../modal/modal');
 require('../modal/position');
 
-function Modals() {
+function Modals(options) {
   this.setModalHTML = this.setModalHTML.bind(this);
   this.setModal = this.setModal.bind(this);
   this.getModal = this.getModal.bind(this);
-  return Modals.__super__.constructor.apply(this, arguments);
+  BaseView.call(this, options);
 }
 
-classExtends(Modals, BaseView);
+Modals.prototype = Object.create(BaseView.prototype);
+Modals.prototype.constructor = Modals;
 
 Modals.prototype.el = '[data-modal]';
 
