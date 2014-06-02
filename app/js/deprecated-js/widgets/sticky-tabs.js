@@ -1,18 +1,16 @@
 'use strict';
 
-var classExtends = require('../class-extends');
 var BaseView = require('../base-view');
 
-function StickyTabs() {
-  return this.ready();
+function StickyTabs(options) {
+  BaseView.call(this, options);
+
+  this.$tabs = $('.nav-tabs a');
+  this.setupTabs();
 }
 
-classExtends(StickyTabs, BaseView);
-
-StickyTabs.prototype.ready = function() {
-  this.$tabs = $('.nav-tabs a');
-  return this.setupTabs();
-};
+StickyTabs.prototype = Object.create(BaseView.prototype);
+StickyTabs.prototype.constructor = StickyTabs;
 
 StickyTabs.prototype.setupTabs = function() {
   var hash = window.location.hash;

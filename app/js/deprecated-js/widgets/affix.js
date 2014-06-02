@@ -1,7 +1,6 @@
 'use strict';
 
 var _ = require('lodash');
-var classExtends = require('../class-extends');
 var BaseView = require('../base-view');
 
 function isElementInViewport(el, options) {
@@ -51,11 +50,12 @@ function animateLeave($el, name, animate) {
   }
 }
 
-function Affix() {
-  return Affix.__super__.constructor.apply(this, arguments);
+function Affix(options) {
+  BaseView.call(this, options);
 }
 
-classExtends(Affix, BaseView);
+Affix.prototype = Object.create(BaseView.prototype);
+Affix.prototype.constructor = Affix;
 
 Affix.prototype.ready = function ready() {
   // Checking mobile user agent because testing window size is unreliable

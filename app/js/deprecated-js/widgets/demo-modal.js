@@ -1,14 +1,14 @@
 'use strict';
 
-var classExtends = require('../class-extends');
 var ModalVimeo = require('./modal-vimeo');
 
-function DemoModal() {
+function DemoModal(options) {
   this.setModal = this.setModal.bind(this);
-  return DemoModal.__super__.constructor.apply(this, arguments);
+  ModalVimeo.call(this, options);
 }
 
-classExtends(DemoModal, ModalVimeo);
+DemoModal.prototype = Object.create(ModalVimeo.prototype);
+DemoModal.prototype.constructor = DemoModal;
 
 DemoModal.prototype.onFinish = function() {
   this.triggerMixpanelEvent('finish');
