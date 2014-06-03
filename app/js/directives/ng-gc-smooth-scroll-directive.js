@@ -5,13 +5,10 @@ angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
 
     return {
       link: function link(scope, element) {
-
-
-
         element.on('click', function(e) {
           e.preventDefault();
           $('html, body').animate({
-              scrollTop: $('#features-container__target').offset().top
+              scrollTop: $($.attr(this, 'href')).offset().top
           }, 500);
           return false;
         });
