@@ -15,11 +15,7 @@ angular.module('ngGcPageViewEvents', [
 
     // match all pages not already tracked
     ngGcPageRouter('/*', function trackPageView(path) {
-      $window.gct('track', 'Pageview', {
-        'Path': path,
-        'Property': 'website',
-        'Type': 'information'
-      });
+
     });
 
   }

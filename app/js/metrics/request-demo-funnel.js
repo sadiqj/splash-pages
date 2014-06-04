@@ -10,10 +10,7 @@ angular.module('ngGcRequestDemoFunnel', [
   function ngGcRequestDemoFunnel(ngGcPageRouter, $window) {
 
     ngGcPageRouter('/watch-a-demo', function trackPageView(path) {
-      $window.gct('track', 'Pageview', {
-        'Path': path,
-        'Property': 'website',
-        'Type': 'lead capture'
+
       });
     });
 
@@ -22,15 +19,3 @@ angular.module('ngGcRequestDemoFunnel', [
   }
 
 ]);
-
-<script>
-window.gct('track', 'Pageview', {
-  'Path': '/watch-a-demo',
-  'Property': 'website',
-  'Type': 'lead capture'
-});
-</script>
-
-var pathname = window.location.pathname
-pathname = pathname.replace(/^\/|\/$/g, '');
-pathname = '/' + pathname;

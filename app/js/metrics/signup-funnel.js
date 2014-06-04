@@ -10,10 +10,7 @@ angular.module('ngGcSignupFunnel', [
   function ngGcSignupFunnel(ngGcPageRouter, $window) {
 
     ngGcPageRouter('/', function trackPageView(path) {
-      $window.gct('track', 'Pageview', {
-        'Path': path,
-        'Property': 'website',
-        'Type': 'landing'
+
       });
     });
 
