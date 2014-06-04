@@ -1,0 +1,32 @@
+.jobs-container__photo {
+  position: relative;
+  top: -10px;
+}
+
+.jobs-container__description {
+    min-height: 800px;
+    margin-left: 60px;
+}
+
+.jobs-container__header {
+  height: 568px;
+  background-color: #000;
+  background-image: url("/images/jobs/jobs-bg.jpg");
+}
+
+.jobs-container__header-headline {
+  padding-top: 454px;
+  color: #fff;
+}
+
+.jobs-container__teams {
+  text-align: justify;
+}
+
+.jobs-container__team-copy {
+  width: 517px;
+}
+
+.jobs-container__workingatgc {
+  overflow: auto
+}

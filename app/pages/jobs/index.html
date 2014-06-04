@@ -4,10 +4,13 @@
 {% block page_container_class %}{% endblock %}
 
 {% block content %}
+
+<div class="jobs-container">
+
   <div class="grid">
     <div class="grid__cell u-1of1 u-text-center">
-      <div class="site-gutter jobs-header">
-        <h1 class="u-text-heading u-text-hero u-text-light jobs-header__headline">
+      <div class="site-gutter jobs-container__header">
+        <h1 class="u-text-heading u-text-hero u-text-light jobs-container__header-headline">
           Help us build the future of payments
         </h1>
       </div>
@@ -31,54 +34,79 @@
 
     <div class="grid u-center u-padding-Vl u-margin-Vm">
       <div class="grid__cell u-6of12 u-padding-Rl">
-        <img src="/images/jobs/office-scene@2x.jpg">
+        <img src="/images/jobs/office-scene@2x.jpg" class="jobs-container__photo">
       </div>
 
       <div class="grid__cell u-6of12 u-padding-Ll">
         <h1 class="u-text-heading u-color-primary u-text-light u-margin-Bl">We think you'll like it here</h1>
         <p class="u-margin-Bm">We care as much about building a great company as we do about building a great business. That means hiring the best people and giving them a great environment to work in.</p>
 
-        <p class="u-margin-Bm">We're small and friendly with a strong culture. We're all friends, and we often get together outside of work. We're a company of passionate people who are constantly learning from, and teaching, each other.</p>
+        <p class="u-margin-Bm">We're small and friendly with a strong culture. We're all friends, and we often get together outside of work. We're a company of passionate people who are constantly learning from and teaching each other.</p>
 
         <p>
           Come and join our payments revolution.<br>
-          <a ng-gc-smooth-scroll href="#jobs__target" class="u-text-underline">View our open positions.</a>
+          <a ng-gc-smooth-scroll href="#jobs-container__target" class="u-text-underline">View our open positions.</a>
         </p>
       </div>
     </div>
 
   </div>
 
-  <div class="gradient-fill-dark u-color-invert u-padding-Vl u-margin-Bl">
-    <h2 class="u-text-heading u-text-hero u-color-invert u-text-center u-text-light u-margin-Vl">Working at GoCardless</h2>
+  <!-- FOLLOWING CONTAINER WILL HAVE AN IMAGE BACKGROUND THAT DEPENDS ON EXACT HEIGHT - IMPLEMENT LATER! -->
 
-    <div class="u-center u-text-center u-7of12 u-margin-Bm">
+  <div class="gradient-fill-dark u-color-invert u-padding-Vl u-margin-Bl jobs-container__workingatgc">
+    <h2 class="u-text-heading u-text-hero u-color-invert u-text-center u-text-light u-margin-Vl u-padding-Ts">Working at GoCardless</h2>
 
-      <div class="u-padding-Bl u-padding-Vl">
-        <i class="dd-payments-container__icon--connect-invert u-margin-Bs"></i>
-        <h2 class="u-text-heading u-color-invert u-margin-Bs">Engineering</h2>
-        <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+    <div class="u-center u-text-center u-7of12 jobs-container__teams">
+
+      <div class="u-padding-Bl u-padding-Vl u-pull-start">
+        <div class="u-pull-start u-padding-Rm">
+          <i class="dd-payments-container__icon--connect-invert"></i>
+        </div>
+        <div class="u-pull-start jobs-container__team-copy">
+          <h2 class="u-text-heading u-color-invert u-margin-Bs">Engineering</h2>
+          <p class="u-margin-Bm">We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+
+          <p class="u-margin-Bm">We build simple, reliable systems for processing millions of pounds of payments each day - constantly iterating on our product and delivering mission-critical code on a regular basis.</p>
+
+          <p>We care deeply about learning. We pay for courses & books, run regular internal talks given by both GoCardless employees and industry experts.</p>
+        </div>
       </div>
-      <div class="u-padding-Bl u-padding-Vl">
-        <i class="dd-payments-container__icon--coins-invert u-margin-Bs"></i>
-        <h2 class="u-text-heading u-color-invert u-margin-Bs">Design</h2>
-        <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+
+      <div class="u-padding-Bl u-padding-Vl u-pull-start">
+        <div class="u-pull-start u-padding-Rm">
+          <i class="dd-payments-container__icon--coins-invert"></i>
+        </div>
+        <div class="u-pull-start jobs-container__team-copy">
+          <h2 class="u-text-heading u-color-invert u-margin-Bs">Design</h2>
+          <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+        </div>
       </div>
-      <div class="u-padding-Bl u-padding-Vl">
-        <i class="dd-payments-container__icon--settings-invert u-margin-Bs"></i>
-        <h2 class="u-text-heading u-color-invert u-margin-Bs">Sales & Marketing</h2>
-        <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+
+      <div class="u-padding-Bl u-padding-Vl u-pull-start">
+        <div class="u-pull-start u-padding-Rm">
+          <i class="dd-payments-container__icon--settings-invert"></i>
+        </div>
+        <div class="u-pull-start jobs-container__team-copy">
+          <h2 class="u-text-heading u-color-invert u-margin-Bs">Sales & Marketing</h2>
+          <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+        </div>
       </div>
-      <div class="u-padding-Bl u-padding-Vl">
-        <i class="dd-payments-container__icon--connect-invert u-margin-Bs"></i>
-        <h2 class="u-text-heading u-color-invert u-margin-Bs">Operations</h2>
-        <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+
+      <div class="u-padding-Bl u-padding-Vl u-pull-start">
+        <div class="u-pull-start u-padding-Rm">
+          <i class="dd-payments-container__icon--connect-invert"></i>
+        </div>
+        <div class="u-pull-start jobs-container__team-copy">
+          <h2 class="u-text-heading u-color-invert u-margin-Bs">Operations</h2>
+          <p class="u-margin-Bl">We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+        </div>
       </div>
+
     </div>
-
   </div>
 
-  <div class="grid site-gutter site-container u-padding-Bl" id="jobs__target">
+  <div class="grid site-gutter site-container u-padding-Bl" id="jobs-container__target">
 
     <h2 class="u-text-heading u-color-primary u-text-hero u-text-center u-text-light u-margin-Vl">Open positions</h2>
 
@@ -144,7 +172,7 @@
         </li>
       </ul>
     </div>
-    <div class="grid__cell u-8of12 jobs-description">
+    <div class="grid__cell u-8of12 jobs-container__description">
       <article class="tab-pane active u-padding-Tl" id="software-engineer">
         {% include "jobs/_software_engineer.html" %}
       </article>
@@ -177,4 +205,7 @@
       </article>
     </div>
   </div>
+
+</div>
+
 {% endblock %}
