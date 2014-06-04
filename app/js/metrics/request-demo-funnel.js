@@ -22,3 +22,15 @@ angular.module('ngGcRequestDemoFunnel', [
   }
 
 ]);
+
+<script>
+window.gct('track', 'Pageview', {
+  'Path': '/watch-a-demo',
+  'Property': 'website',
+  'Type': 'lead capture'
+});
+</script>
+
+var pathname = window.location.pathname
+pathname = pathname.replace(/^\/|\/$/g, '');
+pathname = '/' + pathname;
