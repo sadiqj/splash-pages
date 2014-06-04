@@ -6,7 +6,7 @@ deployment:
       - ./scripts/link-checker.js gocardless.com
 
   staging:
-    branch: dev
+    branch: [dev, display-network-splash-page]
     commands:
       - NODE_ENV=staging AWS_S3_BUCKET=staging.gocardless.com make deploy
       - ./scripts/link-checker.js staging.gocardless.com
