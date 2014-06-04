@@ -16,7 +16,6 @@ require('../components/ng-gc-components/ng-gc-popover-directive/popover-directiv
 require('../components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive');
 
 var ModalVimeo = require('../js/deprecated-js/widgets/modal-vimeo');
-var DemoModal = require('../js/deprecated-js/widgets/demo-modal');
 var StickyTabs = require('../js/deprecated-js/widgets/sticky-tabs');
 var Affix = require('../js/deprecated-js/widgets/affix');
 require('../js/deprecated-js/lib/bootstrap/tab.js');
@@ -50,9 +49,6 @@ angular.element(document).ready(function setup() {
 
 module.exports = {
   modalVimeo: new ModalVimeo(),
-  demoModal: new DemoModal({
-    el: '[data-modal-demo]'
-  }),
   stickyTabs: new StickyTabs(),
   affix: new Affix({
     el: '[data-affix-footer-fixed]'
