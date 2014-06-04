@@ -11,10 +11,6 @@ require('./directives/ng-gc-form-submit-directive');
 require('./controllers/ng-gc-prospect-form-controller');
 require('./controllers/ng-gc-watch-demo-form-controller');
 
-require('./metrics/pageview-events');
-require('./metrics/request-demo-funnel');
-require('./metrics/signup-funnel');
-
 require('../components/ng-gc-components/ng-gc-dialog-directive/dialog-controller');
 require('../components/ng-gc-components/ng-gc-popover-directive/popover-directive');
 require('../components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive');
@@ -31,9 +27,6 @@ angular.module('home', [
   'ngGcGaEventTrackerDirective',
   'ngGcFormSubmitDirective',
   'ngGcHrefActiveDirective',
-  'ngGcSignupFunnel',
-  'ngGcRequestDemoFunnel',
-  'ngGcPageViewEvents',
   'ngGcCookiesInit',
   'gc.popover',
   'gc.toggle',
