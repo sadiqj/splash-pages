@@ -1,6 +1,6 @@
 .jobs-container__photo {
   position: relative;
-  top: -10px;
+  top: 27px;
 }
 
 .jobs-container__description {
@@ -28,7 +28,8 @@
 }
 
 .jobs-container__workingatgc {
-  overflow: auto
+  overflow: auto;
+  background: url('/images/jobs/jobs-container__workingatgc-bg.jpg');
 }
 
 .jobs-container__icon--engineering-invert {
