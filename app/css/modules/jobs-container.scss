@@ -26,7 +26,7 @@
 }
 
 .jobs-container__team-copy {
-  width: 517px;
+  width: 357px;
 }
 
 .jobs-container__workingatgc {
@@ -41,19 +41,19 @@
 }
 
 .jobs-container__icon--engineering-invert {
-  @include icon('/images/jobs/jobs-container__icon--engineering-invert', 46px, 46px);
+  @include icon('/images/jobs/jobs-container__icon--engineering-invert', 30px, 30px);
 }
 
 .jobs-container__icon--design-invert {
-  @include icon('/images/jobs/jobs-container__icon--design-invert', 46px, 46px);
+  @include icon('/images/jobs/jobs-container__icon--design-invert', 30px, 30px);
 }
 
 .jobs-container__icon--salesmarketing-invert {
-  @include icon('/images/jobs/jobs-container__icon--salesmarketing-invert', 46px, 46px);
+  @include icon('/images/jobs/jobs-container__icon--salesmarketing-invert', 30px, 30px);
 }
 
 .jobs-container__icon--operations-invert {
-  @include icon('/images/jobs/jobs-container__icon--operations-invert', 46px, 46px);
+  @include icon('/images/jobs/jobs-container__icon--operations-invert', 30px, 30px);
 }
 
 .jobs-container__open-positions-title {
