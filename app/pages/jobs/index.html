@@ -17,14 +17,14 @@
     </div>
   </div>
 
-  <div class="site-gutter site-container">
-    <div class="grid u-center u-padding-Vl u-margin-Vm">
-      <div class="grid__cell u-6of12 u-padding-Rl">
-        <p>Running a business isn't easy, and we believe that getting paid shouldn't be the hardest part. We're on a mission to simplify Direct Debit, and we're looking for smart people to help get us there.
+  <div class="site-gutter site-container u-margin-Bm">
+    <div class="grid u-center u-padding-Vl u-margin-Vm u-text-heading u-text-light">
+      <div class="grid__cell u-6of12 u-padding-Rl u-text-h3">
+        <p>Running a business isn't easy, and we believe that getting paid shouldn't be the hardest part. We're on a mission to simplify recurring payments, and we're looking for smart people to help get us there.
         </p>
       </div>
 
-      <div class="grid__cell u-6of12 u-padding-Ll">
+      <div class="grid__cell u-6of12 u-padding-Ll u-text-h3">
         <p>We're growing incredibly quickly — we grew by over 700% last year, we're expanding our offer to include European Direct Debit, and we're working with some of the UK's largest organisations.
         </p>
       </div>
@@ -43,22 +43,21 @@
 
         <p class="u-margin-Bm">We're small and friendly with a strong culture. We're all friends, and we often get together outside of work. We're a company of passionate people who are constantly learning from and teaching each other.</p>
 
+        <p class="u-margin-Bm">We care deeply about learning. We pay for courses & books and run regular internal talks given by both GoCardless employees and industry experts.</p>
+
         <p>
           Come and join our payments revolution.<br>
           <a ng-gc-smooth-scroll href="#jobs-container__target" class="u-text-underline">View our open positions.</a>
         </p>
       </div>
     </div>
-
   </div>
 
-  <!-- FOLLOWING CONTAINER WILL HAVE AN IMAGE BACKGROUND THAT DEPENDS ON EXACT HEIGHT - IMPLEMENT LATER! -->
-
+  <!--Background image of jobs-container__workingatgc must match height of container-->
   <div class="gradient-fill-dark u-color-invert u-padding-Vl u-margin-Bl jobs-container__workingatgc">
     <h2 class="u-text-heading u-text-hero u-color-invert u-text-center u-text-light u-margin-Vl u-padding-Ts">Working at GoCardless</h2>
 
     <div class="u-center u-text-center u-7of12 jobs-container__teams">
-
       <div class="u-padding-Bl u-padding-Vl u-pull-start">
         <div class="u-pull-start u-padding-Rm">
           <i class="jobs-container__icon--engineering-invert"></i>
@@ -72,8 +71,7 @@
           every day there's no space for inconsistent data or downtime. Everything we
           build has to be extremely robust, and we take pride in everything we produce.</p>
 
-          <p class="u-margin-Bm">At the same time, we're a startup growing at over 700% a year. We're nimble,
-          deploying every day, and we're doing our most ambitious work right now.</p>
+          <p class="u-margin-Bm">At the same time, we're a startup growing at over 700% a year. We're nimble, deploying every day, and we're doing our most ambitious work right now.</p>
 
           <p>If you're passionate about tech, care deeply about learning and finding
           elegant solutions, and want to work with like-minded engineers, come work with us.</p>
@@ -86,7 +84,7 @@
         </div>
         <div class="u-pull-start jobs-container__team-copy">
           <h2 class="u-text-heading u-color-invert u-margin-Bs">Design</h2>
-          <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+          <p>Design copy, awaiting final content. We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach.</p>
         </div>
       </div>
 
@@ -95,8 +93,12 @@
           <i class="jobs-container__icon--salesmarketing-invert"></i>
         </div>
         <div class="u-pull-start jobs-container__team-copy">
-          <h2 class="u-text-heading u-color-invert u-margin-Bs">Sales & Marketing</h2>
-          <p>We believe in doing a few things, and doing them well. We also know the value of moving fast and taking an iterative approach — we deploy updates to our product every day and constantly test whether we're building the right things.</p>
+          <h2 class="u-text-heading u-color-invert u-margin-Bs">Business</h2>
+          <p class="u-margin-Bm">We are already one of London’s fastest growing startups but our ambitions go far beyond this. We are building a big business from the ground up and are looking for smart, driven people to lead the exciting projects which will help us achieve this.</p>
+
+          <p class="u-margin-Bm">We believe in long-term value, trust and integrity. All our work in sales, marketing and business development is focused around helping customers make informed buying decisions because ultimately we know our product and service is the best.</p>
+
+          <p>If you like the sound of exciting, challenging work with genuine impact in a fast-paced environment then this might be the place for you.</p>
         </div>
       </div>
 
@@ -112,17 +114,14 @@
           <p class="u-margin-Bl">We ensure that our operations run like clockwork. When a customer has a problem, we make sure we respond quicker than they expect. We are always looking to improve processes so we can improve the service we can offer our customers.</p>
         </div>
       </div>
-
     </div>
   </div>
 
-  <div class="grid site-gutter site-container u-padding-Bl" id="jobs-container__target">
+  <div class="grid site-gutter site-container u-padding-Bl u-margin-Hs" id="jobs-container__target">
 
-    <h2 class="u-text-heading u-color-primary u-text-hero u-text-center u-text-light u-margin-Vl">Open positions</h2>
+    <h2 class="u-text-heading jobs-container__open-positions-title u-text-h2 u-margin-Tl">Open positions</h2>
 
-    <hr class="horizontal-ruler-top-double">
-
-    <div class="grid__cell u-3of12">
+    <div class="grid__cell u-padding-Hn u-3of12">
       <ul class="nav nav-tabs u-margin-Ts">
 
         <li class="nav-tabs__section-heading">Engineering</li>
@@ -182,7 +181,7 @@
         </li>
       </ul>
     </div>
-    <div class="grid__cell u-8of12 jobs-container__description">
+    <div class="grid__cell u-9of12">
       <article class="tab-pane active u-padding-Tl" id="software-engineer">
         {% include "jobs/_software_engineer.html" %}
       </article>
