@@ -4,14 +4,16 @@
 }
 
 .jobs-container__description {
-    min-height: 800px;
-    margin-left: 60px;
+  min-height: 800px;
+  margin-left: 60px;
 }
 
 .jobs-container__header {
   height: 568px;
   background-color: #000;
   background-image: url("/images/jobs/jobs-bg.jpg");
+  // No 2x-friendly version of this available that's big enough
+  // at native size for the container on retina screens
 }
 
 .jobs-container__header-headline {
@@ -30,6 +32,12 @@
 .jobs-container__workingatgc {
   overflow: auto;
   background: url('/images/jobs/jobs-container__workingatgc-bg.jpg');
+  // No retina for this as their currently isn't a 2x version of the photo being used.
+  // Background is very pushed back visually so it's not particularly obvious that
+  // it's being scaled on retina screens.
+  //
+  // Not the best for easily changing the copy but this design requires the background
+  // image match the height of the container.
 }
 
 .jobs-container__icon--engineering-invert {
@@ -46,4 +54,8 @@
 
 .jobs-container__icon--operations-invert {
   @include icon('/images/jobs/jobs-container__icon--operations-invert', 46px, 46px);
+}
+
+.jobs-container__open-positions-title {
+  color: $medium-gray;
 }
