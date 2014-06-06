@@ -21,12 +21,8 @@
   color: #fff;
 }
 
-.jobs-container__team-copy {
-  width: 357px;
-}
 
 .jobs-container__workingatgc {
-  overflow: auto;
   background: url('/images/jobs/jobs-container__workingatgc-bg.jpg');
   // No retina for this as their currently isn't an available 2x version of the photo being used.
   // Background is subtle enough that it's not particularly obvious that it's being
