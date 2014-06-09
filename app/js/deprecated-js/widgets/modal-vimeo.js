@@ -33,13 +33,6 @@ ModalVimeo.prototype.initVimeoPlayer = function() {
   var player = instance.videoPlayer = Froogaloop(iframe);
   instance.on('hide', $.proxy(this.onHide, this));
 
-  player.addEvent('ready', $.proxy(function() {
-    player.addEvent('pause', $.proxy(this.onPause, this));
-    player.addEvent('play', $.proxy(this.onPlay, this));
-    player.addEvent('finish', $.proxy(this.onFinish, this));
-    player.addEvent('playProgress', $.proxy(this.onProgress, this));
-  }, this));
-
   return instance;
 };
 
@@ -64,18 +57,5 @@ ModalVimeo.prototype.play = function() {
 ModalVimeo.prototype.onHide = function() {
   return this.getVimeoPlayer().api('pause');
 };
-
-// Override these event handlers in your subclass
-ModalVimeo.prototype.onFinish = function() {
-}
-
-ModalVimeo.prototype.onPlay = function() {
-}
-
-ModalVimeo.prototype.onPause = function() {
-}
-
-ModalVimeo.prototype.onProgress = function(data) {
-}
 
 module.exports = ModalVimeo;
