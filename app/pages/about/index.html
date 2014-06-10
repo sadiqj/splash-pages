@@ -690,8 +690,70 @@
       </popover>
     </div>
 
+    <div ng-init="kieran.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="kieran.isVisible">
+        <img src="" alt="Kieran Oliver">
+          <h4 class="section-subheading u-color-primary u-margin-Ts">
+            Kieran Oliver
+          </h4>
+      </div>
+      <popover show="kieran.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': kieran.isVisible }">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Kieran Oliver</h3>
+        <p>
+          Kieran joined the GoCardless team all the way from Wellington, New Zealand.
+          <br><br>
+          In his spare time he enjoys chasing a frisbee and being generally active outdoors.
+        </p>
+      </popover>
+    </div>
+
+    <div ng-init="saz.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="saz.isVisible">
+        <img src="" alt="Saz Ehibor-Smith">
+          <h4 class="section-subheading u-color-primary u-margin-Ts">
+            Saz Ehibor-Smith
+          </h4>
+      </div>
+      <popover show="saz.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': saz.isVisible }">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">Saz Ehibor-Smith</h3>
+        <p>
+          Saz holds a Bsc in Civil Engineering from Kingston University.
+          <br><br>
+          In his spare time he enjoys in watching, writing, playing, coaching,
+          and talking about football.
+        </p>
+      </popover>
+    </div>
+
   </div>
 
+  <div class="grid u-margin-Bl u-margin-Tl">
+
+    <div ng-init="george.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bs">
+      <div toggle="george.isVisible">
+        <img src="" alt="George Britton">
+          <h4 class="section-subheading u-color-primary u-margin-Ts">
+            George Britton
+          </h4>
+      </div>
+      <popover show="george.isVisible" class="team-member__popover u-is-hidden" ng-class="{ 'u-is-visible': george.isVisible }">
+        <div class="arrow"></div>
+        <h3 class="team-member__popover-title">George Britton</h3>
+        <p>
+          Before joining GoCardless, George worked in the enterprise sales team
+          at Bookatable, working up some of Europe's most prominent hospitality
+          brands.
+          <br><br>
+          In his spare time George plays rugby and spends time with his wife and
+          daughter.
+        </p>
+      </popover>
+    </div>
+
+  </div>
+  
   <hr>
 
   <div class="grid grid--center u-margin-Bl">
