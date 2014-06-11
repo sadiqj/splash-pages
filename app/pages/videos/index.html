@@ -1,0 +1,55 @@
+{% extends "default.html" %}
+
+{% block title %}Videos page{% endblock %}
+{% block description %}Watch a free 10 minute demo on how GoCardless makes Direct Debit easy, simple and cheap.{% endblock %}
+
+{% block content %}
+
+<div ng-init="videos.activeVideo = {}">
+  <div class="u-text-center u-padding-Vl u-margin-Vl">
+    <h1 class="u-text-heading hero-heading u-text-light">Here's how it works</h1>
+    <div ng-hide="videos.activeVideo.id">
+      empty
+    </div>
+    <div ng-if="videos.activeVideo.id">
+      <div class="u-padding-Vl">
+        <ng-gc-vimeo-iframe vimeo-id="videos.activeVideo.id" class="videos-container__iframe" autoplay="true" ng-if="videos.activeVideo.id">
+        </ng-gc-vimeo-iframe>
+      </div>
+      <p>
+        <span id="video-title" ng-bind="videos.activeVideo.title"></span><br>
+        <span id="video-length">3:30</span><br>
+        <span id="video-description">Video 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi.</span>
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="u-text-center u-padding-Vl u-margin-Vl">
+    <ul>
+      <li>
+        <a href ng-click="videos.activeVideo = {
+          id: '72433004',
+          title: 'Title'
+        }">aaaawdawdawd</a>
+      </li>
+      <li>
+        <a href ng-click="videos.activeVideo = {
+          id: '86731710',
+          title: 'Test 2'
+        }">aaaawdawdawd</a>
+      </li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 1 Title" data-video-length="3:30" data-video-description="Video 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#1">Video 1</a></li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 2 Title" data-video-length="3:31" data-video-description="Video 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#2">Video 2</a></li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 3 Title" data-video-length="3:32" data-video-description="Video 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#3">Video 3</a></li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 4 Title" data-video-length="3:33" data-video-description="Video 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#4">Video 4</a></li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 5 Title" data-video-length="3:34" data-video-description="Video 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#5">Video 5</a></li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 6 Title" data-video-length="3:35" data-video-description="Video 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#6">Video 6</a></li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 7 Title" data-video-length="3:36" data-video-description="Video 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#7">Video 7</a></li>
+      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 8 Title" data-video-length="3:37" data-video-description="Video 8 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#8">Video 8</a></li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}
