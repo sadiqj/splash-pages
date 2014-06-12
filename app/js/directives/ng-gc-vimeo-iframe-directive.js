@@ -20,6 +20,7 @@ angular.module('ngGcVimeoIframeDirective', [])
         });
         var $iframe = element.find('iframe');
         $iframe.on('load', function () {
+          console.log(1111);
           var videoPlayer = Froogaloop($iframe[0]);
           videoPlayer.api('ready', function() {
             videoPlayer.api('play');

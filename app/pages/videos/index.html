@@ -50,7 +50,7 @@
     <div class="u-text-center u-padding-Vl u-margin-Tl" ng-controller="NgGcActiveVideo">
       <h1 class="u-text-heading hero-heading u-text-light u-color-invert u-padding-Bs">Here's how it works</h1>
       <div ng-if="activeVideo.id">
-        <div class="u-padding-Vl">
+        <div class="u-padding-Tl">
           <ng-gc-vimeo-iframe vimeo-id="activeVideo.id"
             class="u-center videos-container__iframe u-margin-Vl" autoplay="true">
           </ng-gc-vimeo-iframe>
@@ -67,115 +67,46 @@
 
     <h2 class="u-text-heading u-color-base u-padding-Vl u-margin-Bl">Select a video to learn more about our Dashboard</h2>
 
-    <div class="grid site-container u-padding-Bl">
-      <ng-gc-video-thumb id="72433004" title="Overview of Dashboard" time="3:33"
-        description="Test"
+    <div class="grid site-container">
+      <ng-gc-video-thumb id="72433004" title="Overview of Dashboard" time="1:39"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
         is-active="true"
         slug="overview-of-dashboard"></ng-gc-video-thumb>
 
-      <ng-gc-video-thumb id="86731710" title="Test" time="4:33"
-        description="wwwwww"
-        slug="test-2"></ng-gc-video-thumb>
+      <ng-gc-video-thumb id="72433001" title="Trying out GoCardless" time="0:50"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
 
-      <div class="grid__cell u-1of4 u-text-center u-margin-Bl">
-        <div class="videos-container__thumbnail u-margin-Hs">
-          <div class="u-2of3 u-center u-padding-Txxs">
-            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
-            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
-              href ng-click="videos.activeVideo = {
-                id: '86731710',
-                title: 'Test 2'
-              }">Trying out GoCardless</a>
-            <p class="u-margin-Ts">3:33</p>
-          </div>
-        </div>
-      </div>
-      <a class="grid__cell u-1of4 u-text-center u-margin-Bl u-link-clean"
-        href ng-click="videos.activeVideo = {
-          id: '72433004',
-          title: 'Title'
-        }">
-        <div class="videos-container__thumbnail u-margin-Hs"
-          ng-class="{
-            'is-active': videos.activeVideo.id == '72433004'
-          }">
-          <div class="u-2of3 u-center u-padding-Txxs">
-            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"
-              ng-class="{
-                'is-active': videos.activeVideo.id == '72433004'
-              }"></i>
-            <p class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link">
-              Overview of Dashboard
-            </p>
-            <p class="u-margin-Ts">3:33</p>
-          </div>
-        </div>
-      </a>
-      <div class="grid__cell u-1of4 u-text-center u-margin-Bl">
-        <div class="videos-container__thumbnail u-margin-Hs">
-          <div class="u-2of3 u-center u-padding-Txxs">
-            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
-            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
-              href ng-click="videos.activeVideo = {
-                id: '86731710',
-                title: 'Test 2'
-              }">Trying out GoCardless</a>
-            <p class="u-margin-Ts">3:33</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
-        <div class="videos-container__thumbnail u-margin-Hs">
-          <div class="u-2of3 u-center u-padding-Txxs">
-            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
-            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
-              href ng-click="videos.activeVideo = {
-                id: '72433004',
-                title: 'Title'
-              }">Overview of Dashboard</a>
-            <p class="u-margin-Ts">3:33</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
-        <div class="videos-container__thumbnail u-margin-Hs">
-          <div class="u-2of3 u-center u-padding-Txxs">
-            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
-            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
-              href ng-click="videos.activeVideo = {
-                id: '86731710',
-                title: 'Test 2'
-              }">Trying out GoCardless</a>
-            <p class="u-margin-Ts">3:33</p>
-          </div>
-        </div>
-      </div>
-       <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
-        <div class="videos-container__thumbnail u-margin-Hs">
-          <div class="u-2of3 u-center u-padding-Txxs">
-            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
-            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
-              href ng-click="videos.activeVideo = {
-                id: '72433004',
-                title: 'Title'
-              }">Overview of Dashboard</a>
-            <p class="u-margin-Ts">3:33</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
-        <div class="videos-container__thumbnail u-margin-Hs">
-          <div class="u-2of3 u-center u-padding-Txxs">
-            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
-            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
-              href ng-click="videos.activeVideo = {
-                id: '86731710',
-                title: 'Test 2'
-              }">Trying out GoCardless</a>
-            <p class="u-margin-Ts">3:33</p>
-          </div>
-        </div>
-      </div>
+        slug="trying-out-gocardless"></ng-gc-video-thumb>
+
+      <ng-gc-video-thumb id="72433001" title="Setting up customers" time="1:39"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
+
+        slug="setting-up-customers"></ng-gc-video-thumb>
+
+      <ng-gc-video-thumb id="72433001" title="Taking payments" time="2:21"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
+
+        slug="taking-payments"></ng-gc-video-thumb>
+
+      <ng-gc-video-thumb id="72433001" title="Custom payment forms" time="1:07"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
+
+        slug="custom-payment-forms"></ng-gc-video-thumb>
+
+      <ng-gc-video-thumb id="72433001" title="Recurring payments" time="1:30"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
+
+        slug="recurring-payments"></ng-gc-video-thumb>
+
+      <ng-gc-video-thumb id="72433001" title="Bulk payments" time="2:15"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
+
+        slug="bulk-payments"></ng-gc-video-thumb>
+
+      <ng-gc-video-thumb id="72433001" title="Overview of Dashboard" time="3:33"
+        description="To collect Direct Debit payments you need your customer to authorise you first. With GoCardless the whole process is managed online."
+
+        slug="overview-of-dashboard"></ng-gc-video-thumb>
     </div>
 
     <p class="u-color-meta u-center u-2of5 u-padding-Vs">

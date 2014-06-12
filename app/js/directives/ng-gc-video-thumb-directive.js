@@ -21,15 +21,23 @@ angular.module('ngGcVideoThumbDirective', [
               'ng-class="{' +
               '  \'is-active\': isSelfActive()' +
               '}">' +
-              '<div class="u-2of3 u-center u-padding-Txxs">' +
+              '<div class="u-5of6 u-center u-padding-Txxs">' +
                 '<i class="videos-container__play-button u-margin-Tl u-margin-Bs"' +
                   'ng-class="{' +
                   '  \'is-active\': isSelfActive()' +
                   '}"></i>' +
-                '<p class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link">' +
+                '<p class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"' +
+                  'ng-class="{' +
+                  '  \'is-active\': isSelfActive()' +
+                  '}">' +
                   '{{ title }}' +
                 '</p>' +
-                '<p class="u-margin-Ts">{{ time }}</p>' +
+                '<p class="u-margin-Ts u-color-base videos-container__time"' +
+                  'ng-class="{' +
+                  '  \'is-active\': isSelfActive()' +
+                  '}">' +
+                  '{{ time }}'+
+                '</p>' +
               '</div>' +
             '</div>' +
           '</a>' +
