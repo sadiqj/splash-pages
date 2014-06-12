@@ -2,7 +2,8 @@
 
 .hero-worry {
   height: 500px;
-  min-width: 1024px;
+  // min-width: 1008px;
+  overflow: auto; // Quick fix for mobile width
 }
 
 .hero-worry--girl {
