@@ -3,3 +3,43 @@
   height: 488px;
   background: #ccc;
 }
+
+.videos-container__intro {
+  background: #F2A296;
+  background: linear-gradient(45deg, #FFCA7D 0%, #DA59C5 100%);
+}
+
+.videos-container__thumbnail {
+  height: 210px;
+  background: $site-background-color;
+  transition: background 0.4s ease;
+}
+
+.videos-container__thumbnail:hover {
+  cursor: pointer;
+  background: $light-gray;
+  transition: background 0.2s ease;
+}
+
+.videos-container__thumbnail.is-active,
+.videos-container__thumbnail.is-active:hover {
+  background: #86D5D1;
+}
+
+.videos-container__select-a-video {
+  background: white;
+}
+
+.videos-container__play-button {
+  @include icon('/images/videos/play-button', 32px, 32px);
+}
+
+.videos-container__play-button.is-active {
+  @include icon('/images/videos/play-button--active', 32px, 32px);
+}
+
+.videos-container__link:hover {
+  color: $text-color;
+}
+
+

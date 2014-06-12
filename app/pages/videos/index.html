@@ -1,55 +1,194 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Videos page{% endblock %}
 {% block description %}Watch a free 10 minute demo on how GoCardless makes Direct Debit easy, simple and cheap.{% endblock %}
 
-{% block content %}
-
+{% block body %}
 <div ng-init="videos.activeVideo = {}">
-  <div class="u-text-center u-padding-Vl u-margin-Vl">
-    <h1 class="u-text-heading hero-heading u-text-light">Here's how it works</h1>
-    <div ng-hide="videos.activeVideo.id">
-      empty
-    </div>
-    <div ng-if="videos.activeVideo.id">
-      <div class="u-padding-Vl">
-        <ng-gc-vimeo-iframe vimeo-id="videos.activeVideo.id" class="videos-container__iframe" autoplay="true" ng-if="videos.activeVideo.id">
-        </ng-gc-vimeo-iframe>
+  <div class="videos-container__intro u-relative">
+    <div class="site-container features-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
+      <div class="u-pull-start">
+        <a href="/">
+          <i class="icon-gc-logo-invert logo-header"></i>
+        </a>
       </div>
-      <p>
-        <span id="video-title" ng-bind="videos.activeVideo.title"></span><br>
-        <span id="video-length">3:30</span><br>
-        <span id="video-description">Video 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi.</span>
-      </p>
+      <div class="u-pull-end">
+        <nav class="nav u-pull-start">
+          <a class="nav__item u-link-invert"
+            href="/">
+            Home
+          </a>
+          <a class="nav__item u-link-invert features-container__active-link"
+            href="/features">
+            Features
+          </a>
+          <a class="nav__item u-link-invert"
+            href="/stories">
+            Customers
+          </a>
+          <a class="nav__item u-link-invert"
+             href="/pricing">
+            Pricing
+          </a>
+          <a class="nav__item u-link-invert"
+             href="/guides">
+            Guides
+          </a>
+        </nav>
+
+        <ul class="u-cf u-pull-start">
+          <li class="u-pull-start">
+            <a href="/users/sign_in" class="btn btn--invert-hollow btn--small" id="login">Login</a>
+          </li>
+          <li class="u-pull-start u-margin-Ls">
+            <a href="/merchants/new" class="btn btn--invert-hollow btn--small" id="nav_sign_up">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="u-text-center u-padding-Vl u-margin-Tl" ng-controller="NgGcActiveVideo">
+      <h1 class="u-text-heading hero-heading u-text-light u-color-invert u-padding-Bs">Here's how it works</h1>
+      <div ng-if="activeVideo.id">
+        <div class="u-padding-Vl">
+          <ng-gc-vimeo-iframe vimeo-id="activeVideo.id"
+            class="u-center videos-container__iframe u-margin-Vl" autoplay="true">
+          </ng-gc-vimeo-iframe>
+        </div>
+        <div class="u-center u-2of5 u-padding-Vs u-color-invert">
+          <p class="u-text-heavy" ng-bind="activeVideo.title"></p>
+          <p ng-bind="activeVideo.description"></p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <hr>
+  <div class="videos-container__select-a-video u-text-center u-color-base u-padding-Vl">
 
-  <div class="u-text-center u-padding-Vl u-margin-Vl">
-    <ul>
-      <li>
-        <a href ng-click="videos.activeVideo = {
+    <h2 class="u-text-heading u-color-base u-padding-Vl u-margin-Bl">Select a video to learn more about our Dashboard</h2>
+
+    <div class="grid site-container u-padding-Bl">
+      <ng-gc-video-thumb id="72433004" title="Overview of Dashboard" time="3:33"
+        description="Test"
+        is-active="true"
+        slug="overview-of-dashboard"></ng-gc-video-thumb>
+
+      <ng-gc-video-thumb id="86731710" title="Test" time="4:33"
+        description="wwwwww"
+        slug="test-2"></ng-gc-video-thumb>
+
+      <div class="grid__cell u-1of4 u-text-center u-margin-Bl">
+        <div class="videos-container__thumbnail u-margin-Hs">
+          <div class="u-2of3 u-center u-padding-Txxs">
+            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
+            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
+              href ng-click="videos.activeVideo = {
+                id: '86731710',
+                title: 'Test 2'
+              }">Trying out GoCardless</a>
+            <p class="u-margin-Ts">3:33</p>
+          </div>
+        </div>
+      </div>
+      <a class="grid__cell u-1of4 u-text-center u-margin-Bl u-link-clean"
+        href ng-click="videos.activeVideo = {
           id: '72433004',
           title: 'Title'
-        }">aaaawdawdawd</a>
-      </li>
-      <li>
-        <a href ng-click="videos.activeVideo = {
-          id: '86731710',
-          title: 'Test 2'
-        }">aaaawdawdawd</a>
-      </li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 1 Title" data-video-length="3:30" data-video-description="Video 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#1">Video 1</a></li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 2 Title" data-video-length="3:31" data-video-description="Video 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#2">Video 2</a></li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 3 Title" data-video-length="3:32" data-video-description="Video 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#3">Video 3</a></li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 4 Title" data-video-length="3:33" data-video-description="Video 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#4">Video 4</a></li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 5 Title" data-video-length="3:34" data-video-description="Video 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#5">Video 5</a></li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 6 Title" data-video-length="3:35" data-video-description="Video 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#6">Video 6</a></li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 7 Title" data-video-length="3:36" data-video-description="Video 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#7">Video 7</a></li>
-      <li><a class="videos-container__link" ng-gc-video-link data-video-id="72433004" data-video-title="Video 8 Title" data-video-length="3:37" data-video-description="Video 8 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit diam vitae libero pretium luctus. Cras et nunc in nisi." href="#8">Video 8</a></li>
-    </ul>
+        }">
+        <div class="videos-container__thumbnail u-margin-Hs"
+          ng-class="{
+            'is-active': videos.activeVideo.id == '72433004'
+          }">
+          <div class="u-2of3 u-center u-padding-Txxs">
+            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"
+              ng-class="{
+                'is-active': videos.activeVideo.id == '72433004'
+              }"></i>
+            <p class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link">
+              Overview of Dashboard
+            </p>
+            <p class="u-margin-Ts">3:33</p>
+          </div>
+        </div>
+      </a>
+      <div class="grid__cell u-1of4 u-text-center u-margin-Bl">
+        <div class="videos-container__thumbnail u-margin-Hs">
+          <div class="u-2of3 u-center u-padding-Txxs">
+            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
+            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
+              href ng-click="videos.activeVideo = {
+                id: '86731710',
+                title: 'Test 2'
+              }">Trying out GoCardless</a>
+            <p class="u-margin-Ts">3:33</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
+        <div class="videos-container__thumbnail u-margin-Hs">
+          <div class="u-2of3 u-center u-padding-Txxs">
+            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
+            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
+              href ng-click="videos.activeVideo = {
+                id: '72433004',
+                title: 'Title'
+              }">Overview of Dashboard</a>
+            <p class="u-margin-Ts">3:33</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
+        <div class="videos-container__thumbnail u-margin-Hs">
+          <div class="u-2of3 u-center u-padding-Txxs">
+            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
+            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
+              href ng-click="videos.activeVideo = {
+                id: '86731710',
+                title: 'Test 2'
+              }">Trying out GoCardless</a>
+            <p class="u-margin-Ts">3:33</p>
+          </div>
+        </div>
+      </div>
+       <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
+        <div class="videos-container__thumbnail u-margin-Hs">
+          <div class="u-2of3 u-center u-padding-Txxs">
+            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
+            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
+              href ng-click="videos.activeVideo = {
+                id: '72433004',
+                title: 'Title'
+              }">Overview of Dashboard</a>
+            <p class="u-margin-Ts">3:33</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid__cell u-1of4 u-text-center u-margin-Ts">
+        <div class="videos-container__thumbnail u-margin-Hs">
+          <div class="u-2of3 u-center u-padding-Txxs">
+            <i class="videos-container__play-button u-margin-Tl u-margin-Bs"></i>
+            <a class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"
+              href ng-click="videos.activeVideo = {
+                id: '86731710',
+                title: 'Test 2'
+              }">Trying out GoCardless</a>
+            <p class="u-margin-Ts">3:33</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="u-color-meta u-center u-2of5 u-padding-Vs">
+      Got a question that hasn't been answered?<br>
+      Take a look at our frequently asked questions by clicking <a href="#" class="u-color-meta u-text-underline">here</a>.
+    </p>
+
   </div>
+
+  <div class="site-container u-padding-Ts">
+    {% include "_site_footer.html" %}
+  </div>
+
 </div>
 
 {% endblock %}

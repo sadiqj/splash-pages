@@ -1,5 +1,7 @@
 'use strict';
 
+var Froogaloop = require('froogaloop');
+
 angular.module('ngGcVimeoIframeDirective', [])
 .directive('ngGcVimeoIframe', [
   '$sce',
@@ -13,9 +15,15 @@ angular.module('ngGcVimeoIframeDirective', [])
         scope.$watch('vimeoId', function(vimeoId) {
           var url = '//player.vimeo.com/video/' +
             scope.vimeoId +
-            '?title=0&amp;byline=0&amp;portrait=0&amp;color=3366cc&autoplay=' +
-            scope.autoplay;
+            '?title=0&amp;byline=0&amp;portrait=0&amp;color=3366cc&autoplay'
           scope.url = $sce.trustAsResourceUrl(url);
+        });
+        var $iframe = element.find('iframe');
+        $iframe.on('load', function () {
+          var videoPlayer = Froogaloop($iframe[0]);
+          videoPlayer.api('ready', function() {
+            videoPlayer.api('play');
+          });
         });
       },
       scope: {
