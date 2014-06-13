@@ -14,35 +14,36 @@ angular.module('ngGcVideoThumbDirective', [
       restrict: 'E',
       replace: true,
       template:
-        '<div class="grid__cell u-1of4 u-text-center u-margin-Bl">' +
-          '<a class="u-link-clean"' +
-            'href ng-click="setActiveVideo()" ng-gc-smooth-scroll>' +
-            '<div class="videos-container__thumbnail u-margin-Hs"' +
-              'ng-class="{' +
-              '  \'is-active\': isSelfActive()' +
-              '}">' +
-              '<div class="u-5of6 u-center u-padding-Txxs">' +
-                '<i class="videos-container__play-button u-margin-Tl u-margin-Bs"' +
-                  'ng-class="{' +
-                  '  \'is-active\': isSelfActive()' +
-                  '}"></i>' +
-                '<p class="u-text-heading u-text-h2 u-text-light u-link-clean u-cf u-color-base videos-container__link"' +
-                  'ng-class="{' +
-                  '  \'is-active\': isSelfActive()' +
-                  '}">' +
-                  '{{ title }}' +
-                '</p>' +
-                '<p class="u-margin-Ts u-color-base videos-container__time"' +
-                  'ng-class="{' +
-                  '  \'is-active\': isSelfActive()' +
-                  '}">' +
-                  '{{ time }}'+
-                '</p>' +
-              '</div>' +
-            '</div>' +
-          '</a>' +
-        '</div>',
-      link: function link(scope, element, attrs) {
+        ['<div class="grid__cell u-1of4 u-text-center u-margin-Bl">',
+            '<a class="u-link-clean"',
+              'href ng-click="setActiveVideo()" ng-gc-smooth-scroll>',
+              '<div class="videos-container__thumbnail u-margin-Hs u-margin-Bs"',
+                'ng-class="{',
+                '  \'is-active\': isSelfActive()',
+                '}">',
+                '<div class="u-5of6 u-center u-padding-Txxs">',
+                  '<i class="videos-container__play-button u-margin-Tl u-margin-Bs"',
+                    'ng-class="{',
+                    '  \'is-active\': isSelfActive()',
+                    '}"></i>',
+                  '<p class="u-text-heading u-text-h2 u-text-light',
+                  'u-link-clean u-cf u-color-base videos-container__link"',
+                    'ng-class="{',
+                    '  \'is-active\': isSelfActive()',
+                    '}">',
+                    '{{ title }}',
+                  '</p>',
+                  '<p class="u-margin-Ts u-color-base videos-container__time"',
+                    'ng-class="{',
+                    '  \'is-active\': isSelfActive()',
+                    '}">',
+                    '{{ time }}',
+                  '</p>',
+                '</div>',
+              '</div>',
+            '</a>',
+          '</div>'].join(''),
+      link: function link(scope) {
         var video = {
           id: scope.id,
           title: scope.title,
@@ -57,19 +58,19 @@ angular.module('ngGcVideoThumbDirective', [
           return scope.id === ngGcActiveVideo.getActiveVideo().id;
         };
 
-        scope.setActiveVideo = function setActiveVideo() {
-          var slug = getSlug();
-          // only set pushState when the slug is different from the current video
-          if (slug !== scope.slug) {
-            window.history.pushState({}, '', '#' + scope.slug);
-          }
-          ngGcActiveVideo.setActiveVideo(video);
-        };
-
         function getSlug() {
           var slug = window.location.hash && window.location.hash.replace(/^#/, '');
           return slug;
         }
+
+        scope.setActiveVideo = function setActiveVideo() {
+          var slug = getSlug();
+          // only set hash when the slug is different from the current video
+          if (slug !== scope.slug) {
+            location.hash = scope.slug;
+          }
+          ngGcActiveVideo.setActiveVideo(video);
+        };
 
         function setActiveSlug() {
           var slug = getSlug();

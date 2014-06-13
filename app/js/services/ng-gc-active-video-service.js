@@ -15,16 +15,24 @@ angular.module('ngGcActiveVideoService', [
 
     return {
       addVideo: function addVideo(video) {
-        if (!video || !video.slug) { return false; }
-        if (hasVideo(video)) { return false; }
+        if (!video || !video.slug) {
+          return false;
+        }
+        if (hasVideo(video)) {
+          return false;
+        }
         videos.push(video);
         return true;
       },
       setActiveVideo: function setActiveVideo(video) {
-        if (!video || !video.slug) { return false; }
-        if (!hasVideo(video)) { return false; }
-        var video = _.find(videos, { 'slug': video.slug });
-        _.extend(activeVideo, video);
+        if (!video || !video.slug) {
+          return false;
+        }
+        if (!hasVideo(video)) {
+          return false;
+        }
+        var newVideo = _.find(videos, { 'slug': video.slug });
+        _.extend(activeVideo, newVideo);
         return true;
       },
       getActiveVideo: function getActiveVideo() {

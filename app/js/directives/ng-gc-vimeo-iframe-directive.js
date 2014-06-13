@@ -13,9 +13,8 @@ angular.module('ngGcVimeoIframeDirective', [])
       restrict: 'E',
       replace: true,
       template: '<div><iframe ng-if="url" src="{{url}}" frameborder="0" width="100%" height="100%"></iframe></div>',
-      link: function link(scope, element, attrs) {
-        var count = 0;
-        scope.$watch('vimeoId', function(vimeoId) {
+      link: function link(scope, element) {
+        scope.$watch('vimeoId', function() {
           var url = '//player.vimeo.com/video/' +
             scope.vimeoId +
             '?color=4fc4be';
