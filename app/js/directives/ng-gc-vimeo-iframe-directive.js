@@ -18,9 +18,9 @@ angular.module('ngGcVimeoIframeDirective', [])
             '?title=0&amp;byline=0&amp;portrait=0&amp;color=3366cc&autoplay'
           scope.url = $sce.trustAsResourceUrl(url);
         });
-        var $iframe = element.find('iframe');
+        var $iframe = element.find('.videos-container__iframe');
         $iframe.on('load', function () {
-          console.log(1111);
+          console.log($iframe);
           var videoPlayer = Froogaloop($iframe[0]);
           videoPlayer.api('ready', function() {
             videoPlayer.api('play');
