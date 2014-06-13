@@ -8,9 +8,12 @@ require('./directives/ng-gc-href-active-directive');
 require('./directives/ng-gc-ga-event-tracker-directive');
 require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-smooth-scroll-directive');
+require('./directives/ng-gc-vimeo-iframe-directive');
+require('./directives/ng-gc-video-thumb-directive');
 
 require('./controllers/ng-gc-prospect-form-controller');
 require('./controllers/ng-gc-watch-demo-form-controller');
+require('./controllers/ng-gc-active-video-controller');
 
 require('../components/ng-gc-components/ng-gc-dialog-directive/dialog-controller');
 require('../components/ng-gc-components/ng-gc-popover-directive/popover-directive');
@@ -32,7 +35,10 @@ angular.module('home', [
   'gc.toggle',
   'ngGcProspectFormCtrl',
   'ngGcWatchDemoFormCtrl',
-  'ngGcSmoothScrollDirective'
+  'ngGcActiveVideoCtrl',
+  'ngGcSmoothScrollDirective',
+  'ngGcVimeoIframeDirective',
+  'ngGcVideoThumbDirective'
 ]);
 
 function isSupportedBrowser() {

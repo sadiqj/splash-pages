@@ -1,16 +1,23 @@
 'use strict';
 
 angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
-  function ngGcSmoothScrollDirective() {
+  '$rootScope',
+  function ngGcSmoothScrollDirective($rootScope) {
 
     return {
       link: function link(scope, element, attrs) {
         element.on('click', function(e) {
           var href = attrs.href;
+          var offset = 0;
           e.preventDefault();
-          $('html, body').animate({
-              scrollTop: $(href).offset().top
-          }, 500);
+          if (href) {
+            offset = $(href).offset().top;
+          }
+          $('body').animate({
+            scrollTop: offset
+          }, 500, function() {
+            $rootScope.$emit('didScrollToTop');
+          });
           return false;
         });
       }
