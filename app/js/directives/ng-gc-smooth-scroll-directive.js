@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
-  function ngGcSmoothScrollDirective() {
+  '$rootScope',
+  function ngGcSmoothScrollDirective($rootScope) {
 
     return {
       link: function link(scope, element, attrs) {
@@ -14,7 +15,9 @@ angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
           }
           $('body').animate({
             scrollTop: offset
-          }, 500);
+          }, 500, function() {
+            $rootScope.$emit('didScrollToTop');
+          });
           return false;
         });
       }
