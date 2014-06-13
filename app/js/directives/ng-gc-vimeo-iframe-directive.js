@@ -29,14 +29,22 @@ angular.module('ngGcVimeoIframeDirective', [])
             var canPlay = false;
             var didScrollToTop = false;
 
+            // All being fired twice! Is this linked to the popState back-button double-click issue?
+
+            function playOnce() {
+              if (canPlay && didScrollToTop) {
+                player.api('play');
+              }
+            }
+
             player.addEvent('ready', function () {
               canPlay = true;
-              if (canPlay && didScrollToTop) player.api('play');
+              playOnce();
             });
 
             $rootScope.$on('didScrollToTop', function() {
               didScrollToTop = true;
-              if (canPlay && didScrollToTop) player.api('play');
+              playOnce();
             });
           }, 0);
         });
