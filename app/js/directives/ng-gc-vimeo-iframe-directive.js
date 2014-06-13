@@ -18,7 +18,7 @@ angular.module('ngGcVimeoIframeDirective', [])
         scope.$watch('vimeoId', function(vimeoId) {
           var url = '//player.vimeo.com/video/' +
             scope.vimeoId +
-            '?color=4fc4be'
+            '?color=4fc4be';
           scope.url = $sce.trustAsResourceUrl(url);
 
           // Timeout required to bump onto the next event loop run, the iframe does not exist
