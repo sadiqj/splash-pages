@@ -20,6 +20,8 @@ $ make setup
 
 This writes to `/etc/launchd.conf` and increases the limits for both values automatically.
 
+You'll need to restart your Mac after this command is run for it to take effect.
+
 # Running locally:
 
 ```
