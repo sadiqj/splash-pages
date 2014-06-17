@@ -12,6 +12,14 @@ PATH=node_modules/.bin:$PATH
 $ npm install
 ```
 
+# First time setup
+
+```
+$ make setup
+```
+
+This writes to `/etc/launchd.conf` and increases the limits for both values automatically.
+
 # Running locally:
 
 ```
