@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
-  '$rootScope',
-  function ngGcSmoothScrollDirective($rootScope) {
+  function ngGcSmoothScrollDirective() {
 
     return {
       link: function link(scope, element, attrs) {
