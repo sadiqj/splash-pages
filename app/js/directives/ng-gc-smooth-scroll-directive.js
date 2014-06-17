@@ -7,18 +7,17 @@ angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
     return {
       link: function link(scope, element, attrs) {
         element.on('click', function(e) {
+          e.preventDefault();
+
           var href = attrs.href;
           var offset = 0;
-          e.preventDefault();
           if (href) {
             offset = $(href).offset().top;
           }
+
           $('body').animate({
             scrollTop: offset
-          }, 500, function() {
-            $rootScope.$emit('didScrollToTop');
-          });
-          return false;
+          }, 500);
         });
       }
     };
