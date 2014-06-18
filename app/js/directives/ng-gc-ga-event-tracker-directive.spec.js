@@ -44,7 +44,7 @@ describe('ngGcGaEventTrackerDirective', function() {
 
     elm.trigger('click');
 
-    expect($window.dataLayer[3]).toEqualData(
+    expect($window.dataLayer[0]).toEqualData(
       {event:'RaD'}
     );
   });
