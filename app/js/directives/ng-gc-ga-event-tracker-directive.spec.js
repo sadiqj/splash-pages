@@ -31,24 +31,20 @@ describe('ngGcGaEventTrackerDirective', function() {
     expect(function() {
       setup({
         event: 'click',
-        category: 'forms',
-        action: 'click-form',
         label: ''
       });
-    }).toThrow('Invalid options: event, category, action, label');
+    }).toThrow('Invalid options: event, label');
   });
 
   it('binds click', function() {
     setup({
       event: 'click',
-      category: 'forms',
-      action: 'click-form',
       label: 'signup'
     });
 
     elm.trigger('click');
 
-    expect($window._gaq[1]).toEqualData([
+    expect($window.dataLayer[1]).toEqualData([
       '_trackEvent', 'forms', 'click-form', 'signup'
     ]);
   });
