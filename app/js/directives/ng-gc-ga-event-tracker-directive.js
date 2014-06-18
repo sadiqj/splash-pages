@@ -27,12 +27,11 @@ angular.module('ngGcGaEventTrackerDirective', [])
         link: function link(scope, element, attrs) {
           var options = getOptions(scope.$eval(attrs.ngGcGaEventTracker));
 
-          function track(event) {
+          function track() {
             // Create event
             $window.dataLayer.push(
               {'event':options.label}
             );
-
           }
 
           element.on(options.event, track);
