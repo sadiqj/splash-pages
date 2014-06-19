@@ -30,7 +30,9 @@ angular.module('ngGcGaEventTrackerDirective', [])
           function track() {
             // Create event
             $window.dataLayer.push(
-              {'event':options.label}
+              {
+                event:options.label
+              }
             );
           }
 
