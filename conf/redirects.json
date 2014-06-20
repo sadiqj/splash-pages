@@ -29,8 +29,7 @@
   "/team/index.html": "https://gocardless.com/about",
   "/request-a-demo/index.html": "https://gocardless.com/watch-a-demo",
   "/switch/index.html": "https://gocardless.com/features",
-  "/jobs/backend_developer": "https://gocardless.com/jobs",
-  "/direct-debiy": "https://gocardless.com/direct-debit",
-  "/jobs/frontend_developer": "https://gocardless.com/jobs",
-  "/how-it-works/api": "https://gocardless.com/features/api"
+  "/jobs/backend_developer/index.html": "https://gocardless.com/jobs",
+  "/jobs/frontend_developer/index.html": "https://gocardless.com/jobs",
+  "/how-it-works/api/index.html": "https://gocardless.com/features/api"
 }
