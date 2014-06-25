@@ -1,8 +1,14 @@
 .about-container__intro {
   height: 400px;
   width: 100%;
-  background: #122539;
-  background: linear-gradient(45deg, #61B0FF 0%, #3DE1D8 75%);
+  background: url('/images/hero/hero-about-bg@2x.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.about-container__content {
+  background: white;
 }
 
 .about-container__full-height {
