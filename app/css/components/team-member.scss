@@ -1,5 +1,6 @@
 .team-member {
   position: relative;
+  height: 190px;
 }
 
 .team-member:hover {
@@ -24,7 +25,8 @@
   font-size: 14px;
   left: -46px;
   z-index: 1;
-  top: 121px;
+  top: 151px;
+  opacity: 0;
 }
 
 .team-member__popover:after, .team-member__popover:before {

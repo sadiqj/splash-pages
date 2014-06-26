@@ -4,6 +4,8 @@
 
 {% block body %}
 
+<div ng-gc-hide-popover>
+
   <div class="about-container__intro u-relative">
     <div class="site-container about-container__full-height">
       <div class="about-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
@@ -41,53 +43,53 @@
 
         <div class="grid u-margin-Bl u-margin-Tl">
 
-          <div ng-init="hiroki.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bm">
-            <div toggle="hiroki.isVisible">
+          <div class="team-member grid__cell u-1of6 u-padding-Bm">
+            <div ng-gc-team-popover>
               <div class="team-member__image">
                 <img src="/images/team/hiroki@2x.png" alt="Hiroki Takeuchi">
               </div>
               <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
                 Hiroki Takeuchi
               </h5>
-            </div>
-            <popover show="hiroki.isVisible" class="team-member__popover u-color-invert u-is-hidden" ng-class="{ 'u-is-visible': hiroki.isVisible }" ng-class="{ 'u-is-visible': hiroki.isVisible }">
-              <div class="arrow"></div>
-              <h3 class="u-text-heading u-text-center u-color-invert u-margin-Bs">Hiroki Takeuchi</h3>
-              <p>
-                Before founding GoCardless, Hiroki worked closely with Global Financial
-                Institutions at McKinsey &amp; Company.
-                <br><br>
-                Hiroki studied Mathematics at Oxford University, and has interned at
-                J.P. Morgan and Auctomatic.
-              </p>
-              <div class="u-margin-Tm u-text-center">
-                <a href="#" class="team-member__link team-member__link--twitter"></a>
-                <a href="#" class="team-member__link team-member__link--github"></a>
-                <a href="#" class="team-member__link team-member__link--linkedin"></a>
+              <div class="team-member__popover u-color-invert u-is-hidden">
+                <div class="arrow"></div>
+                <h3 class="u-text-heading u-text-center u-color-invert u-margin-Bs">Hiroki Takeuchi</h3>
+                <p>
+                  Before founding GoCardless, Hiroki worked closely with Global Financial
+                  Institutions at McKinsey &amp; Company.
+                  <br><br>
+                  Hiroki studied Mathematics at Oxford University, and has interned at
+                  J.P. Morgan and Auctomatic.
+                </p>
+                <div class="u-margin-Tm u-text-center">
+                  <a href="#" class="team-member__link team-member__link--twitter"></a>
+                  <a href="#" class="team-member__link team-member__link--github"></a>
+                  <a href="#" class="team-member__link team-member__link--linkedin"></a>
+                </div>
               </div>
-            </popover>
+            </div>
           </div>
 
-          <div ng-init="matt.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bm">
-            <div toggle="matt.isVisible">
+          <div class="team-member grid__cell u-1of6 u-padding-Bm">
+            <div ng-gc-team-popover>
               <div class="team-member__image">
                 <img src="/images/team/matt@2x.png" alt="Matt Robinson">
               </div>
               <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
                 Matt Robinson
               </h5>
+              <div class="team-member__popover u-color-invert u-is-hidden">
+                <div class="arrow"></div>
+                <h3 class="u-text-heading u-text-center u-color-invert u-margin-Bs">Matt Robinson</h3>
+                <p>
+                  Prior to founding GoCardless, Matt worked at McKinsey &amp; Company,
+                  and studied Law at Oxford University.
+                  <br><br>
+                  Matt started his first business at age 16, which funded his
+                  university degree.
+                </p>
+              </div>
             </div>
-            <popover show="matt.isVisible" class="team-member__popover u-color-invert u-is-hidden" ng-class="{ 'u-is-visible': matt.isVisible }">
-              <div class="arrow"></div>
-              <h3 class="u-text-heading u-text-center u-color-invert u-margin-Bs">Matt Robinson</h3>
-              <p>
-                Prior to founding GoCardless, Matt worked at McKinsey &amp; Company,
-                and studied Law at Oxford University.
-                <br><br>
-                Matt started his first business at age 16, which funded his
-                university degree.
-              </p>
-            </popover>
           </div>
 
           <div ng-init="harry.isVisible = false" class="team-member grid__cell u-1of6 u-padding-Bm">
@@ -837,5 +839,7 @@
   <div class="site-container u-padding-Ts">
     {% include "_site_footer.html" %}
   </div>
+
+</div>
 
 {% endblock %}
