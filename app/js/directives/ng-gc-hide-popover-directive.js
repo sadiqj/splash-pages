@@ -8,7 +8,7 @@ angular.module('ngGcHidePopoverDirective', [
   function ngGcHidePopoverDirective() {
 
     return {
-      link: function link(element) {
+      link: function link() {
         $(document).on('click', function(e) {
           if ($('.team-member').has(e.target).length === 0) {
             $('.is-active').popoverDisplay('hide');
