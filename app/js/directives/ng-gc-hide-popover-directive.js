@@ -1,20 +1,17 @@
 'use strict';
 
-angular.module('ngGcHidePopoverDirective', []).directive('ngGcHidePopover', [
+require('./ng-gc-team-popover-directive');
+
+angular.module('ngGcHidePopoverDirective', [
+  'ngGcTeamPopoverDirective'
+  ]).directive('ngGcHidePopover', [
   function ngGcHidePopoverDirective() {
 
     return {
       link: function link(scope, element, attrs) {
-
         $(document).on('click', function(e) {
-
-          if (!$('.team-member').is(e.target) && $('.team-member').has(e.target).length === 0) {
-            $('.is-active').animate({
-              "opacity": 0,
-              "top": 151
-              }, 200, 'swing', function(){
-                $(this).addClass('u-is-hidden').removeClass('is-active');
-              });
+          if ($('.team-member').has(e.target).length === 0) {
+            $('.is-active').popoverDisplay("hide");
             }
         });
       }
