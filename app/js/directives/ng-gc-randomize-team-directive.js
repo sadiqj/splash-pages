@@ -9,10 +9,9 @@ angular.module('ngGcRandomizeTeamDirective', []).directive('ngGcRandomizeTeam', 
       link: function link(scope, element, attrs) {
 
         var teamArray = [];
-        var teamMembers = element.find('.grid').detach();
+        var teamMembers = element.find('.team-member').detach();
         teamArray.push(teamMembers);
-        var elements = teamArray[0];
-        var shuffledElements = _.shuffle(elements);
+        var shuffledElements = _.shuffle(teamArray[0]);
         element.append(shuffledElements);
 
       }
