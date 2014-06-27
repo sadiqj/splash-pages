@@ -8,10 +8,10 @@ angular.module('ngGcHidePopoverDirective', [
   function ngGcHidePopoverDirective() {
 
     return {
-      link: function link(scope, element, attrs) {
+      link: function link(element) {
         $(document).on('click', function(e) {
           if ($('.team-member').has(e.target).length === 0) {
-            $('.is-active').popoverDisplay("hide");
+            $('.is-active').popoverDisplay('hide');
           }
         });
       }
