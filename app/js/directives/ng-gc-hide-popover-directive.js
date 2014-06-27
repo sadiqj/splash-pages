@@ -12,7 +12,7 @@ angular.module('ngGcHidePopoverDirective', [
         $(document).on('click', function(e) {
           if ($('.team-member').has(e.target).length === 0) {
             $('.is-active').popoverDisplay("hide");
-            }
+          }
         });
       }
     };
