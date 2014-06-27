@@ -14,6 +14,10 @@ angular.module('ngGcRandomizeTeamDirective', []).directive('ngGcRandomizeTeam', 
         var shuffledElements = _.shuffle(teamArray[0]);
         element.append(shuffledElements);
 
+        // This element is invisible (but is still on page, to retain the correct height)
+        // until the shuffling is done. (Note: no-js class means it's not invisible if there's no JS)
+        element.css("opacity", 1);
+
       }
     };
 

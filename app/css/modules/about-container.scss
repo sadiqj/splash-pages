@@ -38,3 +38,11 @@
 .about-container__investors {
   height: 100px;
 }
+
+.about-container__team {
+  opacity: 0;
+}
+
+.no-js .about-container__team {
+  opacity: 1;
+}
