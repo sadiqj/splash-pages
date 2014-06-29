@@ -5,18 +5,19 @@ angular.module('ngGcTeamPopoverDirective', []).directive('ngGcTeamPopover', [
 
     // James' function for showing/hiding popovers
     $.fn.popoverDisplay = function(option) {
-      if (option === 'show') {
-        var opacity = 1;
-        var top = 121;
 
-        var callback = function(){
+      var callback, opacity, top;
+
+      if (option === 'show') {
+        opacity = 1;
+        top = 121;
+        callback = function(){
           $(this).addClass('is-active');
         };
       } else if (option === 'hide') {
-        var opacity = 0;
-        var top = 151;
-
-        var callback = function(){
+        opacity = 0;
+        top = 151;
+        callback = function(){
           $(this).addClass('u-is-hidden').removeClass('is-active');
         };
       }
