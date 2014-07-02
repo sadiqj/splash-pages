@@ -18,7 +18,7 @@
 .team-member__popover {
   position: absolute;
   width: 238px;
-  background: linear-gradient(45deg, #61B0FF 0%, #3DE1D8 75%);
+  background: #61B0FF;
   padding: 20px;
   border-radius:3px;
   font-size: 14px;
@@ -39,7 +39,7 @@
 }
 
 .team-member__popover:after {
-  border-bottom-color: #3DE1D8;
+  border-bottom-color: #61B0FF;
   border-width: 12px;
   left: 50%;
   margin-left: -12px;
