@@ -1,0 +1,38 @@
+{% extends "plain.html" %}
+
+{% block title %}Demo{% endblock %}
+{% block description %}Watch a 5 minute demo of GoCardless in action{% endblock %}
+
+{% block body %}
+  <div class="videos-container__demo-intro u-relative">
+    
+    <div class="site-container features-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
+      {% include "_invert_nav.html" %}
+    </div>
+
+    <div class="u-text-center u-padding-Vl u-margin-Tl">
+      <h1 class="u-text-heading hero-heading u-text-light u-color-invert u-padding-Bs">
+        Discover how we can help your business
+      </h1>
+        <div class="u-padding-Tl">
+          <iframe 
+            src="//player.vimeo.com/video/98032333?title=0&amp;byline=0&amp;portrait=0" 
+            class="u-center videos-container__iframe u-margin-Vl" autoplay="true">
+          </iframe> 
+        </div>
+    </div>
+
+  </div>
+
+  <div class="videos-container__secondary-content u-text-center u-color-base u-padding-Vl">
+    <a href="/merchants/new" class="btn btn--hollow btn--large u-margin-Vs">Sign up now for free</a>
+    <p class="u-color-meta u-center u-2of5 u-padding-Vs">
+      Or call our sales team on 020 888 4444
+    </p>
+  </div>
+
+  <div class="site-container u-padding-Ts">
+    {% include "_site_footer.html" %}
+  </div>
+
+{% endblock %}
