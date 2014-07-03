@@ -1,42 +1,84 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Demo{% endblock %}
-{% block description %}Watch a 15 minute demo of GoCardless in action{% endblock %}
+{% block description %}Watch a 5 minute demo of GoCardless in action{% endblock %}
 
-{% block content %}
+{% block body %}
+  <div class="videos-container__demo-intro u-relative">
+    
+    <div class="site-container features-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
+      {% include "_invert_nav.html" %}
+    </div>
 
-  <h1 class="u-text-normal u-margin-Tl u-text-heading u-text-h1 u-color-primary u-text-center">Discover how we can help your business</h1>
-  <h2 class="u-color-meta u-text-heading u-text-h2 u-text-center u-margin-Bl">Watch GoCardless in action with a 10 minute demo</h2>
-
-  <div class="grid">
-    <div class="grid__cell u-12of12 u-margin-Bn">
-      <a href="https://player.vimeo.com/video/92138615" target="_blank"
-        data-target="#demo-video" data-modal-vimeo data-ng-gc-ga-event-tracker="{
+    <div class="u-text-center u-padding-Vl u-margin-Tl">
+      <h1 class="u-text-heading hero-heading u-text-light u-color-invert u-padding-Bs">
+        Discover how we can help your business
+      </h1>
+      <div class="u-padding-Tl">
+        <iframe 
+          src="https://player.vimeo.com/video/92138615" 
+          class="u-center videos-container__iframe u-margin-Vl" autoplay="true"
+          data-target="#demo-video" data-modal-vimeo data-ng-gc-ga-event-tracker="{
             category: 'video',
             label: 'plays-demo'
           }">
-          <img alt="Demo preview" src="/images/products/demo-preview.png">
-      </a>
+        </iframe> 
+      </div>
+      <p class="u-text-subheading u-color-invert">
+        Watch a 10 minute demo to see GoCardless in action
+      </p>
     </div>
+
   </div>
 
-  <br>
+  <div class="videos-container__secondary-content u-text-center u-color-base u-padding-Vl">
+    <p class="u-text-h2 u-text-heading u-color-meta  u-padding-Vs">
+      Get started today for free. Simply select the option that suits your business:
+    </p>
+    <div class="site-container">
+      <div class="grid grid--center u-margin-Bm u-margin-Tl">
+        <div class="grid__cell u-9of12">
+          <div class="grid">
+            <div class="grid__cell u-1of2">
+              <div class="well well--hollow-red u-text-center">
+                <img src="/images/pricing/standard@2x.png" height="50px" class="u-margin-Ts">
+                <h3 class="section-heading  section-heading--red">Standard pricing</h3>
+                <p><b>1% up to £2</b><br>No other fees</p>
+                <hr>
+                <p class="u-margin-Bs">Sign up <b>instantly</b></p>
+                <p class="u-margin-Bs"><b>No hidden fees</b> or set up costs</p>
+                <p class="u-margin-Bs">Enjoy Simple Direct Debit today</p>
+                <hr>
+                <a href="/merchants/new" class="btn btn--block btn--info">Sign up now</a>
+              </div>
+            </div>
 
-  <div class="grid">
-    <div class="grid__cell u-1of2 u-padding-Vm">
-      <h3 class="u-text-h3 u-text-heading align-btn">
-        Want to learn more? <b>Get started now</b>
-      </h3>
+            <div class="grid__cell u-1of2">
+              <div class="well well--hollow-blue u-text-center">
+                <img src="/images/pricing/scale@2x.png" height="50px" class="u-margin-Ts">
+                <h3 class="section-heading">Scale pricing</h3>
+                <p>Ideal for merchants taking more than<br><b>500 transactions / month</b></p>
+                <hr>
+                <p class="u-margin-Bs">Pricing <b>tailored</b> to your business</p>
+                <p class="u-margin-Bs"><b>Incredible rates</b> for high volume</p>
+                <p class="u-margin-Bs">Talk to our sales team today</p>
+                <hr>
+                <a href="/request-a-quote" class="btn btn--block">Get a free quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="grid__cell u-1of2 u-padding-Vm u-text-end">
-      <a href="/pricing" class="btn btn--info-hollow">View our pricing</a>
-      <a href="/merchants/new" class="btn btn--info u-margin-Ls">Sign up</a>
-    </div>
+    <p class="u-padding-Vm">Got a question? Speak to an expert by calling 020 7183 8674</p>
+
   </div>
 
-  <div id="demo-video" class="u-hidden">
-    <iframe src="https://player.vimeo.com/video/92138615?api=1" style="margin-bottom:-6px;" width="900" height="562" frameborder="0"></iframe>
+
+
+  <div class="site-container u-padding-Ts">
+    {% include "_site_footer.html" %}
   </div>
 
 {% endblock %}
