@@ -19,7 +19,8 @@ angular.module('ngGcWatchDemoFormCtrl', [])
         if (data.response && data.response.chat === true) {
           search = '?chat=1';
         }
-        $window.location = '/demo' + search;
+
+        $('#modal-backdrop').css('display', 'none');
       };
 
     }

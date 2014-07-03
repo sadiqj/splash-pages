@@ -5,7 +5,7 @@
 
 {% block body %}
   <div class="videos-container__demo-intro u-relative">
-    
+
     <div class="site-container features-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
       {% include "_invert_nav.html" %}
     </div>
@@ -15,14 +15,14 @@
         Discover how we can help your business
       </h1>
       <div class="u-padding-Tl">
-        <iframe 
-          src="https://player.vimeo.com/video/92138615" 
+        <iframe
+          src="https://player.vimeo.com/video/92138615"
           class="u-center videos-container__iframe u-margin-Vl" autoplay="true"
           data-target="#demo-video" data-modal-vimeo data-ng-gc-ga-event-tracker="{
             category: 'video',
             label: 'plays-demo'
           }">
-        </iframe> 
+        </iframe>
       </div>
       <p class="u-text-subheading u-color-invert">
         Watch a 10 minute demo to see GoCardless in action
@@ -79,6 +79,41 @@
 
   <div class="site-container u-padding-Ts">
     {% include "_site_footer.html" %}
+  </div>
+
+  <div id="modal-backdrop" style="display:block">
+    <div class="modal extra-small-modal modal--animate-in" style="display:block">
+      <div class="content u-padding-Vs u-padding-Hm">
+        <h2 class="u-text-heading u-text-center u-margin-Tm">Watch a demo</h2>
+        <h2 class="u-text-heading u-color-meta u-text-center u-margin-Bm">Find out more about GoCardless<br>by watching a five minute demo</h2>
+        <hr>
+        <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
+          name="prospectForm"
+          ng-controller="NgGcWatchDemoForm"
+          ng-gc-form-submit="{
+            onCreate: onWatchDemoProspectCreate,
+            form: prospectForm,
+            data: prospectForm.data
+          }"
+          ng-gc-ga-event-tracker="{
+              event: 'submit',
+              category: 'forms',
+              action: 'submit-form',
+              label: 'RaD'
+            }">
+
+          {% include "_prospect_form_fields.html" %}
+
+          <button class="btn btn--info btn--block u-margin-Tl"
+            type="submit"
+            ng-disabled="prospectForm.$pristine || prospectForm.$isSubmitting">
+            Continue to video
+          </button>
+          <hr>
+          <p class="u-text-center u-color-meta"><b>Your information is safe with us.</b><br>We won't ever share it or sell it to anyone.</p>
+        </form>
+      </div>
+    </div>
   </div>
 
 {% endblock %}
