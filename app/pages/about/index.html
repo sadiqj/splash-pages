@@ -41,6 +41,38 @@
 
         <!-- <div class="team-member__grid grid u-margin-Bl u-margin-Tl"> -->
 
+          <div ng-init="hiroki.isVisible = false" class="team-member u-pull-start u-1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
+            <div toggle="hiroki.isVisible">
+              <div class="team-member__image">
+                <img src="/images/team/hiroki@2x.png" alt="Hiroki Takeuchi">
+              </div>
+              <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
+                Hiroki Takeuchi {{ hiroki.isVisible }}
+              </h5>
+            </div>
+            <div ng-class="
+            { 
+            'team-member__popover--show': hiroki.isVisible, 
+            'team-member__popover--hide': !hiroki.isVisible
+            }
+            " class="team-member__popover u-color-invert">
+              <div class="arrow"></div>
+              <h3 class="u-text-heading u-text-center u-color-invert u-margin-Bs">Hiroki Takeuchi</h3>
+              <p>
+                Before founding GoCardless, Hiroki worked closely with Global Financial
+                Institutions at McKinsey &amp; Company.
+                <br><br>
+                Hiroki studied Mathematics at Oxford University, and has interned at
+                J.P. Morgan and Auctomatic.
+              </p>
+              <div class="u-margin-Tm u-text-center">
+                <a href="#" target="_blank" class="team-member__link team-member__link--twitter"></a>
+                <a href="#" target="_blank" class="team-member__link team-member__link--github"></a>
+                <a href="#" target="_blank" class="team-member__link team-member__link--linkedin"></a>
+              </div>
+            </div>
+          </div>
+
           <div class="team-member u-pull-start u-1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
             <div ng-gc-team-popover>
               <div class="team-member__image">
