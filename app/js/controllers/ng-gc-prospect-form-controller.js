@@ -13,7 +13,7 @@ angular.module('ngGcProspectFormCtrl', [])
         $window.localStorage.setItem('prospect',
           JSON.stringify(data.prospect));
 
-        if (data.response && data.response.chat === true) {
+        if (data.response && data.response.chat) {
           $window.location.search = '?chat=1';
         }
 

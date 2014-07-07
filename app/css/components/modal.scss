@@ -14,21 +14,20 @@ $extra-small-width: 440px;
   right: 0;
   bottom: 0;
   z-index: 1999999999;
-  background-color: $gray-darken;
-  opacity: .8;
-  filter: alpha(opacity = 80);
+  background-color: rgba(0,0,0,0.5);
 }
 
 .modal {
   display: none;
   position: fixed;
-  top: 45px;
+  top: 75px;
   bottom: 0;
   left: 50%;
   width: $width;
   margin-left: -$width/2;
   z-index: 2000000000;
   outline: none;
+
 }
 
 .extra-small-modal {
@@ -55,6 +54,8 @@ $extra-small-width: 440px;
   overflow-y: auto;
   overflow-x: auto;
   background-color: #fff;
+  border-radius:4px;
+  box-shadow: 0px 15px 46px rgba(0, 0, 0, 0.4);
 }
 
 .modal > .close {

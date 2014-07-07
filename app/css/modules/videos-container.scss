@@ -11,6 +11,12 @@
   // Abstract these in v2 - same as used elsewhere
 }
 
+.videos-container__demo-intro {
+  background: #61B0FF;
+  background: linear-gradient(45deg, #61B0FF 0%, #86D5D1 100%);
+  // Abstract these in v2 - same as used elsewhere
+}
+
 .videos-container__thumbnail {
   height: 210px;
   background: $site-background-color;
@@ -28,7 +34,7 @@
   background: #86D5D1;
 }
 
-.videos-container__select-a-video {
+.videos-container__select-a-video, .videos-container__secondary-content {
   background: white;
 }
 
