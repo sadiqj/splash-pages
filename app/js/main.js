@@ -27,7 +27,10 @@ require('../js/deprecated-js/lib/bootstrap/tab.js');
 
 var angular = require('angular');
 
+require('../components/angular-animate/angular-animate');
+
 angular.module('home', [
+  'ngAnimate',
   'ngGcGaEventTrackerDirective',
   'ngGcFormSubmitDirective',
   'ngGcHrefActiveDirective',

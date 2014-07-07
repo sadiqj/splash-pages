@@ -1,11 +1,23 @@
-@-webkit-keyframes jamesfadein {
-  0% { opacity: 0; top: 151px; }
-  100% { opacity: 1; top: 121px;} 
+@keyframes ngHideRemove {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
 }
 
-@-webkit-keyframes jamesfadeout {
-  0% { opacity: 1; top: 121px; }
-  100% { opacity: 0; top: 151px;} 
+@keyframes ngHideAdd {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
 }
 
 .team-member {
@@ -33,18 +45,23 @@
   border-radius:3px;
   font-size: 14px;
   left: -46px;
-  z-index: 1;
   top: 151px;
-  opacity: 0;
-  transition: all 1s ease;
+  transform: translateY(-30px);
+  z-index: 1;
 }
 
-.team-member__popover.team-member__popover--show {
-  animation: jamesfadein 0.3s forwards;
+.team-member__popover.ng-hide {
+  z-index: 0;
 }
 
-.team-member__popover.team-member__popover--hide {
-  animation: jamesfadeout 0.3s forwards;
+.team-member__popover.ng-hide-remove {
+  animation: ngHideRemove 0.2s cubic-bezier(.55,0,.1,1) forwards;
+}
+
+.team-member__popover.ng-hide-add {
+  display: block !important;
+  z-index: 1 !important;
+  animation: ngHideAdd 0.2s cubic-bezier(.55,0,.1,1) forwards;
 }
 
 .team-member__popover:after, .team-member__popover:before {
