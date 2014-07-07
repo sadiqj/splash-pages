@@ -84,27 +84,3 @@
 .team-member__name {
   color: $gray;
 }
-
-.team-member__link {
-  opacity: 0.8;
-  display: inline-block;
-  margin: 0 3px;
-  transition: opacity 0.2s ease;
-}
-
-.team-member__link:hover {
-  opacity: 1;
-  transition: opacity 0.1s ease;
-}
-
-.team-member__link--twitter {
-  @include icon("/images/about/icon-twitter", 20px, 20px);
-}
-
-.team-member__link--github {
-  @include icon("/images/about/icon-github", 20px, 20px);
-}
-
-.team-member__link--linkedin {
-  @include icon("/images/about/icon-linkedin", 20px, 20px);
-}
