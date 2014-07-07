@@ -50,17 +50,12 @@
   z-index: 1;
 }
 
-.team-member__popover.ng-hide {
-  z-index: 0;
-}
-
 .team-member__popover.ng-hide-remove {
   animation: ngHideRemove 0.2s cubic-bezier(.55,0,.1,1) forwards;
 }
 
 .team-member__popover.ng-hide-add {
   display: block !important;
-  z-index: 1 !important;
   animation: ngHideAdd 0.2s cubic-bezier(.55,0,.1,1) forwards;
 }
 
