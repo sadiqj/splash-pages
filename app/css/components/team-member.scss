@@ -39,10 +39,6 @@
   z-index: 1;
 }
 
-.team-member__popover--focus {
-  visibility: visible !important;
-}
-
 .team-member__popover.ng-hide-remove {
   animation: fadeUp 0.2s cubic-bezier(.55,0,.1,1) forwards;
 }
