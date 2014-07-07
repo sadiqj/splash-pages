@@ -14,13 +14,14 @@ $extra-small-width: 440px;
   right: 0;
   bottom: 0;
   z-index: 1999999999;
+  overflow: hidden;
   background-color: rgba(0,0,0,0.5);
 }
 
 .modal {
   display: none;
-  position: fixed;
-  top: 75px;
+  position: absolute;
+  top: 45px;
   bottom: 0;
   left: 50%;
   width: $width;
