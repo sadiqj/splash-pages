@@ -22,13 +22,11 @@ $extra-small-width: 440px;
   display: none;
   position: absolute;
   top: 45px;
-  bottom: 0;
   left: 50%;
   width: $width;
   margin-left: -$width/2;
   z-index: 2000000000;
   outline: none;
-
 }
 
 .extra-small-modal {
