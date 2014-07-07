@@ -1,4 +1,4 @@
-@keyframes ngHideRemove {
+@keyframes fadeUp {
   0% {
     opacity: 0;
     transform: translateY(0);
@@ -6,17 +6,6 @@
   100% {
     opacity: 1;
     transform: translateY(-30px);
-  }
-}
-
-@keyframes ngHideAdd {
-  0% {
-    opacity: 1;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(0);
   }
 }
 
@@ -51,12 +40,12 @@
 }
 
 .team-member__popover.ng-hide-remove {
-  animation: ngHideRemove 0.2s cubic-bezier(.55,0,.1,1) forwards;
+  animation: fadeUp 0.2s cubic-bezier(.55,0,.1,1) forwards;
 }
 
 .team-member__popover.ng-hide-add {
   display: block !important;
-  animation: ngHideAdd 0.2s cubic-bezier(.55,0,.1,1) forwards;
+  animation: fadeUp 0.2s cubic-bezier(.55,0,.1,1) reverse forwards;
 }
 
 .team-member__popover:after, .team-member__popover:before {
