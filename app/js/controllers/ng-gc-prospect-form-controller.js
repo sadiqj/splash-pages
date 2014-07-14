@@ -13,13 +13,35 @@ angular.module('ngGcProspectFormCtrl', [])
         $window.localStorage.setItem('prospect',
           JSON.stringify(data.prospect));
 
-        // This forces a page reload which breaks the success/error message on
-        // the form. The solution is to bootstrap olark in place rather than
-        // reloading, but in the mean time let's just disable it.
-        // if (data.response && data.response.chat) {
-        //   $window.location.search = '?chat=1';
-        // }
+        if (data.response && data.response.chat) {
+          olark('api.box.expand');
 
+          var prospect;
+          try {
+            var prospect = data.prospect;
+          } catch (e) {}
+
+          if (prospect && prospect['prospect[name]']) {
+            olark('api.visitor.updateFullName', {
+              fullName: prospect['prospect[name]']
+            });
+          }
+          if (prospect && prospect['prospect[email]']) {
+            olark('api.visitor.updateEmailAddress', {
+              emailAddress: prospect['prospect[email]']
+            });
+          }
+          if (prospect && prospect['prospect[phone]']) {
+            olark('api.visitor.updatePhoneNumber', {
+              phoneNumber: prospect['prospect[phone]']
+            });
+          }
+          if (prospect && prospect['prospect[size]']) {
+            olark('api.visitor.updateCustomFields', {
+              size: prospect['prospect[size]']
+            });
+          }
+        }
       };
 
     }
