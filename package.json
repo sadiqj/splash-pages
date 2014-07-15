@@ -48,7 +48,8 @@
     "front-matter": "^0.2.0",
     "esprima": "^1.1.0-dev",
     "browserify-shim": "^3.5.0",
-    "node-sass": "^0.8.6"
+    "node-sass": "^0.8.6",
+    "css-colorguard": "^0.1.7"
   },
   "scripts": {
     "test": "make test"
