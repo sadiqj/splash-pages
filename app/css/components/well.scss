@@ -28,13 +28,13 @@
 
 .well--hollow {
   box-shadow: none;
-  border: 3px dashed #D2D9DD;
+  border: 3px dashed $text-color-invert-secondary;
   background: transparent;
 }
 
 .well--hollow-red {
   box-shadow: none;
-  border: 1px solid #E14E3D;
+  border: 1px solid $secondary-color;
   background: transparent;
 }
 

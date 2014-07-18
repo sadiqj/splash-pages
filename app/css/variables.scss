@@ -105,7 +105,7 @@ $hr-border-color: #EDEDED;
 $well-background: #FCF8E3;
 $well-border: #FBEED5;
 
-$input-border: #D2D6DB;
+$input-border: $text-color-invert-secondary;
 
 $input-disabled-background: #ddd;
 $input-disabled-border: $gray;
@@ -116,7 +116,7 @@ $text-color-invert-secondary: #D2D9E0;
 
 $horizontal-ruler-top-invert-color: #4f6f91;
 
-$placeholder-color: #999;
+$placeholder-color: $medium-gray;
 
 $hero-background-color: #1C436C;
 

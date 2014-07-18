@@ -144,7 +144,7 @@
           @extend .input;
           height: 100%;
           padding: 0;
-          border: 1px solid #D2D6DB;
+          border: 1px solid $text-color-invert-secondary;
           .bar {
             height: 15px;
             background: #3BA031;
