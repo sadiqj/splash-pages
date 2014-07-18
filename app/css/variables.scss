@@ -72,11 +72,11 @@ $light-blue-lighten: lighten($light-blue, 2%);
 $light-blue-darken: darken($light-blue, 7%);
 
 $light-gray: #EAEDEF;
-$light-gray-lighten: lighten($light-gray, 7%);
+$light-gray-lighten: lighten($light-gray, 5%);
 $light-gray-darken: darken($light-gray, 5%);
 
-$gray: #A7ADB3;
-$gray-lighten: #D2D9DD;
+$gray: #AAAAAA;
+$gray-lighten: lighten($gray, 5%);
 $gray-darken: darken($gray, 7%);
 
 $medium-gray: #9D9D9D;
@@ -108,7 +108,7 @@ $well-border: #FBEED5;
 $input-border: #D2D6DB;
 
 $input-disabled-background: #ddd;
-$input-disabled-border: #aaa;
+$input-disabled-border: $gray;
 $input-disabled-color: #444;
 
 $text-color-invert: #fff;

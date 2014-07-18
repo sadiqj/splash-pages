@@ -1,7 +1,9 @@
+@import 'variables';
+
 .tabbed-well {
   border-radius: 3px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
-  background: #F1F1F1;
+  background: $hr-border-color;
   overflow: hidden;
 }
 
@@ -24,13 +26,13 @@
 
 .tabbed-well__nav__target {
   display: block;
-  color: #777777;
+  color: $dark-gray;
   padding: 8px 0;
-  border-right: 1px solid #DADADA;
+  border-right: 1px solid $light-gray-darken;
 
   &:hover {
     text-decoration: none;
-    color: #777777;
+    color: $dark-gray;
   }
 }
 
