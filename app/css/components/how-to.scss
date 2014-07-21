@@ -63,7 +63,7 @@
   position: relative;
   width: 100%;
   height: 121px;
-  background-color: #EEE;
+  background-color: $light-gray;
   border-radius: 3px;
 }
 
@@ -93,8 +93,8 @@
 }
 
 .how-to__icon--blue {
-  background-color: #39608F;
-  &:hover { background-color: darken(#39608F, 5%); }
+  background-color: $primary-color;
+  &:hover { background-color: darken($primary-color, 5%); }
 }
 
 .how-to__icon--orange {
@@ -103,7 +103,7 @@
 }
 
 .how-to__desc {
-  color: #999;
+  color: $medium-gray;
   font-size: 14px;
   font-weight: bold;
   text-align: center;

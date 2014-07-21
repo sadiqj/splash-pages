@@ -14,6 +14,9 @@ OUTPUT=build
 
 .PHONY: clean build public images fonts redirects scss-build js-main nunjucks eslint test
 
+colorguard:
+	colorguard --file build/css/main.css --threshold 2
+
 setup:
 	echo "limit maxfiles 16384 32768" | sudo tee /etc/launchd.conf
 
