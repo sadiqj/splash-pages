@@ -1,0 +1,43 @@
+@import 'variables';
+
+.paying-container__intro {
+  height: 500px;
+  width: 100%;
+  background: url('/images/hero/hero-paying-bg@2x.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.paying-container__settings-icon {
+  @include icon('/images/icons/paying-settings', 48px, 48px);
+}
+
+.paying-container__security-icon {
+  @include icon('/images/icons/paying-security', 48px, 48px);
+  display: block; //needed for centering - u-block doesn't override
+}
+
+.paying-container__convenience-icon {
+  @include icon('/images/icons/paying-convenience', 48px, 48px);
+}
+
+.paying-container__dashboard-image {
+  position: absolute;
+  top: -28px;
+  left: 0;
+  max-width: 1000px;
+  height: auto;
+}
+
+.paying-container__content {
+  overflow: hidden;
+  background: white;
+}
+
+.paying-container__tweet {
+  width: 360px;
+  border: 1px solid $border-gray;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px -3px $gray;
+}
