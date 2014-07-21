@@ -1,6 +1,6 @@
 .bullet {
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: $border-gray;
   width: 28px;
   height: 28px;
   text-align: center;
@@ -10,7 +10,7 @@
 }
 
 .bullet--red {
-  background-color: #E34D36;
+  background-color: $secondary-color;
   color: #fff;
 }
 

@@ -2,7 +2,7 @@
   li {
     &.active {
       a {
-        color: $text-color;
+        color: $black-blue;
 
         &:hover {
           text-decoration: none;
@@ -10,7 +10,7 @@
       }
     }
     a.is-active {
-      color: $text-color;
+      color: $black-blue;
 
       &:hover {
         text-decoration: none;

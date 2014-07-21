@@ -60,7 +60,7 @@
   padding: 0;
   button, input, label, textarea {
     font-family: $font-family-base;
-    color: $text-color;
+    color: $black-blue;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
   }
@@ -144,7 +144,7 @@
           @extend .input;
           height: 100%;
           padding: 0;
-          border: 1px solid $text-color-invert-secondary;
+          border: 1px solid $black-blue-invert-secondary;
           .bar {
             height: 15px;
             background: #3BA031;

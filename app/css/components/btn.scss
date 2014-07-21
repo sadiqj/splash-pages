@@ -28,7 +28,7 @@
   font-size: $font-size-h6;
   font-family: $font-family-label;
   font-weight: 500;
-  color: $btn-color;
+  color: white;
   cursor: pointer;
   -webkit-appearance: none;
   -webkit-user-select: none;
@@ -37,7 +37,7 @@
 
   &:hover {
     text-decoration: none;
-    color: $btn-color;
+    color: white;
   }
 }
 

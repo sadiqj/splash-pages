@@ -1,7 +1,7 @@
 @import "mixins/icon-mixin";
 
 .benefits-container {
-  background-color: $hr-border-color;
+  background-color: $light-gray;
 }
 
 .benefits-container__wrapper {
@@ -23,7 +23,7 @@
 }
 
 .benefits-container__content__divider {
-  border-top: 1px solid $hr-border-color;
+  border-top: 1px solid $light-gray;
 }
 
 .benefits-container__content__hero-content {
