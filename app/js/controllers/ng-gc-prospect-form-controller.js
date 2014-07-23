@@ -5,23 +5,7 @@ angular.module('ngGcProspectFormCtrl', [])
     '$scope', '$window',
     function NgGcProspectForm($scope, $window) {
 
-      $scope.onProspectCreate = function onProspectCreate(err, data) {
-        if (err) {
-          return;
-        }
-
-        $window.localStorage.setItem('prospect',
-          JSON.stringify(data.prospect));
-
-        if (data.response && data.response.chat) {
-          $window.olark('api.box.expand');
-
-          var prospect = data.prospect;
-          $scope.bootstrapOlark(prospect);
-        }
-      };
-
-      $scope.bootstrapOlark = function bootstrapOlark(prospect) {
+      function bootstrapOlark(prospect) {
         if (prospect && prospect['prospect[name]']) {
             $window.olark('api.visitor.updateFullName', {
               fullName: prospect['prospect[name]']
@@ -42,7 +26,21 @@ angular.module('ngGcProspectFormCtrl', [])
             size: prospect['prospect[size]']
           });
         }
-      };
+      }
 
+      $scope.onProspectCreate = function onProspectCreate(err, data) {
+        if (err) {
+          return;
+        }
+
+        $window.localStorage.setItem('prospect',
+          JSON.stringify(data.prospect));
+
+        if (data.response && data.response.chat) {
+          $window.olark('api.box.expand');
+
+          bootstrapOlark(data.prospect);
+        }
+      };
     }
   ]);
