@@ -14,33 +14,33 @@ angular.module('ngGcProspectFormCtrl', [])
           JSON.stringify(data.prospect));
 
         if (data.response && data.response.chat) {
-          olark('api.box.expand');
+          $window.olark('api.box.expand');
 
-          var prospect;
-          try {
-            var prospect = data.prospect;
-          } catch (e) {}
+          var prospect = data.prospect;
+          $scope.bootstrapOlark(prospect);
+        }
+      };
 
-          if (prospect && prospect['prospect[name]']) {
-            olark('api.visitor.updateFullName', {
+      $scope.bootstrapOlark = function bootstrapOlark(prospect) {
+        if (prospect && prospect['prospect[name]']) {
+            $window.olark('api.visitor.updateFullName', {
               fullName: prospect['prospect[name]']
             });
           }
-          if (prospect && prospect['prospect[email]']) {
-            olark('api.visitor.updateEmailAddress', {
-              emailAddress: prospect['prospect[email]']
-            });
-          }
-          if (prospect && prospect['prospect[phone]']) {
-            olark('api.visitor.updatePhoneNumber', {
-              phoneNumber: prospect['prospect[phone]']
-            });
-          }
-          if (prospect && prospect['prospect[size]']) {
-            olark('api.visitor.updateCustomFields', {
-              size: prospect['prospect[size]']
-            });
-          }
+        if (prospect && prospect['prospect[email]']) {
+          $window.olark('api.visitor.updateEmailAddress', {
+            emailAddress: prospect['prospect[email]']
+          });
+        }
+        if (prospect && prospect['prospect[phone]']) {
+          $window.olark('api.visitor.updatePhoneNumber', {
+            phoneNumber: prospect['prospect[phone]']
+          });
+        }
+        if (prospect && prospect['prospect[size]']) {
+          $window.olark('api.visitor.updateCustomFields', {
+            size: prospect['prospect[size]']
+          });
         }
       };
 
