@@ -8,13 +8,6 @@
   background-repeat: no-repeat;
 }
 
-.paying-container__intro-text {
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-  width: 100%;
-}
-
 .paying-container__settings-icon {
   @include icon('/images/icons/paying-settings', 48px, 48px);
 }
@@ -55,7 +48,6 @@
 }
 
 .paying-container__content {
-  overflow: hidden;
   background: white;
 }
 
