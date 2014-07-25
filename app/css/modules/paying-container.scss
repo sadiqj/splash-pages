@@ -35,10 +35,10 @@
 
 .paying-container__dashboard-image {
   position: absolute;
-  top: -28px;
+  top: -31px;
   left: -36px;
   max-width: 2000px; // arbitrarily long value to override image rules - this element set with height!
-  height: 613px;
+  height: 616px;
 }
 
 .paying-container__tweet {
@@ -59,4 +59,8 @@
 
 .paying-container__call {
   margin-top: 2px;
+}
+
+.paying-container__payment-page {
+  margin-top: -6px;
 }
