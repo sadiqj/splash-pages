@@ -30,6 +30,12 @@
   color: $header-color;
 }
 
+.u-text-heading-light {
+  @extend .u-text-light;
+  @extend .u-text-heading;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
 .u-text-subheading {
   font-family: $font-family-heading;
   color: $subheader-color;
