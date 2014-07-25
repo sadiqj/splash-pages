@@ -1,22 +1,11 @@
 @import 'variables';
 
-.paying-container__intro {
+.paying-container__hero {
   height: 400px;
-  width: 100%;
   background: url('/images/hero/hero-paying-bg@2x.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-}
-
-.paying-container__full-height {
-  height: 100%;
-}
-
-.paying-container__table {
-  display: table;
-  height: 100%;
-  width: 100%;
 }
 
 .paying-container__intro-text {
@@ -24,13 +13,6 @@
   vertical-align: middle;
   height: 100%;
   width: 100%;
-}
-
-.paying-container__header {
-  opacity: 0.9;
-  top: 0;
-  position: absolute;
-  width: 1010px;
 }
 
 .paying-container__settings-icon {
