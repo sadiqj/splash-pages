@@ -33,22 +33,12 @@
   @include icon('/images/icons/paying-guarantee', 25px, 25px);
 }
 
-.paying-container__merchant-confirmation-icon {
-  @include icon('/images/icons/paying-merchant-confirmation', 39px, 39px);
-  top: 2px;
-  left: 2px;
-}
-
 .paying-container__dashboard-image {
   position: absolute;
   top: -28px;
   left: -36px;
   max-width: 2000px; // arbitrarily long value to override image rules - this element set with height!
   height: 613px;
-}
-
-.paying-container__content {
-  background: white;
 }
 
 .paying-container__tweet {
@@ -61,12 +51,6 @@
 .paying-container__control-list-item:before {
   content: "•  ";
   color: $primary-color-lighten;
-}
-
-.paying-container__merchant-using {
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: rgba(255,255,255,0.3);
 }
 
 .paying-container__secure {
