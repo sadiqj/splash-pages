@@ -1,9 +1,5 @@
 @import "mixins/icon-mixin";
 
-.benefits-led-container {
-  background: white;
-}
-
 .benefits-led-container__people-icon {
   @include icon('/images/icons/people-icon', 59px, 50px);
 }
