@@ -32,6 +32,11 @@ $space-xxsmall: 6px;
 
 ////////////////////////////////////////////////////////////////////////////////
 
+$breakpoint-medium: 1060px;
+$breakpoint-small: 650px;
+
+////////////////////////////////////////////////////////////////////////////////
+
 $site-max-width: 940px + $gutter-space-container * 2;
 $site-min-width: 820px + $gutter-space-container * 2;
 $page-max-width: 780px + $gutter-space-container * 2;
