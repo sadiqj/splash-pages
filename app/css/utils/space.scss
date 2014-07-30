@@ -501,7 +501,7 @@
 //////////////
 // All margin
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-margin-md-Al {
     margin: $space-large;
   }
@@ -531,7 +531,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-margin-sm-Al {
     margin: $space-large;
   }
@@ -563,7 +563,7 @@
 
 // All padding
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-padding-md-Al {
     padding: $space-large;
   }
@@ -593,7 +593,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-padding-sm-Al {
     padding: $space-large;
   }
@@ -626,7 +626,7 @@
 /////////////////
 // Vertical margin
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-margin-md-Vl {
     margin-top: $space-large;
     margin-bottom: $space-large;
@@ -663,7 +663,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-margin-sm-Vl {
     margin-top: $space-large;
     margin-bottom: $space-large;
@@ -702,7 +702,7 @@
 
 // Vertical padding
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-padding-md-Vl {
     padding-top: $space-large;
     padding-bottom: $space-large;
@@ -739,7 +739,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-padding-sm-Vl {
     padding-top: $space-large;
     padding-bottom: $space-large;
@@ -779,7 +779,7 @@
 //////////////////
 // Horizontal margin
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-margin-md-Hl {
     margin-left: $space-large;
     margin-right: $space-large;
@@ -816,7 +816,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-margin-sm-Hl {
     margin-left: $space-large;
     margin-right: $space-large;
@@ -853,7 +853,7 @@
   }
 }
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-padding-md-Hl {
     padding-left: $space-large;
     padding-right: $space-large;
@@ -890,7 +890,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-padding-sm-Hl {
     padding-left: $space-large;
     padding-right: $space-large;
@@ -930,7 +930,7 @@
 /////////////
 // Top margin
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-margin-md-Tl {
     margin-top: $space-large;
   }
@@ -960,7 +960,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-margin-sm-Tl {
     margin-top: $space-large;
   }
@@ -992,7 +992,7 @@
 
 // Top padding
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-padding-md-Tl {
     padding-top: $space-large;
   }
@@ -1022,7 +1022,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-padding-sm-Tl {
     padding-top: $space-large;
   }
@@ -1055,7 +1055,7 @@
 ////////////////
 // Bottom margin
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-margin-md-Bl {
     margin-bottom: $space-large;
   }
@@ -1085,7 +1085,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-margin-sm-Bl {
     margin-bottom: $space-large;
   }
@@ -1117,7 +1117,7 @@
 
 // Bottom padding
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-padding-md-Bl {
     padding-bottom: $space-large;
   }
@@ -1147,7 +1147,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-padding-sm-Bl {
     padding-bottom: $space-large;
   }
@@ -1180,7 +1180,7 @@
 ///////////////
 // Right margin
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-margin-md-Rl {
     margin-right: $space-large;
   }
@@ -1210,7 +1210,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-margin-sm-Rl {
     margin-right: $space-large;
   }
@@ -1242,7 +1242,7 @@
 
 // Right padding
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-padding-md-Rl {
     padding-right: $space-large;
   }
@@ -1272,7 +1272,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-padding-sm-Rl {
     padding-right: $space-large;
   }
@@ -1305,7 +1305,7 @@
 //////////////
 // Left margin
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-margin-md-Ll {
     margin-left: $space-large;
   }
@@ -1335,7 +1335,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-margin-sm-Ll {
     margin-left: $space-large;
   }
@@ -1367,7 +1367,7 @@
 
 // Left padding
 
-@include breakpoint-md {
+@include breakpoint-medium {
   .u-padding-md-Ll {
     padding-left: $space-large;
   }
@@ -1397,7 +1397,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoint-small {
   .u-padding-sm-Ll {
     padding-left: $space-large;
   }
