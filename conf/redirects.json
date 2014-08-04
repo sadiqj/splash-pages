@@ -31,7 +31,12 @@
   "/switch/index.html": "https://gocardless.com/features",
   "/jobs/backend_developer/index.html": "https://gocardless.com/jobs",
   "/jobs/frontend_developer/index.html": "https://gocardless.com/jobs",
+  "/jobs/hr_assistant/index.html": "https://gocardless.com/jobs",
+  "/jobs/junior_comms_designer/index.html": "https://gocardless.com/jobs",
+  "/jobs/online_marketeer/index.html": "https://gocardless.com/jobs",
+  "/jobs/sales_analyst/index.html": "https://gocardless.com/jobs",
+  "/jobs/support_technical/index.html": "https://gocardless.com/jobs",
   "/how-it-works/api/index.html": "https://gocardless.com/features/api",
-  "/paylinks":"https://gocardless.com/features/api",
-  "/privacy":"https://gocardless.com/legal/privacy"
+  "/paylinks/index.html":"https://gocardless.com/features/api",
+  "/privacy/index.html":"https://gocardless.com/legal/privacy"
 }
