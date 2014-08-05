@@ -64,3 +64,10 @@
 .paying-container__payment-page {
   margin-top: -6px;
 }
+
+@include breakpoint-small {
+  .paying-container__subtitle.has-breakpoint-sm {
+
+  }
+}
+

@@ -5,8 +5,8 @@
 {% block body %}
 
 <div class="page-hero paying-container__hero u-relative">
-  <div class="site-container page-hero__container">
-    <div class="site-header site-gutter u-cf align-btn-small u-padding-Vxs">
+  <div class="site-container site-container--fluid page-hero__container">
+    <div class="site-header site-gutter u-cf align-btn-small u-padding-Vxs has-breakpoint-md has-breakpoint-sm">
       <div class="u-pull-start">
         <a href="/">
           <i class="icon-gc-logo-invert logo-header"></i>
@@ -18,10 +18,10 @@
     </div>
     <div class="page-hero__inner">
       <div class="page-hero__text">
-        <h1 class="u-text-heading u-color-invert u-text-center hero-heading u-text-light">
-          Taking the hassle out of paying
+        <h1 class="u-text-heading u-color-invert u-text-center hero-heading u-text-light u-md-text-h1 u-sm-text-h1">
+          Taking the hassle<br class="u-hidden u-sm-display-inline"> out of paying
         </h1>
-        <div class="u-text-heading u-text-h2 u-text-center u-text-light u-color-invert u-margin-Ts u-padding-Bm">
+        <div class="paying-container__subtitle has-breakpoint-sm u-text-heading u-text-h2 u-text-center u-text-light u-color-invert u-margin-Ts u-padding-Bm u-md-text-h3 u-sm-text-h3">
           GoCardless is the UK’s leading Direct Debit provider.<br>
           We make it simpler and safer to pay invoices and bills online.
         </div>
@@ -31,7 +31,7 @@
 </div>
 
 <div class="u-background-white u-overflow-hidden">
-  <div class="site-container site-gutter u-padding-Vl u-margin-Tl">
+  <div class="site-container site-container--fluid site-gutter u-padding-Vl u-margin-Tl">
     <div class="grid u-margin-Vl u-padding-Bl">
       <div class="grid__cell u-size1of2">
         <i class="paying-container__settings-icon u-margin-Bs"></i>
@@ -63,7 +63,7 @@
   <hr class="u-margin-Bn">
 
   <div class="paying-container__secure">
-    <div class="site-container site-gutter u-padding-Vl">
+    <div class="site-container site-container--fluid site-gutter u-padding-Vl">
       <div class="u-margin-Vl u-padding-Vl">
         <i class="paying-container__security-icon u-margin-Bs u-center"></i>
         <h2 class="u-text-center u-text-heading-light u-text-h1 u-margin-Bxxs">We keep you safe</h2>
@@ -101,7 +101,7 @@
 
   <hr class="u-margin-Tn">
 
-  <div class="site-container site-gutter u-padding-Tl">
+  <div class="site-container site-container--fluid site-gutter u-padding-Tl">
     <div class="grid u-margin-Tl u-padding-Tl">
       <div class="grid__cell u-size1of2 u-padding-Rn u-overflow-hidden">
         <img class="paying-container__payment-page" src="/images/products/paying-through-gocardless-payment-page@2x.jpg">
@@ -129,7 +129,7 @@
 
   <hr class="u-margin-Tn">
 
-  <div class="site-container site-gutter u-padding-Vl u-margin-Vl">
+  <div class="site-container site-container--fluid site-gutter u-padding-Vl u-margin-Vl">
     <h2 class="u-text-heading u-text-center u-color-meta">
       Find out even more about paying through GoCardless
     </h2>
@@ -140,7 +140,7 @@
   </div>
 </div>
 
-<div class="site-container site-gutter u-padding-Ts">
+<div class="site-container site-container--fluid site-gutter u-padding-Ts">
   {% include "_site_footer.html" %}
 </div>
 

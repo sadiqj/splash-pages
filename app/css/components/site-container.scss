@@ -8,3 +8,7 @@
   max-width: $site-max-width;
   min-width: $site-min-width;
 }
+
+.site-container--fluid {
+  min-width: 0;
+}
