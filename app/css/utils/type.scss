@@ -94,6 +94,18 @@ h6, .u-text-h6 {
   text-align: right;
 }
 
+@include breakpoint-medium {
+  .u-md-text-center {
+    text-align: center;
+  }
+}
+
+@include breakpoint-small {
+  .u-sm-text-center {
+    text-align: center;
+  }
+}
+
 // Text utilities
 
 .u-text-upcase {

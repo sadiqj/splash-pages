@@ -1,29 +1,31 @@
-{% extends "plain.html" %}
+{% extends "plain-responsive.html" %}
 
 {% block title %}Why pay with Direct Debit?{% endblock %}
 
 {% block body %}
 
-<div class="page-hero paying-container__hero u-relative">
+<div class="page-hero paying-container__hero has-breakpoint-md has-breakpoint-sm u-relative u-padding-sm-Vm">
   <div class="site-container site-container--fluid page-hero__container">
     <div class="site-header site-gutter u-cf align-btn-small u-padding-Vxs has-breakpoint-md has-breakpoint-sm">
       <div class="u-pull-start">
-        <a href="/">
+        <a href="/" class="u-sm-hidden">
           <i class="icon-gc-logo-invert logo-header"></i>
         </a>
       </div>
-      <div class="paying-container__call u-pull-end u-color-invert u-text-heading-light">
+      <div class="paying-container__call u-pull-end u-color-invert u-text-heading-light u-sm-hidden">
         Have any questions? Call us on 020 7183 8674
       </div>
     </div>
     <div class="page-hero__inner">
       <div class="page-hero__text">
-        <h1 class="u-text-heading u-color-invert u-text-center hero-heading u-text-light u-md-text-h1 u-sm-text-h1">
+        <a href="/" class="u-hidden u-sm-display-block u-margin-sm-Bl u-margin-sm-Tm">
+          <i class="icon-gc-logo-invert logo-header u-center"></i>
+        </a>
+        <h1 class="paying-container__hero-heading has-breakpoint-sm u-text-heading u-color-invert u-text-center hero-heading u-text-light u-md-text-h1 u-sm-text-h1 u-margin-sm-Bm">
           Taking the hassle<br class="u-hidden u-sm-display-inline"> out of paying
         </h1>
-        <div class="paying-container__subtitle has-breakpoint-sm u-text-heading u-text-h2 u-text-center u-text-light u-color-invert u-margin-Ts u-padding-Bm u-md-text-h3 u-sm-text-h3">
-          GoCardless is the UK’s leading Direct Debit provider.<br>
-          We make it simpler and safer to pay invoices and bills online.
+        <div class="paying-container__subtitle has-breakpoint-sm u-text-heading u-text-h2 u-text-center u-text-light u-color-invert u-margin-Ts u-padding-Bm u-md-text-h3 u-sm-text-h3 u-sm-size5of6 u-center">
+          GoCardless is the UK’s leading Direct Debit provider.<br class="u-sm-hidden"> We make it simpler and safer to pay invoices and bills online.
         </div>
       </div>
     </div>
@@ -31,20 +33,20 @@
 </div>
 
 <div class="u-background-white u-overflow-hidden">
-  <div class="site-container site-container--fluid site-gutter u-padding-Vl u-margin-Tl">
-    <div class="grid u-margin-Vl u-padding-Bl">
-      <div class="grid__cell u-size1of2">
-        <i class="paying-container__settings-icon u-margin-Bs"></i>
-        <h2 class="u-text-heading-light u-text-h1 u-margin-Bxxs">You're in control</h2>
-        <div class="u-text-heading-light u-text-h2 u-color-meta u-size9of12">
+  <div class="site-container site-container--fluid site-gutter u-padding-Vl u-padding-sm-Tl u-padding-sm-Bn u-margin-Tl u-margin-sm-Tn">
+    <div class="grid u-margin-Vl u-margin-sm-Tl u-margin-sm-Bs u-padding-Bl">
+      <div class="grid__cell u-size1of2 u-sm-size-full">
+        <i class="paying-container__settings-icon has-breakpoint-sm u-margin-Bs u-sm-center"></i>
+        <h2 class="u-text-heading-light u-text-h1 u-sm-text-h2 u-margin-Bxxs u-sm-text-center">You're in control</h2>
+        <div class="u-text-heading-light u-text-h2 u-sm-text-h3 u-color-meta u-size9of12 u-sm-text-center u-sm-center">
           View and manage your payments at the click of a button
         </div>
-        <ul class="u-margin-Vm u-text-heading-light u-padding-Vxxs u-text-h3">
+        <ul class="paying-container__control-bullet-points has-breakpoint-sm u-margin-Vm u-text-heading-light u-padding-Vxxs u-text-h3 u-sm-text-h4 u-sm-center">
           <li class="u-margin-Vxxs paying-container__control-list-item">Cancel unwanted payments</li>
           <li class="u-margin-Vxxs paying-container__control-list-item">Retry failed transactions</li>
           <li class="u-margin-Vxxs paying-container__control-list-item">Amend your details any time</li>
         </ul>
-        <div class="paying-container__tweet u-padding-Am u-margin-Ln u-text-heading-light u-color-meta grid">
+        <div class="paying-container__tweet has-breakpoint-sm u-padding-Am u-margin-Ln u-text-heading-light u-color-meta grid u-sm-center u-sm-size5of6">
           <div class="grid__cell u-size3of12 u-padding-Ln">
             <img src="/images/stories/tweets/avatar1@2x.png">
           </div>
@@ -54,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="grid__cell u-size1of2 u-relative">
+      <div class="grid__cell u-size1of2 u-relative u-sm-hidden">
         <img class="paying-container__dashboard-image" src="/images/products/paying-through-gocardless-dashboard@2x.png">
       </div>
     </div>

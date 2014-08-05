@@ -8,6 +8,18 @@
   background-repeat: no-repeat;
 }
 
+@include breakpoint-medium {
+  .paying-container__hero.has-breakpoint-md {
+    height: 300px;
+  }
+}
+
+@include breakpoint-small {
+  .paying-container__hero.has-breakpoint-sm {
+    height: auto;
+  }
+}
+
 .paying-container__settings-icon {
   @include icon('/images/icons/paying-settings', 48px, 48px);
 }
@@ -67,7 +79,26 @@
 
 @include breakpoint-small {
   .paying-container__subtitle.has-breakpoint-sm {
-
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
   }
+
+  .paying-container__hero-heading.has-breakpoint-sm {
+    line-height: 38px;
+  }
+
+  .paying-container__settings-icon.has-breakpoint-sm {
+    display: block;
+  }
+
+  .paying-container__control-bullet-points.has-breakpoint-sm {
+    width: 240px;
+  }
+
+  .paying-container__tweet.has-breakpoint-sm {
+    margin-left: auto;
+    width: auto;
+  }
+
 }
 
