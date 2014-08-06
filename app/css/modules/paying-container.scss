@@ -77,6 +77,38 @@
   margin-top: -6px;
 }
 
+@include breakpoint-medium {
+  .paying-container__dashboard-image.has-breakpoint-md {
+    height: 618px;
+    top: -33px;
+    left: 100%;
+  }
+
+  .paying-container__tweet.has-breakpoint-md {
+    width: 320px;
+  }
+
+  .paying-container__settings-left-column.has-breakpoint-md {
+    width: 360px;
+  }
+
+  .paying-container__payment-page.has-breakpoint-md {
+    position: absolute;
+    right: 100%;
+  }
+
+  .paying-container__tweet--de.has-breakpoint-md {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .paying-container__dashboard-image {
+    left: 30px;
+  }
+}
+
 @include breakpoint-small {
   .paying-container__subtitle.has-breakpoint-sm {
     -webkit-font-smoothing: subpixel-antialiased;
@@ -87,7 +119,8 @@
     line-height: 38px;
   }
 
-  .paying-container__settings-icon.has-breakpoint-sm {
+  .paying-container__settings-icon.has-breakpoint-sm,
+  .paying-container__convenience-icon.has-breakpoint-sm {
     display: block;
   }
 
@@ -100,5 +133,8 @@
     width: auto;
   }
 
+  .paying-container__faq-cta.has-breakpoint-sm {
+    display: none;
+  }
 }
 
