@@ -37,31 +37,21 @@
 
     <div ng-gc-randomize-team class="about-container__team u-size5of6 u-center u-padding-Tl u-padding-Bs u-cf">
 
-      <div ng-init="hiroki.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="hiroki.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/hiroki@2x.jpg" alt="Hiroki Takeuchi">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Hiroki<br>Takeuchi
-          </h5>
-        </div>
-        <popover show="hiroki.isVisible" ng-animate class="team-member__popover u-color-invert"  ng-class="{ 'u-is-visible': hiroki.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Hiroki Takeuchi</h3>
-          <p>
-            Before founding GoCardless, Hiroki worked closely with Global Financial
-            Institutions at McKinsey &amp; Company.
-            <br><br>
-            Hiroki studied Mathematics at Oxford University, and has interned at
-            J.P. Morgan and Auctomatic.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/hirokitakeuchi" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://github.com/hirokitakeuchi" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
+      <ng-gc-team-member
+        forename="Hiroki"
+        surname="Takeuchi"
+        image-src="hiroki@2x"
+        twitter="https://twitter.com/hirokitakeuchi"
+        github="https://github.com/hirokitakeuchi"
+        linkedin="">
+        <p>
+          Before founding GoCardless, Hiroki worked closely with Global Financial
+          Institutions at McKinsey &amp; Company.
+          <br><br>
+          Hiroki studied Mathematics at Oxford University, and has interned at
+          J.P. Morgan and Auctomatic.
+        </p>
+      </ng-gc-team-member>
 
       <div ng-init="matt.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
         <div toggle="matt.isVisible">
