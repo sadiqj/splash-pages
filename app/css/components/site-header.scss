@@ -5,15 +5,3 @@
   position: absolute;
   width: 1010px;
 }
-
-@include breakpoint-medium {
-  .site-header.has-breakpoint-md {
-    width: 100%;
-  }
-}
-
-@include breakpoint-small {
-  .site-header.has-breakpoint-sm {
-    width: 100%;
-  }
-}

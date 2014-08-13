@@ -30,16 +30,12 @@
 
 @include breakpoint-medium {
   .nav__item.has-breakpoint-md {
-    width: 33.33333%;
     border-bottom: 1px solid #ddd;
-    text-align: center;
   }
 }
 
 @include breakpoint-small {
   .nav__item.has-breakpoint-sm {
-    width: 50%;
     border-bottom: 1px solid #ddd;
-    text-align: center;
   }
 }
