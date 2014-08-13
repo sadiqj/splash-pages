@@ -8,18 +8,6 @@
   background-repeat: no-repeat;
 }
 
-@include breakpoint-medium {
-  .paying-container__hero.has-breakpoint-md {
-    height: 300px;
-  }
-}
-
-@include breakpoint-small {
-  .paying-container__hero.has-breakpoint-sm {
-    height: auto;
-  }
-}
-
 .paying-container__settings-icon {
   @include icon('/images/icons/paying-settings', 48px, 48px);
 }
@@ -78,6 +66,11 @@
 }
 
 @include breakpoint-medium {
+
+  .paying-container__hero.has-breakpoint-md {
+    height: 300px;
+  }
+
   .paying-container__dashboard-image.has-breakpoint-md {
     height: 618px;
     top: -33px;
@@ -111,6 +104,11 @@
 }
 
 @include breakpoint-small {
+
+  .paying-container__hero.has-breakpoint-sm {
+    height: auto;
+  }
+
   .paying-container__subtitle.has-breakpoint-sm {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
