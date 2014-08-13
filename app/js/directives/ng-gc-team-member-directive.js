@@ -32,7 +32,7 @@ angular.module('ngGcTeamMemberDirective', [
                 'class="team-member__link team-member__link--twitter"></a>',
                 '<a ng-href="https://www.github.com/{{ github }}" ng-if="github" target="_blank"',
                 'class="team-member__link team-member__link--github"></a>',
-                '<a ng-href="{{ linkedin }}" ng-if="linkedin" target="_blank"',
+                '<a ng-href="https://www.linkedin.com/in/{{ linkedin }}" ng-if="linkedin" target="_blank"',
                 'class="team-member__link team-member__link--linkedin"></a>',
               '</div>',
             '</popover>',
