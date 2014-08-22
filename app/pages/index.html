@@ -1,8 +1,10 @@
-{% extends "plain.html" %}
+{% extends "plain-responsive.html" %}
 
 {% block title %}The UK’s #1 for online Direct Debit{% endblock %}
 
 {% block body %}
+
+<div class="worry-container">
 
   <div class="hero-worry hero-worry--girl u-center u-text-center">
     <div class="site-container site-gutter u-cf align-btn-small u-padding-Txs u-padding-Bm">
@@ -80,11 +82,12 @@
       </div></div>
     </div>
   </div>
+</div>
 
-  <div class="u-margin-Ts">
-    <div class="site-container site-gutter">
-      {% include "_site_footer.html" %}
-    </div>
+<div class="u-margin-Ts">
+  <div class="site-container site-gutter">
+    {% include "_site_footer.html" %}
   </div>
+</div>
 
 {% endblock %}
