@@ -103,3 +103,20 @@
   overflow: hidden !important;
 }
 
+@include breakpoint-medium {
+  .u-md-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+  }
+}
+
+@include breakpoint-small {
+  .u-sm-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+  }
+}

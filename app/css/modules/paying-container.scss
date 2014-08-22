@@ -8,6 +8,16 @@
   background-repeat: no-repeat;
 }
 
+.paying-container__settings-left-column {
+  width: 360px;
+  margin-right: 120px;
+}
+
+.paying-container__convenience-right-column {
+  width: 360px;
+  margin-left: 120px;
+}
+
 .paying-container__settings-icon {
   @include icon('/images/icons/paying-settings', 48px, 48px);
 }
@@ -38,11 +48,10 @@
   top: -31px;
   left: -36px;
   max-width: 2000px; // arbitrarily long value to override image rules - this element set with height!
-  height: 616px;
+  height: 645px;
 }
 
 .paying-container__tweet {
-  width: 360px;
   border: 1px solid $border-gray;
   border-radius: 3px;
   box-shadow: 0 2px 5px -3px $gray;
@@ -63,4 +72,68 @@
 
 .paying-container__payment-page {
   margin-top: -6px;
+}
+
+@include breakpoint-medium {
+  .paying-container__hero.has-breakpoint-md {
+    height: 300px;
+  }
+
+  .paying-container__dashboard-image.has-breakpoint-md {
+    height: 606px;
+    top: -33px;
+    left: 100%;
+  }
+
+  .paying-container__settings-left-column.has-breakpoint-md {
+    width: 320px;
+  }
+
+  .paying-container__convenience-right-column.has-breakpoint-md {
+    margin-left: 0;
+    width: 50%;
+  }
+
+  .paying-container__payment-page.has-breakpoint-md {
+    position: absolute;
+    right: 100%;
+    height: 390px;
+  }
+}
+
+@include breakpoint-small {
+  .paying-container__settings-left-column.has-breakpoint-sm,
+  .paying-container__convenience-right-column.has-breakpoint-sm {
+    width: 100%;
+    margin: 0;
+  }
+
+  .paying-container__hero.has-breakpoint-sm {
+    height: auto;
+  }
+
+  .paying-container__subtitle.has-breakpoint-sm {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+
+  .paying-container__hero-heading.has-breakpoint-sm {
+    line-height: 38px;
+  }
+
+  .paying-container__settings-icon.has-breakpoint-sm,
+  .paying-container__convenience-icon.has-breakpoint-sm {
+    display: block;
+    // Needed for centering - would be nice to use u-sm-display-block here
+    // in the HTML but it gets overridden by inline-block set by icon mixin
+  }
+
+  .paying-container__control-bullet-points.has-breakpoint-sm {
+    width: 240px;
+  }
+
+  .paying-container__tweet.has-breakpoint-sm {
+    margin-left: auto;
+    width: auto;
+  }
 }

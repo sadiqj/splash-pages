@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin breakpoint-medium {
+  @media (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-small {
+  @media (max-width: #{$breakpoint-small - 1px}) {
+    @content;
+  }
+}
