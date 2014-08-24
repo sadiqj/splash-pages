@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins/clearfix-mixin";
+@import "mixins/breakpoints-mixin";
 
 .nav {
   &:before,
@@ -25,4 +26,16 @@
 .nav__item.is-active {
   color: $black-blue;
   text-decoration: none;
+}
+
+@include breakpoint-medium {
+  .nav__item.has-breakpoint-md {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+@include breakpoint-small {
+  .nav__item.has-breakpoint-sm {
+    border-bottom: 1px solid #ddd;
+  }
 }

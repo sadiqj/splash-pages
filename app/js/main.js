@@ -9,6 +9,7 @@ require('./directives/ng-gc-ga-event-tracker-directive');
 require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-randomize-team-directive');
 require('./directives/ng-gc-smooth-scroll-directive');
+require('./directives/ng-gc-team-member-directive');
 require('./directives/ng-gc-vimeo-iframe-directive');
 require('./directives/ng-gc-video-thumb-directive');
 
@@ -42,7 +43,8 @@ angular.module('home', [
   'ngGcRandomizeTeamDirective',
   'ngGcSmoothScrollDirective',
   'ngGcVimeoIframeDirective',
-  'ngGcVideoThumbDirective'
+  'ngGcVideoThumbDirective',
+  'ngGcTeamMemberDirective'
 ]);
 
 function isSupportedBrowser() {

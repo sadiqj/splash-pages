@@ -5,1254 +5,650 @@
 
 {% block body %}
 
-<div class="page-hero about-container__hero u-relative">
-  <div class="site-container page-hero__container">
-    <div class="site-header site-gutter u-cf align-btn-small u-padding-Vxs">
-      {% include "_invert_nav.html" %}
-    </div>
-    <div class="page-hero__inner">
-      <div class="page-hero__text">
-        <h1 class="about-container__intro-heading u-text-heading u-color-invert u-text-center hero-heading u-text-light">We're on a mission<br>to make payments simple</h1>
+<div class="about-container">
+  <div class="page-hero about-container__hero u-relative">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-gutter u-cf align-btn-small u-padding-Vxs">
+        {% include "_invert_nav.html" %}
       </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <h1 class="about-container__intro-heading u-text-heading u-color-invert u-text-center hero-heading u-text-light">We're on a mission<br>to make payments simple</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="u-background-white">
+    <div class="site-container u-padding-Vl">
+      <div class="u-size5of6 u-center u-padding-Vl">
+
+        <div class="grid u-padding-Hs">
+          <div class="grid__cell u-size9of12 u-text-heading u-text-h3 u-text-light">
+            <p>GoCardless serves more businesses than any other Direct Debit provider. We are based in the City of London, and are authorised by the Financial Conduct Authority. Our investors include Accel Partners, Passion Capital, Balderton Capital and Y Combinator.
+          </p>
+          </div>
+          <div class="grid__cell u-size3of12">
+            <img class="about-container__investors u-pull-end" src="/images/about/sponsors-investors@2x.png">
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="horizontal-ruler-top-double">
+
+      <div ng-gc-randomize-team class="about-container__team u-size5of6 u-center u-padding-Tl u-padding-Bs u-cf">
+
+        <ng-gc-team-member
+          first-name="Hiroki"
+          last-name="Takeuchi"
+          image-src="hiroki@2x"
+          twitter="hirokitakeuchi"
+          github="hirokitakeuchi">
+          Before founding GoCardless, Hiroki worked closely with Global Financial
+          Institutions at McKinsey &amp; Company.
+          <br><br>
+          Hiroki studied Mathematics at Oxford University, and has interned at
+          J.P. Morgan and Auctomatic.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Matt"
+          last-name="Robinson"
+          image-src="matt@2x"
+          twitter="mattjackrob"
+          github="MattRobinson"
+          linkedin="mattjackrobinson">
+          Prior to founding GoCardless, Matt worked at McKinsey &amp; Company,
+          and studied Law at Oxford University.
+          <br><br>
+          Matt started his first business at age 16, which funded his
+          university degree.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Harry"
+          last-name="Marr"
+          image-src="harry@2x"
+          twitter="harrymarr"
+          github="hmarr"
+          linkedin="harrymarr">
+          Before joining GoCardless, Harry worked at Conversocial,
+          iPlatform, and ran a development agency.
+          <br><br>
+          He created popular open source project MongoEngine, and
+          studied Computer Science at Leeds University.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Grey"
+          last-name="Baker"
+          image-src="grey@2x"
+          github="greysteil"
+          linkedin="greysteil">
+          Before joining GoCardless, Grey worked for McKinsey where he
+          specialised in Retail Banking.
+          <br><br>
+          Grey holds an MPhil in Economics from Cambridge, where he graduated top
+          of his year. He spends his spare time learning to program.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Alan"
+          last-name="Kennedy"
+          image-src="alan@2x"
+          github="alan">
+          Alan previously worked at LeapCR. He also worked for clients such as
+          Sky at Unboxed Consulting.
+          <br><br>
+          Alan studied Computer Science at UCL.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Philip"
+          last-name="Harrison"
+          image-src="philip@2x"
+          github="harrison">
+          Before joining GoCardless, Philip ran a design agency and
+          co-founded a production company specialising in Mac education.
+          <br><br>
+          Philip studied Economics at Jönköping International Business
+          School and spends his spare time geeking out in Javascript.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Tim"
+          last-name="Rogers"
+          image-src="tim@2x"
+          twitter="timrogers"
+          github="timrogers"
+          linkedin="timrogers1">
+          Alongside working at GoCardless, Tim is currently in his second year
+          of BSc Government at the London School of Economics.
+          <br><br>
+          Despite the fact that he works in Business Development, Tim is an
+          experienced developer (which might explain his coffee addiction).
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Nabeel"
+          last-name="Qureshi"
+          image-src="nabeel@2x"
+          twitter="nabeelqu"
+          github="nqureshi"
+          linkedin="nabeelqu">
+          Before joining GoCardless, Nabeel worked at Accenture and the
+          Bank of England.
+          <br><br>
+          He graduated with a first from Oxford in Philosophy, Politics
+          and Economics, and spends his spare time programming.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Alasdair"
+          last-name="Monk"
+          image-src="al@2x"
+          twitter="almonk"
+          github="almonk">
+          Alasdair studied Applied Information Technology at Reading where he
+          achieved a first class honours degree and finished top of his class.
+          He now leads our design team.
+          <br><br>
+          Before GoCardless, he worked independently with a range of clients from
+          tech startups to established advertising and design studios.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Steve"
+          last-name="Domin"
+          image-src="steve@2x"
+          twitter="stevedomin"
+          github="stevedomin">
+          Steve previously worked at Kpsule and interned at MXP4. He also worked
+          for a number of Paris-based startups and agencies while studying
+          computer science at Supinfo International University.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Andy"
+          last-name="Appleton"
+          image-src="andy@2x"
+          twitter="appltn"
+          github="mrappleton">
+          Andy joined GoCardless from Mint Digital, a creative agency in London.
+          <br/><br/>
+          He loves client and server-side JavaScript and has a degree in
+          Mechanical Engineering from Exeter. He is happy that his job almost
+          never makes use of it.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Maria"
+          last-name="Campbell"
+          image-src="maria@2x"
+          twitter="__moyni">
+          Prior to joining GoCardless, Maria's administrative career included roles in environmental policy and political fundraising. She has an MA in Philosophy from Cambridge and an MA in English & American Literature.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Alina"
+          last-name="Solovjova"
+          image-src="alina@2x">
+          Before joining GoCardless, Alina managed operations and logistics at
+          an e-commerce start-up.
+          <br /><br />
+          Alina studied Physics at Imperial College London, and applies her
+          skills to producing some excellent spreadsheets.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Ricky"
+          last-name="Shafier"
+          image-src="ricky@2x">
+          After graduating from the University of Birmingham Ricky moved to
+          Canada for a year, where he worked as a winter sports photographer.
+          <br /><br />
+          Before joining GoCardless he worked at RBS and is now part of the
+          GoCardless sales team.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Ben"
+          last-name="Sims"
+          image-src="ben@2x"
+          twitter="bengocardless">
+          Ben holds a BSc in Biology and MSc in Economics &amp; Finance
+          from the University of Newcastle.
+          <br /><br />
+          In his spare time Ben is a keen rugby player.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="James"
+          last-name="Berry"
+          image-src="james@2x"
+          twitter="bamesjerry"
+          linkedin="jamesjohnberry">
+          Before joining GoCardless, James studied Electronic &amp; Electrical
+          Engineering at the University of Bath and worked as a software developer
+          in the secure communications industry.
+          <br><br>
+          James spends his spare time working towards his long-term career aim of
+          'making it' in the music industry.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Daniel"
+          last-name="Lyons"
+          image-src="dan@2x">
+          Daniel graduated from Lancaster University in 2009 with a BA in Politics
+          and International Relations.
+          <br><br>
+          Prior joining GoCardless Daniel worked in a communications role for
+          Lancashire Constabulary, and is now part of the GoCardless Customer
+          Support team.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Helen"
+          last-name="Taylor"
+          image-src="helen@2x"
+          twitter="hellionyell">
+          Helen holds a degree in Media Studies and Cultural Studies from the University of Sussex, and worked in artist liaison for Last.fm after graduating.
+          <br><br>
+          She's now part of the customer support team at GoCardless, and spends her spare time researching street food destinations.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jonathon"
+          last-name="McGovern"
+          image-src="jonno@2x">
+          Before joining GoCardless, Jonno worked at an international law firm headquartered in London.
+          <br><br>
+          Jonno is a keen sportsman and holds a BA from The University of Nottingham.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jamie"
+          last-name="English"
+          image-src="jamie@2x"
+          twitter="jamienglish"
+          github="jamienglish">
+          Jamie graduated from Lancaster University in 2008 with a degree in Computer Science.
+          <br><br>
+          He began his professional career in the Lake District building and managing the e-commerce part of a business but has since ventured south to master his craft, joining BSkyB as a software engineer and now GoCardless.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jacob"
+          last-name="Pargin"
+          image-src="jacob@2x">
+          Before joining GoCardless, Jacob worked as a sports event photographer.
+          <br><br>
+          He spends his spare time developing web applications and studying for a degree in Computing and IT.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Charlotte"
+          last-name="Robinson"
+          image-src="charlotte@2x">
+          Before joining GoCardless, Charlotte worked as a lawyer at Clifford
+          Chance and as a teacher with TeachFirst.
+          <br><br>
+          Charlotte is now part of the content team at GoCardless and spends
+          her spare time travelling.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Amelia"
+          last-name="Munsey"
+          image-src="amelia@2x"
+          linkedin="ameliamunsey">
+          Before joining GoCardless, Amelia studied Geography at the University of Southampton and worked as a Recruitment Consultant within technology after graduating.
+          <br><br>
+          Amelia spends her spare time rowing, and often hears friends and colleagues say 'Oh, do you row?' (she talks about it a lot).
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Andrew"
+          last-name="Thompson"
+          image-src="andrew@2x"
+          twitter="andrewthompsonx"
+          linkedin="andrewmatthewthompson">
+          Before joining GoCardless, Andrew was VP of Growth at RESAAS where he built software and drove user growth.
+          <br><br>
+          He studied Electrical and Computer Engineering at The University of British Columbia in Canada.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Chris"
+          last-name="Sinjakli"
+          image-src="chris@2x"
+          github="Sinjo">
+          Chris joined GoCardless after working as a Software Engineer at BT. Before that, he graduated from Warwick with a degree in Computer Science.
+          <br><br>
+          In his spare time he enjoys a bit of photography, which he's trying to get better at.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="James"
+          last-name="Cunningham"
+          image-src="jc@2x"
+          twitter="jamescun"
+          github="jamescun">
+          Before joining GoCardless, James studied Computer Science at St. Andrews before leaving for San Francisco to focus on his cloud computing startup.
+          <br><br>
+          In his spare time, James is involved with a variety of charity projects and organising hack days.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Matt"
+          last-name="Cummins"
+          image-src="mattc@2x">
+          Before joining GoCardless, Matt worked at OC&amp;C Strategy Consultants, having studied Philosophy at Cambridge.
+          <br><br>
+          In his spare time, he practices Brazilian Jiu-Jitsu.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="James"
+          last-name="Jackson"
+          image-src="jamesj@2x"
+          twitter="JWJ1080">
+          James has a Business Studies degree from The University of Liverpool and an unhealthy obsession with US sports.
+          <br><br>
+          Previously he worked in property and politics.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Astrid"
+          last-name="Hugentobler"
+          image-src="astrid@2x">
+          Astrid graduated in Literature at the Sorbonne and in Business. Prior working for GoCardless she had experience in International Institutions, SaaS and the Media sector.
+          <br><br>
+          In her spare time, she is a travel geek and a devoted cinema enthusiast. Her middle-term goal is to eventually enjoy running.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="James"
+          last-name="Shedden"
+          image-src="jamess@2x"
+          twitter="jamesshedden"
+          github="jamesshedden"
+          linkedin="jamesshedden1">
+          Before joining the GoCardless user experience team, James worked as a freelance designer &amp; developer.
+          <br><br>
+          In his spare time James is an illustrator &amp; animator and also writes, records, produces and performs music.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Ravin"
+          last-name="Thambapillai"
+          image-src="ravin@2x"
+          twitter="ravintpillai"
+          github="ravintpillai">
+          Ravin read PPE at Oxford where he founded the International Relations
+          Society, worked at Google and led mobile strategy at The Hut Group.
+          <br><br>
+          In his spare time Ravin plays chess, water-skis and tries to explain the
+          pronunciation of his last-name.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Angus"
+          last-name="Bayley"
+          image-src="angus@2x"
+          twitter="angusbayley"
+          github="angusbayley">
+          Angus joined GoCardless after two years of postgraduate research in nanotechnology.
+          <br><br>
+          When not optimising websites, he writes and plays jazz/experimental music.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Kieran"
+          last-name="Oliver"
+          image-src="kieran@2x">
+          Kieran joined the GoCardless team all the way from Wellington, New Zealand.
+          <br><br>
+          In his spare time he enjoys chasing a frisbee and being generally active outdoors.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Saz"
+          last-name="Ehibor-Smith"
+          image-src="saz@2x">
+          Saz holds a Bsc in Civil Engineering from Kingston University.
+          <br><br>
+          In his spare time he enjoys watching, writing, playing, coaching,
+          and talking about football.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="George"
+          last-name="Britton"
+          image-src="george@2x">
+          Before joining GoCardless, George worked in the enterprise sales team
+          at Bookatable, working up some of Europe's most prominent hospitality
+          brands.
+          <br><br>
+          In his spare time George plays rugby and spends time with his wife and
+          daughter.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Kush"
+          last-name="Depala"
+          image-src="kush@2x">
+          As well as working at GoCardless, Kush studies Sanskrit at the
+          School of Oriental and African Studies.
+          <br><br>
+          When not learning dead languages, he enjoys playing sport,
+          learning to program, and convincing people that he isn't 14.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Amaury"
+          last-name="de Closset"
+          image-src="amaury@2x"
+          twitter="djeezi"
+          linkedin="amaurydeclosset">
+          Before joining GoCardless, Amaury worked at BCG where he specialised
+          in commercial banking and IT.
+          <br><br>
+          He holds a MS in Mechanical Engineering from UC Berkeley and Arts et
+          Metiers. Most of his spare time is spent travelling.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Natalie"
+          last-name="Hockham"
+          image-src="natalie@2x">
+          Natalie studied Engineering Science at Oxford University, where she
+          eventually gained a D.Phil in Biomedical Engineering.
+          <br><br>
+          She has previously interned at the European Commission and worked as
+          a market analyst at BP prior to joining GoCardless.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jenna"
+          last-name="Brown"
+          image-src="jenna@2x">
+          Before working at GoCardless, Jenna worked at Adzuna, RWE Supply &
+          Trading and Lloyds Banking Group. She graduated with a first in
+          Economics from the University of Bath.
+          <br><br>
+          In her spare time Jenna mentors for The Prince’s Trust and is
+          currently setting up a small company distributing sake for one of
+          Japan’s oldest sake producers.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Scott"
+          last-name="Adams"
+          image-src="scott@2x"
+          github="scottadams"
+          linkedin="scottjamesadams">
+          Scott studies Physics at Imperial College London, and has interned
+          as a researcher and a developer before joining the business
+          development team at GoCardless.
+          <br><br>
+          He loves French food, German music and Scottish tonic wine, and has
+          decided that soon he will become a serial entrepreneur.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jessie"
+          last-name="Giladi"
+          image-src="jessie@2x">
+          Jessie studied Marketing at the University of East London. She was
+          a logistics co-ordinator working for a company in partnership with
+          G4S before joining the start-up world.
+          <br><br>
+          Jessie manages the GoCardless office.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Baris"
+          last-name="Balic"
+          image-src="baris@2x"
+          twitter="barisbalic"
+          github="barisbalic">
+          Prior to joining GoCardless Baris spent five years working at uSwitch,
+          migrating the whole stack from one language to several others and
+          trying to help the wider developer community organise meetups.
+          <br><br>
+          Baris loves old video games and spends his spare time bouldering or
+          cycling.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Grzegorz"
+          last-name="Swirski"
+          image-src="grzegorz@2x"
+          github="gswirski">
+          Grzegorz studies Theoretical Computer Science at Jagiellonian
+          University in Krakow.
+          <br><br>
+          Grzegorz is probably the only programmer who doesn't like coffee.
+          He invigorates himself by playing volleyball and coaching Ruby.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jessica"
+          last-name="Summerfield"
+          image-src="jessica@2x">
+          Before joining GoCardless, Jess studied Economics and Maths at the
+          University of Bristol.
+          <br><br>
+          She spends her spare time travelling the world kitesurfing and
+          wakeboarding.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Alex"
+          last-name="Shea"
+          image-src="alexs@2x">
+          Prior to GoCardless, Alex worked as an analyst at ExxonMobil
+          (Brussels) and in financial services (London). He holds an MSc from
+          HEC Paris and a BA from Tufts University in Boston, Mass.
+          <br><br>
+          In his spare time, Alex enjoys a game of squash and working on a
+          lifelong addiction to classical music / fiddling on the piano.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Tom"
+          last-name="Petty"
+          image-src="tomp@2x"
+          twitter="tp"
+          github="anothertompetty"
+          linkedin="tompetty">
+          Before joining GoCardless, Tom was a senior designer at global brand consultancy Wolff Olins.
+          <br><br>
+          He spends his time dreaming of a world in which he can spend three
+          months of the year in Palm Springs.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Dominik"
+          last-name="Krejcik"
+          image-src="dominik@2x"
+          github="dominikkrejcik">
+          Dominik is currently interning at GoCardless whilst studying Computer Science at UCL.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jack"
+          last-name="Franklin"
+          image-src="jack@2x"
+          twitter="jack_franklin"
+          github="jackfranklin">
+          Jack studied Computer Science at the University of Bath and joined
+          GoCardless straight after graduating.
+          <br><br>
+          He enjoys working with Ruby and JavaScript and away from the computer
+          is usually found playing football or badminton.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Erez"
+          last-name="Mathan"
+          image-src="erez@2x">
+          Erez joined GoCardless after heading operations at eToro,
+          the largest social investment network in the world.
+          <br><br>
+          He is currently pursuing his MBA at Chicago university and still
+          tries to overcome his 15 minutes of fame in one of Israel's kids TV
+          hit shows where he appeared for an hour back in the early 90s.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Steve"
+          last-name="Parrington"
+          image-src="stevep@2x"
+          github="Lolecule">
+          Before joining GoCardless, Steve worked as a software developer at BT
+          and before that he studied Computer Science at the University of Manchester.
+          <br><br>
+          In his spare time Steve likes to read and play video games with an
+          ambition to take up something requiring more physical activity!
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Isaac"
+          last-name="Seymour"
+          image-src="isaac@2x"
+          github="isaacseymour">
+          Before joining GoCardless, Isaac studied Maths at Oxford University,
+          taking a few Computer Science courses along the way.
+          <br><br>
+          He enjoys ballroom dancing, binge-watching American TV series, and exploring London.
+        </ng-gc-team-member>
+
+        <ng-gc-team-member
+          first-name="Jon"
+          last-name="Greenland"
+          image-src="jon@2x">
+          Before joining GoCardless, Jon worked in wealth management, doing sales
+          and account management
+          <br><br>
+          He spends his spare time playing the guitar and loves Arsenal.
+        </ng-gc-team-member>
+
+      </div>
+
+      <hr class="horizontal-ruler-top-double u-margin-Vn">
+      <div class="u-padding-Vl u-margin-Tm">
+        <h2 class="u-text-heading u-text-center u-color-meta">We're looking for smart people to help us build the future of payments</h2>
+        <a href="/jobs" class="u-center u-size3of12 btn btn--hollow btn--large u-margin-Tm u-padding-Hn">View our open positions</a>
+      </div>
+
     </div>
   </div>
 </div>
 
-<div class="u-background-white">
-  <div class="site-container u-padding-Vl">
-    <div class="u-size5of6 u-center u-padding-Vl">
-
-      <div class="grid u-padding-Hs">
-        <div class="grid__cell u-size9of12 u-text-heading u-text-h3 u-text-light">
-          <p>GoCardless serves more businesses than any other Direct Debit provider. We are based in the City of London, and are authorised by the Financial Conduct Authority. Our investors include Accel Partners, Passion Capital, Balderton Capital and Y Combinator.
-        </p>
-        </div>
-        <div class="grid__cell u-size3of12">
-          <img class="about-container__investors u-pull-end" src="/images/about/sponsors-investors@2x.png">
-        </div>
-      </div>
-
-    </div>
-
-    <hr class="horizontal-ruler-top-double">
-
-    <div ng-gc-randomize-team class="about-container__team u-size5of6 u-center u-padding-Tl u-padding-Bs u-cf">
-
-      <div ng-init="hiroki.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="hiroki.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/hiroki@2x.jpg" alt="Hiroki Takeuchi">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Hiroki<br>Takeuchi
-          </h5>
-        </div>
-        <popover show="hiroki.isVisible" ng-animate class="team-member__popover u-color-invert"  ng-class="{ 'u-is-visible': hiroki.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Hiroki Takeuchi</h3>
-          <p>
-            Before founding GoCardless, Hiroki worked closely with Global Financial
-            Institutions at McKinsey &amp; Company.
-            <br><br>
-            Hiroki studied Mathematics at Oxford University, and has interned at
-            J.P. Morgan and Auctomatic.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/hirokitakeuchi" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://github.com/hirokitakeuchi" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="matt.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="matt.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/matt@2x.jpg" alt="Matt Robinson">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Matt<br>Robinson
-          </h5>
-        </div>
-        <popover show="matt.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': matt.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Matt Robinson</h3>
-          <p>
-            Prior to founding GoCardless, Matt worked at McKinsey &amp; Company,
-            and studied Law at Oxford University.
-            <br><br>
-            Matt started his first business at age 16, which funded his
-            university degree.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/mattjackrob" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/MattRobinson" target="_blank" class="team-member__link team-member__link--github"></a>
-            <a href="https://www.linkedin.com/in/mattjackrobinson" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="harry.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="harry.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/harry@2x.jpg" alt="Harry Marr">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Harry<br>Marr
-          </h5>
-        </div>
-        <popover show="harry.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': harry.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Harry Marr</h3>
-          <p>
-            Before joining GoCardless, Harry worked at Conversocial,
-            iPlatform, and ran a development agency.
-            <br><br>
-            He created popular open source project MongoEngine, and
-            studied Computer Science at Leeds University.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/harrymarr" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/hmarr" target="_blank" class="team-member__link team-member__link--github"></a>
-            <a href="https://www.linkedin.com/profile/view?id=26773521" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="grey.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="grey.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/grey@2x.jpg" alt="Grey Baker">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Grey<br>Baker
-          </h5>
-        </div>
-        <popover show="grey.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': grey.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Grey Baker</h3>
-          <p>
-            Before joining GoCardless, Grey worked for McKinsey where he
-            specialised in Retail Banking.
-            <br><br>
-            Grey holds an MPhil in Economics from Cambridge, where he graduated top
-            of his year. He spends his spare time learning to program.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.github.com/greysteil" target="_blank" class="team-member__link team-member__link--github"></a>
-            <a href="https://www.linkedin.com/pub/grey-baker/49/764/734" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="alan.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="alan.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/alan@2x.jpg" alt="Alan Kennedy">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Alan<br>Kennedy
-          </h5>
-        </div>
-        <popover show="alan.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': alan.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Alan Kennedy</h3>
-          <p>
-            Alan previously worked at LeapCR. He also worked for clients such as
-            Sky at Unboxed Consulting.
-            <br><br>
-            Alan studied Computer Science at UCL.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.github.com/alan" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="philip.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="philip.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/philip@2x.jpg" alt="Philip Harrison">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Philip<br>Harrison
-          </h5>
-        </div>
-        <popover show="philip.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': philip.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Philip Harrison</h3>
-          <p>
-            Before joining GoCardless, Philip ran a design agency and
-            co-founded a production company specialising in Mac education.
-            <br><br>
-            Philip studied Economics at Jönköping International Business
-            School and spends his spare time geeking out in Javascript.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.github.com/harrison" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="tim.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="tim.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/tim@2x.jpg" alt="Tim Rogers">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Tim<br>Rogers
-          </h5>
-        </div>
-        <popover show="tim.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': tim.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Tim Rogers</h3>
-          <p>
-            Alongside working at GoCardless, Tim is currently in his second year of BSc Government
-            at the London School of Economics.
-            <br><br>
-            Despite the fact that he works in Business Development, Tim is an experienced developer (which might explain his coffee addiction).
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/timrogers" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/timrogers" target="_blank" class="team-member__link team-member__link--github"></a>
-            <a href="https://www.linkedin.com/profile/view?id=92026019" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="nabeel.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="nabeel.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/nabeel@2x.jpg" alt="Nabeel Qureshi">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Nabeel<br>Qureshi
-          </h5>
-        </div>
-        <popover show="nabeel.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': nabeel.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Nabeel Qureshi</h3>
-          <p>
-            Before joining GoCardless, Nabeel worked at Accenture and the
-            Bank of England.
-            <br><br>
-            He graduated with a first from Oxford in Philosophy, Politics
-            and Economics, and spends his spare time programming.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/nabeelqu" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/nqureshi" target="_blank" class="team-member__link team-member__link--github"></a>
-            <a href="http://uk.linkedin.com/in/nabeelqu" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="al.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="al.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/al@2x.jpg" alt="Alasdair Monk">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Alasdair<br>Monk
-          </h5>
-        </div>
-        <popover show="al.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': al.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Alasdair Monk</h3>
-          <p>
-            Alasdair studied Applied Information Technology at Reading where he
-            achieved a first class honours degree and finished top of his class.
-            He now leads our design team.
-            <br><br>
-            Before GoCardless, he worked independently with a range of clients from
-            tech startups to established advertising and design studios.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/almonk" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/almonk" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="steve.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="steve.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/steve@2x.jpg" alt="Steve Domin">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Steve<br>Domin
-          </h5>
-        </div>
-        <popover show="steve.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': steve.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Steve Domin</h3>
-          <p>
-            Steve previously worked at Kpsule and interned at MXP4. He also worked
-            for a number of Paris-based startups and agencies while studying
-            computer science at Supinfo International University.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/stevedomin" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/stevedomin" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="andy.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="andy.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/andy@2x.jpg" alt="Andy Appleton">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Andy<br>Appleton
-          </h5>
-        </div>
-        <popover show="andy.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': andy.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Andy Appleton</h3>
-          <p>
-            Andy joined GoCardless from Mint Digital, a creative agency in London.
-            <br/><br/>
-            He loves client and server-side JavaScript and has a degree in
-            Mechanical Engineering from Exeter. He is happy that his job almost
-            never makes use of it.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/appltn" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/mrappleton" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="maria.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="maria.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/maria@2x.jpg" alt="Maria Campbell">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Maria<br>Campbell
-          </h5>
-        </div>
-        <popover show="maria.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': maria.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Maria Campbell</h3>
-          <p>
-            Prior to joining GoCardless, Maria's administrative career included roles
-            in environmental policy and political fundraising. She has an MA in
-            Philosophy from Cambridge and an MA in English &amp; American Literature.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="alina.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="alina.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/alina@2x.jpg" alt="Alina Solovjova">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Alina<br>Solovjova
-          </h5>
-        </div>
-        <popover show="alina.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': alina.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Alina Solovjova</h3>
-          <p>
-            Before joining GoCardless, Alina managed operations and logistics at
-            an e-commerce start-up.
-            <br /><br />
-            Alina studied Physics at Imperial College London, and applies her
-            skills to producing some excellent spreadsheets.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="ricky.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="ricky.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/ricky@2x.jpg" alt="Ricky Shafier">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Ricky<br>Shafier
-          </h5>
-        </div>
-        <popover show="ricky.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': ricky.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Ricky Shafier</h3>
-          <p>
-            After graduating from the University of Birmingham Ricky moved to
-            Canada for a year, where he worked as a winter sports photographer.
-            <br /><br />
-            Before joining GoCardless he worked at RBS and is now part of the
-            GoCardless sales team.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="ben.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="ben.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/ben@2x.jpg" alt="Ben Sims">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Ben<br>Sims
-          </h5>
-        </div>
-        <popover show="ben.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': ben.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Ben Sims</h3>
-          <p>
-            Ben holds a BSc in Biology and MSc in Economics &amp; Finance from the University of Newcastle.
-            <br /><br />
-            In his spare time Ben is a keen rugby player.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/bengocardless" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.linkedin.com/profile/view?id=92841597" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="james.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="james.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/james@2x.jpg" alt="James Berry">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            James<br>Berry
-          </h5>
-        </div>
-        <popover show="james.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': james.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">James Berry</h3>
-          <p>
-            Before joining GoCardless, James studied Electronic &amp; Electrical
-            Engineering at the University of Bath and worked as a software developer
-            in the secure communications industry.
-            <br><br>
-            James spends his spare time working towards his long-term career aim of
-            'making it' in the music industry.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/bamesjerry" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.linkedin.com/in/jamesjohnberry/" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="dan.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="dan.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/dan@2x.jpg" alt="Daniel Lyons">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Daniel<br>Lyons
-          </h5>
-        </div>
-        <popover show="dan.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': dan.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Daniel Lyons</h3>
-          <p>
-            Daniel graduated from Lancaster University in 2009 with a BA in Politics
-            and International Relations.
-            <br><br>
-            Prior joining GoCardless Daniel worked in a communications role for
-            Lancashire Constabulary, and is now part of the GoCardless Customer
-            Support team.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="helen.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="helen.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/helen@2x.jpg" alt="Helen Taylor">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Helen<br>Taylor
-          </h5>
-        </div>
-        <popover show="helen.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': helen.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Helen Taylor</h3>
-          <p>
-            Helen holds a degree in Media Studies and Cultural Studies from the University of Sussex, and worked in artist liaison for Last.fm after graduating.
-            <br><br>
-            She's now part of the customer support team at GoCardless, and spends her spare time researching street food destinations.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="jonno.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jonno.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jonno@2x.jpg" alt="Jonathon McGovern">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jonathon<br>McGovern
-          </h5>
-        </div>
-        <popover show="jonno.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jonno.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jonathon McGovern</h3>
-          <p>
-            Before joining GoCardless, Jonno worked at an international law firm headquartered in London.
-            <br><br>
-            Jonno is a keen sportsman and holds a BA from The University of Nottingham.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="jamie.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jamie.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jamie@2x.jpg" alt="Jamie English">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jamie<br>English
-          </h5>
-        </div>
-        <popover show="jamie.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jamie.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jamie English</h3>
-          <p>
-            Jamie graduated from Lancaster University in 2008 with a degree in Computer Science.
-            <br><br>
-            He began his professional career in the Lake District building and managing the e-commerce part of a business but has since ventured south to master his craft, joining BSkyB as a software engineer and now GoCardless.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.twitter.com/jamienglish" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/jamienglish" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="jacob.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jacob.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jacob@2x.jpg" alt="Jacob Pargin">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jacob<br>Pargin
-          </h5>
-        </div>
-        <popover show="jacob.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jacob.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jacob Pargin</h3>
-          <p>
-            Before joining GoCardless, Jacob worked as a sports event photographer.
-            <br><br>
-            He spends his spare time developing web applications and studying for a degree in Computing and IT.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="charlotte.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="charlotte.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/charlotte@2x.jpg" alt="Charlotte Robinson">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Charlotte<br>Robinson
-          </h5>
-        </div>
-        <popover show="charlotte.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': charlotte.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Charlotte Robinson</h3>
-          <p>
-            Before joining GoCardless, Charlotte worked as a lawyer at Clifford
-            Chance and as a teacher with TeachFirst.
-            <br><br>
-            Charlotte is now part of the content team at GoCardless and spends
-            her spare time travelling.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="amelia.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="amelia.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/amelia@2x.jpg" alt="Amelia Munsey">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Amelia<br>Munsey
-          </h5>
-        </div>
-        <popover show="amelia.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': amelia.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Amelia Munsey</h3>
-          <p>
-            Before joining GoCardless, Amelia studied Geography at the University of Southampton and worked as a Recruitment Consultant within technology after graduating.
-            <br><br>
-            Amelia spends her spare time rowing, and often hears friends and colleagues say 'Oh, do you row?' (she talks about it a lot).
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="andrew.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="andrew.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/andrew@2x.jpg" alt="Andrew Thompson">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Andrew<br>Thompson
-          </h5>
-        </div>
-        <popover show="andrew.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': andrew.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Andrew Thompson</h3>
-          <p>
-            Before joining GoCardless, Andrew was VP of Growth at RESAAS where he built software and drove user growth.
-            <br><br>
-            He studied Electrical and Computer Engineering at The University of British Columbia in Canada.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://twitter.com/andrewthompsonx" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="http://uk.linkedin.com/in/andrewmatthewthompson" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="chris.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="chris.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/chris@2x.jpg" alt="Chris Sinjakli">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Chris<br>Sinjakli
-          </h5>
-        </div>
-        <popover show="chris.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': chris.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Chris Sinjakli</h3>
-          <p>
-            Chris joined GoCardless after working as a Software Engineer at BT. Before that, he graduated from Warwick with a degree in Computer Science.
-            <br><br>
-            In his spare time he enjoys a bit of photography, which he's trying to get better at.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.github.com/Sinjo" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="jamesc.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jamesc.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jc@2x.jpg" alt="James Cunningham">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            James<br>Cunningham
-          </h5>
-        </div>
-        <popover show="jamesc.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jamesc.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">James Cunningham</h3>
-          <p>
-            Before joining GoCardless, James studied Computer Science at St. Andrews before leaving for San Francisco to focus on his cloud computing startup.
-            <br><br>
-            In his spare time, James is involved with a variety of charity projects and organising hack days.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.github.com/jamescun" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="mattc.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="mattc.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/mattc@2x.jpg" alt="Matt Cummins">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Matt<br>Cummins
-          </h5>
-        </div>
-        <popover show="mattc.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': mattc.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Matt Cummins</h3>
-          <p>
-            Before joining GoCardless, Matt worked at OC&amp;C Strategy Consultants, having studied Philosophy at Cambridge.
-            <br><br>
-            In his spare time, he practices Brazilian Jiu-Jitsu.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="jamesj.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jamesj.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jamesj@2x.jpg" alt="James Jackson">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            James<br>Jackson
-          </h5>
-        </div>
-        <popover show="jamesj.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jamesj.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">James Jackson</h3>
-          <p>
-            James has a Business Studies degree from The University of Liverpool and an unhealthy obsession with US sports.
-            <br><br>
-            Previously he worked in property and politics.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="astrid.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="astrid.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/astrid@2x.jpg" alt="Astrid Hugentobler">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Astrid<br>Hugentobler
-          </h5>
-        </div>
-        <popover show="astrid.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': astrid.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Astrid Hugentobler</h3>
-          <p>
-            Astrid graduated in Literature at the Sorbonne and in Business. Prior working for GoCardless she had experience in International Institutions, SaaS and the Media sector.
-            <br><br>
-            In her spare time, she is a travel geek and a devoted cinema enthusiast. Her middle-term goal is to eventually enjoy running.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="http://uk.linkedin.com/pub/astrid-hugentobler/37/255/3b0" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="jamess.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jamess.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jamess@2x.jpg" alt="James Shedden">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            James<br>Shedden
-          </h5>
-        </div>
-        <popover show="jamess.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jamess.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">James Shedden</h3>
-          <p>
-            Before joining the GoCardless user experience team, James worked as a freelance designer &amp; developer.
-            <br><br>
-            In his spare time James is an illustrator &amp; animator and also writes, records, produces and performs music.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.twitter.com/jamesshedden" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/jamesshedden" target="_blank" class="team-member__link team-member__link--github"></a>
-            <a href="https://www.linkedin.com/profile/view?id=131359448" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="ravin.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="ravin.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/ravin@2x.jpg" alt="Ravin Thambapillai">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Ravin<br>Thambapillai
-          </h5>
-        </div>
-        <popover show="ravin.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': ravin.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Ravin Thambapillai</h3>
-          <p>
-            Ravin read PPE at Oxford where he founded the International Relations
-            Society, worked at Google and led mobile strategy at The Hut Group.
-            <br><br>
-            In his spare time Ravin plays chess, water-skis and tries to explain the
-            pronunciation of his surname.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="angus.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="angus.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/angus@2x.jpg" alt="Angus Bayley">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Angus<br>Bayley
-          </h5>
-        </div>
-        <popover show="angus.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': angus.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Angus Bayley</h3>
-          <p>
-            Angus joined GoCardless after two years of postgraduate research in nanotechnology.
-            <br><br>
-            When not optimising websites, he writes and plays jazz/experimental music.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="kieran.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="kieran.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/kieran@2x.jpg" alt="Kieran Oliver">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Kieran<br>Oliver
-          </h5>
-        </div>
-        <popover show="kieran.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': kieran.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Kieran Oliver</h3>
-          <p>
-            Kieran joined the GoCardless team all the way from Wellington, New Zealand.
-            <br><br>
-            In his spare time he enjoys chasing a frisbee and being generally active outdoors.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="saz.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="saz.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/saz@2x.jpg" alt="Saz Ehibor-Smith">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Saz<br>Ehibor-Smith
-          </h5>
-        </div>
-        <popover show="saz.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': saz.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Saz Ehibor-Smith</h3>
-          <p>
-            Saz holds a Bsc in Civil Engineering from Kingston University.
-            <br><br>
-            In his spare time he enjoys watching, writing, playing, coaching,
-            and talking about football.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="george.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="george.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/george@2x.jpg" alt="George Britton">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            George<br>Britton
-          </h5>
-        </div>
-        <popover show="george.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': george.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">George Britton</h3>
-          <p>
-            Before joining GoCardless, George worked in the enterprise sales team
-            at Bookatable, working up some of Europe's most prominent hospitality
-            brands.
-            <br><br>
-            In his spare time George plays rugby and spends time with his wife and
-            daughter.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="kush.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="kush.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/kush@2x.jpg" alt="Kush Depala">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Kush<br>Depala
-          </h5>
-        </div>
-        <popover show="kush.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': kush.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Kush Depala</h3>
-          <p>
-            As well as working at GoCardless, Kush studies Sanskrit at the
-            School of Oriental and African Studies.
-            <br><br>
-            When not learning dead languages, he enjoys playing sport,
-            learning to program, and convincing people that he isn't 14.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="amaury.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="amaury.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/amaury@2x.jpg" alt="Amaury de Closset">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Amaury<br>de Closset
-          </h5>
-        </div>
-        <popover show="amaury.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': amaury.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Amaury de Closset</h3>
-          <p>
-            Before joining GoCardless, Amaury worked at BCG where he specialised
-            in commercial banking and IT.
-            <br><br>
-            He holds a MS in Mechanical Engineering from UC Berkeley and Arts et
-            Metiers. Most of his spare time is spent travelling.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="natalie.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="natalie.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/natalie@2x.jpg" alt="Natalie Hockham">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Natalie<br>Hockham
-          </h5>
-        </div>
-        <popover show="natalie.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': natalie.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Natalie Hockham</h3>
-          <p>
-            Natalie studied Engineering Science at Oxford University, where she
-            eventually gained a D.Phil in Biomedical Engineering.
-            <br><br>
-            She has previously interned at the European Commission and worked as
-            a market analyst at BP prior to joining GoCardless.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="jenna.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jenna.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jenna@2x.jpg" alt="Jenna Brown">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jenna<br>Brown
-          </h5>
-        </div>
-        <popover show="jenna.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jenna.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jenna Brown</h3>
-          <p>
-            Before working at GoCardless, Jenna worked at Adzuna, RWE Supply &
-            Trading and Lloyds Banking Group. She graduated with a first in
-            Economics from the University of Bath.
-            <br><br>
-            In her spare time Jenna mentors for The Prince’s Trust and is
-            currently setting up a small company distributing sake for one of
-            Japan’s oldest sake producers.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="scott.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="scott.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/scott@2x.jpg" alt="Scott Adams">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Scott<br>Adams
-          </h5>
-        </div>
-        <popover show="scott.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': scott.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Scott Adams</h3>
-          <p>
-            Scott studies Physics at Imperial College London, and has interned
-            as a researcher and a developer before joining the business
-            development team at GoCardless.
-            <br><br>
-            He loves French food, German music and Scottish tonic wine, and has
-            decided that soon he will become a serial entrepreneur.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="jessie.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jessie.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jessie@2x.jpg" alt="Jessie Giladi">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jessie<br>Giladi
-          </h5>
-        </div>
-        <popover show="jessie.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jessie.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jessie Giladi</h3>
-          <p>
-            Jessie studied Marketing at the University of East London. She was
-            a logistics co-ordinator working for a company in partnership with
-            G4S before joining the start-up world.
-            <br><br>
-            Jessie manages the GoCardless office.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="baris.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="baris.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/baris@2x.jpg" alt="Baris Balic">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Baris<br>Balic
-          </h5>
-        </div>
-        <popover show="baris.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': baris.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Baris Balic</h3>
-          <p>
-            Prior to joining GoCardless Baris spent five years working at uSwitch,
-            migrating the whole stack from one language to several others and
-            trying to help the wider developer community organise meetups.
-            <br><br>
-            Baris loves old video games and spends his spare time bouldering or
-            cycling.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.twitter.com/barisbalic" target="_blank" class="team-member__link team-member__link--twitter"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="grzegorz.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="grzegorz.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/grzegorz@2x.jpg" alt="Grzegorz Swirski">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Grzegorz<br>Swirski
-          </h5>
-        </div>
-        <popover show="grzegorz.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': grzegorz.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Grzegorz Swirski</h3>
-          <p>
-            Grzegorz studies Theoretical Computer Science at Jagiellonian
-            University in Krakow.
-            <br><br>
-            Grzegorz is probably the only programmer who doesn't like coffee.
-            He invigorates himself by playing volleyball and coaching Ruby.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.github.com/gswirski" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="jessica.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jessica.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jessica@2x.jpg" alt="Jessica Summerfield">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jessica<br>Summerfield
-          </h5>
-        </div>
-        <popover show="jessica.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jessica.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jessica Summerfield</h3>
-          <p>
-            Before joining GoCardless, Jess studied Economics and Maths at the
-            University of Bristol.
-            <br><br>
-            She spends her spare time travelling the world kitesurfing and
-            wakeboarding.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="alexs.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="alexs.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/alexs@2x.jpg" alt="Alex Shea">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Alex<br>Shea
-          </h5>
-        </div>
-        <popover show="alexs.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': alexs.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Alex Shea</h3>
-          <p>
-            Prior to GoCardless, Alex worked as an analyst at ExxonMobil
-            (Brussels) and in financial services (London). He holds an MSc from
-            HEC Paris and a BA from Tufts University in Boston, Mass.
-            <br><br>
-            In his spare time, Alex enjoys a game of squash and working on a
-            lifelong addiction to classical music / fiddling on the piano.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="tom.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="tom.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/tomp@2x.jpg" alt="Tom Petty">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Tom<br>Petty
-          </h5>
-        </div>
-        <popover show="tom.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': tom.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Tom Petty</h3>
-          <p>
-            Before joining GoCardless, Tom was a senior designer at global brand consultancy Wolff Olins.
-            <br><br>
-            He spends his time dreaming of a world in which he can spend three
-            months of the year in Palm Springs.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.twitter.com/tp" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/anothertompetty" target="_blank" class="team-member__link team-member__link--github"></a>
-            <a href="https://www.linkedin.com/in/tompetty" target="_blank" class="team-member__link team-member__link--linkedin"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="dominik.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="dominik.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/dominik@2x.jpg" alt="Dominik Krejcik">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Dominik<br>Krejcik
-          </h5>
-        </div>
-        <popover show="dominik.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': dominik.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Dominik Krejcik</h3>
-          <p>
-            Dominik is currently interning at GoCardless whilst studying
-            Computer Science at UCL.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.github.com/dominikkrejcik" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="jack.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jack.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jack@2x.jpg" alt="Jack Franklin">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jack<br>Franklin
-          </h5>
-        </div>
-        <popover show="jack.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jack.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jack Franklin</h3>
-          <p>
-            Jack studied Computer Science at the University of Bath and joined
-            GoCardless straight after graduating.
-            <br><br>
-            He enjoys working with Ruby and JavaScript and away from the computer
-            is usually found playing football or badminton.
-          </p>
-          <div class="u-margin-Tm">
-            <a href="https://www.twitter.com/jack_franklin" target="_blank" class="team-member__link team-member__link--twitter"></a>
-            <a href="https://www.github.com/jackfranklin" target="_blank" class="team-member__link team-member__link--github"></a>
-          </div>
-        </popover>
-      </div>
-
-      <div ng-init="erez.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="erez.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/erez@2x.jpg" alt="Erez Mathan">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Erez<br>Mathan
-          </h5>
-        </div>
-        <popover show="erez.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': erez.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Erez Mathan</h3>
-          <p>
-            Erez joined GoCardless after heading operations at eToro,
-            the largest social investment network in the world.
-            <br><br>
-            He is currently pursuing his MBA at Chicago university and still
-            tries to overcome his 15 minutes of fame in one of Israel's kids TV
-            hit shows where he appeared for an hour back in the early 90s.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="stevep.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="stevep.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/stevep@2x.jpg" alt="Steve Parrington">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Steve<br>Parrington
-          </h5>
-        </div>
-        <popover show="stevep.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': stevep.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Steve Parrington</h3>
-          <p>
-            Before joining GoCardless, Steve worked as a software developer at BT
-             and before that he studied Computer Science at the University of Manchester.
-            <br><br>
-            In his spare time Steve likes to read and play video games with an
-            ambition to take up something requiring more physical activity!"
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="isaac.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="isaac.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/isaac@2x.jpg" alt="Isaac Seymour">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Isaac<br>Seymour
-          </h5>
-        </div>
-        <popover show="isaac.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': isaac.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Isaac Seymour</h3>
-          <p>
-            Before joining GoCardless, Isaac studied Maths at Oxford University,
-            taking a few Computer Science courses along the way.
-            <br><br>
-            He enjoys ballroom dancing, binge-watching American TV series, and exploring London.
-          </p>
-        </popover>
-      </div>
-
-      <div ng-init="jon.isVisible = false" class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">
-        <div toggle="jon.isVisible">
-          <div class="team-member__image">
-            <img src="/images/team/jon@2x.jpg" alt="Jon Greenland">
-          </div>
-          <h5 class="u-text-center u-text-heading team-member__name u-color-meta u-margin-Ts">
-            Jon<br>Greenland
-          </h5>
-        </div>
-        <popover show="jon.isVisible" ng-animate class="team-member__popover u-color-invert" ng-class="{ 'u-is-visible': jon.isVisible }">
-          <div class="arrow"></div>
-          <h3 class="u-text-heading u-text-left u-color-invert u-margin-Bs">Jon Greenland</h3>
-          <p>
-            Before joining GoCardless, Jon worked in wealth management, doing sales
-            and account management
-            <br><br>
-            He spends his spare time playing the guitar and loves Arsenal.
-          </p>
-        </popover>
-      </div>
-
-    </div>
-
-    <hr class="horizontal-ruler-top-double u-margin-Vn">
-    <div class="u-padding-Vl u-margin-Tm">
-      <h2 class="u-text-heading u-text-center u-color-meta">We're looking for smart people to help us build the future of payments</h2>
-      <a href="/jobs" class="u-center u-size3of12 btn btn--hollow btn--large u-margin-Tm u-padding-Hn">View our open positions</a>
-    </div>
-
-  </div>
-</div>
 
 <div class="site-container u-padding-Ts">
   {% include "_site_footer.html" %}
