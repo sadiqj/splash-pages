@@ -14,7 +14,6 @@ require('./directives/ng-gc-vimeo-iframe-directive');
 require('./directives/ng-gc-video-thumb-directive');
 
 require('./controllers/ng-gc-prospect-form-controller');
-require('./controllers/ng-gc-watch-demo-form-controller');
 require('./controllers/ng-gc-active-video-controller');
 
 require('../components/ng-gc-components/ng-gc-dialog-directive/dialog-controller');
@@ -38,7 +37,6 @@ angular.module('home', [
   'gc.popover',
   'gc.toggle',
   'ngGcProspectFormCtrl',
-  'ngGcWatchDemoFormCtrl',
   'ngGcActiveVideoCtrl',
   'ngGcRandomizeTeamDirective',
   'ngGcSmoothScrollDirective',
