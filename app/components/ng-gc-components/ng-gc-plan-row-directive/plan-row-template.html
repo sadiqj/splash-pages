@@ -21,7 +21,7 @@
       </div>
       <div class="u-pull-end payments__list__item__meta">
         <div class="u-pull-end u-text-right" ng-hide="plan.is_blank_preauth">
-          <div class="payments__list__item__meta__amount u-text-h1">
+          <div class="payments__list__item__meta__amount u-text-xl">
             <span ng-show="plan.max_amount">up to</span>
             {{ plan.display_next_amount || plan.amount || plan.max_amount | currency:(plan.currency | currencySymbol ) }}
           </div>
