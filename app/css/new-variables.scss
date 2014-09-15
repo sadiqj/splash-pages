@@ -1,115 +1,12 @@
-$font-family-base:      Arial, sans-serif;
-$font-family-heading:   "Gotham SSm A", "Gotham SSm B", $font-family-base;
-$font-family-label:     "Gotham SSm A", "Gotham SSm B", $font-family-base;
-$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
-
-$line-height-base: 1.466666667;
-
 $font-size-xlarge: 36px;
 $font-size-large: 24px;
 $font-size-medium: 18px;
 $font-size-small: 15px;
 $font-size-xsmall: 14px;
-$font-size-xxsmall: 14px;
-
-$border-radius-base: 3px;
-$gutter-space-base: 20px;
-$gutter-space-container: 35px;
-
-$border-radius-double: $border-radius-base * 2;
+$font-size-xxsmall: 13px;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-$space-large: 27px;
-$space-xmedium: 22px;
-$space-medium: 20px;
-$space-small: 12px;
-$space-xsmall: 9px;
-$space-xxsmall: 6px;
+
 
 ////////////////////////////////////////////////////////////////////////////////
-
-$breakpoint-medium: 1060px;
-$breakpoint-small: 650px;
-
-////////////////////////////////////////////////////////////////////////////////
-
-$site-max-width: 940px + $gutter-space-container * 2;
-$site-min-width: 820px + $gutter-space-container * 2;
-$page-max-width: 780px + $gutter-space-container * 2;
-$page-min-width: 780px + $gutter-space-container * 2;
-
-////////////////////////////////////////////////////////////////////////////////
-
-$black-blue: #4E4E4E;
-$black-blue-lighten: lighten($black-blue, 7%);
-$black-blue-darken: darken($black-blue, 7%);
-
-$dark-blue: #203844;
-$dark-blue-lighten: lighten($dark-blue, 7%); // #4D616C
-$dark-blue-darken: darken($dark-blue, 7%);
-
-$primary-color: #395D8D;
-$primary-color-lighten: lighten($primary-color, 5%);
-$primary-color-darken: darken($primary-color, 5%); // #2F95D6
-
-$secondary-color: #E14E3D;
-$secondary-color-lighten: lighten($secondary-color, 7%);
-$secondary-color-darken: darken($secondary-color, 7%);
-
-$primary-orange: #F7C55A;
-$primary-orange-lighten: lighten($primary-orange, 7%);
-$primary-orange-darken: darken($primary-orange, 7%); // #DD9F1F
-
-$accent-color: #3BA031;
-$accent-color-lighten: lighten($accent-color, 7%);
-$accent-color-darken: darken($accent-color, 10%);
-
-$secondary-color-blue: #144A66;
-$secondary-color-blue-lighten: lighten($secondary-color-blue, 7%);
-$secondary-color-blue-darken: darken($secondary-color-blue, 7%);
-
-$light-blue: #EAF7FD;
-$light-blue-lighten: lighten($light-blue, 2%);
-$light-blue-darken: darken($light-blue, 7%);
-
-$light-gray: #EBEBEB;
-$light-gray-lighten: lighten($light-gray, 5%);
-$light-gray-darken: darken($light-gray, 5%);
-
-$gray: #AAAAAA;
-$gray-lighten: lighten($gray, 5%);
-$gray-darken: darken($gray, 7%);
-
-$medium-gray: #9D9D9D;
-
-$dark-gray: #767676;
-$dark-gray-lighten: lighten($dark-gray, 7%);
-$dark-gray-darken: darken($dark-gray, 5%);
-
-////////////////////////////////////////////////////////////////////////////////
-
-$site-background-color: #F8F8F8;
-
-$border-gray: #CBCBCB;
-
-$header-color: #141E27;
-
-$subheader-color: #657483;
-
-$link-color: #395D8D;
-$link-hover-color: darken(#395D8D, 5%);
-
-$well-background: #FCF8E3;
-$well-border: #FBEED5;
-
-$input-disabled-background: $light-gray-darken;
-$input-disabled-border: $gray;
-$input-disabled-color: #444;
-
-$black-blue-invert: #FFFFFF;
-$black-blue-invert-secondary: #D2D9E0;
-
-$horizontal-ruler-top-invert-color: #4f6f91;
-
-$hero-background-color: #1C436C;

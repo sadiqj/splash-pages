@@ -46,6 +46,9 @@
   font-family: $font-family-label;
 }
 
+.u-text-no-smoothing {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
 // Text sizes
 
 .u-text-xxl {

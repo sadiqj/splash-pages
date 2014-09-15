@@ -25,6 +25,7 @@
 @import "components/guides-item";
 @import "components/hero-heading";
 @import "components/highlight";
+@import "components/horizontal-rule";
 @import "components/horizontal-ruler-bottom";
 @import "components/horizontal-ruler-top";
 @import "components/horizontal-ruler-top-double";
@@ -38,15 +39,19 @@
 @import "components/logo-header";
 @import "components/modal";
 @import "components/nav";
+@import "components/nav-btn";
 @import "components/nav-tabs";
+@import "components/new-component";
 @import "components/notice";
 @import "components/page-container";
 @import "components/page-heading-link";
+@import "components/page-footer";
 @import "components/page-heading";
 @import "components/page-subheading";
 @import "components/para";
 @import "components/placeholder";
 @import "components/popover";
+@import "components/product-grid";
 @import "components/pricing-emblem";
 @import "components/referral-icon";
 @import "components/section-heading";
@@ -62,6 +67,8 @@
 @import "components/testimonial";
 @import "components/thumbnails";
 @import "components/well";
+
+@import "figures/site-logo-invert";
 
 @import "utils/background";
 @import "utils/border";

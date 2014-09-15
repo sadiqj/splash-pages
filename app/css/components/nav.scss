@@ -13,8 +13,7 @@
   }
   font-family: $font-family-heading;
   color: $header-color;
-  font-size: $font-size-xxsmall;
-  font-weight: 500;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .nav__item {
@@ -38,4 +37,8 @@
   .nav__item.has-breakpoint-sm {
     border-bottom: 1px solid #ddd;
   }
+}
+
+.nav-btn {
+  font-weight: inherit;
 }
