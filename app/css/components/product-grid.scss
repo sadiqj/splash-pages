@@ -7,4 +7,33 @@
 .product-grid__btn {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  transition: all 0.1s ease;
+}
+
+.product-grid__cell {
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all 0.1s ease;
+  }
+
+  &:active {
+    top: 2px;
+    transition: all 0.1s ease;
+  }
+
+}
+
+.product-grid__cell:hover .product-grid__btn {
+  background: $primary-color-darken; // emulating normal btn behaviour except on hover of this compo nent
+  transition: all 0.1s ease;
+  transform: scale(1); // overriding default behaviour
+}
+
+.product-grid__cell:active .product-grid__btn {
+  top: 0; // overriding default behaviour
 }

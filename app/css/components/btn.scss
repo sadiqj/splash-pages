@@ -33,11 +33,23 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
 
-  &:hover {
+  &:hover,
+  &:active {
     text-decoration: none;
+    transition: all 0.1s ease;
+    transform: scale(1.05);
     color: white;
   }
+
+  &:active {
+    top: 2px;
+    transition: all 0.1s ease;
+  }
+
 }
 
 .btn--new {
@@ -47,7 +59,6 @@
   text-transform: uppercase;
 }
 
-.btn:active,
 .btn--active {
   background-color: $primary-color-darken;
 }
@@ -118,6 +129,7 @@
   &:hover {
     color: $primary-color;
   }
+
 }
 
 .btn--hollow {
@@ -128,12 +140,17 @@
   &:hover {
     color: $primary-color;
   }
+
 }
 
 .btn--invert-hollow {
-  border-color: #fff;
+  border-color: white;
   background: transparent;
-  color: #fff;
+  color: white;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .btn--hollow:active,
