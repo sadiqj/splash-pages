@@ -48,7 +48,9 @@
 
 .u-text-no-smoothing {
   -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 }
+
 // Text sizes
 
 .u-text-xxl {

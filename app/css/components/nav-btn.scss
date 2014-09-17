@@ -1,11 +1,3 @@
-// In current design, where this was previously btn--small
-// which was reused, this now seems to be unique to the nav
-
 .nav-btn {
-  padding-left: 15px;
-  padding-right: 15px;
-  line-height: 30px;
-  min-height: 32px;
-  border-width: 1px;
   top: -1px;
 }

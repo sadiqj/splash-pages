@@ -31,6 +31,7 @@
   }
 }
 
+.btn:active,
 .btn--active {
   background-color: $primary-color-darken;
 }
@@ -57,6 +58,7 @@
   padding-right: 15px;
   line-height: 30px;
   min-height: 32px;
+  border-width: 1px;
 }
 
 // Depends on .btn
