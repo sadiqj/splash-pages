@@ -17,22 +17,41 @@
     </div>
   </div>
 
-  <div class="u-padding-Tl u-margin-Bs">
+  <div class="u-padding-Tl u-margin-Bs" ng-init="tabs.activeTab = {}">
     <div class="tabbed-well integrations-api-promo">
       <ul class="u-cf nav">
-        <li class="u-size1of3 tabbed-well__nav active">
-          <a href="#subscriptions-tab" data-toggle="tab" class="tabbed-well__nav__target">Create a subscription</a>
+        <li class="u-size1of3 tabbed-well__nav">
+          <a href="#subscriptions-tab" class="tabbed-well__nav__target"
+          ng-click="$activate($event)"
+          ng-class="{ 'is-active': $isActive }"
+          ng-gc-tabby-trigger="{
+            $href: 'create-subscription'
+          }">Create a subscription</a>
         </li>
         <li class="u-size1of3 tabbed-well__nav">
-          <a href="#setup-direct-debit-tab" data-toggle="tab" class="tabbed-well__nav__target">Setup a new Direct Debit</a>
+          <a href="#setup-direct-debit-tab" class="tabbed-well__nav__target"
+          ng-click="$activate($event)"
+          ng-class="{ 'is-active': $isActive }"
+          ng-gc-tabby-trigger="{
+            $href: 'setup-new-direct-debit'
+          }">Setup a new Direct Debit</a>
         </li>
         <li class="u-size1of3 tabbed-well__nav">
-          <a href="#list-payouts-tab" data-toggle="tab" class="tabbed-well__nav__target">Take payment</a>
+          <a href="#list-payouts-tab" class="tabbed-well__nav__target"
+          ng-click="$activate($event)"
+          ng-class="{ 'is-active': $isActive }"
+          ng-gc-tabby-trigger="{
+            $href: 'take-payment'
+          }">Take payment</a>
         </li>
       </ul>
 
       <div class="tabbed-well__content">
-        <article class="tab-pane active" id="subscriptions-tab">
+
+        <article
+        id="create-subscription"
+        ng-gc-tabby-content>
+          <div ng-if="$isActive">
 <pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
 
 <span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_subscription_url</span><span class="p">(</span>
@@ -41,9 +60,14 @@
   <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
   <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p"></span>
 <span class="p">)</span></pre>
+          </div>
         </article>
-        <article class="tab-pane" id="setup-direct-debit-tab">
-  <pre class="highlight ruby"><span class="c1"># A pre-authorization for up to £100.00 every month</span>
+
+        <article
+        id="setup-new-direct-debit"
+        ng-gc-tabby-content>
+          <div ng-if="$isActive">
+<pre class="highlight ruby"><span class="c1"># A pre-authorization for up to £100.00 every month</span>
 
 <span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_pre_authorization_url</span><span class="p">(</span>
   <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"100.00"</span><span class="p">,</span>
@@ -51,9 +75,14 @@
   <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
   <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span>
 <span class="p">)</span></pre>
+          </div>
         </article>
-        <article class="tab-pane" id="list-payouts-tab">
-  <pre class="highlight ruby"><span class="c1"># A Direct Debit payment of £15.00</span>
+
+        <article
+        id="take-payment"
+        ng-gc-tabby-content>
+          <div ng-if="$isActive">
+<pre class="highlight ruby"><span class="c1"># A Direct Debit payment of £15.00</span>
 
 <span class="n">pre_auth</span> <span class="o">=</span> <span class="no">GoCardless</span><span class="o">::</span><span class="no">PreAuthorization</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s2">"0540QD22SKND"</span><span class="p">)</span>
 <span class="n">pre_auth</span><span class="p">.</span><span class="nf">create_bill</span><span class="p">(</span>
@@ -61,6 +90,7 @@
   <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"15.00"</span><span class="p">,</span>
   <span class="ss">:charge_customer_at</span> <span class="o">=&gt;</span> <span class="s2">"2014-08-27"</span>
 <span class="p">)</span></pre>
+          </div>
         </article>
       </div>
     </div>
