@@ -33,16 +33,13 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  transition: all 0.1s ease;
   text-transform: uppercase;
 
   &:hover,
   &:active {
     text-decoration: none;
-    transition: all 0.1s ease;
     color: white;
   }
-
 }
 
 .btn--active {
