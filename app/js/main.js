@@ -50,7 +50,7 @@ angular.module('home', [
   'ngGcTeamMemberDirective',
   'ngGcTabbyActiveDirective',
   'ngGcTabbyContentDirective',
-  'ngGcTabbyTriggerDirective',
+  'ngGcTabbyTriggerDirective'
 ]);
 
 function isSupportedBrowser() {
