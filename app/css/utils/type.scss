@@ -111,6 +111,10 @@ h6, .u-text-xxs {
 
 // Text utilities
 
+.u-text-lowcase {
+  text-transform: none;
+}
+
 .u-text-upcase {
   text-transform: uppercase;
 }
