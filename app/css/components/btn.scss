@@ -62,13 +62,9 @@
 // Depends on .btn
 
 .btn--info {
-  color: #FFF;
+  color: white;
   background: $secondary-color;
   border-color: $secondary-color;
-
-  &:hover {
-    color: #FFF;
-  }
 }
 
 .btn--info:active,
@@ -101,7 +97,6 @@
   &:hover {
     color: $primary-color;
   }
-
 }
 
 .btn--hollow {
@@ -112,17 +107,12 @@
   &:hover {
     color: $primary-color;
   }
-
 }
 
 .btn--invert-hollow {
   border-color: white;
   background: transparent;
   color: white;
-
-  &:hover {
-    color: white;
-  }
 }
 
 .btn--hollow:active,
