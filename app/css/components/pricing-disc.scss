@@ -1,0 +1,9 @@
+@import "variables";
+
+.pricing-disc {
+  width: 114px;
+  height: 114px;
+  line-height: 110px;
+  border-radius: 50%;
+  border: 2px solid $primary-color;
+}

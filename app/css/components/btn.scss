@@ -34,20 +34,12 @@
   -moz-user-select: none;
   user-select: none;
   transition: all 0.1s ease;
-  position: relative;
-  top: 0;
 
   &:hover,
   &:active {
     text-decoration: none;
     transition: all 0.1s ease;
-    transform: scale(1.05);
     color: white;
-  }
-
-  &:active {
-    top: 2px;
-    transition: all 0.1s ease;
   }
 
 }
