@@ -1,0 +1,15 @@
+@import "variables";
+
+.sticky-nav__item {
+  margin-right: $space-medium;
+  float: left;
+  display: block;
+}
+
+.sticky-nav__link {
+  color: $dark-gray-darken;
+  &:hover,
+  &:active {
+    color: $dark-gray-darken;
+  }
+}
