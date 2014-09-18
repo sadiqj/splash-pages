@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.site-logo-invert {
+  @include icon("/images/logos/site-logo-invert", 157px, 17px);
+}
