@@ -1,3 +1,7 @@
+.page-hero {
+  background: $primary-color;
+}
+
 .page-hero__container {
   height: 100%;
 }
@@ -28,8 +32,4 @@
 
 .page-hero--small {
   height: 165px;
-}
-
-.page-hero--plain {
-  background: $primary-color;
 }
