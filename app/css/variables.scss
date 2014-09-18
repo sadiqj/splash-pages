@@ -5,14 +5,14 @@ $font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
 
 $line-height-base: 1.466666667;
 
-$font-size-xxlarge: 42px;
-$font-size-xlarge: 30px;
-$font-size-large: 20px;
-$font-size-medium: 17px;
+$font-size-xxlarge: 42px; //old
+$font-size-xlarge: 36px;
+$font-size-large: 24px;
+$font-size-medium: 18px;
 $font-size-small: 15px;
-$font-size-xsmall: 13px;
+$font-size-xsmall: 14px;
 $font-size-xxsmall: 12px;
-$font-size-xxxsmall: 11px;
+$font-size-xxxsmall: 11px; //old
 
 $border-radius-base: 3px;
 $gutter-space-base: 20px;
@@ -22,6 +22,8 @@ $border-radius-double: $border-radius-base * 2;
 
 ////////////////////////////////////////////////////////////////////////////////
 
+$space-xxlarge: 40px;
+$space-xlarge: 33px;
 $space-large: 27px;
 $space-xmedium: 22px;
 $space-medium: 20px;
@@ -43,17 +45,35 @@ $page-min-width: 780px + $gutter-space-container * 2;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-$black-blue: #4E4E4E;
-$black-blue-lighten: lighten($black-blue, 7%);
-$black-blue-darken: darken($black-blue, 7%);
+$site-background-color: #FFF;
 
-$dark-blue: #203844;
-$dark-blue-lighten: lighten($dark-blue, 7%); // #4D616C
-$dark-blue-darken: darken($dark-blue, 7%);
+$primary-color: #498EE0;
+$primary-hover-color: #376BA9;
 
-$primary-color: #395D8D;
-$primary-color-lighten: lighten($primary-color, 5%);
-$primary-color-darken: darken($primary-color, 5%); // #2F95D6
+$light-gray: #F8F8F8;
+
+$gray: #EBEBEB;
+
+$medium-gray: #A8B0B9;
+$medium-gray-lighten: lighten($medium-gray, 5%);
+
+$dark-gray: #5E6E81;
+$dark-gray-darken: #526377;
+
+$highlight-yellow: #FEFF87;
+$highlight-green: #C9FF8E;
+$highlight-blue: #8AF6FF;
+
+
+//old:
+
+$dark-gray-lighten: lighten($dark-gray, 7%);
+
+$gray-lighten: lighten($gray, 5%);
+$gray-darken: darken($gray, 7%);
+
+$light-gray-lighten: lighten($light-gray, 5%);
+$light-gray-darken: darken($light-gray, 5%);
 
 $secondary-color: #E14E3D;
 $secondary-color-lighten: lighten($secondary-color, 7%);
@@ -75,23 +95,21 @@ $light-blue: #EAF7FD;
 $light-blue-lighten: lighten($light-blue, 2%);
 $light-blue-darken: darken($light-blue, 7%);
 
-$light-gray: #EBEBEB;
-$light-gray-lighten: lighten($light-gray, 5%);
-$light-gray-darken: darken($light-gray, 5%);
+$primary-color-lighten: lighten($primary-color, 5%);
+$primary-color-darken: darken($primary-color, 5%); // #2F95D6
 
-$gray: #AAAAAA;
-$gray-lighten: lighten($gray, 5%);
-$gray-darken: darken($gray, 7%);
+$black-blue: #4E4E4E;
+$black-blue-lighten: lighten($black-blue, 7%);
+$black-blue-darken: darken($black-blue, 7%);
 
-$medium-gray: #9D9D9D;
+$dark-blue: #203844;
+$dark-blue-lighten: lighten($dark-blue, 7%); // #4D616C
+$dark-blue-darken: darken($dark-blue, 7%);
 
-$dark-gray: #767676;
-$dark-gray-lighten: lighten($dark-gray, 7%);
-$dark-gray-darken: darken($dark-gray, 5%);
 
 ////////////////////////////////////////////////////////////////////////////////
 
-$site-background-color: #F8F8F8;
+// old:
 
 $border-gray: #CBCBCB;
 
@@ -115,4 +133,3 @@ $black-blue-invert-secondary: #D2D9E0;
 $horizontal-ruler-top-invert-color: #4f6f91;
 
 $hero-background-color: #1C436C;
-

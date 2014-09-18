@@ -46,6 +46,11 @@
   font-family: $font-family-label;
 }
 
+.u-text-no-smoothing {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
 // Text sizes
 
 .u-text-xxl {
@@ -107,6 +112,10 @@ h6, .u-text-xxs {
 }
 
 // Text utilities
+
+.u-text-transform-none {
+  text-transform: none;
+}
 
 .u-text-upcase {
   text-transform: uppercase;
