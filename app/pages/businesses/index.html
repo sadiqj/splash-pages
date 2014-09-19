@@ -5,7 +5,7 @@
 
 {% block body %}
 
-<div class="site-wrapper">
+<div class="site-wrapper" scroll-spy>
   <div class="page-hero page-hero--businesses page-hero--medium u-relative u-size-full">
     <div class="site-container page-hero__container">
       <div class="site-header site-header--invert site-gutter u-cf align-btn-small u-padding-Tm">
@@ -20,37 +20,53 @@
     </div>
   </div>
 
-  <div class="u-background-light-gray u-padding-Vm u-text-heading u-text-xs u-text-light u-text-no-smoothing">
-    <div class="u-center site-container">
-      <ul class="sticky-nav u-pull-start u-margin-Txxs">
-        <li class="sticky-nav__item">
-          <a href="#benefits" class="sticky-nav__link">
-            Benefits
-          </a>
-        </li>
-        <li class="sticky-nav__item">
-          <a href="#features" class="sticky-nav__link">
-            Features
-          </a>
-        </li>
-        <li class="sticky-nav__item">
-          <a href="#demo" class="sticky-nav__link">
-            Demo
-          </a>
-        </li>
-        <li class="sticky-nav__item">
-          <a href="#pricing" class="sticky-nav__link">
-            Pricing
-          </a>
-        </li>
-      </ul>
-      <a href="/merchants/new" class="btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xs u-text-no-smoothing">
-        Start taking payments
-      </a>
+  <!--<div>
+    <a href="#gocardless-anatomy"
+      target="_self" scroll-spy-item="gocardless-anatomy">
+      test
+    </a>
+    <a href="#test-111"
+      target="_self" scroll-spy-item="test-111">
+      test
+    </a>
+  </div>-->
+
+  <div class="sticky-nav">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xs u-text-light u-text-no-smoothing">
+      <div class="u-center site-container site-gutter u-padding-Vm">
+        <ul class="u-pull-start u-margin-Txxs">
+          <li class="sticky-nav__item">
+            <a href="#benefits" class="sticky-nav__link">
+              Benefits
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#features" class="sticky-nav__link">
+              Features
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#demo" class="sticky-nav__link">
+              Demo
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#pricing" class="sticky-nav__link">
+              Pricing
+            </a>
+          </li>
+        </ul>
+        <a href="/merchants/new" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xs u-text-no-smoothing">
+          Start taking payments
+        </a>
+      </div>
+      <hr class="u-margin-An">
     </div>
   </div>
 
-  <hr class="u-margin-An">
+  <div>
+    <a id="benefits"></a>
+  </div>
 
   <div class="site-container u-text-center u-padding-Vxxl">
     <div class="u-padding-Vxl">
@@ -89,6 +105,10 @@
   </div>
 
   <hr class="u-margin-An">
+
+  <div>
+    <a id="features"></a>
+  </div>
 
   <div class="site-container u-text-center u-padding-Vxxl">
     <div class="u-padding-Vxl">
@@ -165,7 +185,7 @@
       <div class="u-text-heading u-color-heading u-text-light u-text-l u-text-light">
         Say hello to Dashboard. Everything you need to set up <br>customers, manage subscriptions and take payments
       </div>
-      <div class="u-padding-Txl">
+      <div class="u-padding-Txxl u-size5of6 u-center">
         <img src="/images/products/new-dashboard-screen.jpg">
       </div>
     </div>
@@ -174,32 +194,116 @@
   <hr class="u-margin-An">
 
   <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxxl">
-      Two clicks
+    <div class="grid u-padding-Vxxl u-size5of6 u-center">
+      <div class="grid__cell u-size1of2">
+        <div class="u-text-m u-text-heading u-color-heading u-text-light business-page__two-clicks-text">Add customers in two clicks</div>
+        <p class="u-color-p u-size2of3 u-margin-Txs">Vestibulum finibus risus et magna vehicula, at aliquam odio vehicula. Maecenas lobortis mattis quam</p>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <img src="/images/businesses/two-clicks.jpg">
+      </div>
     </div>
   </div>
 
   <hr class="u-margin-An">
 
   <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxxl">
-      Effortlessly
+    <div class="grid u-padding-Vxxl u-size5of6 u-center">
+      <div class="grid__cell u-size1of2">
+        <img src="/images/businesses/mobile-payment-pages.jpg">
+      </div>
+      <div class="grid__cell u-size1of2">
+        <div class="u-margin-Lxxl u-padding-Lxxl">
+          <div class="u-text-m u-text-heading u-color-heading u-text-light business-page__two-clicks-text">Add customers in two clicks</div>
+          <p class="u-color-p u-size5of6 u-margin-Txs">Vestibulum finibus risus et magna vehicula, at aliquam odio vehicula. Maecenas lobortis mattis quam</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <hr class="u-margin-An">
 
   <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxxl">
-      Real-time reports
+    <div class="grid u-padding-Vxxl u-size5of6 u-center">
+      <div class="grid__cell u-size1of2">
+        <div class="u-text-m u-text-heading u-color-heading u-text-light business-page__two-clicks-text">Get real-time reports</div>
+        <p class="u-color-p u-size2of3 u-margin-Txs">Vestibulum finibus risus et magna vehicula, at aliquam odio vehicula. Maecenas lobortis mattis quam</p>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <div class="u-size2of3 u-pull-end u-margin-Rxl">
+          <img src="/images/businesses/real-time-reports.jpg">
+        </div>
+      </div>
     </div>
   </div>
 
   <hr class="u-margin-An">
 
   <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxxl">
-      Discover what GoCardless can do
+    <div class="u-padding-Vxl">
+      <div class="u-size1of2 u-center">
+        <div class="u-text-heading u-color-heading u-text-light u-text-l u-text-light">
+          Discover what GoCardless can do
+        </div>
+      </div>
+      <div class="site-container u-center">
+        <div class="u-margin-Txxl grid">
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <div class="u-padding-Vl u-padding-Hxxl">
+              <i class="tick-icon"></i>
+              <p class="u-margin-Txs u-color-heading">For businesses taking fewer than 500 payments a month</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -210,6 +314,12 @@
       Watch a demo of Dashboard
     </div>
   </div>
+
+
+  <div>
+    <a class="section-header__anchor" id="gocardless-anatomy"></a>
+  </div>
+
 
   <hr class="u-margin-An">
 
@@ -236,17 +346,29 @@
 
   <hr class="u-margin-An">
 
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxxl">
-      Hero - Spencer Hockey Club
+  <div class="business-page__hockey-bg">
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxxl">
+        <div class="u-padding-Bxxl u-size1of2 u-center">
+          <p class="u-color-invert u-text-heading u-text-l">“GoCardless was the obvious choice <br>for our team. Payments just happen every month without us having to remember to do anything. It’s ideal.”</p>
+        </div>
+        <img src="/images/businesses/avatar-dave-morin@2x.png" class="u-size1of12 u-text-center u-margin-Bxs">
+        <div class="u-color-invert u-text-heading u-text-m u-text-semi">Dave Morin</div>
+        <div class="u-color-invert u-text-heading u-text-xs">Spencer Hockey Club</div>
+      </div>
     </div>
   </div>
 
   <hr class="u-margin-An">
 
-  <div class="u-background-light-gray u-text-center u-padding-Vxxl">
+  <div class="u-background-light-gray u-text-center u-padding-Vxxl u-overflow-hidden">
     <div class="site-container u-padding-Vxxl">
-      We're the Direct Debit experts
+      <div class="grid">
+        <div class="grid__cell u-size1of2">We're the Direct Debit experts</div>
+        <div class="grid__cell u-size1of2 u-relative">
+          <img src="/images/businesses/guides-shelf.jpg" class="businesses-page__guides-shelf">
+        </div>
+      </div>
     </div>
   </div>
 

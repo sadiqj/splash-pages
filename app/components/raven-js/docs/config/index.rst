@@ -128,26 +128,26 @@ Putting it all together
     <html>
     <head>
         <title>Awesome stuff happening here</title>
+    </head>
+    <body>
+        ...
+        <script src="jquery.min.js"></script>
         <script src="//cdn.ravenjs.com/|release|/jquery,native/raven.min.js"></script>
         <script>
             var options = {
                 logger: 'my-logger',
                 whitelistUrls: [
-                    /disqus\.com/, /getsentry\.com/
+                    /disqus\\.com/, /getsentry\\.com/
                 ],
                 ignoreErrors: [
                     'fb_xd_fragment', /ReferenceError:.*/
                 ],
                 includePaths: [
-                    /https?:\/\/(www\.)?getsentry\.com/
+                    /https?:\\/\\/(www\\.)?getsentry\\.com/
                 ]
             };
             Raven.config('https://public@app.getsentry.com/1', options).install();
         </script>
-    </head>
-    <body>
-        ...
-        <script src="jquery.min.js"></script>
         <script src="myapp.js"></script>
     </body>
     </html>

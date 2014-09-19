@@ -84,7 +84,7 @@ describe('TraceKit', function(){
                 if (numDone == numReports) {
                     done();
                 }
-            }
+            };
             TraceKit.report.subscribe(subscriptionHandler);
 
             // TraceKit.report always throws an exception in order to trigger
@@ -181,7 +181,7 @@ describe('globals', function() {
             assert.isTrue(isString(''));
             assert.isFalse(isString({}));
             assert.isFalse(isString(undefined));
-            assert.isFalse(isString(function(){}))
+            assert.isFalse(isString(function(){}));
         });
     });
 
@@ -215,17 +215,35 @@ describe('globals', function() {
             assert.isFalse(isSetup());
         });
 
-        it('should return false when Raven is not configured and write to console.error', function() {
+        it('should return false when Raven is not configured', function() {
             hasJSON = true;    // be explicit
             globalServer = undefined;
-            this.sinon.stub(console, 'error');
+            this.sinon.stub(window, 'logDebug');
             assert.isFalse(isSetup());
-            assert.isTrue(console.error.calledOnce);
         });
 
         it('should return true when everything is all gravy', function() {
             hasJSON = true;
             assert.isTrue(isSetup());
+        });
+    });
+
+    describe('logDebug', function() {
+        var level = 'error',
+            message = 'foobar';
+
+        it('should not write to console when Raven.debug is false', function() {
+            Raven.debug = false;
+            this.sinon.stub(console, level);
+            logDebug(level, message);
+            assert.isFalse(console[level].called);
+        });
+
+        it('should write to console when Raven.debug is true', function() {
+            Raven.debug = true;
+            this.sinon.stub(console, level);
+            logDebug(level, message);
+            assert.isTrue(console[level].calledOnce);
         });
     });
 
@@ -377,6 +395,82 @@ describe('globals', function() {
                 lineno: 10,
                 colno: 11,
                 'function': 'lol',
+                in_app: false
+            });
+        });
+
+        it('should mark `in_app` for raven.js', function() {
+            this.sinon.stub(window, 'extractContextFromFrame').returns(undefined);
+            var frame = {
+                url: 'http://lol.com/path/raven.js',
+                line: 10,
+                column: 11,
+                func: 'lol'
+                // context: []    context is stubbed
+            };
+
+            assert.deepEqual(normalizeFrame(frame), {
+                filename: 'http://lol.com/path/raven.js',
+                lineno: 10,
+                colno: 11,
+                'function': 'lol',
+                in_app: false
+            });
+        });
+
+        it('should mark `in_app` for raven.min.js', function() {
+            this.sinon.stub(window, 'extractContextFromFrame').returns(undefined);
+            var frame = {
+                url: 'http://lol.com/path/raven.min.js',
+                line: 10,
+                column: 11,
+                func: 'lol'
+                // context: []    context is stubbed
+            };
+
+            assert.deepEqual(normalizeFrame(frame), {
+                filename: 'http://lol.com/path/raven.min.js',
+                lineno: 10,
+                colno: 11,
+                'function': 'lol',
+                in_app: false
+            });
+        });
+
+        it('should mark `in_app` for Raven', function() {
+            this.sinon.stub(window, 'extractContextFromFrame').returns(undefined);
+            var frame = {
+                url: 'http://lol.com/path/file.js',
+                line: 10,
+                column: 11,
+                func: 'Raven.wrap'
+                // context: []    context is stubbed
+            };
+
+            assert.deepEqual(normalizeFrame(frame), {
+                filename: 'http://lol.com/path/file.js',
+                lineno: 10,
+                colno: 11,
+                'function': 'Raven.wrap',
+                in_app: false
+            });
+        });
+
+        it('should mark `in_app` for TraceKit', function() {
+            this.sinon.stub(window, 'extractContextFromFrame').returns(undefined);
+            var frame = {
+                url: 'http://lol.com/path/file.js',
+                line: 10,
+                column: 11,
+                func: 'TraceKit.lol'
+                // context: []    context is stubbed
+            };
+
+            assert.deepEqual(normalizeFrame(frame), {
+                filename: 'http://lol.com/path/file.js',
+                lineno: 10,
+                colno: 11,
+                'function': 'TraceKit.lol',
                 in_app: false
             });
         });
@@ -613,6 +707,13 @@ describe('globals', function() {
             assert.isFalse(window.send.called);
 
             processException('TypeError', '', 'http://example.com', []);
+            assert.isTrue(window.send.called);
+        });
+
+        it('should not blow up with `undefined` message', function() {
+            this.sinon.stub(window, 'send');
+
+            processException('TypeError', undefined, 'http://example.com', []);
             assert.isTrue(window.send.called);
         });
     });
@@ -997,6 +1098,17 @@ describe('Raven (public API)', function() {
         });
     });
 
+    describe('ignore errors', function() {
+        it('should install default ignore errors', function() {
+            Raven.config('//abc@example.com/2');
+
+            assert.isTrue(globalOptions.ignoreErrors.test('Script error'), 'it should install "Script error" by default');
+            assert.isTrue(globalOptions.ignoreErrors.test('Script error.'), 'it should install "Script error." by default');
+            assert.isTrue(globalOptions.ignoreErrors.test('Javascript error: Script error on line 0'), 'it should install "Javascript error: Script error on line 0" by default');
+            assert.isTrue(globalOptions.ignoreErrors.test('Javascript error: Script error. on line 0'), 'it should install "Javascript error: Script error. on line 0" by default');
+        });
+    });
+
     describe('callback function', function() {
         it('should callback a function if it is global', function() {
             window.RavenConfig = {
@@ -1011,8 +1123,7 @@ describe('Raven (public API)', function() {
 
             assert.equal(globalKey, 'random');
             assert.equal(globalServer, 'http://some.other.server:80/api/2/store/');
-            assert.isTrue(globalOptions.ignoreErrors.test('Script error'), 'it should install "Script error" by default');
-            assert.isTrue(globalOptions.ignoreErrors.test('Script error.'), 'it should install "Script error." by default');
+
             assert.equal(globalOptions.some, 'config');
             assert.equal(globalProject, '2');
 
@@ -1028,8 +1139,6 @@ describe('Raven (public API)', function() {
             assert.equal(Raven, Raven.config(SENTRY_DSN, {foo: 'bar'}), 'it should return Raven');
             assert.equal(globalKey, 'abc');
             assert.equal(globalServer, 'http://example.com:80/api/2/store/');
-            assert.isTrue(globalOptions.ignoreErrors.test('Script error'), 'it should install "Script error" by default');
-            assert.isTrue(globalOptions.ignoreErrors.test('Script error.'), 'it should install "Script error." by default');
             assert.equal(globalOptions.foo, 'bar');
             assert.equal(globalProject, '2');
             assert.isTrue(isSetup());
@@ -1039,8 +1148,6 @@ describe('Raven (public API)', function() {
             Raven.config('//abc@example.com/2');
             assert.equal(globalKey, 'abc');
             assert.equal(globalServer, '//example.com/api/2/store/');
-            assert.isTrue(globalOptions.ignoreErrors.test('Script error'), 'it should install "Script error" by default');
-            assert.isTrue(globalOptions.ignoreErrors.test('Script error.'), 'it should install "Script error." by default');
             assert.equal(globalProject, '2');
             assert.isTrue(isSetup());
         });
@@ -1060,6 +1167,15 @@ describe('Raven (public API)', function() {
 
         it('should return Raven for a falsey dsn', function() {
             assert.equal(Raven.config(''), Raven);
+        });
+
+        it('should not set global options more than once', function() {
+            this.sinon.spy(window, 'parseDSN');
+            this.sinon.stub(window, 'logDebug');
+            setupRaven();
+            setupRaven();
+            assert.isTrue(parseDSN.calledOnce);
+            assert.isTrue(logDebug.called);
         });
 
         describe('whitelistUrls', function() {
@@ -1130,6 +1246,14 @@ describe('Raven (public API)', function() {
             assert.equal(Raven, Raven.install());
             assert.isTrue(TraceKit.report.subscribe.calledOnce);
             assert.equal(TraceKit.report.subscribe.lastCall.args[0], handleStackInfo);
+        });
+
+        it('should not register itself more than once', function() {
+            this.sinon.stub(window, 'isSetup').returns(true);
+            this.sinon.stub(TraceKit.report, 'subscribe');
+            Raven.install();
+            Raven.install();
+            assert.isTrue(TraceKit.report.subscribe.calledOnce);
         });
     });
 
@@ -1276,18 +1400,51 @@ describe('Raven (public API)', function() {
             Raven.uninstall();
             assert.isTrue(TraceKit.report.uninstall.calledOnce);
         });
+
+        it('should set isRavenInstalled flag to false', function() {
+            isRavenInstalled = true;
+            this.sinon.stub(TraceKit.report, 'uninstall');
+            Raven.uninstall();
+            assert.isFalse(isRavenInstalled);
+        });
     });
 
-    describe('.setUser', function() {
+    describe('.setUserContext', function() {
         it('should set the globalUser object', function() {
-            Raven.setUser({name: 'Matt'});
+            Raven.setUserContext({name: 'Matt'});
             assert.deepEqual(globalUser, {name: 'Matt'});
         });
 
         it('should clear the globalUser with no arguments', function() {
             globalUser = {name: 'Matt'};
-            Raven.setUser();
+            Raven.setUserContext();
             assert.isUndefined(globalUser);
+        });
+    });
+
+    describe('.setExtraContext', function() {
+        it('should set the globalOptions.extra object', function() {
+            Raven.setExtraContext({name: 'Matt'});
+            assert.deepEqual(globalOptions.extra, {name: 'Matt'});
+        });
+
+        it('should clear globalOptions.extra with no arguments', function() {
+            globalOptions = {name: 'Matt'};
+            Raven.setExtraContext();
+            assert.deepEqual(globalOptions.extra, {});
+        });
+    });
+
+    describe('.setTagsContext', function() {
+        it('should set the globalOptions.tags object', function() {
+            Raven.setTagsContext({name: 'Matt'});
+            assert.deepEqual(globalOptions.tags, {name: 'Matt'});
+        });
+
+        it('should clear globalOptions.tags with no arguments', function() {
+            globalOptions = {name: 'Matt'};
+            Raven.setTagsContext();
+            assert.deepEqual(globalOptions.tags, {});
         });
     });
 
