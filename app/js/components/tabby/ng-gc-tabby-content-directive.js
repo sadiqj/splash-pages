@@ -22,7 +22,7 @@ angular.module('ngGcTabbyContentDirective', [
 
         _.extend(newScope, {
           $href: attrs.id.replace(/^#/, ''),
-          preventLocationUpdate: ('preventLocationUpdate' in attrs)
+          preventLocationUpdate: 'preventLocationUpdate' in attrs
         });
 
         ngGcTabbyStore.add(newScope);
