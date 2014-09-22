@@ -25,7 +25,7 @@
   border-color: $primary-color;
   border-radius: $border-radius-base;
   text-align: center;
-  font-size: $font-size-h6;
+  font-size: $font-size-xxsmall;
   font-family: $font-family-label;
   font-weight: 500;
   color: white;
@@ -135,7 +135,7 @@
 
 .btn--large {
   border-radius: $border-radius-double;
-  font-size: $font-size-h3;
+  font-size: $font-size-medium;
   border-width: 2px;
   line-height: 44px;
 }
