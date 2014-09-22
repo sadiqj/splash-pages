@@ -11,25 +11,6 @@ angular.module('ngGcTabbyStoreService', [
     var allowedEvents = ['activate', 'add'];
     var tabStore = {};
 
-    $($window).on('hashchange', function() {
-      var hash = locationHash();
-      if (hash) {
-        $rootScope.$apply(function() {
-          activate({
-            $href: hash
-          });
-        });
-      }
-    });
-
-    // Activate the first tab if there is none active after dom is ready
-    $timeout(function() {
-      if (!getPageTabStore().some(function(tab) {
-        return tab.$isActive;
-      })) {
-        activate(getPageTabStore()[0]);
-      }
-    });
 
     function sanitizePath(path) {
       path = (path || '').replace(/^\/|\/$/g, '');
@@ -54,7 +35,7 @@ angular.module('ngGcTabbyStoreService', [
     }
 
     function updateLocation(hash) {
-      if (locationHash() == hash) {
+      if (locationHash() === hash) {
         return;
       }
       hash = '#' + sanitizeHash(hash);
@@ -64,12 +45,6 @@ angular.module('ngGcTabbyStoreService', [
         } else {
           window.history.pushState({}, '', hash);
         }
-      } else {
-        // var scrollV = document.body.scrollTop;
-        // var scrollH = document.body.scrollLeft;
-        // window.location.hash = hash;
-        // document.body.scrollTop = scrollV;
-        // document.body.scrollLeft = scrollH;
       }
     }
 
@@ -91,6 +66,31 @@ angular.module('ngGcTabbyStoreService', [
       return _.find(getPageTabStore(), { '$href': data.$href });
     }
 
+    function activate(data) {
+      validate(data);
+
+      var tab = find(data);
+
+      if (!tab || tab.$isActive) {
+        return false;
+      }
+
+      getPageTabStore().filter(function(tab) {
+        return tab.$isActive;
+      }).forEach(function(tab) {
+        tab.$isActive = false;
+      });
+
+      _.extend(tab, whitelist(data));
+      tab.$isActive = true;
+      if (!tab.preventLocationUpdate) {
+        updateLocation(data.$href);
+      }
+      eventBus.$emit('activate', whitelist(tab));
+
+      return true;
+    }
+
     function add(data) {
       validate(data);
       if (!find(data)) {
@@ -103,29 +103,6 @@ angular.module('ngGcTabbyStoreService', [
       return whitelist(data);
     }
 
-    function activate(data) {
-      validate(data);
-
-      var tab = find(data);
-
-      if (!tab || tab.$isActive) {
-        return;
-      }
-
-      getPageTabStore().filter(function(tab) {
-        return tab.$isActive;
-      }).forEach(function(tab) {
-        tab.$isActive = false;
-      });
-
-      _.extend(tab, whitelist(data));
-      tab.$isActive = true;
-      updateLocation(data.$href);
-      eventBus.$emit('activate', whitelist(tab));
-
-      return whitelist(tab);
-    }
-
     function getActive() {
       return _.find(getPageTabStore(), { '$isActive': true });
     }
@@ -136,6 +113,26 @@ angular.module('ngGcTabbyStoreService', [
       }
       eventBus.$on(name, handler);
     }
+
+    $($window).on('hashchange', function() {
+      var hash = locationHash();
+      if (hash) {
+        $rootScope.$apply(function() {
+          activate({
+            $href: hash
+          });
+        });
+      }
+    });
+
+    // Activate the first tab if there is none active after dom is ready
+    $timeout(function() {
+      if (!getPageTabStore().some(function(tab) {
+        return tab.$isActive;
+      })) {
+        activate(getPageTabStore()[0]);
+      }
+    });
 
     return {
       add: add,

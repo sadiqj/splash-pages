@@ -7,7 +7,7 @@ angular.module('ngGcTabbyTriggerDirective', [
   'ngGcTabbyStoreService'
 ]).directive('ngGcTabbyTrigger', [
   'ngGcTabbyStore', '$window', '$timeout',
-  function ngGcTabbyTriggerDirective(ngGcTabbyStore, $window, $timeout) {
+  function ngGcTabbyTriggerDirective(ngGcTabbyStore) {
 
     return {
       restrict: 'A',
@@ -19,8 +19,6 @@ angular.module('ngGcTabbyTriggerDirective', [
         options = _.extend({
           $href: attrs.href
         }, options);
-
-        var isInitiallyActive = options.$isActive;
 
         options.$href = options.$href.replace(/^#/, '');
 
