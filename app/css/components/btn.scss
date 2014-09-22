@@ -1,26 +1,14 @@
 @import "variables";
 
-// A generic button class
-//
-// .disabled      - A disabled button
-// [disabled]     - A disabled button
-// :hover         - Subtle darker highlight on hover
-// :active        - Show button as pressed
-// .btn--small    - A small button
-// .btn--mini     - A mini button
-// .btn--info     - A info colored button
-// .btn--block    - A full sized button
-
 .btn {
   display: inline-block;
   vertical-align: middle;
   padding: 0 25px;
-  line-height: 36px;
-  min-height: 36px;
+  line-height: 43px;
+  min-height: 43px;
   white-space: nowrap;
-
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   background-color: $primary-color;
   border-color: $primary-color;
   border-radius: $border-radius-base;
@@ -34,8 +22,10 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  text-transform: uppercase;
 
-  &:hover {
+  &:hover,
+  &:active {
     text-decoration: none;
     color: white;
   }
@@ -66,20 +56,17 @@
 .btn--small {
   padding-left: 15px;
   padding-right: 15px;
-  line-height: 26px;
-  min-height: 28px;
+  line-height: 30px;
+  min-height: 32px;
+  border-width: 1px;
 }
 
 // Depends on .btn
 
 .btn--info {
-  color: #FFF;
+  color: white;
   background: $secondary-color;
   border-color: $secondary-color;
-
-  &:hover {
-    color: #FFF;
-  }
 }
 
 .btn--info:active,
@@ -104,6 +91,16 @@
   border-color: darken($secondary-color, 5%);
 }
 
+.btn--invert {
+  border-color: white;
+  background: white;
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
 .btn--hollow {
   border-color: $primary-color;
   background: transparent;
@@ -115,9 +112,9 @@
 }
 
 .btn--invert-hollow {
-  border-color: #fff;
+  border-color: white;
   background: transparent;
-  color: #fff;
+  color: white;
 }
 
 .btn--hollow:active,

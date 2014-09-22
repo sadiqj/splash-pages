@@ -23,8 +23,10 @@
 @import "components/gradient-fill-light";
 @import "components/grid";
 @import "components/guides-item";
+@import "components/header-logo";
 @import "components/hero-heading";
 @import "components/highlight";
+@import "components/horizontal-rule";
 @import "components/horizontal-ruler-bottom";
 @import "components/horizontal-ruler-top";
 @import "components/horizontal-ruler-top-double";
@@ -38,16 +40,22 @@
 @import "components/logo-header";
 @import "components/modal";
 @import "components/nav";
+@import "components/nav-btn";
+@import "components/nav-dropdown";
 @import "components/nav-tabs";
 @import "components/notice";
 @import "components/page-container";
 @import "components/page-heading-link";
+@import "components/page-footer";
 @import "components/page-heading";
 @import "components/page-subheading";
 @import "components/para";
 @import "components/placeholder";
 @import "components/popover";
+@import "components/product-grid";
+@import "components/pricing-disc";
 @import "components/pricing-emblem";
+@import "components/pricing-tab-link";
 @import "components/referral-icon";
 @import "components/section-heading";
 @import "components/section-subheading";
@@ -55,6 +63,7 @@
 @import "components/site-container";
 @import "components/site-gutter";
 @import "components/site-header";
+@import "components/site-wrapper";
 @import "components/tab-pane";
 @import "components/tabbed-well";
 @import "components/table";
@@ -62,6 +71,16 @@
 @import "components/testimonial";
 @import "components/thumbnails";
 @import "components/well";
+
+@import "figures/site-logo";
+@import "figures/site-logo-invert";
+@import "figures/enterprise-icon";
+@import "figures/integrations-icon";
+@import "figures/improve-cashflow-icon";
+@import "figures/save-money-icon";
+@import "figures/save-time-icon";
+@import "figures/shop-icon";
+@import "figures/uk-flag-icon";
 
 @import "utils/background";
 @import "utils/border";

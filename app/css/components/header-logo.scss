@@ -1,0 +1,11 @@
+.header-logo {
+  top: 3px;
+}
+
+.header-logo path {
+  fill: $primary-color;
+}
+
+.header-logo--invert path {
+  fill: white;
+}

@@ -43,6 +43,14 @@
 //////////////
 // All padding
 
+.u-padding-Axxl {
+  padding: $space-xxlarge;
+}
+
+.u-padding-Axl {
+  padding: $space-xlarge;
+}
+
 .u-padding-Al {
   padding: $space-large;
 }
@@ -72,6 +80,14 @@
 }
 
 // All margin
+
+.u-margin-Axxl {
+  margin: $space-xxlarge;
+}
+
+.u-margin-Axl {
+  margin: $space-xlarge;
+}
 
 .u-margin-Al {
   margin: $space-large;
@@ -103,6 +119,16 @@
 
 //////////////////
 // Vertical margin
+
+.u-margin-Vxxl {
+  margin-top: $space-xxlarge;
+  margin-bottom: $space-xxlarge;
+}
+
+.u-margin-Vxl {
+  margin-top: $space-xlarge;
+  margin-bottom: $space-xlarge;
+}
 
 .u-margin-Vl {
   margin-top: $space-large;
@@ -140,6 +166,16 @@
 }
 
 // Vertical padding
+
+.u-padding-Vxxl {
+  padding-top: $space-xxlarge;
+  padding-bottom: $space-xxlarge;
+}
+
+.u-padding-Vxl {
+  padding-top: $space-xlarge;
+  padding-bottom: $space-xlarge;
+}
 
 .u-padding-Vl {
   padding-top: $space-large;
@@ -179,6 +215,16 @@
 ////////////////////
 // Horizontal margin
 
+.u-margin-Hxxl {
+  margin-left: $space-xxlarge;
+  margin-right: $space-xxlarge;
+}
+
+.u-margin-Hxl {
+  margin-left: $space-xlarge;
+  margin-right: $space-xlarge;
+}
+
 .u-margin-Hl {
   margin-left: $space-large;
   margin-right: $space-large;
@@ -215,6 +261,16 @@
 }
 
 // Horizontal padding
+
+.u-padding-Hxxl {
+  padding-left: $space-xxlarge;
+  padding-right: $space-xxlarge;
+}
+
+.u-padding-Hxl {
+  padding-left: $space-xlarge;
+  padding-right: $space-xlarge;
+}
 
 .u-padding-Hl {
   padding-left: $space-large;
@@ -254,6 +310,14 @@
 /////////////
 // Top margin
 
+.u-margin-Txxl {
+  margin-top: $space-xxlarge;
+}
+
+.u-margin-Txl {
+  margin-top: $space-xlarge;
+}
+
 .u-margin-Tl {
   margin-top: $space-large;
 }
@@ -283,6 +347,14 @@
 }
 
 // Top padding
+
+.u-padding-Txxl {
+  padding-top: $space-xxlarge;
+}
+
+.u-padding-Txl {
+  padding-top: $space-xlarge;
+}
 
 .u-padding-Tl {
   padding-top: $space-large;
@@ -315,6 +387,14 @@
 ////////////////
 // Bottom margin
 
+.u-margin-Bxxl {
+  margin-bottom: $space-xxlarge;
+}
+
+.u-margin-Bxl {
+  margin-bottom: $space-xlarge;
+}
+
 .u-margin-Bl {
   margin-bottom: $space-large;
 }
@@ -344,6 +424,14 @@
 }
 
 // Bottom padding
+
+.u-padding-Bxxl {
+  padding-bottom: $space-xxlarge;
+}
+
+.u-padding-Bxl {
+  padding-bottom: $space-xlarge;
+}
 
 .u-padding-Bl {
   padding-bottom: $space-large;
@@ -376,6 +464,14 @@
 ///////////////
 // Right margin
 
+.u-margin-Rxxl {
+  margin-right: $space-xxlarge;
+}
+
+.u-margin-Rxl {
+  margin-right: $space-xlarge;
+}
+
 .u-margin-Rl {
   margin-right: $space-large;
 }
@@ -405,6 +501,14 @@
 }
 
 // Right padding
+
+.u-padding-Rxxl {
+  padding-right: $space-xxlarge;
+}
+
+.u-padding-Rxl {
+  padding-right: $space-xlarge;
+}
 
 .u-padding-Rl {
   padding-right: $space-large;
@@ -437,6 +541,14 @@
 //////////////
 // Left margin
 
+.u-margin-Lxxl {
+  margin-left: $space-xxlarge;
+}
+
+.u-margin-Lxl {
+  margin-left: $space-xlarge;
+}
+
 .u-margin-Ll {
   margin-left: $space-large;
 }
@@ -466,6 +578,14 @@
 }
 
 // Left padding
+
+.u-padding-Lxxl {
+  padding-left: $space-xxlarge;
+}
+
+.u-padding-Lxl {
+  padding-left: $space-xlarge;
+}
 
 .u-padding-Ll {
   padding-left: $space-large;
@@ -502,6 +622,14 @@
 // All margin
 
 @include breakpoint-medium {
+  .u-md-margin-Axxl {
+    margin: $space-xxlarge;
+  }
+
+  .u-md-margin-Axl {
+    margin: $space-xlarge;
+  }
+
   .u-md-margin-Al {
     margin: $space-large;
   }
@@ -532,6 +660,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-margin-Axxl {
+    margin: $space-xxlarge;
+  }
+
+  .u-sm-margin-Axl {
+    margin: $space-xlarge;
+  }
+
   .u-sm-margin-Al {
     margin: $space-large;
   }
@@ -564,6 +700,14 @@
 // All padding
 
 @include breakpoint-medium {
+  .u-md-padding-Axxl {
+    padding: $space-xxlarge;
+  }
+
+  .u-md-padding-Axl {
+    padding: $space-xlarge;
+  }
+
   .u-md-padding-Al {
     padding: $space-large;
   }
@@ -594,6 +738,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-padding-Axxl {
+    padding: $space-xxlarge;
+  }
+
+  .u-sm-padding-Axl {
+    padding: $space-xlarge;
+  }
+
   .u-sm-padding-Al {
     padding: $space-large;
   }
@@ -627,6 +779,16 @@
 // Vertical margin
 
 @include breakpoint-medium {
+  .u-md-margin-Vxxl {
+    margin-top: $space-xxlarge;
+    margin-bottom: $space-xxlarge;
+  }
+
+  .u-md-margin-Vxl {
+    margin-top: $space-xlarge;
+    margin-bottom: $space-xlarge;
+  }
+
   .u-md-margin-Vl {
     margin-top: $space-large;
     margin-bottom: $space-large;
@@ -664,6 +826,16 @@
 }
 
 @include breakpoint-small {
+  .u-sm-margin-Vxxl {
+    margin-top: $space-xxlarge;
+    margin-bottom: $space-xxlarge;
+  }
+
+  .u-sm-margin-Vxl {
+    margin-top: $space-xlarge;
+    margin-bottom: $space-xlarge;
+  }
+
   .u-sm-margin-Vl {
     margin-top: $space-large;
     margin-bottom: $space-large;
@@ -703,6 +875,16 @@
 // Vertical padding
 
 @include breakpoint-medium {
+  .u-md-padding-Vxxl {
+    padding-top: $space-xxlarge;
+    padding-bottom: $space-xxlarge;
+  }
+
+  .u-md-padding-Vxl {
+    padding-top: $space-xlarge;
+    padding-bottom: $space-xlarge;
+  }
+
   .u-md-padding-Vl {
     padding-top: $space-large;
     padding-bottom: $space-large;
@@ -740,6 +922,16 @@
 }
 
 @include breakpoint-small {
+  .u-sm-padding-Vxxl {
+    padding-top: $space-xxlarge;
+    padding-bottom: $space-xxlarge;
+  }
+
+  .u-sm-padding-Vxl {
+    padding-top: $space-xlarge;
+    padding-bottom: $space-xlarge;
+  }
+
   .u-sm-padding-Vl {
     padding-top: $space-large;
     padding-bottom: $space-large;
@@ -780,6 +972,16 @@
 // Horizontal margin
 
 @include breakpoint-medium {
+  .u-md-margin-Hxxl {
+    margin-left: $space-xxlarge;
+    margin-right: $space-xxlarge;
+  }
+
+  .u-md-margin-Hxl {
+    margin-left: $space-xlarge;
+    margin-right: $space-xlarge;
+  }
+
   .u-md-margin-Hl {
     margin-left: $space-large;
     margin-right: $space-large;
@@ -817,6 +1019,16 @@
 }
 
 @include breakpoint-small {
+  .u-sm-margin-Hxxl {
+    margin-left: $space-xxlarge;
+    margin-right: $space-xxlarge;
+  }
+
+  .u-sm-margin-Hxl {
+    margin-left: $space-xlarge;
+    margin-right: $space-xlarge;
+  }
+
   .u-sm-margin-Hl {
     margin-left: $space-large;
     margin-right: $space-large;
@@ -854,6 +1066,16 @@
 }
 
 @include breakpoint-medium {
+  .u-md-padding-Hxxl {
+    padding-left: $space-xxlarge;
+    padding-right: $space-xxlarge;
+  }
+
+  .u-md-padding-Hxl {
+    padding-left: $space-xlarge;
+    padding-right: $space-xlarge;
+  }
+
   .u-md-padding-Hl {
     padding-left: $space-large;
     padding-right: $space-large;
@@ -891,6 +1113,16 @@
 }
 
 @include breakpoint-small {
+  .u-sm-padding-Hxxl {
+    padding-left: $space-xxlarge;
+    padding-right: $space-xxlarge;
+  }
+
+  .u-sm-padding-Hxl {
+    padding-left: $space-xlarge;
+    padding-right: $space-xlarge;
+  }
+
   .u-sm-padding-Hl {
     padding-left: $space-large;
     padding-right: $space-large;
@@ -931,6 +1163,14 @@
 // Top margin
 
 @include breakpoint-medium {
+  .u-md-margin-Txxl {
+    margin-top: $space-xxlarge;
+  }
+
+  .u-md-margin-Txl {
+    margin-top: $space-xlarge;
+  }
+
   .u-md-margin-Tl {
     margin-top: $space-large;
   }
@@ -961,6 +1201,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-margin-Txxl {
+    margin-top: $space-xxlarge;
+  }
+
+  .u-sm-margin-Txl {
+    margin-top: $space-xlarge;
+  }
+
   .u-sm-margin-Tl {
     margin-top: $space-large;
   }
@@ -993,6 +1241,14 @@
 // Top padding
 
 @include breakpoint-medium {
+  .u-md-padding-Txxl {
+    padding-top: $space-xxlarge;
+  }
+
+  .u-md-padding-Txl {
+    padding-top: $space-xlarge;
+  }
+
   .u-md-padding-Tl {
     padding-top: $space-large;
   }
@@ -1023,6 +1279,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-padding-Txxl {
+    padding-top: $space-xxlarge;
+  }
+
+  .u-sm-padding-Txl {
+    padding-top: $space-xlarge;
+  }
+
   .u-sm-padding-Tl {
     padding-top: $space-large;
   }
@@ -1056,6 +1320,14 @@
 // Bottom margin
 
 @include breakpoint-medium {
+  .u-md-margin-Bxxl {
+    margin-bottom: $space-xxlarge;
+  }
+
+  .u-md-margin-Bxl {
+    margin-bottom: $space-xlarge;
+  }
+
   .u-md-margin-Bl {
     margin-bottom: $space-large;
   }
@@ -1086,6 +1358,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-margin-Bxxl {
+    margin-bottom: $space-xxlarge;
+  }
+
+  .u-sm-margin-Bxl {
+    margin-bottom: $space-xlarge;
+  }
+
   .u-sm-margin-Bl {
     margin-bottom: $space-large;
   }
@@ -1118,6 +1398,14 @@
 // Bottom padding
 
 @include breakpoint-medium {
+  .u-md-padding-Bxxl {
+    padding-bottom: $space-xxlarge;
+  }
+
+  .u-md-padding-Bxl {
+    padding-bottom: $space-xlarge;
+  }
+
   .u-md-padding-Bl {
     padding-bottom: $space-large;
   }
@@ -1148,6 +1436,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-padding-Bxxl {
+    padding-bottom: $space-xxlarge;
+  }
+
+  .u-sm-padding-Bxl {
+    padding-bottom: $space-xlarge;
+  }
+
   .u-sm-padding-Bl {
     padding-bottom: $space-large;
   }
@@ -1181,6 +1477,14 @@
 // Right margin
 
 @include breakpoint-medium {
+  .u-md-margin-Rxxl {
+    margin-right: $space-xxlarge;
+  }
+
+  .u-md-margin-Rxl {
+    margin-right: $space-xlarge;
+  }
+
   .u-md-margin-Rl {
     margin-right: $space-large;
   }
@@ -1211,6 +1515,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-margin-Rxxl {
+    margin-right: $space-xxlarge;
+  }
+
+  .u-sm-margin-Rxl {
+    margin-right: $space-xlarge;
+  }
+
   .u-sm-margin-Rl {
     margin-right: $space-large;
   }
@@ -1243,6 +1555,14 @@
 // Right padding
 
 @include breakpoint-medium {
+  .u-md-padding-Rxxl {
+    padding-right: $space-xxlarge;
+  }
+
+  .u-md-padding-Rxl {
+    padding-right: $space-xlarge;
+  }
+
   .u-md-padding-Rl {
     padding-right: $space-large;
   }
@@ -1273,6 +1593,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-padding-Rxxl {
+    padding-right: $space-xxlarge;
+  }
+
+  .u-sm-padding-Rxl {
+    padding-right: $space-xlarge;
+  }
+
   .u-sm-padding-Rl {
     padding-right: $space-large;
   }
@@ -1306,6 +1634,14 @@
 // Left margin
 
 @include breakpoint-medium {
+  .u-md-margin-Lxxl {
+    margin-left: $space-xxlarge;
+  }
+
+  .u-md-margin-Lxl {
+    margin-left: $space-xlarge;
+  }
+
   .u-md-margin-Ll {
     margin-left: $space-large;
   }
@@ -1336,6 +1672,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-margin-Lxxl {
+    margin-left: $space-xxlarge;
+  }
+
+  .u-sm-margin-Lxl {
+    margin-left: $space-xlarge;
+  }
+
   .u-sm-margin-Ll {
     margin-left: $space-large;
   }
@@ -1368,6 +1712,14 @@
 // Left padding
 
 @include breakpoint-medium {
+  .u-md-padding-Lxxl {
+    padding-left: $space-xxlarge;
+  }
+
+  .u-md-padding-Lxl {
+    padding-left: $space-xlarge;
+  }
+
   .u-md-padding-Ll {
     padding-left: $space-large;
   }
@@ -1398,6 +1750,14 @@
 }
 
 @include breakpoint-small {
+  .u-sm-padding-Lxxl {
+    padding-left: $space-xxlarge;
+  }
+
+  .u-sm-padding-Lxl {
+    padding-left: $space-xlarge;
+  }
+
   .u-sm-padding-Ll {
     padding-left: $space-large;
   }
