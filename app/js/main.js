@@ -29,9 +29,11 @@ require('../js/deprecated-js/lib/bootstrap/tab.js');
 var angular = require('angular');
 
 require('../components/angular-animate/angular-animate');
+require('../components/angular-scroll/angular-scroll');
 
 angular.module('home', [
   'ngAnimate',
+  'duScroll',
   'ngGcGaEventTrackerDirective',
   'ngGcFormSubmitDirective',
   'ngGcHrefActiveDirective',
@@ -47,7 +49,15 @@ angular.module('home', [
   'ngGcTeamMemberDirective',
   'ngGcStickyNavDirective',
   'gcNavToggleDirective'
-]);
+]).
+  run(function($rootScope, $location){
+    $rootScope.$on('duScrollspy:becameActive', function($event, $element){
+      var hash = $element.attr('href').replace(/^#/, '');
+      if (hash) {
+        window.history.pushState({}, '', '#/' + hash);
+      }
+    });
+  });
 
 function isSupportedBrowser() {
   var hasJSON = 'JSON' in window && 'parse' in JSON;
