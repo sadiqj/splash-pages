@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('ngGcPreventDefaultDirective', []).directive('ngGcPreventDefault', [
+angular.module('ngGcPreventDefaultDirective', [])
+  .directive('ngGcPreventDefault', [
   function ngGcPreventDefaultDirective() {
 
     return {
