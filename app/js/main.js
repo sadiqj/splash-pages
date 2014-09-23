@@ -3,11 +3,6 @@
 require('./initializers/raven-config');
 require('./initializers/cookies');
 
-require('./components/scroll-spy/ng-gc-scroll-spy-controller');
-require('./components/scroll-spy/ng-gc-scroll-spy-directive');
-require('./components/scroll-spy/ng-gc-scroll-spy-item-directive');
-require('./components/scroll-spy/ng-gc-spy-factory');
-
 require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-href-active-directive');
 require('./directives/ng-gc-ga-event-tracker-directive');
@@ -51,10 +46,6 @@ angular.module('home', [
   'ngGcVideoThumbDirective',
   'ngGcTeamMemberDirective',
   'ngGcStickyNavDirective',
-  'gcScrollSpyController',
-  'gcScrollSpyDirective',
-  'gcScrollSpyItemDirective',
-  'gcSpyFactory',
   'gcNavToggleDirective'
 ]);
 
