@@ -12,6 +12,7 @@ require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-href-active-directive');
 require('./directives/ng-gc-ga-event-tracker-directive');
 require('./directives/ng-gc-form-submit-directive');
+require('./directives/ng-gc-prevent-default-directive');
 require('./directives/ng-gc-randomize-team-directive');
 require('./directives/ng-gc-smooth-scroll-directive');
 require('./directives/ng-gc-team-member-directive');
@@ -41,6 +42,7 @@ angular.module('home', [
   'ngGcCookiesInit',
   'gc.popover',
   'gc.toggle',
+  'ngGcPreventDefaultDirective',
   'ngGcProspectFormCtrl',
   'ngGcActiveVideoCtrl',
   'ngGcRandomizeTeamDirective',

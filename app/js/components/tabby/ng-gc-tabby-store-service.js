@@ -27,7 +27,7 @@ angular.module('ngGcTabbyStoreService', [
     }
 
     function sanitizeHash(hash) {
-      return hash.replace(/^#/, '');
+      return hash.replace(/^#\//, '');
     }
 
     function locationHash() {
@@ -38,7 +38,7 @@ angular.module('ngGcTabbyStoreService', [
       if (locationHash() === hash) {
         return;
       }
-      hash = '#' + sanitizeHash(hash);
+      hash = '#/' + sanitizeHash(hash);
       if(window.history.pushState) {
         if (!locationHash()) {
           window.history.replaceState({}, '', hash);
