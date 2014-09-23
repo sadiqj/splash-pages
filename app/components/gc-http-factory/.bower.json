@@ -1,0 +1,33 @@
+{
+  "name": "gc-http-factory",
+  "version": "0.0.1",
+  "main": "gc-http-factory.js",
+  "dependencies": {
+    "angular": "1.2.16",
+    "bower-lodash-angular": "git://github.com/gocardless-client/bower-lodash-angular.git",
+    "bower-redefine": "git@github.com:gocardless-client/bower-redefine.git"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.16",
+    "jquery": "~2.1.0"
+  },
+  "ignore": [
+    "**/.*",
+    "*.spec.js",
+    "circle.yml",
+    "node_modules",
+    "components",
+    "package.json",
+    "karma.conf.js"
+  ],
+  "homepage": "https://github.com/gocardless/gc-http-factory",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "142b8a30b5c5bb34c9b0ddb53320fc6eb8f6084d"
+  },
+  "_source": "git://github.com/gocardless/gc-http-factory.git",
+  "_target": "~0.0.1",
+  "_originalSource": "gc-http-factory"
+}

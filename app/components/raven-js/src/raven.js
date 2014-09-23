@@ -21,7 +21,8 @@ var _Raven = window.Raven,
         tags: {},
         extra: {}
     },
-    authQueryString;
+    authQueryString,
+    isRavenInstalled = false;
 
 /*
  * The core Raven singleton
@@ -30,6 +31,8 @@ var _Raven = window.Raven,
  */
 var Raven = {
     VERSION: '<%= pkg.version %>',
+
+    debug: true,
 
     /*
      * Allow multiple versions of Raven to be installed.
@@ -50,6 +53,10 @@ var Raven = {
      * @return {Raven}
      */
     config: function(dsn, options) {
+        if (globalServer) {
+            logDebug('error', 'Error: Raven has already been configured');
+            return Raven;
+        }
         if (!dsn) return Raven;
 
         var uri = parseDSN(dsn),
@@ -67,6 +74,10 @@ var Raven = {
         // this is the result of a script being pulled in from an external domain and CORS.
         globalOptions.ignoreErrors.push('Script error.');
         globalOptions.ignoreErrors.push('Script error');
+
+        // Other variants of external script errors:
+        globalOptions.ignoreErrors.push('Javascript error: Script error on line 0');
+        globalOptions.ignoreErrors.push('Javascript error: Script error. on line 0');
 
         // join regexp rules into one big rule
         globalOptions.ignoreErrors = joinRegExp(globalOptions.ignoreErrors);
@@ -111,8 +122,9 @@ var Raven = {
      * @return {Raven}
      */
     install: function() {
-        if (isSetup()) {
+        if (isSetup() && !isRavenInstalled) {
             TraceKit.report.subscribe(handleStackInfo);
+            isRavenInstalled = true;
         }
 
         return Raven;
@@ -186,7 +198,7 @@ var Raven = {
 
         // copy over properties of the old function
         for (var property in func) {
-            if (func.hasOwnProperty(property)) {
+            if (hasKey(func, property)) {
                 wrapped[property] = func[property];
             }
         }
@@ -206,6 +218,7 @@ var Raven = {
      */
     uninstall: function() {
         TraceKit.report.uninstall();
+        isRavenInstalled = false;
 
         return Raven;
     },
@@ -264,8 +277,32 @@ var Raven = {
      * @param {object} user An object representing user data [optional]
      * @return {Raven}
      */
-    setUser: function(user) {
+    setUserContext: function(user) {
        globalUser = user;
+
+       return Raven;
+    },
+
+    /*
+     * Set extra attributes to be sent along with the payload.
+     *
+     * @param {object} extra An object representing extra data [optional]
+     * @return {Raven}
+     */
+    setExtraContext: function(extra) {
+       globalOptions.extra = extra || {};
+
+       return Raven;
+    },
+
+    /*
+     * Set tags to be sent along with the payload.
+     *
+     * @param {object} tags An object representing tags [optional]
+     * @return {Raven}
+     */
+    setTagsContext: function(tags) {
+       globalOptions.tags = tags || {};
 
        return Raven;
     },
@@ -289,6 +326,8 @@ var Raven = {
     }
 };
 
+Raven.setUser = Raven.setUserContext; // To be deprecated
+
 function triggerEvent(eventType, options) {
     var event, key;
 
@@ -304,7 +343,7 @@ function triggerEvent(eventType, options) {
         event.eventType = eventType;
     }
 
-    for (key in options) if (options.hasOwnProperty(key)) {
+    for (key in options) if (hasKey(options, key)) {
         event[key] = options[key];
     }
 
@@ -381,7 +420,7 @@ function each(obj, callback) {
 
     if (isUndefined(obj.length)) {
         for (i in obj) {
-            if (obj.hasOwnProperty(i)) {
+            if (hasKey(obj, i)) {
                 callback.call(null, i, obj[i]);
             }
         }
@@ -454,7 +493,7 @@ function normalizeFrame(frame) {
         // Now we check for fun, if the function name is Raven or TraceKit
         /(Raven|TraceKit)\./.test(normalized['function']) ||
         // finally, we do a last ditch effort and check for raven.min.js
-        /raven\.(min\.)js$/.test(normalized.filename)
+        /raven\.(min\.)?js$/.test(normalized.filename)
     );
 
     return normalized;
@@ -649,9 +688,7 @@ function makeRequest(data) {
 function isSetup() {
     if (!hasJSON) return false;  // needs JSON support
     if (!globalServer) {
-        if (window.console && console.error) {
-            console.error("Error: Raven has not been configured.");
-        }
+        logDebug('error', 'Error: Raven has not been configured.');
         return false;
     }
     return true;
@@ -686,6 +723,12 @@ function uuid4() {
             v = c == 'x' ? r : (r&0x3|0x8);
         return v.toString(16);
     });
+}
+
+function logDebug(level, message) {
+    if (window.console && console[level] && Raven.debug) {
+        console[level](message);
+    }
 }
 
 function afterLoad() {
