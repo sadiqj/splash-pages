@@ -50,7 +50,7 @@ angular.module('home', [
   'ngGcStickyNavDirective',
   'gcNavToggleDirective'
 ]).
-  run(function($rootScope, $location){
+  run(function($rootScope){
     $rootScope.$on('duScrollspy:becameActive', function($event, $element){
       var hash = $element.attr('href').replace(/^#/, '');
       if (hash) {
