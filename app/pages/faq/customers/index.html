@@ -4,30 +4,59 @@
 
 {% block content %}
 
-  <div class="grid">
-    <div class="grid__cell u-size1of2">
-      <h1 class="page-heading">FAQ</h1>
-    </div>
-    <div class="grid__cell u-size1of2 u-text-end page-heading-link">
-      Taking payment?
-      <a href="/faq/merchants" class="u-text-underline">Read our FAQ for merchants</a>
-    </div>
+<div class="grid">
+  <div class="grid__cell u-size1of2">
+    <h1 class="page-heading">FAQ</h1>
   </div>
+  <div class="grid__cell u-size1of2 u-text-end page-heading-link">
+    Taking payment?
+    <a href="/faq/merchants" class="u-text-underline">Read our FAQ for merchants</a>
+  </div>
+</div>
 
-  <hr>
+<hr>
 
-  <div class="grid">
-    <div class="grid__cell u-size4of12">
-      <ul class="nav nav-tabs u-margin-Tm">
-        <li class="active"><a href="#overview-tab" data-toggle="tab">Overview</a></li>
-        <li><a href="#security-tab" data-toggle="tab">Security</a></li>
-        <li><a href="#refunds-tab" data-toggle="tab">Refunds and cancellations</a></li>
-        <li><a href="#how-it-works-tab" data-toggle="tab">The GoCardless transaction model</a></li>
-      </ul>
-    </div>
-    <div class="grid__cell u-size8of12">
+<div class="grid">
+  <div class="grid__cell u-size4of12">
+    <ul class="nav nav-tabs u-margin-Tm">
+      <li><a href="#overview-tab"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'overview-tab'
+        }">
+        Overview
+      </a></li>
+      <li><a href="#security-tab"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'security-tab'
+        }">
+        Security
+      </a></li>
+      <li><a href="#refunds-tab"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'refunds-tab'
+        }">
+        Refunds and cancellations
+      </a></li>
+      <li><a href="#how-it-works-tab"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'how-it-works-tab'
+        }">
+        The GoCardless transaction model
+      </a></li>
+    </ul>
+  </div>
+  <div class="grid__cell u-size8of12">
 
-      <article class="tab-pane active" id="overview-tab">
+    <article id="overview-tab" ng-gc-tabby-content>
+      <div ng-if="$isActive">
         <h3 class="section-heading">Why is GoCardless on my bank statement?</h3>
         <p class="para">GoCardless is an online payments company - we provide online payment services to thousands of Merchants. Our name appears on the bank statements of anyone who pays a Merchant using our service.</p>
         <p class="para">If you do not recognise the transaction there is normally a reference including the name of the Merchant on your bank statement or in the Direct Debit record.</p>
@@ -47,9 +76,11 @@
         <h3 class="section-heading">How do I check transactions made with GoCardless?</h3>
         <p class="para">You can check your GoCardless payments anytime by <a href="/users/sign_in">logging in</a>.</p>
         <p class="para">For further assistance you can also email us at <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or call on {{ SUPPORT_CONTACT_NUMBER }}.</p>
-      </article>
+      </div>
+    </article>
 
-      <article class="tab-pane" id="security-tab">
+    <article id="security-tab" ng-gc-tabby-content>
+      <div ng-if="$isActive">
         <h3 class="section-heading">How does GoCardless keep my details safe?</h3>
         <p class="para">GoCardless takes a number of steps to ensure our customers' data remains safe at all times:</p>
 
@@ -63,9 +94,11 @@
         <h3 class="section-heading">What do I do if I believe a payment has been taken from my account in error or fraudulently?</h3>
         <p class="para">Let us know immediately by emailing <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or calling {{ SUPPORT_CONTACT_NUMBER }}.</p>
         <p class="para">We can investigate the matter further and arrange for a full refund under the <a href="/direct-debit/guarantee/">Direct Debit Guarantee</a>.</p>
-      </article>
+      </div>
+    </article>
 
-      <article class="tab-pane" id="refunds-tab">
+    <article id="refunds-tab" ng-gc-tabby-content>
+      <div ng-if="$isActive">
         <h3 class="section-heading">What do I do if I would like a refund?</h3>
         <p class="para">The best thing to do is to contact the merchant and resolve the matter with them directly. GoCardless is not authorised to make refunds on behalf of our merchants.</p>
         <p class="para">If you are struggling to make contact with the merchant, or the merchant refuses to offer you a refund, please contact us so we can assist you.</p>
@@ -80,9 +113,11 @@
         <h3 class="section-heading">How can I cancel my Direct Debit?</h3>
         <p class="para">Email us at <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or call on {{ SUPPORT_CONTACT_NUMBER }} and we can cancel your Direct Debit immediately.</p>
         <p class="para">You can also cancel your Direct Debit directly with your bank or building society.</p>
-      </article>
+      </div>
+    </article>
 
-      <article class="tab-pane" id="how-it-works-tab">
+    <article id="how-it-works-tab" ng-gc-tabby-content>
+      <div ng-if="$isActive">
         <h3 class="section-heading">How does the GoCardless transaction model work?</h3>
         <p class="para">GoCardless acts as a "master merchant", processing payments on behalf of many companies.</p>
         <p class="para">When you pay by GoCardless we collect payment from your account into our own. These funds are then remitted on to the merchant you are paying.</p>
@@ -100,9 +135,10 @@
         <hr>
         <h3 class="section-heading">What if my funds don't reach the merchant?</h3>
         <p class="para">GoCardless is not aware of any payment ever failing to reach its destination. However, if this were to occur for any reason you would have a right under the <a href="/direct-debit/guarantee/">Direct Debit Guarantee</a> to charge back to payment.</p>
-      </article>
+      </div>
+    </article>
 
-    </div>
   </div>
+</div>
 
 {% endblock %}
