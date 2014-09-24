@@ -3,6 +3,11 @@
 require('./initializers/raven-config');
 require('./initializers/cookies');
 
+require('./components/tabby/ng-gc-tabby-active-directive');
+require('./components/tabby/ng-gc-tabby-content-directive');
+require('./components/tabby/ng-gc-tabby-store-service');
+require('./components/tabby/ng-gc-tabby-trigger-directive');
+
 require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-href-active-directive');
 require('./directives/ng-gc-ga-event-tracker-directive');
@@ -48,7 +53,9 @@ angular.module('home', [
   'ngGcVideoThumbDirective',
   'ngGcTeamMemberDirective',
   'ngGcStickyNavDirective',
-  'gcNavToggleDirective'
+  'ngGcTabbyActiveDirective',
+  'ngGcTabbyContentDirective',
+  'ngGcTabbyTriggerDirective'
 ]).
   run(function($rootScope){
     $rootScope.$on('duScrollspy:becameActive', function($event, $element){
