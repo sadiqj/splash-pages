@@ -14,6 +14,7 @@ require('./directives/ng-gc-ga-event-tracker-directive');
 require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-randomize-team-directive');
 require('./directives/ng-gc-smooth-scroll-directive');
+require('./directives/ng-gc-sticky-nav-directive');
 require('./directives/ng-gc-team-member-directive');
 require('./directives/ng-gc-vimeo-iframe-directive');
 require('./directives/ng-gc-video-thumb-directive');
@@ -25,16 +26,19 @@ require('../components/ng-gc-components/ng-gc-dialog-directive/dialog-controller
 require('../components/ng-gc-components/ng-gc-popover-directive/popover-directive');
 require('../components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive');
 
+require('./services/location-hash');
+
 var StickyTabs = require('../js/deprecated-js/widgets/sticky-tabs');
-var Affix = require('../js/deprecated-js/widgets/affix');
 require('../js/deprecated-js/lib/bootstrap/tab.js');
 
 var angular = require('angular');
 
 require('../components/angular-animate/angular-animate');
+require('../components/angular-scroll/angular-scroll');
 
 angular.module('home', [
   'ngAnimate',
+  'duScroll',
   'ngGcGaEventTrackerDirective',
   'ngGcFormSubmitDirective',
   'ngGcHrefActiveDirective',
@@ -48,9 +52,32 @@ angular.module('home', [
   'ngGcVimeoIframeDirective',
   'ngGcVideoThumbDirective',
   'ngGcTeamMemberDirective',
+  'ngGcStickyNavDirective',
   'ngGcTabbyActiveDirective',
   'ngGcTabbyContentDirective',
-  'ngGcTabbyTriggerDirective'
+  'ngGcTabbyTriggerDirective',
+  'ngGcLocationHash'
+]).run([
+  '$rootScope', 'locationHash',
+  function($rootScope, locationHash){
+    var isActive = false;
+
+    $rootScope.$on('duScrollspy:becameActive', function($event, $element){
+      var hash = $element.attr('href');
+      locationHash.set(hash);
+      isActive = true;
+    });
+
+    // inactive fires before active
+    $rootScope.$on('duScrollspy:becameInactive', function(){
+      isActive = false;
+      setTimeout(function() {
+        if (!isActive) {
+          locationHash.clear();
+        }
+      }, 0);
+    });
+  }
 ]);
 
 function isSupportedBrowser() {
@@ -68,8 +95,5 @@ angular.element(document).ready(function setup() {
 });
 
 module.exports = {
-  stickyTabs: new StickyTabs(),
-  affix: new Affix({
-    el: '[data-affix-footer-fixed]'
-  })
+  stickyTabs: new StickyTabs()
 };

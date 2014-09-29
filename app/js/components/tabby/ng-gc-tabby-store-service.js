@@ -1,16 +1,17 @@
 'use strict';
 
 var _ = require('lodash');
+require('../../services/location-hash');
 
 angular.module('ngGcTabbyStoreService', [
+  'ngGcLocationHash'
 ]).factory('ngGcTabbyStore', [
-  '$rootScope', '$window', '$timeout',
-  function ngGcTabbyStoreService($rootScope, $window, $timeout) {
+  '$rootScope', '$window', '$timeout', 'locationHash',
+  function ngGcTabbyStoreService($rootScope, $window, $timeout, locationHash) {
 
     var eventBus = $rootScope.$new();
     var allowedEvents = ['activate', 'add'];
     var tabStore = {};
-
 
     function sanitizePath(path) {
       path = (path || '').replace(/^\/|\/$/g, '');
@@ -24,28 +25,6 @@ angular.module('ngGcTabbyStoreService', [
         tabStore[locationPath] = [];
       }
       return tabStore[locationPath];
-    }
-
-    function sanitizeHash(hash) {
-      return hash.replace(/^#/, '');
-    }
-
-    function locationHash() {
-      return sanitizeHash($window.location.hash);
-    }
-
-    function updateLocation(hash) {
-      if (locationHash() === hash) {
-        return;
-      }
-      hash = '#' + sanitizeHash(hash);
-      if(window.history.pushState) {
-        if (!locationHash()) {
-          window.history.replaceState({}, '', hash);
-        } else {
-          window.history.pushState({}, '', hash);
-        }
-      }
     }
 
     function validate(data) {
@@ -84,7 +63,7 @@ angular.module('ngGcTabbyStoreService', [
       _.extend(tab, whitelist(data));
       tab.$isActive = true;
       if (!tab.preventLocationUpdate) {
-        updateLocation(data.$href);
+        locationHash.set(data.$href);
       }
       eventBus.$emit('activate', whitelist(tab));
 
@@ -95,7 +74,7 @@ angular.module('ngGcTabbyStoreService', [
       validate(data);
       if (!find(data)) {
         getPageTabStore().push(data);
-        if (locationHash() === data.$href) {
+        if (locationHash.get() === data.$href) {
           activate(data);
         }
         eventBus.$emit('add', whitelist(data));
@@ -115,7 +94,7 @@ angular.module('ngGcTabbyStoreService', [
     }
 
     $($window).on('hashchange', function() {
-      var hash = locationHash();
+      var hash = locationHash.get();
       if (hash) {
         $rootScope.$apply(function() {
           activate({

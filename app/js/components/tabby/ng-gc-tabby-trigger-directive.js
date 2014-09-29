@@ -20,7 +20,7 @@ angular.module('ngGcTabbyTriggerDirective', [
           $href: attrs.href
         }, options);
 
-        options.$href = options.$href.replace(/^#/, '');
+        options.$href = options.$href.replace(/^#|#\/|\//, '');
 
         transclude(newScope, function(clone) {
           element.replaceWith(clone);

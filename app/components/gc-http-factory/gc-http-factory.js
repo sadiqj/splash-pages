@@ -30,10 +30,10 @@
    *  GET /api/bills/1
    */
 
-  angular.module('ngHttpFactory', [
+  angular.module('gc.httpFactory', [
   ]).service('HttpFactory', [
-    '$http',
-    function HttpFactoryService($http) {
+    '$http', '$q',
+    function HttpFactoryService($http, $q) {
 
       var enumDescriptors = _.redefine.as({
         enumerable: true,
@@ -172,6 +172,8 @@
        * @return {Promise}
        */
       function request(config) {
+        var requestInterceptors = config.interceptor &&
+          config.interceptor.request;
         var responseInterceptor = config.interceptor &&
           config.interceptor.response || defaultResponseInterceptor;
         var responseErrorInterceptor = config.interceptor &&
@@ -179,8 +181,30 @@
 
         delete config.interceptor;
 
-        return $http(config)
-          .then(responseInterceptor, responseErrorInterceptor);
+        if (!_.isArray(requestInterceptors)) {
+          requestInterceptors = [requestInterceptors];
+        }
+
+        config = $q.when(config);
+
+        requestInterceptors.forEach(function(interceptor) {
+          if (!_.isFunction(interceptor)) return;
+
+          config = config.then(function(configValue) {
+            return interceptor(configValue);
+          });
+        });
+
+
+        return $q.when(config).then(function(config) {
+          return $http(config)
+            .then(responseInterceptor, function reject(rejection) {
+              if (_.isFunction(responseErrorInterceptor)) {
+                rejection = responseErrorInterceptor(rejection);
+              }
+              return $q.reject(rejection);
+            });
+        });
       }
 
       /**

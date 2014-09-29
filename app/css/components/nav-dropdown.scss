@@ -1,26 +1,32 @@
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(20px) scale(0.75);
+    transform: translateY(70px) scale(0.85);
   }
   100% {
     opacity: 1;
-    transform: translateY(80px) scale(1);
+    transform: translateY(95px) scale(1);
   }
 }
 
 .nav-dropdown__popover {
   position: absolute;
-  width: 238px;
+  width: 200px;
   background: white;
   border-radius:3px;
   font-size: 14px;
+  line-height: $line-height-base;
   left: 50%;
-  margin-left: -119px;
-  top: -36px;
-  transform: translateY(80px) scale(1);
+  margin-left: -100px;
+  top: -50px;
+  transform: translateY(95px) scale(1);
   z-index: 1;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.nav-dropdown__popover--large {
+  width: 260px;
+  margin-left: -130px;
 }
 
 .nav-dropdown__popover.ng-hide-remove {
