@@ -69,7 +69,7 @@ angular.module('home', [
     });
 
     // inactive fires before active
-    $rootScope.$on('duScrollspy:becameInactive', function($event, $element){
+    $rootScope.$on('duScrollspy:becameInactive', function(){
       isActive = false;
       setTimeout(function() {
         if (!isActive) {

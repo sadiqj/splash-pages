@@ -40,6 +40,6 @@ angular.module('ngGcLocationHash', [
       set: set,
       get: get,
       clear: clear
-    }
+    };
   }
 ]);
