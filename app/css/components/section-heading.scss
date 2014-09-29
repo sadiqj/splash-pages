@@ -1,13 +1,9 @@
 .section-heading {
   margin-top: $space-medium;
   margin-bottom: $space-medium;
-  // font-family: $font-family-heading;
-  // color: $primary-color;
-  // font-weight: 500;
-  // font-size: $font-size-medium;
   @extend .u-text-heading-light;
-  @extend .u-text-s;
-  @extend .u-color-heading;
+  font-size: $font-size-small;
+  color: $dark-gray;
 }
 
 .section-heading--red {
