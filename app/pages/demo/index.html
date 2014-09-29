@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block body %}
-  <div class="videos-container__demo-intro u-relative">
+  <div class="page-hero u-relative">
 
     <div class="site-container features-container__header site-gutter u-cf align-btn-small u-padding-Vxs">
       {% include "_site_header_invert.html" %}
@@ -27,58 +27,39 @@
           }">
         </iframe>
       </div>
-      <p class="u-text-subheading u-color-invert">
-        Watch our 5 minute demo to see GoCardless in action.
-      </p>
     </div>
-
   </div>
 
-  <div class="videos-container__secondary-content u-text-center u-color-base u-padding-Vl">
-    <p class="u-text-l u-text-heading u-color-meta  u-padding-Vs">
-      Get started today for free. Simply select the option that suits your business:
-    </p>
-    <div class="site-container">
-      <div class="grid grid--center u-margin-Bm u-margin-Tl">
-        <div class="grid__cell u-size9of12">
-          <div class="grid">
-            <div class="grid__cell u-size1of2">
-              <div class="well well--hollow-red u-text-center">
-                <img src="/images/pricing/standard@2x.png" height="50px" class="u-margin-Ts">
-                <h3 class="section-heading  section-heading--red">Standard pricing</h3>
-                <p><b>1% up to £2</b><br>No other fees</p>
-                <hr>
-                <p class="u-margin-Bs">Sign up <b>instantly</b></p>
-                <p class="u-margin-Bs"><b>No hidden fees</b> or set up costs</p>
-                <p class="u-margin-Bs">Enjoy Simple Direct Debit today</p>
-                <hr>
-                <a href="/merchants/new" class="btn btn--block btn--info">Sign up now</a>
-              </div>
-            </div>
+  <hr class="u-margin-An">
 
-            <div class="grid__cell u-size1of2">
-              <div class="well well--hollow-blue u-text-center">
-                <img src="/images/pricing/scale@2x.png" height="50px" class="u-margin-Ts">
-                <h3 class="section-heading">Scale pricing</h3>
-                <p>Ideal for merchants taking more than<br><b>500 transactions / month</b></p>
-                <hr>
-                <p class="u-margin-Bs">Pricing <b>tailored</b> to your business</p>
-                <p class="u-margin-Bs"><b>Incredible rates</b> for high volume</p>
-                <p class="u-margin-Bs">Talk to our sales team today</p>
-                <hr>
-                <a href="/request-a-quote" class="btn btn--block">Get a free quote</a>
-              </div>
-            </div>
-          </div>
+  <div class="u-background-light-gray u-text-center u-padding-Vxxl">
+    <div class="site-container u-padding-Vxl">
+      <div class="u-size1of2 u-center">
+        <div class="u-text-heading u-color-heading u-text-l u-text-light">
+          Simple, transparent pricing for everyone
         </div>
+        <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+        <hr class="u-margin-Tl horizontal-rule--dark">
+        <p class="u-color-heading u-margin-Bxxs">
+          Taking more than 500 transactions a month?
+        </p>
+        <a href="/pricing/#enterprise" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+          Learn about our enterprise pricing
+        </a>
       </div>
     </div>
-
-    <p class="u-padding-Vm">Got a question? Speak to an expert by calling 020 7183 8674</p>
-
   </div>
 
-  <div class="site-container u-padding-Ts">
-    {% include "_site_footer.html" %}
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <a href="/merchants/new" class="btn">Start taking payments</a>
+      <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+    </div>
   </div>
+
+
+  {% include "_site_footer.html" %}
+
 {% endblock %}
