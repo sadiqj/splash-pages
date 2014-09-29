@@ -1,11 +1,11 @@
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(20px) scale(0.75);
+    transform: translateY(70px) scale(0.85);
   }
   100% {
     opacity: 1;
-    transform: translateY(80px) scale(1);
+    transform: translateY(95px) scale(1);
   }
 }
 
@@ -18,8 +18,8 @@
   line-height: $line-height-base;
   left: 50%;
   margin-left: -100px;
-  top: -36px;
-  transform: translateY(80px) scale(1);
+  top: -50px;
+  transform: translateY(95px) scale(1);
   z-index: 1;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
