@@ -1,58 +1,105 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Security{% endblock %}
 {% block meta_tags %}<meta name="description" content="GoCardless is built securely from the ground up and uses military grade encryption to keep your details safe. Regulated by the Financial Conduct Authority.">{% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <div class="pricing-emblem">
-    <img src="/images/security/security-emblem@2x.png">
-  </div>
+<div class="site-wrapper">
 
-  <h1 class="page-heading u-margin-Ts u-text-center">Built securely from the ground up</h1>
-  <h2 class="page-subheading u-text-center">GoCardless uses military grade encryption to keep you safe, and is approved by the biggest names in payments</h2>
-
-  <hr>
-
-  <div class="grid u-padding-Bl">
-    <div class="grid__cell u-size1of3">
-      <h4 class="section-subheading">
-        Authorised by the FCA
-      </h4>
-      <p>GoCardless is an Authorised Payment Institution regulated by the Financial Conduct Authority.</p>
-    </div>
-    <div class="grid__cell u-size1of3">
-      <h4 class="section-subheading">
-        Trusted by thousands
-      </h4>
-      <p>GoCardless provides access to the Direct Debit network to thousands of businesses.</p>
-    </div>
-    <div class="grid__cell u-size1of3">
-      <h4 class="section-subheading">
-        Funded by prestigious VCs
-      </h4>
-      <p>Accel Partners, Passion Capital, and Y Combinator are among GoCardless's investors.</p>
+  <div class="u-background-white">
+    <div class="site-container site-gutter u-cf align-btn-small u-padding-Vm">
+      {% include "_site_header.html" %}
     </div>
   </div>
 
-  <div class="grid u-padding-Bl">
-    <div class="grid__cell u-size1of3">
-      <h4 class="section-subheading">
-        Direct Debit Guarantee
-      </h4>
-      <p>If anything goes wrong with a transaction, payers are entitled to an instant refund.</p>
-    </div>
-    <div class="grid__cell u-size1of3">
-      <h4 class="section-subheading">
-        Military grade encryption
-      </h4>
-      <p>All sensitive details are RSA encrypted, and only communicated over secure channels.</p>
-    </div>
-    <div class="grid__cell u-size1of3">
-      <h4 class="section-subheading">
-        Safeguarded bank accounts
-      </h4>
-      <p>Money collected by GoCardless is held in designated client monies accounts.</p>
+  <div class="page-hero u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="page-hero__inner u-padding-Vxxl">
+        <div class="page-hero__text u-text-center u-padding-Vxm">
+          <i class="security-icon"></i>
+          <h1 class="u-text-heading u-color-invert u-text-light u-padding-Ts">Built securely from the ground up</h1>
+          <p class="u-size7of12 u-center u-text-heading-light u-text-m u-color-invert u-padding-Vs">GoCardless uses military grade encryption to keep you safe,
+            and is approved by the biggest names in payments</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="site-container site-gutter u-padding-Vxxl">
+
+    <div class="grid u-center u-padding-Vxm">
+
+      <div class="grid__cell u-text-center u-size1of2 u-padding-Vxl">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">
+          Authorised by the FCA
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Txs">
+          GoCardless is an Authorised Payment Institution regulated by the Financial Conduct Authority.
+        </p>
+      </div>
+
+      <div class="grid__cell u-text-center u-size1of2 u-padding-Vxl">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">
+          Trusted by thousands
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Txs">
+          GoCardless provides access to the Direct Debit network to thousands of businesses in the United Kingdom.
+        </p>
+      </div>
+
+      <div class="grid__cell u-text-center u-size1of2 u-padding-Vxl">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">
+          Funded by prestigious investors
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Txs">
+          Balderton Capital and Accel Partners are among the investors in GoCardless.
+        </p>
+      </div>
+
+      <div class="grid__cell u-text-center u-size1of2 u-padding-Vxl">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">
+          Direct Debit Guarantee
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Txs">
+          If anything goes wrong with a transaction, payers are entitled to an instant refund.
+        </p>
+      </div>
+
+      <div class="grid__cell u-text-center u-size1of2 u-padding-Vxl">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">
+          Military grade encryption
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Txs">
+          All sensitive details are RSA encrypted, and only communicated over secure channels.
+        </p>
+      </div>
+
+      <div class="grid__cell u-text-center u-size1of2 u-padding-Vxl">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">
+          Safeguarded bank accounts
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Txs">
+          Money collected by GoCardless is held in designated client monies accounts.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <a href="/merchants/new" class="btn">Start taking payments</a>
+      <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
 {% endblock %}
