@@ -26,7 +26,7 @@ angular.module('ngGcVideoThumbDirective', [
                     'ng-class="{',
                     '  \'is-active\': isSelfActive()',
                     '}"></i>',
-                  '<p class="u-text-heading u-text-l u-text-light',
+                  '<p class="u-text-heading u-text-m u-text-light',
                   'u-link-clean u-cf u-color-base videos-container__link"',
                     'ng-class="{',
                     '  \'is-active\': isSelfActive()',
