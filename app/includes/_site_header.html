@@ -4,28 +4,25 @@
   </a>
 </div>
 <div class="u-pull-end">
-  <nav class="nav u-pull-start u-color-primary u-text-xs u-text-light u-text-no-smoothing">
+  <nav class="nav u-pull-start u-color-primary u-text-xxs u-text-light u-text-no-smoothing">
+    <div class="nav__item u-relative">
+      <a toggle="products.isVisible" href="#">
+        Our products
+      </a>
+      <popover show="products.isVisible" ng-animate class="nav-dropdown__popover nav-dropdown__popover--large"
+      ng-class="{'u-is-visible': products.isVisible }">
+        {% include "_products_dropdown_list.html" %}
+      </popover>
+    </div>
     <div class="nav__item u-relative">
       <a toggle="businesses.isVisible" href="">
-        Businesses
+        Your business
       </a>
       <popover show="businesses.isVisible" ng-animate class="nav-dropdown__popover"
       ng-class="{'u-is-visible': businesses.isVisible }">
         {% include "_businesses_dropdown_list.html" %}
       </popover>
     </div>
-    <a class="nav__item"
-      href="/enterprises">
-      Enterprises
-    </a>
-    <a class="nav__item"
-      href="/integrations">
-      Integrations
-    </a>
-    <a class="nav__item"
-       href="/pricing">
-      Pricing
-    </a>
     <div class="nav__item u-relative">
       <a toggle="more.isVisible" href="">
         More
@@ -39,7 +36,7 @@
 
   <ul class="u-cf u-pull-start">
     <li class="u-pull-start">
-      <a href="/users/sign_in" class="nav-btn btn btn--small btn--hollow u-text-light u-text-xs u-relative u-text-transform-none u-text-no-smoothing" id="login">Login</a>
+      <a href="/users/sign_in" class="nav-btn btn btn--small btn--hollow u-text-light u-text-xxs u-relative u-text-transform-none u-text-no-smoothing" id="login">Login</a>
     </li>
   </ul>
 </div>
