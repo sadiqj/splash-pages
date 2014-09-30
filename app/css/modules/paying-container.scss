@@ -45,7 +45,7 @@
 
 .paying-container__dashboard-image {
   position: absolute;
-  top: -31px;
+  top: -41px;
   left: -36px;
   max-width: 2000px; // arbitrarily long value to override image rules - this element set with height!
   height: 645px;
@@ -80,7 +80,7 @@
   }
 
   .paying-container__dashboard-image.has-breakpoint-md {
-    height: 606px;
+    height: 619px;
     top: -33px;
     left: 100%;
   }

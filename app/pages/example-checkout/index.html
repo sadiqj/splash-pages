@@ -1,56 +1,105 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Example Checkout Page: Paying with GoCardless &amp; Direct Debit{% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <div class="u-text-center">
-    <div class="u-margin-Bl">
-      <header>
-        <h3 class="page-heading">What your customers see</h3>
-      </header>
+<div class="site-wrapper">
 
-      <p class="u-padding-Bm">
-        Customers set up Direct Debits by entering their details on our secure online checkout pages.
-      </p>
+  <div class="u-background-white">
+    <div class="site-container site-gutter u-cf align-btn-small u-padding-Vm">
+      {% include "_site_header.html" %}
     </div>
-
-    <div class="grid">
-      <div class="grid__cell u-size1of3 u-padding-Bl">
-        <div class="row u-text-center">
-          <h2 class="u-text-heading">Example<br>One-off payments</h2>
-          <p class="para">Collect a single, one-off payment&nbsp;of&nbsp;£2.99.</p>
-          <form accept-charset="UTF-8" action="/api/v1/example_checkout/one_off"
-            method="post" class="ng-pristine ng-valid">
-            <input class="btn btn--info btn--small" name="commit" type="submit" value="View Example">
-          </form>
-        </div>
-      </div>
-      <div class="grid__cell u-size1of3 u-padding-Bl">
-        <div class="row u-text-center">
-          <h2 class="u-text-heading">Example<br>Subscriptions</h2>
-          <p class="para">Collect £99 each month, with no&nbsp;end&nbsp;date.</p>
-          <form accept-charset="UTF-8" action="/api/v1/example_checkout/subscription"
-            method="post" class="ng-pristine ng-valid">
-            <input class="btn btn--info btn--small" name="commit" type="submit" value="View Example">
-          </form>
-        </div>
-      </div>
-      <div class="grid__cell u-size1of3 u-padding-Bl">
-        <div class="row u-text-center">
-          <h2 class="u-text-heading">Example<br>Variable Direct Debits</h2>
-          <p class="para">Pre-authorize future one-off or recurring payments.</p>
-          <form accept-charset="UTF-8" action="/api/v1/example_checkout/pre_auth"
-            method="post" class="ng-pristine ng-valid">
-            <input class="btn btn--info btn--small" name="commit" type="submit" value="View Example">
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <p class="u-color-meta">
-      (You won't be charged if you set up a payment in the examples above)
-    </p>
   </div>
+
+  <div class="page-hero u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="page-hero__inner">
+        <div class="page-hero__text u-padding-Tm u-text-center">
+          <div class="u-text-heading u-margin-Txxl u-color-invert u-text-center hero-heading u-text-light">
+            Beautiful payment pages
+          </div>
+          <div class="u-text-heading u-margin-Bxxl u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">
+            We’ve designed our payment pages with your customers in mind,<br>so they’re optimised for web, mobile and success.
+          </div>
+          <img src="/images/example-checkout/example-checkout-iphone@2x.png" class="example-checkout-hero__image" alt="GoCardless example checkout on iPhone">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-container site-gutter grid u-margin-Bxxl u-padding-Bxxl">
+
+    <div class="grid__cell u-size4of12 u-padding-Tm u-text-center">
+      <div class="u-text-heading u-color-heading u-text-center u-margin-Txxl u-text-m u-text-light u-text-no-smoothing">
+        One off example
+      </div>
+      <p class="u-text-center u-color-p u-margin-Txxs u-size3of5 u-center">
+        Demo of a single, one-off payment of £2.99
+      </p>
+      <form accept-charset="UTF-8" action="/api/v1/example_checkout/one_off"
+        method="post" class="ng-pristine ng-valid">
+        <input class="btn btn--hollow u-margin-Tm" name="commit" type="submit" value="View Example">
+      </form>
+    </div>
+
+    <div class="grid__cell u-size4of12 u-padding-Tm u-text-center">
+      <div class="u-text-heading u-color-heading u-text-center u-margin-Txxl u-text-m u-text-light u-text-no-smoothing">
+        Recurring example
+      </div>
+      <p class="u-text-center u-color-p u-margin-Txxs u-size3of5 u-center">
+        Demo of £99 each month, with no end date
+      </p>
+      <form accept-charset="UTF-8" action="/api/v1/example_checkout/subscription"
+        method="post" class="ng-pristine ng-valid">
+        <input class="btn btn--hollow u-margin-Tm" name="commit" type="submit" value="View Example">
+      </form>
+    </div>
+
+    <div class="grid__cell u-size4of12 u-padding-Tm u-text-center">
+      <div class="u-text-heading u-color-heading u-text-center u-margin-Txxl u-text-m u-text-light u-text-no-smoothing">
+        Variable example
+      </div>
+      <p class="u-text-center u-color-p u-margin-Txxs u-size3of5 u-center">
+        Pre-authorise future payments of any amount
+      </p>
+      <form accept-charset="UTF-8" action="/api/v1/example_checkout/pre_auth"
+        method="post" class="ng-pristine ng-valid">
+        <input class="btn btn--hollow u-margin-Tm" name="commit" type="submit" value="View Example">
+      </form>
+    </div>
+
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container site-gutter u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="grid">
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Your brand</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            Customise our hosted payment pages with your company's logo
+          </p>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Optimised for all devices</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            Our payment pages are designed to work beautifully all devices from mobile to desktop
+          </p>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Super secure</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            We use military grade security to protect bank account details transmitted online
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% include "_site_footer.html" %}
 
 {% endblock %}

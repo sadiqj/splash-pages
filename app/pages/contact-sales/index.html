@@ -1,4 +1,4 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Get a quote{% endblock %}
 {% block meta_tags %}
@@ -6,11 +6,29 @@
   <meta name="robots" content="noindex,follow">
 {% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <h1 class="page-heading u-text-center u-margin-Bl">Contact sales</h1>
+<div class="site-wrapper">
 
-  <div class="grid grid--center">
+  <div class="u-background-white">
+    <div class="site-container site-gutter u-cf align-btn-small u-padding-Vm">
+      {% include "_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero page-hero--small u-relative u-size-full">
+    <div class="site-container site-gutter page-hero__container">
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <div class="u-text-heading u-text-center u-color-invert hero-heading u-text-light">
+            Contact sales
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-container grid grid--center u-margin-Vxl u-padding-Vxl">
     <div class="grid__cell u-size1of2">
       <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
         name="prospectForm"
@@ -28,7 +46,7 @@
 
         {% include "_prospect_form_fields.html" %}
 
-        <button class="btn btn--info btn--block u-margin-Tl"
+        <button class="btn btn--block u-margin-Tl"
           type="submit"
           ng-disabled="prospectForm.$pristine || prospectForm.$isSubmitting">
           Contact
@@ -39,12 +57,7 @@
     </div>
   </div>
 
-  <div class="u-margin-Tm u-padding-Tm u-text-center">
-    <p>
-      <strong>Want to talk to an expert?</strong>
-      Call us on {{ SUPPORT_CONTACT_NUMBER }}
-    </p>
-    <p><a href="https://help.gocardless.com/">Looking for merchant support?</a></p>
-  </div>
+</div>
 
+{% include "_site_footer.html" %}
 {% endblock %}
