@@ -21,7 +21,7 @@ angular.module('ngGcTabbyContentDirective', [
         }
 
         _.extend(newScope, {
-          $href: attrs.id.replace(/^#|#\/|\//, ''),
+          $href: attrs.id.replace(/^#\/|#|\//, ''),
           preventLocationUpdate: 'preventLocationUpdate' in attrs
         });
 

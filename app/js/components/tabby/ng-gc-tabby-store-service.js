@@ -14,7 +14,7 @@ angular.module('ngGcTabbyStoreService', [
     var tabStore = {};
 
     function sanitizePath(path) {
-      path = (path || '').replace(/^\/|\/$/g, '');
+      path = (path || '').replace(/^#\/|#|\//, '');
       path = '/' + path;
       return path;
     }

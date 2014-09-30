@@ -25,7 +25,7 @@
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
-            $href: 'create-subscription'
+            $href: '/create-subscription'
           }">Create a subscription</a>
         </li>
         <li class="u-size1of3 tabbed-well__nav">
@@ -33,7 +33,7 @@
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
-            $href: 'setup-new-direct-debit'
+            $href: '/setup-new-direct-debit'
           }">Setup a new Direct Debit</a>
         </li>
         <li class="u-size1of3 tabbed-well__nav">
@@ -41,7 +41,7 @@
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
-            $href: 'take-payment'
+            $href: '/take-payment'
           }">Take payment</a>
         </li>
       </ul>
@@ -49,8 +49,8 @@
       <div class="tabbed-well__content">
 
         <article
-        id="create-subscription"
-        ng-gc-tabby-content>
+        id="/create-subscription"
+        ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
 <pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
 
@@ -64,8 +64,8 @@
         </article>
 
         <article
-        id="setup-new-direct-debit"
-        ng-gc-tabby-content>
+        id="/setup-new-direct-debit"
+        ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
 <pre class="highlight ruby"><span class="c1"># A pre-authorization for up to £100.00 every month</span>
 
@@ -79,8 +79,8 @@
         </article>
 
         <article
-        id="take-payment"
-        ng-gc-tabby-content>
+        id="/take-payment"
+        ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
 <pre class="highlight ruby"><span class="c1"># A Direct Debit payment of £15.00</span>
 
