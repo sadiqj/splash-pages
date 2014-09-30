@@ -1,108 +1,187 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}FAQ for customers{% endblock %}
+{% block meta_tags %}<meta name="description" content="GoCardless is the UK's #1 for Direct Debit, serving more companies than any other provider. Perfect for recurring billing and B2B invoicing.            ">{% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <div class="grid">
-    <div class="grid__cell u-size1of2">
-      <h1 class="page-heading">FAQ</h1>
-    </div>
-    <div class="grid__cell u-size1of2 u-text-end page-heading-link">
-      Taking payment?
-      <a href="/faq/merchants" class="u-text-underline">Read our FAQ for merchants</a>
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container site-gutter u-cf align-btn-small u-padding-Vm">
+      {% include "_site_header.html" %}
     </div>
   </div>
 
-  <hr>
-
-  <div class="grid">
-    <div class="grid__cell u-size4of12">
-      <ul class="nav nav-tabs u-margin-Tm">
-        <li class="active"><a href="#overview-tab" data-toggle="tab">Overview</a></li>
-        <li><a href="#security-tab" data-toggle="tab">Security</a></li>
-        <li><a href="#refunds-tab" data-toggle="tab">Refunds and cancellations</a></li>
-        <li><a href="#how-it-works-tab" data-toggle="tab">The GoCardless transaction model</a></li>
-      </ul>
+  <div class="page-hero u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="page-hero__inner u-padding-Vxxl">
+        <div class="page-hero__text u-padding-Vxm u-text-center">
+          <h1 class="u-text-heading u-color-invert hero-heading u-text-light">
+            Frequently asked questions
+          </h1>
+          <p class="u-text-heading-light u-text-m u-color-invert u-padding-Vs">Taking payment?
+            <a href="/faq/merchants" class="u-text-underline u-link-invert">Read our FAQ for merchants</a>
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<div class="site-container site-gutter u-padding-Vxxl grid">
+  <div class="u-padding-Vxl">
+    <div class="grid__cell u-size4of12">
+      <div class="u-size5of6">
+        <ul class="nav nav-tabs">
+          <li><a href="#/overview-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+            ng-click="$activate($event)"
+            ng-class="{ 'is-active': $isActive }"
+            ng-gc-tabby-trigger="{
+              $href: '/overview-tab'
+            }">
+            Overview
+          </a></li>
+          <li><a href="#/security-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+            ng-click="$activate($event)"
+            ng-class="{ 'is-active': $isActive }"
+            ng-gc-tabby-trigger="{
+              $href: '/security-tab'
+            }">
+            Security
+          </a></li>
+          <li><a href="#/refunds-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+            ng-click="$activate($event)"
+            ng-class="{ 'is-active': $isActive }"
+            ng-gc-tabby-trigger="{
+              $href: '/refunds-tab'
+            }">
+            Refunds and cancellations
+          </a></li>
+          <li><a href="#/how-it-works-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+            ng-click="$activate($event)"
+            ng-class="{ 'is-active': $isActive }"
+            ng-gc-tabby-trigger="{
+              $href: '/how-it-works-tab'
+            }">
+            The GoCardless transaction model
+          </a></li>
+        </ul>
+        <hr class="u-size11of12">
+        <p class="para u-padding-Txs">Got a question? Call our support team on {{ SUPPORT_CONTACT_NUMBER }}</p>
+      </div>
+    </div>
+
     <div class="grid__cell u-size8of12">
 
-      <article class="tab-pane active" id="overview-tab">
-        <h3 class="section-heading">Why is GoCardless on my bank statement?</h3>
-        <p class="para">GoCardless is an online payments company - we provide online payment services to thousands of Merchants. Our name appears on the bank statements of anyone who pays a Merchant using our service.</p>
-        <p class="para">If you do not recognise the transaction there is normally a reference including the name of the Merchant on your bank statement or in the Direct Debit record.</p>
-        <p class="para">If you cannot find this or do not recognise the name email us at <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or call us on {{ SUPPORT_CONTACT_NUMBER }} and we will help you identify the transaction.</p>
+      <article id="/overview-tab" ng-gc-tabby-content>
+        <div ng-if="$isActive">
+          <h2 class="u-text-heading-light u-text-m u-color-heading">Overview</h2>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Why is GoCardless on my bank statement?
+          </h3>
+          <p class="para">GoCardless is an online payments company - we provide online payment services to thousands of Merchants. Our name appears on the bank statements of anyone who pays a Merchant using our service.</p>
+          <p class="para">If you do not recognise the transaction there is normally a reference including the name of the Merchant on your bank statement or in the Direct Debit record.</p>
+          <p class="para">If you cannot find this or do not recognise the name email us at <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or call us on {{ SUPPORT_CONTACT_NUMBER }} and we will help you identify the transaction.</p>
 
-        <hr>
-        <h3 class="section-heading">How do payments through GoCardless work?</h3>
-        <p class="para">GoCardless acts as a "master merchant", processing payments on behalf of many companies.</p>
-        <p class="para">When you pay by GoCardless we collect payment from your account into our own. These funds are then remitted on to the merchant you are paying.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do payments through GoCardless work?
+          </h3>
+          <p class="para">GoCardless acts as a "master merchant", processing payments on behalf of many companies.</p>
+          <p class="para">When you pay by GoCardless we collect payment from your account into our own. These funds are then remitted on to the merchant you are paying.</p>
 
-        <hr>
-        <h3 class="section-heading">Why do I have a Direct Debit with you when this was a one-off payment?</h3>
-        <p class="para">We collect all payments, whether one-off or recurring, via the Direct Debit network. In order to do this a Direct Debit must be put in place on the account.</p>
-        <p class="para">Don't worry - if you have set-up a one-off payment, we will only take the funds once. You can check payments made with GoCardless anytime by <a href="/users/sign_in">logging in</a>.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Why do I have a Direct Debit with you when this was a one-off payment?
+          </h3>
+          <p class="para">We collect all payments, whether one-off or recurring, via the Direct Debit network. In order to do this a Direct Debit must be put in place on the account.</p>
+          <p class="para">Don't worry - if you have set-up a one-off payment, we will only take the funds once. You can check payments made with GoCardless anytime by <a href="/users/sign_in" class="u-link-medium-gray u-text-underline">logging in</a>.</p>
 
-        <hr>
-        <h3 class="section-heading">How do I check transactions made with GoCardless?</h3>
-        <p class="para">You can check your GoCardless payments anytime by <a href="/users/sign_in">logging in</a>.</p>
-        <p class="para">For further assistance you can also email us at <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or call on {{ SUPPORT_CONTACT_NUMBER }}.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do I check transactions made with GoCardless?
+          </h3>
+          <p class="para">You can check your GoCardless payments anytime by <a href="/users/sign_in" class="u-link-medium-gray u-text-underline">logging in</a>.</p>
+          <p class="para">For further assistance you can also email us at <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or call on {{ SUPPORT_CONTACT_NUMBER }}.</p>
+        </div>
       </article>
 
-      <article class="tab-pane" id="security-tab">
-        <h3 class="section-heading">How does GoCardless keep my details safe?</h3>
-        <p class="para">GoCardless takes a number of steps to ensure our customers' data remains safe at all times:</p>
+      <article id="/security-tab" ng-gc-tabby-content>
+        <div ng-if="$isActive">
+          <h2 class="u-text-heading-light u-text-m u-color-heading">Security</h2>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does GoCardless keep my details safe?
+          </h3>
+          <p class="para">GoCardless takes a number of steps to ensure our customers' data remains safe at all times:</p>
 
-        <ul class="list">
-          <li>All financial details are RSA encrypted</li>
-          <li>All sensitive communications use secure channels such as HTTP Secure</li>
-          <li>All GoCardless databases are located in the United Kingdom</li>
-        </ul>
+          <ul class="list">
+            <li>All financial details are RSA encrypted</li>
+            <li>All sensitive communications use secure channels such as HTTP Secure</li>
+            <li>All GoCardless databases are located in the United Kingdom</li>
+          </ul>
 
-        <hr>
-        <h3 class="section-heading">What do I do if I believe a payment has been taken from my account in error or fraudulently?</h3>
-        <p class="para">Let us know immediately by emailing <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or calling {{ SUPPORT_CONTACT_NUMBER }}.</p>
-        <p class="para">We can investigate the matter further and arrange for a full refund under the <a href="/direct-debit/guarantee/">Direct Debit Guarantee</a>.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What do I do if I believe a payment has been taken from my account in error or fraudulently?
+          </h3>
+          <p class="para">Let us know immediately by emailing <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or calling {{ SUPPORT_CONTACT_NUMBER }}.</p>
+          <p class="para">We can investigate the matter further and arrange for a full refund under the <a href="https://gocardless.com/direct-debit/guarantee/" class="u-link-medium-gray u-text-underline">Direct Debit Guarantee</a>.</p>
+        </div>
       </article>
 
-      <article class="tab-pane" id="refunds-tab">
-        <h3 class="section-heading">What do I do if I would like a refund?</h3>
-        <p class="para">The best thing to do is to contact the merchant and resolve the matter with them directly. GoCardless is not authorised to make refunds on behalf of our merchants.</p>
-        <p class="para">If you are struggling to make contact with the merchant, or the merchant refuses to offer you a refund, please contact us so we can assist you.</p>
-        <p class="para">Your payments are protected by the the <a href="/direct-debit/guarantee/">Direct Debit Guarantee</a> at all times.</p>
+      <article id="/refunds-tab" ng-gc-tabby-content>
+        <div ng-if="$isActive">
+          <h2 class="u-text-heading-light u-text-m u-color-heading">Refunds</h2>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What do I do if I would like a refund?
+          </h3>
+          <p class="para">The best thing to do is to contact the merchant and resolve the matter with them directly. GoCardless is not authorised to make refunds on behalf of our merchants.</p>
+          <p class="para">If you are struggling to make contact with the merchant, or the merchant refuses to offer you a refund, please contact us so we can assist you.</p>
+          <p class="para">Your payments are protected by the the <a href="https://gocardless.com/direct-debit/guarantee/" class="u-link-medium-gray u-text-underline">Direct Debit Guarantee</a> at all times.</p>
 
-        <hr>
-        <h3 class="section-heading">What do I do if I believe I have been a victim of fraud?</h3>
-        <p class="para">Let us know immediately by emailing <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or calling {{ SUPPORT_CONTACT_NUMBER }}.</p>
-        <p class="para">We can investigate the matter further and arrange for a full refund under the <a href="/direct-debit/guarantee/">Direct Debit Guarantee</a>.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What do I do if I believe I have been a victim of fraud?
+          </h3>
+          <p class="para">Let us know immediately by emailing <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or calling {{ SUPPORT_CONTACT_NUMBER }}.</p>
+          <p class="para">We can investigate the matter further and arrange for a full refund under the <a href="https://gocardless.com/direct-debit/guarantee/" class="u-link-medium-gray u-text-underline">Direct Debit Guarantee</a>.</p>
 
-        <hr>
-        <h3 class="section-heading">How can I cancel my Direct Debit?</h3>
-        <p class="para">Email us at <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or call on {{ SUPPORT_CONTACT_NUMBER }} and we can cancel your Direct Debit immediately.</p>
-        <p class="para">You can also cancel your Direct Debit directly with your bank or building society.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How can I cancel my Direct Debit?
+          </h3>
+          <p class="para">Email us at <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or call on {{ SUPPORT_CONTACT_NUMBER }} and we can cancel your Direct Debit immediately.</p>
+          <p class="para">You can also cancel your Direct Debit directly with your bank or building society.</p>
+        </div>
       </article>
 
-      <article class="tab-pane" id="how-it-works-tab">
-        <h3 class="section-heading">How does the GoCardless transaction model work?</h3>
-        <p class="para">GoCardless acts as a "master merchant", processing payments on behalf of many companies.</p>
-        <p class="para">When you pay by GoCardless we collect payment from your account into our own. These funds are then remitted on to the merchant you are paying.</p>
+      <article id="/how-it-works-tab" ng-gc-tabby-content>
+        <div ng-if="$isActive">
+          <h2 class="u-text-heading-light u-text-m u-color-heading">How it works</h2>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does the GoCardless transaction model work?
+          </h3>
+          <p class="para">GoCardless acts as a "master merchant", processing payments on behalf of many companies.</p>
+          <p class="para">When you pay by GoCardless we collect payment from your account into our own. These funds are then remitted on to the merchant you are paying.</p>
 
-        <hr>
-        <h3 class="section-heading">How does GoCardless collect payment from my account?</h3>
-        <p class="para">GoCardless uses the Direct Debit protocol to collect all payments. This allows us to process payments without using the card networks.</p>
-        <p class="para">To collect payment by Direct Debit, GoCardless first sets up a Direct Debit mandate on your account. This mandate is then used to collect the payment you have specified.</p>
-        <p class="para">Don't worry - if you have set-up a one-off payment, we will only take the funds once. You can check payments made with GoCardless anytime by <a href="/users/sign_in">logging in</a>.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does GoCardless collect payment from my account?
+          </h3>
+          <p class="para">GoCardless uses the Direct Debit protocol to collect all payments. This allows us to process payments without using the card networks.</p>
+          <p class="para">To collect payment by Direct Debit, GoCardless first sets up a Direct Debit mandate on your account. This mandate is then used to collect the payment you have specified.</p>
+          <p class="para">Don't worry - if you have set-up a one-off payment, we will only take the funds once. You can check payments made with GoCardless anytime by <a href="/users/sign_in" class="u-link-medium-gray u-text-underline">logging in</a>.</p>
 
-        <hr>
-        <h3 class="section-heading">How long does it take to process my payment?</h3>
-        <p class="para">GoCardless automatically pays out funds <strong>3 working days</strong> after they're collected. You can see more details <a href="https://help.gocardless.com/payment-timings/">here</a>.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How long does it take to process my payment?
+          </h3>
+          <p class="para">GoCardless automatically pays out funds <strong>3 working days</strong> after they're collected. You can see more details <a href="https://help.gocardless.com/payment-timings/" class="u-link-medium-gray u-text-underline">here</a>.</p>
 
-        <hr>
-        <h3 class="section-heading">What if my funds don't reach the merchant?</h3>
-        <p class="para">GoCardless is not aware of any payment ever failing to reach its destination. However, if this were to occur for any reason you would have a right under the <a href="/direct-debit/guarantee/">Direct Debit Guarantee</a> to charge back to payment.</p>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What if my funds don't reach the merchant?
+          </h3>
+          <p class="para">GoCardless is not aware of any payment ever failing to reach its destination. However, if this were to occur for any reason you would have a right under the <a href="https://gocardless.com/direct-debit/guarantee/" class="u-link-medium-gray u-text-underline">Direct Debit Guarantee</a> to charge back to payment.</p>
+        </div>
       </article>
 
     </div>
   </div>
+</div>
+
+{% include "_site_footer.html" %}
 
 {% endblock %}
