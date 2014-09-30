@@ -34,83 +34,83 @@
     <div class="grid__cell u-size4of12">
       <div class="u-size5of6">
         <ul class="nav nav-tabs">
-          <li><a href="#overview-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/overview-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'overview-tab'
+              $href: '/overview-tab'
             }">
             Overview
           </a></li>
-          <li><a href="#how-it-works-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/how-it-works-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'how-it-works-tab'
+              $href: '/how-it-works-tab'
             }">
             How it works
           </a></li>
-          <li><a href="#signing-up-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/signing-up-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'signing-up-tab'
+              $href: '/signing-up-tab'
             }">
             Signing up
           </a></li>
-          <li><a href="#direct-debit-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/direct-debit-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'direct-debit-tab'
+              $href: '/direct-debit-tab'
             }">
             Direct Debit
           </a></li>
-          <li><a href="#security-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/security-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'security-tab'
+              $href: '/security-tab'
             }">
             Security
           </a></li>
-          <li><a href="#customer-experience-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/customer-experience-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'customer-experience-tab'
+              $href: '/customer-experience-tab'
             }">
             Customer Experience
           </a></li>
-          <li><a href="#international-payments-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/international-payments-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'international-payments-tab'
+              $href: '/international-payments-tab'
             }">
             International payments
           </a></li>
-          <li><a href="#developer-api-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/developer-api-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'developer-api-tab'
+              $href: '/developer-api-tab'
             }">
             Developer API
           </a></li>
-          <li><a href="#partners-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/partners-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'partners-tab'
+              $href: '/partners-tab'
             }">
             Partners
           </a></li>
-          <li><a href="#referrals-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#/referrals-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
             ng-gc-tabby-trigger="{
-              $href: 'referrals-tab'
+              $href: '/referrals-tab'
             }">
             Referral scheme
           </a></li>
@@ -122,10 +122,12 @@
 
     <div class="grid__cell u-size8of12">
 
-      <article id="overview-tab" ng-gc-tabby-content>
+      <article id="/overview-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Overview</h2>
-          <h3 class="section-heading">How can I use GoCardless?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How can I use GoCardless?
+          </h3>
           <p class="para">There are three ways to use GoCardless:</p>
           <ul class="list">
             <li><strong>Our dashboards</strong> - Set up and manage Direct Debit payments with your customers using our simple online dashboard.</li>
@@ -133,11 +135,15 @@
             <li><strong>Our clean, RESTful API</strong> - Integrate GoCardless into your website using our <a href="https://developer.gocardless.com/" class="u-link-medium-gray u-text-underline">REST API</a>.</li>
           </ul>
 
-          <h3 class="section-heading">Who is GoCardless for?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Who is GoCardless for?
+          </h3>
           <p class="para">Anyone can use GoCardless, but it is particularly great for B2B (business-to-business) and recurring payments.</p>
           <p class="para">We have integrated with many of the most popular accounting packages to enable easy invoicing and payment reconciliation. <br>Find out more <a href="/features/dashboard" class="u-link-medium-gray u-text-underline">here</a>.</p>
 
-          <h3 class="section-heading">What can I not use GoCardless for?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What can I not use GoCardless for?
+          </h3>
           <p class="para">GoCardless is great for many use cases. However, there are some limitations with our service. We aren't able to:</p>
           <ul class="list">
             <li>
@@ -154,21 +160,31 @@
           </ul>
           <p class="para">We're able to accept most kinds of customers but there are some exceptions - for full details, see our <a href="/legal/restrictions" class="u-link-medium-gray u-text-underline">restricted activities page</a>.</p>
 
-          <h3 class="section-heading">Are there any limits on the amount I can collect?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Are there any limits on the amount I can collect?
+          </h3>
           <p class="para">There are no limits on how many transactions you can make.</p>
           <p class="para">For a single transaction, the minimum amount is £1 and the maximum is £5,000. This can be increased instantly with additional verification checks.</p>
 
-          <h3 class="section-heading">How do I receive funds I have collected with GoCardless?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do I receive funds I have collected with GoCardless?
+          </h3>
           <p class="para">Funds you have collected are paid directly into your UK bank account, minus our <a href="/pricing" title="Pricing" class="u-link-medium-gray u-text-underline">fee</a>.</p>
 
-          <h3 class="section-heading">When do I receive my payment?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            When do I receive my payment?
+          </h3>
           <p class="para">All payments are paid out 3 working days from when the payment was collected.</p>
           <p class="para">We don't hold back any of your funds in reserve.</p>
 
-          <h3 class="section-heading">Do you take credit or debit cards?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Do you take credit or debit cards?
+          </h3>
           <p class="para">No, GoCardless is a Direct Debit company.</p>
 
-          <h3 class="section-heading">Why is GoCardless better than the other options I'm considering?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Why is GoCardless better than the other options I'm considering?
+          </h3>
           <p class="para">Below are just some of the reasons why people choose us:</p>
 
           <ul class="list">
@@ -188,16 +204,22 @@
         </div>
       </article>
 
-      <article id="how-it-works-tab" ng-gc-tabby-content>
+      <article id="/how-it-works-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">How it works</h2>
-          <h3 class="section-heading">When do I receive my payment?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            When do I receive my payment?
+          </h3>
           <p class="para">We automatically pay out funds to your specified bank account <strong>3 working days</strong> after they're collected from your customer. You can see more details <a href="https://help.gocardless.com/payment-timings" class="u-link-medium-gray u-text-underline">here</a>.</p>
 
-          <h3 class="section-heading">What types of payments can I collect?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What types of payments can I collect?
+          </h3>
           <p class="para">You can collect one-off, regular or variable Direct Debit payments with our simple online tool or the API.</p>
 
-          <h3 class="section-heading">How does the payment process work?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does the payment process work?
+          </h3>
           <ul class="list">
             <li>Using our online tool you can issue a request for authorisation to take Direct Debit payments from a customer in 2 clicks.</li>
             <li>We email your customer a link to our payment authorisation page. To authorise they click the link and complete our secure checkout.</li>
@@ -205,24 +227,36 @@
             <li>We will notify your customers every time a new payment is taken.</li>
           </ul>
 
-          <h3 class="section-heading">How does my customer authorise a payment?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does my customer authorise a payment?
+          </h3>
           <p class="para">You can trigger a request for authorisation from GoCardless by adding a customer, or send them a link to a plan yourself.</p>
           <p class="para">Your customer just needs to click the link and enter their details on our secure online payment page to set up a Direct Debit and authorise you to take future payments automatically.</p>
 
-          <h3 class="section-heading">Can customers sign up on my website?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can customers sign up on my website?
+          </h3>
           <p class="para">Yes - you can either do this by integrating with our <a href="https://developer.gocardless.com/" class="u-link-medium-gray u-text-underline">API</a> or by generating a link for a payment plan and embedding this as a button on your website.</p>
           <p class="para">On clicking the button the customer will be sent to our secure online payment page where they can authorise the payment(s).</p>
 
-          <h3 class="section-heading">Can I set payments to start and end on a particular date?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I set payments to start and end on a particular date?
+          </h3>
           <p class="para">Yes - you can easily customise the day, date, frequency and duration of payments.</p>
 
-          <h3 class="section-heading">Can I change a payment or payment plan once it has been created?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I change a payment or payment plan once it has been created?
+          </h3>
           <p class="para">Provided your payment hasn't been submitted to the banks yet, you can easily cancel an existing payment or remove your customer from the plan and add them to a new one. All this can be done from within your dashboard in seconds.</p>
 
-          <h3 class="section-heading">How do I know if I've been paid?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do I know if I've been paid?
+          </h3>
           <p class="para">Our online dashboard gives you real-time info on all your payments and customers, allowing you to check the status of a payment at any time.</p>
 
-          <h3 class="section-heading">Will you ever place limits on my account?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Will you ever place limits on my account?
+          </h3>
           <p class="para">There are certain situations where it may be necessary to place restrictions on your account:</p>
           <ul class="list">
             <li>Where we believe that there may be a breach in the security of your account details;</li>
@@ -233,38 +267,54 @@
         </div>
       </article>
 
-      <article id="signing-up-tab" ng-gc-tabby-content>
+      <article id="/signing-up-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Signing up</h2>
-          <h3 class="section-heading">What do I need to sign up?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What do I need to sign up?
+          </h3>
           <p class="para">We will need some personal details to help us verify your identity and some basic information on the company or organisation you are collecting for.</p>
 
-          <h3 class="section-heading">How do I test out the product?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do I test out the product?
+          </h3>
           <p class="para">After signing up online, we recommend trying to take a test payment from yourself. It takes less than 5 minutes and is completely risk-free.</p>
 
-          <h3 class="section-heading">Can I sign up if I'm not a registered company?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I sign up if I'm not a registered company?
+          </h3>
           <p class="para">Yes - GoCardless is available to charities, registered companies and individuals.</p>
           <p class="para">If you're a company but you are not registered, you should sign up as an individual. This will not affect the operation of your account.</p>
 
-          <h3 class="section-heading">What do I do if I'm a developer?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What do I do if I'm a developer?
+          </h3>
           <p class="para">Developers should sign up as normal. Once logged in, you can activate your developer account. Our API documentation can be viewed <a href="https://developer.gocardless.com/" class="u-link-medium-gray u-text-underline">here</a>.</p>
 
-          <h3 class="section-heading">Are there any commitments?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Are there any commitments?
+          </h3>
           <p class="para">No. There are no commitments. Signing up just means that you create an account from which you can try the product; you can stop using it without paying us anything whatsoever.</p>
         </div>
       </article>
 
-      <article id="direct-debit-tab" ng-gc-tabby-content>
+      <article id="/direct-debit-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Direct Debit</h2>
-          <h3 class="section-heading">What is the Direct Debit Guarantee?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What is the Direct Debit Guarantee?
+          </h3>
           <p class="para"><a href="https://gocardless.com/direct-debit/guarantee/" class="u-link-medium-gray u-text-underline">Debit Guarantee</a> offers protection to customers paying by Direct Debit in the rare event that there is an error in a payment.</p>
           <p class="para">If a customer receives a refund they are not entitled to, they must pay it back at the organisation's request. Dispute resolution takes place outside of the Direct Debit scheme.</p>
 
-          <h3 class="section-heading">Do I need a Service User Number (SUN) or permission from my bank?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Do I need a Service User Number (SUN) or permission from my bank?
+          </h3>
           <p class="para">There is no need to talk to your bank either. We provide you with everything you need to sign up online and start taking payments.</p>
 
-          <h3 class="section-heading">What kind of payments is it good for?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What kind of payments is it good for?
+          </h3>
 
           <p class="para">They are particularly good for:</p>
           <ul class="list">
@@ -273,36 +323,48 @@
             <li>Invoicing for services (e.g., accountancy, tax advice, etc.)</li>
           </ul>
 
-          <h3 class="section-heading">What kind of payments isn't it good for?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What kind of payments isn't it good for?
+          </h3>
           <ul class="list">
             <li>Transactions which need an instant clearing (e.g., e-commerce)</li>
             <li>High-value, one-off payments for liquid goods (e.g., gold bullion)</li>
             <li>Transactions likely to experience chargebacks (e.g., gambling)</li>
           </ul>
 
-          <h3 class="section-heading">What are the payment timings for Direct Debit?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What are the payment timings for Direct Debit?
+          </h3>
           <p class="para">Unlike card payments, Direct Debits don't clear instantly. Instead, it takes 3 days to set up each new payer, and to collect from payers who you currently have a Direct Debit relationship with.</p>
           <p class="para">Once GoCardless has collected payment from your customer we hold the money for 3 working days before sending it directly to your bank account.</p>
 
-          <h3 class="section-heading">Can I collect one-off payments using Direct Debit?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I collect one-off payments using Direct Debit?
+          </h3>
           <p class="para">Yes - although Direct Debit is most well-known for recurring payments, it can also be used to collect one-off payments.</p>
 
-          <h3 class="section-heading">Can I easily change Direct Debit provider?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I easily change Direct Debit provider?
+          </h3>
           <p class="para">Yes - the <a href="/direct-debit/transferring/" class="u-link-medium-gray u-text-underline">Direct Debit bulk change</a> process allows you to move Direct Debits between providers easily.</p>
           <p class="para">GoCardless has experience managing the entire transfer process for several large merchants, including Greater Anglia Railways. Your existing customers won't need to take any action whatsoever, and we offer this service free of charge.</p>
         </div>
       </article>
 
-      <article id="security-tab" ng-gc-tabby-content>
+      <article id="/security-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Security</h2>
-          <h3 class="section-heading">How do I know my money is safe?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do I know my money is safe?
+          </h3>
           <p class="para">We are regulated as an <a href="http://www.fsa.gov.uk/register/psdFirmBasicDetails.do?sid=315374" title="FCA Registration" target="_blank" class="u-link-medium-gray u-text-underline">Authorised Payment Institution</a>
             by the Financial Conduct Authority and serve more businesses than any other Direct Debit provider.
           </p>
           <p class="para">All money collected is held in a secure client monies account with the RBS.</p>
 
-          <h3 class="section-heading">How does GoCardless protect my data?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does GoCardless protect my data?
+          </h3>
           <p class="para">Security is of utmost importance at GoCardless. We take a number of steps to ensure our customers' data remains safe at all times:</p>
 
           <ul class="list">
@@ -312,20 +374,28 @@
             <li>All client-server communication is 256-bit SSL encrypted. The banking system requires just 128-bit.</li>
           </ul>
 
-          <h3 class="section-heading">What do you do with my money before it is paid out?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What do you do with my money before it is paid out?
+          </h3>
           <p class="para">All money collected is held in a secure client monies account held with the RBS.</p>
           <p class="para">Funds are held fully in accordance with safeguarding provisions.</p>
 
-          <h3 class="section-heading">Is it safe for my customers?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Is it safe for my customers?
+          </h3>
           <p class="para">Your customers are fully protected by the <a href="/direct-debit/guarantee/" class="u-link-medium-gray u-text-underline">Direct Debit Guarantee</a>.</p>
           <p class="para">This entitles them to a full and immediate refund of any payments taken from their account in error.</p>
 
-          <h3 class="section-heading">Vulnerability Disclosure</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Vulnerability Disclosure
+          </h3>
 
           <p class="para">We care deeply about keeping our users safe. If you believe you had discovered a vulnerability, we ask that you disclose it in a responsible manner. Sharing vulnerabilities publicly puts our entire user base at risk, so we urge you to keep issues private until we've had a chance to release a fix.</p>
           <p class="para">In recognition of your efforts, and as thanks for working with us to keep GoCardless safe, we offer financial rewards for responsible vulnerability disclosures. Rewards are issued at our discretion, but are a minimum of £250 (and they may be substantially more). The amount is determined by the severity of the issue.</p>
 
-          <h4>Reporting issues</h4>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Reporting issues
+          </h3>
 
           <ul class="list">
             <li>Email us at <a href="mailto:security@gocardless.com" class="u-link-medium-gray u-text-underline">security@gocardless.com</a> as soon as you become aware of the issue. Our GPG key id is <code>684ED3A3</code>, and its fingerprint is <code>8A4C 2665 6632 8EC4 1C83 6BB4 D9E1 ADB2 684E D3A3</code></li>
@@ -334,7 +404,9 @@
             <li>Please do not disclose the issue to anyone else before we've rolled out a fix</li>
           </ul>
 
-          <h4>Reward eligibility</h4>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Reward eligibility
+          </h3>
 
           <p class="para">We appreciate the effort security researchers go to in order to keep the web safe, and we're keen to reward them for their work. However, we will not reward malicious behavior, or actions that deliberately cause a disruption to our service. Reward eligibility is decided on a case-by-case basis, but we will never provide rewards for:</p>
           <ul class="list">
@@ -346,80 +418,112 @@
         </div>
       </article>
 
-      <article id="customer-experience-tab" ng-gc-tabby-content>
+      <article id="/customer-experience-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Customer Experience</h2>
 
-          <h3 class="section-heading">Can I fill in the payment pages on my customer's behalf?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I fill in the payment pages on my customer's behalf?
+          </h3>
           <p class="para">No - due to strict rules around Direct Debit, customers must fill in their payment details and go through the signup process themselves.</p>
 
-          <h3 class="section-heading">Will my name appear on my customer's bank statement?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Will my name appear on my customer's bank statement?
+          </h3>
           <p class="para">Yes, your business will appear as the reference for the Direct Debit, with GoCardless as the recipient.</p>
           <p class="para">You can customise how we display your business name on customer bank statements from the Settings page of your merchant dashboard.</p>
 
-          <h3 class="section-heading">Can I host the payment pages on my site?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I host the payment pages on my site?
+          </h3>
           <p class="para">No - in order to comply with the Direct Debit scheme rules the payment pages are securely hosted on our site.</p>
           <p class="para">You can redirect the customer to our payment page and we will redirect them back to your site. Alternatively you can allow them to access them via a pop-out from your site.</p>
 
-          <h3 class="section-heading">Do you offer iFrames?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Do you offer iFrames?
+          </h3>
           <p class="para">No - we do not offer iFraming of our payment pages.</p>
 
-          <h3 class="section-heading">Can payments be made directly via the API?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can payments be made directly via the API?
+          </h3>
           <p class="para">Only once authorisation is in place. Customers must be sent to our secure payment pages to give initial authorisation of the Direct Debit.</p>
           <p class="para">To make this as easy as possible for your clients, you can pass their personal information to us via the API to prepopulate the form.</p>
           <p class="para">Once authorisation is in place payment can be requested via the API.</p>
 
-          <h3 class="section-heading">Can information on the sign-up and payment pages be pre-populated?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can information on the sign-up and payment pages be pre-populated?
+          </h3>
           <p class="para">Yes - to make this as easy as possible for your clients, you can pass their personal information to us via the API to prepopulate the forms.</p>
           <p class="para">The only information we cannot pre-populate are their bank details.</p>
 
-          <h3 class="section-heading">Can customers pay from their mobile?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can customers pay from their mobile?
+          </h3>
           <p class="para">Yes - GoCardless is compatible with mobiles and tablets. Our payment pages will work in any Internet browser.</p>
 
-          <h3 class="section-heading">How can customers keep track of their payment history?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How can customers keep track of their payment history?
+          </h3>
           <p class="para">As part of setting up a payment, your customer will create a
             GoCardless account. From then on, they can <a href="/users/sign_in" class="u-link-medium-gray u-text-underline">log in</a> to view their dashboard, including details of all their transactions.</p>
 
         </div>
       </article>
 
-      <article id="international-payments-tab" ng-gc-tabby-content>
+      <article id="/international-payments-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">International payments</h2>
-          <h3 class="section-heading">Can only UK businesses use GoCardless?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can only UK businesses use GoCardless?
+          </h3>
           <p class="para">No. You just need to have a UK bank account so we can pay you. You do not need to be a UK registered business or individual.</p>
 
-          <h3 class="section-heading">When can I collect from Europe?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            When can I collect from Europe?
+          </h3>
           <p class="para">Anyone with a UK bank account will be able to collect from Europe as soon as we launch our <a href="/europe" class="u-link-medium-gray u-text-underline">SEPA Direct Debit</a> product.</p>
           <p class="para">This is currently in the late stages of development and the first batch of invites will be sent out the next few months. Countries will be phased in according to customer demand so be sure to <a href="/europe" class="u-link-medium-gray u-text-underline">register your interest</a>!</p>
           <p class="para">SEPA Direct Debit is a new payments scheme which allows you to collect from any bank account in the <a href="http://en.wikipedia.org/wiki/Single_Euro_Payments_Area" target="_blank" class="u-link-medium-gray u-text-underline">Single Euro Payments Area (SEPA)</a>. It works similarly to Direct Debit in the UK.</p>
           <p class="para">Read more about it <a href="/direct-debit/sepa/introduction/" class="u-link-medium-gray u-text-underline">how the SEPA scheme works</a>.</p>
 
-          <h3 class="section-heading">Which currencies does GoCardless support?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Which currencies does GoCardless support?
+          </h3>
           <p class="para">We currently support payments in GBP only. Our <a href="/europe" class="u-link-medium-gray u-text-underline">SEPA Direct Debit</a> product will enable Merchants to collect payments in EUR as well.</p>
 
-          <h3 class="section-heading">Will international payments cost the same as UK?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Will international payments cost the same as UK?
+          </h3>
           <p class="para">The honest answer is that we don't know. We will be trialling pricing with early users to see what makes most sense for them, and don't want to commit to something now only to change it later.</p>
-          <p><strong>We can, however, make a commitment that offering <a href="/pricing" class="u-link-medium-gray u-text-underline">simple, transparent &amp; low fees</a> will remain a priority to us.</strong></p>
+          <p class="para"><strong>We can, however, make a commitment that offering <a href="/pricing" class="u-link-medium-gray u-text-underline">simple, transparent &amp; low fees</a> will remain a priority to us.</strong></p>
 
-          <h3 class="section-heading">When will GoCardless be available outside Europe?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            When will GoCardless be available outside Europe?
+          </h3>
           <p class="para">GoCardless will not be available outside Europe in 2013. We are working very hard to expand to more countries soon.</p>
         </div>
       </article>
 
-      <article id="developer-api-tab" ng-gc-tabby-content>
+      <article id="/developer-api-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Developer API</h2>
-          <h3 class="section-heading">What can I use the API for?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What can I use the API for?
+          </h3>
           <p class="para">Our REST API allows developers to easily create powerful integrations with GoCardless. See our <a href="https://developer.gocardless.com/" class="u-link-medium-gray u-text-underline">documentation</a> to find out more.</p>
           <p class="para">You can integrate as a Merchant to take payments on your own behalf, or integrate as a Partner to create and manage multiple merchants.</p>
 
-          <h3 class="section-heading">How does the Partner API work?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does the Partner API work?
+          </h3>
           <p class="para">A Partner integration allows your customers to quickly and easily create a GoCardless account without copying and pasting API keys.</p>
           <p class="para">This account will be linked to your Master Merchant account so that you can manage these accounts and process payment requests on their behalf.</p>
           <p class="para">For further information see the "Partner" section of this FAQ or our <a href="https://developer.gocardless.com/#partner-guide" class="u-link-medium-gray u-text-underline">partner API guide</a>.</p>
 
-          <h3 class="section-heading">What programming languages can I use?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What programming languages can I use?
+          </h3>
           <p class="para">We have client libraries for
             <a href="https://github.com/gocardless/gocardless-ruby" target="_blank" class="u-link-medium-gray u-text-underline">Ruby</a>,
             <a href="https://github.com/gocardless/gocardless-php" target="_blank" class="u-link-medium-gray u-text-underline">PHP</a>,
@@ -431,105 +535,155 @@
           <p class="para"><i>Using a different language?</i> No problem - our standards-compliant
             REST API can be used with just about any programming language</p>
 
-          <h3 class="section-heading">Can I host the payment pages on my site?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I host the payment pages on my site?
+          </h3>
           <p class="para">No - in order to comply with the Direct Debit scheme rules the payment pages are securely hosted on our site.</p>
           <p class="para">You can redirect the customer to our payment page and we will redirect them back to your site. Alternatively you can allow them to access them via a pop-out from your site.</p>
 
-          <h3 class="section-heading">Do you offer iFrames?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Do you offer iFrames?
+          </h3>
           <p class="para">No - we do not offer iFraming of our payment pages as we are not sufficiently comfortable with the reliability and security of iFrames.</p>
 
-          <h3 class="section-heading">Can payments be made directly via the API?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can payments be made directly via the API?
+          </h3>
           <p class="para">Only once authorisation is in place. Customers must be sent to our secure payment pages to give initial authorisation of the Direct Debit.</p>
           <p class="para">To make this as easy as possible for your clients, you can pass their personal information to us via the API to prepopulate the form.</p>
           <p class="para">Once authorisation is in place payment can be requested via the API.</p>
 
-          <h3 class="section-heading">What information do you make available via the API?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What information do you make available via the API?
+          </h3>
           <p class="para">GoCardless provides webhooks to notify Merchants of any changes in the status of its resources. One extremely useful example is determining when a bill has been paid.</p>
           <p class="para">You can find out more about available webhooks and how to use them in our <a href="https://developer.gocardless.com/#webhooks" class="u-link-medium-gray u-text-underline">webhook guide</a>.</p>
 
-          <h3 class="section-heading">Where can I get technical support?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Where can I get technical support?
+          </h3>
           <p class="para">You can email us at {{ SUPPORT_EMAIL }}. We also have a live chat room which can be found in <a href="http://webchat.freenode.net/?channels=gocardless&uio=OT10cnVlJjExPTIzNiYxMj10cnVl51" target="_blank" class="u-link-medium-gray u-text-underline">#gocardless on irc.freenode.net</a>. Our developers are on hand 9am-6pm, Mon-Fri to help with your technical queries.</p>
           <p class="para">A number of detailed product guides are also available in our <a href="https://help.gocardless.com/" class="u-link-medium-gray u-text-underline">Help Centre</a>.</p>
         </div>
       </article>
 
-      <article id="partners-tab" ng-gc-tabby-content>
+      <article id="/partners-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Partners</h2>
-          <h3 class="section-heading">What is a partner?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What is a partner?
+          </h3>
           <p class="para">A partner is someone who uses the GoCardless API to create and manage multiple merchants. Partnering with GoCardless allows your customers to take payment from within your application.</p>
           <p class="para">For further information check out our <a href="https://help.gocardless.com/what-is-the-partner-programme/" class="u-link-medium-gray u-text-underline">partner API guide</a>.</p>
 
-          <h3 class="section-heading">Who are existing partners?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Who are existing partners?
+          </h3>
           <p class="para">GoCardless is integrated into a variety of accounting packages and popular services. View a list of these <a href="/features/integrations" class="u-link-medium-gray u-text-underline">here</a>.</p>
 
-          <h3 class="section-heading">Can I take a revenue share?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I take a revenue share?
+          </h3>
           <p class="para">Yes - we offer partners a revenue share of 10% of transaction fees.</p>
 
-          <h3 class="section-heading">How can I become a partner?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How can I become a partner?
+          </h3>
           <p class="para">Just email us at <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> with a short description of your application, and we'll get right back to you.</p>
 
-          <h3 class="section-heading">How does it work for my users?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How does it work for my users?
+          </h3>
           <p class="para">A Partner integration allows your customers to quickly and easily create a GoCardless account without copying and pasting API keys.</p>
           <p class="para">This account will be linked to your Master Merchant account so that you can manage these accounts and process payment requests on their behalf.</p>
 
-          <h3 class="section-heading">Can I display payment information in my application?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I display payment information in my application?
+          </h3>
           <p class="para">Yes - GoCardless provides webhooks to notify Merchants of any changes in the status of its resources. One extremely useful example is determining when a bill has been paid.</p>
           <p class="para">You can find out more about available webhooks and how to use them in our <a href="https://developer.gocardless.com/#webhooks" class="u-link-medium-gray u-text-underline">webhook guide</a>.</p>
 
-          <h3 class="section-heading">Can I host the payment pages on my site?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I host the payment pages on my site?
+          </h3>
           <p class="para">No - in order to comply with the Direct Debit scheme rules the payment pages are securely hosted on our site.</p>
           <p class="para">You can redirect the customer to our payment page and we will redirect them back to your site. Alternatively you can allow them to access them via a pop-out from your site.</p>
           <p class="para">To make this as easy as possible for your customers, you can pass information to us via the API to pre-populate the form.</p>
 
-          <h3 class="section-heading">Do you offer iFrames?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Do you offer iFrames?
+          </h3>
           <p class="para">No - we do not offer iFraming of our payment pages as we are not sufficiently comfortable with the reliability and security of iFrames.</p>
 
-          <h3 class="section-heading">Do you work with crowd-funding sites?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Do you work with crowd-funding sites?
+          </h3>
           <p class="para">Yes - we are pleased to work with some of the UK's leading crowd-funding sites, including <a href="http://www.crowdcube.com/" target="_blank" class="u-link-medium-gray u-text-underline">Crowdcube</a> and <a href="http://www.peoplefund.it/" target="_blank" class="u-link-medium-gray u-text-underline">Peoplefund.it</a>.</p>
           <p class="para">Because of the risk profile of crowd-funding payments we charge a different fee: 0.5% of the transaction, with no cap.</p>
         </div>
       </article>
 
-      <article id="referrals-tab" ng-gc-tabby-content>
+      <article id="/referrals-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Referral scheme</h2>
-          <h3 class="section-heading">What is the GoCardless Referral scheme?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What is the GoCardless Referral scheme?
+          </h3>
           <p class="para">The referral scheme lets you earn money by recommending GoCardless. Refer anyone to GoCardless and we will give you both £50 credit each towards your GoCardless fees.</p>
           <p class="para">Find out more <a href="/refer" class="u-link-medium-gray u-text-underline">here</a>.</p>
 
-          <h3 class="section-heading">Who is eligible to make a referral?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Who is eligible to make a referral?
+          </h3>
           <p class="para">Anyone with a GoCardless account can make referrals. It doesn't matter if you're a merchant or a reseller.</p>
           <p class="para">You can find your referral link <a href="https://dashboard.gocardless.com/referrals" class="u-link-medium-gray u-text-underline">here</a>.</p>
 
-          <h3 class="section-heading">What qualifies as a successful referral?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What qualifies as a successful referral?
+          </h3>
           <p class="para">A referral just needs to click your referral link and sign-up. We will immediately give both of you £50 of GoCardless fee credits.</p>
 
-          <h3 class="section-heading">How will I know how many referrals I have made?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How will I know how many referrals I have made?
+          </h3>
           <p class="para">Everyone who signs up after clicking your referral link will be displayed in the referrals section of your account. We'll show when they signed-up and how much commission they've earned you. We'll also email you the moment someone signs up.</p>
 
-          <h3 class="section-heading">Is there a limit to the number of referrals I can make?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Is there a limit to the number of referrals I can make?
+          </h3>
           <p class="para">No. But referrals are most effective when they are relevant.</p>
           <p class="para">Find out more about the best <a href="/direct-debit/use-cases/" class="u-link-medium-gray u-text-underline">Direct Debit use cases</a>.</p>
 
-          <h3 class="section-heading">How do I share my referral link?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do I share my referral link?
+          </h3>
           <p class="para">However you want. Feel free to email it out to people, tell them about it in person, or blog about it to a wider audience.</p>
           <p class="para">Please don't try to abuse the system though - this is in contravention of our <a href="/legal/restrictions" class="u-link-medium-gray u-text-underline">Terms of Service</a>.</p>
 
-          <h3 class="section-heading">Where can I find my referral link?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Where can I find my referral link?
+          </h3>
           <p class="para">Your unique referral code will be displayed in the <a href="https://dashboard.gocardless.com/referrals" class="u-link-medium-gray u-text-underline">referral section</a> of your GoCardless account. It is accessible from your dashboard settings and does not expire.</p>
 
-          <h3 class="section-heading">How do I get my credit?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            How do I get my credit?
+          </h3>
           <p class="para">We'll collect your fees as usual, and will pay you a rebate every month up to your £50 credit. We will send you an email summary at the same time. You can check how much commission you have earned anytime in your <a href="https://dashboard.gocardless.com/referrals" class="u-link-medium-gray u-text-underline">account settings</a>.</p>
 
-          <h3 class="section-heading">Can I send the referral to a different page on the site?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Can I send the referral to a different page on the site?
+          </h3>
           <p class="para"> Yes. By default your referral link will go to the GoCardless home page. To send people to a different page, take the query string from the end of the referral link and add it to the end of any GoCardless URL.</p>
           <p class="para">The query string is the bit that looks like this: "?r=1ABC23DE45". For example, to send them to the sign-up page you would change the URL to: https://gocardless.com/merchants/new?r=1ABC23DE45.</p>
 
-          <h3 class="section-heading">Does my link expire?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            Does my link expire?
+          </h3>
           <p class="para">No - your link will not expire.</p>
 
-          <h3 class="section-heading">What if someone I refer forgets to use my link?</h3>
+          <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+            What if someone I refer forgets to use my link?
+          </h3>
           <p class="para">Just let us know if someone you refer forgets to use your referral link, or the referral is not tracked for any reason - we can activate the referral link for you.</p>
         </div>
       </article>
