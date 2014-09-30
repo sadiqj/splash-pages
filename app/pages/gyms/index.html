@@ -21,31 +21,26 @@
   </div>
 
   <div class="sticky-nav">
-    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xs u-text-light u-text-no-smoothing">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xxs u-text-light u-text-no-smoothing">
       <div class="u-center site-container site-gutter u-padding-Vm">
         <ul class="u-pull-start u-margin-Txxs">
           <li class="sticky-nav__item">
-            <a href="#benefits" class="sticky-nav__link">
-              Benefits
+            <a href="#overview" class="sticky-nav__link" du-scrollspy du-smooth-scroll offset="72">
+              Overview
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#features" class="sticky-nav__link">
+            <a href="#features" class="sticky-nav__link" du-scrollspy du-smooth-scroll offset="72">
               Features
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#demo" class="sticky-nav__link">
-              Demo
-            </a>
-          </li>
-          <li class="sticky-nav__item">
-            <a href="#pricing" class="sticky-nav__link">
+            <a href="#pricing" class="sticky-nav__link" du-scrollspy du-smooth-scroll offset="72">
               Pricing
             </a>
           </li>
         </ul>
-        <a href="/merchants/new" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xs u-text-no-smoothing">
+        <a href="/merchants/new" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
           Start taking payments
         </a>
       </div>
@@ -53,11 +48,7 @@
     </div>
   </div>
 
-  <div>
-    <a id="benefits"></a>
-  </div>
-
-  <div class="site-container site-gutter u-text-center u-padding-Vxxl">
+  <div id="overview" class="site-container site-gutter u-text-center u-padding-Vxxl">
     <div class="u-padding-Vxl">
       <div class="u-center">
         <div class="u-text-heading u-color-heading u-text-l u-text-light">
@@ -102,220 +93,232 @@
 
   <hr class="u-margin-An">
 
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="grid u-padding-Vxxl u-center">
-      <div class="grid__cell u-size1of2">
-        <div class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
-          Use plans to manage memberships
-        </div>
-        <h4>Add customers to membership plans</h4>
-        <p class="u-size5of6 u-color-p u-margin-Bm">
-          Easily create your own plans and add multiple customers to them. Take payments when it suits you.
-        </p>
-        <h4>Collect payments automatically</h4>
-        <p class="u-size5of6 u-color-p u-margin-Bm">
-          Your members authorise you to collect payments from them. Money will automatically be billed from their account.
-        </p>
-        <h4>Adjust prices any time</h4>
-        <p class="u-size5of6 u-color-p u-margin-Bm">
-          You can update the price of a plan in a matter of clicks, making annual price increases quick and easy.
-        </p>
-      </div>
-      <div class="grid__cell u-size1of2 u-margin-Tm u-text-center">
-        <img src="/images/features/plans.jpg" width="366">
-      </div>
-    </div>
-  </div>
+  <div id="features">
 
-  <hr class="u-margin-An">
-
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="grid u-padding-Vxxl u-center">
-      <div class="grid__cell u-size1of2 u-text-center">
-        <img src="/images/features/payment-page--gyms.jpg" width="390">
-      </div>
-       <div class="grid__cell u-size1of2 u-margin-Txxl">
+    <div class="site-container site-gutter u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl u-center">
+        <div class="grid__cell u-size1of2 u-padding-Hn">
           <div class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
-            Setup customers in two clicks
+            Use plans to manage memberships
+          </div>
+          <h4>Add customers to membership plans</h4>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            Easily create your own plans and add multiple customers to them. Take payments when it suits you.
+          </p>
+          <h4>Collect payments automatically</h4>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            Your members authorise you to collect payments from them. Money will automatically be billed from their account.
+          </p>
+          <h4>Adjust prices any time</h4>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            You can update the price of a plan in a matter of clicks, making annual price increases quick and easy.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-margin-Tm u-padding-Hn u-text-center">
+          <img src="/images/features/plans.jpg" class="vertical-page__plans-image">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container site-gutter u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl u-center">
+        <div class="grid__cell u-size1of2 u-padding-Hn u-text-center">
+          <img src="/images/features/payment-page--gyms.jpg" class="vertical-page__mobile-image">
+        </div>
+         <div class="grid__cell u-size1of2 u-padding-Hn u-margin-Txxl">
+            <div class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+              Setup customers in two clicks
+            </div>
+            <p class="u-color-p u-margin-Bm">
+              Our hosted payment pages let you manage the whole sign up process for customers online, giving you the flexibility to decide on the best joining process for you.
+            </p>
+            <h4>Sign them up instantly, in person</h4>
+            <p class="u-color-p u-margin-Bm">
+              Our online form takes seconds to fill out, meaning you can sign people up on the spot with no paper work.
+            </p>
+            <h4>Add a link to your website or emails</h4>
+            <p class="u-color-p u-margin-Bm">
+              Sign up new members online or from your website by adding a simple link
+            </p>
+            <h4>Add customers in individually, or in bulk</h4>
+            <p class="u-color-p u-margin-Bm">
+              Add hundreds of customers at once with a CSV. We'll request each of them to complete our payment pages
+            </p>
+            <a href="/example-checkout" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Txl">
+              See an example payment page
+            </a>
+          </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container site-gutter u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl u-center">
+        <div class="grid__cell u-size1of2 u-padding-Hn u-margin-Tl">
+          <div class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Hold on to your members
           </div>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Our hosted payment pages let you manage the whole sign up process for customers online, giving you the flexibility to decide on the best joining process for you.
+            Comprehensive, easy-to-use information on all of your payments and customers
           </p>
-          <h4>Sign them up instantly, in person</h4>
+          <h4>Up to the second status reports</h4>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Our online form takes seconds to fill out, meaning you can sign people up on the spot with no paper work.
+            Comprehensive, easy-to-use information on all of your payments and customers
           </p>
-          <h4>Add a link to your website or emails</h4>
+          <h4>Email notifications</h4>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Sign up new members online or from your website by adding a simple link
+            Immediate notification when a payment fails or a customer cancels
           </p>
-          <h4>Add customers in individually, or in bulk</h4>
+          <h4>Export your data</h4>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Add hundreds of customers at once with a CSV. We'll request each of them to complete our payment pages
+            View your data the way you want to and import it into other apps
           </p>
         </div>
-    </div>
-  </div>
-
-  <hr class="u-margin-An">
-
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="grid u-padding-Vxxl u-center">
-      <div class="grid__cell u-size1of2 u-margin-Tl">
-        <div class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
-          Hold on to your members
+        <div class="grid__cell u-size1of2 u-padding-Hn u-text-center">
+          <img src="/images/features/real-time-reports.jpg" width="251">
         </div>
-        <p class="u-size5of6 u-color-p u-margin-Bm">
-          Comprehensive, easy-to-use information on all of your payments and customers
-        </p>
-        <h4>Up to the second status reports</h4>
-        <p class="u-size5of6 u-color-p u-margin-Bm">
-          Comprehensive, easy-to-use information on all of your payments and customers
-        </p>
-        <h4>Email notifications</h4>
-        <p class="u-size5of6 u-color-p u-margin-Bm">
-          Immediate notification when a payment fails or a customer cancels
-        </p>
-        <h4>Export your data</h4>
-        <p class="u-size5of6 u-color-p u-margin-Bm">
-          View your data the way you want to and import it into other apps
-        </p>
-      </div>
-      <div class="grid__cell u-size1of2 u-text-center">
-        <img src="/images/features/real-time-reports.jpg" width="251">
       </div>
     </div>
-  </div>
 
-  <hr class="u-margin-An">
+    <hr class="u-margin-An">
 
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxxl">
-      <div class="u-size1of2 u-center">
-        <div class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
-          Works with your existing software
-        </div>
-        <p class="u-text-s u-color-p u-margin-Txs">
-          GoCardless has partnered up with some of the leading platforms in the gym and fitness industry, integrating payments into their software
-        </p>
-      </div>
-      <div class="u-text-center u-margin-Vl u-padding-Vs u-size2of3 u-center">
-        <img src="/images/logos/enterprise-logos@2x.jpg">
-      </div>
-      <a href="/integrations" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
-        View all our integrations
-      </a>
-    </div>
-  </div>
-
-  <hr class="u-margin-An">
-
-  <div class="u-text-center u-padding-Vxxl">
-    <div class="site-container u-padding-Vxl">
-      <div class="u-size1of2 u-center">
-        <div class="u-text-heading u-color-heading u-text-xl u-text-light">
-          Pay 1%
-        </div>
-        <p class="u-color-p u-margin-Txxs">
-          Just 1% per transaction, capped at £2.
-        </p>
-        <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
-        <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
-        <p class="u-color-heading u-margin-Bxxs">
-          <strong>Taking more than 500 transactions a month?</strong>
-        </p>
-        <a href="/pricing/#enterprise" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
-          Learn about our enterprise pricing
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="vertical-page__hockey-bg">
-    <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="site-container site-gutter u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxxl">
-        <div class="u-padding-Bxxl u-size1of2 u-center">
-          <p class="u-text-heading u-color-invert u-text-l u-text-light">
-            “GoCardless was the obvious choice <br>for our team. Payments just happen every month without us having to remember to do anything. It’s ideal.”
+        <div class="u-size1of2 u-center">
+          <div class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Works with your existing software
+          </div>
+          <p class="u-text-s u-color-p u-margin-Txs">
+            GoCardless has partnered up with some of the leading platforms in the gym and fitness industry, integrating payments into their software
           </p>
         </div>
-        <img src="/images/testimonials/hockey-club__avatar.png" class="u-size1of12 u-text-center u-margin-Bxs">
-        <div class="u-color-invert u-text-heading u-text-m u-text-semi">Mark McDermott</div>
-        <div class="u-color-invert u-text-heading u-text-xs">Spencer Hockey Club</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="site-container u-text-center u-padding-Txxl">
-    <div class="u-padding-Txxl">
-      <div class="u-text-heading u-color-heading u-text-light u-text-l u-text-light">
-        Say hello to our Dashboard. Everything you need to set up <br>customers, manage subscriptions and take payments
-      </div>
-      <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
-        <a href="/pricing/#enterprise" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
-          Learn about our enterprise pricing
+        <div class="u-text-center u-margin-Vl u-padding-Vs u-size2of5 u-center">
+          <img src="/images/verticals/gym-logos@2x.jpg">
+        </div>
+        <a href="/integrations" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+          View all our integrations
         </a>
-      <div class="u-padding-Txxl u-size5of6 u-center">
-        <img src="/images/features/dashboard-frame.jpg" width="780">
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
   </div>
 
-  <hr class="u-margin-An">
+  <div id="pricing">
 
-  <div class="site-container site-gutter u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxl">
-      <div class="site-container u-center">
-        <div class="grid">
-          <div class="grid__cell u-size1of3 u-text-center">
-            <div class="u-padding-Vl u-padding-Hxxl">
-              <i class="tick-icon"></i>
-              <p class="u-margin-Txs u-color-heading">Add customers individually, in bulk or with a link</p>
-            </div>
+    <div class="u-text-center u-padding-Vxxl">
+      <div class="site-container u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <div class="u-text-heading u-color-heading u-text-xl u-text-light">
+            Basic: Pay 1%
           </div>
-          <div class="grid__cell u-size1of3 u-text-center">
-            <div class="u-padding-Vl u-padding-Hxxl">
-              <i class="tick-icon"></i>
-              <p class="u-margin-Txs u-color-heading">Take one-off, recurring or bulk payments online</p>
-            </div>
+          <p class="u-color-p u-margin-Txxs">
+            Just 1% per transaction, capped at £2.
+          </p>
+          <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+          <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+          <p class="u-color-heading u-margin-Bxxs">
+            <strong>Taking more than 500 transactions a month?</strong>
+          </p>
+          <a href="/pricing/#enterprise" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Learn about our enterprise pricing
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="vertical-page__hockey-bg">
+      <div class="site-container u-text-center u-padding-Vxxl">
+        <div class="u-padding-Vxxl">
+          <div class="u-padding-Bxxl u-size1of2 u-center">
+            <p class="u-text-heading u-color-invert u-text-l u-text-light">
+              “GoCardless was the obvious choice <br>for our team. Payments just happen every month without us having to remember to do anything. It’s ideal.”
+            </p>
           </div>
-          <div class="grid__cell u-size1of3 u-text-center">
-            <div class="u-padding-Vl u-padding-Hxxl">
-              <i class="tick-icon"></i>
-              <p class="u-margin-Txs u-color-heading">Your own responsive, branded payment pages</p>
+          <img src="/images/testimonials/hockey-club__avatar.png" class="u-size1of12 u-text-center u-margin-Bxs">
+          <div class="u-color-invert u-text-heading u-text-m u-text-semi">Mark McDermott</div>
+          <div class="u-color-invert u-text-heading u-text-xs">Spencer Hockey Club</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-container site-gutter u-text-center u-padding-Txxl">
+      <div class="u-padding-Txxl">
+        <div class="u-text-heading u-color-heading u-text-light u-text-l u-text-light">
+          Say hello to Dashboard. Everything you need to set up <br>customers, manage subscriptions and take payments
+        </div>
+        <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+          <a href="/pricing/#enterprise" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Learn about our enterprise pricing
+          </a>
+        <div class="u-padding-Txxl u-size5of6 u-center">
+          <img src="/images/features/dashboard-frame.jpg" width="780">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container site-gutter u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="site-container u-center">
+          <div class="grid">
+            <div class="grid__cell u-size1of3 u-text-center">
+              <div class="u-padding-Vl u-padding-Hxxl">
+                <i class="tick-icon"></i>
+                <p class="u-margin-Txs u-color-heading">Add customers individually, in bulk or with a link</p>
+              </div>
             </div>
-          </div>
-          <div class="grid__cell u-size1of3 u-text-center">
-            <div class="u-padding-Vl u-padding-Hxxl">
-              <i class="tick-icon"></i>
-              <p class="u-margin-Txs u-color-heading">Add a checkout button to your site, we'll do the rest</p>
+            <div class="grid__cell u-size1of3 u-text-center">
+              <div class="u-padding-Vl u-padding-Hxxl">
+                <i class="tick-icon"></i>
+                <p class="u-margin-Txs u-color-heading">Take one-off, recurring or bulk payments online</p>
+              </div>
             </div>
-          </div>
-          <div class="grid__cell u-size1of3 u-text-center">
-            <div class="u-padding-Vl u-padding-Hxxl">
-              <i class="tick-icon"></i>
-              <p class="u-margin-Txs u-color-heading">Export all of your data easily, at any time</p>
+            <div class="grid__cell u-size1of3 u-text-center">
+              <div class="u-padding-Vl u-padding-Hxxl">
+                <i class="tick-icon"></i>
+                <p class="u-margin-Txs u-color-heading">Your own responsive, branded payment pages</p>
+              </div>
             </div>
-          </div>
-          <div class="grid__cell u-size1of3 u-text-center">
-            <div class="u-padding-Vl u-padding-Hxxl">
-              <i class="tick-icon"></i>
-              <p class="u-margin-Txs u-color-heading">Integrate with our clean, modern API with full documentation</p>
+            <div class="grid__cell u-size1of3 u-text-center">
+              <div class="u-padding-Vl u-padding-Hxxl">
+                <i class="tick-icon"></i>
+                <p class="u-margin-Txs u-color-heading">Add a checkout button to your site, we'll do the rest</p>
+              </div>
+            </div>
+            <div class="grid__cell u-size1of3 u-text-center">
+              <div class="u-padding-Vl u-padding-Hxxl">
+                <i class="tick-icon"></i>
+                <p class="u-margin-Txs u-color-heading">Export all of your data easily, at any time</p>
+              </div>
+            </div>
+            <div class="grid__cell u-size1of3 u-text-center">
+              <div class="u-padding-Vl u-padding-Hxxl">
+                <i class="tick-icon"></i>
+                <p class="u-margin-Txs u-color-heading">Integrate with our clean, modern API with full documentation</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <hr class="u-margin-An">
+    <hr class="u-margin-An">
 
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxl">
-      <a href="/merchants/new" class="btn">Start taking payments</a>
-      <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <a href="/merchants/new" class="btn">Start taking payments</a>
+        <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+      </div>
     </div>
+
   </div>
+
 
   {% include "_site_footer.html" %}
 
