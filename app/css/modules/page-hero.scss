@@ -33,6 +33,13 @@
   background-repeat: no-repeat;
 }
 
+.page-hero--about {
+  background: url('/images/hero/about-hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .page-hero--large {
   height: 585px;
 }
