@@ -203,57 +203,57 @@
 
   <div class="site-container u-text-center u-padding-Vxxl" id="dashboard">
     <div class="u-padding-Vxl">
-      <div class="u-size1of2 u-center">
+      <div class="u-size2of3 u-center">
         <div class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
           Your Dashboard
         </div>
         <div class="u-text-heading u-color-heading u-text-l u-text-light">
-          The easiest way to manage your recurring payments
+          Everything you need to set up customers,<br>manage subscriptions and take payments
         </div>
         <hr class="u-margin-Vxxl">
       </div>
       <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
-        <a href="#/customer-info"
+        <a href="#/dashboard-home"
         class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean" 
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
-          $href: '/customer-info'
+          $href: '/dashboard-home'
         }">
-          Customer info
+          Dashboard home
         </a>
-        <a href="#/payment-status"
+        <a href="#/add-customers"
         class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
-          $href: '/payment-status'
+          $href: '/add-customers'
         }">
-          Payment status
+          Adding customers
         </a>
-        <a href="#/admin"
+        <a href="#/take-payments"
         class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
-          $href: '/admin'
+          $href: '/take-payments'
         }">
-          Admin
+          Taking payments
         </a>
       </div>
-      <div id="/customer-info" ng-gc-tabby-content prevent-location-update>
+      <div id="/dashboard-home" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <img src="/images/pro/pro-customer-info.png" width="796">
+          <img src="/images/basic/basic-dashboard-home.png" width="796">
         </div>
       </div>
-      <div id="/payment-status" ng-gc-tabby-content prevent-location-update>
+      <div id="/add-customers" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <img src="/images/pro/pro-payment-status.png" width="796">
+          <img src="/images/basic/basic-add-customer.png" width="796">
         </div>
       </div>
-      <div id="/admin" ng-gc-tabby-content prevent-location-update>
+      <div id="/take-payments" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <img src="/images/pro/pro-admin.png" width="796">
+          <img src="/images/basic/basic-take-payment.png" width="796">
         </div>
       </div>
     </div>
