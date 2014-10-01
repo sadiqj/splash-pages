@@ -30,7 +30,7 @@
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#team" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#features" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
               Features
             </a>
           </li>
@@ -111,6 +111,71 @@
 
   <hr class="u-margin-An">
 
+  <div class="site-container u-text-center u-padding-Vxxl" id="features">
+    <div class="u-padding-Vxl">
+      <div class="u-size1of2 u-center">
+        <div class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
+          Your Dashboard
+        </div>
+        <div class="u-text-heading u-color-heading u-text-l u-text-light">
+          A simple frontend to manage your payments and customers
+        </div>
+        <hr class="u-margin-Vxxl">
+      </div>
+      <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
+        <a href="#/customer-info"
+        class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean" 
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: '/customer-info'
+        }">
+          Customer info
+        </a>
+
+        <a href="#/payment-status"
+        class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hl u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: '/payment-status'
+        }">
+          Payment status
+        </a>
+
+        <a href="#/admin"
+        class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hl u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: '/admin'
+        }">
+          Admin
+        </a>
+      </div>
+
+        <div id="/customer-info" ng-gc-tabby-content>
+          <div ng-if="$isActive">
+            customer info content
+          </div>
+        </div>
+
+        <div id="/payment-status" ng-gc-tabby-content>
+          <div ng-if="$isActive">
+            Payment status content
+          </div>
+        </div>
+
+        <div id="/admin" ng-gc-tabby-content>
+          <div ng-if="$isActive">
+            Admin content
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
 
   {% include "_site_footer.html" %}
 
