@@ -1,0 +1,45 @@
+@import "variables";
+
+.sticky-nav {
+  height: 72px;
+}
+
+.sticky-nav__inner.is-sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sticky-nav__cta {
+  transition: all 0.1s ease;
+}
+
+.sticky-nav__inner.is-sticky .sticky-nav__cta {
+  background: $primary-color;
+  border-color: $primary-color;
+  color: white;
+  transition: all 0.1s ease;
+}
+
+.sticky-nav__item {
+  margin-right: $space-medium;
+  float: left;
+  display: block;
+}
+
+.sticky-nav__link {
+  color: $dark-gray-darken;
+  &:hover,
+  &:active {
+    color: $dark-gray-darken;
+  }
+}
+
+.sticky-nav__link.active:after {
+  display: block;
+  content: "";
+  border-bottom: 6px solid $primary-color;
+  position: relative;
+  top: 24px;
+}

@@ -26,8 +26,19 @@
   background-repeat: no-repeat;
 }
 
+.page-hero--europe {
+  background: url('/images/hero/new-europe-hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .page-hero--large {
   height: 585px;
+}
+
+.page-hero--medium {
+  height: 470px;
 }
 
 .page-hero--small {
