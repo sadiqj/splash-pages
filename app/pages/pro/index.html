@@ -1,0 +1,119 @@
+{% extends "plain.html" %}
+
+{% block title %}The UK’s #1 for online Direct Debit{% endblock %}
+{% block meta_tags %}<meta name="description" content="GoCardless is the UK's #1 for Direct Debit, serving more companies than any other provider. Perfect for recurring billing and B2B invoicing.">{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper" scroll-spy>
+  <div class="page-hero page-hero--pro page-hero--medium u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-header--invert site-gutter u-cf align-btn-small u-padding-Tm">
+        {% include "_site_header_invert.html" %}
+      </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <div class="u-text-heading u-color-invert u-text-center hero-heading u-text-light">Built for total control over Direct Debit</div>
+          <div class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">We’ve created a purpose built, cutting edge platform for<br>businesses to take payments by Direct Debit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-nav">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xxs u-text-light u-text-no-smoothing">
+      <div class="u-center site-container site-gutter u-padding-Vm">
+        <ul class="u-pull-start u-margin-Txxs">
+          <li class="sticky-nav__item">
+            <a href="#overview" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+              Overview
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#team" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+              Features
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#jobs" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+              Pricing
+            </a>
+          </li>
+        </ul>
+        <a href="http://www.gocardless.com/blog" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+          Contact sales
+        </a>
+      </div>
+      <hr class="u-margin-An">
+    </div>
+  </div>
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="u-size1of2 u-center">
+        <div class="u-text-heading u-color-heading u-text-l u-text-light">
+          Welcome to GoCardless Pro
+        </div>
+        <p class="u-text-s u-color-p u-margin-Txs">
+          GoCardless gives you access to the cheaper fees and lower failure rate of Direct Debit, without the expense and hassle of traditional providers
+        </p>
+      </div>
+      <div class="grid u-margin-Tl u-padding-Tm" id="overview">
+        <div class="grid__cell u-size1of2 u-text-center u-margin-Bxxl">
+          <i class="save-money-icon"></i>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Completely whitelabelled</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            Our Integrated solution puts your brand at the forefront. Enjoy complete control over payment pages and email notifications to your customers.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-text-center u-margin-Bxxl">
+          <i class="save-time-icon"></i>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">A simple, modern API</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            All documentation for our Integrated product is freely available in our developer centre. We’ve worked hard to make integrating your systems painless.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl">
+          <i class="save-money-icon"></i>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Works everywhere</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            We’ve made it incredibly simple to develop with GoCardless Integrated and the next generation of your website and mobile apps.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl">
+          <i class="save-time-icon"></i>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Military grade security</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            We’ve sweated over security so you don’t have to. We store all bank details with RSA encryption and communicate only over secure channels.  
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Txl">
+      <div class="u-size1of2 u-center">
+        <div class="u-text-heading u-color-heading u-text-light u-text-l">
+          You’re in good company
+        </div>
+        <p class="u-text-s u-color-p u-margin-Txs">
+          Every day, some of the biggest and most respected businesses in the UK trust GoCardless to power their payments
+        </p>
+      </div>
+      <div class="u-text-center u-margin-Vl u-padding-Vs u-size2of3 u-center">
+        <img src="/images/logos/enterprise-logos@2x.jpg">
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+
+  {% include "_site_footer.html" %}
+
+</div>
+
+{% endblock %}
