@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.freeagent-logo {
+  @include icon("/images/integrations/freeagent-logo", 118px, 24px);
+}
