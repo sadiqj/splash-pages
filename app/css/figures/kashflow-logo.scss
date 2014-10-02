@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.kashflow-logo {
+  @include icon("/images/integrations/kashflow-logo", 147px, 36px);
+}
