@@ -6,7 +6,7 @@ require('./ng-gc-tabby-store-service');
 angular.module('ngGcTabbyTriggerDirective', [
   'ngGcTabbyStoreService'
 ]).directive('ngGcTabbyTrigger', [
-  'ngGcTabbyStore', '$window', '$timeout',
+  'ngGcTabbyStore',
   function ngGcTabbyTriggerDirective(ngGcTabbyStore) {
 
     return {
@@ -15,7 +15,7 @@ angular.module('ngGcTabbyTriggerDirective', [
       transclude: 'element',
       link: function link(scope, element, attrs, ctrl, transclude) {
         var newScope = scope.$new();
-        var options = scope.$eval(attrs.ngGcTabbyTrigger);
+        var options = scope.$eval(attrs.ngGcTabbyTrigger) || {};
         options = _.extend({
           $href: attrs.href
         }, options);
