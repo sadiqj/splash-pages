@@ -28,7 +28,7 @@ angular.module('ngGcLocationHash', [
       if (get() === hash) {
         return;
       }
-      hash = '#/' + sanitizeHash(hash);
+      hash = '#' + sanitizeHash(hash);
       setHistoryState(hash);
     }
 
