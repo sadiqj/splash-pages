@@ -7,6 +7,9 @@ require('./components/tabby/ng-gc-tabby-active-directive');
 require('./components/tabby/ng-gc-tabby-content-directive');
 require('./components/tabby/ng-gc-tabby-store-service');
 require('./components/tabby/ng-gc-tabby-trigger-directive');
+require('./components/dialog/dialog-controller');
+require('./components/popover/popover-directive');
+require('./components/toggle/ng-gc-toggle-directive');
 
 require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-href-active-directive');
@@ -21,10 +24,6 @@ require('./directives/ng-gc-video-thumb-directive');
 
 require('./controllers/ng-gc-prospect-form-controller');
 require('./controllers/ng-gc-active-video-controller');
-
-require('../components/ng-gc-components/ng-gc-dialog-directive/dialog-controller');
-require('../components/ng-gc-components/ng-gc-popover-directive/popover-directive');
-require('../components/ng-gc-components/ng-gc-toggle-directive/ng-gc-toggle-directive');
 
 require('./services/location-hash');
 
@@ -57,6 +56,9 @@ angular.module('home', [
   'ngGcTabbyContentDirective',
   'ngGcTabbyTriggerDirective',
   'ngGcLocationHash'
+]).config([
+  function configLocationProfider() {
+  }
 ]).run([
   '$rootScope', 'locationHash',
   function($rootScope, locationHash){
