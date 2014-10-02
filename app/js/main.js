@@ -57,6 +57,11 @@ angular.module('home', [
   'ngGcTabbyContentDirective',
   'ngGcTabbyTriggerDirective',
   'ngGcLocationHash'
+]).config([
+  '$locationProvider',
+  function configLocationProfider($locationProvider) {
+    $locationProvider.hashPrefix('!');
+  }
 ]).run([
   '$rootScope', 'locationHash',
   function($rootScope, locationHash){
