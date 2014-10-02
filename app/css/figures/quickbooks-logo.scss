@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.quickbooks-logo {
+  @include icon("/images/integrations/quickbooks-logo", 165px, 36px);
+}
