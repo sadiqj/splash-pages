@@ -5,7 +5,7 @@
 
 {% block body %}
 
-<div class="site-wrapper" scroll-spy>
+<div class="site-wrapper">
   <div class="page-hero page-hero--about page-hero--medium u-relative u-size-full">
     <div class="site-container page-hero__container">
       <div class="site-header site-header--invert site-gutter u-cf align-btn-small u-padding-Tm">
@@ -13,7 +13,7 @@
       </div>
       <div class="page-hero__inner">
         <div class="page-hero__text">
-          <div class="u-text-heading u-color-invert u-text-center hero-heading u-text-light">We're making payments work for businesses</div>
+          <h1 class="u-text-heading u-color-invert u-text-center hero-heading u-text-light">We're making payments work for businesses</h1>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
             </a>
           </li>
         </ul>
-        <a href="http://www.gocardless.com/blog" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+        <a href="https://gocardless.com/blog" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
           Visit our Blog
         </a>
       </div>
@@ -117,7 +117,7 @@
   </div>
 
   <div class="site-container site-gutter u-padding-Vxxl" id="jobs">
-    <h2 class="u-text-heading u-color-heading u-text-l u-text-light u-padding-Txxl">Open positions</h2>
+    <h2 class="u-text-heading u-color-heading u-text-l u-text-light u-padding-Txl">Open positions</h2>
     <div class="grid">
       <div class="grid__cell u-size1of3">
         <ul class="nav nav-tabs u-margin-Ts">
@@ -223,57 +223,57 @@
           </li>
         </ul>
       </div>
-      <div class="grid__cell u-size2of3" class="u-padding-Tl">
-        <article ng-gc-tabby-content id="software-engineer">
+      <div class="grid__cell u-size2of3 u-padding-Tl">
+        <div ng-gc-tabby-content id="software-engineer">
           <div ng-if="$isActive">
             {% include "jobs/_software_engineer.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="web-ops">
+        </div>
+        <div ng-gc-tabby-content id="web-ops">
           <div ng-if="$isActive">
             {% include "jobs/_web_ops.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="front-end-developer">
+        </div>
+        <div ng-gc-tabby-content id="front-end-developer">
           <div ng-if="$isActive">
             {% include "jobs/_front_end_developer.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="business-development">
+        </div>
+        <div ng-gc-tabby-content id="business-development">
           <div ng-if="$isActive">
             {% include "jobs/_business_development.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="content-marketer">
+        </div>
+        <div ng-gc-tabby-content id="content-marketer">
           <div ng-if="$isActive">
             {% include "jobs/_content_marketer.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="growth-analyst">
+        </div>
+        <div ng-gc-tabby-content id="growth-analyst">
           <div ng-if="$isActive">
             {% include "jobs/_growth_analyst.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="junior-sales-executive">
+        </div>
+        <div ng-gc-tabby-content id="junior-sales-executive">
           <div ng-if="$isActive">
             {% include "jobs/_junior_sales_executive.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="senior-sales-executive">
+        </div>
+        <div ng-gc-tabby-content id="senior-sales-executive">
           <div ng-if="$isActive">
             {% include "jobs/_senior_sales_executive.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="account-manager">
+        </div>
+        <div ng-gc-tabby-content id="account-manager">
           <div ng-if="$isActive">
             {% include "jobs/_account_manager.html" %}
           </div>
-        </article>
-        <article ng-gc-tabby-content id="developer-support-analyst">
+        </div>
+        <div ng-gc-tabby-content id="developer-support-analyst">
           <div ng-if="$isActive">
             {% include "jobs/_developer_support_analyst.html" %}
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </div>
