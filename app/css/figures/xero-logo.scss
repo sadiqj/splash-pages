@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.xero-logo {
+  @include icon("/images/integrations/xero-logo", 49px, 48px);
+}

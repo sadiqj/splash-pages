@@ -29,21 +29,17 @@
 <div class="u-background-light-gray u-padding-Vm u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi">
   <div class="u-center site-container">
     <div class="u-size11of12 u-center">
-      <a href="#/standard" class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-size1of6 u-link-clean"
+      <a href="#basic" class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-size1of6 u-link-clean"
       ng-click="$activate($event)"
       ng-class="{ 'is-active': $isActive }"
-      ng-gc-tabby-trigger="{
-        $href: '/standard'
-      }">
-        Standard
+      ng-gc-tabby-trigger>
+        Basic
       </a>
-      <a href="#/enterprise" class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-size1of6 u-link-clean"
+      <a href="#pro" class="pricing-tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-size1of6 u-link-clean"
       ng-click="$activate($event)"
       ng-class="{ 'is-active': $isActive }"
-      ng-gc-tabby-trigger="{
-        $href: '/enterprise'
-      }">
-        Enterprise
+      ng-gc-tabby-trigger>
+        Pro
       </a>
     </div>
   </div>
@@ -51,14 +47,14 @@
 
 <hr class="u-margin-An">
 
-<div id="/standard" ng-gc-tabby-content>
+<div id="basic" ng-gc-tabby-content>
   <div ng-if="$isActive">
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
         <div class="pricing-disc u-text-xl u-text-heading u-color-primary u-text-light u-center">1%</div>
         <p class="u-color-heading u-padding-Vxl">
-          <strong>Just 1% per transaction, capped at £2.</strong><br>
+          <strong>Just 1% per transaction, capped at £2</strong><br>
           No sign up fees, no monthly charges, no hidden costs</p>
         <a href="/merchants/new" class="btn">Start taking payments</a>
       </div>
@@ -141,17 +137,17 @@
   </div>
 </div>
 
-<div id="/enterprise" ng-gc-tabby-content>
+<div id="pro" ng-gc-tabby-content>
   <div ng-if="$isActive">
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
         <div class="u-text-xl u-text-heading u-color-primary u-text-light u-center">
-          From 5p per transaction
+          5p&thinsp;&mdash;&thinsp;40p per transaction
         </div>
         <p class="u-color-heading u-padding-Tm u-padding-Bl">
-          <strong>Just 1% per transaction, capped at £2.</strong><br>
-          No sign up fees, no monthly charges, no hidden costs
+          <strong>Plus a £200 monthly fee</strong><br>
+          Amazing prices, no matter how many payments you take
         </p>
         <a href="/contact-sales" class="btn">Contact sales</a>
       </div>

@@ -34,36 +34,28 @@
     <div class="grid__cell u-size4of12">
       <div class="u-size5of6">
         <ul class="nav nav-tabs">
-          <li><a href="#/overview-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#overview-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
-            ng-gc-tabby-trigger="{
-              $href: '/overview-tab'
-            }">
+            ng-gc-tabby-trigger>
             Overview
           </a></li>
-          <li><a href="#/security-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#security-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
-            ng-gc-tabby-trigger="{
-              $href: '/security-tab'
-            }">
+            ng-gc-tabby-trigger>
             Security
           </a></li>
-          <li><a href="#/refunds-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#refunds-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
-            ng-gc-tabby-trigger="{
-              $href: '/refunds-tab'
-            }">
+            ng-gc-tabby-trigger>
             Refunds and cancellations
           </a></li>
-          <li><a href="#/how-it-works-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
+          <li><a href="#how-it-works-tab" class="nav-tabs__link u-block u-padding-Bs u-text-light u-text-no-smoothing"
             ng-click="$activate($event)"
             ng-class="{ 'is-active': $isActive }"
-            ng-gc-tabby-trigger="{
-              $href: '/how-it-works-tab'
-            }">
+            ng-gc-tabby-trigger>
             The GoCardless transaction model
           </a></li>
         </ul>
@@ -74,7 +66,7 @@
 
     <div class="grid__cell u-size8of12">
 
-      <article id="/overview-tab" ng-gc-tabby-content>
+      <article id="overview-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Overview</h2>
           <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
@@ -104,7 +96,7 @@
         </div>
       </article>
 
-      <article id="/security-tab" ng-gc-tabby-content>
+      <article id="security-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Security</h2>
           <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
@@ -126,7 +118,7 @@
         </div>
       </article>
 
-      <article id="/refunds-tab" ng-gc-tabby-content>
+      <article id="refunds-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">Refunds</h2>
           <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
@@ -150,7 +142,7 @@
         </div>
       </article>
 
-      <article id="/how-it-works-tab" ng-gc-tabby-content>
+      <article id="how-it-works-tab" ng-gc-tabby-content>
         <div ng-if="$isActive">
           <h2 class="u-text-heading-light u-text-m u-color-heading">How it works</h2>
           <h3 class="section-heading u-text-heading-light u-color-heading u-margin-Vm u-text-s">
