@@ -34,8 +34,6 @@ var angular = require('angular');
 
 require('../components/angular-animate/angular-animate');
 require('../components/angular-scroll/angular-scroll');
-var svginjector = require('../components/svg-injector/svg-injector');
-console.log(svginjector);
 
 angular.module('home', [
   'ngAnimate',

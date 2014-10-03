@@ -4,11 +4,10 @@ var SVGInjector = require('../../components/svg-injector/svg-injector');
 
 angular.module('ngGcSvgInjectorDirective', [])
   .directive('ngGcSvgInjector', [
-    '$window',
-    function($window) {
+    function() {
       return {
         restrict: 'A',
-        link: function(scope, elem, attrs) {
+        link: function(scope, elem) {
           SVGInjector(elem, {
             evalScript: 'always'
           });
