@@ -1,13 +1,15 @@
 'use strict';
 
+var SVGInjector = require('../../components/svg-injector/svg-injector');
+
 angular.module('ngGcSvgInjectorDirective', [])
-  .directive('svg-injector', [
+  .directive('ngGcSvgInjector', [
     '$window',
-    function iconDirective($window) {
+    function($window) {
       return {
         restrict: 'A',
         link: function(scope, elem, attrs) {
-          $window.SVGInjector(elem, {
+          SVGInjector(elem, {
             evalScript: 'always'
           });
         }
