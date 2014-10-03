@@ -1,9 +1,0 @@
-{
-  "name": "bower-eddy-x",
-  "version": "0.0.1",
-  "main": "eddy-x.js",
-  "ignore": [
-    "**/.*",
-    "readme.md"
-  ]
-}

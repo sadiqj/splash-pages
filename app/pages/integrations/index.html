@@ -1,0 +1,131 @@
+{% extends "plain.html" %}
+
+{% block title %}Integrations{% endblock %}
+{% block meta_tags %}<meta name="description" content="Collect Direct Debit payments online with fees of just 1%, capped at £2. Scale pricing is available for larger organisations.">{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container site-gutter u-cf align-btn-small u-padding-Vm">
+      {% include "_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero u-padding-Vxl">
+    <div class="site-container u-padding-Vxm">
+      <h1 class="u-text-heading u-color-invert u-text-center u-text-light">
+        We play well with others
+      </h1>
+    </div>
+  </div>
+
+  <div class="site-container site-gutter u-padding-Vxxl u-text-center">
+    <div class="u-padding-Vxl">
+      <h2 class="u-text-heading u-color-heading u-text-light">
+        Use GoCardless with your favourite software
+      </h2>
+      <p class="u-color-heading u-margin-Ts u-size7of12 u-center">
+        We’ve partnered up with some of the leading software providers to connect our payments system with their features and have it all in one place.
+      </p>
+
+      <div class="grid integrations-grid u-margin-Txxl u-padding-Tl">
+        <div class="grid__cell u-text-center u-size1of3 u-margin-Bm">
+          <a class="u-link-clean" href="/integrations/freeagent">
+            <div class="u-border-gray u-padding-Vl">
+              <i class="freeagent-logo u-margin-Vs"></i>
+              <p class="u-size2of3 u-center u-color-p u-margin-Txxs">Lorem ipsum dolar sit amet. Something else about it</p>
+            </div>
+          </a>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3 u-margin-Bm">
+          <a class="u-link-clean" href="/integrations/xero">
+            <div class="u-border-gray u-padding-Vl">
+              <i class="xero-logo"></i>
+              <p class="u-size2of3 u-center u-color-p u-margin-Txxs">Lorem ipsum dolar sit amet. Something else about it</p>
+            </div>
+          </a>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3 u-margin-Bm">
+          <a class="u-link-clean" href="/integrations/sage">
+            <div class="u-border-gray u-padding-Vl">
+              <i class="sage-logo integrations-grid__sage-logo u-margin-Vxxs"></i>
+              <p class="u-size2of3 u-center u-color-p u-margin-Txxs">Lorem ipsum dolar sit amet. Something else about it</p>
+            </div>
+          </a>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3">
+          <a class="u-link-clean" href="/integrations/kashflow">
+            <div class="u-border-gray u-padding-Vl">
+              <i class="kashflow-logo u-margin-Vxxs"></i>
+              <p class="u-size2of3 u-center u-color-p u-margin-Txxs">Lorem ipsum dolar sit amet. Something else about it</p>
+            </div>
+          </a>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3">
+          <a class="u-link-clean" href="/integrations/quickbooks">
+            <div class="u-border-gray u-padding-Vl">
+              <i class="quickbooks-logo u-margin-Vxxs"></i>
+              <p class="u-size2of3 u-center u-color-p u-margin-Txxs">Lorem ipsum dolar sit amet. Something else about it</p>
+            </div>
+          </a>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3">
+          <a class="u-link-clean" href="/integrations/clearbooks">
+            <div class="u-border-gray u-padding-Vl">
+              <i class="clearbooks-logo u-margin-Vxxs"></i>
+              <p class="u-size2of3 u-center u-color-p u-margin-Txxs">Lorem ipsum dolar sit amet. Something else about it</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container site-gutter u-padding-Vxxl">
+    <div class="grid u-padding-Vxl">
+      <div class="grid__cell u-text-center u-size1of2">
+        <i class="partner-icon"></i>
+        <h2 class="u-text-heading u-text-m u-color-heading u-text-light u-text-no-smoothing u-margin-Txs">
+          Become a partner
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Vxs">
+          Integrate one-off and recurring payments into your product with GoCardless
+        </p>
+        <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+          Enquire about becoming a partner
+        </a>
+    </div>
+    <div class="grid__cell u-text-center u-size1of2">
+        <i class="integrations-icon"></i>
+        <h2 class="u-text-heading u-text-m u-color-heading u-text-light u-text-no-smoothing u-margin-Txs">
+          Integrate with your site
+        </h2>
+        <p class="u-size2of3 u-center u-color-p u-margin-Vxs">
+          Use our API to integrate GoCardless directly into your website
+        </p>
+        <a href="https://developer.gocardless.com" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+          View our API documentation
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <a href="/merchants/new" class="btn">Start taking payments</a>
+      <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
+{% endblock %}

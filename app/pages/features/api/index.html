@@ -21,35 +21,29 @@
     <div class="tabbed-well integrations-api-promo">
       <ul class="u-cf nav">
         <li class="u-size1of3 tabbed-well__nav">
-          <a href="#subscriptions-tab" class="tabbed-well__nav__target"
+          <a href="#create-subscription" class="tabbed-well__nav__target"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger="{
-            $href: '/create-subscription'
-          }">Create a subscription</a>
+          ng-gc-tabby-trigger>Create a subscription</a>
         </li>
         <li class="u-size1of3 tabbed-well__nav">
-          <a href="#setup-direct-debit-tab" class="tabbed-well__nav__target"
+          <a href="#setup-new-direct-debit" class="tabbed-well__nav__target"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger="{
-            $href: '/setup-new-direct-debit'
-          }">Setup a new Direct Debit</a>
+          ng-gc-tabby-trigger>Setup a new Direct Debit</a>
         </li>
         <li class="u-size1of3 tabbed-well__nav">
-          <a href="#list-payouts-tab" class="tabbed-well__nav__target"
+          <a href="#take-payment" class="tabbed-well__nav__target"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger="{
-            $href: '/take-payment'
-          }">Take payment</a>
+          ng-gc-tabby-trigger>Take payment</a>
         </li>
       </ul>
 
       <div class="tabbed-well__content">
 
         <article
-        id="/create-subscription"
+        id="create-subscription"
         ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
 <pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
@@ -64,7 +58,7 @@
         </article>
 
         <article
-        id="/setup-new-direct-debit"
+        id="setup-new-direct-debit"
         ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
 <pre class="highlight ruby"><span class="c1"># A pre-authorization for up to £100.00 every month</span>
@@ -79,7 +73,7 @@
         </article>
 
         <article
-        id="/take-payment"
+        id="take-payment"
         ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
 <pre class="highlight ruby"><span class="c1"># A Direct Debit payment of £15.00</span>
