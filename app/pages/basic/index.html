@@ -13,10 +13,7 @@
         {% include "_site_header_invert.html" %}
       </div>
       <h1 class="u-text-heading u-margin-Txxl u-padding-Txxl u-color-invert u-text-center u-text-xl u-text-light">Start taking payments today</h1>
-      <div class="u-text-heading u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing u-text-center">
-        GoCardless Basic makes it easy to take recurring payments online.
-      </div>
-      <img src="/images/hero/dashboard@2x.png" class="u-margin-Txxl basic-page__dashboard-image u-center" alt="Dashboard">
+      <img src="/images/hero/hero-dashboard.png" class="u-margin-Txxl basic-page__dashboard-image u-center" alt="Dashboard">
     </div>
   </div>
 
@@ -60,7 +57,7 @@
           Introducing super simple online payments
         </h2>
         <p class="u-text-s u-color-p u-margin-Txs u-size3of4 u-center">
-          GoCardless gives you access to the cheaper fees and lower failure rate of Direct Debit, without the expense and hassle of traditional providers
+          GoCardless Basic is the easiest way to take one-off and recurring payments online. Our simple dashboard lets you collect payments directly from customers' bank accounts, saving you time, money and improving cashflow.
         </p>
       </div>
     </div>
@@ -73,21 +70,27 @@
       <div class="grid">
         <div class="grid__cell u-size1of3">
           <i class="save-money-icon"></i>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">Recurring payments</div>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">
+            Take recurring payments
+          </div>
           <p class="u-color-p u-margin-Txs">
             Collect membership or subscription payments easily. Once the payments are setup, everything is automated.
           </p>
         </div>
         <div class="grid__cell u-size1of3">
           <i class="save-time-icon"></i>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">Automate everything</div>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">
+            Automate everything
+          </div>
           <p class="u-color-p u-margin-Txs">
             Once authorised, all payments will be taken from your customer’s bank account without any intervention needed.
           </p>
         </div>
         <div class="grid__cell u-size1of3">
           <i class="save-time-icon"></i>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">Start in minutes</div>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">
+            Get started in minutes
+          </div>
           <p class="u-color-p u-margin-Txs">
             All you need to get started is a UK bank account. Sign up now and you’ll be taking payments in minutes.
           </p>
@@ -96,21 +99,27 @@
       <div class="grid u-margin-Txxl u-padding-Tl">
         <div class="grid__cell u-size1of3">
           <i class="save-money-icon"></i>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">Beautiful payment pages</div>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">
+            Beautiful payment pages
+          </div>
           <p class="u-color-p u-margin-Txs">
             We provide hosted payment pages that are optimised for ease of use. No coding needed.
           </p>
         </div>
         <div class="grid__cell u-size1of3">
           <i class="save-time-icon"></i>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">Variable payments</div>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">
+            Take one-off payments
+          </div>
           <p class="u-color-p u-margin-Txs">
             Open authorisations allow you to bill your customers however you want. Take one off payments.
           </p>
         </div>
         <div class="grid__cell u-size1of3">
           <i class="save-time-icon"></i>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">Realtime payment tracking</div>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Txs">
+            Realtime payment tracking
+          </div>
           <p class="u-color-p u-margin-Txs">
             Get live updates on the status of your pending payments. We’ll notify you if payments fail or are cancelled.
           </p>
@@ -227,7 +236,7 @@
           ng-gc-tabby-trigger="{
             $href: 'add-customers'
           }">
-            Adding customers
+            Add customers
           </a>
           <a href="#take-payments"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
@@ -236,7 +245,7 @@
           ng-gc-tabby-trigger="{
             $href: 'take-payments'
           }">
-            Taking payments
+            Take payments
           </a>
         </div>
         <div id="dashboard-home" ng-gc-tabby-content prevent-location-update>
@@ -299,9 +308,30 @@
         </div>
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
+    <div class="u-text-center u-padding-Vxxl">
+      <div class="site-container u-padding-Vxl">
+        <div class="u-text-heading u-color-heading u-text-l u-text-light u-size1of2 u-center">
+          Watch a 5 minute demo
+        </div>
+        <iframe
+          src="https://player.vimeo.com/video/99917039"
+          class="u-text-center videos-container__iframe u-margin-Vl" autoplay="true"
+          data-ng-gc-ga-event-tracker="{
+            category: 'video',
+            label: 'plays-demo'
+          }">
+        </iframe>
+        <a href="/how-to" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Tm">
+          Learn more about how GoCardless Basic works
+        </a>
+      </div>
+    </div>
   </div>
 
-  <hr class="u-margin-An">
+  <hr class="u-margin-An">      
 
   <div class="u-text-center u-padding-Vxxl" id="pricing">
     <div class="site-container u-padding-Vxl">
