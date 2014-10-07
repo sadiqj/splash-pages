@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>tick-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="tick-icon" sketch:type="MSLayerGroup" fill="#1B1A19">
+            <path d="M38,73.4666667 C18.4439333,73.4666667 2.53333333,57.6333333 2.53333333,38 C2.53333333,18.4933333 18.4439333,2.53333333 38,2.53333333 C57.5573333,2.53333333 73.4666667,18.4933333 73.4666667,38 C73.4666667,57.6333333 57.5573333,73.4666667 38,73.4666667 L38,73.4666667 Z M38,0 C17.0468,0 0,17.1 0,38 C0,59.0266667 17.0468,76 38,76 C58.9532,76 76,59.0266667 76,38 C76,17.1 58.9532,0 38,0 L38,0 Z" id="Fill-1116" sketch:type="MSShapeGroup"></path>
+            <path d="M38,37.24 L38,20.2679333 C38,19.5066667 37.4338,19 36.7333333,19 C36.0341333,19 35.4666667,19.5066667 35.4666667,20.2679333 L35.4666667,37.7466667 C35.4666667,38.1266667 35.6136,38.5066667 35.8694667,38.76 L54.7048,56.24 C54.9492667,56.4933333 55.2583333,56.6212667 55.5686667,56.6212667 C55.9081333,56.6212667 56.2450667,56.4933333 56.4946,56.24 C56.9721333,55.7346 56.9442667,54.9733333 56.4325333,54.4679333 L38,37.24" id="Fill-1117" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

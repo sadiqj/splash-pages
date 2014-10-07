@@ -1,0 +1,17 @@
+.svg-icon {
+  width: 76px;
+  height: 76px;
+  position: relative;
+}
+
+.svg-icon__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 76px;
+  max-width: 76px;
+}
+
+.svg-icon__image--shadow {
+  transform: translate(2px, 2px);
+}
