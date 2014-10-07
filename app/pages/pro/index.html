@@ -1,0 +1,217 @@
+{% extends "plain.html" %}
+
+{% block title %}The UK’s #1 for online Direct Debit{% endblock %}
+{% block meta_tags %}<meta name="description" content="GoCardless is the UK's #1 for Direct Debit, serving more companies than any other provider. Perfect for recurring billing and B2B invoicing.">{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+  <div class="page-hero page-hero--pro page-hero--medium u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-header--invert u-cf align-btn-small u-padding-Tm">
+        {% include "_site_header_invert.html" %}
+      </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light">Totally control Direct Debit</h1>
+          <p class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">We’ve created a purpose built, cutting edge platform for<br> businesses to take payments by Direct Debit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-nav">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xxs u-text-light u-text-no-smoothing">
+      <div class="site-container u-padding-Vm">
+        <ul class="u-pull-start u-margin-Txxs">
+          <li class="sticky-nav__item">
+            <a href="#overview" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+              Overview
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#features" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+              Features
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#pricing" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+              Pricing
+            </a>
+          </li>
+        </ul>
+        <a href="/contact-sales" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+          Contact sales
+        </a>
+      </div>
+      <hr class="u-margin-An">
+    </div>
+  </div>
+
+  <div id="overview">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+            Welcome to GoCardless Pro
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Txs">
+            GoCardless gives you access to the cheaper fees and lower failure rate of Direct Debit, without the expense and hassle of traditional providers
+          </p>
+        </div>
+        <div class="grid u-margin-Tl u-padding-Tm">
+          <div class="grid__cell u-size1of2 u-text-center">
+            <i class="save-money-icon"></i>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Completely white-labelled</div>
+            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+              GoCardless Pro puts your brand at the forefront. Enjoy complete control over payment pages and email notifications to your customers.
+            </p>
+          </div>
+          <div class="grid__cell u-size1of2 u-text-center">
+            <i class="save-time-icon"></i>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">A simple, modern API</div>
+            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+              All documentation for our Pro product is freely available in our developer centre. We’ve worked hard to make integrating your systems painless.
+            </p>
+          </div>
+          <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl u-padding-Txxl">
+            <i class="save-money-icon"></i>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Works everywhere</div>
+            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+              We’ve made it incredibly simple to develop with GoCardless Pro and the next generation of your website and mobile apps.
+            </p>
+          </div>
+          <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl u-padding-Txxl">
+            <i class="save-time-icon"></i>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Txs">Military grade security</div>
+            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+              We’ve sweated over security so you don’t have to. We store all bank details with RSA encryption and communicate only over secure channels.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <i class="europe-icon u-margin-Bs"></i>
+          <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+            Take payments across Europe
+          </h2>
+          <div class="u-center">
+            <p class="u-text-s u-color-p u-margin-Ts">
+              GoCardless Pro is the only product that enables you collect Direct Debit payments from any European country.
+
+              With our API, your business can take payments from over 300 million people.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Txl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-light u-text-l">
+            You’re in good company
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Txs">
+            Every day, some of the biggest and most respected businesses in the UK trust GoCardless to power their payments
+          </p>
+        </div>
+        <div class="u-text-center u-margin-Vl u-padding-Vs u-size2of3 u-center">
+          <img src="/images/logos/enterprise-logos@2x.jpg">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl" id="features">
+    <div class="u-padding-Vxl">
+      <div class="u-size1of2 u-center">
+        <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
+          Your Dashboard
+        </h2>
+        <div class="u-text-heading u-color-heading u-text-l u-text-light">
+          A simple frontend to manage your payments and customers
+        </div>
+        <hr class="u-margin-Vxxl">
+      </div>
+      <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
+        <a href="#customer-info"
+        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'customer-info'
+        }">
+          Customer info
+        </a>
+        <a href="#payment-status"
+        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'payment-status'
+        }">
+          Payment status
+        </a>
+        <a href="#admin"
+        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'admin'
+        }">
+          Admin
+        </a>
+      </div>
+      <div id="customer-info" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
+        </div>
+      </div>
+      <div id="payment-status" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <img src="/images/pro/pro-payment-status.png" class="pro-page__dashboard-image">
+        </div>
+      </div>
+      <div id="admin" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="u-text-center u-padding-Vxxl" id="pricing">
+    <div class="site-container u-padding-Vxl">
+      <div class="u-size2of3 u-center">
+        <h2 class="u-text-heading u-color-heading u-text-light u-text-xl">
+          5p&thinsp;&mdash;&thinsp;40p per transaction
+        </h2>
+        <p class="u-text-s u-color-p u-margin-Vxs">
+          Competitive rates for everyone from individuals through to large corporations.<br>
+          Get in touch for a free quote from a member of our sales team.
+        </p>
+        <a href="/contact-sales" class="btn btn--hollow u-margin-Tm">Contact sales</a>
+      </div>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
+{% endblock %}

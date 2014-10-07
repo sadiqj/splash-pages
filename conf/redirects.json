@@ -39,5 +39,6 @@
   "/how-it-works/api/index.html": "https://gocardless.com/features/api",
   "/paylinks/index.html":"https://gocardless.com/features/api",
   "/privacy/index.html":"https://gocardless.com/legal/privacy",
-  "/legal/old_restrictions":"https://gocardless.com/legal/old-restrictions"
+  "/legal/old_restrictions":"https://gocardless.com/legal/old-restrictions",
+  "/jobs/index.html":"https://gocardless.com/about"
 }
