@@ -1,31 +1,12 @@
 @import "mixins/icon-mixin";
 
-.icon-gc-logo-header {
-  @include icon("/images/logos/gc-logo-blue", 149px, 17px);
-}
-
 .icon-gc-logo-invert {
   @include icon("/images/logos/gc-logo-white", 134px, 14px);
 }
 
-.icon--check {
-  width: 46px;
-  float: right;
-  position: relative;
-  top: 12px;
-}
 
-.icon-benefits-clock {
-  @include icon("/images/benefits/clock", 37px, 37px);
-}
 
-.icon-benefits-adjustments {
-  @include icon("/images/benefits/adjustments", 37px, 37px);
-}
 
-.icon-benefits-lock {
-  @include icon("/images/benefits/lock", 36px, 52px);
-}
 
 .icon-benefits-quote {
   @include icon("/images/benefits/quote", 60px, 56px);
