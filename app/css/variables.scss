@@ -16,6 +16,7 @@ $font-size-xxxsmall: 11px; //old
 
 $border-radius-base: 3px;
 $gutter-space-base: 20px;
+
 $gutter-space-container: 35px;
 
 $border-radius-double: $border-radius-base * 2;
@@ -38,7 +39,7 @@ $breakpoint-small: 650px;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-$site-max-width: 940px + $gutter-space-container * 2;
+$site-max-width: 940px;
 $site-min-width: 820px + $gutter-space-container * 2;
 $page-max-width: 780px + $gutter-space-container * 2;
 $page-min-width: 780px + $gutter-space-container * 2;
