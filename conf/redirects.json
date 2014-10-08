@@ -40,5 +40,6 @@
   "/paylinks/index.html":"https://gocardless.com/features/api",
   "/privacy/index.html":"https://gocardless.com/legal/privacy",
   "/legal/old_restrictions":"https://gocardless.com/legal/old-restrictions",
-  "/jobs/index.html":"https://gocardless.com/about"
+  "/jobs/index.html":"https://gocardless.com/about",
+  "/sage/index.html":"https://gocardless.com/partners/sage"
 }
