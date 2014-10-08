@@ -1,5 +1,9 @@
 @import 'variables';
 
+.paying-container__logo {
+  top: 5px;
+}
+
 .paying-container__hero {
   height: 400px;
   background: url('/images/hero/hero-paying-bg@2x.jpg');
