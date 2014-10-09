@@ -51,12 +51,16 @@
   @include icon('/images/icons/paying-guarantee', 25px, 25px);
 }
 
+.paying-container__dashboard-cell {
+  width: 0; // hacky
+}
+
 .paying-container__dashboard-image {
   position: absolute;
   top: -41px;
   left: -36px;
   max-width: 2000px; // arbitrarily long value to override image rules - this element set with height!
-  height: 645px;
+  height: 596px;
 }
 
 .paying-container__tweet {
