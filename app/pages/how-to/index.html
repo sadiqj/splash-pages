@@ -4,7 +4,8 @@
 {% block meta_tags %}<meta name="description" content="The GoCardless Dashboard makes it easy &amp; simple to collect Direct Debit payments. Watch a video of the Dashboard in action and discover how simple it really is.">{% endblock %}
 
 {% block body %}
-<div ng-init="videos.activeVideo = {}">
+
+<div class="site-wrapper">
   <div class="page-hero">
     <div class="site-container features-container__header u-cf align-btn-small u-padding-Tm">
       {% include "_site_header_invert.html" %}
@@ -26,7 +27,6 @@
   </div>
 
   <div class="videos-container__select-a-video u-text-center u-color-base u-padding-Vl">
-
     <h2 class="u-text-heading u-color-heading u-text-l u-text-light u-padding-Vl u-margin-Bl">Select a video to learn more about our Dashboard</h2>
 
     <div class="grid site-container">
@@ -66,13 +66,14 @@
 
     <hr class="u-margin-An u-margin-Txxl">
 
-      <div class="site-container u-text-center u-padding-Vxxl">
-        <div class="u-padding-Vxl">
-          <a href="/merchants/new" class="btn">Start taking payments</a>
-          <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
-        </div>
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <a href="/merchants/new" class="btn">Start taking payments</a>
+        <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
       </div>
     </div>
+  </div>
+
   {% include "_site_footer.html" %}
 
 </div>
