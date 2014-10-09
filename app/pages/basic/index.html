@@ -22,22 +22,22 @@
       <div class="site-container u-padding-Vm">
         <ul class="u-pull-start u-margin-Txxs">
           <li class="sticky-nav__item">
-            <a href="#overview" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#overview" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Overview
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#features" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#features" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Features
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#dashboard" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#dashboard" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Dashboard
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#pricing" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#pricing" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Pricing
             </a>
           </li>
@@ -65,90 +65,95 @@
 
   <hr class="u-margin-An">
 
-  <div class="site-container u-padding-Vxxl" id="overview">
-    <div class="u-padding-Vxl">
-      <div class="grid">
-        <div class="grid__cell u-size1of3">
-          <figure class="svg-icon svg-icon--small">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/calendar-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/calendar-icon.svg">
-          </figure>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
-            Take recurring payments
+  <div class="section-scroll-target" id="overview">
+
+    <div class="site-container u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="grid">
+          <div class="grid__cell u-size1of3">
+            <figure class="svg-icon svg-icon--small">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/calendar-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/calendar-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
+              Take recurring payments
+            </div>
+            <p class="u-color-p u-margin-Txs">
+              Collect membership or subscription payments easily. Once the payments are setup, everything is automated.
+            </p>
           </div>
-          <p class="u-color-p u-margin-Txs">
-            Collect membership or subscription payments easily. Once the payments are setup, everything is automated.
-          </p>
+          <div class="grid__cell u-size1of3">
+            <figure class="svg-icon svg-icon--small">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-blue" data-src="/images/icons/checklist-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/checklist-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
+              Automate everything
+            </div>
+            <p class="u-color-p u-margin-Txs">
+              Once authorised, all payments will be taken from your customer’s bank account without any intervention needed.
+            </p>
+          </div>
+          <div class="grid__cell u-size1of3">
+            <figure class="svg-icon svg-icon--small">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-yellow" data-src="/images/icons/clock-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/clock-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
+              Get started in minutes
+            </div>
+            <p class="u-color-p u-margin-Txs">
+              All you need to get started is a UK bank account. Sign up now and you’ll be taking payments in minutes.
+            </p>
+          </div>
         </div>
-        <div class="grid__cell u-size1of3">
-          <figure class="svg-icon svg-icon--small">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-blue" data-src="/images/icons/checklist-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/checklist-icon.svg">
-          </figure>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
-            Automate everything
+        <div class="grid u-margin-Txxl u-padding-Tl">
+          <div class="grid__cell u-size1of3">
+            <figure class="svg-icon svg-icon--small">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-blue" data-src="/images/icons/payment-page-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/payment-page-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
+              Beautiful payment pages
+            </div>
+            <p class="u-color-p u-margin-Txs">
+              We provide hosted payment pages that are optimised for ease of use. No coding needed.
+            </p>
           </div>
-          <p class="u-color-p u-margin-Txs">
-            Once authorised, all payments will be taken from your customer’s bank account without any intervention needed.
-          </p>
-        </div>
-        <div class="grid__cell u-size1of3">
-          <figure class="svg-icon svg-icon--small">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-yellow" data-src="/images/icons/clock-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/clock-icon.svg">
-          </figure>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
-            Get started in minutes
+          <div class="grid__cell u-size1of3">
+            <figure class="svg-icon svg-icon--small">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-yellow" data-src="/images/icons/money-flower-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/money-flower-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
+              Take one-off payments
+            </div>
+            <p class="u-color-p u-margin-Txs">
+              Open authorisations allow you to bill your customers however you want. Take one off payments.
+            </p>
           </div>
-          <p class="u-color-p u-margin-Txs">
-            All you need to get started is a UK bank account. Sign up now and you’ll be taking payments in minutes.
-          </p>
-        </div>
-      </div>
-      <div class="grid u-margin-Txxl u-padding-Tl">
-        <div class="grid__cell u-size1of3">
-          <figure class="svg-icon svg-icon--small">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-blue" data-src="/images/icons/payment-page-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/payment-page-icon.svg">
-          </figure>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
-            Beautiful payment pages
+          <div class="grid__cell u-size1of3">
+            <figure class="svg-icon svg-icon--small">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/realtime-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/realtime-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
+              Real-time payment tracking
+            </div>
+            <p class="u-color-p u-margin-Txs">
+              Get live updates on the status of your pending payments. We’ll notify you if payments fail or are cancelled.
+            </p>
           </div>
-          <p class="u-color-p u-margin-Txs">
-            We provide hosted payment pages that are optimised for ease of use. No coding needed.
-          </p>
-        </div>
-        <div class="grid__cell u-size1of3">
-          <figure class="svg-icon svg-icon--small">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-yellow" data-src="/images/icons/money-flower-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/money-flower-icon.svg">
-          </figure>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
-            Take one-off payments
-          </div>
-          <p class="u-color-p u-margin-Txs">
-            Open authorisations allow you to bill your customers however you want. Take one off payments.
-          </p>
-        </div>
-        <div class="grid__cell u-size1of3">
-          <figure class="svg-icon svg-icon--small">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/realtime-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray" data-src="/images/icons/realtime-icon.svg">
-          </figure>
-          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
-            Real-time payment tracking
-          </div>
-          <p class="u-color-p u-margin-Txs">
-            Get live updates on the status of your pending payments. We’ll notify you if payments fail or are cancelled.
-          </p>
         </div>
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
   </div>
 
-  <hr class="u-margin-An">
+  <div class="section-scroll-target" id="features">
 
-  <div id="features">
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="grid u-padding-Vxl">
         <div class="grid__cell u-size1of2">
@@ -233,11 +238,13 @@
         </div>
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
   </div>
 
-  <hr class="u-margin-An">
+  <div class="section-scroll-target" id="dashboard">
 
-  <div id="dashboard">
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
         <div class="u-size2of3 u-center">
@@ -377,25 +384,30 @@
         </a>
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
   </div>
 
-  <hr class="u-margin-An">
+  <div class="section-scroll-target" id="pricing">
 
-  <div class="u-text-center u-padding-Vxxl" id="pricing">
-    <div class="site-container u-padding-Vxl">
-      <div class="u-size1of2 u-center">
-        <h2 class="u-text-heading u-color-heading u-text-xl u-text-light">
-          Pay 1%
-        </h2>
-        <p class="u-color-p u-margin-Txxs">
-          Just 1% per transaction, capped at £2.
-        </p>
-        <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+    <div class="u-text-center u-padding-Vxxl" >
+      <div class="site-container u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-xl u-text-light">
+            Pay 1%
+          </h2>
+          <p class="u-color-p u-margin-Txxs">
+            Just 1% per transaction, capped at £2.
+          </p>
+          <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <hr class="u-margin-An">
+    <hr class="u-margin-An">
+
+  </div>
 
   <div class="site-container u-text-center u-padding-Vxxl">
     <div class="u-padding-Vxl">
