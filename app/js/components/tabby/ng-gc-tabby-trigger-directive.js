@@ -30,10 +30,7 @@ angular.module('ngGcTabbyTriggerDirective', [
             if ($event.metaKey) {
               return;
             }
-
-            if ($event) {
-              $event.preventDefault();
-            }
+            $event.preventDefault();
           }
 
           return ngGcTabbyStore.activate(_.extend(options, $metadata));
