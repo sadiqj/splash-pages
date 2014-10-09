@@ -18,12 +18,6 @@ angular.module('ngGcTabbyStoreService', [
       return href.replace(/^[#\/]+/, '');
     }
 
-    function sanitizePath(path) {
-      path = sanitizeHref(path);
-      path = '/' + path;
-      return path;
-    }
-
     function getPageTabStore() {
       return tabStore;
     }
