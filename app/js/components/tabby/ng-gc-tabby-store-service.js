@@ -11,20 +11,15 @@ angular.module('ngGcTabbyStoreService', [
 
     var eventBus = $rootScope.$new();
     var allowedEvents = ['activate', 'add'];
-    var tabStore = {};
+    var tabStore = [];
 
-    function sanitizePath(path) {
-      path = (path || '').replace(/^#\/|#|\//, '');
-      path = '/' + path;
-      return path;
+    function sanitizeHref(href) {
+      href = href || '';
+      return href.replace(/^[#\/]+/, '');
     }
 
     function getPageTabStore() {
-      var locationPath = sanitizePath($window.location.pathname);
-      if (!(locationPath in tabStore)) {
-        tabStore[locationPath] = [];
-      }
-      return tabStore[locationPath];
+      return tabStore;
     }
 
     function validate(data) {
@@ -42,15 +37,25 @@ angular.module('ngGcTabbyStoreService', [
     }
 
     function find(data) {
-      return _.find(getPageTabStore(), { '$href': data.$href });
+      return _.find(getPageTabStore(), { '$href': sanitizeHref(data.$href) });
     }
 
-    function activate(data) {
+    function activate(data, options) {
+      options = options || {};
       validate(data);
+      data.$href = sanitizeHref(data.$href);
 
       var tab = find(data);
 
-      if (!tab || tab.$isActive) {
+      if (!tab) {
+        return false;
+      }
+
+      if (!tab.preventLocationUpdate && !options.preventLocationUpdate) {
+        locationHash.set(data.$href);
+      }
+
+      if (tab.$isActive) {
         return false;
       }
 
@@ -62,9 +67,6 @@ angular.module('ngGcTabbyStoreService', [
 
       _.extend(tab, whitelist(data));
       tab.$isActive = true;
-      if (!tab.preventLocationUpdate) {
-        locationHash.set(data.$href);
-      }
       eventBus.$emit('activate', whitelist(tab));
 
       return true;
@@ -72,6 +74,7 @@ angular.module('ngGcTabbyStoreService', [
 
     function add(data) {
       validate(data);
+      data.$href = sanitizeHref(data.$href);
       if (!find(data)) {
         getPageTabStore().push(data);
         if (locationHash.get() === data.$href) {
@@ -109,7 +112,9 @@ angular.module('ngGcTabbyStoreService', [
       if (!getPageTabStore().some(function(tab) {
         return tab.$isActive;
       })) {
-        activate(getPageTabStore()[0]);
+        activate(getPageTabStore()[0], {
+          preventLocationUpdate: true
+        });
       }
     });
 
