@@ -33,7 +33,7 @@ angular.module('ngGcTabbyTriggerDirective', [
             $event.preventDefault();
           }
 
-          return ngGcTabbyStore.activate(_.extend(options, $metadata));
+          ngGcTabbyStore.activate(_.extend(options, $metadata));
         }
 
         ngGcTabbyStore.on('activate', function() {
