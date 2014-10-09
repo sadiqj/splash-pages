@@ -9,6 +9,11 @@
   height: 38px;
 }
 
+.svg-icon--xsmall {
+  width: 25px;
+  height: 25px;
+}
+
 .svg-icon__image {
   position: absolute;
   top: 0;
@@ -23,6 +28,11 @@
 .svg-icon__image--small {
   max-width: 38px;
   max-height: 38px;
+}
+
+.svg-icon__image--xsmall {
+  max-width: 25px;
+  max-height: 25px;
 }
 
 .svg-icon__image--shadow {
