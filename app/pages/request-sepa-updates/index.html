@@ -8,7 +8,7 @@
 
 {% block body %}
 
-  <div class="site-wrapper">
+<div class="site-wrapper">
 
   <div class="u-background-white">
     <div class="site-container u-cf align-btn-small u-padding-Vm">
@@ -17,7 +17,7 @@
   </div>
 
   <div class="page-hero u-padding-Vxxl">
-    <div class="u-margin-Vxm">
+    <div class="site-container u-margin-Vxm">
       <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light">
         SEPA Direct Debit with GoCardless
       </h1>
@@ -56,8 +56,9 @@
 
     </div>
   </div>
-</div>
 
-{% include "_site_footer.html" %}
+  {% include "_site_footer.html" %}
+
+</div>
 
 {% endblock %}

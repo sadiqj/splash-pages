@@ -10,8 +10,10 @@
 
     <div class="site-header u-padding-Tm u-md-padding-Hl u-cf align-btn-small u-padding-Vxs u-sm-size-full u-md-size-full">
       <div class="u-pull-start">
-        <a href="/" class="paying-container__logo header-logo--invert u-relative u-sm-hidden">
-          {% include "svg/_site_logo.html" %}
+        <a href="/" class="paying-container__logo u-relative u-sm-hidden">
+          <figure class="site-logo">
+            <img ng-gc-svg-injector class="site-logo__image u-fill-invert" data-src="/images/logos/site-logo.svg">
+          </figure>
         </a>
       </div>
       <div class="paying-container__call u-pull-end u-color-invert u-text-heading-light u-sm-hidden">
@@ -22,7 +24,9 @@
     <div class="page-hero__inner">
       <div class="page-hero__text">
         <a href="/" class="header-logo header-logo--invert u-hidden u-sm-display-block u-sm-margin-Bl u-sm-margin-Tm u-text-center">
-          {% include "svg/_site_logo.html" %}
+          <figure class="site-logo u-center">
+            <img ng-gc-svg-injector class="site-logo__image u-fill-invert" data-src="/images/logos/site-logo.svg">
+          </figure>
         </a>
         <h1 class="paying-container__hero-heading has-breakpoint-sm u-text-heading u-color-invert u-text-center u-text-xl u-text-light u-md-text-xl u-sm-text-xl u-sm-margin-Bm">
           Taking the hassle<br class="u-hidden u-sm-display-inline"> out of paying
@@ -66,7 +70,7 @@
         <img class="paying-container__dashboard-image has-breakpoint-md u-hidden u-md-display-block u-md-margin-Ll" src="/images/products/paying-through-gocardless-dashboard@2x.png">
       </div>
 
-      <div class="grid__cell u-size1of2 u-relative u-md-hidden u-sm-hidden">
+      <div class="grid__cell paying-container__dashboard-cell u-relative u-md-hidden u-sm-hidden">
         <img class="paying-container__dashboard-image" src="/images/products/paying-through-gocardless-dashboard@2x.png">
       </div>
 
