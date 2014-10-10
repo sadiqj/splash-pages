@@ -22,22 +22,22 @@
       <div class="site-container u-padding-Vm">
         <ul class="u-pull-start u-margin-Txxs">
           <li class="sticky-nav__item">
-            <a href="#overview" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#overview" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Overview
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#features" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#features" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Features
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#dashboard" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#dashboard" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Dashboard
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#pricing" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#pricing" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Pricing
             </a>
           </li>
@@ -65,7 +65,7 @@
 
   <hr class="u-margin-An">
 
-  <div id="overview">
+  <div class="section-scroll-target" id="overview">
     <div class="site-container u-padding-Vxxl">
       <div class="grid u-padding-Vxl">
         <div class="grid__cell u-size1of3">
@@ -138,9 +138,6 @@
           <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-s u-margin-Tm">
             Real-time payment tracking
           </div>
-          <p class="u-color-p u-margin-Txs">
-            Get live updates on the status of your pending payments. We’ll notify you if payments fail or are cancelled.
-          </p>
         </div>
       </div>
     </div>
@@ -165,11 +162,11 @@
         </a>
       </div>
     </div>
+
   </div>
 
-  <hr class="u-margin-An">
+  <div class="section-scroll-target" id="features">
 
-  <div id="features">
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="grid u-padding-Vxl">
         <div class="grid__cell u-size1of2">
@@ -256,11 +253,13 @@
         </div>
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
   </div>
 
-  <hr class="u-margin-An">
+  <div class="section-scroll-target" id="dashboard">
 
-  <div id="dashboard">
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
         <div class="u-size2of3 u-center">
@@ -392,46 +391,52 @@
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m">
               SaaS
             </div>
-            <p class="u-margin-Txs u-color-p">Integrate with our clean, modern API with full documentation</p>        
+            <p class="u-margin-Txs u-color-p">Integrate with our clean, modern API with full documentation</p>
           </div>
         </div>
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
   </div>
 
-  <hr class="u-margin-An">
+  <div class="section-scroll-target" id="pricing">
 
-  <div class="u-text-center u-padding-Vxxl" id="pricing">
-    <div class="site-container u-padding-Vxl">
-      <div class="u-size1of2 u-center">
-        <h2 class="u-text-heading u-color-heading u-text-xl u-text-light">
-          Pay 1%
+    <div class="u-text-center u-padding-Vxxl">
+      <div class="site-container u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-xl u-text-light">
+            Pay 1%
+          </h2>
+          <p class="u-color-p u-margin-Txxs">
+            Just 1% per transaction, capped at £2
+          </p>
+          <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+          <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+          <p class="u-color-heading u-margin-Bxxs">
+            <strong>Taking more than 1000 transactions a month?</strong>
+          </p>
+          <a href="/pricing/#pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Learn about our Pro pricing
+          </a>
+        </div>
+      </div>
+
+      <hr class="u-margin-An">
+
+    </div>
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
+          Sign up in minutes, take payments today
         </h2>
-        <p class="u-color-p u-margin-Txxs">
-          Just 1% per transaction, capped at £2
-        </p>
-        <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
-        <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
-        <p class="u-color-heading u-margin-Bxxs">
-          <strong>Taking more than 1000 transactions a month?</strong>
-        </p>
-        <a href="/pricing/#pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
-          Learn about our Pro pricing
-        </a>
+        <a href="/merchants/new" class="btn">Start taking payments</a>
+        <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
       </div>
     </div>
-  </div>
 
-  <hr class="u-margin-An">
-
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxl">
-      <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
-        Sign up in minutes, take payments today
-      </h2>
-      <a href="/merchants/new" class="btn">Start taking payments</a>
-      <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
-    </div>
   </div>
 
   {% include "_site_footer.html" %}
