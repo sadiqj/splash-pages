@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.pitchero-header-logo {
+  @include icon("/images/partners/pitchero-header-logo", 157px, 35px);
+}
