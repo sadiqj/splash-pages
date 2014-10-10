@@ -124,10 +124,7 @@
       </div>
       <div id="create-subscription" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center"
-        id="create-subscription"
-        ng-gc-tabby-content prevent-location-update>
-          <div ng-if="$isActive">
+          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center">
 <pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
 
 <span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_subscription_url</span><span class="p">(</span>
@@ -136,16 +133,12 @@
   <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
   <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p"></span>
 <span class="p">)</span></pre>
-          </div>
         </article>
         </div>
       </div>
       <div id="setup-new-direct-debit" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center"
-        id="setup-new-direct-debit"
-        ng-gc-tabby-content prevent-location-update>
-          <div ng-if="$isActive">
+          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center">
 <pre class="highlight ruby"><span class="c1"># A pre-authorization for up to £100.00 every month</span>
 
 <span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_pre_authorization_url</span><span class="p">(</span>
@@ -154,16 +147,12 @@
   <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
   <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span>
 <span class="p">)</span></pre>
-          </div>
         </article>
         </div>
       </div>
       <div id="take-payment" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center"
-        id="take-payment"
-        ng-gc-tabby-content prevent-location-update>
-          <div ng-if="$isActive">
+          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center">
 <pre class="highlight ruby"><span class="c1"># A Direct Debit payment of £15.00</span>
 
 <span class="n">pre_auth</span> <span class="o">=</span> <span class="no">GoCardless</span><span class="o">::</span><span class="no">PreAuthorization</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s2">"0540QD22SKND"</span><span class="p">)</span>
@@ -172,7 +161,6 @@
   <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"15.00"</span><span class="p">,</span>
   <span class="ss">:charge_customer_at</span> <span class="o">=&gt;</span> <span class="s2">"2014-08-27"</span>
 <span class="p">)</span></pre>
-          </div>
         </article>
         </div>
       </div>
