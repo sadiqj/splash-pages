@@ -6,43 +6,125 @@
 
 {% block body %}
 
-  <div class="gradient-fill-dark u-padding-Vl">
-    <div class="u-text-center u-padding-Vl">
-      <div class="u-padding-Bl">
-        <div class="u-padding-Bl">
-          <h1 class="u-color-invert u-text-heading u-text-xl">Integrate Direct Debit into your website or app</h1>
-          <h2 class="u-color-invert-secondary u-text-heading u-text-m u-margin-Ts u-margin-Bs">Automate payment collection and reconciliation with our simple, RESTful API</h2>
-        </div>
+<div class="site-wrapper">
+
+  <div class="page-hero">
+
+    <div class="site-container features-container__header u-cf align-btn-small u-padding-Tm">
+      {% include "_site_header_invert.html" %}
+    </div>
+
+    <div class="u-text-center u-padding-Vl u-margin-Tl">
+      <h1 class="u-text-heading u-text-xl u-text-light u-color-invert u-padding-Bs">
+        Integrate Direct Debit into your website or app
+      </h1>
+      <div class="u-text-heading u-margin-Bxxl u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing u-text-center">
+        Automate payment collection and reconciliation with our simple, RESTful API
+      </div>
+      <div class="u-padding-Vl">
+        <iframe
+          src="https://player.vimeo.com/video/101498927"
+          class="videos-container__iframe"
+          data-ng-gc-ga-event-tracker="{
+            category: 'video',
+            label: 'plays-api'
+          }">
+        </iframe>
       </div>
     </div>
   </div>
 
-  <div class="u-padding-Tl u-margin-Bs" ng-init="tabs.activeTab = {}">
-    <div class="tabbed-well integrations-api-promo">
-      <ul class="u-cf nav">
-        <li class="u-size1of3 tabbed-well__nav">
-          <a href="#create-subscription" class="tabbed-well__nav__target"
-          ng-click="$activate($event)"
-          ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger>Create a subscription</a>
-        </li>
-        <li class="u-size1of3 tabbed-well__nav">
-          <a href="#setup-new-direct-debit" class="tabbed-well__nav__target"
-          ng-click="$activate($event)"
-          ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger>Setup a new Direct Debit</a>
-        </li>
-        <li class="u-size1of3 tabbed-well__nav">
-          <a href="#take-payment" class="tabbed-well__nav__target"
-          ng-click="$activate($event)"
-          ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger>Take payment</a>
-        </li>
-      </ul>
+  <hr class="u-margin-An">
 
-      <div class="tabbed-well__content">
+  <div class="site-container u-text-center u-padding-Vxxl" id="learn-more">
+    <div class="u-padding-Vxl">
+      <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+        Integrating with GoCardless is easy and secure
+      </h2>
+      <p class="u-text-s u-color-p u-margin-Txs">
+        We maintain official libraries for Ruby, PHP, Java & more
+      </p>
+      <div class="grid u-margin-Vl u-padding-Vl">
+        <div class="grid__cell u-size1of3 u-text-center">
+          <figure class="svg-icon u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/checklist-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/checklist-icon.svg">
+          </figure>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Automate your payments</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            Customers set up Direct Debit through our secure online payment pages.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <figure class="svg-icon u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/security-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/security-icon.svg">
+          </figure>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Military grade security</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            RSA encryption and secure communication channels to keep your customers' data safe.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <figure class="svg-icon u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/add-partner-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/add-partner-icon.svg">
+          </figure>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Simple to integrate</div>
+          <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            Add GoCardless to your site in minutes with our easy to use API libraries.
+          </p>
+        </div>
+      </div>
 
-        <article
+      <a href="https://developer.gocardless.com" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Tm">
+        Read our API documentation
+      </a>
+
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="u-size2of3 u-center">
+        <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
+          How it works
+        </h2>
+      </div>
+      <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl u-padding-Txxl">
+        <a href="#create-subscription"
+        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'create-subscription'
+        }">
+          Create a subscription
+        </a>
+        <a href="#setup-new-direct-debit"
+        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'setup-new-direct-debit'
+        }">
+          Setup a new Direct Debit
+        </a>
+        <a href="#take-payment"
+        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'take-payment'
+        }">
+          Take payment
+        </a>
+      </div>
+      <div id="create-subscription" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center"
         id="create-subscription"
         ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
@@ -56,8 +138,11 @@
 <span class="p">)</span></pre>
           </div>
         </article>
-
-        <article
+        </div>
+      </div>
+      <div id="setup-new-direct-debit" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center"
         id="setup-new-direct-debit"
         ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
@@ -71,8 +156,11 @@
 <span class="p">)</span></pre>
           </div>
         </article>
-
-        <article
+        </div>
+      </div>
+      <div id="take-payment" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center"
         id="take-payment"
         ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
@@ -86,132 +174,77 @@
 <span class="p">)</span></pre>
           </div>
         </article>
-      </div>
-    </div>
-  </div>
-
-  <div class="site-gutter u-padding-Vm">
-    <div class="grid u-padding-Bl">
-      <div class="grid__cell u-size1of3">
-        <h4 class="u-text-s u-margin-Bxs u-margin-Ts">
-          <i class="ss-refresh section-subheading__icon"></i>
-          Automate your payments
-        </h4>
-        <p>Trigger payments at any time with just one line of code.</p>
-      </div>
-      <div class="grid__cell u-size1of3">
-        <h4 class="u-text-s u-margin-Bxs u-margin-Ts">
-          <i class="ss-lock section-subheading__icon"></i>
-          Military grade security
-        </h4>
-        <p>RSA encryption and secure communication channels to keep your customers' data safe.</p>
-      </div>
-      <div class="grid__cell u-size1of3">
-        <h4 class="u-text-s u-margin-Bxs u-margin-Ts">
-          <i class="ss-lock section-subheading__icon"></i>
-          Simple to integrate
-        </h4>
-        <p>Add GoCardless to your site in minutes with our easy to use API libraries.</p>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="u-cf">
-      <div class="u-pull-end">
-        <a href="https://developer.gocardless.com/" class="btn btn--hollow">Read our API documentation</a>
-      </div>
-      <div class="u-overflow-hidden">
-        <h1 class="u-color-meta u-text-m u-text-heading align-btn">We maintain official libraries for Ruby, PHP, Java &amp; more</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="gradient-fill-light" id="video">
-    <div class="site-gutter u-padding-Vm">
-      <div class="u-padding-Vl u-text-center ">
-        <i class="icon-benefits-adjustments u-margin-Bs"></i>
-        <h2 class="u-text-heading u-margin-Bxs u-color-secondary">How it works</h2>
-        <p class="u-text-m">Integrating with GoCardless is easy and secure.</p>
-      </div>
-
-      <div class="page-container">
-        <div class="grid">
-          <div class="grid__cell u-size12of12 u-margin-Bn">
-            <iframe
-              src="https://player.vimeo.com/video/101498927"
-              class="u-center videos-container__iframe"
-              data-ng-gc-ga-event-tracker="{
-                category: 'video',
-                label: 'plays-api'
-              }">
-            </iframe>
-          </div>
-
-          <div class="u-text-center u-padding-Vl">
-            <p class="u-text-m">Add us to your website in three steps:</p>
-          </div>
-        </div>
-
-        <div class="grid u-padding-Vs">
-          <div class="grid__cell u-size1of12 u-text-end">
-            <div class="bullet bullet--red u-margin-Txs">1</div>
-          </div>
-          <div class="grid__cell u-size5of12">
-            <h4 class="u-text-s u-margin-Bxs u-margin-Ts">
-              Add your customers
-            </h4>
-            <p>Customers set up Direct Debit through our secure online payment pages.</p>
-            <a href="/example-checkout" class="u-text-underline">View an example</a>
-          </div>
-          <div class="grid__cell u-size6of12">
-            <img alt="Api step 1" src="/images/features/api-step-1@2x.png">
-          </div>
-        </div>
-        <hr>
-        <div class="grid u-padding-Vs">
-          <div class="grid__cell u-size1of12 u-text-end">
-            <div class="bullet bullet--red u-margin-Txs">2</div>
-          </div>
-          <div class="grid__cell u-size5of12">
-            <h4 class="u-text-s u-margin-Bxs u-margin-Ts">
-              Trigger a payment
-            </h4>
-            <p>Trigger one-off, variable or recurring payments in just a few lines of code.</p>
-          </div>
-          <div class="grid__cell u-size6of12">
-            <img alt="Api step 2" src="/images/features/api-step-2@2x.png">
-          </div>
-        </div>
-        <hr>
-        <div class="grid u-padding-Vs">
-          <div class="grid__cell u-size1of12 u-text-end">
-            <div class="bullet bullet--red u-margin-Txs">3</div>
-          </div>
-          <div class="grid__cell u-size5of12">
-            <h4 class="u-text-s u-margin-Bxs u-margin-Ts">
-              Realtime reporting
-            </h4>
-            <p>GoCardless constantly notifies you by email and webhooks of your payments' statuses.</p>
-            <a href="/features/dashboard" class="u-text-underline">More about our dashboards</a>
-          </div>
-          <div class="grid__cell u-size6of12">
-            <img alt="Api step 3" src="/images/features/api-step-3@2x.png">
-          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr>
+  <hr class="u-margin-An">
 
-  <div class="site-gutter u-cf u-padding-Ts">
-    <div class="u-pull-end">
-      <a href="https://developer.gocardless.com/" class="btn btn--hollow">Read our API documentation</a>
-    </div>
-    <div class="u-overflow-hidden">
-      <h1 class="u-color-meta u-text-m u-text-heading align-btn">To learn more & view our technical documentation, see our docs…</h1>
+  <div class="site-container u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="grid">
+
+        <div class="grid__cell u-size1of2">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Add your customers</h2>
+
+          <p class="u-color-p u-margin-Bm">Customers set up Direct Debit through our secure online payment pages. <a href="/example-checkout" class="u-text-underline u-link-medium-gray">View an example</a></p>
+
+        </div>
+        <div class="grid__cell u-size1of2 u-text-end">
+          <img alt="Api step 1" class="u-size11of12" src="/images/features/api-step-1@2x.png">
+        </div>
+      </div>
     </div>
   </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="grid">
+        <div class="grid__cell u-size1of2">
+          <img alt="Api step 2" class="u-size11of12" src="/images/features/api-step-2@2x.png">
+        </div>
+        <div class="grid__cell u-size1of2">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Trigger a payment</h2>
+
+          <p class="u-color-p">Trigger one-off, variable or recurring payments in just a few lines of code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="grid">
+        <div class="grid__cell u-size1of2">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Realtime reporting</h2>
+
+         <p class="u-color-p">
+          GoCardless constantly notifies you by email and webhooks of your payments' statuses. <a href="/basic" class="u-text-underline u-link-medium-gray">More about our dashboards</a>
+         </p>
+
+        </div>
+        <div class="grid__cell u-size1of2 u-text-end">
+          <img alt="Api step 3" class="u-size11of12" src="/images/features/api-step-3@2x.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <a href="https://developer.gocardless.com" class="btn">Read our API documentation</a>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
 
 {% endblock %}
