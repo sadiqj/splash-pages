@@ -20,18 +20,20 @@ angular.module('ngGcTabbyTriggerDirective', [
           $href: attrs.href
         }, options);
 
-        options.$href = options.$href.replace(/^#|#\/|\//, '');
-
         transclude(newScope, function(clone) {
           element.replaceWith(clone);
         });
 
         function activate($event, $metadata) {
-          if ($event) {
+          if ($event.type === 'click') {
+            // cmd + click
+            if ($event.metaKey) {
+              return;
+            }
             $event.preventDefault();
           }
 
-          return ngGcTabbyStore.activate(_.extend(options, $metadata));
+          ngGcTabbyStore.activate(_.extend(options, $metadata));
         }
 
         ngGcTabbyStore.on('activate', function() {

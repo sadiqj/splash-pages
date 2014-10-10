@@ -21,8 +21,9 @@ angular.module('ngGcTabbyContentDirective', [
         }
 
         _.extend(newScope, {
-          $href: attrs.id.replace(/^#\/|#|\//, ''),
-          preventLocationUpdate: 'preventLocationUpdate' in attrs
+          $href: attrs.id,
+          preventLocationUpdate: 'preventLocationUpdate' in attrs,
+          preventScrollIntoView: !('scrollIntoView' in attrs)
         });
 
         ngGcTabbyStore.add(newScope);
@@ -31,8 +32,9 @@ angular.module('ngGcTabbyContentDirective', [
           element.replaceWith(clone);
         });
 
-        // Prevent scroll to element
-        clone.removeAttr('id');
+        if (newScope.preventScrollIntoView) {
+          clone.removeAttr('id');
+        }
       }
     };
 
