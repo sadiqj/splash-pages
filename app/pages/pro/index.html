@@ -25,17 +25,17 @@
       <div class="site-container u-padding-Vm">
         <ul class="u-pull-start u-margin-Txxs">
           <li class="sticky-nav__item">
-            <a href="#overview" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#overview" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Overview
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#features" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#features" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Features
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#pricing" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#pricing" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Pricing
             </a>
           </li>
@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  <div id="overview">
+  <div class="section-scroll-target" id="overview">
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
@@ -57,7 +57,7 @@
             Welcome to GoCardless Pro
           </h2>
           <p class="u-text-s u-color-p u-margin-Txs">
-            GoCardless Pro allows you to collect Direct Debit payments from customers, whilst maintaining total control over their experience. We provide the tools for collecting and managing payments, but remain invisible to your customers. Integrating GoCardless Pro is simple, and there's no lengthy approval or set-up process. 
+            GoCardless Pro allows you to collect Direct Debit payments from customers, whilst maintaining total control over their experience. We provide the tools for collecting and managing payments, but remain invisible to your customers. Integrating GoCardless Pro is simple, and there's no lengthy approval or set-up process.
           </p>
         </div>
         <div class="grid u-margin-Tl u-padding-Tm">
@@ -140,93 +140,102 @@
         </div>
       </div>
     </div>
+
+    <hr class="u-margin-An">
+
   </div>
 
-  <hr class="u-margin-An">
+  <div class="section-scroll-target" id="features">
 
-  <div class="site-container u-text-center u-padding-Vxxl" id="features">
-    <div class="u-padding-Vxl">
-      <div class="u-size1of2 u-center">
-        <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
-          Your dashboard
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
+            Your dashboard
+          </h2>
+          <div class="u-text-heading u-color-heading u-text-l u-text-light">
+            A simple way to manage your payments and customers
+          </div>
+          <hr class="u-margin-Vxxl">
+        </div>
+        <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
+          <a href="#customer-info"
+          class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+          ng-click="$activate($event)"
+          ng-class="{ 'is-active': $isActive }"
+          ng-gc-tabby-trigger="{
+            $href: 'customer-info'
+          }">
+            Customer info
+          </a>
+          <a href="#payment-status"
+          class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+          ng-click="$activate($event)"
+          ng-class="{ 'is-active': $isActive }"
+          ng-gc-tabby-trigger="{
+            $href: 'payment-status'
+          }">
+            Payment status
+          </a>
+          <a href="#admin"
+          class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+          ng-click="$activate($event)"
+          ng-class="{ 'is-active': $isActive }"
+          ng-gc-tabby-trigger="{
+            $href: 'admin'
+          }">
+            Admin
+          </a>
+        </div>
+        <div id="customer-info" ng-gc-tabby-content prevent-location-update>
+          <div ng-if="$isActive">
+            <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
+          </div>
+        </div>
+        <div id="payment-status" ng-gc-tabby-content prevent-location-update>
+          <div ng-if="$isActive">
+            <img src="/images/pro/pro-payment-status.png" class="pro-page__dashboard-image">
+          </div>
+        </div>
+        <div id="admin" ng-gc-tabby-content prevent-location-update>
+          <div ng-if="$isActive">
+            <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+  </div>
+
+  <div class="section-scroll-target" id="pricing">
+
+    <div class="u-text-center u-padding-Vxxl">
+      <div class="site-container u-padding-Vxl">
+        <div class="u-size2of3 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-light u-text-xl">
+            5p&thinsp;&mdash;&thinsp;40p per transaction
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Vxs">
+            Competitive rates for everyone from individuals through to large corporations.<br>
+          </p>
+          <a href="/pricing/#pro" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
+          Get in touch for a free quote from our team
         </h2>
-        <div class="u-text-heading u-color-heading u-text-l u-text-light">
-          A simple way to manage your payments and customers
-        </div>
-        <hr class="u-margin-Vxxl">
-      </div>
-      <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
-        <a href="#customer-info"
-        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
-        ng-click="$activate($event)"
-        ng-class="{ 'is-active': $isActive }"
-        ng-gc-tabby-trigger="{
-          $href: 'customer-info'
-        }">
-          Customer info
-        </a>
-        <a href="#payment-status"
-        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
-        ng-click="$activate($event)"
-        ng-class="{ 'is-active': $isActive }"
-        ng-gc-tabby-trigger="{
-          $href: 'payment-status'
-        }">
-          Payment status
-        </a>
-        <a href="#admin"
-        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
-        ng-click="$activate($event)"
-        ng-class="{ 'is-active': $isActive }"
-        ng-gc-tabby-trigger="{
-          $href: 'admin'
-        }">
-          Admin
-        </a>
-      </div>
-      <div id="customer-info" ng-gc-tabby-content prevent-location-update>
-        <div ng-if="$isActive">
-          <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
-        </div>
-      </div>
-      <div id="payment-status" ng-gc-tabby-content prevent-location-update>
-        <div ng-if="$isActive">
-          <img src="/images/pro/pro-payment-status.png" class="pro-page__dashboard-image">
-        </div>
-      </div>
-      <div id="admin" ng-gc-tabby-content prevent-location-update>
-        <div ng-if="$isActive">
-          <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
-        </div>
+        <a href="/contact-sales" class="btn">Contact sales</a>
       </div>
     </div>
-  </div>
 
-  <hr class="u-margin-An">
-
-  <div class="u-text-center u-padding-Vxxl" id="pricing">
-    <div class="site-container u-padding-Vxl">
-      <div class="u-size2of3 u-center">
-        <h2 class="u-text-heading u-color-heading u-text-light u-text-xl">
-          5p&thinsp;&mdash;&thinsp;40p per transaction
-        </h2>
-        <p class="u-text-s u-color-p u-margin-Vxs">
-          Competitive rates for everyone from individuals through to large corporations.<br>
-        </p>
-        <a href="/pricing/#pro" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
-      </div>
-    </div>
-  </div>
-
-  <hr class="u-margin-An">
-
-  <div class="site-container u-text-center u-padding-Vxxl">
-    <div class="u-padding-Vxl">
-      <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
-        Get in touch for a free quote from our team
-      </h2>
-      <a href="/contact-sales" class="btn">Contact sales</a>
-    </div>
   </div>
 
   {% include "_site_footer.html" %}

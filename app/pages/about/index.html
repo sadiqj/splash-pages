@@ -24,17 +24,17 @@
       <div class="site-container u-padding-Vm">
         <ul class="u-pull-start u-margin-Txxs">
           <li class="sticky-nav__item">
-            <a href="#about-us" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#about-us" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               About us
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#team" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#team" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Team
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#jobs" du-scrollspy du-smooth-scroll offset="72" class="sticky-nav__link">
+            <a href="#jobs" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Jobs
             </a>
           </li>
@@ -47,34 +47,38 @@
     </div>
   </div>
 
-  <div class="site-container u-padding-Vxxl" id="about-us">
-    <div class="grid u-padding-Vxl">
-      <div class="grid__cell u-size1of2">
-        <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
-          Something about us
-        </h2>
-        <p class="u-text-s u-color-p u-margin-Txxl">
-          GoCardless was formed in 2011 lorem ipsum dolar sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>
+  <div class="section-scroll-target" id="about-us">
 
-          Helping businesses of all sizes ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+    <div class="site-container u-padding-Vxxl">
+      <div class="grid u-padding-Vxl">
+        <div class="grid__cell u-size1of2">
+          <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+            Something about us
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Txxl">
+            GoCardless was formed in 2011 lorem ipsum dolar sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>
 
-          We’re based in London, and are authorised by the Financial Conduct Authority. Our investors include Accel Partners, Passion Capital, Balderton Capital and Y Combinator.
-        </p>
-      </div>
-      <div class="grid__cell u-size1of2 u-text-end u-margin-Txxl">
-        <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--yellow u-margin-Tl">£233,054,541</div>
-        <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Paid out to merchants</div>
-        <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--blue u-margin-Txxl">2,163,980</div>
-        <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Transactions completed</div>
-        <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--green u-margin-Txxl">568,817</div>
-        <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Customers paying with us</div>
+            Helping businesses of all sizes ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+
+            We’re based in London, and are authorised by the Financial Conduct Authority. Our investors include Accel Partners, Passion Capital, Balderton Capital and Y Combinator.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-text-end u-margin-Txxl">
+          <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--yellow u-margin-Tl">£233,054,541</div>
+          <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Paid out to merchants</div>
+          <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--blue u-margin-Txxl">2,163,980</div>
+          <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Transactions completed</div>
+          <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--green u-margin-Txxl">568,817</div>
+          <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Customers paying with us</div>
+        </div>
       </div>
     </div>
+
   </div>
 
   <hr class="u-margin-Vl">
 
-  <div id="team">
+  <div class="section-scroll-target" id="team">
 
     <div class="site-container u-padding-Vxxl">
       <div class="grid u-padding-Txl">
@@ -83,11 +87,13 @@
             We’re a team of 58 people working in London, UK.<br>We design and build our products, market them and support our customers.
           </h2>
           <p class="u-text-heading-light u-text-xs u-color-meta u-margin-Txxl">
-            Interested in joining the team?<br>Take a look at our <a href="#jobs" du-smooth-scroll offset="72" class="u-link-clean u-link-dark-gray u-text-underline">available positions</a>
+            Interested in joining the team?<br>Take a look at our <a href="#jobs" ng-gc-smooth-scroll class="u-link-clean u-link-dark-gray u-text-underline">available positions</a>
           </p>
         </div>
         <div class="grid__cell u-size2of3">
-          <strong>GoCardless is:</strong> <span class="u-color-p">Tom Petty, Al Monk, James Shedden, Phil Harrison, Max Murdoch, Hiroki Takeuchi, Matt Robinson, Grey Baker, Harry Marr, Tom Petty, Al Monk, James Shedden, Phil Harrison, Max Murdoch, Hiroki Takeuchi, Matt Robinson, Grey Baker, Harry Marr, Tom Petty, Al Monk, James Shedden, Phil Harrison, Max Murdoch, Hiroki Takeuchi, Matt Robinson, Grey Baker, Harry Marr, Tom Petty, Al Monk, James Shedden, Phil Harrison, Max Murdoch, Hiroki Takeuchi, Matt Robinson, Grey Baker, Harry Marr, Tom Petty, Al Monk, James Shedden, Phil Harrison, Max Murdoch, Hiroki Takeuchi, Matt Robinson, Grey Baker, Harry Marr, Tom Petty, Al Monk, James Shedden, Phil Harrison, Max Murdoch, Hiroki Takeuchi, Matt Robinson, Grey Baker, Harry Marr, Tom Petty, Al Monk, James Shedden, Phil Harrison, Max Murdoch, Hiroki Takeuchi, Matt Robinson, Grey Baker, Harry Marr</span>
+          <strong>GoCardless is:</strong> <span class="u-color-p">
+            Octave Auger, Grey Baker, Baris Balic, Angus Bayley, James Berry, David Blake, George Britton, Jenna Brown, Maria Campbell, Duncan Coleman, Matt Cummins, James Cunningham, Amaury de Closset, Steve Domin, Saz Ehibor-Smith, Jamie English, Jack Franklin, Jessie Giladi, Jon Greenland, Pete Hamilton, Phil Harrison, Natalie Hockham, James Jackson, Sam Jewell, Paul Jolly, Alan Kennedy, Kin-Hing Lo, Daniel Lyons, Harry Marr, Erez Mathan, Jonno McGovern, Ben Miller, Al Monk, Amelia Munsey, Max Murdoch, Jacob Pargin, Steve Parrington, Tom Petty, Nabeel Qureshi, Matt Robinson, Charlotte Robinson, Tim Rogers, Isaac Seymour, Ricky Shafier, Alexander Shea, James Shedden, Ben Sims, Chris Sinjakli, Alina Solovjova, Jess Summerfield, Hiroki Takeuchi, Helen Taylor, Ravin Thambapillai
+          </span>
         </div>
       </div>
     </div>
@@ -116,168 +122,172 @@
 
   </div>
 
-  <div class="site-container u-padding-Vxxl" id="jobs">
-    <div class="u-padding-Vxl">
-      <h2 class="u-text-heading u-color-heading u-text-l u-text-light">Open positions</h2>
-      <div class="grid">
-        <div class="grid__cell u-size1of3">
-          <ul class="nav nav-tabs u-margin-Ts">
+  <div id="jobs" class="section-scroll-target">
 
-            <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-              Engineering
-            </li>
+    <div class="site-container u-padding-Vxxl u-relative">
+        <div class="u-padding-Vxl">
+          <h2 class="u-text-heading u-color-heading u-text-l u-text-light">Open positions</h2>
+          <div class="grid">
+            <div class="grid__cell u-size1of3">
+              <ul class="nav nav-tabs u-margin-Ts">
 
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#software-engineer" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Backend Software Engineer
-              </a>
-            </li>
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#web-ops" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Web Operations Engineer
-              </a>
-            </li>
+                <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
+                  Engineering
+                </li>
 
-            <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-              User experience
-            </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/software-engineer" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Backend Software Engineer
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/web-ops" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Web Operations Engineer
+                  </a>
+                </li>
 
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#front-end-developer" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Front-end Developer
-              </a>
-            </li>
+                <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
+                  User experience
+                </li>
 
-            <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-              Sales &amp; marketing
-            </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/front-end-developer" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Front-end Developer
+                  </a>
+                </li>
 
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#business-development" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Business Development
-              </a>
-            </li>
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#content-marketer" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Content Marketer
-              </a>
-            </li>
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#growth-analyst" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Growth Analyst
-              </a>
-            </li>
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#junior-sales-executive" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Junior Sales Executive
-              </a>
-            </li>
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#senior-sales-executive" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Senior Sales Executive
-              </a>
-            </li>
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#account-manager" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Account Manager
-              </a>
-            </li>
+                <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
+                  Sales &amp; marketing
+                </li>
 
-            <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-              Operations
-            </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/business-development" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Business Development
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/content-marketer" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Content Marketer
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/growth-analyst" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Growth Analyst
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/junior-sales-executive" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Junior Sales Executive
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/senior-sales-executive" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Senior Sales Executive
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/account-manager" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Account Manager
+                  </a>
+                </li>
 
-            <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-              <a href="#developer-support-analyst" class="nav-tabs__link"
-              ng-click="$activate($event)"
-              ng-class="{ 'is-active': $isActive }"
-              ng-gc-tabby-trigger>
-                Developer Support Analyst
-              </a>
-            </li>
-          </ul>
+                <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
+                  Operations
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/developer-support-analyst" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Developer Support Analyst
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__cell u-size2of3 u-padding-Tl">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/software-engineer">
+                <div ng-if="$isActive">
+                  {% include "about/_software_engineer.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/web-ops">
+                <div ng-if="$isActive">
+                  {% include "about/_web_ops.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/front-end-developer">
+                <div ng-if="$isActive">
+                  {% include "about/_front_end_developer.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/business-development">
+                <div ng-if="$isActive">
+                  {% include "about/_business_development.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/content-marketer">
+                <div ng-if="$isActive">
+                  {% include "about/_content_marketer.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/growth-analyst">
+                <div ng-if="$isActive">
+                  {% include "about/_growth_analyst.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/junior-sales-executive">
+                <div ng-if="$isActive">
+                  {% include "about/_junior_sales_executive.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/senior-sales-executive">
+                <div ng-if="$isActive">
+                  {% include "about/_senior_sales_executive.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/account-manager">
+                <div ng-if="$isActive">
+                  {% include "about/_account_manager.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/developer-support-analyst">
+                <div ng-if="$isActive">
+                  {% include "about/_API_support_analyst.html" %}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="grid__cell u-size2of3 u-padding-Tl">
-          <div ng-gc-tabby-content id="software-engineer">
-            <div ng-if="$isActive">
-              {% include "jobs/_software_engineer.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="web-ops">
-            <div ng-if="$isActive">
-              {% include "jobs/_web_ops.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="front-end-developer">
-            <div ng-if="$isActive">
-              {% include "jobs/_front_end_developer.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="business-development">
-            <div ng-if="$isActive">
-              {% include "jobs/_business_development.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="content-marketer">
-            <div ng-if="$isActive">
-              {% include "jobs/_content_marketer.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="growth-analyst">
-            <div ng-if="$isActive">
-              {% include "jobs/_growth_analyst.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="junior-sales-executive">
-            <div ng-if="$isActive">
-              {% include "jobs/_junior_sales_executive.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="senior-sales-executive">
-            <div ng-if="$isActive">
-              {% include "jobs/_senior_sales_executive.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="account-manager">
-            <div ng-if="$isActive">
-              {% include "jobs/_account_manager.html" %}
-            </div>
-          </div>
-          <div ng-gc-tabby-content id="developer-support-analyst">
-            <div ng-if="$isActive">
-              {% include "jobs/_developer_support_analyst.html" %}
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+
   </div>
 
   {% include "_site_footer.html" %}
