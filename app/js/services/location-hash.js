@@ -7,7 +7,7 @@ angular.module('ngGcLocationHash', [
   '$window',
   function($window){
     function sanitizeHash(hash) {
-      return hash.replace(/^#\/|#|\//, '');
+      return hash.replace(/^[#\/]+/, '');
     }
 
     function get() {
