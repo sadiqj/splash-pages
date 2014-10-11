@@ -25,6 +25,11 @@
   text-decoration: none;
 }
 
+.nav__item-link {
+  height: 62px; // matching logo height
+  line-height: 62px; //matches above
+}
+
 @include breakpoint-medium {
   .nav__item.has-breakpoint-md {
     border-bottom: 1px solid #ddd;
