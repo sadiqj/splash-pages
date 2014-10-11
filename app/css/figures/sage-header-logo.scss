@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.sage-header-logo {
+  @include icon("/images/partners/sage-header-logo", 111px, 47px);
+}
