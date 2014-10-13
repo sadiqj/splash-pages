@@ -1,0 +1,7 @@
+.basic-grid {
+  transition: all 0.1s ease;
+}
+
+.basic-grid:hover {
+  border: 1px solid $gray-darken;
+}
