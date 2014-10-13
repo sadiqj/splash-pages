@@ -27,9 +27,6 @@ require('./controllers/ng-gc-active-video-controller');
 
 require('./services/location-hash');
 
-var StickyTabs = require('../js/deprecated-js/widgets/sticky-tabs');
-require('../js/deprecated-js/lib/bootstrap/tab.js');
-
 var angular = require('angular');
 
 require('../components/angular-animate/angular-animate');
@@ -96,7 +93,3 @@ angular.element(document).ready(function setup() {
     angular.bootstrap(document, ['home']);
   }
 });
-
-module.exports = {
-  stickyTabs: new StickyTabs()
-};
