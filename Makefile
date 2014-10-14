@@ -83,7 +83,7 @@ js-out:
 js-main: js-out
 	$(BIN)/browserify $(BROWSERIFY_ARG)
 	$(BIN)/uglifyjs build/js/main.js --output build/js/main.js \
-		--source-map main.map.js \
+		--source-map build/js/main.map.js \
 		--source-map-include-sources=true \
 		--source-map-root='build/' \
 		--source-map-url='/js/main.map.js'
@@ -93,7 +93,7 @@ js-vendor: js-out
 		app/components/mute-console/mute-console.js \
 		app/js/vendor.js app/components/dialog.js/dialog.js > build/js/vendor.js
 	$(BIN)/uglifyjs build/js/vendor.js --output build/js/vendor.js \
-		--source-map vendor.map.js \
+		--source-map build/js/vendor.map.js \
 		--source-map-include-sources=true \
 		--source-map-root='build/' \
 		--source-map-url='/js/vendor.map.js'
