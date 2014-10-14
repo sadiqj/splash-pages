@@ -19,7 +19,7 @@
         GoCardless Basic API
       </h1>
       <div class="u-text-heading u-margin-Bm u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing u-text-center">
-        Integrate automatic payment collection and reconciliation with our simple, RESTful API
+        Automate payment collection and reconciliation with our simple, RESTful API
       </div>
       <div class="u-padding-Vl">
         <iframe
@@ -42,7 +42,11 @@
         Integrating with GoCardless is easy and secure
       </h2>
       <p class="u-text-s u-color-p u-margin-Txs">
-        We maintain official libraries for Ruby, PHP, Java & more
+        We maintain official libraries for
+        <a href="https://github.com/gocardless/gocardless-ruby">Ruby</a>,
+        <a href="https://github.com/gocardless/gocardless-php">PHP</a>,
+        <a href="https://github.com/gocardless/gocardless-java">Java</a> &
+        <a href="https://developer.gocardless.com/#official-libraries">more</a>
       </p>
       <div class="grid u-margin-Vl u-padding-Vl">
         <div class="grid__cell u-size1of3 u-text-center">
@@ -94,15 +98,6 @@
         </h2>
       </div>
       <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl u-padding-Txxl">
-        <a href="#create-subscription"
-        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
-        ng-click="$activate($event)"
-        ng-class="{ 'is-active': $isActive }"
-        ng-gc-tabby-trigger="{
-          $href: 'create-subscription'
-        }">
-          Create a subscription
-        </a>
         <a href="#setup-new-direct-debit"
         class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
         ng-click="$activate($event)"
@@ -121,20 +116,15 @@
         }">
           Take payment
         </a>
-      </div>
-      <div id="create-subscription" ng-gc-tabby-content prevent-location-update>
-        <div ng-if="$isActive">
-          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center">
-<pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
-
-<span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_subscription_url</span><span class="p">(</span>
-  <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"15.00"</span><span class="p">,</span>
-  <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Premium Account"</span><span class="p">,</span>
-  <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
-  <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p"></span>
-<span class="p">)</span></pre>
-        </article>
-        </div>
+        <a href="#create-subscription"
+        class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'create-subscription'
+        }">
+          Create a subscription
+        </a>
       </div>
       <div id="setup-new-direct-debit" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
@@ -142,7 +132,7 @@
 <pre class="highlight ruby"><span class="c1"># A pre-authorization for up to £100.00 every month</span>
 
 <span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_pre_authorization_url</span><span class="p">(</span>
-  <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"100.00"</span><span class="p">,</span>
+  <span class="ss">:max_amount</span> <span class="o">=&gt;</span> <span class="s2">"100.00"</span><span class="p">,</span>
   <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Stock Photos"</span><span class="p">,</span>
   <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
   <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span>
@@ -164,6 +154,20 @@
         </article>
         </div>
       </div>
+      <div id="create-subscription" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <article class="u-text-start sage-screenshot u-padding-Al u-size3of5 u-center">
+<pre class="highlight ruby"><span class="c1"># A subscription for £15.00 every month</span>
+
+<span class="no">GoCardless</span><span class="p">.</span><span class="nf">new_subscription_url</span><span class="p">(</span>
+  <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="s2">"15.00"</span><span class="p">,</span>
+  <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Premium Account"</span><span class="p">,</span>
+  <span class="ss">:interval_unit</span> <span class="o">=&gt;</span> <span class="s2">"month"</span><span class="p">,</span>
+  <span class="ss">:interval_length</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p"></span>
+<span class="p">)</span></pre>
+        </article>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -174,10 +178,19 @@
       <div class="grid">
 
         <div class="grid__cell u-size1of2">
-          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Add your customers</h2>
-
-          <p class="u-color-p u-margin-Bm">Customers set up Direct Debit through our secure online payment pages. <a href="/example-checkout" class="u-text-underline u-link-medium-gray">View an example</a></p>
-
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Simple hosted payment pages</h2>
+          <p class="u-color-p u-margin-Bm">
+            GoCardless handles all the Direct Debit compliance requirements so you can get started instantly. Our secure, online payment pages are optimised based on experience with millions of customers.
+            <br>
+            <a href="/example-checkout" class="u-text-underline u-link-medium-gray">
+              View an example
+            </a>
+          </p>
+          <p class="u-color-p">
+           Looking for complete control over the payment experience?
+           <br>
+           <a href="/pro" class="u-link-medium-gray u-text-underline">Learn about GoCardless Pro</a>.
+          </p>
         </div>
         <div class="grid__cell u-size1of2 u-text-end">
           <img alt="Api step 1" class="u-size11of12" src="/images/features/api-step-1@2x.png">
@@ -195,9 +208,9 @@
           <img alt="Api step 2" class="u-size11of12" src="/images/features/api-step-2@2x.png">
         </div>
         <div class="grid__cell u-size1of2">
-          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Trigger a payment</h2>
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Payments in just two lines of code</h2>
 
-          <p class="u-color-p">Trigger one-off, variable or recurring payments in just a few lines of code.</p>
+          <p class="u-color-p">Trigger one-off, variable or recurring payments in just a few lines of code. GoCardless will handle all the Direct Debit notification requirements for you.</p>
         </div>
       </div>
     </div>
@@ -210,11 +223,13 @@
       <div class="grid">
         <div class="grid__cell u-size1of2">
           <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">Realtime reporting</h2>
-
          <p class="u-color-p">
-          GoCardless constantly notifies you by email and webhooks of your payments' statuses. <a href="/basic" class="u-text-underline u-link-medium-gray">More about our dashboards</a>
+          View all your payments in our ready-made online dashboard, including export functionality. We'll also notify you programmatically whenever the status of a payment or mandate changes.
+          <br>
+          <a href="/basic" class="u-text-underline u-link-medium-gray">
+            More about our dashboards
+          </a>
          </p>
-
         </div>
         <div class="grid__cell u-size1of2 u-text-end">
           <img alt="Api step 3" class="u-size11of12" src="/images/features/api-step-3@2x.png">
