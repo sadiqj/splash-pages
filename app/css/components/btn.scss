@@ -97,6 +97,11 @@
   &:hover {
     color: $primary-color;
   }
+
+  &:active {
+    background: white;
+  }
+
 }
 
 .btn--hollow {
