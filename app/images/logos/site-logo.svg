@@ -1,6 +1,7 @@
-<svg width="157" height="16" viewBox="0 0 157 16" xmlns="http://www.w3.org/2000/svg">
+<svg role="img" aria-label="GoCardless home page" width="157" height="16" viewBox="0 0 157 16" xmlns="http://www.w3.org/2000/svg">
+    <title>GoCardless</title>
     <desc>
-        Created with Sketch.
+        home page
     </desc>
     <g fill="#000">
         <path d="M8.394 15.983C3.472 15.983.07 12.615.07 8.05V8C.07 3.62 3.574.017 8.36.017c2.85 0 4.56.758 6.217 2.122L12.4 4.715c-1.225-.994-2.313-1.567-4.144-1.567-2.54 0-4.543 2.19-4.543 4.8V8c0 2.83 1.987 4.9 4.802 4.9 1.26 0 2.4-.302 3.282-.925V9.768H8.29v-2.93h6.875v6.703c-1.624 1.332-3.87 2.443-6.77 2.443" id="Shape"/>
