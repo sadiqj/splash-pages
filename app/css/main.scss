@@ -1,3 +1,5 @@
+@import "variables";
+
 @import "shared/normalize";
 @import "shared/appify";
 @import "shared/scaffold";
@@ -91,7 +93,6 @@
 @import "components/tab-pane";
 @import "components/tabbed-well";
 @import "components/table";
-@import "components/team-member";
 @import "components/testimonial";
 @import "components/thumbnails";
 @import "components/story-hero";

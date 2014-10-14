@@ -22,7 +22,7 @@ angular.module('ngGcStickyNavDirective', [])
             }
           }
 
-          var throttled = _.throttle(updatePosition, 80, {
+          var throttled = _.throttle(updatePosition, 20, {
             trailing: true
           });
           angular.element($window).on('scroll', throttled);
