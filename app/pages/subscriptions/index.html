@@ -1,14 +1,14 @@
 {% extends "plain.html" %}
 
-{% block title %}The UK’s #1 for online Direct Debit{% endblock %}
-{% block meta_tags %}<meta name="description" content="GoCardless is the UK's #1 for Direct Debit, serving more companies than any other provider. Perfect for recurring billing and B2B invoicing.">{% endblock %}
+{% block title %}Collect Recurring Subscription Payments{% endblock %}
+{% block meta_tags %}<meta name="description" content="Thousands of membership organisations use GoCardless to collect fees from members. Create custom membership plans &amp; collect your payments automatically.">{% endblock %}
 
 {% block body %}
 
 <div class="site-wrapper">
   <div class="page-hero page-hero--medium u-relative u-size-full">
     <div class="site-container page-hero__container">
-      <div class="site-header site-header--invert u-cf align-btn-small u-padding-Tm">
+      <div class="site-header site-header--invert u-relative u-cf">
         {% include "_site_header_invert.html" %}
       </div>
       <div class="page-hero__inner">
@@ -62,7 +62,7 @@
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
         <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
-          Thousands of services use GoCardless to manage their payments
+          Thousands of services use GoCardless to manage their subscriptions
         </h2>
         <p class="u-text-s u-color-p u-margin-Txs u-size5of8 u-center">
           Spend less time worrying about admin and failed payments.<br>
@@ -71,38 +71,38 @@
         <div class="grid u-margin-Tl u-padding-Tm">
           <div class="grid__cell u-size1of3 u-text-center">
             <figure class="svg-icon u-center">
-              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/money-flower-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/customer-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/customer-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Retain customers
+            </div>
+            <p class="u-size7of10 u-center u-color-p u-margin-Txs">
+              No customer churn due to card expiry or cancellation
+            </p>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/money-flower-icon.svg">
               <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/money-flower-icon.svg">
             </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
-              Cheaper than Paypal
+              Save money
             </div>
             <p class="u-size7of10 u-center u-color-p u-margin-Txs">
-              Save more than 60% compared to Paypal or cards
+              Cheaper than cards, with no hidden fees
             </p>
           </div>
           <div class="grid__cell u-size1of3 u-text-center">
             <figure class="svg-icon u-center">
-              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/payment-page-icon.svg">
-              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/payment-page-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/checklist-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/checklist-icon.svg">
             </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
-              Branded payment pages
+              Highly automated
             </div>
             <p class="u-size7of10 u-center u-color-p u-margin-Txs">
-              Our responsive forms let you own the experience
-            </p>
-          </div>
-          <div class="grid__cell u-size1of3 u-text-center">
-            <figure class="svg-icon u-center">
-              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/tick-icon.svg">
-              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/tick-icon.svg">
-            </figure>
-            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
-              Fewer failures
-            </div>
-            <p class="u-size7of10 u-center u-color-p u-margin-Txs">
-              Money is collected directly from customers' bank accounts
+              GoCardless reduces your manual admin
             </p>
           </div>
         </div>
@@ -121,17 +121,17 @@
           <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
             Save time and money
           </h2>
-          <h3 class="u-text-s">Much cheaper than cards and Paypal</h3>
+          <h3 class="u-text-s">Cheaper than cards and Paypal</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            At just 1% per transaction, and with no monthly fees, GoCardless is less than one third the price of competitors.
+            At just 1% per transaction, and with no set up or monthly fees, GoCardless is typically more cost effective than all competitors.
           </p>
           <h3 class="u-text-s">Get your time back</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Money is collected automatically from customers' accounts, meaning no more worrying about admin or late payments.
+            Subscription payments are collected automatically. Automate subscription setup by embedding a payment link on your website.
           </p>
-          <h3 class="u-text-s">Paperless from start to finish</h3>
+          <h3 class="u-text-s">Payments on a schedule you control</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Everything is set up and managed online through our simple, scalable dashboard.
+            Customers authorise you to collect payments from them whenever they’re due, so you’ll always be paid on time.
           </p>
         </div>
         <div class="grid__cell u-size1of2 u-margin-Txxl u-text-center">
@@ -144,24 +144,23 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="grid u-padding-Vxl">
-        <div class="grid__cell u-size1of2 u-margin-Tm u-text-center">
-          <img src="/images/features/plans.jpg" class="vertical-page__take-payment-image">
+        <div class="grid__cell u-size1of2 u-margin-Txl u-text-center">
+          <img src="/images/features/plans.jpg" class="vertical-page__take-payment-image vertical-page__take-payment-image-margin--subscriptions">
         </div>
         <div class="grid__cell u-size1of2">
           <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
             Use plans to manage subscriptions
           </h2>
-          <h3 class="u-text-s">Add customers to membership plans</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Easily create your own plans and add multiple customers to them. Take payments when it suits you.
+            Payment plans let you take the same amount from many customers at once. Add multiple customers to each plan by emailing them a plan link or <a href="https://help.gocardless.com/can-i-add-a-gocardless-button-to-my-website/" target="_blank">embedding it</a> on your website.
           </p>
-          <h3 class="u-text-s">Collect payments automatically</h3>
+          <h3 class="u-text-s">Reduce failed payments</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Your customers authorise you to collect payments from them. Money will automatically be billed from their account.
+            Don’t lose customers through card expiry or cancellation. With GoCardless, payment failure rates are just 0.5% compared to 5-10% for cards.
           </p>
           <h3 class="u-text-s">Adjust prices any time</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            You can update the price of a plan in a matter of clicks, making annual price increases quick and easy.
+            You can change the payment plan a customer is on in seconds, making pay-as-you-go plans and upgrades / downgrades effortless. 
           </p>
         </div>
       </div>
@@ -171,31 +170,31 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="grid u-padding-Vxl">
-        <div class="grid__cell u-size1of2 u-margin-Txs">
+        <div class="grid__cell u-size1of2">
           <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
             Your customers will love it
           </h2>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Our hosted payment pages let you manage the whole subscription process for customers online. They're totally responsive and you can use your brand on every form.
+            Our online payment form takes seconds to fill out, and works on every device from desktops to mobile phones.
           </p>
-          <h3 class="u-text-s">Sign up instantly</h3>
+          <h3 class="u-text-s">Make paying easy for your customers</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Our online form takes seconds to fill out, and has been tested to work on every device from desktops down to mobile phones.
+            Your customers only have to fill in their details once, regardless of the number of times and different amounts they will pay.
           </p>
-          <h3 class="u-text-s">Your logo, front and centre</h3>
+          <h3 class="u-text-s">Ultimate security</h3>
           <p class="u-color-p u-margin-Bm">
-            Provide a great user experience by adding your logo to our<br>payment forms and automatically sending customers back<br>to your site after paying.
+            We use military-grade security and our payments are backed by the Direct Debit guarantee, making paying through GoCardless safer for your customers than the card networks or Paypal.
           </p>
-          <h3 class="u-text-s">Add customers in individually, or in bulk</h3>
+          <h3 class="u-text-s">Visibility over when you will be charged</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            You can import hundreds of existing customers at once with a CSV. We'll request each of them to complete our payment pages.
+            Both you and your customer will always know exactly when each payment will be made reducing the risk of payments failing due to insufficient funds.
           </p>
           <a href="/example-checkout" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Txl">
             See an example payment page
           </a>
         </div>
         <div class="grid__cell u-size1of2 u-text-center">
-          <img src="/images/features/payment-page--property.jpg" class="vertical-page__mobile-image">
+          <img src="/images/features/payment-page--subscriptions.jpg" class="vertical-page__mobile-image">
         </div>
       </div>
     </div>
@@ -211,20 +210,17 @@
           <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
             Track every step
           </h2>
-          <p class="u-size5of6 u-color-p u-margin-Bm">
-            Our reporting tools let you know what you'll be paid and when, making cashflow issues a thing of the past.
-          </p>
           <h3 class="u-text-s">Up to the second status reports</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Comprehensive, easy-to-use information on all of your payments and customers.
+            Our clear reporting dashboards show you exactly what you can expect to receive in your bank account and when.
           </p>
           <h3 class="u-text-s">Email notifications</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            Immediate notification when a payment fails or is canceled. We'll automatically retry failed payments.
+            We’ll immediately notify you when a payment fails or if a customer cancels their subscription meaning you can resolve it straight away. We also automatically retry failed payments when appropriate.
           </p>
           <h3 class="u-text-s">Export your data</h3>
           <p class="u-size5of6 u-color-p u-margin-Bm">
-            View your data the way you want to and import it into other apps. Compatible with major book keeping software.
+            View your data the way you want to and import it into your existing software.
           </p>
         </div>
       </div>
@@ -246,7 +242,7 @@
           <img src="/images/verticals/gym-logos@2x.jpg">
         </div>
         <a href="/partners" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
-          View all our integrations
+          View all our partners
         </a>
       </div>
     </div>
@@ -261,14 +257,15 @@
           </div>
           <img src="/images/testimonials/greater-anglia__avatar.png" class="u-size1of12 u-text-center u-margin-Bxs">
           <div class="u-color-invert u-text-heading u-text-m u-text-semi">Graham Beton</div>
-          <div class="u-color-invert u-text-heading u-text-xs u-margin-Bs">Greater Anglia Railways</div>
-          <a href="/stories/greater-anglia" class="u-link-invert u-text-heading u-color-invert u-text-semi u-text-upcase u-text-xxs">
+          <div class="u-color-invert u-text-heading u-text-xs u-margin-Bs">Greater Anglia</div>
+          <a href="/stories/grow-wild" class="u-link-invert u-text-heading u-color-invert u-text-semi u-text-upcase u-text-xxs">
             Read the full story
           </a>
         </div>
       </div>
     </div>
   </div>
+
 
   <div class="section-scroll-target" id="product">
 
@@ -350,24 +347,6 @@
 
     <hr class="u-margin-An">
 
-    <div class="site-container u-text-center u-padding-Vxxl">
-      <div class="u-padding-Vxl u-size2of3 u-center">
-        <i class="europe-icon u-margin-Bs"></i>
-        <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
-          Need to take payments across Europe?
-        </h2>
-        <p class="u-text-s u-color-p u-margin-Ts u-size3of4 u-center">
-          GoCardless Pro is the only product that enables you collect Direct Debit payments from any European country. With our API, your business can take payments from over 300 million people.
-        </p>
-        <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
-        <a href="/pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
-          Learn about GoCardless Pro
-        </a>
-      </div>
-    </div>
-
-    <hr class="u-margin-An">
-
   </div>
 
   <div class="section-scroll-target" id="pricing">
@@ -402,6 +381,27 @@
         </h2>
         <a href="/merchants/new" class="btn">Start taking payments</a>
         <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl u-size2of3 u-center">
+        <figure class="svg-icon u-center">
+          <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/pro-icon.svg">
+          <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/pro-icon.svg">
+        </figure>
+        <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+          Looking for more control?
+        </h2>
+        <p class="u-text-s u-color-p u-margin-Ts u-size3of4 u-center">
+          GoCardless Pro allows you to collect Direct Debit payments from customers, whilst maintaining total control over their experience. <br><br>Our API is simple to integrate, and allows you to do anything from creating custom payment pages to collecting payments across Europe
+        </p>
+        <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+        <a href="/pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+          Learn about GoCardless Pro
+        </a>
       </div>
     </div>
 

@@ -10,6 +10,8 @@
   display: table;
   height: 100%;
   width: 100%;
+  position: relative;
+  top: -76px;
 }
 
 .page-hero__text {
@@ -28,6 +30,13 @@
 
 .page-hero--creative-industries {
   background: url('/images/hero/hero-creative-industries.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--lending {
+  background: url('/images/hero/hero-lending.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -84,6 +93,13 @@
 
 .page-hero--about {
   background: url('/images/hero/about-hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--team {
+  background: url('/images/hero/hero-team.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
