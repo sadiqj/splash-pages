@@ -14,7 +14,7 @@ angular.module('ngGcSmoothScrollDirective', []).directive('ngGcSmoothScroll', [
             offset = $(href).offset().top;
           }
 
-          $('body').animate({
+          $('html, body').animate({
             scrollTop: offset
           }, 500);
         });
