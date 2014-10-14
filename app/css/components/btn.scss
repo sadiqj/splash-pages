@@ -112,6 +112,11 @@
   &:hover {
     color: $primary-color;
   }
+
+  &:active {
+    color: $primary-color;
+  }
+
 }
 
 .btn--invert-hollow {
