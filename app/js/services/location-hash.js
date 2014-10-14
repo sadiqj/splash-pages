@@ -15,12 +15,8 @@ angular.module('ngGcLocationHash', [
     }
 
     function setHistoryState(hash) {
-      if($window.history.pushState) {
-        if (!get()) {
-          $window.history.replaceState({}, '', hash);
-        } else {
-          $window.history.pushState({}, '', hash);
-        }
+      if($window.history.replaceState) {
+        $window.history.replaceState({}, '', hash);
       }
     }
 
