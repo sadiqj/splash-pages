@@ -1,0 +1,35 @@
+.u-fill-primary {
+  g {
+    fill: $primary-color;
+  }
+}
+
+.u-fill-dark-gray {
+  g {
+    fill: $dark-gray;
+  }
+}
+
+.u-fill-yellow {
+  g {
+    fill: $highlight-yellow;
+  }
+}
+
+.u-fill-green {
+  g {
+    fill: $highlight-green;
+  }
+}
+
+.u-fill-blue {
+  g {
+    fill: $highlight-blue;
+  }
+}
+
+.u-fill-invert {
+  g {
+    fill: white;
+  }
+}

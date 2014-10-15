@@ -1,27 +1,5 @@
-.nav-tabs {
-  li {
-    &.active {
-      a {
-        color: $black-blue;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    a.is-active {
-      color: $black-blue;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-    a {
-      display: block;
-      padding: 8px 0;
-      border-radius: 3px;
-    }
-  }
+.nav-tabs__link.is-active {
+  text-decoration: underline;
 }
 
 .nav-tabs--gutter-L li a {

@@ -1,0 +1,5 @@
+@import "mixins/icon-mixin";
+
+.uk-flag-icon {
+  @include icon("/images/icons/uk-flag-icon", 33px, 17px);
+}

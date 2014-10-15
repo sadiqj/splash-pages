@@ -1,0 +1,358 @@
+{% extends "plain.html" %}
+
+{% block title %}Collect Payments for Property &amp; Storage{% endblock %}
+{% block meta_tags %}<meta name="description" content="GoCardless allows property &amp; storage companies to easily collect recurring payments. Collect storage, property management fees and rent from your tenants online.">{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+  <div class="page-hero page-hero--property page-hero--medium u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-header--invert u-relative u-cf">
+        {% include "_site_header_invert.html" %}
+      </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light">
+            Keep your house in order
+          </h1>
+          <div class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">
+            GoCardless helps property professionals manage rent,<br>stop late payments and improve cashflow
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-nav">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xxs u-text-light u-text-no-smoothing">
+      <div class="site-container u-padding-Vm">
+        <ul class="u-pull-start u-margin-Txxs">
+          <li class="sticky-nav__item">
+            <a href="#overview" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Overview
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#features" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Features
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#product" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Product
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#pricing" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Pricing
+            </a>
+          </li>
+        </ul>
+        <a href="/merchants/new" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+          Start taking payments
+        </a>
+      </div>
+      <hr class="u-margin-An">
+    </div>
+  </div>
+
+  <div class="section-scroll-target" id="overview">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+          Property companies of all types use GoCardless to manage their payments
+        </h2>
+        <p class="u-text-s u-color-p u-margin-Txs u-size5of8 u-center">
+          Spend less time worrying about cashflow and chasing late payments. <br>
+          GoCardless gives you the freedom to focus on your business.
+        </p>
+        <div class="grid u-margin-Tl u-padding-Tm">
+          <div class="grid__cell u-size1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/calendar-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/calendar-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Collect regular rental payments
+            </div>
+            <p class="u-size7of10 u-center u-color-p u-margin-Txs">
+              Easily take regular and adhoc payments from customers
+            </p>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/clock-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/clock-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Minimise admin time
+            </div>
+            <p class="u-size7of10 u-center u-color-p u-margin-Txs">
+              Simple set up and automatic payments
+            </p>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/tick-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/tick-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              No more PCI worries
+            </div>
+            <p class="u-size8of10 u-center u-color-p u-margin-Txs">
+              You never touch customer data, avoiding security requirements
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+  </div>
+
+  <div class="section-scroll-target" id="features">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl">
+        <div class="grid__cell u-size1of2">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Collect rent the easy way
+          </h2>
+          <h3 class="u-text-s">Say goodbye to late payments</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            Customers and tenants can set up recurring payments so they never miss a payment. Payments will automatically be taken as soon as they’re due.
+          </p>
+          <h3 class="u-text-s">Take one-off payments when you need</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            You can take individual payments whenever necessary. Perfect for deposits, random repairs, bills etc.
+          </p>
+          <h3 class="u-text-s">Adjust prices any time</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            You can increase rent or fees in a matter of clicks, making any price changes quick and easy.
+          </p>
+          <h3 class="u-text-s">Save on costs</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            On an all-in basis, GoCardless is the most cost effective option. You also avoid the costs of meeting security requirements like PCI compliance.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-margin-Txl u-text-center">
+          <img src="/images/features/take-payment--property.jpg" class="vertical-page__take-payment-image vertical-page__take-payment-image-margin--property">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl">
+        <div class="grid__cell u-size1of2 u-text-center">
+          <img src="/images/features/real-time-reports.jpg" class="vertical-page__real-time-reports-image">
+        </div>
+        <div class="grid__cell u-size1of2 u-padding-Tm">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Track every step
+          </h2>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            With simple set up and easy-to-use reporting tools you can get started straight away without spending weeks training your staff.
+          </p>
+          <h3 class="u-text-s">Add customers in individually, or in bulk</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            You can add customers individually or in bulk with a CSV. We'll ask each of them to complete our payment pages.
+          </p>
+          <h3 class="u-text-s">Up to the second status reports</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            We’ll keep you updated with comprehensive, easy-to-use information on all of your payments and customers.
+          </p>
+          <h3 class="u-text-s">Export your data</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            View your data the way you want to and import it into existing software.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl">
+        <div class="grid__cell u-size1of2">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Reduce your admin
+          </h2>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            By integrating the GoCardless REST API with your website, CRM and accounts, payments can be entirely automated.
+          </p>
+          <h3 class="u-text-s">Fewer manual processes</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            Customers can instantly set up payments online eliminating paperwork and human error.
+          </p>
+          <h3 class="u-text-s">Military-grade security</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            We store bank details stored with RSA encryption and we only communicate over secure channels.
+          </p>
+          <h3 class="u-text-s">Instant email notifications</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            With instant notifications, you’ll always know exactly what has and hasn’t been paid. No need to trawl through bank statements to see whether payments have gone through.
+          </p>
+          <a href="/example-checkout" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Txl">
+            See an example payment page
+          </a>
+        </div>
+        <div class="grid__cell u-size1of2 u-text-center">
+          <img src="/images/features/payment-page--property.jpg" class="vertical-page__mobile-image">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxxl">
+        <div class="u-size2of3 u-center">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Works with your existing software
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Txs">
+            GoCardless integrates with the most popular book keeping and accounting packages to enable easy invoicing and payment reconciliation.
+          </p>
+        </div>
+        <div class="u-text-center u-margin-Vl u-padding-Vs u-size2of3 u-center">
+          <img src="/images/verticals/property-logos@2x.jpg">
+        </div>
+        <a href="/partners" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+          View all our partners
+        </a>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+  </div>
+
+  <div class="section-scroll-target" id="product">
+
+    <div class="site-container u-text-center u-padding-Txxl">
+      <div class="u-padding-Txxl">
+        <h2 class="u-text-heading u-color-heading u-text-light u-size2of3 u-center u-text-l">
+          Storage and Property companies love GoCardless Basic. Everything you need to set up, manage and collect rental payments.
+        </h2>
+        <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+          <a href="/basic" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Learn about GoCardless Basic
+          </a>
+        <div class="u-padding-Txxl u-size5of6 u-center">
+          <img src="/images/features/dashboard-frame.jpg" class="vertical-page__dashboard-image">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxl">
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Add customers individually, in bulk or with a link</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Take one-off, recurring or bulk payments online</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Your own responsive, branded payment pages</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Add a checkout button to your site, we'll do the rest</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Export all of your data easily, at any time</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Integrate with our clean, modern API with full documentation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+  </div>
+
+  <div class="section-scroll-target" id="pricing">
+
+    <div class="u-text-center u-padding-Vxxl">
+      <div class="site-container u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-xl u-text-light">
+            Pay 1%
+          </h2>
+          <p class="u-color-p u-margin-Txxs">
+            Just 1% per transaction, capped at £2
+          </p>
+          <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+          <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+          <p class="u-color-heading u-margin-Bxxs">
+            <strong>Taking more than 1000 transactions a month?</strong>
+          </p>
+          <a href="/pricing/#pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Learn about our Pro pricing
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
+          Sign up in minutes, take payments today
+        </h2>
+        <a href="/merchants/new" class="btn">Start taking payments</a>
+        <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+      </div>
+    </div>
+
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
+{% endblock %}

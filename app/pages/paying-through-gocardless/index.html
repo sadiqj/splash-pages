@@ -5,13 +5,15 @@
 
 {% block body %}
 
-<div class="page-hero paying-container__hero has-breakpoint-md has-breakpoint-sm u-relative u-sm-padding-Vm">
+<div class="page-hero paying-container__hero has-breakpoint-md has-breakpoint-sm u-relative u-sm-padding-Bm">
   <div class="site-container site-container--fluid page-hero__container">
 
-    <div class="site-header site-gutter u-cf align-btn-small u-padding-Vxs u-sm-size-full u-md-size-full">
+    <div class="site-header paying-container__site-header has-breakpoint-md u-padding-Tm u-md-padding-Hl u-cf align-btn-small u-padding-Vxs">
       <div class="u-pull-start">
-        <a href="/" class="u-sm-hidden">
-          <i class="icon-gc-logo-invert logo-header"></i>
+        <a href="/" class="paying-container__logo u-relative u-sm-hidden">
+          <figure class="site-logo">
+            <img ng-gc-svg-injector class="site-logo__image u-fill-invert" data-src="/images/logos/site-logo.svg">
+          </figure>
         </a>
       </div>
       <div class="paying-container__call u-pull-end u-color-invert u-text-heading-light u-sm-hidden">
@@ -19,12 +21,14 @@
       </div>
     </div>
 
-    <div class="page-hero__inner">
+    <div class="page-hero__inner paying-container__hero-inner has-breakpoint-sm">
       <div class="page-hero__text">
-        <a href="/" class="u-hidden u-sm-display-block u-sm-margin-Bl u-sm-margin-Tm">
-          <i class="icon-gc-logo-invert logo-header u-center"></i>
+        <a href="/" class="header-logo header-logo--invert u-hidden u-sm-display-block u-sm-margin-Bl u-text-center">
+          <figure class="site-logo u-center">
+            <img ng-gc-svg-injector class="site-logo__image u-fill-invert" data-src="/images/logos/site-logo.svg">
+          </figure>
         </a>
-        <h1 class="paying-container__hero-heading has-breakpoint-sm u-text-heading u-color-invert u-text-center hero-heading u-text-light u-md-text-xl u-sm-text-xl u-sm-margin-Bm">
+        <h1 class="paying-container__hero-heading has-breakpoint-sm u-text-heading u-color-invert u-text-center u-text-xl u-text-light u-md-text-xl u-sm-text-xl u-sm-margin-Bm">
           Taking the hassle<br class="u-hidden u-sm-display-inline"> out of paying
         </h1>
         <div class="paying-container__subtitle has-breakpoint-sm u-text-heading u-text-l u-text-center u-text-light u-color-invert u-margin-Ts u-padding-Bm u-md-text-m u-sm-text-m u-sm-size5of6 u-center">
@@ -37,13 +41,13 @@
 </div>
 
 <div class="u-background-white u-overflow-hidden">
-  <div class="site-container site-container--fluid site-gutter u-padding-Vl u-sm-padding-Tl u-sm-padding-Bn u-margin-Tl u-sm-margin-Tn u-md-margin-Tn u-md-padding-Bn">
+  <div class="site-container site-container--fluid u-padding-Vl u-sm-padding-Tl u-sm-padding-Bn u-margin-Tl u-sm-margin-Tn u-md-margin-Tn u-md-padding-Bn u-sm-padding-Hm">
     <div class="grid u-margin-Vl u-sm-margin-Tl u-sm-margin-Bs u-padding-Bl">
 
       <div class="paying-container__settings-left-column has-breakpoint-sm has-breakpoint-md grid__cell u-size1of2 u-relative u-md-margin-Ll">
         <i class="paying-container__settings-icon has-breakpoint-sm u-margin-Bs u-sm-center"></i>
-        <h2 class="u-text-heading-light u-text-xl u-sm-text-l u-md-text-l u-margin-Bxxs u-sm-text-center">You're in control</h2>
-        <div class="u-text-heading-light u-text-l u-sm-text-m u-md-text-m u-color-meta u-size9of12 u-md-size-full u-sm-text-center u-sm-center">
+        <h2 class="u-text-heading-light u-text-l u-sm-text-l u-md-text-l u-margin-Bxxs u-sm-text-center">You're in control</h2>
+        <div class="u-text-heading-light u-text-m u-sm-text-m u-md-text-m u-color-meta u-size9of12 u-md-size-full u-sm-text-center u-sm-center">
           View and manage your<br class="u-hidden u-md-display-inline"> payments at the click<br class="u-hidden u-md-display-inline"> of a button
         </div>
         <ul class="paying-container__control-bullet-points has-breakpoint-sm u-margin-Vm u-text-heading-light u-padding-Vxxs u-text-m u-sm-text-s u-md-text-s u-sm-center">
@@ -66,7 +70,7 @@
         <img class="paying-container__dashboard-image has-breakpoint-md u-hidden u-md-display-block u-md-margin-Ll" src="/images/products/paying-through-gocardless-dashboard@2x.png">
       </div>
 
-      <div class="grid__cell u-size1of2 u-relative u-md-hidden u-sm-hidden">
+      <div class="grid__cell paying-container__dashboard-cell u-relative u-md-hidden u-sm-hidden">
         <img class="paying-container__dashboard-image" src="/images/products/paying-through-gocardless-dashboard@2x.png">
       </div>
 
@@ -75,12 +79,12 @@
 
   <hr class="u-margin-Bn">
 
-  <div class="paying-container__secure u-md-padding-Hl">
-    <div class="site-container site-container--fluid site-gutter u-padding-Vl">
+  <div class="paying-container__secure u-md-padding-Hl u-sm-padding-Hm">
+    <div class="site-container site-container--fluid u-padding-Vl">
       <div class="u-margin-Vl u-padding-Vl u-sm-margin-Vn u-sm-padding-Bn">
         <i class="paying-container__security-icon u-margin-Bs u-center"></i>
-        <h2 class="u-text-center u-text-heading-light u-text-xl u-sm-text-l u-md-text-l u-margin-Bxxs">We keep you safe</h2>
-        <div class="u-center u-text-center u-text-heading-light u-text-l u-sm-text-m u-md-text-m u-color-meta u-padding-Bs">
+        <h2 class="u-text-center u-text-heading-light u-text-l u-sm-text-l u-md-text-l u-margin-Bxxs">We keep you safe</h2>
+        <div class="u-center u-text-center u-text-heading-light u-text-m u-sm-text-m u-md-text-m u-color-meta u-padding-Bs">
           Our best-in-class systems ensure<br class="u-sm-hidden">
           your details are totally secure
         </div>
@@ -89,24 +93,24 @@
 
           <div class="grid__cell u-size1of3 u-sm-size-full u-sm-margin-Bl">
             <i class="paying-container__guarantee-icon u-margin-Bxxs"></i>
-            <h3 class="u-text-heading-light u-text-l u-sm-text-m u-md-text-m u-margin-Bxxs">Direct Debit Guarantee</h3>
-            <p class="u-text-m u-sm-text-s u-md-text-s u-text-heading-light u-color-meta">
+            <h3 class="u-text-heading-light u-text-m u-sm-text-m u-md-text-m u-margin-Bxxs">Direct Debit Guarantee</h3>
+            <p>
               If anything goes wrong with a transaction, payers are entitled to an instant refund from their bank.
             </p>
           </div>
 
           <div class="grid__cell u-size1of3 u-sm-size-full u-sm-margin-Bl">
             <i class="paying-container__military-icon u-margin-Bxxs"></i>
-            <h3 class="u-text-heading-light u-text-l u-sm-text-m u-md-text-m u-margin-Bxxs">Military grade encryption</h3>
-            <p class="u-text-m u-sm-text-s u-md-text-s u-text-heading-light u-color-meta">
+            <h3 class="u-text-heading-light u-text-m u-sm-text-m u-md-text-m u-margin-Bxxs">Military grade encryption</h3>
+            <p>
               All sensitive details are RSA encrypted, and only communicated over secure channels.
             </p>
           </div>
 
           <div class="grid__cell u-size1of3 u-sm-size-full u-sm-margin-Bl">
             <i class="paying-container__fca-icon u-margin-Bxxs"></i>
-            <h3 class="u-text-heading-light u-text-l u-sm-text-m u-md-text-m u-margin-Bxxs">Authorised by the FCA</h3>
-            <p class="u-text-m u-sm-text-s u-md-text-s u-text-heading-light u-color-meta">
+            <h3 class="u-text-heading-light u-text-m u-sm-text-m u-md-text-m u-margin-Bxxs">Authorised by the FCA</h3>
+            <p>
               GoCardless is an Authorised Payment Institution regulated by the Financial Conduct Authority.
             </p>
           </div>
@@ -118,7 +122,7 @@
 
   <hr class="u-margin-Tn">
 
-  <div class="site-container site-container--fluid site-gutter u-padding-Tl u-sm-padding-Tn u-sm-margin-Bl">
+  <div class="site-container site-container--fluid u-padding-Tl u-sm-padding-Tn u-sm-margin-Bl u-sm-padding-Hm">
     <div class="grid u-margin-Tl u-padding-Tl u-sm-margin-Bl u-md-margin-Hl">
 
       <div class="paying-container__convenience-left-column has-breakpoint-md grid__cell u-size1of2 u-padding-Rn u-overflow-hidden u-sm-hidden u-md-padding-Rl">
@@ -128,10 +132,10 @@
       <div class="paying-container__convenience-right-column has-breakpoint-md has-breakpoint-sm grid__cell u-sm-padding-Hs u-relative">
         <div class="u-sm-margin-Ln u-sm-padding-Ln u-md-margin-Bl u-md-padding-Bl">
           <i class="paying-container__convenience-icon has-breakpoint-sm u-margin-Bs u-sm-center"></i>
-          <h2 class="u-text-heading-light u-text-xl u-sm-text-l u-md-text-l u-margin-Bxxs u-sm-text-center">
+          <h2 class="u-text-heading-light u-text-l u-sm-text-l u-md-text-l u-margin-Bxxs u-sm-text-center">
             It couldn't be simpler
           </h2>
-          <div class="u-text-heading-light u-text-l u-sm-text-m u-md-text-m u-color-meta u-padding-Bl u-sm-text-center">
+          <div class="u-text-heading-light u-text-m u-sm-text-m u-md-text-m u-color-meta u-padding-Bl u-sm-text-center">
             Our secure payment page takes less than a minute to fill in, and once set up you never have to lift a finger again.
           </div>
 
@@ -158,29 +162,29 @@
 
   <hr class="u-margin-Tn">
 
-  <div class="site-container site-container--fluid site-gutter u-padding-Vl u-margin-Vl u-sm-margin-Ts">
+  <div class="site-container site-container--fluid u-padding-Vl u-margin-Vl u-sm-margin-Ts u-sm-padding-Hm">
     <div class="u-sm-hidden">
-      <h2 class="u-text-heading u-text-center u-color-meta">
-        Find out even more about paying through GoCardless
+      <h2 class="u-text-heading u-text-light u-text-center u-color-meta">
+        Find out more about paying through GoCardless
       </h2>
-      <a href="/faq/customers" class="u-center u-size2of5 u-md-size3of5 btn btn--hollow btn--large
+      <a href="/faq/customers" class="u-center u-size1of5 u-md-size3of5 btn
       u-margin-Tm u-padding-Hn">
-        Read our frequently asked questions
+        Read our FAQ
       </a>
     </div>
     <div class="u-hidden u-sm-display-block">
       <h2 class="u-text-heading u-text-center u-color-meta">
         Have any questions?
       </h2>
-      <a href="tel:020 7183 8674" class="u-center u-size2of5 u-sm-size-full btn btn--hollow btn--large
+      <a href="tel:020 7183 8674" class="u-center u-size2of5 u-sm-size-full btn
       u-margin-Tm u-padding-Hn">
-       Call us on 020 7183 8674
+       Call us 020 7183 8674
       </a>
     </div>
   </div>
 </div>
 
-<div class="site-container site-container--fluid site-gutter u-padding-Ts">
+<div class="site-container site-container--fluid u-padding-Ts u-sm-padding-Hm">
   {% include "_site_footer_responsive.html" %}
 </div>
 

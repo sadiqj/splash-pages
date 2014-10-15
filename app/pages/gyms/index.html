@@ -1,0 +1,371 @@
+{% extends "plain.html" %}
+
+{% block title %}Collect Membership Fees For Your Gym &amp; Fitness Club{% endblock %}
+{% block meta_tags %}<meta name="description" content="GoCardless allows gym &amp; fitness club owners to easily collect recurring payments from members. Automatically collect fees &amp; retain customers with lower churn.">{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+  <div class="page-hero page-hero--gyms page-hero--medium u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-header--invert u-relative u-cf">
+        {% include "_site_header_invert.html" %}
+      </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light">
+            Let us do the heavy lifting
+          </h1>
+          <div class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">
+            GoCardless makes it easy for gyms and fitness clubs to take <br>recurring payments from their members
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-nav">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xxs u-text-light u-text-no-smoothing">
+      <div class="site-container u-padding-Vm">
+        <ul class="u-pull-start u-margin-Txxs">
+          <li class="sticky-nav__item">
+            <a href="#overview" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Overview
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#features" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Features
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#product" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Product
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#pricing" class="sticky-nav__link" du-scrollspy ng-gc-smooth-scroll>
+              Pricing
+            </a>
+          </li>
+        </ul>
+        <a href="/merchants/new" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+          Start taking payments
+        </a>
+      </div>
+      <hr class="u-margin-An">
+    </div>
+  </div>
+
+  <div class="section-scroll-target" id="overview">
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+          Thousands of gyms use GoCardless to manage their payments
+        </h2>
+        <p class="u-text-s u-color-p u-margin-Txs u-size5of8 u-center">
+          Spend less time worrying about setting up and managing your payments.<br>
+          GoCardless gives you the freedom to focus on your members.
+        </p>
+        <div class="grid u-margin-Tl u-padding-Tm">
+          <div class="grid__cell u-size1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/membership-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/membership-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Manage memberships
+            </div>
+            <p class="u-size8of10 u-center u-color-p u-margin-Txs">
+              Membership plans let you easily set up and manage payments
+            </p>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/gym-member-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/gym-member-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Keep your members
+            </div>
+            <p class="u-size8of10 u-center u-color-p u-margin-Txs">
+              Stop losing, or annoying, members with failing payments
+            </p>
+          </div>
+          <div class="grid__cell u-size1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/add-partner-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/add-partner-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Partner up
+            </div>
+            <p class="u-size8of10 u-center u-color-p u-margin-Txs">
+              GoCardless works with the most popular club management software
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="section-scroll-target" id="features">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl">
+        <div class="grid__cell u-size1of2">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Use plans to manage memberships
+          </h2>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            GoCardless lets you separate your financial relationship with your members from the service you provide.
+          </p>
+          <h3 class="u-text-s">Easily set up membership plans</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            Create your own plans and add multiple members to them at a time. Take payments when it suits you and your members.
+          </p>
+          <h3 class="u-text-s">Collect membership fees automatically</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            Your members authorise you to collect payments from them whenever they’re due so you'll always be paid on time.
+          </p>
+          <h3 class="u-text-s">Quick and simple price updates</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            You can update prices in a matter of clicks, making upgrades, downgrades, annual price increases and pay as you go memberships quick and easy.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-margin-Tl u-text-center">
+          <img src="/images/features/plans.jpg" class="vertical-page__take-payment-image vertical-page__take-payment-image-margin--gyms">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl">
+        <div class="grid__cell u-size1of2 u-text-center">
+          <img src="/images/features/payment-page--gyms.jpg" class="vertical-page__mobile-image">
+        </div>
+        <div class="grid__cell u-size1of2 u-margin-Tm">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Set up members in two clicks
+          </h2>
+          <p class="u-color-p u-margin-Bm">
+            Set up customers and payments one at a time or in bulk with a CSV. We'll walk you through the whole process in our short and simple <a href="https://gocardless.com/how-to#overview-of-dashboard" class="u-link-medium-gray u-text-underline">how to videos</a>.
+          </p>
+          <h3 class="u-text-s">Military-grade security</h3>
+          <p class="u-color-p u-margin-Bm">
+            We store all bank details encrypted and only ever communicate over secure channels.
+          </p>
+          <h3 class="u-text-s">Simple online sign up</h3>
+          <p class="u-color-p u-margin-Bm">
+            Let new members sign up online from your website, or by adding a simple link to emails. Our online form takes seconds to fill out, so you can even sign people up on the spot. No paperwork involved.
+          </p>
+          <h3 class="u-text-s">Your logo, front and centre</h3>
+          <p class="u-color-p u-margin-Bm">
+            GoCardless lets you add your logo to our payment forms, and we can automatically send customers back to your site after paying.
+          </p>
+          <a href="/example-checkout" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Txl">
+            See an example payment page
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxxl">
+        <div class="grid__cell u-size1of2 u-margin-Tm">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Hold on to your members
+          </h2>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            You’ve worked hard to win your members&thinsp;&mdash;&thinsp;we’ll help you to keep them.
+          </p>
+          <h3 class="u-text-s">Higher member retention</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            Payment failures make it more likely that your customers will let their memberships lapse. With GoCardless, payments won't fail because of card expiry.
+          </p>
+          <h3 class="u-text-s">Email notifications</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            If a payment does fail or a member cancels their membership, we'll notify you immediately. GoCardless makes retrying failed payments easy and quick.
+          </p>
+          <h3 class="u-text-s">Automatic renewals</h3>
+          <p class="u-size5of6 u-color-p u-margin-Bm">
+            With GoCardless, paying and renewing membership fees can be automated meaning less hassle for your members and making it more likely that they’ll stick with you.
+          </p>
+        </div>
+        <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl">
+          <img src="/images/features/real-time-reports.jpg" class="vertical-page__real-time-reports-image">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxxl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Bl">
+            Works with your existing software
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Txs">
+            GoCardless has partnered up with the most popular management software in the gym and fitness industry, giving you everything you need to run your business in one place.
+          </p>
+        </div>
+        <div class="u-text-center u-margin-Vl u-padding-Vs u-size1of2 u-center">
+          <img src="/images/verticals/gyms-logos@2x.jpg">
+        </div>
+        <a href="/partners" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+          View all our partners
+        </a>
+      </div>
+    </div>
+
+    <div class="story-hero--crossfit-tonbridge">
+      <div class="site-container u-text-center u-padding-Vxxl">
+        <div class="u-padding-Vxxl">
+          <div class="u-padding-Bxxl u-size3of4 u-center">
+            <p class="u-text-heading u-color-invert u-text-l u-text-light">
+              “With GoCardless and TeamUp I now spend just an hour a month managing payments, so I can concentrate on the other jobs that need doing”
+            </p>
+          </div>
+          <img src="/images/testimonials/crossfit__avatar.png" class="u-size1of12 u-text-center u-margin-Bxs">
+          <div class="u-color-invert u-text-heading u-text-m u-text-semi">Alex Clarke</div>
+          <div class="u-color-invert u-text-heading u-text-xs u-margin-Bs">CrossFit Tonbridge</div>
+          <a href="/stories/crossfit-tonbridge" class="u-link-invert u-text-heading u-color-invert u-text-semi u-text-upcase u-text-xxs">
+            Read the full story
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-scroll-target" id="product">
+
+    <div class="site-container u-text-center u-padding-Txxl">
+      <div class="u-padding-Txxl">
+        <h2 class="u-text-heading u-color-heading u-text-light u-text-l">
+          Gyms love GoCardless Basic.<br>Everything you need to set up members,<br>manage subscriptions and take payments
+        </h2>
+        <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+          <a href="/basic" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Learn about GoCardless Basic
+          </a>
+        <div class="u-padding-Txxl u-size5of6 u-center">
+          <img src="/images/features/dashboard-frame.jpg" class="vertical-page__dashboard-image">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="grid u-padding-Vxl">
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Add customers individually, in bulk or with a link</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Take one-off, recurring or bulk payments online</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Your own responsive, branded payment pages</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Add a checkout button to your site, we'll do the rest</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Export all of your data easily, at any time</p>
+          </div>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <div class="u-padding-Vl u-padding-Hxxl">
+            <figure class="svg-icon svg-icon--xsmall u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+            </figure>
+            <p class="u-margin-Txs u-color-heading">Integrate with our clean, modern API with full documentation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+  </div>
+
+  <div class="section-scroll-target" id="pricing">
+
+    <div class="u-text-center u-padding-Vxxl">
+      <div class="site-container u-padding-Vxl">
+        <div class="u-size1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-xl u-text-light">
+            Pay 1%
+          </h2>
+          <p class="u-color-p u-margin-Txxs">
+            Just 1% per transaction, capped at £2
+          </p>
+          <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+          <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
+          <p class="u-color-heading u-margin-Bxxs">
+            <strong>Taking more than 1000 transactions a month?</strong>
+          </p>
+          <a href="/pricing/#pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Learn about our Pro pricing
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
+          Sign up in minutes, take payments today
+        </h2>
+        <a href="/merchants/new" class="btn">Start taking payments</a>
+        <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+      </div>
+    </div>
+
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
+{% endblock %}

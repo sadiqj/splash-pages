@@ -1,0 +1,118 @@
+.page-hero {
+  background: $primary-color;
+}
+
+.page-hero__container {
+  height: 100%;
+}
+
+.page-hero__inner {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: -76px;
+}
+
+.page-hero__text {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+.page-hero--home {
+  background: url('/images/hero/new-home-hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--creative-industries {
+  background: url('/images/hero/hero-creative-industries.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--lending {
+  background: url('/images/hero/hero-lending.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--gyms {
+  background: url('/images/hero/hero-gyms.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--professional-services {
+  background: url('/images/hero/hero-professional-services.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--property {
+  background: url('/images/hero/hero-property.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--saas {
+  background: url('/images/hero/hero-saas.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--sports-clubs {
+  background: url('/images/hero/hero-sports-clubs.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--europe {
+  background: url('/images/hero/new-europe-hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--pro {
+  background: url('/images/hero/pro-hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--about {
+  background: url('/images/hero/about-hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--team {
+  background: url('/images/hero/hero-team.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--large {
+  height: 585px;
+}
+
+.page-hero--medium {
+  height: 470px;
+}
+
+.page-hero--small {
+  height: 165px;
+}

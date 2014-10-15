@@ -1,0 +1,165 @@
+@import 'variables';
+
+.paying-container__logo {
+  top: 5px;
+}
+
+.paying-container__hero {
+  height: 400px;
+  background: url('/images/hero/hero-paying-bg@2x.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.paying-container__hero-heading {
+  line-height: 48px;
+}
+
+.paying-container__settings-left-column {
+  width: 360px;
+  margin-right: 120px;
+}
+
+.paying-container__convenience-right-column {
+  width: 360px;
+  margin-left: 120px;
+}
+
+.paying-container__settings-icon {
+  @include icon('/images/icons/paying-settings', 48px, 48px);
+}
+
+.paying-container__security-icon {
+  @include icon('/images/icons/paying-security', 48px, 48px);
+  display: block; //needed for centering - u-block doesn't override
+}
+
+.paying-container__convenience-icon {
+  @include icon('/images/icons/paying-convenience', 48px, 48px);
+}
+
+.paying-container__fca-icon {
+  @include icon('/images/icons/paying-fca', 25px, 25px);
+}
+
+.paying-container__military-icon {
+  @include icon('/images/icons/paying-military', 24px, 25px);
+}
+
+.paying-container__guarantee-icon {
+  @include icon('/images/icons/paying-guarantee', 25px, 25px);
+}
+
+.paying-container__dashboard-cell {
+  width: 0; // hacky
+}
+
+.paying-container__dashboard-image {
+  position: absolute;
+  top: -41px;
+  left: -36px;
+  max-width: 2000px; // arbitrarily long value to override image rules - this element set with height!
+  height: 596px;
+}
+
+.paying-container__tweet {
+  border: 1px solid $border-gray;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px -3px $gray;
+}
+
+.paying-container__control-list-item:before {
+  content: "•  ";
+  color: $primary-color-lighten;
+}
+
+.paying-container__secure {
+  background: linear-gradient(135deg, white 0%, $light-gray-lighten 100%);
+}
+
+.paying-container__call {
+  margin-top: 2px;
+}
+
+.paying-container__payment-page {
+  margin-top: -6px;
+}
+
+.paying-container__hero-inner {
+  top: -63px;
+}
+
+@include breakpoint-medium {
+  .paying-container__hero.has-breakpoint-md {
+    height: 300px;
+  }
+
+  .paying-container__dashboard-image.has-breakpoint-md {
+    height: 619px;
+    top: -33px;
+    left: 100%;
+  }
+
+  .paying-container__settings-left-column.has-breakpoint-md {
+    width: 320px;
+  }
+
+  .paying-container__convenience-right-column.has-breakpoint-md {
+    margin-left: 0;
+    width: 50%;
+  }
+
+  .paying-container__payment-page.has-breakpoint-md {
+    position: absolute;
+    right: 100%;
+    height: 390px;
+  }
+
+  .paying-container__site-header.has-breakpoint-md {
+    min-width: 0;
+  }
+
+}
+
+@include breakpoint-small {
+  .paying-container__settings-left-column.has-breakpoint-sm,
+  .paying-container__convenience-right-column.has-breakpoint-sm {
+    width: 100%;
+    margin: 0;
+  }
+
+  .paying-container__hero.has-breakpoint-sm {
+    height: auto;
+  }
+
+  .paying-container__subtitle.has-breakpoint-sm {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+
+  .paying-container__hero-heading.has-breakpoint-sm {
+    line-height: 38px;
+  }
+
+  .paying-container__settings-icon.has-breakpoint-sm,
+  .paying-container__convenience-icon.has-breakpoint-sm {
+    display: block;
+    // Needed for centering - would be nice to use u-sm-display-block here
+    // in the HTML but it gets overridden by inline-block set by icon mixin
+  }
+
+  .paying-container__control-bullet-points.has-breakpoint-sm {
+    width: 240px;
+  }
+
+  .paying-container__tweet.has-breakpoint-sm {
+    margin-left: auto;
+    width: auto;
+  }
+
+  .paying-container__hero-inner.has-breakpoint-sm {
+    top: auto;
+  }
+
+}

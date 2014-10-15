@@ -1,91 +1,154 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Rock Choir - GoCardless Customer Stories{% endblock %}
 {% block meta_tags %}<meta name="description" content="Rock Choir cut failed payments to 1% by switching to online Direct Debit with GoCardless. Read their customer story of using GoCardless.">{% endblock %}
 
-{% block content %}
-  <div class="grid grid--center u-margin-Bl">
-   <h1 class="page-heading u-padding-Bs">Rock Choir cut failed payments to 1% by switching to online Direct Debit with GoCardless</h1>
-    <div class="grid__cell u-size2of12">
-      <img src="/images/stories/rock-choir/headshot.jpg" class="u-border-circle">
-    </div>
-    <div class="grid__cell u-size8of12">
+{% block body %}
 
-        <h2 class="u-text-heading">&ldquo;Rather than chasing people to update their details, we can now retry failed payments at the click of a button&rdquo;</h2>
-        <span class="testimonial--citation">
-          Dave Lusher, Rock Choir
-        </span>
-        <br>
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "_site_header.html" %}
     </div>
   </div>
 
-  <div class="grid grid--center">
-    <div class="grid__cell u-size10of12 u-padding-Bs">
-      <h3 class="section-heading">
-        GoCardless helped them&hellip;
-      </h3>
-      <p class="para">
-        <ul class="list">
-          <li><strong>Reduce payment failure rates</strong> to 1%</li>
-          <li><strong>Retry failed payments instantly</strong></li>
-          <li><strong>Grow past 16,000</strong> members</li>
-        </ul>
-      </p>
-    </div>
+  <div class="page-hero u-padding-Vxxl">
+    <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light u-margin-Vxm">
+      Rock Choir
+    </h1>
   </div>
 
-  <div class="grid grid--center">
-    <div class="grid__cell u-size10of12">
-      <h3 class="section-heading">
-       Challenge
-      </h3>
-      <div class="section-subheading">
-      “I seemed to spend all my time chasing people”
+  <div class="site-container u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <h2 class="u-text-heading u-color-heading u-text-l u-text-light
+      u-size3of4 u-center u-text-center">
+        Rock Choir cut failed payments to 1% by switching to online Direct Debit with GoCardless
+      </h2>
+      <div class="grid u-margin-Txxl u-padding-Txm">
+        <div class="grid__cell u-text-center u-size1of3">
+          <figure class="svg-icon svg-icon--xsmall u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+          </figure>
+          <p class="u-color-heading u-margin-Txs u-size5of6 u-center">
+            GoCardless helped them reduce payment failure rates to 1%
+          </p>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3">
+          <figure class="svg-icon svg-icon--xsmall u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+          </figure>
+          <p class="u-color-heading u-margin-Txs u-size5of6 u-center">
+            GoCardless helped them retry failed payments instantly
+          </p>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3">
+          <figure class="svg-icon svg-icon--xsmall u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+          </figure>
+          <p class="u-color-heading u-margin-Txs u-size5of6 u-center">
+            We helped them grow past 16,000 members
+          </p>
+        </div>
       </div>
-      <p class="para">
-        <a href="http://www.rockchoir.com/" rel="nofollow">Rock Choir</a> is the UK’s leading contemporary choir group. With members all around the country, collecting regular monthly payments became a logistical nightmare. “We originally asked members to pay by card, but the failure rates on these approached 5% every month.”  This was largely due to card expiry &amp; cancellation.
-      </p>
-      <p class="para">
-        “I seemed to spend all my time chasing people to update their card details - there was no way of retrying these payments,” explained director David Lusher.
-      </p>
-
-      <h3 class="section-heading">
-        Solution
-      </h3>
-      <div class="section-subheading">
-      “Members can now easily set up and manage their payments”
-      </div>
-      <p class="para">
-        Rock Choir realised that the high retention rates associated with Direct Debit may offer the solution they needed.  After considering various providers, Rock Choir integrated GoCardless into their website. “Members can now easily set up and manage their payments from our custom CRM.”
-      </p>
-
-      <h3 class="section-heading">
-       Benefits
-      </h3>
-      <div class="section-subheading">
-      “The whole payments process is much less time consuming”
-      </div>
-      <p class="para">
-        Thanks to GoCardless, recurring failure rates were slashed to around 1%, dramatically reducing the administrative burden.  Retrying failed payments also became much simpler.  “Rather than chasing people to update their details, we can now retry failed payments at the click of a button”.
-      </p>
-      <p class="para">
-        “Since using GoCardless, the whole payments process is much less time consuming and has allowed us to focus on strategy and expansion.”
-      </p>
-
     </div>
   </div>
 
-  <hr>
+  <hr class="u-margin-An">
 
-  <div class="grid grid--center u-margin-Tl">
-    <div class="grid__cell u-size10of12">
-      <h1 class="section-heading">Read more customer stories...</h1>
+  <div class="site-container u-padding-Vxxl">
+    <div class="grid u-padding-Vxl">
+      <div class="grid__cell u-size1of2">
+        <h2 class="u-text-heading u-center u-color-heading u-text-l
+        u-text-light u-size3of4">
+          “I seemed to spend all my time chasing people”
+        </h2>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <p class="u-color-p">
+          <a href="http://www.rockchoir.com/" class="u-link-medium-gray u-text-underline" target="_blank">Rock Choir</a> is the UK’s leading contemporary choir group. With members all around the country, collecting regular monthly payments became a logistical nightmare. “We originally asked members to pay by card, but the failure rates on these approached 5% every month.”  This was largely due to card expiry &amp; cancellation.
+        </p>
+        <p class="u-color-p u-margin-Tm">
+          “I seemed to spend all my time chasing people to update their card details - there was no way of retrying these payments,” explained director David Lusher.
+        </p>
+      </div>
     </div>
   </div>
 
-  {% include "stories/_all_stories.html" %}
-{% endblock %}
+  <div class="story-hero--rock-choir">
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="u-padding-Bxxl u-size2of3 u-center">
+          <p class="u-text-heading u-color-invert u-text-l u-text-light">
+            “Rather than chasing people to update their details, we can now retry failed payments at the click of a button.”
+          </p>
+        </div>
+        <img src="/images/testimonials/rock-choir__avatar.png" class="u-size1of12 u-text-center u-margin-Bxs">
+        <div class="u-color-invert u-text-heading u-text-m u-text-semi">Dave Lusher</div>
+        <div class="u-color-invert u-text-heading u-text-xs">Rock Choir</div>
+      </div>
+    </div>
+  </div>
 
-{% block footer_content %}
-  {% include "_affixed_cta_component.html" %}
+  <div class="site-container u-padding-Vxxl">
+    <div class="grid u-padding-Vxl">
+      <div class="grid__cell u-size1of2">
+        <h2 class="u-text-heading u-center u-color-heading u-text-l
+        u-text-light u-size3of4">
+          “Members can now easily set up and manage their payments”
+        </h2>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <p class="u-color-p">
+          Rock Choir realised that the high retention rates associated with Direct Debit may offer the solution they needed. After considering various providers, Rock Choir integrated GoCardless into their website. “Members can now easily set up and manage their payments from our custom CRM.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-padding-Vxxl">
+    <div class="grid u-padding-Vxl">
+      <div class="grid__cell u-size1of2">
+        <h2 class="u-text-heading u-center u-color-heading u-text-l
+        u-text-light u-size3of4">
+          “The whole payments process is much less time consuming”
+        </h2>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <p class="u-color-p">
+          Thanks to GoCardless, recurring failure rates were slashed to around 1%, dramatically reducing the administrative burden. Retrying failed payments also became much simpler. “Rather than chasing people to update their details, we can now retry failed payments at the click of a button”.
+        </p>
+        <p class="u-color-p u-margin-Tm">
+          “Since using GoCardless, the whole payments process is much less time consuming and has allowed us to focus on strategy and expansion.”
+        </p>
+        <a href="/membership" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Txl">
+            See how GoCardless works for membership
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
+        Sign up in minutes, take payments today
+      </h2>
+      <a href="/merchants/new" class="btn">Start taking payments</a>
+      <p class="u-color-p u-margin-Ts">
+        No set up costs, no monthly fees, no hidden charges
+      </p>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
 {% endblock %}

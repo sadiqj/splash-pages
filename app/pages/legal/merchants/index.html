@@ -1,21 +1,33 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Merchant Agreement{% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <div class="grid">
-    {% include "legal/_sidebar.html" %}
-    <div class="grid__cell u-size8of12 u-padding-Bl">
-      <div class="row">
-          <header>
-            <h3 class="page-heading">Merchant agreement</h3>
-          </header>
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero u-padding-Vxxl">
+    <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light u-margin-Vxm">
+      Our terms of service
+    </h1>
+  </div>
+
+  <div class="site-container u-padding-Vxxl grid">
+    <div class="u-padding-Vxl">
+      {% include "legal/_sidebar.html" %}
+      <div class="grid__cell u-size8of12">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">Merchant agreement</h2>
         <p class="para">
           GoCardless enables suppliers to let their customers pay securely by direct
           debit over the internet. We also allow suppliers to monitor the payments
           that they receive through GoCardless. This document sets out the terms of
-          the contract ("<i>Contract</i>") between you, the supplier, and GoCardless for
+          the contract ("<em>Contract</em>") between you, the supplier, and GoCardless for
           the payment services provided by GoCardless. These terms and conditions
           are available on our website and you may ask for a copy of them at any
           time while you have an account with us.
@@ -36,7 +48,7 @@
           from your customer for any goods or services that you have provided to them.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Your GoCardless Account
         </h3>
         <p class="para">
@@ -46,7 +58,7 @@
         </p>
         <p class="para">
           By setting up your GoCardless account, you consent to us processing
-          payments as detailed in this document (see <a href="#processing-payments">Processing payments through GoCardless</a> and <a href="#receiving-payouts">Receiving payouts from GoCardless</a>). We may apply limits for any payment transactions that take place through your GoCardless account.  We will notify you of any limits and any changes that we make to them.
+          payments as detailed in this document (see <a href="#processing-payments" class="u-link-medium-gray u-text-underline">Processing payments through GoCardless</a> and <a href="#receiving-payouts" class="u-link-medium-gray u-text-underline">Receiving payouts from GoCardless</a>). We may apply limits for any payment transactions that take place through your GoCardless account.  We will notify you of any limits and any changes that we make to them.
         </p>
         <p class="para">
           You are prohibited from doing any of the following:
@@ -63,7 +75,7 @@
           </li>
         </ul>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Permitted third party uses of your account
         </h3>
         <p class="para">
@@ -78,7 +90,8 @@
           responsibility or liability to you for the performance of payment services.
         </p>
 
-        <h3 class="section-heading rel">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+          <span id="security"></span>
           Security of your GoCardless Account
         </h3>
         <p class="para">
@@ -94,7 +107,7 @@
           The User Details are the property of GoCardless and may be immediately revoked or terminated by GoCardless if you share the same with any third party, or otherwise breach the Contract.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           The GoCardless API
         </h3>
         <p class="para">
@@ -104,8 +117,8 @@
           You are prohibited from interfacing with the GoCardless API in a way which GoCardless has stated is not permitted in the current version of the GoCardless Documentation or the publicly available documentation relating to the system.
         </p>
 
-        <h3 class="section-heading rel">
-          <span class="anchor-offset" id="processing-payments"></span>
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+          <span id="processing-payments"></span>
           Processing payments through GoCardless
         </h3>
         <p class="para">
@@ -118,30 +131,30 @@
           Funds collected from your customer's bank will be received into an account separate from our main operating accounts and allocated to your name within the GoCardless payment system.
         </p>
 
-        <h3 class="section-heading rel">
-          <span class="anchor-offset" id="receiving-payouts"></span>
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+          <span id="receiving-payouts"></span>
           Receiving payouts from GoCardless
         </h3>
         <p class="para">
-          Any funds that we receive from your customers will be allocated to your GoCardless account immediately before being paid out as detailed in this Contract.  By entering into this Contract you are providing us with a payment instruction requesting us to execute a payment order seven business days after every transaction. The amount of funds held within your GoCardless account attributable to that transaction will be transferred to the bank account that you have nominated for these purposes, after we have made any authorised deductions (see <a href="#deductions">Deductions, payments and invoicing</a>).
+          Any funds that we receive from your customers will be allocated to your GoCardless account immediately before being paid out as detailed in this Contract.  By entering into this Contract you are providing us with a payment instruction requesting us to execute a payment order seven business days after every transaction. The amount of funds held within your GoCardless account attributable to that transaction will be transferred to the bank account that you have nominated for these purposes, after we have made any authorised deductions (see <a href="#deductions" class="u-link-medium-gray u-text-underline">Deductions, payments and invoicing</a>).
         </p>
         <p class="para">
           You are not entitled to, and will not receive, any interest in relation to funds that are associated with your account within the GoCardless payment system.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Cancelling payment transactions
         </h3>
         <p class="para">
-          If for any reason you would like to cancel a payment from GoCardless account to you, you can do so at any time until the end of the business day before the day agreed to make the payment.  You can cancel by notifying us by email to <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or by phone using the contact details provided on the GoCardless website.
+          If for any reason you would like to cancel a payment from GoCardless account to you, you can do so at any time until the end of the business day before the day agreed to make the payment.  You can cancel by notifying us by email to <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or by phone using the contact details provided on the GoCardless website.
         </p>
 
-        <h3 class="section-heading rel">
-          <span class="anchor-offset" id="deductions"></span>
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
+          <span id="deductions"></span>
           Deductions, payments and invoicing
         </h3>
         <p class="para">
-          You agree to pay GoCardless the applicable fees relating to each payment processed by GoCardless as notified to you from time to time. Our fees consist of any funds which accrue on the funds relating to any particular payment together with the fees set out on the GoCardless website our <a href="/pricing">pricing section</a>. All fees are due immediately and are non-refundable, except as otherwise expressly noted herein. You authorise GoCardless to deduct the applicable fees in respect of each payment when the relevant payment is made and funds are transferred from your GoCardless payment account to your bank account.
+          You agree to pay GoCardless the applicable fees relating to each payment processed by GoCardless as notified to you from time to time. Our fees consist of any funds which accrue on the funds relating to any particular payment together with the fees set out on the GoCardless website our <a href="/pricing" class="u-link-medium-gray u-text-underline">pricing section</a>. All fees are due immediately and are non-refundable, except as otherwise expressly noted herein. You authorise GoCardless to deduct the applicable fees in respect of each payment when the relevant payment is made and funds are transferred from your GoCardless payment account to your bank account.
         </p>
         <p class="para">
           In addition to the fees mentioned in the above paragraph, GoCardless may also deduct amounts that take into account the following when a payment is made from your GoCardless payment account to your bank account.
@@ -174,11 +187,11 @@
         </p>
 
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Unauthorised payment transactions
         </h3>
         <p class="para">
-          Upon becoming aware of any unauthorised or incorrectly executed payment transaction involving funds connected with your use of GoCardless (including any fraudulent payments/attempted payments out of those funds to you or others), you must notify us by email to <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or by phone using the contact details provided on the GoCardless website.
+          Upon becoming aware of any unauthorised or incorrectly executed payment transaction involving funds connected with your use of GoCardless (including any fraudulent payments/attempted payments out of those funds to you or others), you must notify us by email to <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or by phone using the contact details provided on the GoCardless website.
         </p>
         <p class="para">
           In relation to unauthorised payment transactions, you must contact us as set out above without undue delay and in any event no later than 13 months after the date of the relevant payment transaction from your account. Following any investigations that we may undertake, where you have notified us in the above circumstances we will immediately arrange for the refund of the amount of the unauthorised payment transaction to you and any related interest and charges. We will not be liable to make or arrange any further payments to you.
@@ -191,7 +204,7 @@
             unauthorised payment transactions arising from the use of your GoCardless account details when these have been lost or stolen; or
           </li>
           <li>
-            where you have failed to keep your GoCardless account details safe (outlined under <a href="#security">Security of your GoCardless account</a>).
+            where you have failed to keep your GoCardless account details safe (outlined under <a href="#security" class="u-link-medium-gray u-text-underline">Security of your GoCardless account</a>).
           </li>
         </ul>
         <p class="para">
@@ -209,22 +222,22 @@
           </li>
         </ul>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Suspected Fraud/Illegal Activity by your Customers
         </h3>
         <p class="para">
-          Occasionally, even the most cautious suppliers can become aware of acts by customers which may appear to be fraudulent, or connected with some other type of illegal activity, such as money laundering or terrorist financing. We ask that you notify us of any such suspicions or concerns that these types of issues may affect any payments to you by email to <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or by phone using the contact details provided on the GoCardless website.
+          Occasionally, even the most cautious suppliers can become aware of acts by customers which may appear to be fraudulent, or connected with some other type of illegal activity, such as money laundering or terrorist financing. We ask that you notify us of any such suspicions or concerns that these types of issues may affect any payments to you by email to <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or by phone using the contact details provided on the GoCardless website.
         </p>
 
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Incorrectly executed payment transactions
         </h3>
         <p class="para">
           If you confirm to us that a payment from your account was incorrectly executed we will make immediate efforts to trace the payment transaction and notify you of the outcome.  Where we are liable, we will (i) without undue delay refund the amount of the incorrectly executed transaction and restore the debited payment account to the state in which it would have been had the incorrectly executed payment transactions not taken place, or (ii) in the case of direct debit payment re-transmit the direct debit, unless in either case we can prove that the recipient's payment service provider (e.g. the recipient's banks) received the amount of the payment transaction, in which case the recipient's payment service provider is liable to the recipient for the correct execution of the payment transaction.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Possible Additional Restrictions
         </h3>
         <p class="para">
@@ -234,14 +247,14 @@
           Where we decide to take the above action, we will write to you in advance informing you that we intend to do so and the reasons for our actions. Where this is not possible we will inform you at the earliest opportunity and in any event within the time that you would expect any payments that are made through GoCardless to be processed. We will not inform you where this would compromise our reasonable security measures or is otherwise unlawful. Where the reasons for our actions then cease to exist, we will then either reinstate your access to your GoCardless account or issue you with new account details as soon as practicable.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Restricted Activities
         </h3>
         <p class="para">
-          GoCardless does not condone the use of its system for certain purposes, as set out on our <a href="/legal/restrictions">Restricted Activities page</a> from time to time. If you engage or attempt to engage in those activities using GoCardless, we reserve the right to suspend or withdraw all or some of our services to you.
+          GoCardless does not condone the use of its system for certain purposes, as set out on our <a href="/legal/restrictions" class="u-link-medium-gray u-text-underline">Restricted Activities page</a> from time to time. If you engage or attempt to engage in those activities using GoCardless, we reserve the right to suspend or withdraw all or some of our services to you.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Cancellations made by the Customer
         </h3>
         <p class="para">
@@ -254,7 +267,7 @@
           Payments received by GoCardless are made under the UK Direct Debit Scheme. In the event that any of your customers do cancel their direct debit mandate we will be unable to process any payments that your customers may have committed to pay you through GoCardless. We will not be obliged to pay you those sums, but will notify you of the cancellation as soon as practicable.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Cancelled orders with your customers
         </h3>
         <p class="para">
@@ -264,7 +277,7 @@
           If your customer cancels their order with you, you must either (i) tell us not to take payment if we are not already processing the payment or (ii) arrange to refund your customer. You can ask us to process a refund for you. If you tell us that an order has been cancelled, we will tell your customer and any partner which was enabling the payment that you have advised the order has been cancelled.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Termination
         </h3>
         <p class="para">
@@ -293,7 +306,7 @@
         <p class="para">
           For the purpose of this Contract, a party suffers an "<em>Insolvency Event</em>" if:
         </p>
-        <ol class="list-alpha">
+        <ol class="list">
           <li>
             it suspends, or threatens to suspend, payment of its debts or is unable to pay its debts as they fall due or admits inability to pay its debts or (being a company) is deemed unable to pay its debts within the meaning of section 123 of the Insolvency Act 1986 or (being an individual) is deemed either unable to pay its debts or as having no reasonable prospect of so doing, in either case, within the meaning of section 268 of the Insolvency Act 1986 or (being a partnership) has any partner to whom any of the foregoing apply;
           </li>
@@ -326,7 +339,7 @@
           </li>
         </ol>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Consequences of termination
         </h3>
         <p class="para">
@@ -344,14 +357,14 @@
           </li>
         </ul>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Law
         </h3>
         <p class="para">
           Our relationship with you is governed by English law and the English courts shall have exclusive jurisdiction over any disputes relating or connected to it.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Resolving disputes
         </h3>
         <p class="para">
@@ -361,7 +374,7 @@
           If we are unable to resolve your issue to your satisfaction, you may be able to refer your complaint to the Financial Ombudsman Service. The Financial Ombudsman Service is a free and independent service which seeks to settle disputes between certain parties. You can find more information about the Financial Ombudsman Service on its website: http://www.financial-ombudsman.org.uk/.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           General provisions
         </h3>
         <p class="para">
@@ -371,14 +384,14 @@
           Any changes to this Contract will be advised to you in writing, either to the email address or postal address that you have provided, no later than two months before the date on which they are to take effect. You will be deemed to accept these changes unless you notify us in writing before the changes are proposed to enter into force. In these circumstances you have the right to close your GoCardless account without incurring any charges or other penalties, though you will still be liable to make payments to us in respect of any monies owed to us.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Confidentiality
         </h3>
         <p class="para">
           Each party undertakes that it will not at any time hereafter use, divulge or communicate to any person, except to its professional representatives or advisers or as may be required by law or any legal or regulatory authority, any confidential information concerning the business or affairs of the other party which may have or may in future come to its knowledge and each of the parties shall use its reasonable endeavours to prevent the publication or disclosure of any confidential information concerning such matters.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Data Protection
         </h3>
         <p class="para">
@@ -388,7 +401,7 @@
           You represent and warrant that you have provided notice to, and obtained consent from, any customer whose Personal Data you supply to GoCardless. We are not responsible for any consequences resulting from your failure to provide notice or receive consent from such individuals or for your providing outdated, incomplete, or inaccurate information. You are responsible for capturing and securing any Personal Data you need prior to submission to us for processing. GoCardless will use the Personal Data for processing the payment transactions requested by your customers. For the purposes of the Contract, "Personal Data" shall have the meaning given to it by the Data Protection Act 1998.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Force majeure
         </h3>
         <p class="para">
@@ -401,14 +414,14 @@
           If the Force Majeure Event prevents GoCardless from providing any of the Services for more than 4 weeks, GoCardless shall, without limiting its other rights or remedies, have the right to terminate this Contract immediately by giving written notice to you.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Assignment and subcontracting
         </h3>
         <p class="para">
           We may assign our rights under this contract or subcontract our obligations under it to a third party. You may not do these things without our written consent, and you may not grant any security over this contract.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Notices
         </h3>
         <p class="para">
@@ -418,7 +431,7 @@
           Any notice or other communication shall be deemed to have been duly received the next business day following the notice being communicated.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Waiver
         </h3>
         <p class="para">
@@ -428,14 +441,14 @@
           Unless specifically provided otherwise, rights arising under this Contract are cumulative and do not exclude rights provided by law.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Severance
         </h3>
         <p class="para">
           If a court or any other competent authority finds that any provision of this Contract (or part of any provision) is invalid, illegal or unenforceable, that provision or part provision shall, to the extent required, be deemed deleted, and the validity and enforceability of the other provisions of this Contract shall not be affected. If any invalid, unenforceable or illegal provision of this Contract would be valid, enforceable and legal if some part of it were deleted, the provision shall apply with the minimum modification necessary to make it legal, valid and enforceable.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           No partnership
         </h3>
         <p class="para">
@@ -443,18 +456,18 @@
         </p>
 
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Third parties
         </h3>
         <p class="para">
           A person who is not a party to this Contract shall not have any rights under or in connection with it.
         </p>
 
-        <h3 class="section-heading">
+        <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s">
           Contact
         </h3>
         <p class="para">
-          If you have any queries or wish to discuss our services, please contact us in writing or by telephone as set out on the GoCardless website or by email at <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a>.
+          If you have any queries or wish to discuss our services, please contact us in writing or by telephone as set out on the GoCardless website or by email at <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a>.
         </p>
         <p class="para">
           We will contact you using the contact details you provided when you signed up to this service, or any updated details you have provided to us. It is your responsibility to update us with any new contact information, including any change in address. We will send any correspondence to the most recent email address or postal address that you have provided to us for your account and, therefore, you must advise us promptly of any change of your contact details in the interests of security (including name or address) and provide appropriate supporting evidence as required by us.
@@ -463,5 +476,9 @@
       </div>
     </div>
   </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
 
 {% endblock %}
