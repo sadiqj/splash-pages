@@ -1,18 +1,30 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Restricted Activities{% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <div class="grid">
-    {% include "legal/_sidebar.html" %}
-    <div class="grid__cell u-size8of12 u-padding-Bl">
-      <div class="row">
-          <header>
-            <h3 class="page-heading">Restricted activities</h3>
-          </header>
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero u-padding-Vxxl">
+    <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light u-margin-Vxm">
+      Our terms of service
+    </h1>
+  </div>
+
+  <div class="site-container u-padding-Vxxl grid">
+    <div class="u-padding-Vxl">
+      {% include "legal/_sidebar.html" %}
+      <div class="grid__cell u-size8of12">
+        <h2 class="u-text-heading-light u-text-m u-color-heading">Restricted activities</h2>
         <p class="para">
-          This is the list of restricted activities referred to in Merchant Agreement and Customer Agreement.  This list was last updated on 19th September 2014 - you can read our previous lists of restricted activities <a href="/legal/old-restrictions">here</a>.
+          This is the list of restricted activities referred to in Merchant Agreement and Customer Agreement.  This list was last updated on 19th September 2014 - you can read our previous lists of restricted activities <a href="/legal/old-restrictions" class="u-link-medium-gray u-text-underline">here</a>.
         </p>
         <p class="para">
           If you undertake any of these activities, you will be in breach of the Merchant Agreement or the Customer Agreement (as the case may be) and we may suspend your access to your GoCardless Account and you will not be able to use the GoCardless service.  This may lead to you being unable to make payments to the intended recipients.
@@ -148,4 +160,8 @@
     </div>
   </div>
 
+  {% include "_site_footer.html" %}
+
+</div>
+  
 {% endblock %}

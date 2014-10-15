@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixins/clearfix-mixin";
 @import "mixins/breakpoints-mixin";
 
@@ -13,8 +12,6 @@
   }
   font-family: $font-family-heading;
   color: $header-color;
-  font-size: $font-size-xxsmall;
-  font-weight: 500;
 }
 
 .nav__item {
@@ -26,6 +23,11 @@
 .nav__item.is-active {
   color: $black-blue;
   text-decoration: none;
+}
+
+.nav__item-link {
+  height: 17px; // matching logo height
+  line-height: 17px; //matches above
 }
 
 @include breakpoint-medium {

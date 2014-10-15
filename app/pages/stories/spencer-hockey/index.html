@@ -1,93 +1,160 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Spencer Hockey Club - GoCardless Customer Stories{% endblock %}
 {% block meta_tags %}<meta name="description" content="Spencer Hockey Club slashed the time spent chasing payments by switching to Direct Debit with GoCardless. Find out how GoCardless is a 'natural fit' for membership groups.">{% endblock %}
 
-{% block content %}
-  <div class="grid grid--center u-margin-Bl">
-     <h1 class="page-heading u-padding-Bs">Spencer Hockey Club slashed the time spent chasing payments by switching to Direct Debit with GoCardless</h1>
-    <div class="grid__cell u-size2of12">
-      <img src="/images/stories/spencer-hockey/headshot.jpg" class="u-border-circle">
-    </div>
+{% block body %}
 
-    <div class="grid__cell u-size8of12">
-      <h2 class="u-text-heading">&ldquo;Using GoCardless felt like a natural fit for a membership group&rdquo;</h2>
-      Mark McDermott, Spencer Hockey Club
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "_site_header.html" %}
     </div>
   </div>
 
-  <div class="grid grid--center">
-    <div class="grid__cell u-size10of12 u-padding-Bs">
-      <h3 class="section-heading">
-        GoCardless helped them&hellip;
-      </h3>
-      <p class="para">
-        <ul class="list">
-          <li><strong>Reduce time spent managing payments</strong></li>
-          <li><strong>Achieve 80% take-up</strong> in 8 months</li>
-          <li>Quickly cover the integration cost with an <strong>improved payment rate</strong></li>
-        </ul>
-      </p>
-    </div>
+  <div class="page-hero u-padding-Vxxl">
+    <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light u-margin-Vxm">
+      Spencer Hockey Club
+    </h1>
   </div>
 
-  <div class="grid grid--center">
-    <div class="grid__cell u-size10of12 u-padding-Bl">
-      <h3 class="section-heading">
-        Challenge
-      </h3>
-      <div class="section-subheading">
-      “Collecting membership fees was difficult and time consuming”
+  <div class="site-container u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <h2 class="u-text-heading u-color-heading u-text-l u-text-light
+      u-size5of6 u-center u-text-center">
+        Spencer Hockey Club slashed the time spent chasing payments by switching to Direct Debit with GoCardless
+      </h2>
+      <div class="grid u-margin-Txxl u-padding-Txm">
+        <div class="grid__cell u-text-center u-size1of3">
+          <figure class="svg-icon svg-icon--xsmall u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+          </figure>
+          <p class="u-color-heading u-margin-Txs u-size5of6 u-center">
+            We helped them reduce time spent managing payments
+          </p>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3">
+          <figure class="svg-icon svg-icon--xsmall u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+          </figure>
+          <p class="u-color-heading u-margin-Txs u-size5of6 u-center">
+            After using GoCardless, they achieved 80% take-up in 8 months
+          </p>
+        </div>
+        <div class="grid__cell u-text-center u-size1of3">
+          <figure class="svg-icon svg-icon--xsmall u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/tick-xsmall-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--xsmall u-fill-dark-gray" data-src="/images/icons/tick-xsmall-icon.svg">
+          </figure>
+          <p class="u-color-heading u-margin-Txs u-size5of6 u-center">
+            Their integration cost was covered with an improved payment rate
+          </p>
+        </div>
       </div>
-      <p class="para">
-        <a href="http://hockey.spencerclub.org" rel="nofollow">Spencer Hockey Club</a> is one of the UK's leading hockey clubs. With over 400 players, managing the club was a real challenge for the volunteer committee.  “We used to let members pay however they wanted: monthly, annually, by cheque or bank transfer and with variable additions. It made collecting membership fees difficult and time consuming.”
-      </p>
-      <p class="para">
-        Tracking payments through bank statements "was very painful, and the Club suffered from late payments," says Mark McDermott, club member and Director of <a href="http://www.codegent.com">codegent</a>, who built the site.
-      </p>
-
-      <h3 class="section-heading">
-        Solution
-      </h3>
-      <div class="section-subheading">
-      “GoCardless felt like an automation of what we were already doing”
-      </div>
-      <p class="para">
-        “We realised we needed an online payment system, but had been put off by other providers' high fees and requirements for a merchant account. GoCardless provided a low cost solution that felt like an automation of what we were already doing."
-      </p>
-
-      <p class="para">
-        The Club integrated the GoCardless API into their site in one weekend and now use it to take regular and one-off payments from members.
-      </p>
-
-      <h3 class="section-heading">
-        Benefits
-      </h3>
-      <div class="section-subheading">
-      “The black hole in our finances has disappeared”
-      </div>
-      <p class="para">
-        “Within 8 months of integration, 80% of the team were using GoCardless to make their payments.  As a membership group, there is a high level of trust between us so Direct Debit is a nice fit.”
-      </p>
-
-      <p class="para">
-        Using GoCardless, the committee considerably reduced the time spent chasing payments, making the Club more financially stable.  “With 80% take-up by our members, the black hole in our finances has disappeared, so now we can spend more time growing our reserves.”
-      </p>
-
     </div>
   </div>
 
-  <hr>
+  <hr class="u-margin-An">
 
-  <div class="grid grid--center u-margin-Tl">
-    <div class="grid__cell u-size10of12">
-      <h1 class="section-heading">Read more customer stories...</h1>
+  <div class="site-container u-padding-Vxxl">
+    <div class="grid u-padding-Vxl">
+      <div class="grid__cell u-size1of2">
+        <h2 class="u-text-heading u-center u-color-heading u-text-l
+        u-text-light u-size3of4">
+          “Collecting membership fees was difficult and time consuming”
+        </h2>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <p class="u-color-p">
+          <a href="http://hockey.spencerclub.org" class="u-link-medium-gray u-text-underline" target="_blank">Spencer Hockey Club</a> is one of the UK's leading hockey clubs. With over 400 players, managing the club was a real challenge for the volunteer committee.  “We used to let members pay however they wanted: monthly, annually, by cheque or bank transfer and with variable additions. It made collecting membership fees difficult and time consuming.”
+        </p>
+        <p class="u-color-p u-margin-Tm">
+          Tracking payments through bank statements "was very painful, and the Club suffered from late payments," says Mark McDermott, club member and Director of <a href="http://www.codegent.com" class="u-link-medium-gray u-text-underline" target="_blank">codegent</a>, who built the site.
+        </p>
+      </div>
     </div>
   </div>
 
-  {% include "stories/_all_stories.html" %}
-{% endblock %}
+  <div class="story-hero--spencer-hockey">
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="u-padding-Bxxl u-size5of9 u-center">
+          <p class="u-text-heading u-color-invert u-text-l u-text-light">
+            “Using GoCardless felt like a natural fit for a membership group, and now the black hole in our finances has disappeared”
+          </p>
+        </div>
+        <img src="/images/testimonials/hockey-club__avatar.png" class="u-size1of12 u-text-center u-margin-Bxs">
+        <div class="u-color-invert u-text-heading u-text-m u-text-semi">Mark McDermott</div>
+        <div class="u-color-invert u-text-heading u-text-xs">Spencer Hockey Club</div>
+      </div>
+    </div>
+  </div>
 
-{% block footer_content %}
-  {% include "_affixed_cta_component.html" %}
+  <div class="site-container u-padding-Vxxl">
+    <div class="grid u-padding-Vxl">
+      <div class="grid__cell u-size1of2">
+        <h2 class="u-text-heading u-center u-color-heading u-text-l
+        u-text-light u-size3of4">
+          “GoCardless felt like an automation of what we were already doing”
+        </h2>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <p class="u-color-p">
+          “We realised we needed an online payment system, but had been put off by other providers' high fees and requirements for a merchant account. GoCardless provided a low cost solution that felt like an automation of what we were already doing."
+        </p>
+        <p class="u-color-p u-margin-Tm">
+          The Club integrated the GoCardless API into their site in one weekend and now use it to take regular and one-off payments from members.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-padding-Vxxl">
+    <div class="grid u-padding-Vxl">
+      <div class="grid__cell u-size1of2">
+        <h2 class="u-text-heading u-center u-color-heading u-text-l
+        u-text-light u-size3of4">
+          “The black hole in our finances has disappeared”
+        </h2>
+      </div>
+      <div class="grid__cell u-size1of2">
+        <p class="u-color-p">
+          “Within 8 months of integration, 80% of the team were using GoCardless to make their payments.  As a membership group, there is a high level of trust between us so Direct Debit is a nice fit.”
+        </p>
+        <p class="u-color-p u-margin-Tm">
+          Using GoCardless, the committee considerably reduced the time spent chasing payments, making the Club more financially stable.
+        </p>
+        <p class="u-color-p u-margin-Tm">
+          “With 80% take-up by our members, the black hole in our finances has disappeared, so now we can spend more time growing our reserves.”
+        </p>
+        <a href="/sports-clubs" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Txl">
+            See how GoCardless works for sports clubs &amp; societies
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
+        Sign up in minutes, take payments today
+      </h2>
+      <a href="/merchants/new" class="btn">Start taking payments</a>
+      <p class="u-color-p u-margin-Ts">
+        No set up costs, no monthly fees, no hidden charges
+      </p>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
 {% endblock %}

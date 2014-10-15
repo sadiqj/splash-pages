@@ -1,0 +1,44 @@
+.svg-icon {
+  width: 76px;
+  height: 76px;
+  position: relative;
+}
+
+.svg-icon--small {
+  width: 38px;
+  height: 38px;
+}
+
+.svg-icon--xsmall {
+  width: 25px;
+  height: 25px;
+}
+
+.svg-icon__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-height: 76px;
+  max-width: 76px;
+}
+
+.svg-icon__image--small {
+  max-width: 38px;
+  max-height: 38px;
+}
+
+.svg-icon__image--xsmall {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.svg-icon__image--shadow {
+  transform: translate(2px, 2px);
+}
+
+.svg-icon__image--small-shadow {
+  transform: translate(1px, 1px);
+}

@@ -1,83 +1,94 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}Terms of Service{% endblock %}
 
-{% block content %}
-  <div class="grid">
-    {% include "legal/_sidebar.html" %}
-    <div class="grid__cell u-size8of12 u-padding-Bl">
-      <div class="row">
-        <header>
-          <h3 class="page-heading">Terms of service</h3>
+{% block body %}
+
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero u-padding-Vxxl">
+    <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light u-margin-Vxm">
+      Our terms of service
+    </h1>
+  </div>
+
+  <div class="site-container u-padding-Vxxl grid">
+    <div class="u-padding-Vxl">
+      {% include "legal/_sidebar.html" %}
+      <div class="grid__cell u-size8of12">
+        <div class="row">
+          <h2 class="u-text-heading-light u-text-m u-color-heading">Introduction</h2>
           <p class="para">
             The following documents outline the terms of service for using GoCardless.
             You should read through these terms before using GoCardless.
           </p>
           <p class="para">
             If you have any questions about our terms of service, then please get in
-            touch by emailing <a href="mailto:{{ SUPPORT_EMAIL }}">{{ SUPPORT_EMAIL }}</a> or calling
+            touch by emailing <a href="mailto:{{ SUPPORT_EMAIL }}" class="u-link-medium-gray u-text-underline">{{ SUPPORT_EMAIL }}</a> or calling
             {{ SUPPORT_CONTACT_NUMBER }}.
 
             {# FCA requirement. Do not remove. #}
             Customers can also find more details about our transaction structure
-            in our <a href="/faq/customers">FAQ</a>.
+            in our <a href="/faq/customers" class="u-link-medium-gray u-text-underline">FAQ</a>.
           </p>
-        </header>
-        <hr>
 
-        <a href="/legal/customers" class="u-block">
-          <h2 class="u-text-heading">
-            Customer agreement
-          </h2>
-          <p class="p-flush">
-            The terms of use for paying via GoCardless
-          </p>
-        </a>
+          <a href="/legal/customers" class="legal-contents__link u-link-clean">
+            <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s legal-contents__link-heading">
+              Customer agreement
+            </h3>
+            <p class="para">
+              The terms of use for paying via GoCardless
+            </p>
+          </a>
 
-        <hr>
+          <a href="/legal/merchants" class="legal-contents__link u-link-clean">
+            <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s legal-contents__link-heading">
+              Merchant agreement
+            </h3>
+            <p class="para">
+              The terms of use for collecting payments via GoCardless
+            </p>
+          </a>
 
-        <a href="/legal/merchants" class="u-block">
-          <h2 class="u-text-heading">
-            Merchant agreement
-          </h2>
-          <p class="p-flush">
-            The terms of use for collecting payments via GoCardless
-          </p>
-        </a>
+          <a href="/legal/partners" class="legal-contents__link u-link-clean">
+            <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s legal-contents__link-heading">
+              Partner agreement
+            </h3>
+            <p class="para">
+              The terms of use for helping others collect via GoCardless
+            </p>
+          </a>
 
-        <hr>
+          <a href="/legal/restrictions" class="legal-contents__link u-link-clean">
+            <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s legal-contents__link-heading">
+              Restricted activities
+            </h3>
+            <p class="para">
+              Activities you can't collect payments via GoCardless for
+            </p>
+          </a>
 
-        <a href="/legal/partners" class="u-block">
-          <h2 class="u-text-heading">
-            Partner agreement
-          </h2>
-          <p class="p-flush">
-            The terms of use for helping others collect via GoCardless
-          </p>
-        </a>
-
-        <hr>
-
-        <a href="/legal/restrictions" class="u-block">
-          <h2 class="u-text-heading">
-            Restricted activities
-          </h2>
-          <p class="p-flush">
-            Activities you can't collect payments via GoCardless for
-          </p>
-        </a>
-
-        <hr>
-
-        <a href="/legal/privacy" class="u-block">
-          <h2 class="u-text-heading">
-            Privacy Policy
-          </h2>
-          <p class="p-flush">
-            Our practices towards handling your personal information
-          </p>
-        </a>
+          <a href="/legal/privacy" class="legal-contents__link u-link-clean">
+            <h3 class="u-text-heading-light u-color-heading u-margin-Vm u-text-s legal-contents__link-heading">
+              Privacy Policy
+            </h3>
+            <p class="para">
+              Our practices towards handling your personal information
+            </p>
+          </a>
+        </div>
       </div>
     </div>
   </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
 {% endblock %}

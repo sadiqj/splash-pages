@@ -1,56 +1,82 @@
-{% extends "default.html" %}
+{% extends "plain.html" %}
 
 {% block title %}SEPA Direct Debit: Collect Payments Across Europe{% endblock %}
 {% block meta_tags %}<meta name="description" content="GoCardless makes it easy to accept SEPA Direct Debit payments from across Europe. Take recurring and one-off payments. Find out more and register your interest.">{% endblock %}
-{% block page_container_class %}{% endblock %}
 
-{% block content %}
+{% block body %}
 
-  <div class="gradient-fill-dark">
-    <div class="europe-header">
-      <div class="u-padding-Vl">
-        <div class="u-padding-Vl u-text-center">
+<div class="site-wrapper">
+  <div class="page-hero page-hero--europe page-hero--large u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-header--invert u-relative u-cf">
+        {% include "_site_header_invert.html" %}
+      </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text u-text-center">
+          <h1 class="u-text-heading u-color-invert u-text-xl u-text-light">Accept Direct Debit across Europe</h1>
+          <p class="u-text-heading-light u-size4of5 u-center u-color-invert u-text-m u-margin-Txxs">GoCardless will be one of the first companies to offer European wide Direct Debit.
+We’re currently in beta and launching soon.</p>
+          <div class="u-text-center u-margin-Tl">
+            <a href="/request-sepa-updates" class="btn btn--invert btn--move">Register interest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <i class="icon icon-stars-europe"></i>
-
-          <h2 class="u-text-heading u-margin-Tl u-margin-Bxs u-text-xl u-color-invert u-text-center">
-          Accept Direct Debit across Europe.
-          </h2>
-          <h2 class="u-text-heading u-margin-Vs u-text-m u-color-invert-secondary">
-          One of the first companies to offer Direct Debit across Europe.<br><b>Currently in beta.</b>
-          </h2>
-
-          <a href="/request-sepa-updates" class="u-margin-Vs btn btn--invert-hollow">Register your interest</a>
-
-          <p class="u-color-invert u-margin-Tm u-margin-Bn">
-            <b><a href="/blog/sepa-direct-debit-explained/" class="u-link-invert">An introduction to SEPA</a></b>
-            &nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;
-            <b><a href="/direct-debit/sepa/" class="u-link-invert">SEPA: a user guide</a></b>
-            &nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;
-            <b><a href="/blog/sepa-direct-debit-details/" class="u-link-invert">Under the hood</a></b>
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="u-size7of12 u-center">
+        <i class="europe-icon u-margin-Bs"></i>
+        <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+          Get paid at home and abroad
+        </h2>
+        <div class="u-size11of12 u-center">
+          <p class="u-text-s u-color-p u-margin-Ts">
+            To help businesses like yours get the benefits of Direct Debit internationally, the European Union has created the Single European Payments Area, known as SEPA.
           </p>
+          <p class="u-text-s u-color-p u-margin-Tm">
+            SEPA makes transferring money between Eurozone countries quick and easy, and we’re working hard to be one of the first companies to offer access to the system. <a href="/request-sepa-updates" class="u-link-medium-gray u-text-underline">Register your interest today</a>, or learn more below:
+          </p>
+        </div>
+      </div>
 
+      <hr class="u-margin-Txxl u-size2of3 u-center">
+
+      <div class="grid u-padding-Txl u-margin-Txm">
+        <h3 class="u-text-heading-light u-color-heading u-text-m u-text-center u-margin-Bm">
+          Here's some recommended reading
+        </h3>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <a href="https://gocardless.com/blog/sepa-direct-debit-explained" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            An introduction to SEPA
+          </a>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <a href="https://gocardless.com/guides/sepa" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            A SEPA user guide
+          </a>
+        </div>
+        <div class="grid__cell u-size1of3 u-text-center">
+          <a href="https://gocardless.com/blog/sepa-direct-debit-details/" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
+            Under the hood of SEPA
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="grid grid--center u-margin-Bn u-margin-Tl">
-    <div class="grid__cell u-size6of12">
-      <div class="grid">
+  <hr class="u-margin-An">
 
-        <div class="grid__cell u-size1of6">
-          <img alt="Scale" class="icon--check icon-home-flag" src="/images/pricing/scale@2x.png">
-        </div>
-        <div class="grid__cell u-size5of6 u-margin-Bm">
-          <h3 class="u-text-m u-text-heading u-text-semi u-margin-Bxxs u-margin-Ts">Scale pricing for larger merchants</h3>
-          <p class="para--bullet">We offer scale pricing for merchants processing more than 500 payments per month. <a class="u-text-underline" href="/pricing">Find out more on our pricing.</a></p>
-        </div>
-
-        {% include "_key_benefits.html" %}
-
-      </div>
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <a href="/merchants/new" class="btn">Start taking payments</a>
+      <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
     </div>
   </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
 
 {% endblock %}

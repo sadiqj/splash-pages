@@ -1,7 +1,6 @@
 //////////////////////////
 // Link-specific utilities
 //////////////////////////
-@import "variables";
 
 // Link clean
 //
@@ -115,14 +114,12 @@
 .u-link-invert {
   color: white;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .u-link-invert:hover,
 .u-link-invert:focus,
 .u-link-invert:active {
   color: white;
-  text-decoration: underline;
 }
 
 .u-link-invert:disabled {
@@ -134,7 +131,6 @@
 .u-link-invert:focus:disabled,
 .u-link-invert:active:disabled {
   color: white;
-  text-decoration: none;
 }
 
 // Links based on u-text-* styles: added here to ensure colour persists on hover.
@@ -154,3 +150,12 @@
   color: $primary-color;
 }
 
+.u-link-medium-gray,
+.u-link-medium-gray:hover {
+  color: $medium-gray;
+}
+
+.u-link-dark-gray,
+.u-link-dark-gray:hover {
+  color: $dark-gray;
+}
