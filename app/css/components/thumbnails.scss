@@ -1,5 +1,3 @@
-@import "mixins/clearfix-mixin";
-
 .thumbnails {
   @include clearfix();
   margin-left: -10px;

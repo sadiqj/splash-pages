@@ -1,5 +1,3 @@
-@import "mixins/icon-mixin";
-
 .save-time-icon {
   @include icon("/images/icons/save-time-icon", 78px, 78px);
 }

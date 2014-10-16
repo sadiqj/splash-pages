@@ -50,7 +50,7 @@
           </li>
         </ul>
         <a href="/merchants/new" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
-          Start taking payments
+          {{ CTA_BASIC }}
         </a>
       </div>
       <hr class="u-margin-An">
@@ -338,12 +338,15 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl u-size2of3 u-center">
-        <i class="europe-icon u-margin-Bs"></i>
+        <figure class="svg-icon u-center">
+          <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/pro-icon.svg">
+          <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/pro-icon.svg">
+        </figure>
         <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
-          Need to take payments across Europe?
+          Looking for more control?
         </h2>
         <p class="u-text-s u-color-p u-margin-Ts u-size3of4 u-center">
-          GoCardless Pro enables you to collect Direct Debit payments from across Europe. With our API, your business can take payments from over 500 million people.
+          GoCardless Pro allows you to collect Direct Debit payments from customers, whilst maintaining total control over their experience. <br><br>Our API is simple to integrate, and allows you to do anything from creating custom payment pages to collecting payments across Europe
         </p>
         <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
         <a href="/pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
@@ -386,16 +389,9 @@
         <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
           Sign up in minutes, take payments today
         </h2>
-        <a href="/merchants/new" class="btn">Start taking payments</a>
+        <a href="/merchants/new" class="btn">{{ CTA_BASIC }}</a>
         <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
         <div class="u-size1of2 u-center">
-          <hr class="u-margin-Vxl horizontal-rule u-size3of4 u-center">
-          <p class="u-color-heading u-margin-Bxxs">
-            <strong>Looking for more control?</strong>
-          </p>
-          <a href="/pro" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi">
-            Learn about GoCardless Pro
-          </a>
         </div>
       </div>
     </div>

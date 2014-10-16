@@ -1,5 +1,3 @@
-@import "mixins/icon-mixin";
-
 .clearbooks-logo {
   @include icon("/images/partners/clearbooks-logo", 176px, 36px, ".jpg");
 }

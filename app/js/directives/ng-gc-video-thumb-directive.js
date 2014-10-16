@@ -21,7 +21,7 @@ angular.module('ngGcVideoThumbDirective', [
                 'ng-class="{',
                 '  \'is-active\': isSelfActive()',
                 '}">',
-                '<div class="u-size5of6 u-center u-padding-Txxs">',
+                '<div class="u-size5of6 u-center">',
                   '<i class="videos-container__play-button u-margin-Tl u-margin-Bs"',
                     'ng-class="{',
                     '  \'is-active\': isSelfActive()',
