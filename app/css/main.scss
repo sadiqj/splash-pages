@@ -1,5 +1,10 @@
 @import "variables";
 
+@import "mixins/at2x-mixin";
+@import "mixins/breakpoints-mixin";
+@import "mixins/clearfix-mixin";
+@import "mixins/icon-mixin";
+
 @import "shared/normalize";
 @import "shared/appify";
 @import "shared/scaffold";
@@ -16,27 +21,17 @@
 @import "components/error-label";
 @import "components/example-checkout-hero";
 @import "components/footer";
-@import "components/frame-container";
 @import "components/grid";
 @import "components/header-logo";
 @import "components/highlight";
 @import "components/highlight-text";
 @import "components/horizontal-rule";
-@import "components/horizontal-ruler-bottom";
-@import "components/horizontal-ruler-top";
-@import "components/horizontal-ruler-top-double";
-@import "components/horizontal-ruler-top-invert";
-@import "components/how-to";
-@import "components/how-to-heading";
-@import "components/how-to-thumbnails";
 @import "components/image-grid";
 @import "components/input";
 @import "components/integrations-grid";
-@import "components/jobs-container";
 @import "components/label";
 @import "components/legal-contents";
 @import "components/list";
-@import "components/logo-header";
 @import "components/modal";
 @import "components/nav";
 @import "components/nav-btn";
@@ -44,6 +39,7 @@
 @import "components/nav-tabs";
 @import "components/page-container";
 @import "components/page-footer";
+@import "components/page-heading";
 @import "components/page-hero";
 @import "components/page-subheading";
 @import "components/para";
