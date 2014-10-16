@@ -1,5 +1,3 @@
-@import "mixins/icon-mixin";
-
 .partner-icon {
   @include icon("/images/icons/partner-icon", 58px, 78px);
 }

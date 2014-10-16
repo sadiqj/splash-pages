@@ -1,5 +1,3 @@
-@import "mixins/clearfix-mixin";
-
 .site-container {
   @include clearfix();
   margin-left: auto;

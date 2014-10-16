@@ -1,5 +1,3 @@
-@import "mixins/icon-mixin";
-
 .shop-icon {
   @include icon("/images/icons/shop-icon", 89px, 78px);
 }

@@ -1,5 +1,3 @@
-@import "mixins/icon-mixin";
-
 .security-icon {
   @include icon("/images/icons/security-icon", 51px, 72px);
 }
