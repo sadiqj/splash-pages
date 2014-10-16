@@ -6,6 +6,7 @@
 {% block body %}
 
 <div class="site-wrapper">
+
   <div class="page-hero page-hero--pro page-hero--medium u-relative u-size-full">
     <div class="site-container page-hero__container">
       <div class="site-header site-header--invert u-relative u-cf">
@@ -41,7 +42,7 @@
           </li>
         </ul>
         <a href="/contact-sales" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
-          Contact sales
+          {{ CTA_PRO }}
         </a>
       </div>
       <hr class="u-margin-An">
@@ -52,6 +53,7 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
+
         <div class="u-size2of3 u-center">
           <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
             Welcome to GoCardless Pro
@@ -60,7 +62,9 @@
             Designed specifically for larger enterprises, GoCardless Pro combines the simplicity of our original GoCardless product with complete control over payments and customer experience. It's also the only product to allow you to collect UK and SEPA Direct Debit via one simple integration.
           </p>
         </div>
+
         <div class="grid u-margin-Tl u-padding-Tm">
+
           <div class="grid__cell u-size1of2 u-text-center">
             <figure class="svg-icon u-center">
               <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/white-label-icon.svg">
@@ -83,9 +87,9 @@
           </div>
           <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl u-padding-Txxl">
             <figure class="svg-icon u-center">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/mobile-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/mobile-icon.svg">
-          </figure>
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/mobile-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/mobile-icon.svg">
+            </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Works everywhere</div>
             <p class="u-size4of5 u-center u-color-p u-margin-Txs">
               We’ve made it incredibly simple to develop on top of GoCardless Pro and create the next generation of your website or mobile apps.
@@ -101,7 +105,9 @@
               We’ve sweated over security so you don’t have to. We store all bank details with RSA encryption and communicate only over secure channels.
             </p>
           </div>
+
         </div>
+
       </div>
     </div>
 
@@ -138,8 +144,8 @@
         <div class="u-text-center u-margin-Vl u-padding-Vs u-size2of3 u-center">
           <img src="/images/logos/enterprise-logos@2x.jpg">
         </div>
-      </div> -->
-    </div>
+      </div>
+    </div> -->
 
     <hr class="u-margin-An">
 
@@ -149,6 +155,7 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
+
         <div class="u-size1of2 u-center">
           <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
             Your dashboard
@@ -158,6 +165,7 @@
           </div>
           <hr class="u-margin-Vxxl">
         </div>
+
         <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
           <a href="#customer-info"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
@@ -187,6 +195,7 @@
             Admin
           </a>
         </div>
+
         <div id="customer-info" ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
             <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
@@ -202,6 +211,7 @@
             <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
           </div>
         </div>
+
       </div>
     </div>
 
@@ -232,7 +242,7 @@
         <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
           Get in touch for a free quote from our team
         </h2>
-        <a href="/contact-sales" class="btn">Contact sales</a>
+        <a href="/contact-sales" class="btn">{{ CTA_PRO }}</a>
       </div>
     </div>
 
