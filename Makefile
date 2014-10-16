@@ -101,9 +101,9 @@ js-vendor: js-out
 js: js-main js-vendor
 
 csso:
-	$(BIN)/csso build/css/fonts.css build/css/fonts.css
-	$(BIN)/csso build/css/main.css build/css/main.css
-	$(BIN)/csso build/css/greenhouse-forms.css build/css/greenhouse-forms.css
+	$(BIN)/csso --restructure-off build/css/fonts.css build/css/fonts.css
+	$(BIN)/csso --restructure-off build/css/main.css build/css/main.css
+	$(BIN)/csso --restructure-off build/css/greenhouse-forms.css build/css/greenhouse-forms.css
 
 build: clean fonts images public css csslint redirects nunjucks htmlhint js
 

@@ -50,12 +50,12 @@
   <div class="section-scroll-target" id="about-us">
 
     <div class="site-container u-padding-Vxxl">
-      <div class="grid u-padding-Vxl">
-        <div class="grid__cell u-size1of2">
-          <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
-            About GoCardless
-          </h2>
-          <p class="u-text-s u-color-p u-margin-Txxl">
+      <h2 class="u-text-heading u-color-heading u-text-l u-text-light u-padding-Txl">
+        About GoCardless
+      </h2>
+      <div class="grid">
+        <div class="grid__cell u-size2of3">
+          <p class="u-text-s u-color-p u-margin-Txxl u-size5of6">
             GoCardless is the UK’s leading Direct Debit provider. We collect over half a billion pounds each year for over 30,000 businesses and organisations including Greater Anglia Trains, Crowdcube and Funding Circle, with year-on-year growth of 600%.<br><br>
 
             We started in 2011 with a goal of providing a simple way for anyone to collect Direct Debit online&thinsp;&mdash;&thinsp;instantly, and affordably. Until then Direct Debit was seen as a complicated, expensive affair only accessible to large corporates. We wanted to change that&thinsp;&mdash;&thinsp;and we have. Anyone across the UK can now easily and instantly access the incredibly low fees and failure rates of Direct Debit using our modern, easy-to-use API.<br><br>
@@ -73,13 +73,13 @@
             We care as much about building a great company as we do about building a great business. That means hiring the best people and giving them exciting, challenging work and a great environment to work in.
           </p>
         </div>
-        <div class="grid__cell u-size1of2 u-text-end u-margin-Txxl">
-          <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--yellow u-margin-Tl">£233,054,541</div>
-          <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Paid out to merchants</div>
-          <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--blue u-margin-Txxl">2,163,980</div>
-          <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Transactions completed</div>
-          <div class="u-text-heading u-text-xl u-text-light u-color-meta highlight-text--green u-margin-Txxl">568,817</div>
-          <div class="u-text-heading u-text-xs u-text-upcase u-color-p">Customers paying with us</div>
+        <div class="grid__cell u-size1of3">
+          <div class="u-margin-Txxl">
+            <img src="/images/press/publications-stacked.jpg">
+            <p class="u-text-s u-color-p u-margin-Txxl">
+              GoCardless has been featured on television, blogs and websites around the world. <br><br>For any press enquires, please contact <a href="mailto:charlotte@gocardless.com">Charlotte Robinson</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -120,15 +120,6 @@
           <img src="/images/office/office-support-booths.jpg">
         </div>
       </div>
-    </div>
-
-    <hr class="u-margin-An">
-
-    <div class="site-container u-padding-Vxxl u-text-center">
-      <h2 class="u-text-heading-light u-text-m u-color-meta u-padding-Bxl u-padding-Txl">
-        We've been featured in
-      </h2>
-      <img src="/images/press/publications.jpg" class="u-padding-Bxl">
     </div>
 
     <hr class="u-margin-An">
@@ -236,11 +227,11 @@
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/developer-support-analyst" class="nav-tabs__link"
+                  <a href="#jobs/api-support-analyst" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
-                    Developer Support Analyst
+                    API Support Analyst
                   </a>
                 </li>
               </ul>
@@ -291,7 +282,7 @@
                   {% include "about/_account_manager.html" %}
                 </div>
               </div>
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/developer-support-analyst">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/api-support-analyst">
                 <div ng-if="$isActive">
                   {% include "about/_API_support_analyst.html" %}
                 </div>

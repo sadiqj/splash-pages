@@ -6,6 +6,7 @@
 {% block body %}
 
 <div class="site-wrapper">
+
   <div class="page-hero page-hero--pro page-hero--medium u-relative u-size-full">
     <div class="site-container page-hero__container">
       <div class="site-header site-header--invert u-relative u-cf">
@@ -14,7 +15,7 @@
       <div class="page-hero__inner">
         <div class="page-hero__text">
           <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light">Totally control Direct Debit</h1>
-          <p class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">We’ve created a purpose built, cutting edge platform for<br> businesses to take payments by Direct Debit</p>
+          <p class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">We’ve created a purpose built, cutting edge platform for<br> businesses to take payments by paperless Direct Debit</p>
         </div>
       </div>
     </div>
@@ -52,15 +53,18 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
+
         <div class="u-size2of3 u-center">
           <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
             Welcome to GoCardless Pro
           </h2>
           <p class="u-text-s u-color-p u-margin-Txs">
-            GoCardless Pro allows you to collect Direct Debit payments from customers, whilst maintaining total control over their experience. We provide the tools for collecting and managing payments, but remain invisible to your customers. Integrating GoCardless Pro is simple, and there's no lengthy approval or set-up process.
+            GoCardless Pro is the simplest way to collect Direct Debit. Designed specifically for larger enterprises, it combines the simplicity of our original GoCardless product with complete control over payments and customer experience. GoCardless Pro is also the only product to allow you to collect UK and SEPA Direct Debit via one simple integration.
           </p>
         </div>
+
         <div class="grid u-margin-Tl u-padding-Tm">
+
           <div class="grid__cell u-size1of2 u-text-center">
             <figure class="svg-icon u-center">
               <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/white-label-icon.svg">
@@ -83,12 +87,12 @@
           </div>
           <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl u-padding-Txxl">
             <figure class="svg-icon u-center">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/mobile-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/mobile-icon.svg">
-          </figure>
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/mobile-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/mobile-icon.svg">
+            </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Works everywhere</div>
             <p class="u-size4of5 u-center u-color-p u-margin-Txs">
-              We’ve made it incredibly simple to develop on top of GoCardless Pro and create the next generation of your website and mobile apps.
+              We’ve made it incredibly simple to develop on top of GoCardless Pro and create the next generation of your website or mobile apps.
             </p>
           </div>
           <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl u-padding-Txxl">
@@ -101,7 +105,9 @@
               We’ve sweated over security so you don’t have to. We store all bank details with RSA encryption and communicate only over secure channels.
             </p>
           </div>
+
         </div>
+
       </div>
     </div>
 
@@ -112,18 +118,18 @@
         <div class="u-size1of2 u-center">
           <i class="europe-icon u-margin-Bs"></i>
           <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
-            Take payments across Europe
+            Want to take payments in Europe?
           </h2>
           <div class="u-center">
             <p class="u-text-s u-color-p u-margin-Ts">
-              GoCardless Pro is the only product that enables you to collect Direct Debit payments from any European country. With our API, your business can take payments from over 300 million people.
+              GoCardless Pro is the only product that enables you to collect Direct Debit payments from the UK and SEPA via one integration. With our API, your business can take payments from over 500 million people.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <hr class="u-margin-An">
+    <!-- <hr class="u-margin-An">
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Txl">
@@ -139,7 +145,7 @@
           <img src="/images/logos/enterprise-logos@2x.jpg">
         </div>
       </div>
-    </div>
+    </div> -->
 
     <hr class="u-margin-An">
 
@@ -149,6 +155,7 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
+
         <div class="u-size1of2 u-center">
           <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
             Your dashboard
@@ -158,6 +165,7 @@
           </div>
           <hr class="u-margin-Vxxl">
         </div>
+
         <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
           <a href="#customer-info"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
@@ -187,6 +195,7 @@
             Admin
           </a>
         </div>
+
         <div id="customer-info" ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
             <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
@@ -202,6 +211,7 @@
             <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
           </div>
         </div>
+
       </div>
     </div>
 
@@ -215,7 +225,7 @@
       <div class="site-container u-padding-Vxl">
         <div class="u-size2of3 u-center">
           <h2 class="u-text-heading u-color-heading u-text-light u-text-xl">
-            5p&thinsp;&mdash;&thinsp;40p per transaction
+            1p&thinsp;&mdash;&thinsp;60p per transaction
           </h2>
           <p class="u-text-s u-color-p u-margin-Vxs">
             Competitive rates for businesses of any size.<br>
