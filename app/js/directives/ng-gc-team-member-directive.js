@@ -11,7 +11,7 @@ angular.module('ngGcTeamMemberDirective', [
       replace: true,
       transclude: true,
       template:
-        ['<div class="team-member u-pull-start u-size1of6 u-padding-Bm u-padding-Hs u-margin-Bm">',
+        ['<div class="team-member u-pull-start u-size-1of6 u-padding-Bm u-padding-Hs u-margin-Bm">',
             '<div toggle="isVisible">',
               '<div class="team-member__image">',
                 '<img ng-src="/images/team/{{ imageSrc }}.jpg" alt="{{ firstName }} {{ lastName }}">',
