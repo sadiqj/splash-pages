@@ -235,6 +235,15 @@
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/head-of-finance" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Head of Finance
+                  </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
                   <a href="#jobs/api-support-analyst" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
@@ -295,6 +304,12 @@
                   {% include "about/_account_manager.html" %}
                 </div>
               </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/head-of-finance">
+                <div ng-if="$isActive">
+                  {% include "about/_head_of_finance.html" %}
+                </div>
+              </div>
+
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/api-support-analyst">
                 <div ng-if="$isActive">
                   {% include "about/_API_support_analyst.html" %}
