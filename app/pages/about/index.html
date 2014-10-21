@@ -190,22 +190,6 @@
                   </a>
                 </li>
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/content-marketer" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Content Marketer
-                  </a>
-                </li>
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/growth-analyst" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Growth Analyst
-                  </a>
-                </li>
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
                   <a href="#jobs/junior-sales-executive" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
@@ -277,16 +261,6 @@
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/business-development">
                 <div ng-if="$isActive">
                   {% include "about/_business_development.html" %}
-                </div>
-              </div>
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/content-marketer">
-                <div ng-if="$isActive">
-                  {% include "about/_content_marketer.html" %}
-                </div>
-              </div>
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/growth-analyst">
-                <div ng-if="$isActive">
-                  {% include "about/_growth_analyst.html" %}
                 </div>
               </div>
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/junior-sales-executive">
