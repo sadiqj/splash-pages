@@ -24,11 +24,11 @@ angular.module('gc.popover', [
         });
 
         var options = _.extend({
-            mouseOutHide: false
+            popoverOnHover: false
           }, scope.$eval(attrs.popoverOptions)
         );
 
-        if (options.mouseOutHide) {
+        if (options.popoverOnHover) {
           element.on('mouseover', function(){
             clearTimeout(this.timer);
             scope.mousedOver = true;
