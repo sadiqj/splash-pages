@@ -28,13 +28,13 @@ angular.module('gc.popover', [
 
         if (options.hideOnClick) {
           scope.dialog = new Dialog({
-          el: element[0]
-        });
+            el: element[0]
+          });
         } else {
           scope.dialog = new Dialog({
-          el: element[0],
-          outsideClick: true
-        });
+            el: element[0],
+            outsideClick: true
+          });
         }
 
         if (options.popoverOnHover) {
