@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Executes an event after an 'intended hover'.
  * The delay can be optionally specified
@@ -15,16 +17,10 @@ angular.module('ui.hoverintent', [])
       link: function(scope, element, attributes){
         var hoverIntentPromise;
 
-        element.bind('mouseenter', triggerDelayedEvent);
-        element.bind('mouseleave', cancelDelayedEvent);
-        if(attributes.hasOwnProperty('uiHoverintentResetonclick')){
-          element.bind('click', triggerDelayedEvent);
+        function cancelDelayedEvent(){
+          $timeout.cancel(hoverIntentPromise);
         }
 
-        /**
-         * Triggers the eventHandler after the specified delay, or the default delay.
-         * Cancels the existing pending trigger (if any).
-         */
         function triggerDelayedEvent(event){
           cancelDelayedEvent();
 
@@ -38,12 +34,12 @@ angular.module('ui.hoverintent', [])
           }, delay);
         }
 
-        /**
-         * Cancels the triggering the event.
-         */
-        function cancelDelayedEvent(){
-          $timeout.cancel(hoverIntentPromise);
+        element.bind('mouseenter', triggerDelayedEvent);
+        element.bind('mouseleave', cancelDelayedEvent);
+        if(attributes.hasOwnProperty('uiHoverintentResetonclick')){
+          element.bind('click', triggerDelayedEvent);
         }
+
       }
     };
   }]);
