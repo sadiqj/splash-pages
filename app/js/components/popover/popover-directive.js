@@ -48,7 +48,7 @@ angular.module('gc.popover', [
               scope.mousedOver = false;
               this.timer = setTimeout(
                 scope.hideDialog,
-                750
+                650
               );
             }
           });
