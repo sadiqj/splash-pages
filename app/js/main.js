@@ -21,6 +21,7 @@ require('./directives/ng-gc-sticky-nav-directive');
 require('./directives/ng-gc-team-member-directive');
 require('./directives/ng-gc-video-thumb-directive');
 require('./directives/ng-gc-vimeo-iframe-directive');
+require('./directives/dropdown-nav-link-directive');
 require('./directives/ui-hoverintent');
 
 require('./controllers/ng-gc-prospect-form-controller');
@@ -55,6 +56,7 @@ angular.module('home', [
   'ngGcTabbyTriggerDirective',
   'ngGcLocationHash',
   'ngGcSvgInjectorDirective',
+  'dropdownNavLinkDirective',
   'ui.hoverintent'
 ]).config([
   '$interpolateProvider',
