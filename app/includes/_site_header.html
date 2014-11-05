@@ -51,7 +51,7 @@
           Our products
         </div>
       </a>
-      <popover popover-options="{ popoverOnHover: true }" show="productsHover.isVisible" ng-animate class="nav-dropdown__popover nav-dropdown__popover--large"
+      <popover popover-options="{ popoverOnHover: true, hideOnClick: false }" show="productsHover.isVisible" ng-animate class="nav-dropdown__popover nav-dropdown__popover--large"
       ng-class="{'u-is-visible': productsHover.isVisible }">
         {% include "_products_dropdown_list.html" %}
       </popover>
@@ -64,7 +64,7 @@
           Your business
         </div>
       </a>
-      <popover popover-options="{ popoverOnHover: true }" show="businessesHover.isVisible" ng-animate class="nav-dropdown__popover"
+      <popover popover-options="{ popoverOnHover: true, hideOnClick: false }" show="businessesHover.isVisible" ng-animate class="nav-dropdown__popover"
       ng-class="{'u-is-visible': businessesHover.isVisible }">
         {% include "_businesses_dropdown_list.html" %}
       </popover>
@@ -77,7 +77,7 @@
           More
         </div>
       </a>
-      <popover popover-options="{ popoverOnHover: true }" show="moreHover.isVisible" ng-animate class="nav-dropdown__popover"
+      <popover popover-options="{ popoverOnHover: true, hideOnClick: false }" show="moreHover.isVisible" ng-animate class="nav-dropdown__popover"
       ng-class="{'u-is-visible': moreHover.isVisible }">
         {% include "_more_dropdown_list.html" %}
       </popover>

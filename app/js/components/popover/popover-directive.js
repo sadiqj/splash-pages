@@ -19,14 +19,23 @@ angular.module('gc.popover', [
         show: '='
       },
       link: function popoverLink(scope, element, attrs) {
-        scope.dialog = new Dialog({
-          el: element[0]
-        });
 
         var options = _.extend({
-            popoverOnHover: false
+            popoverOnHover: false,
+            hideOnClick: true
           }, scope.$eval(attrs.popoverOptions)
         );
+
+        if (options.hideOnClick) {
+          scope.dialog = new Dialog({
+            el: element[0]
+          });
+        } else {
+          scope.dialog = new Dialog({
+            el: element[0],
+            outsideClick: true
+          });
+        }
 
         if (options.popoverOnHover) {
           element.on('mouseover', function(){
@@ -39,7 +48,7 @@ angular.module('gc.popover', [
               scope.mousedOver = false;
               this.timer = setTimeout(
                 scope.hideDialog,
-                750
+                650
               );
             }
           });
