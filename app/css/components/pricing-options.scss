@@ -1,32 +1,36 @@
-.pricing-option {
+.pricing-options {
+  width: 752px;
+}
+
+.pricing-options__option {
   background-color: $primary-color;
   position: relative;
 }
 
-.pricing-option--pro {
+.pricing-options--pro {
   background-color: $dark-gray-darken;
 }
 
-.pricing-option__badge {
+.pricing-options__badge {
   position: absolute;
   top: 35px;
   left: -35px;
   width: 70px;
 }
 
-.pricing-option__list {
+.pricing-options__list {
   background-color: $site-background-color;
   text-align: center;
   list-style-type: none;
 }
 
-.pricing-option__list-item {
+.pricing-options__list-item {
   border-bottom: 1px solid $gray;
   padding: $space-small;
   color: $medium-gray
 }
 
-.pricing-option__list-button {
+.pricing-options__list-button {
   width: 100%;
   padding: 16px;
 }
