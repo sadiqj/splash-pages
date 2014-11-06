@@ -32,6 +32,7 @@
   @extend .u-text-light;
   @extend .u-text-heading;
   -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 
 .u-text-subheading {
