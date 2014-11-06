@@ -4,40 +4,85 @@
   </a>
 </div>
 <div class="u-pull-end align-btn-small">
-  <nav class="nav u-pull-start u-color-primary u-text-xxs u-text-light u-text-no-smoothing">
+
+  <nav id="dropdown-click" class="nav u-pull-start u-color-primary u-text-xxs u-text-light u-text-no-smoothing">
     <div class="nav__item u-relative">
-      <a class="u-padding-Vl u-block" toggle="products.isVisible" href="">
+      <a class="u-padding-Vl u-block" toggle="productsClick.isVisible" href="">
         <div class="nav__item-link">
           Our products
         </div>
       </a>
-      <popover show="products.isVisible" ng-animate class="nav-dropdown__popover nav-dropdown__popover--large"
-      ng-class="{'u-is-visible': products.isVisible }">
+      <popover show="productsClick.isVisible" ng-animate class="nav-dropdown__popover nav-dropdown__popover--large"
+      ng-class="{'u-is-visible': productsClick.isVisible }">
         {% include "_products_dropdown_list.html" %}
       </popover>
     </div>
     <div class="nav__item u-relative">
-      <a class="u-padding-Vl u-block" toggle="businesses.isVisible" href="">
+      <a class="u-padding-Vl u-block" toggle="businessesClick.isVisible" href="">
         <div class="nav__item-link">
           Your business
         </div>
       </a>
-      <popover show="businesses.isVisible" ng-animate class="nav-dropdown__popover"
-      ng-class="{'u-is-visible': businesses.isVisible }">
+      <popover show="businessesClick.isVisible" ng-animate class="nav-dropdown__popover"
+      ng-class="{'u-is-visible': businessesClick.isVisible }">
         {% include "_businesses_dropdown_list.html" %}
       </popover>
     </div>
     <div class="nav__item u-relative">
-      <a class="u-padding-Vl u-block" toggle="more.isVisible" href="">
+      <a class="u-padding-Vl u-block" toggle="moreClick.isVisible" href="">
         <div class="nav__item-link">
           More
         </div>
       </a>
-      <popover show="more.isVisible" ng-animate class="nav-dropdown__popover"
-      ng-class="{'u-is-visible': more.isVisible }">
+      <popover show="moreClick.isVisible" ng-animate class="nav-dropdown__popover"
+      ng-class="{'u-is-visible': moreClick.isVisible }">
         {% include "_more_dropdown_list.html" %}
       </popover>
     </div>
+  </nav>
+
+  <nav id="dropdown-hover" class="u-hidden nav u-pull-start u-color-primary u-text-xxs u-text-light u-text-no-smoothing">
+    <div class="remove-dropdown-hack u-pull-start" ng-mouseover="productsHover.isVisible = false"></div>
+    <div class="nav__item u-relative"
+      ui-hoverintent="productsHover.isVisible = true"
+      ui-hoverintent-delay="200">
+      <a class="u-padding-Vl u-block" href="">
+        <div class="nav__item-link">
+          Our products
+        </div>
+      </a>
+      <popover popover-options="{ popoverOnHover: true, hideOnClick: false }" show="productsHover.isVisible" ng-animate class="nav-dropdown__popover nav-dropdown__popover--large"
+      ng-class="{'u-is-visible': productsHover.isVisible }">
+        {% include "_products_dropdown_list.html" %}
+      </popover>
+    </div>
+    <div class="nav__item u-relative"
+      ui-hoverintent="businessesHover.isVisible = true"
+      ui-hoverintent-delay="200">
+      <a class="u-padding-Vl u-block" href="">
+        <div class="nav__item-link">
+          Your business
+        </div>
+      </a>
+      <popover popover-options="{ popoverOnHover: true, hideOnClick: false }" show="businessesHover.isVisible" ng-animate class="nav-dropdown__popover"
+      ng-class="{'u-is-visible': businessesHover.isVisible }">
+        {% include "_businesses_dropdown_list.html" %}
+      </popover>
+    </div>
+    <div class="nav__item u-relative u-margin-Rn"
+      ui-hoverintent="moreHover.isVisible = true"
+      ui-hoverintent-delay="200">
+      <a class="u-padding-Vl u-block" href="">
+        <div class="nav__item-link">
+          More
+        </div>
+      </a>
+      <popover popover-options="{ popoverOnHover: true, hideOnClick: false }" show="moreHover.isVisible" ng-animate class="nav-dropdown__popover"
+      ng-class="{'u-is-visible': moreHover.isVisible }">
+        {% include "_more_dropdown_list.html" %}
+      </popover>
+    </div>
+    <div class="remove-dropdown-hack u-pull-start" ng-mouseover="moreHover.isVisible = false"></div>
   </nav>
 
   <ul class="u-cf u-pull-start">

@@ -21,6 +21,7 @@ require('./directives/ng-gc-sticky-nav-directive');
 require('./directives/ng-gc-team-member-directive');
 require('./directives/ng-gc-video-thumb-directive');
 require('./directives/ng-gc-vimeo-iframe-directive');
+require('./directives/ui-hoverintent');
 
 require('./controllers/ng-gc-prospect-form-controller');
 require('./controllers/ng-gc-active-video-controller');
@@ -53,9 +54,12 @@ angular.module('home', [
   'ngGcTabbyContentDirective',
   'ngGcTabbyTriggerDirective',
   'ngGcLocationHash',
-  'ngGcSvgInjectorDirective'
+  'ngGcSvgInjectorDirective',
+  'ui.hoverintent'
 ]).config([
-  function configLocationProfider() {
+  '$interpolateProvider',
+  function($interpolateProvider) {
+    $interpolateProvider.startSymbol('((').endSymbol('))');
   }
 ]).run([
   '$rootScope', 'locationHash',
