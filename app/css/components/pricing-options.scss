@@ -1,5 +1,4 @@
-// This is the same as setting u-size-4of5, but with extra benefit that it
-// still works on tablet screen widths without reflowing text badly
+// Use a fixed width here to prevent text from reflowing when window is resized
 .pricing-options {
   width: 752px;
 }
