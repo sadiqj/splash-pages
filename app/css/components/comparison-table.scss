@@ -1,12 +1,5 @@
 .comparison-table__heading {
-  padding: $space-medium;
-  font-family: $font-family-heading;
-  color: $black-blue-invert;
   background-color: $primary-color;
-  border: 1px solid $light-gray;
-  font-weight: 200;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
 }
 
 .comparison-table__heading--pro {
@@ -20,8 +13,4 @@
 .comparison-table__cell {
   padding: $space-small;
   border-right: 1px solid $gray-darken;
-}
-
-.comparison-table__footer-cell {
-  padding: $space-small;
 }
