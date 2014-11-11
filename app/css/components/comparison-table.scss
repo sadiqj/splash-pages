@@ -17,7 +17,15 @@
   background-color: $dark-gray-darken;
 }
 
+.comparison-table__row {
+  border-top: 1px solid $gray-darken;
+}
+
 .comparison-table__cell {
   padding: $space-small;
-  border: 1px solid $gray-darken;
+  border-right: 1px solid $gray-darken;
+}
+
+.comparison-table__footer-cell {
+  padding: $space-small;
 }
