@@ -1,14 +1,7 @@
+// This is the same as setting u-size-4of5, but with extra benefit that it
+// still works on tablet screen widths without reflowing text badly
 .pricing-options {
   width: 752px;
-}
-
-.pricing-options__option {
-  background-color: $primary-color;
-  position: relative;
-}
-
-.pricing-options--pro {
-  background-color: $dark-gray-darken;
 }
 
 .pricing-options__badge {
