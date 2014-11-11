@@ -6,6 +6,7 @@
 {% block body %}
 
 <div class="site-wrapper">
+
   <div class="page-hero page-hero--pro page-hero--medium u-relative u-size-full">
     <div class="site-container page-hero__container">
       <div class="site-header site-header--invert u-relative u-cf">
@@ -40,8 +41,11 @@
             </a>
           </li>
         </ul>
-        <a href="/contact-sales" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
-          Contact sales
+        <a href="/contact-sales?s=pro&l=1" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+          {{ CTA_PRO }}
+        </a>
+        <a href="https://developer.gocardless.com/pro/" class="u-pull-end u-margin-Txxs u-margin-Rm">
+          API Documentation
         </a>
       </div>
       <hr class="u-margin-An">
@@ -52,56 +56,61 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
-        <div class="u-size2of3 u-center">
+
+        <div class="u-size-3of4 u-center">
           <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
             Welcome to GoCardless Pro
           </h2>
           <p class="u-text-s u-color-p u-margin-Txs">
-            GoCardless Pro is the simplest way to collect Direct Debit. Designed specifically for larger enterprises, it combines the simplicity of our original GoCardless product with complete control over payments and customer experience. GoCardless Pro is also the only product to allow you to collect UK and SEPA Direct Debit via one simple integration.
+            Designed specifically for larger enterprises, GoCardless Pro combines the simplicity of our original GoCardless product with complete control over payments and customer experience. It also allows you to collect UK and SEPA Direct Debit via one simple integration.
           </p>
         </div>
+
         <div class="grid u-margin-Tl u-padding-Tm">
-          <div class="grid__cell u-size1of2 u-text-center">
+
+          <div class="grid__cell u-size-1of2 u-text-center">
             <figure class="svg-icon u-center">
               <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/white-label-icon.svg">
               <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/white-label-icon.svg">
             </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Completely white-labelled</div>
-            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
               GoCardless Pro puts your brand at the forefront. Enjoy complete control over payment pages and email notifications to your customers.
             </p>
           </div>
-          <div class="grid__cell u-size1of2 u-text-center">
+          <div class="grid__cell u-size-1of2 u-text-center">
             <figure class="svg-icon u-center">
               <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/developer-icon.svg">
               <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/developer-icon.svg">
             </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">A simple, modern API</div>
-            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
               All documentation for our Pro product is freely available in our <a href="https://developer.gocardless.com/enterprise">developer centre</a>. We’ve worked hard to make integrating your systems as painless as possible.
             </p>
           </div>
-          <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl u-padding-Txxl">
+          <div class="grid__cell u-size-1of2 u-text-center u-margin-Txxl u-padding-Txxl">
             <figure class="svg-icon u-center">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/mobile-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/mobile-icon.svg">
-          </figure>
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/mobile-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/mobile-icon.svg">
+            </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Works everywhere</div>
-            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
               We’ve made it incredibly simple to develop on top of GoCardless Pro and create the next generation of your website or mobile apps.
             </p>
           </div>
-          <div class="grid__cell u-size1of2 u-text-center u-margin-Txxl u-padding-Txxl">
+          <div class="grid__cell u-size-1of2 u-text-center u-margin-Txxl u-padding-Txxl">
             <figure class="svg-icon u-center">
               <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/security-icon.svg">
               <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/security-icon.svg">
             </figure>
             <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Military grade security</div>
-            <p class="u-size4of5 u-center u-color-p u-margin-Txs">
+            <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
               We’ve sweated over security so you don’t have to. We store all bank details with RSA encryption and communicate only over secure channels.
             </p>
           </div>
+
         </div>
+
       </div>
     </div>
 
@@ -109,7 +118,7 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
-        <div class="u-size1of2 u-center">
+        <div class="u-size-1of2 u-center">
           <i class="europe-icon u-margin-Bs"></i>
           <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
             Want to take payments in Europe?
@@ -123,11 +132,11 @@
       </div>
     </div>
 
-    <!-- <hr class="u-margin-An">
+    <hr class="u-margin-An">
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Txl">
-        <div class="u-size1of2 u-center">
+        <div class="u-size-1of2 u-center">
           <h2 class="u-text-heading u-color-heading u-text-light u-text-l">
             You’re in good company
           </h2>
@@ -135,10 +144,10 @@
             Every day, some of the biggest and most respected businesses in the UK trust GoCardless to power their payments
           </p>
         </div>
-        <div class="u-text-center u-margin-Vl u-padding-Vs u-size2of3 u-center">
+        <div class="u-text-center u-margin-Vl u-padding-Vs u-center">
           <img src="/images/logos/enterprise-logos@2x.jpg">
         </div>
-      </div> -->
+      </div>
     </div>
 
     <hr class="u-margin-An">
@@ -149,7 +158,8 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
-        <div class="u-size1of2 u-center">
+
+        <div class="u-size-1of2 u-center">
           <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
             Your dashboard
           </h2>
@@ -158,6 +168,7 @@
           </div>
           <hr class="u-margin-Vxxl">
         </div>
+
         <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
           <a href="#customer-info"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
@@ -187,6 +198,7 @@
             Admin
           </a>
         </div>
+
         <div id="customer-info" ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
             <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
@@ -202,6 +214,7 @@
             <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
           </div>
         </div>
+
       </div>
     </div>
 
@@ -213,14 +226,14 @@
 
     <div class="u-text-center u-padding-Vxxl">
       <div class="site-container u-padding-Vxl">
-        <div class="u-size2of3 u-center">
+        <div class="u-size-2of3 u-center">
           <h2 class="u-text-heading u-color-heading u-text-light u-text-xl">
             1p&thinsp;&mdash;&thinsp;60p per transaction
           </h2>
           <p class="u-text-s u-color-p u-margin-Vxs">
             Competitive rates for businesses of any size.<br>
           </p>
-          <a href="/pricing/#pro" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+          <a href="/pricing#pro" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
         </div>
       </div>
     </div>
@@ -232,7 +245,7 @@
         <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
           Get in touch for a free quote from our team
         </h2>
-        <a href="/contact-sales" class="btn">Contact sales</a>
+        <a href="/contact-sales?s=pro" class="btn">{{ CTA_PRO }}</a>
       </div>
     </div>
 

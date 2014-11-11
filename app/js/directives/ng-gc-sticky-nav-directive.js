@@ -10,10 +10,19 @@ angular.module('ngGcStickyNavDirective', [])
 
       return {
         link : function link(scope, element) {
-          var navOffset = element.offset().top;
+
+          var navOffset;
+
+          setTimeout(function(){
+            navOffset = element.offset().top;
+          }, 0);
 
           function updatePosition() {
             var scrollPosition = angular.element($window).scrollTop();
+
+            if (navOffset === null) {
+              navOffset = element.parent().offset().top;
+            }
 
             if (scrollPosition >= navOffset) {
               element.addClass('is-sticky');
@@ -25,6 +34,7 @@ angular.module('ngGcStickyNavDirective', [])
           var throttled = _.throttle(updatePosition, 20, {
             trailing: true
           });
+
           angular.element($window).on('scroll', throttled);
         }
       };

@@ -15,7 +15,9 @@ var metadata = {
   SUPPORT_CONTACT_NUMBER: '020 7183 8674',
   SUPPORT_EMAIL: 'help@gocardless.com',
   GITHUB_LINK: 'http://github.com/gocardless',
-  TWITTER_LINK: 'https://twitter.com/gocardless'
+  TWITTER_LINK: 'https://twitter.com/gocardless',
+  CTA_BASIC: 'Start taking payments',
+  CTA_PRO: 'Contact sales'
 };
 
 module.exports = metadata;

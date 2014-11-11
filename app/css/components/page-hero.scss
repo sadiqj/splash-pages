@@ -22,84 +22,88 @@
 }
 
 .page-hero--home {
-  background: url('/images/hero/new-home-hero.jpg');
+  background: $primary-color url('/images/hero/new-home-hero.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--creative-industries {
-  background: url('/images/hero/hero-creative-industries.jpg');
+  background: $primary-color url('/images/hero/hero-creative-industries.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--lending {
-  background: url('/images/hero/hero-lending.jpg');
+  background: $primary-color url('/images/hero/hero-lending.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--gyms {
-  background: url('/images/hero/hero-gyms.jpg');
+  background: $primary-color url('/images/hero/hero-gyms.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--professional-services {
-  background: url('/images/hero/hero-professional-services.jpg');
+  background: $primary-color url('/images/hero/hero-professional-services.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--property {
-  background: url('/images/hero/hero-property.jpg');
+  background: $primary-color url('/images/hero/hero-property.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--saas {
-  background: url('/images/hero/hero-saas.jpg');
+  background: $primary-color url('/images/hero/hero-saas.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--sports-clubs {
-  background: url('/images/hero/hero-sports-clubs.jpg');
+  background: $primary-color url('/images/hero/hero-sports-clubs.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--europe {
-  background: url('/images/hero/new-europe-hero.jpg');
+  background: $primary-color url('/images/hero/new-europe-hero.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
+.page-hero--pricing {
+  background: $dark-gray;
+}
+
 .page-hero--pro {
-  background: url('/images/hero/pro-hero.jpg');
+  background: $dark-gray url('/images/hero/pro-hero.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--about {
-  background: url('/images/hero/about-hero.jpg');
+  background: $primary-color url('/images/hero/about-hero.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .page-hero--team {
-  background: url('/images/hero/hero-team.jpg');
+  background: $primary-color url('/images/hero/hero-team.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;

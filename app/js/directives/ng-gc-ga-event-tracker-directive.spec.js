@@ -39,13 +39,13 @@ describe('ngGcGaEventTrackerDirective', function() {
   it('binds click', function() {
     setup({
       event: 'click',
-      label: 'RaD'
+      label: 'ContactSales'
     });
 
     elm.trigger('click');
 
     expect($window.dataLayer[0]).toEqualData(
-      {event:'RaD'}
+      {event:'ContactSales'}
     );
   });
 });

@@ -17,18 +17,18 @@
   </div>
 
   <div class="page-hero u-padding-Vxxl">
-    <div class="site-container">
-      <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light u-margin-Vxm">
+    <div class="site-container u-margin-Vxm">
+      <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light">
         Contact sales
       </h1>
-      <p class="u-text-heading-light u-text-m u-center u-text-center u-color-invert u-padding-Vs">
+      <p class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">
         To find out more about how GoCardless can help you, please enter your details below.<br>A member of our team will call you back as soon as possible.
       </p>
     </div>
   </div>
 
   <div class="site-container grid grid--center u-margin-Vxl u-padding-Vxl">
-    <div class="grid__cell u-size1of2">
+    <div class="grid__cell u-size-1of2">
       <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
         name="prospectForm"
         ng-gc-form-submit="{
@@ -40,7 +40,7 @@
             event: 'submit',
             category: 'forms',
             action: 'submit-form',
-            label: 'RaD'
+            label: 'ContactSales'
           }">
 
         {% include "_prospect_form_fields.html" %}

@@ -1,31 +1,28 @@
-# Setup to run locally
+## Dependencies
 
-- Install Node.JS: http://nodejs.org/download/ (v.0.10.x)
+```bash
+npm install
+```
 
+## Running
+
+```bash
+npm start
+```
+
+## Tests
+
+```bash
+npm test
+```
+
+## Prerequisites:
+
+- node.js: `brew install node`
 - Edit your ~/.bash_profile or ~/.zshrc:
+
 ```
 PATH=node_modules/.bin:$PATH
-```
-
-- Install required packages:
-```
-$ npm install
-```
-
-# First time setup
-
-```
-$ make setup
-```
-
-This writes to `/etc/launchd.conf` and increases the limits for both values automatically.
-
-You'll need to restart your Mac after this command is run for it to take effect.
-
-# Running locally:
-
-```
-$ make watch
 ```
 
 # Structure (what to change)
@@ -44,7 +41,7 @@ Shared template includes/partials: `app/includes/`
 
 # Troubleshooting
 
-1. `make watch` fails
+1. `npm start` fails
 
 Try running `npm install`. Packages might be out of date.
 
@@ -52,27 +49,7 @@ Try running `npm install`. Packages might be out of date.
 
 Make sure you have reloaded your terminal after `2.` under `Setup to run locally`
 
-3. Too many open file error
-
-The task that watches the files you are working on can open a large number of
-files, this can hit the maximum limit in OS X.
-
-To adjust the maximum open file limits in OS X 10.7 (Lion) or newer, edit
-`/etc/launchd.conf` and increase the limits for both values as appropriate.
-```
-limit maxfiles 16384 32768
-```
-
-Save the file, and restart the system for the new limits to take effect.
-After restarting, verify the new limits with the launchctl limit command:
-
-```
-launchctl limit maxfiles
-
-    maxfiles    16384          32768
-```
-
-4. Prospect forms are broken
+3. Prospect forms are broken
 
 You need to run gocardless at: gocardless.dev:3000
 

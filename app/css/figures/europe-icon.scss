@@ -1,5 +1,3 @@
-@import "mixins/icon-mixin";
-
 .europe-icon {
   @include icon("/images/icons/europe-icon", 68px, 68px);
 }
