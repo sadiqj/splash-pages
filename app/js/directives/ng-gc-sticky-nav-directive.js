@@ -13,16 +13,14 @@ angular.module('ngGcStickyNavDirective', [])
 
           var navOffset;
 
-          setTimeout(function(){
-            navOffset = element.offset().top;
-          }, 0);
+          navOffset = element.offset().top;
 
           function updatePosition() {
             var scrollPosition = angular.element($window).scrollTop();
 
-            // if (navOffset === null) {
-            //   navOffset = element.parent().offset().top;
-            // }
+            if (navOffset === null) {
+              navOffset = element.parent().offset().top;
+            }
 
             if (scrollPosition >= navOffset) {
               element.addClass('is-sticky');
