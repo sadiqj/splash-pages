@@ -13,7 +13,9 @@ angular.module('ngGcStickyNavDirective', [])
 
           var navOffset;
 
-          navOffset = element.offset().top;
+          setTimeout(function(){
+            navOffset = element.offset().top;
+          }, 0);
 
           function updatePosition() {
             var scrollPosition = angular.element($window).scrollTop();
