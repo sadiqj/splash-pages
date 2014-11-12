@@ -52,7 +52,8 @@
     "colorguard": "^0.1.7"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "start": "ulimit -n 10240 && make watch"
   },
   "browser": {
     "angular": "./app/components/angular/angular.js",

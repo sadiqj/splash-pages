@@ -42,7 +42,7 @@
             </a>
           </li>
         </ul>
-        <a href="/merchants/new" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+        <a href="/merchants/new?l=2" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
           {{ CTA_BASIC }}
         </a>
       </div>
@@ -147,23 +147,27 @@
 
     <hr class="u-margin-An">
 
-    <div class="u-text-center u-padding-Vxxl">
-      <div class="site-container u-padding-Vxl">
-        <div class="u-text-heading u-color-heading u-text-l u-text-light u-size-1of2 u-center">
-          Watch a one minute demo
+    <div class="section-scroll-target" id="demo">
+
+      <div class="u-text-center u-padding-Vxxl">
+        <div class="site-container u-padding-Vxl">
+          <div class="u-text-heading u-color-heading u-text-l u-text-light u-size-1of2 u-center">
+            Watch a one minute demo
+          </div>
+          <iframe
+            src="https://player.vimeo.com/video/109002761"
+            class="u-text-center videos-container__iframe u-margin-Vl" autoplay="true"
+            data-ng-gc-ga-event-tracker="{
+              category: 'video',
+              label: 'plays-demo'
+            }">
+          </iframe>
+          <a href="/how-to" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Tm">
+            View more videos of GoCardless Basic
+          </a>
         </div>
-        <iframe
-          src="https://player.vimeo.com/video/109002761"
-          class="u-text-center videos-container__iframe u-margin-Vl" autoplay="true"
-          data-ng-gc-ga-event-tracker="{
-            category: 'video',
-            label: 'plays-demo'
-          }">
-        </iframe>
-        <a href="/how-to" class="u-color-primary u-text-upcase u-text-xxs u-text-heading u-text-semi u-block u-margin-Tm">
-          View more videos of GoCardless Basic
-        </a>
       </div>
+
     </div>
 
   </div>
@@ -200,10 +204,10 @@
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="grid u-padding-Vxl">
-        <div class="grid__cell u-size-1of2 u-text-center u-margin-Txl">
+        <div class="grid__cell u-size-1of2 u-text-center">
           <img src="/images/products/real-time-reports.jpg" class="basic-page__real-time-reports-image">
         </div>
-        <div class="grid__cell u-size-1of2 u-padding-Tl">
+        <div class="grid__cell u-size-1of2">
           <h2 class="u-text-heading u-color-heading u-text-l u-text-light u-margin-Bl u-margin-Ts">
             Track payments in real-time
           </h2>
@@ -466,10 +470,9 @@
           </a>
         </div>
       </div>
-
-      <hr class="u-margin-An">
-
     </div>
+
+    <hr class="u-margin-An">
 
     <div class="site-container u-text-center u-padding-Vxxl">
       <div class="u-padding-Vxl">
