@@ -13,21 +13,24 @@ angular.module('ngGcStickyNavDirective', [])
 
           var navOffset;
 
-          setTimeout(function(){
-            navOffset = element.offset().top;
-          }, 0);
-
-          function updatePosition() {
-            var scrollPosition = angular.element($window).scrollTop();
-
-            if (navOffset === null) {
-              navOffset = element.parent().offset().top;
-            }
-
+          function setStickyClass(scrollPosition, navOffset) {
             if (scrollPosition >= navOffset) {
               element.addClass('is-sticky');
             } else {
               element.removeClass('is-sticky');
+            }
+          }
+
+          function updatePosition() {
+            var scrollPosition = angular.element($window).scrollTop();
+
+            if (navOffset === undefined) {
+              setTimeout(function() {
+                navOffset = element.parent().offset().top;
+                setStickyClass(scrollPosition, navOffset);
+              }, 0);
+            } else {
+              setStickyClass(scrollPosition, navOffset);
             }
           }
 
