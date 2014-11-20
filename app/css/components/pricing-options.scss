@@ -1,14 +1,6 @@
+// Use a fixed width here to prevent text from reflowing when window is resized
 .pricing-options {
   width: 752px;
-}
-
-.pricing-options__option {
-  background-color: $primary-color;
-  position: relative;
-}
-
-.pricing-options--pro {
-  background-color: $dark-gray-darken;
 }
 
 .pricing-options__badge {
@@ -27,7 +19,7 @@
 .pricing-options__list-item {
   border-bottom: 1px solid $gray;
   padding: $space-small;
-  color: $medium-gray
+  color: $medium-gray;
 }
 
 .pricing-options__list-button {

@@ -9,15 +9,15 @@
 @import "shared/appify";
 @import "shared/scaffold";
 @import "shared/forms";
-@import "shared/ss-standard";
 
 @import "components/align-btn";
 @import "components/align-btn-small";
+@import "components/basic-grid";
 @import "components/basic-page";
 @import "components/btn";
 @import "components/bullet";
+@import "components/comparison-table";
 @import "components/chromeframe";
-@import "components/basic-grid";
 @import "components/error-label";
 @import "components/example-checkout-hero";
 @import "components/footer";
@@ -55,11 +55,11 @@
 @import "components/site-header";
 @import "components/site-wrapper";
 @import "components/sticky-nav";
+@import "components/story-hero";
 @import "components/svg-icon";
 @import "components/tab-link";
 @import "components/table";
 @import "components/thumbnails";
-@import "components/story-hero";
 @import "components/vertical-page";
 @import "components/videos-container";
 @import "components/well";
