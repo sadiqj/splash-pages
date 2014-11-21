@@ -1,7 +1,7 @@
 {
   "/docs/index.html": "https://developer.gocardless.com",
   "/faq/index.html": "https://gocardless.com/faq/merchants",
-  "/payment-timings/index.html": "https://help.gocardless.com/payment-timings",
+  "/payment-timings/index.html": "https://help.gocardless.com/customer/portal/articles/1563666",
   "/tour/index.html": "https://gocardless.com/features",
   "/recurring-payments/index.html": "https://gocardless.com/features",
   "/integrations/index.html": "https://gocardless.com/partners",
@@ -17,7 +17,7 @@
   "/using_setup/index.html": "https://gocardless.com/",
   "/help/index.html": "https://gocardless.com/faq/merchants",
   "/direct_debit/index.html": "https://gocardless.com/direct-debit",
-  "/using_timing/index.html": "https://help.gocardless.com/payment-timings",
+  "/using_timing/index.html": "https://help.gocardless.com/customer/portal/articles/1563666",
   "/using_manage/index.html": "https://gocardless.com/how-to",
   "/using_customer/index.html": "https://gocardless.com/example-checkout",
   "/testimonials/index.html": "https://gocardless.com/",
