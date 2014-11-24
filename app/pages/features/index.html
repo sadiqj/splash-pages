@@ -447,9 +447,29 @@
     <hr class="u-margin-An">
 
     <div id="forOptimizely-Table">
-      {% include "_product_comparison_table.html" %}
+      <div class="u-text-center u-padding-Vxxl u-background-light-gray">
+        <div class="site-container u-padding-Vxl">
+          <table class="u-size-full">
+
+            {% include "_product_comparison_table.html" %}
+            <tfoot>
+              <tr class="comparison-table__row">
+                <td></td>
+                <td></td>
+                <td class="u-padding-As">
+                  <a href="/pro" class="u-color-primary">
+                    Learn more about Pro
+                  </a>
+                </td>
+              </tr>
+            </tfoot>
+
+          </table>
+        </div>
+      </div>
       <hr class="u-margin-An">
     </div>
+
   </div>
 
   <div class="section-scroll-target" id="pricing">
