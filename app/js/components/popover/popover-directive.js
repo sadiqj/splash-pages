@@ -1,7 +1,5 @@
 'use strict';
 
-var _ = require('lodash');
-
 angular.module('gc.popover', [
   'gc.dialogController'
 ]).directive('popover', [
@@ -18,12 +16,7 @@ angular.module('gc.popover', [
       scope: {
         show: '='
       },
-      link: function popoverLink(scope, element, attrs) {
-
-        var options = _.extend({
-            hideOnClick: true
-          }, scope.$eval(attrs.popoverOptions)
-        );
+      link: function popoverLink(scope, element) {
 
         scope.dialog = new Dialog({
           el: element[0]
