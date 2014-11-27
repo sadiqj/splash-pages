@@ -25,16 +25,9 @@ angular.module('gc.popover', [
           }, scope.$eval(attrs.popoverOptions)
         );
 
-        if (options.hideOnClick) {
-          scope.dialog = new Dialog({
-            el: element[0]
-          });
-        } else {
-          scope.dialog = new Dialog({
-            el: element[0],
-            outsideClick: true
-          });
-        }
+        scope.dialog = new Dialog({
+          el: element[0]
+        });
 
         $rootScope.$on('closePopover', scope.hideDialog);
 
