@@ -21,7 +21,6 @@ angular.module('gc.popover', [
       link: function popoverLink(scope, element, attrs) {
 
         var options = _.extend({
-            popoverOnHover: false,
             hideOnClick: true
           }, scope.$eval(attrs.popoverOptions)
         );
@@ -34,23 +33,6 @@ angular.module('gc.popover', [
           scope.dialog = new Dialog({
             el: element[0],
             outsideClick: true
-          });
-        }
-
-        if (options.popoverOnHover) {
-          element.on('mouseover', function(){
-            clearTimeout(this.timer);
-            scope.mousedOver = true;
-          });
-
-          element.on('mouseleave', function(){
-            if (scope.mousedOver) {
-              scope.mousedOver = false;
-              this.timer = setTimeout(
-                scope.hideDialog,
-                650
-              );
-            }
           });
         }
 
