@@ -254,16 +254,11 @@
     _hideOnClick: function _hideOnClick() {
       var self = this;
 
-      if (this.options.outsideClick) {
-        return false;
-      } else {
-        this._buildEvent(document, 'click', function(event){
-          if (!self._content.contains(event.target)) {
-            self.hide();
-          }
-        });
-      }
-
+      this._buildEvent(document, 'click', function(event){
+        if (!self._content.contains(event.target)) {
+          self.hide();
+        }
+      });
     },
 
     /**

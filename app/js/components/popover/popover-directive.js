@@ -1,7 +1,5 @@
 'use strict';
 
-var _ = require('lodash');
-
 angular.module('gc.popover', [
   'gc.dialogController'
 ]).directive('popover', [
@@ -18,41 +16,11 @@ angular.module('gc.popover', [
       scope: {
         show: '='
       },
-      link: function popoverLink(scope, element, attrs) {
+      link: function popoverLink(scope, element) {
 
-        var options = _.extend({
-            popoverOnHover: false,
-            hideOnClick: true
-          }, scope.$eval(attrs.popoverOptions)
-        );
-
-        if (options.hideOnClick) {
-          scope.dialog = new Dialog({
-            el: element[0]
-          });
-        } else {
-          scope.dialog = new Dialog({
-            el: element[0],
-            outsideClick: true
-          });
-        }
-
-        if (options.popoverOnHover) {
-          element.on('mouseover', function(){
-            clearTimeout(this.timer);
-            scope.mousedOver = true;
-          });
-
-          element.on('mouseleave', function(){
-            if (scope.mousedOver) {
-              scope.mousedOver = false;
-              this.timer = setTimeout(
-                scope.hideDialog,
-                650
-              );
-            }
-          });
-        }
+        scope.dialog = new Dialog({
+          el: element[0]
+        });
 
         $rootScope.$on('closePopover', scope.hideDialog);
 
