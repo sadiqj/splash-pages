@@ -25,6 +25,28 @@
 .nav__item-link {
   height: 17px; // matching logo height
   line-height: 17px; //matches above
+  position: relative;
+}
+
+.nav__item-link--dropdown {
+  padding-right: 15px
+}
+
+.nav__item-link--dropdown:after {
+  width: 0;
+  height: 0;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $primary-color;
+}
+
+.nav--invert .nav__item-link--dropdown:after {
+  border-top-color: white;
 }
 
 @include breakpoint-medium {
