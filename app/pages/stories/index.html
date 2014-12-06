@@ -93,33 +93,6 @@
         </div>
         <div class="stories-item__btn btn u-size-full">Read the case study</div>
       </a>
-      <a href="" class="grid__cell u-size-1of3 u-padding-Rxs u-padding-Bm">
-        <div class="product-grid__container u-text-center u-padding-Vl">
-          <i role="img" aria-label="FreeAgent" class="freeagent-logo u-margin-Vs"></i>
-          <p class="u-size-3of4 u-center u-color-p u-margin-Txxs">
-            Award-winning online accounting software for freelancers and small businesses
-          </p>
-        </div>
-        <div class="stories-item__btn btn u-size-full">Read the case study</div>
-      </a>
-      <a href="" class="grid__cell u-size-1of3 u-padding-Bm">
-        <div class="product-grid__container u-text-center u-padding-Vl">
-          <i role="img" aria-label="FreeAgent" class="freeagent-logo u-margin-Vs"></i>
-          <p class="u-size-3of4 u-center u-color-p u-margin-Txxs">
-            Award-winning online accounting software for freelancers and small businesses
-          </p>
-        </div>
-        <div class="stories-item__btn btn u-size-full">Read the case study</div>
-      </a>
-      <a href="" class="grid__cell u-size-1of3 u-padding-Lxs u-padding-Bm">
-        <div class="product-grid__container u-text-center u-padding-Vl">
-          <i role="img" aria-label="FreeAgent" class="freeagent-logo u-margin-Vs"></i>
-          <p class="u-size-3of4 u-center u-color-p u-margin-Txxs">
-            Award-winning online accounting software for freelancers and small businesses
-          </p>
-        </div>
-        <div class="stories-item__btn btn u-size-full">Read the case study</div>
-      </a>
       <a href="" class="grid__cell u-size-1of3 u-padding-Rxs">
         <div class="product-grid__container u-text-center u-padding-Vl">
           <i role="img" aria-label="FreeAgent" class="freeagent-logo u-margin-Vs"></i>
@@ -147,6 +120,79 @@
         </div>
         <div class="stories-item__btn btn u-size-full">Read the case study</div>
       </a>
+    </div>
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="site-container u-text-center u-padding-Vxxl">
+    <div class="u-padding-Vxl">
+      <div class="u-text-center">
+        <a href="#dashboard-home"
+        class="stories-testimonial__link u-link-clean u-margin-Rm"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'dashboard-home'
+        }">
+          <img src="/images/stories/guardian-logo@2x.jpg">
+        </a>
+        <a href="#add-customers"
+        class="stories-testimonial__link u-link-clean u-margin-Rm"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'add-customers'
+        }">
+          <img src="/images/stories/guardian-logo@2x.jpg">
+        </a>
+        <a href="#guardian"
+        class="stories-testimonial__link u-link-clean u-margin-Rm"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'guardian'
+        }">
+          <img src="/images/stories/guardian-logo@2x.jpg">
+        </a>
+        <a href="#take-payments"
+        class="stories-testimonial__link u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'take-payments'
+        }">
+          <img src="/images/stories/guardian-logo@2x.jpg">
+        </a>
+      </div>
+      <div id="dashboard-home" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <div class="stories-testimonial__quote stories-testimonial__quote--theguardian u-relative u-margin-Txxl u-padding-Al">
+            <p class="u-text-heading u-color-heading u-text-light u-text-m">"1 With GoCardless and TeamUp I now spend just an hour a month managing payments, so I can concentrate on the other jobs that need doing"</p>
+          </div>
+        </div>
+      </div>
+      <div id="add-customers" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <div class="stories-testimonial__quote stories-testimonial__quote--omnicapital u-relative u-margin-Txxl u-padding-Al">
+            <p class="u-text-heading u-color-heading u-text-light u-text-m">"2 With GoCardless and TeamUp I now spend just an hour a month managing payments, so I can concentrate on the other jobs that need doing"</p>
+          </div>
+        </div>
+      </div>
+      <div id="guardian" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <div class="stories-testimonial__quote stories-testimonial__quote--pieminister u-relative u-margin-Txxl u-padding-Al">
+            <p class="u-text-heading u-color-heading u-text-light u-text-m">"3 With GoCardless and TeamUp I now spend just an hour a month managing payments, so I can concentrate on the other jobs that need doing"</p>
+          </div>
+        </div>
+      </div>
+      <div id="take-payments" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <div class="stories-testimonial__quote stories-testimonial__quote--virginpure u-relative u-margin-Txxl u-padding-Al">
+            <p class="u-text-heading u-color-heading u-text-light u-text-m">"4 With GoCardless and TeamUp I now spend just an hour a month managing payments, so I can concentrate on the other jobs that need doing"</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
