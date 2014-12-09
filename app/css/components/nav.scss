@@ -28,6 +28,10 @@
   position: relative;
 }
 
+.nav__item-link:hover {
+  text-decoration: underline;
+}
+
 .nav__item-link--dropdown {
   padding-right: 15px
 }
