@@ -1,0 +1,14 @@
+.stories-item__btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-width: 0;
+  border-width: 0 1px 1px 1px;
+  border-color: $gray;
+  background: white;
+  color: $primary-color;
+
+  &:hover, &:active {
+    color: $primary-color;
+    background: white;
+  }
+}

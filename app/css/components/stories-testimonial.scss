@@ -1,0 +1,61 @@
+.stories-testimonial__link {
+  opacity: 0.5
+}
+
+.stories-testimonial__link.is-active {
+  opacity: 1
+}
+
+.stories-testimonial__link.is-active:focus {
+  outline: none;
+}
+
+.stories-testimonial__quote {
+  border: 2px solid $medium-gray;
+  box-shadow: 2px 2px 0 $highlight-green;
+  border-radius: 5px;
+}
+
+.stories-testimonial__quote:after, .stories-testimonial__quote:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.stories-testimonial__quote:before {
+  border-bottom-color: $medium-gray;
+  border-width: 14px;
+  z-index: 1;
+  top: -29px;
+  margin-left: -2px;
+}
+
+.stories-testimonial__quote:after {
+  border-bottom-color: white;
+  border-width: 12px;
+  z-index: 2;
+}
+
+.stories-testimonial__quote--theguardian:after,
+.stories-testimonial__quote--theguardian:before {
+  left: 125px;
+}
+
+.stories-testimonial__quote--omnicapital:after,
+.stories-testimonial__quote--omnicapital:before {
+  left: 342px;
+}
+
+.stories-testimonial__quote--pieminister:after,
+.stories-testimonial__quote--pieminister:before {
+  left: 559px;
+}
+
+.stories-testimonial__quote--virginpure:after,
+.stories-testimonial__quote--virginpure:before {
+  left: 776px;
+}

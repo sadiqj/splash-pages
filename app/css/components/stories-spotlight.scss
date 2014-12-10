@@ -1,0 +1,25 @@
+.stories-spotlight {
+  top: -300px;
+  position: absolute
+}
+
+.stories-spotlight__item {
+  height: 400px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid $dark-gray;
+  background: $dark-gray
+}
+
+.stories-spotlight__btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+// ^^^ Can probably be refactored in combination with some .product-grid components
+
+.stories-spotlight__item-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
