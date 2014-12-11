@@ -90,8 +90,6 @@
 
   <div class="section-scroll-target" id="team">
 
-    <div class="page-hero page-hero--team page-hero--large">
-    </div>
 
     <div class="site-container u-padding-Vxxl">
       <div class="grid u-padding-Txl">
@@ -105,7 +103,7 @@
         </div>
         <div class="grid__cell u-size-2of3">
             <span class="u-text-heavy u-color-heading">GoCardless is: </span><span class="u-color-p">
-            Octave Auger, Grey Baker, Baris Balic, Angus Bayley, James Berry, George Britton, Jenna Brown, Maria Campbell, Duncan Coleman, Matt Cummins, James Cunningham, Amaury de Closset, Steve Domin, Saz Ehibor-Smith, Jamie English, Jack Franklin, Jessie Giladi, Pete Hamilton, Phil Harrison, Natalie Hockham, James Jackson, Sam Jewell, Paul Jolly, Alan Kennedy, Norberto Lopes, Daniel Lyons, Harry Marr, Erez Mathan, Ben Miller, Alasdair Monk, Max Murdoch, Jacob Pargin, Steve Parrington, Tom Petty, Nabeel Qureshi, Charlotte Robinson, Matt Robinson, Tim Rogers, Isaac Seymour, James Shedden, Ben Sims, Chris Sinjakli, Alina Solovjova, Jess Summerfield, Hiroki Takeuchi, Yoshio Takeuchi, Helen Taylor, Ravin Thambapillai
+            Octave Auger, Grey Baker, Baris Balic, Angus Bayley, James Berry, George Britton, Jenna Brown, Maria Campbell, Michael Christofides, Duncan Coleman, Matt Cummins, James Cunningham, Amaury de Closset, Steve Domin, Saz Ehibor-Smith, Jamie English, Jack Franklin, Jessie Giladi, Pete Hamilton, Phil Harrison, Natalie Hockham, James Jackson, Sam Jewell, Paul Jolly, Alan Kennedy, Norberto Lopes, Daniel Lyons, Harry Marr, Erez Mathan, Ben Miller, Alasdair Monk, Max Murdoch, Jacob Pargin, Steve Parrington, Tom Petty, Nabeel Qureshi, Charlotte Robinson, Matt Robinson, Tim Rogers, Isaac Seymour, James Shedden, Ben Sims, Chris Sinjakli, Alina Solovjova, Jess Summerfield, Hiroki Takeuchi, Yoshio Takeuchi, Helen Taylor, Ravin Thambapillai
           </span>
         </div>
       </div>
@@ -136,7 +134,7 @@
               <ul class="nav nav-tabs u-margin-Ts">
 
                 <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-                  Engineering
+                  Engineering &amp; UX
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
@@ -145,6 +143,14 @@
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
                     Backend Software Engineer
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/front-end-developer" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Front-end Developer
                   </a>
                 </li>
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
@@ -160,20 +166,29 @@
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
-                    Internships
+                    Engineering Internships
                   </a>
                 </li>
 
                 <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-                  User experience
+                  Business Development
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/front-end-developer" class="nav-tabs__link"
+                  <a href="#jobs/country-lead" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
-                    Front-end Developer
+                    Country Lead
+                  </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/bd-generalist" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Generalist
                   </a>
                 </li>
 
@@ -182,11 +197,29 @@
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/business-development" class="nav-tabs__link"
+                  <a href="#jobs/head-of-marketing" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
-                    Business Development
+                    Head of Marketing
+                  </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/account-manager" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Account Manager
+                  </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/sales-executive" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Sales Executive
                   </a>
                 </li>
 
@@ -243,11 +276,37 @@
                   {% include "about/_front_end_developer.html" %}
                 </div>
               </div>
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/business-development">
+
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/bd-generalist">
                 <div ng-if="$isActive">
-                  {% include "about/_business_development.html" %}
+                  {% include "about/_bd_generalist.html" %}
                 </div>
               </div>
+
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead">
+                <div ng-if="$isActive">
+                  {% include "about/_country_lead.html" %}
+                </div>
+              </div>
+
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/head-of-marketing">
+                <div ng-if="$isActive">
+                  {% include "about/_head_of_marketing.html" %}
+                </div>
+              </div>
+
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/account-manager">
+                <div ng-if="$isActive">
+                  {% include "about/_account_manager.html" %}
+                </div>
+              </div>
+
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/sales-executive">
+                <div ng-if="$isActive">
+                  {% include "about/_sales_executive.html" %}
+                </div>
+              </div>
+
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/head-of-finance">
                 <div ng-if="$isActive">
                   {% include "about/_head_of_finance.html" %}
