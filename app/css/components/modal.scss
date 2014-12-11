@@ -1,102 +1,52 @@
-/*csslint ids: false */
-
-$width: 900px;
-$small-width: 560px;
-$extra-small-width: 440px;
-
-#modal-backdrop {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1999999999;
-  overflow: hidden;
-  background-color: rgba(0,0,0,0.5);
-}
-
 .modal {
-  display: none;
-  position: absolute;
-  top: 45px;
-  left: 50%;
-  width: $width;
-  margin-left: -$width/2;
-  z-index: 2000000000;
-  outline: none;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  display: block;
+  background-color: rgba($primary-color, 0.7);
+  z-index: 2;
 }
 
-.extra-small-modal {
-  width: $extra-small-width;
-  margin-left: -$extra-small-width/2;
-}
-
-.small-modal {
-  width: $small-width;
-  margin-left: -$small-width/2;
-}
-
-.mid-modal {
-  width: 620px;
-  margin-left: -620px/2;
-
-  .content {
-    padding: 15px 0;
-  }
-}
-
-.modal > .content {
-  max-height: 100%;
-  overflow-y: auto;
-  overflow-x: auto;
+.modal__container {
+  width: 1000px;
   background-color: #fff;
-  border-radius:4px;
-  box-shadow: 0px 15px 46px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  display: block;
+  left: 50%;
+  margin-left: -500px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin-top: 80px;
 }
 
-.modal > .close {
+.modal__container__close {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-
-  &:after {
-    border-radius: 15px;
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 28px;
-    height: 28px;
-    background: $gray-lighten image-url("/icons/invalid.png") center center no-repeat;
-  }
+  right: 27px;
+  top: 20px;
+  z-index: 3;
 }
 
-@media only screen and (max-width: $width) {
-  .modal:not(.small-modal) {
-    width: 100%;
-    margin-left: 0;
-    left: 0;
-  }
+.modal__container__img {
+  float: left;
+  width: 50%;
+  background-color: $primary-color;
+  min-height: 600px;
 }
 
-@media only screen and (max-width: $small-width) {
-  .modal {
-    width: 100%;
-    margin-left: 0;
-    left: 0;
-  }
+.modal__container__copy {
+  float: left;
+  width: 50%;
+  min-height: 600px;
+  position: relative;
 }
 
-@media only screen and (max-width: 767px) {
-  .modal {
-    top: 0;
-    position: absolute;
-  }
-  .modal > .content {
-    max-height: initial;
-  }
+.modal__container__controls {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
+  display: block;
+  border-top: 1px solid $gray-lighten;
 }
