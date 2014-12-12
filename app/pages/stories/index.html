@@ -128,9 +128,9 @@
 
   <div class="site-container u-text-center u-padding-Vxxl">
     <div class="u-padding-Vxl">
-      <div class="grid u-text-center">
+      <div class="stories-testimonials__grid grid u-text-center">
         <a href="#guardian"
-        class="grid__cell u-padding-Hl stories-testimonial__link--guardian u-size-1of3 stories-testimonial__link u-link-clean"
+        class="grid__cell u-padding-Hl stories-testimonials__link--guardian u-size-1of3 stories-testimonials__link u-link-clean"
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
@@ -139,41 +139,41 @@
           <img src="/images/stories/guardian-logo@2x.jpg">
         </a>
         <a href="#funding-circle"
-        class="grid__cell u-padding-Hl stories-testimonial__link--funding-circle u-size-1of3 stories-testimonial__link u-link-clean"
+        class="grid__cell u-padding-Hl stories-testimonials__link--funding-circle u-size-1of3 stories-testimonials__link u-link-clean"
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
           $href: 'funding-circle'
         }">
-          <img src="/images/stories/funding-circle-logo@2x.jpg">
+          <img class="stories-testimonials__link-image--funding-circle" src="/images/stories/funding-circle-logo@2x.jpg">
         </a>
         <a href="#lendable"
-        class="grid__cell u-padding-Hl stories-testimonial__link--lendable u-size-1of3 stories-testimonial__link u-link-clean"
+        class="grid__cell u-padding-Hl stories-testimonials__link--lendable u-size-1of3 stories-testimonials__link u-link-clean"
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
           $href: 'lendable'
         }">
-          <img src="/images/stories/lendable-logo@2x.jpg">
+          <img class="stories-testimonials__link-image--lendable" src="/images/stories/lendable-logo@2x.jpg">
         </a>
       </div>
       <div id="guardian" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <div class="stories-testimonial__quote stories-testimonial__quote--theguardian u-relative u-margin-Txxl u-padding-Al">
+          <div class="stories-testimonials__quote stories-testimonials__quote--guardian u-relative u-margin-Txxl u-padding-Al">
             <p class="u-text-heading u-color-heading u-text-light u-text-m">"GoCardless is one of the best payments companies we've worked with. Their API was simple to integrate and allows us to use Direct Debit in a fully automated way. I'd highly recommend them to any company that cares about a providing good user experience and using the best available technology for their Direct Debit in the UK and Europe."</p>
           </div>
         </div>
       </div>
       <div id="funding-circle" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <div class="stories-testimonial__quote stories-testimonial__quote--omnicapital u-relative u-margin-Txxl u-padding-Al">
+          <div class="stories-testimonials__quote stories-testimonials__quote--funding-circle u-relative u-margin-Txxl u-padding-Al">
             <p class="u-text-heading u-color-heading u-text-light u-text-m">"We moved to GoCardless as collections can be managed by one person instead of a whole department. It's great to work with another financial technology company who are committed to helping businesses."</p>
           </div>
         </div>
       </div>
       <div id="lendable" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
-          <div class="stories-testimonial__quote stories-testimonial__quote--pieminister u-relative u-margin-Txxl u-padding-Al">
+          <div class="stories-testimonials__quote stories-testimonials__quote--lendable u-relative u-margin-Txxl u-padding-Al">
             <p class="u-text-heading u-color-heading u-text-light u-text-m">"The Guardian is always looking to give the best customer experience and has chosen GoCardless to make its recurring payment experience as seamless as possible."</p>
           </div>
         </div>
