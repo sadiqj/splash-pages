@@ -1,0 +1,38 @@
+.stories-item__btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-width: 0;
+  border-width: 0 1px 1px 1px;
+  border-color: $gray;
+  background: white;
+  color: $primary-color;
+
+  &:hover, &:active {
+    color: $primary-color;
+    background: white;
+  }
+}
+
+.stories-item__logo--crowdcube {
+  margin: 20px 0 19px;
+}
+
+.stories-item__logo--greater-anglia {
+  margin: 5px 0;
+}
+
+.stories-item__logo--rock-choir {
+  margin: 2px 0 1px;
+}
+
+.stories-item__logo--foundation-of-hearts {
+  margin: 4px 0;
+}
+
+.stories-item__logo--spencer-hockey-club {
+  margin: 6px 0 5px;
+}
+
+.stories-item__logo--bluesky {
+  margin: 13px 0 12px;
+}
