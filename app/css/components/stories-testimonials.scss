@@ -1,0 +1,90 @@
+.stories-testimonials__link {
+  opacity: 0.5;
+  transition: all 0.1s ease;
+}
+
+.stories-testimonials__link:hover {
+  opacity: 1;
+  transition: all 0.1s ease;
+}
+
+.stories-testimonials__link--guardian {
+ margin-top: 0px;
+}
+
+.stories-testimonials__link--funding-circle {
+ margin-top: -7px;
+}
+
+.stories-testimonials__link--lendable {
+ margin-top: 0px;
+}
+
+.stories-testimonials__link-image--funding-circle {
+  position: relative;
+  top: -2px;
+}
+
+.stories-testimonials__link-image--lendable {
+  position: relative;
+  left: -36px;
+  top: -4px;
+}
+
+.stories-testimonials__link.is-active {
+  opacity: 1
+}
+
+.stories-testimonials__link.is-active:focus {
+  outline: none;
+}
+
+.stories-testimonials__quote {
+  border: 2px solid $medium-gray;
+  box-shadow: 2px 2px 0 $highlight-green;
+  border-radius: 5px;
+}
+
+.stories-testimonials__grid {
+  position: relative;
+  left: 40px
+}
+
+.stories-testimonials__quote:after, .stories-testimonials__quote:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.stories-testimonials__quote:before {
+  border-bottom-color: $medium-gray;
+  border-width: 14px;
+  z-index: 1;
+  top: -29px;
+  margin-left: -2px;
+}
+
+.stories-testimonials__quote:after {
+  border-bottom-color: white;
+  border-width: 12px;
+  z-index: 2;
+}
+
+.stories-testimonials__quote--guardian:after,
+.stories-testimonials__quote--guardian:before {
+  left: 180px;
+}
+
+.stories-testimonials__quote--funding-circle:after,
+.stories-testimonials__quote--funding-circle:before {
+  left: 505px;
+}
+
+.stories-testimonials__quote--lendable:after,
+.stories-testimonials__quote--lendable:before {
+  left: 774px;
+}
