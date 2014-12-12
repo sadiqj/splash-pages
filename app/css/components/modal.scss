@@ -4,9 +4,19 @@
   right: 0px;
   top: 0px;
   bottom: 0px;
-  display: block;
-  background-color: rgba($primary-color, 0.7);
+  background-color: rgba(#000, 0.7);
   z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal.is-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .modal__container {
@@ -19,6 +29,23 @@
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
   overflow: hidden;
   margin-top: 80px;
+
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal__container.is-active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
 }
 
 .modal__container__close {
@@ -45,8 +72,52 @@
 .modal__container__controls {
   position: absolute;
   bottom: 20px;
-  left: 0px;
+  left: 500px;
   right: 0px;
   display: block;
+  z-index: 3;
   border-top: 1px solid $gray-lighten;
+}
+
+// Copy
+
+.modal__container--slide--1 .modal__container__copy {
+  padding-top: 137px;
+}
+
+.modal__container--slide--2 .modal__container__copy {
+  padding-top: 91px;
+}
+
+.modal__container--slide--3 .modal__container__copy {
+  padding-top: 62px;
+}
+
+.modal__container--slide--4 .modal__container__copy {
+  padding-top: 87px;
+}
+
+.modal__container--slide--5 .modal__container__copy {
+  padding-top: 99px;
+}
+
+// Images
+
+.modal__container--slide--1 .modal__container__img {
+}
+
+.modal__container--slide--2 .modal__container__img {
+  padding-top: 141px;
+}
+
+.modal__container--slide--3 .modal__container__img {
+  padding-top: 138px;
+}
+
+.modal__container--slide--4 .modal__container__img {
+  padding-top: 50px;
+}
+
+.modal__container--slide--5 .modal__container__img {
+  padding-top: 129px;
 }
