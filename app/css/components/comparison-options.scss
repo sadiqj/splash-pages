@@ -1,28 +1,28 @@
 // Use a fixed width here to prevent text from reflowing when window is resized
-.pricing-options {
+.comparison-options {
   width: 752px;
 }
 
-.pricing-options__badge {
+.comparison-options__badge {
   position: absolute;
   top: 35px;
   left: -35px;
   width: 70px;
 }
 
-.pricing-options__list {
+.comparison-options__list {
   background-color: $site-background-color;
   text-align: center;
   list-style-type: none;
 }
 
-.pricing-options__list-item {
+.comparison-options__list-item {
   border-bottom: 1px solid $gray;
   padding: $space-small;
   color: $medium-gray;
 }
 
-.pricing-options__list-button {
+.comparison-options__list-button {
   width: 100%;
   padding: 16px;
 }
