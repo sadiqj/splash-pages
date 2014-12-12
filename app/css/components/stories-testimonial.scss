@@ -1,5 +1,17 @@
 .stories-testimonial__link {
-  opacity: 0.5
+  opacity: 0.5;
+}
+
+.stories-testimonial__link--guardian {
+ margin-top: 0px;
+}
+
+.stories-testimonial__link--funding-circle {
+ margin-top: -7px;
+}
+
+.stories-testimonial__link--lendable {
+ margin-top: 0px;
 }
 
 .stories-testimonial__link.is-active {

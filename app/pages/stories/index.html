@@ -44,14 +44,14 @@
             </div>
             <div class="stories-spotlight__btn btn u-size-full">Read the case study</div>
           </a>
-          <a href="/stories/teamup" class="grid__cell u-text-center u-size-1of2 u-link-clean u-padding-Lxs u-padding-Rn">
+          <a href="/stories/momentum" class="grid__cell u-text-center u-size-1of2 u-link-clean u-padding-Lxs u-padding-Rn">
             <div class="stories-spotlight__item stories-spotlight__item--crossfit-hackney u-relative u-padding-Vl">
               <div class="stories-spotlight__item-text u-margin-Vl">
                 <p class="u-padding-Al u-padding-Bn u-text-heading u-color-invert u-text-m">
-                  “The high fees and failure rates of card payments meant they weren’t a good fit for our members - GoCardless is cheaper and more reliable.”
+                  “Taking payments with GoCardless costs us less than half the price of using PayPal and the integration with TeamUp has definitely reduced our admin.”
                 </p>
                 <div class="u-color-invert u-margin-Tm">
-                  Rupert Baker, TeamUp
+                  Geoff Stewart, Momentum Training
                 </div>
               </div>
             </div>
@@ -128,27 +128,9 @@
 
   <div class="site-container u-text-center u-padding-Vxxl">
     <div class="u-padding-Vxl">
-      <div class="u-text-center">
-        <a href="#dashboard-home"
-        class="stories-testimonial__link u-link-clean u-margin-Rm"
-        ng-click="$activate($event)"
-        ng-class="{ 'is-active': $isActive }"
-        ng-gc-tabby-trigger="{
-          $href: 'dashboard-home'
-        }">
-          <img src="/images/stories/guardian-logo@2x.jpg">
-        </a>
-        <a href="#add-customers"
-        class="stories-testimonial__link u-link-clean u-margin-Rm"
-        ng-click="$activate($event)"
-        ng-class="{ 'is-active': $isActive }"
-        ng-gc-tabby-trigger="{
-          $href: 'add-customers'
-        }">
-          <img src="/images/stories/guardian-logo@2x.jpg">
-        </a>
+      <div class="grid u-text-center">
         <a href="#guardian"
-        class="stories-testimonial__link u-link-clean u-margin-Rm"
+        class="grid__cell u-padding-Hl stories-testimonial__link--guardian u-size-1of3 stories-testimonial__link u-link-clean"
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
@@ -156,41 +138,43 @@
         }">
           <img src="/images/stories/guardian-logo@2x.jpg">
         </a>
-        <a href="#take-payments"
-        class="stories-testimonial__link u-link-clean"
+        <a href="#funding-circle"
+        class="grid__cell u-padding-Hl stories-testimonial__link--funding-circle u-size-1of3 stories-testimonial__link u-link-clean"
         ng-click="$activate($event)"
         ng-class="{ 'is-active': $isActive }"
         ng-gc-tabby-trigger="{
-          $href: 'take-payments'
+          $href: 'funding-circle'
         }">
-          <img src="/images/stories/guardian-logo@2x.jpg">
+          <img src="/images/stories/funding-circle-logo@2x.jpg">
+        </a>
+        <a href="#lendable"
+        class="grid__cell u-padding-Hl stories-testimonial__link--lendable u-size-1of3 stories-testimonial__link u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'lendable'
+        }">
+          <img src="/images/stories/lendable-logo@2x.jpg">
         </a>
       </div>
-      <div id="dashboard-home" ng-gc-tabby-content prevent-location-update>
+      <div id="guardian" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
           <div class="stories-testimonial__quote stories-testimonial__quote--theguardian u-relative u-margin-Txxl u-padding-Al">
             <p class="u-text-heading u-color-heading u-text-light u-text-m">"GoCardless is one of the best payments companies we've worked with. Their API was simple to integrate and allows us to use Direct Debit in a fully automated way. I'd highly recommend them to any company that cares about a providing good user experience and using the best available technology for their Direct Debit in the UK and Europe."</p>
           </div>
         </div>
       </div>
-      <div id="add-customers" ng-gc-tabby-content prevent-location-update>
+      <div id="funding-circle" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
           <div class="stories-testimonial__quote stories-testimonial__quote--omnicapital u-relative u-margin-Txxl u-padding-Al">
             <p class="u-text-heading u-color-heading u-text-light u-text-m">"We moved to GoCardless as collections can be managed by one person instead of a whole department. It's great to work with another financial technology company who are committed to helping businesses."</p>
           </div>
         </div>
       </div>
-      <div id="guardian" ng-gc-tabby-content prevent-location-update>
+      <div id="lendable" ng-gc-tabby-content prevent-location-update>
         <div ng-if="$isActive">
           <div class="stories-testimonial__quote stories-testimonial__quote--pieminister u-relative u-margin-Txxl u-padding-Al">
             <p class="u-text-heading u-color-heading u-text-light u-text-m">"The Guardian is always looking to give the best customer experience and has chosen GoCardless to make its recurring payment experience as seamless as possible."</p>
-          </div>
-        </div>
-      </div>
-      <div id="take-payments" ng-gc-tabby-content prevent-location-update>
-        <div ng-if="$isActive">
-          <div class="stories-testimonial__quote stories-testimonial__quote--virginpure u-relative u-margin-Txxl u-padding-Al">
-            <p class="u-text-heading u-color-heading u-text-light u-text-m">"With GoCardless and TeamUp I now spend just an hour a month managing payments, so I can concentrate on the other jobs that need doing"</p>
           </div>
         </div>
       </div>
