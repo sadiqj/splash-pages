@@ -7,8 +7,16 @@
   height: 400px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  border: 1px solid $dark-gray;
-  background: $dark-gray
+}
+
+.stories-spotlight__item--has-bean-coffee {
+  background: url('/images/stories/spotlight-has-bean-coffee@2x.jpg');
+  background-size: 100% 100%;
+}
+
+.stories-spotlight__item--crossfit-hackney {
+  background: url('/images/stories/spotlight-crossfit-hackney@2x.jpg');
+  background-size: 100% 100%;
 }
 
 .stories-spotlight__btn {
