@@ -1,22 +1,19 @@
-<modal ng-show="isShown" class="modal">
-  <div class="modal__container">
-    <a href="#" class="modal__container__close">Close</a>
-    <div class="modal__container__img u-padding-Axl">
-      <div class="u-padding-Axl u-margin-Tm">
-        <img src="/images/why-dd/slide-3.png">
-      </div>
-    </div>
-    <div class="modal__container__copy u-padding-Al">
-      <div class="modal__container__copy__content">
-        <h2 class="u-text-heading u-color-heading u-text-l u-text-light u-padding-Txl u-margin-Tl">
-          About GoCardless
-        </h2>
-        <p class="u-text-s u-color-p u-padding-Tm">Sed sed leo maximus, ullamcorper massa eget, rutrum elit. Praesent dapibus bibendum tellus ac condimentum. Proin eget hendrerit augue, semper euismod quam. Sed feugiat ac dolor auctor lobortis.</p>
-        <p class="u-text-s u-color-p u-padding-Tm">Nam sed rhoncus justo. Aenean sodales nunc tortor, id molestie tellus rutrum sed. Mauris ac velit quis felis maximus luctus. Etiam neque orci, mattis in risus et, iaculis sollicitudin nunc.</p>
-      </div>
+<modal>
+  <div class="modal" ng-show="modal.isShown">
+    <div class="modal__container" ng-show="modal.isShown">
+      <a ng-click="modal.isShown = false" class="modal__container__close">Close</a>
+
       <div class="modal__container__controls u-padding-Tm u-padding-Hl">
-        <a href="#">&larr; Back</a>
-        <a href="#" class="u-pull-end">Next &rarr;</a>
+        <a ng-hide="slide == 1" ng-click="slide = slide - 1" class="btn btn--small btn--hollow u-text-transform-none">&larr; Back</a>
+        <a ng-hide="slide == 5" ng-click="slide = slide + 1" class="u-pull-end btn btn--small u-text-transform-none">Next &rarr;</a>
+      </div>
+
+      <div ng-switch="slide">
+        {% include "/why-dd/_slide-1.html" %}
+        {% include "/why-dd/_slide-2.html" %}
+        {% include "/why-dd/_slide-3.html" %}
+        {% include "/why-dd/_slide-4.html" %}
+        {% include "/why-dd/_slide-5.html" %}
       </div>
     </div>
   </div>
