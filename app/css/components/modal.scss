@@ -29,12 +29,16 @@
   overflow: hidden;
   margin-top: 80px;
   z-index: 3;
+  border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+  border: 1px solid rgba(#000, 0.3);
 }
 
 .modal__container.ng-hide-add.ng-hide-add-active,
@@ -89,6 +93,7 @@
   border-top: 1px solid $gray-lighten;
 }
 
+
 // Copy
 
 .modal__container--slide--1 .modal__container__copy {
@@ -96,11 +101,11 @@
 }
 
 .modal__container--slide--2 .modal__container__copy {
-  padding-top: 91px;
+  padding-top: 83px;
 }
 
 .modal__container--slide--3 .modal__container__copy {
-  padding-top: 62px;
+  padding-top: 48px;
 }
 
 .modal__container--slide--4 .modal__container__copy {
