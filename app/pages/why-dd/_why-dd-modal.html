@@ -1,7 +1,7 @@
 <modal>
   <div class="modal" ng-show="modal.isShown" ng-click="modal.isShown = false; slide = 1"></div>
   <div class="modal__container" ng-show="modal.isShown">
-    <a ng-click="modal.isShown = false" class="modal__container__close">
+    <a ng-click="modal.isShown = false; slide = 1" class="modal__container__close">
       <img ng-gc-svg-injector class="svg-icon__close-modal" data-src="/images/icons/close-modal.svg">
     </a>
     <div class="modal__container__controls u-padding-Tm u-padding-Hl">
