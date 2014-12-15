@@ -7,8 +7,8 @@
 
 <modal>
   <a href="#" ng-click="isShown = true">Why Direct Debit?</a>
-  <div ng-class="{ 'is-active' : isShown }" class="modal">
-    <div class="modal__container" ng-class="{ 'is-active' : isShown }">
+  <div class="modal" ng-show="isShown">
+    <div class="modal__container" ng-show="isShown">
       <a href="#" ng-click="isShown = false" class="modal__container__close">Close</a>
 
           <div class="modal__container__controls u-padding-Tm u-padding-Hl">
