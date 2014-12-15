@@ -23,10 +23,12 @@
   position: fixed;
   display: block;
   left: 50%;
+  top: 0px;
   margin-left: -500px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
   overflow: hidden;
   margin-top: 80px;
+  z-index: 3;
 
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
