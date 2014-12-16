@@ -19,7 +19,6 @@ require('./directives/ng-gc-smooth-scroll-directive');
 require('./directives/ng-gc-sticky-nav-directive');
 require('./directives/ng-gc-video-thumb-directive');
 require('./directives/ng-gc-vimeo-iframe-directive');
-require('./directives/modal-directive');
 
 require('./controllers/ng-gc-prospect-form-controller');
 require('./controllers/ng-gc-active-video-controller');
@@ -51,7 +50,6 @@ angular.module('home', [
   'ngGcTabbyTriggerDirective',
   'ngGcLocationHash',
   'ngGcSvgInjectorDirective',
-  'modalDirective'
 ]).config([
   '$interpolateProvider',
   function($interpolateProvider) {
