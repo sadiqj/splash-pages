@@ -50,6 +50,7 @@
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+  display: block;
 }
 
 .modal__container.ng-hide-remove-active {
