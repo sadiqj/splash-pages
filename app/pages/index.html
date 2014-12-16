@@ -5,6 +5,8 @@
 
 {% block body %}
 
+
+
 <div class="site-wrapper">
   <div class="page-hero page-hero--home page-hero--large u-relative u-size-full">
     <div class="site-container page-hero__container">
@@ -76,6 +78,9 @@
           </p>
         </div>
       </div>
+
+      <p class="u-color-p u-margin-Txxl u-padding-Tm">Want to find out more about Direct Debit? <a ng-click="modal.isShown = true">Check out our intro for beginners</a></p>
+
     </div>
   </div>
 
@@ -228,5 +233,7 @@
   {% include "_site_footer.html" %}
 
 </div>
+
+{% include "/why-dd/_why-dd-modal.html" %}
 
 {% endblock %}
