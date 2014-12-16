@@ -49,7 +49,7 @@ angular.module('home', [
   'ngGcTabbyContentDirective',
   'ngGcTabbyTriggerDirective',
   'ngGcLocationHash',
-  'ngGcSvgInjectorDirective',
+  'ngGcSvgInjectorDirective'
 ]).config([
   '$interpolateProvider',
   function($interpolateProvider) {
