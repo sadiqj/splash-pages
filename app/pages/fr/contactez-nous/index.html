@@ -1,0 +1,66 @@
+{% extends "plain.html" %}
+
+{% block title %}Get a quote{% endblock %}
+{% block meta_tags %}
+  <meta name="description" content="Find out how much you can save using GoCardless to collect Direct Debit payments online. Enter your details and we'll e-mail you a quote within 24 hours.">
+  <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero u-padding-Vxxl">
+    <div class="site-container u-margin-Vxm">
+      <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light">
+        Contactez notre équipe
+      </h1>
+      <p class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">
+        Pour en apprendre sur GoCardless, entrez vos coordonnées ci-dessous.<br>Un de nos représentants vous contactera
+        très rapidement.
+      </p>
+    </div>
+  </div>
+
+  <div class="site-container grid grid--center u-margin-Vxl u-padding-Vxl">
+    <div class="grid__cell u-size-1of2">
+      <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
+        name="prospectForm"
+        ng-gc-form-submit="{
+          onCreate: onWatchDemoProspectCreate,
+          form: prospectForm,
+          data: prospectForm.data
+        }"
+        ng-gc-ga-event-tracker="{
+            event: 'submit',
+            category: 'forms',
+            action: 'submit-form',
+            label: 'ContactSales'
+          }">
+
+        {% include "_prospect_form_fields.html" %}
+
+        <button class="btn btn--block u-margin-Tl"
+          type="submit"
+          ng-disabled="prospectForm.$pristine || prospectForm.$isSubmitting">
+          Contact
+        </button>
+        <hr>
+        <p class="u-text-center u-color-meta u-margin-Bs"><b>Want to talk to an expert now?</b><br>Call us on +44 (0) 20 7183 8674</p>
+        <hr>
+        <p class="u-text-center u-color-meta u-margin-Bs"><b>Your information is safe with us.</b><br>We won't ever share it or sell it to anyone.</p>
+      </form>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
+{% endblock %}
