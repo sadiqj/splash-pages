@@ -1,0 +1,17 @@
+<!-- honeypot field -->
+<input class="u-is-hidden" id="prospect_nofill" name="prospect[nofill]" placeholder="Ne me complétez pas" type="email">
+
+<label class="label label--stacked" for="prospect_name">Votre nom</label>
+<input class="input input--stacked" id="prospect_name" name="prospect[name]"
+  placeholder="Jean Dubois" required type="text"
+  ng-model="prospectForm.data.name">
+
+<label class="label label--stacked" for="prospect_email">Email professionnel</label>
+<input class="input input--stacked" id="prospect_email" name="prospect[email]"
+  placeholder="exemple@votresociete.fr" required type="email"
+  ng-model="prospectForm.data.email">
+
+<label class="label label--stacked" for="prospect_phone_number">Téléphone professionnel</label>
+<input class="input input--stacked" id="prospect_phone_number" name="prospect[phone_number]"
+  placeholder="01071838674" required type="text"
+  ng-model="prospectForm.data.phone">
