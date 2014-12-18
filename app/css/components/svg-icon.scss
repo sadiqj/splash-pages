@@ -42,3 +42,15 @@
 .svg-icon__image--small-shadow {
   transform: translate(1px, 1px);
 }
+
+.svg-icon__external-link {
+  position: relative;
+  top: 3px;
+  margin-right: 3px;
+  fill: darken($gray, 20%);
+}
+
+.svg-icon__close-modal {
+  width: 35px;
+  height: 35px;
+}
