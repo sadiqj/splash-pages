@@ -31,12 +31,7 @@
               En bref
             </a>
           </li>
-          <li class="sticky-nav__item">
-            <a href="#features" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
-              Fonctionalités
-            </a>
-          </li>
-          <li class="sticky-nav__item">
+         <li class="sticky-nav__item">
             <a href="#pricing" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
               Coût
             </a>
@@ -203,74 +198,6 @@
     <hr class="u-margin-An">
 
   </div>
-
-  <div class="section-scroll-target" id="features">
-
-    <div class="site-container u-text-center u-padding-Vxxl">
-      <div class="u-padding-Vxl">
-
-        <div class="u-size-1of2 u-center">
-          <h2 class="u-text-heading u-color-heading u-text-xl u-text-light u-margin-Bs">
-            Votre interface
-          </h2>
-          <div class="u-text-heading u-color-heading u-text-l u-text-light">
-            Gérez aisément vos paiements et clients
-          </div>
-          <hr class="u-margin-Vxxl">
-        </div>
-
-        <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
-          <a href="#customer-info"
-          class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
-          ng-click="$activate($event)"
-          ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger="{
-            $href: 'customer-info'
-          }">
-            Vos clients
-          </a>
-          <a href="#payment-status"
-          class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
-          ng-click="$activate($event)"
-          ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger="{
-            $href: 'payment-status'
-          }">
-            Statut des paiements
-          </a>
-          <a href="#admin"
-          class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
-          ng-click="$activate($event)"
-          ng-class="{ 'is-active': $isActive }"
-          ng-gc-tabby-trigger="{
-            $href: 'admin'
-          }">
-            Administration
-          </a>
-        </div>
-
-        <div id="customer-info" ng-gc-tabby-content prevent-location-update>
-          <div ng-if="$isActive">
-            <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
-          </div>
-        </div>
-        <div id="payment-status" ng-gc-tabby-content prevent-location-update>
-          <div ng-if="$isActive">
-            <img src="/images/pro/pro-payment-status.png" class="pro-page__dashboard-image">
-          </div>
-        </div>
-        <div id="admin" ng-gc-tabby-content prevent-location-update>
-          <div ng-if="$isActive">
-            <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  <hr class="u-margin-An">
 
   <div class="section-scroll-target" id="pricing">
     <div class="u-text-center u-padding-Vxxl">
