@@ -1,3 +1,21 @@
+@keyframes modalFadeUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalScaleUp {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .modal {
   position: fixed;
   left: 0px;
@@ -5,23 +23,13 @@
   top: 0px;
   bottom: 0px;
   background-color: rgba(#000, 0.7);
-  z-index: 2;
-  opacity: 1;
-
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.modal.ng-hide {
-  opacity: 0;
+  display: none;
 }
 
 .modal__container {
   width: 1000px;
   background-color: #fff;
   position: fixed;
-  display: block;
   left: 50%;
   top: 0px;
   margin-left: -500px;
@@ -30,35 +38,28 @@
   z-index: 3;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
   border: 1px solid rgba(#000, 0.3);
+  display: none;
 }
 
-.modal__container.ng-hide-add.ng-hide-add-active,
-.modal__container.ng-hide-remove
- {
-  -webkit-transform: scale(0.7);
-  -moz-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  transform: scale(0.7);
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  display: block;
+.modal.ng-hide-remove {
+  animation: modalFadeUp 0.2s cubic-bezier(.55,0,.1,1) forwards;
 }
 
-.modal__container.ng-hide-remove-active {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
+.modal__container.ng-hide-remove {
+  animation: modalFadeUp 0.2s cubic-bezier(.55,0,.1,1) forwards,
+  modalScaleUp 0.2s cubic-bezier(.55,0,.1,1) forwards;
+}
+
+.modal.ng-hide-add {
+  display: block !important;
+  animation: modalFadeUp 0.2s cubic-bezier(.55,0,.1,1) reverse forwards;
+}
+
+.modal__container.ng-hide-add {
+  display: block !important;
+  animation: modalFadeUp 0.2s cubic-bezier(.55,0,.1,1) reverse forwards,
+  modalScaleUp 0.2s cubic-bezier(.55,0,.1,1) reverse forwards;
 }
 
 .modal__container__close {
