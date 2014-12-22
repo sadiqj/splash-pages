@@ -134,7 +134,7 @@
               <ul class="nav nav-tabs u-margin-Ts">
 
                 <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-                  Engineering &amp; UX
+                  Engineering
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
@@ -167,6 +167,19 @@
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
                     Engineering Internships
+                  </a>
+                </li>
+
+                <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
+                  UX &amp; Design
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/product-designer" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Product Designer
                   </a>
                 </li>
 
@@ -274,6 +287,12 @@
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/front-end-developer">
                 <div ng-if="$isActive">
                   {% include "about/_front_end_developer.html" %}
+                </div>
+              </div>
+
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/product-designer">
+                <div ng-if="$isActive">
+                  {% include "about/_product_designer.html" %}
                 </div>
               </div>
 
