@@ -1,0 +1,26 @@
+<div class="modal" ng-show="modal.isShown"
+ng-animate ng-init="modal.slide = 1" ng-click="modal.isShown = false; modal.slide = 1"
+ng-class="{'u-is-visible': modal.isShown }">
+</div>
+
+<div class="modal__container" ng-show="modal.isShown" ng-animate
+ng-class="{'u-is-visible': modal.isShown }">
+  <a ng-click="modal.isShown = false" class="modal__container__close">
+    <img ng-gc-svg-injector class="svg-icon__close-modal" data-src="/images/icons/close-modal.svg">
+  </a>
+  <div class="modal__container__controls u-padding-Tm u-padding-Hl">
+    <a ng-hide="modal.slide == 1" ng-click="modal.slide = modal.slide - 1" class="btn btn--small btn--hollow u-text-transform-none">
+      &larr; Back
+    </a>
+    <a ng-hide="modal.slide == 5" ng-click="modal.slide = modal.slide + 1" class="u-pull-end btn btn--small u-text-transform-none">
+      Next &rarr;
+    </a>
+  </div>
+  <div ng-switch="modal.slide">
+    {% include "/why-dd/_slide-1.html" %}
+    {% include "/why-dd/_slide-2.html" %}
+    {% include "/why-dd/_slide-3.html" %}
+    {% include "/why-dd/_slide-4.html" %}
+    {% include "/why-dd/_slide-5.html" %}
+  </div>
+</div>
