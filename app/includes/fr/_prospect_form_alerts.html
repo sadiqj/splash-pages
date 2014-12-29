@@ -1,0 +1,26 @@
+<div class="u-is-hidden notice notice--error u-margin-Bm"
+  ng-class="{
+    'u-is-visible': prospectForm.$isError
+  }">
+  <div ng-bind="prospectForm.$isError"></div>
+</div>
+
+<div class="u-is-hidden notice notice--success u-margin-Bm"
+  ng-class="{
+    'u-is-visible': prospectForm.$isSuccess
+  }">
+  <div ng-switch="prospectForm.data.size">
+    <div ng-switch-when="0-100">
+      <b>Merci</b>, un membre de l'équipe GoCardless vous contactera sous peu.
+    </div>
+    <div ng-switch-when="100-500">
+      <b>Merci</b>, un membre de l'équipe GoCardless vous contactera sous peu.
+    </div>
+    <div ng-switch-when="500+">
+      <b>Merci</b>, un membre de l'équipe GoCardless vous contactera sous peu.
+    </div>
+    <div ng-switch-default>
+      <b>Merci</b>, nous vous contacterons sous 24 heures.
+    </div>
+  </div>
+</div>

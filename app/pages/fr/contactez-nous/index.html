@@ -1,0 +1,65 @@
+{% extends "plain.html" %}
+
+{% block title %}Contactez-nous{% endblock %}
+{% block meta_tags %}
+  <meta name="description" content="Apprenez-en plus sur comment GoCardless peut vous aider à collecter vos prélèvements automatiques. Nous vous contacterons sous 24 heures.">
+  <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero u-padding-Vxxl">
+    <div class="site-container u-margin-Vxm">
+      <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light">
+        Contactez notre équipe
+      </h1>
+      <p class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">
+        Afin de mieux pouvoir vous aider, veuillez nous donner les informations ci-dessous.<br> Nous vous contacterons le plus rapidement possible.
+      </p>
+    </div>
+  </div>
+
+  <div class="site-container grid grid--center u-margin-Vxl u-padding-Vxl">
+    <div class="grid__cell u-size-1of2">
+      <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
+        name="prospectForm"
+        ng-gc-form-submit="{
+          onCreate: onWatchDemoProspectCreate,
+          form: prospectForm,
+          data: prospectForm.data
+        }"
+        ng-gc-ga-event-tracker="{
+            event: 'submit',
+            category: 'forms',
+            action: 'submit-form',
+            label: 'ContactSales'
+          }">
+
+        {% include "fr/_prospect_form_fields.html" %}
+
+        <button class="btn btn--block u-margin-Tl"
+          type="submit"
+          ng-disabled="prospectForm.$pristine || prospectForm.$isSubmitting">
+          Contactez nous
+        </button>
+        <hr>
+        <p class="u-text-center u-color-meta u-margin-Bs"><b>Vous souhaitez parler à un expert tout de suite ?</b><br>Appelez le +33 (0) 9 75 18 42 95</p>
+        <hr>
+        <p class="u-text-center u-color-meta u-margin-Bs"><b>Vos données sont sécurisées et ne seront jamais vendues ou partagées.</b></p>
+      </form>
+    </div>
+  </div>
+
+  {% include "_site_footer.html" %}
+
+</div>
+
+{% endblock %}

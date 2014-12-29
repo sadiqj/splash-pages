@@ -1,0 +1,240 @@
+{% extends "plain.html" %}
+
+{% block title %}GoCardless Pro: Contrôle total de vos prélèvements bancaires{% endblock %}
+{% block meta_tags %}<meta name="description" content="GoCardless Pro vous permet de collecter vos paiements par prélèvement bancaire en contrôlant entièrement l’experience client.">{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+
+  <div class="page-hero page-hero--pro page-hero--medium u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-header--invert u-relative u-cf">
+        {% include "fr/_site_header_invert.html" %}
+      </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light">Prenez le contrôle de vos prélèvements bancaires</h1>
+          <p class="u-text-heading u-text-center u-color-invert u-text-m u-text-light u-margin-Txxs u-text-no-smoothing">La plateforme de paiements récurrents en ligne<br>pour les grandes entreprises</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-nav">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xxs u-text-light u-text-no-smoothing">
+      <div class="site-container u-padding-Vm">
+        <ul class="u-pull-start u-margin-Txxs">
+          <li class="sticky-nav__item">
+            <a href="#overview" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+              En bref
+            </a>
+          </li>
+         <li class="sticky-nav__item">
+            <a href="#pricing" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+              Tarifs
+            </a>
+          </li>
+        </ul>
+        <a href="/fr/contactez-nous?s=pro&l=1" class="sticky-nav__cta btn btn--small btn--hollow u-pull-end u-text-transform-none u-text-light u-text-xxs u-text-no-smoothing">
+          Contactez-nous
+        </a>
+        <a href="https://developer.gocardless.com/pro/" class="u-pull-end u-margin-Txxs u-margin-Rm">
+          Documentation API
+        </a>
+      </div>
+      <hr class="u-margin-An">
+    </div>
+  </div>
+
+  <div class="section-scroll-target" id="overview">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+
+        <div class="u-size-3of4 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+            Découvrez GoCardless Pro
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Txs">
+            Conçu pour les grandes entreprises, GoCardless Pro combine simplicité d'utilisation et contrôle complet du paiement et de l'expérience client. Vous pouvez encaisser vos paiement dans toute la zone SEPA et le Royaume-Uni en une seule intégration.
+          </p>
+        </div>
+
+        <div class="grid u-margin-Tl u-padding-Tm">
+          <div class="grid__cell u-size-1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/payment-page-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/payment-page-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Gestion des mandats
+            </div>
+            <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
+              Gérez vos mandats dans n'importe quel format: papier, téléphone et électronique
+            </p>
+          </div>
+          <div class="grid__cell u-size-1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/control-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/control-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Encaissement des paiements
+            </div>
+            <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
+              Automatisez les paiements de vos abonnements et de votre facturation
+            </p>
+          </div>
+          <div class="grid__cell u-size-1of3 u-text-center">
+            <figure class="svg-icon u-center">
+              <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/checklist-icon.svg">
+              <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/checklist-icon.svg">
+            </figure>
+            <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
+              Réconciliation
+            </div>
+            <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
+              Visualisez en temps réel et en un clic le statut de tous vos<br>paiements
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+
+      <div class="grid u-padding-Vxl">
+        <div class="grid__cell u-size-1of2 u-text-center">
+          <figure class="svg-icon svg-icon--small u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/white-label-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray"
+            data-src="/images/icons/white-label-icon.svg">
+          </figure>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m
+            u-margin-Tm">Vos paiements, votre marque</div>
+          <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
+            Vos utilisateurs ne voient que votre marque. Vous avez un contrôle total sur le design de vos pages de paiement et votre communication client.
+          </p>
+        </div>
+        <div class="grid__cell u-size-1of2 u-text-center">
+          <figure class="svg-icon svg-icon--small u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-yellow" data-src="/images/icons/developer-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray"
+            data-src="/images/icons/developer-icon.svg">
+          </figure>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Une API
+            simple et moderne</div>
+          <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
+            Intégrez très simplement GoCardless Pro dans votre site web et logiciel de gestion d'entreprise. Tout ce qu'il y a à savoir est dans notre <a href="https://developer.gocardless.com/pro">documentation</a>.
+          </p>
+        </div>
+        <div class="grid__cell u-size-1of2 u-text-center u-margin-Txxl u-padding-Txxl">
+          <figure class="svg-icon svg-icon--small u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-blue" data-src="/images/icons/mobile-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray"
+            data-src="/images/icons/mobile-icon.svg">
+          </figure>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Compatibilité tout terrain</div>
+          <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
+            GoCardless Pro s'intégre facilement dans n'importe quel site et applications mobiles, quel que soit la technologie que vous utilisez.
+          </p>
+        </div>
+        <div class="grid__cell u-size-1of2 u-text-center u-margin-Txxl u-padding-Txxl">
+          <figure class="svg-icon svg-icon--small u-center">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small svg-icon__image--small-shadow u-fill-green" data-src="/images/icons/security-icon.svg">
+            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--small u-fill-dark-gray"
+            data-src="/images/icons/security-icon.svg">
+          </figure>
+          <div class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">Sécurité de calibre militaire</div>
+          <p class="u-size-4of5 u-center u-color-p u-margin-Txs">
+            Toutes les données bancaires sont chiffrées avec RSA et ne sont transmises que par le biais de serveurs Européens sécurisés.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <div class="u-size-1of2 u-center">
+          <i class="europe-icon u-margin-Bs"></i>
+          <h2 class="u-text-heading u-color-heading u-text-l u-text-light">
+            Vous avez des clients en Europe ?
+          </h2>
+          <div class="u-center">
+            <p class="u-text-s u-color-p u-margin-Ts">
+               GoCardless Pro est le seul produit qui vous permet de collecter vos prélèvements bancaires auprès de plus de 300 millions de personnes dans la zone SEPA et le Royaume-Uni en une seule intégration
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Txl">
+        <div class="u-size-1of2 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-light u-text-l">
+            Vous êtes en bonne compagnie
+          </h2>
+          <p class="u-text-s u-color-p u-margin-Txs">
+            Chaque jour les entreprises les plus larges et réputées font confiance à GoCardless pour gérer leurs paiements
+          </p>
+        </div>
+        <div class="u-text-center u-margin-Vl u-padding-Vs u-center">
+          <img src="/images/logos/enterprise-logos@2x.jpg">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+  </div>
+
+  <div class="section-scroll-target" id="pricing">
+    <div class="u-text-center u-padding-Vxxl">
+      <div class="site-container u-padding-Vxl">
+        <div class="u-size-2of3 u-center">
+          <h2 class="u-text-heading u-color-heading u-text-light u-text-xl">
+            0,01&thinsp;&mdash;&thinsp;0,75 € par transaction
+          </h2>
+          <ul>
+            <li class="u-color-heading u-text-s u-color-p u-margin-Vxs">
+              + Abonnement mensuel de 250 €
+            </li>
+            <li class="u-color-heading u-text-s u-color-p u-margin-Vxs">
+              Zéro frais cachés : installation et support gratuit, pas de frais par mandat ou incident
+            </li>
+            <li class="u-color-heading u-text-s u-color-p u-margin-Txs">
+              Tarifs dégressifs à partir de 1.000 transactions par mois
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+    <div class="site-container u-text-center u-padding-Vxxl">
+      <div class="u-padding-Vxl">
+        <h2 class="u-text-heading u-color-heading u-text-light u-text-l u-margin-Bm">
+          Prenez contact avec notre équipe
+        </h2>
+        <a href="/fr/contactez-nous?s=pro" class="btn">Contactez-nous</a>
+      </div>
+    </div>
+
+  </div>
+
+  {% include "fr/_site_footer.html" %}
+
+</div>
+
+{% endblock %}
