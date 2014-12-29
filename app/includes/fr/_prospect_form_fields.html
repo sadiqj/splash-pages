@@ -1,0 +1,10 @@
+{% include "fr/_prospect_form_alerts.html" %}
+{% include "fr/_shared_prospect_form_fields.html" %}
+
+<label class="label label--stacked" for="prospect_size">Combien d’employés avez-vous ?</label>
+<select class="u-size-full" id="prospect_size" name="prospect[size]" required
+  ng-model="prospectForm.data.size" ng-init="prospectForm.data.size = '1-14'">
+  <option value="1-14">1-14</option>
+  <option value="15-49">15-49</option>
+  <option value="50+">50+</option>
+</select>
