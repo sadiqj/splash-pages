@@ -3,13 +3,13 @@ deployment:
     branch: master
     commands:
       - NODE_ENV=production AWS_S3_BUCKET=gocardless.com make deploy
+      - ./scripts/link-checker.js staging.gocardless.com
       - ./scripts/link-checker.js gocardless.com
 
   staging:
     branch: [dev]
     commands:
       - NODE_ENV=production AWS_S3_BUCKET=staging.gocardless.com make deploy
-      - ./scripts/link-checker.js staging.gocardless.com
 
 machine:
   node:
