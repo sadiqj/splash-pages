@@ -25,14 +25,14 @@ crawler.stripQuerystring = true; // optimizely is tagging all of the things...
 
 // Requirements:
 // - Fetch all linked resources on staging.gocardless.com
-// - Do not crawl /blog, /direct-debit but still check that all links point there
-//   from non /blog, /direct-debit work
+// - Do not crawl /blog, /direct-debit or /guides but still check that all links point there
+//   from non /blog, /direct-debit or /guides work
 // - Test response code on assets, do not download
 // - Interesting approach to check files: https://github.com/SupplyFrame/node-link-checker
 
 crawler.addFetchCondition(function(parsedURL) {
   return !parsedURL.uriPath.match(/\.(pdf|png|jpeg|jpg|js|css)$/gi) &&
-    !parsedURL.uriPath.match(/^(\/blog\/|\/direct-debit\/)/gi);
+    !parsedURL.uriPath.match(/^(\/blog\/|\/direct-debit\/|\/guides\/)/gi);
 });
 
 var errors = [];
