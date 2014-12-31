@@ -5,6 +5,10 @@
   box-shadow: 0 2px 18px rgba(0,0,0,0.5);
 }
 
+.videos-container__iframe--light-bg {
+  box-shadow: 0 0px 4px rgba(0,0,0,0.3);
+}
+
 .videos-container__thumbnail {
   height: 190px;
   background: $site-background-color;
