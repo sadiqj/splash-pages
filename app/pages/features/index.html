@@ -36,22 +36,22 @@
       <div class="site-container u-padding-Vm">
         <ul class="u-pull-start u-margin-Txxs">
           <li class="sticky-nav__item">
-            <a href="#overview" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+            <a href="#overview" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link" id="track-sticky-nav-overview">
               Overview
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#features" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+            <a href="#features" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link" id="track-sticky-nav-features">
               Features
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#dashboard" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+            <a href="#dashboard" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link" id="track-sticky-nav-dashboard">
               Dashboard
             </a>
           </li>
           <li class="sticky-nav__item">
-            <a href="#pricing" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+            <a href="#pricing" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link" id="track-sticky-nav-pricing">
               Pricing
             </a>
           </li>
@@ -142,7 +142,7 @@
               Modern, RESTful API
             </div>
             <p class="u-color-p u-margin-Txs">
-              Add GoCardless to your site or app in minutes with our easy to use API libraries. <a href="/features/api">Learn more</a>.
+              Add GoCardless to your site or app in minutes with our easy to use API libraries. <a href="/features/api"  id="track-overview-api">Learn more</a>.
             </p>
           </div>
         </div>
@@ -295,7 +295,7 @@
               <td></td>
               <td></td>
               <td class="u-padding-As">
-                <a href="/pro" class="u-color-primary">
+                <a href="/pro" class="u-color-primary" id="track-comparison-table-pro">
                   Learn more about GoCardless Pro
                 </a>
               </td>
@@ -326,6 +326,7 @@
         <div class="u-text-center u-text-heading u-text-upcase u-text-xxs u-text-semi u-padding-Bxl">
           <a href="#dashboard-home"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+          id="track-dashboard-home"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
@@ -335,6 +336,7 @@
           </a>
           <a href="#add-customers"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+          id="track-dashboard-customers"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
@@ -344,6 +346,7 @@
           </a>
           <a href="#take-payments"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
+          id="track-dashboard-payments"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
@@ -384,7 +387,7 @@
           <p class="u-color-p u-margin-Txxs">
             Just 1% per transaction, capped at £2
           </p>
-          <a href="/pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+          <a href="/pricing" class="btn btn--hollow u-margin-Tm" id="track-cta-pricing">Learn about our pricing</a>
         </div>
       </div>
     </div>
