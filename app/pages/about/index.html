@@ -241,15 +241,6 @@
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/head-of-finance" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Head of Finance
-                  </a>
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
                   <a href="#jobs/developer-support" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
@@ -326,11 +317,6 @@
                 </div>
               </div>
 
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/head-of-finance">
-                <div ng-if="$isActive">
-                  {% include "about/_head_of_finance.html" %}
-                </div>
-              </div>
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/developer-support">
                 <div ng-if="$isActive">
                   {% include "about/_developer_support.html" %}
