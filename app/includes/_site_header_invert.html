@@ -6,10 +6,10 @@
 
 <div class="u-pull-end align-btn-small">
 
-  <nav class="nav u-pull-start u-color-invert u-text-xxs u-text-light u-text-no-smoothing">
+  <nav class="nav u-pull-start u-color-invert u-text-xxs u-text-light u-text-no-smoothing nav--invert">
     <div class="nav__item u-relative">
       <a toggle="products.isVisible" id="track-nav-products" class="u-padding-Vl u-block u-link-clean u-link-invert" href="">
-        <div class="nav__item-link">
+        <div class="nav__item-link nav__item-link--dropdown">
           Our products
         </div>
       </a>
@@ -19,19 +19,22 @@
       </popover>
     </div>
     <div class="nav__item u-relative">
-      <a toggle="businesses.isVisible" id="track-nav-business" class="u-padding-Vl u-block u-link-clean u-link-invert" href="">
+      <a class="u-padding-Vl u-block u-link-clean u-link-invert" id="track-nav-pricing" href="/pricing">
         <div class="nav__item-link">
-          Your business
+          Pricing
         </div>
       </a>
-      <popover show="businesses.isVisible" ng-animate class="nav-dropdown__popover"
-      ng-class="{'u-is-visible': businesses.isVisible }">
-        {% include "_businesses_dropdown_list.html" %}
-      </popover>
+    </div>
+    <div class="nav__item u-relative">
+      <a class="u-padding-Vl u-block u-link-clean u-link-invert" id="track-nav-stories" href="/stories">
+        <div class="nav__item-link">
+          Customer stories
+        </div>
+      </a>
     </div>
     <div class="nav__item u-relative">
       <a toggle="more.isVisible" id="track-nav-more" class="u-padding-Vl u-block u-link-clean u-link-invert" href="">
-        <div class="nav__item-link">
+        <div class="nav__item-link nav__item-link--dropdown">
           More
         </div>
       </a>
