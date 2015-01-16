@@ -10,6 +10,12 @@
 
 <div class="site-wrapper">
 
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "fr/_site_header.html" %}
+    </div>
+  </div>
+
   <div class="page-hero u-padding-Vxxl">
     <div class="site-container u-margin-Vxm">
       <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light">
@@ -23,7 +29,7 @@
 
   <div class="site-container grid grid--center u-margin-Vxl u-padding-Vxl">
     <div class="grid__cell u-size-1of2">
-      <form accept-charset="UTF-8" action="/api/v1/prospects/sales" method="post"
+      <form accept-charset="UTF-8" action="/api/v1/prospects/sales_fr" method="post"
         name="prospectForm"
         ng-gc-form-submit="{
           onCreate: onWatchDemoProspectCreate,

@@ -1,0 +1,114 @@
+{% extends "plain.html" %}
+
+{% block title %}A propos de GoCardless : informations sur notre entreprise{% endblock %}
+{% block meta_tags %}<meta name="description" content="Nous avons pour mission de bâtir le futur des paiement récurrents. Apprenez-en plus sur notre entreprise.">{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+  <div class="page-hero page-hero--about page-hero--medium u-relative u-size-full">
+    <div class="site-container page-hero__container">
+      <div class="site-header site-header--invert u-relative u-cf">
+        {% include "fr/_site_header_invert.html" %}
+      </div>
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <h1 class="u-text-heading u-color-invert u-text-center u-text-xl u-text-light">Simplifions les paiements récurrents</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-nav">
+    <div ng-gc-sticky-nav class="sticky-nav__inner u-background-light-gray u-text-heading u-text-xxs u-text-light u-text-no-smoothing">
+      <div class="site-container u-padding-Vm">
+        <ul class="u-pull-start u-margin-Txxs">
+          <li class="sticky-nav__item">
+            <a href="#a-propos" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+              À propos
+            </a>
+          </li>
+          <li class="sticky-nav__item">
+            <a href="#equipe" du-scrollspy ng-gc-smooth-scroll class="sticky-nav__link">
+              Notre équipe
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr class="u-margin-An">
+    </div>
+  </div>
+
+  <div class="section-scroll-target" id="a-propos">
+
+    <div class="site-container u-padding-Vxxl">
+      <h2 class="u-text-heading u-color-heading u-text-l u-text-light u-padding-Txl">
+        A propos de GoCardless
+      </h2>
+      <div class="grid">
+        <div class="grid__cell u-size-2of3">
+          <p class="u-text-s u-color-p u-margin-Txxl u-size-5of6">
+            GoCardless est un des leaders européens du prélèvement bancaire. Nous collectons plus d'un demi-milliard d'Euros chaque année pour plus de 30.000 entreprises et organisations dont le Guardian, Omni Capital, Funding Circle et Pieminister, avec une croissance annuelle de 600%.<br><br>
+
+            Nous nous sommes lancés en 2011 avec un seul objectif : rendre les prélèvements bancaires simples et accessibles à tous, instantanément et à bas coût. Les prélèvements bancaires étaient jusque-là réservés aux plus grandes entreprises et requéraient beaucoup d'efforts à gérer. Nous voulions changer cette situation et simplifier le prélèvement. Toute entreprise en France et en Europe peut désormais accéder au prélèvement bancaire grâce à notre API moderne et facile d'utilisation, et bénéficier d'un mode de paiement économique et avec un taux d'échec extrêmement bas.<br><br>
+
+            <span class="u-text-heavy u-color-heading">Digne de confiance</span><br><br>
+
+            GoCardless est un Etablissement de Paiement Agréé, régulé par l’autorité britannique FCA (Financial Conduct Authority) et habilité à collecter des paiements à travers l’Union Européenne. Nous sommes financés par certains des plus importants investisseurs au monde dont Balderton Capital, Accel Partners, Passion Capital et Y-Combinator.
+
+            Plus de 30.000 entreprises et organisations de toutes tailles utilisent GoCardless pour collecter des millions d'Euros tous les jours. Ils aiment ce qu'ils font et nous aimons leur rendre la vie facile.
+          </p>
+        </div>
+        <div class="grid__cell u-size-1of3">
+          <div class="u-margin-Txxl">
+            <img src="/images/press/publications-stacked.jpg">
+            <p class="u-text-s u-color-p u-margin-Txxl">
+              GoCardless est apparu à la télévision, sur des blogs et site dans le monde entier.<br><br>Pour tout contact presse, merci de contacter <a href="mailto:octave@gocardless.com">Octave Auger</a>, ou téléchargez notre <a href="https://www.dropbox.com/sh/sat8xsjntbf5mnh/AACn116IKyIWrNG7c8FnY0cYa?dl=0">dossier de presse</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="u-margin-An">
+
+  <div class="section-scroll-target" id="equipe">
+
+
+    <div class="site-container u-padding-Vxxl">
+      <div class="grid u-padding-Txl">
+        <div class="grid__cell u-size-1of3">
+          <h2 class="u-text-heading-light u-text-m u-color-meta">
+            Nous sommes une petite équipe formée d'individus talentueux  travaillant ensemble pour construire l'avenir des paiements.<br>
+          </h2>
+        </div>
+        <div class="grid__cell u-size-2of3">
+            <span class="u-text-heavy u-color-heading">GoCardless est : </span><span class="u-color-p">
+            Octave Auger, Grey Baker, Baris Balic, Angus Bayley, James Berry, George Britton, Jenna Brown, Maria Campbell, Michael Christofides, Duncan Coleman, Matt Cummins, James Cunningham, Amaury de Closset, Steve Domin, Jamie English, Jack Franklin, Jessie Giladi, Pete Hamilton, Phil Harrison, Natalie Hockham, James Jackson, Sam Jewell, Paul Jolly, Alan Kennedy, Norberto Lopes, Daniel Lyons, Harry Marr, Erez Mathan, Ben Miller, Max Murdoch, Jacob Pargin, Tom Petty, Nabeel Qureshi, Charlotte Robinson, Matt Robinson, Tim Rogers, Isaac Seymour, James Shedden, Ben Sims, Chris Sinjakli, Dave Smith, Alina Solovjova, Jess Summerfield, Hiroki Takeuchi, Yoshio Takeuchi, Helen Taylor, Ravin Thambapillai
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-container u-padding-Vxxl">
+      <div class="grid u-padding-Bxl">
+        <div class="grid__cell u-size-1of3">
+          <img src="/images/office/office-picnic-table.jpg">
+        </div>
+        <div class="grid__cell u-size-2of3">
+          <img src="/images/office/office-support-booths.jpg">
+        </div>
+      </div>
+    </div>
+
+    <hr class="u-margin-An">
+
+  </div>
+
+  {% include "fr/_site_footer.html" %}
+
+</div>
+
+{% endblock %}
