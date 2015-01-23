@@ -1,0 +1,42 @@
+{% include "_prospect_form_alerts.html" %}
+{% include "_shared_prospect_form_fields.html" %}
+
+<label class="label label--stacked" for="sepa_country_interest">Where is your company headquartered?</label>
+<select class="u-size-full input--stacked" id="sepa_country_interest" name="prospect[metadata][sepa_country_interest]" required
+  ng-model="prospectForm.data.sepa_country_interest" ng-init="prospectForm.data.sepa_country_interest = 'Austria'">
+  <option value="Austria">Austria</option>
+  <option value="Belgium">Belgium</option>
+  <option value="Cyprus">Cyprus</option>
+  <option value="Denmark">Denmark</option>
+  <option value="Estonia">Estonia</option>
+  <option value="Finland">Finland</option>
+  <option value="France">France</option>
+  <option value="Germany">Germany</option>
+  <option value="Greece">Greece</option>
+  <option value="Ireland">Ireland</option>
+  <option value="Italy">Italy</option>
+  <option value="Latvia">Latvia</option>
+  <option value="Luxembourg">Luxembourg</option>
+  <option value="Malta">Malta</option>
+  <option value="Monaco">Monaco</option>
+  <option value="Netherlands">Netherlands</option>
+  <option value="Norway">Norway</option>
+  <option value="Portugal">Portugal</option>
+  <option value="San Marino">San Marino</option>
+  <option value="Slovakia">Slovakia</option>
+  <option value="Slovenia">Slovenia</option>
+  <option value="Spain">Spain</option>
+  <option value="Sweden">Sweden</option>
+  <option value="Switzerland">Switzerland</option>
+  <option value="UK">United Kingdom</option>
+  <option value="USA">United States</option>
+  <option value="Other">Other</option>
+</select>
+
+<label class="label label--stacked" for="prospect_size">How many employees do you have?</label>
+<select class="u-size-full" id="prospect_size" name="prospect[size]" required
+  ng-model="prospectForm.data.size" ng-init="prospectForm.data.size = '1-14'">
+  <option value="1-14">1-14</option>
+  <option value="15-49">15-49</option>
+  <option value="50+">50+</option>
+</select>
