@@ -62,7 +62,7 @@ function resolver(filepath, callback) {
     return buildJS(callback);
   } if (ext === '.scss') {
     return buildCSS(callback);
-  } if (ext === '.html' && filepath.match(/^pages/)) {
+  } if (ext === '.html' && filepath.match(/^(pages|includes)/)) {
     return buildHTML(function() {
       reload(callback, filepath);
     });
