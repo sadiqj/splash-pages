@@ -9,11 +9,11 @@
   <nav class="nav u-pull-start u-color-primary u-text-xxs u-text-light u-text-no-smoothing">
     <div class="nav__item u-relative">
       <a id="track-nav-products" class="u-padding-Vl u-block u-link-clean" toggle="products.isVisible" href="">
-        <div class="nav__item-link nav__item-link--dropdown">
+        <div class="nav__item-link popover-link">
           Our products
         </div>
       </a>
-      <popover show="products.isVisible" ng-animate class="nav-dropdown__popover nav-dropdown__popover--large"
+      <popover show="products.isVisible" ng-animate class="popover popover--large"
       ng-class="{'u-is-visible': products.isVisible }">
         {% include "_products_dropdown_list.html" %}
       </popover>
@@ -34,11 +34,11 @@
     </div>
     <div class="nav__item u-relative">
       <a id="track-nav-more " class="u-padding-Vl u-block u-link-clean" toggle="more.isVisible" href="">
-        <div class="nav__item-link nav__item-link--dropdown">
+        <div class="nav__item-link popover-link">
           More
         </div>
       </a>
-      <popover show="more.isVisible" ng-animate class="nav-dropdown__popover"
+      <popover show="more.isVisible" ng-animate class="popover"
       ng-class="{'u-is-visible': more.isVisible }">
         {% include "_more_dropdown_list.html" %}
       </popover>
