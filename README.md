@@ -9,6 +9,7 @@ npm install
 ```bash
 npm start
 ```
+To have the page **reload automatically every time you save** your changes, make sure you have the [fb-flo](https://chrome.google.com/webstore/detail/fb-flo/ahkfhobdidabddlalamkkiafpipdfchp?hl=en) chrome extension installed, and make sure the developer tools (the javascript console, or 'inspect element' pane) are open. Enjoy :-)
 
 ## Tests
 
