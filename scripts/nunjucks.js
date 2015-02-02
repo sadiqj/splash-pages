@@ -31,7 +31,6 @@ function stream(filepath, outfile, compile) {
   }, function(file, enc, cb) {
     var _this = this;
     var parsed = frontMatter(file.toString());
-
     compile(new Buffer(parsed.body), parsed.attributes)
       .then(function(result) {
         _this.push(new Buffer(result));
@@ -107,7 +106,8 @@ findFiles((argv.i || argv.input), function(filepath) {
   console.log('Compiling %s (%s)', filepath, outfile);
 
   stream(filepath, outfile, function(file, fileMetadata) {
-    var metadata = _.extend(globalMetadata, fileMetadata);
+	var metadata = {}
+	_.extend(metadata, globalMetadata, fileMetadata);
     return compileTemplate(file, metadata);
   }).pipe(fs.createWriteStream(outfile));
 });
