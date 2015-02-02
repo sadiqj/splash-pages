@@ -1,5 +1,6 @@
 <div class="page-footer u-color-invert u-padding-Tl">
-  <div class="grid site-container u-padding-Vl u-text-center page-footer__start">
+  <div class="grid site-container u-padding-Vl u-text-center page-footer__start"
+  id="track-footer">
     <div class="grid__cell u-size-1of2">
       <ul class="grid u-text-heading u-text-semi">
 
@@ -73,30 +74,30 @@
       </div>
     </div>
   </div>
-  <div class="page-footer__end u-text-center u-text-heading u-text-xxs u-color-invert u-padding-Vl u-margin-Tl">
+  <div class="page-footer__end u-text-center u-text-heading u-text-xxs u-color-invert u-padding-Vl u-margin-Tl" id="track-footer-end">
     <div class="u-padding-Vl">
       <span class="u-text-light u-text-no-smoothing">Currently viewing</span>
       <img src="/images/icons/uk-flag-icon@2x.png" class="flag-icon u-margin-Hs" alt="">
       <span class="u-relative">
       <!-- Phil should I wrap the u-relative class above into a wrapper called nav-popover, or popover wrapper??? -->
-        <a href="" toggle="country.isVisible" id="track-footer-bottom-europe" class="u-text-semi u-link-invert">
+        <a href="" toggle="country.isVisible" class="u-text-semi u-link-invert">
           <span class="popover-link">
             United Kingdom
           </span>
         </a>
-        <popover show="country.isVisible" ng-animate class="popover popover--large popover--above"
+        <popover show="country.isVisible" ng-animate class="popover popover--above"
         ng-class="{'u-is-visible': country.isVisible }">
           <ul class="u-text-xxs u-text-start u-padding-Vxs">
             <li class="u-text-semi">
-              <a href="/" class="u-padding-Vxs u-padding-Hm u-block u-link-complex">
+              <span class="u-padding-Vxs u-padding-Hm u-block">
                 <img src="/images/icons/uk-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
-                <span class="u-link-complex-target">United Kingdom</span>
+                <span class="u-color-p">United Kingdom</span>
                 <img ng-gc-svg-injector data-src="/images/icons/checkmark-icon.svg"
                 class="u-fill-dark-green u-margin-Ls u-pull-end u-inline" alt="✓">
-              </a>
+              </span>
             </li>
             <li class="u-text-semi">
-              <a href="/fr/pro" class="u-padding-Vxs u-padding-Hm u-block u-link-complex">
+              <a href="{{other_languages.fr if other_languages.fr else "/fr/pro"}}" class="u-padding-Vxs u-padding-Hm u-block u-link-complex" id="track-footer-bottom">
                 <img src="/images/icons/fr-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
                 <span class="u-link-complex-target">France</span>
               </a>
@@ -104,7 +105,7 @@
             <hr class="u-margin-Vs">
             <div class="u-padding-Vxs u-padding-Hm">
               <p class="u-color-p">GoCardless is expanding,</p>
-              <p class="u-color-p"><a href="">learn more</a> about where we're available</p>
+              <p class="u-color-p"><a href="/europe" id="track-footer-bottom-europe">learn more</a> about upcoming countries</p>
             </div>
           </ul>
         </popover>

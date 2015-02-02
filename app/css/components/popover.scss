@@ -81,6 +81,8 @@
 .popover--above {
   bottom: 100%;
   margin-bottom: 26px;
+  width: 230px;
+  margin-left: -110px;
 }
 
 .popover--above:after, .popover--above:before {
