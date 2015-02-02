@@ -108,7 +108,6 @@ findFiles((argv.i || argv.input), function(filepath) {
 
   stream(filepath, outfile, function(file, fileMetadata) {
     var metadata = _.extend({}, globalMetadata, fileMetadata);
-	console.log(metadata);
     return compileTemplate(file, metadata);
   }).pipe(fs.createWriteStream(outfile));
 });
