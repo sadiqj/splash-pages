@@ -1,6 +1,6 @@
 <div class="page-footer u-color-invert u-padding-Tl">
   <div class="grid site-container u-padding-Vl u-text-center page-footer__start"
-  id="track-footer">
+  id="track-footer-links">
     <div class="grid__cell u-size-1of2">
       <ul class="grid u-text-heading u-text-semi">
 
@@ -74,12 +74,11 @@
       </div>
     </div>
   </div>
-  <div class="page-footer__end u-text-center u-text-heading u-text-xxs u-color-invert u-padding-Vl u-margin-Tl" id="track-footer-end">
+  <div class="page-footer__end u-text-center u-text-heading u-text-xxs u-color-invert u-padding-Vl u-margin-Tl" id="track-footer-end-links">
     <div class="u-padding-Vl">
       <span class="u-text-light u-text-no-smoothing">Currently viewing</span>
       <img src="/images/icons/uk-flag-icon@2x.png" class="flag-icon u-margin-Hs" alt="">
       <span class="u-relative">
-      <!-- Phil should I wrap the u-relative class above into a wrapper called nav-popover, or popover wrapper??? -->
         <a href="" toggle="country.isVisible" class="u-text-semi u-link-invert">
           <span class="popover-link">
             United Kingdom
@@ -97,7 +96,7 @@
               </span>
             </li>
             <li class="u-text-semi">
-              <a href="{{other_languages.fr if other_languages.fr else "/fr/pro"}}" class="u-padding-Vxs u-padding-Hm u-block u-link-complex" id="track-footer-bottom">
+              <a href="{{other_languages.fr if other_languages.fr else '/fr/pro'}}" class="u-padding-Vxs u-padding-Hm u-block u-link-complex">
                 <img src="/images/icons/fr-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
                 <span class="u-link-complex-target">France</span>
               </a>
@@ -105,7 +104,7 @@
             <hr class="u-margin-Vs">
             <div class="u-padding-Vxs u-padding-Hm">
               <p class="u-color-p">GoCardless is expanding,</p>
-              <p class="u-color-p"><a href="/europe" id="track-footer-bottom-europe">learn more</a> about upcoming countries</p>
+              <p class="u-color-p"><a href="/europe">learn more</a> about upcoming countries</p>
             </div>
           </ul>
         </popover>
