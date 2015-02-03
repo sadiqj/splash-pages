@@ -1,7 +1,8 @@
 <div class="page-footer u-color-invert u-padding-Tl">
-  <div class="grid site-container u-padding-Vl u-text-center page-footer__start">
+  <div class="grid site-container u-padding-Vl u-text-center page-footer__start"
+  id="track-footer-links">
     <div class="grid__cell u-size-1of2">
-      <ul class="grid u-text-upcase u-text-heading u-text-semi">
+      <ul class="grid u-text-heading u-text-semi">
 
         <div class="grid__cell u-size-1of3 u-text-xxs">
           <li>
@@ -73,18 +74,42 @@
       </div>
     </div>
   </div>
-  <div class="page-footer__end u-text-center u-padding-Vl u-margin-Tl">
+  <div class="page-footer__end u-text-center u-text-heading u-text-xxs u-color-invert u-padding-Vl u-margin-Tl" id="track-footer-end-links">
     <div class="u-padding-Vl">
-      <i class="uk-flag-icon"></i>
-      <p class="u-margin-Txs">
-        GoCardless requires a UK bank account.
-      </p>
-      <p>
-        You can now accept payments from across Europe with both <a href="/features" id="track-footer-bottom-features" class="u-link-clean u-link-invert">GoCardless</a> and <a href="/pro" id="track-footer-bottom-pro" class="u-link-clean u-link-invert">GoCardless Pro</a>.
-      </p>
-      <div class="u-color-invert u-text-upcase u-text-xxs u-text-heading u-text-semi u-margin-Txs">
-        <a href="/europe" id="track-footer-bottom-europe" class="u-link-clean u-link-invert">Find out more</a>
-      </div>
+      <span class="u-text-light u-text-no-smoothing">Currently viewing</span>
+      <img src="/images/icons/uk-flag-icon@2x.png" class="flag-icon u-margin-Hs" alt="">
+      <span class="u-relative">
+        <popover-container>
+          <a popover-toggle href="" class="u-text-semi u-link-invert">
+            <span class="popover-link">
+              United Kingdom
+            </span>
+          </a>
+          <popover-content class="popover popover--above">
+            <ul class="u-text-xxs u-text-start u-padding-Vxs">
+              <li class="u-text-semi">
+                <span class="u-padding-Vxs u-padding-Hm u-block">
+                  <img src="/images/icons/uk-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
+                  <span class="u-color-p">United Kingdom</span>
+                  <img ng-gc-svg-injector data-src="/images/icons/checkmark-icon.svg"
+                  class="u-fill-dark-green u-margin-Ls u-pull-end u-inline" alt="✓">
+                </span>
+              </li>
+              <li class="u-text-semi">
+                <a href="{{other_languages.fr if other_languages.fr else '/fr/pro'}}" class="u-padding-Vxs u-padding-Hm u-block u-link-complex">
+                  <img src="/images/icons/fr-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
+                  <span class="u-link-complex-target">France</span>
+                </a>
+              </li>
+              <hr class="u-margin-Vs">
+              <div class="u-padding-Vxs u-padding-Hm">
+                <p class="u-color-p">GoCardless is expanding,</p>
+                <p class="u-color-p"><a href="/europe">learn more</a> about upcoming countries</p>
+              </div>
+            </ul>
+          </popover-content>
+        </popover-container>
+      </span>
     </div>
   </div>
 </div>

@@ -66,7 +66,7 @@ htmlhint:
 nunjucks:
 	./scripts/nunjucks.js --search-path app/templates --search-path app/pages \
 		--search-path app/macros --search-path app/includes --input app/pages \
-		--output $(OUTPUT) --cwd app/pages --require-metadata conf/metadata.js
+		--outroot $(OUTPUT) --cwd app/pages --require-metadata conf/metadata.js
 
 server: build
 	scripts/server.js
@@ -90,8 +90,7 @@ js-main: js-out
 
 js-vendor: js-out
 	cat app/components/jquery/dist/jquery.js app/components/es5-shim/es5-shim.js \
-		app/components/mute-console/mute-console.js \
-		app/js/vendor.js app/components/dialog.js/dialog.js > build/js/vendor.js
+		app/components/mute-console/mute-console.js > build/js/vendor.js
 	$(BIN)/uglifyjs build/js/vendor.js --output build/js/vendor.js \
 		--source-map build/js/vendor.map.js \
 		--source-map-include-sources=true \
