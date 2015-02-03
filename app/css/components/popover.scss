@@ -19,6 +19,7 @@
   line-height: $line-height-base;
   margin-top: -5px;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  display: none;
 }
 
 .popover--large {
@@ -27,12 +28,12 @@
 }
 
 .popover.ng-hide-remove {
-  animation: fadeUp 0.2s cubic-bezier(.55,0,.1,1);
+  animation: fadeUp 100ms cubic-bezier(.55,0,.1,1);
 }
 
 .popover.ng-hide-add {
   display: block !important;
-  animation: fadeUp 0.2s cubic-bezier(.55,0,.1,1) reverse;
+  animation: fadeUp 100ms cubic-bezier(.55,0,.1,1) reverse;
 }
 
 // CSS triangle AND shadow
@@ -110,9 +111,9 @@
 }
 
 .popover--above.ng-hide-remove {
-  animation: fadeDown 0.2s cubic-bezier(.55,0,.1,1);
+  animation: fadeDown 100ms cubic-bezier(.55,0,.1,1);
 }
 
 .popover--above.ng-hide-add {
-  animation: fadeDown 0.2s cubic-bezier(.55,0,.1,1) reverse;
+  animation: fadeDown 100ms cubic-bezier(.55,0,.1,1) reverse;
 }

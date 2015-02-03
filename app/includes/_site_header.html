@@ -8,15 +8,16 @@
 
   <nav class="nav u-pull-start u-color-primary u-text-xxs u-text-light u-text-no-smoothing">
     <div class="nav__item u-relative">
-      <a id="track-nav-products" class="u-padding-Vl u-block u-link-clean" toggle="products.isVisible" href="">
-        <div class="nav__item-link popover-link">
-          Our products
-        </div>
-      </a>
-      <popover show="products.isVisible" ng-animate class="popover popover--large"
-      ng-class="{'u-is-visible': products.isVisible }">
-        {% include "_products_dropdown_list.html" %}
-      </popover>
+      <popover-container>
+        <a popover-toggle href="" id="track-nav-products" class="u-padding-Vl u-block u-link-clean">
+          <div class="nav__item-link popover-link">
+            Our products
+          </div>
+        </a>
+        <popover-content class="popover popover--large">
+          {% include "_products_dropdown_list.html" %}
+        </popover-content>
+      </popover-container>
     </div>
     <div class="nav__item u-relative">
       <a id="track-nav-pricing" class="u-padding-Vl u-block u-link-clean u-link-primary" href="/pricing">
@@ -33,15 +34,16 @@
       </a>
     </div>
     <div class="nav__item u-relative">
-      <a id="track-nav-more " class="u-padding-Vl u-block u-link-clean" toggle="more.isVisible" href="">
-        <div class="nav__item-link popover-link">
-          More
-        </div>
-      </a>
-      <popover show="more.isVisible" ng-animate class="popover"
-      ng-class="{'u-is-visible': more.isVisible }">
-        {% include "_more_dropdown_list.html" %}
-      </popover>
+      <popover-container>
+        <a popover-toggle href="" id="track-nav-more" class="u-padding-Vl u-block u-link-clean">
+          <div class="nav__item-link popover-link">
+            More
+          </div>
+        </a>
+        <popover-content class="popover">
+          {% include "_more_dropdown_list.html" %}
+        </popover-content>
+      </popover-container>
     </div>
   </nav>
 

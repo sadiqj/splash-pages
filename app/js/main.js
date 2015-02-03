@@ -3,13 +3,11 @@
 require('./initializers/raven-config');
 require('./initializers/cookies');
 
-require('./components/dialog/dialog-controller');
 require('./components/popover/popover-directive');
 require('./components/tabby/ng-gc-tabby-active-directive');
 require('./components/tabby/ng-gc-tabby-content-directive');
 require('./components/tabby/ng-gc-tabby-store-service');
 require('./components/tabby/ng-gc-tabby-trigger-directive');
-require('./components/toggle/ng-gc-toggle-directive');
 
 require('./directives/ng-gc-form-submit-directive');
 require('./directives/ng-gc-svg-injector-directive');
@@ -38,7 +36,6 @@ angular.module('home', [
   'ngGcHrefActiveDirective',
   'ngGcCookiesInit',
   'gc.popover',
-  'gc.toggle',
   'ngGcProspectFormCtrl',
   'ngGcActiveVideoCtrl',
   'ngGcSmoothScrollDirective',

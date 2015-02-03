@@ -43,35 +43,36 @@
       <span class="u-text-light u-text-no-smoothing">Vous consultez actuellement</span>
       <img src="/images/icons/fr-flag-icon@2x.png" class="flag-icon u-margin-Hs" alt="">
       <span class="u-relative">
-        <a href="" toggle="country.isVisible" class="u-text-semi u-link-invert">
-          <span class="popover-link">
-            France
-          </span>
-        </a>
-        <popover show="country.isVisible" ng-animate class="popover popover--above"
-        ng-class="{'u-is-visible': country.isVisible }">
-          <ul class="u-text-xxs u-text-start u-padding-Vxs">
-            <li class="u-text-semi">
-              <a href="{{other_languages.en if other_languages.en else "/"}}" class="u-padding-Vxs u-padding-Hm u-block u-link-complex">
-                <img src="/images/icons/uk-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
-                <span class="u-link-complex-target">Royaume-Uni</span>
-              </a>
-            </li>
-            <li class="u-text-semi">
-              <span class="u-padding-Vxs u-padding-Hm u-block">
-                <img src="/images/icons/fr-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
-                <span class="u-color-p">France</span>
-                <img ng-gc-svg-injector data-src="/images/icons/checkmark-icon.svg"
-                class="u-fill-dark-green u-margin-Ls u-pull-end u-inline" alt="✓">
-              </span>
-            </li>
-            <hr class="u-margin-Vs">
-            <div class="u-padding-Vxs u-padding-Hm">
-              <p class="u-color-p">GoCardless s'étend en Europe,
-              <a href="/europe">en apprendre plus</a> sur notre expansion</p>
-            </div>
-          </ul>
-        </popover>
+        <popover-container>
+          <a popover-toggle href="" class="u-text-semi u-link-invert">
+            <span class="popover-link">
+              France
+            </span>
+          </a>
+          <popover-content class="popover popover--above">
+            <ul class="u-text-xxs u-text-start u-padding-Vxs">
+              <li class="u-text-semi">
+                <a href="{{other_languages.en if other_languages.en else "/"}}" class="u-padding-Vxs u-padding-Hm u-block u-link-complex">
+                  <img src="/images/icons/uk-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
+                  <span class="u-link-complex-target">Royaume-Uni</span>
+                </a>
+              </li>
+              <li class="u-text-semi">
+                <span class="u-padding-Vxs u-padding-Hm u-block">
+                  <img src="/images/icons/fr-flag-icon@2x.png" class="flag-icon--popover u-margin-Rs" alt="">
+                  <span class="u-color-p">France</span>
+                  <img ng-gc-svg-injector data-src="/images/icons/checkmark-icon.svg"
+                  class="u-fill-dark-green u-margin-Ls u-pull-end u-inline" alt="✓">
+                </span>
+              </li>
+              <hr class="u-margin-Vs">
+              <div class="u-padding-Vxs u-padding-Hm">
+                <p class="u-color-p">GoCardless s'étend en Europe,
+                <a href="/europe">en apprendre plus</a> sur notre expansion</p>
+              </div>
+            </ul>
+          </popover-content>
+        </popover-container>
       </span>
     </div>
   </div>

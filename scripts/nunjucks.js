@@ -25,17 +25,16 @@ function errorExit(err) {
   process.exit(1);
 }
 
-function stream(filepath, outfile, compile) {
-  return fs.createReadStream(filepath).pipe(through2.obj({
+function stream(inFile, outFile, outRoot, compile) {
+  return fs.createReadStream(inFile).pipe(through2.obj({
     allowHalfOpen: false
   }, function(file, enc, cb) {
     var _this = this;
     var parsed = frontMatter(file.toString());
 
     // Strip output folder and trailing /index.html to get the path on website
-    var output = argv.o || argv.output;
-    var destination_url = outfile.replace(output, '').replace('/index.html', '');
-    parsed.attributes.path = destination_url;
+    var destinationUrl = outFile.replace(outRoot, '').replace('/index.html', '');
+    parsed.attributes.path = destinationUrl;
 
     compile(new Buffer(parsed.body), parsed.attributes)
       .then(function(result) {
@@ -95,25 +94,25 @@ function findFiles(filepath, cb) {
   }
 }
 
-findFiles((argv.i || argv.input), function(filepath) {
+findFiles((argv.i || argv.input), function(inFile) {
   // ignore files starting with _
-  if (path.basename(filepath).match(/^\_/) ||
-      !path.extname(filepath).match('.html')) {
+  if (path.basename(inFile).match(/^\_/) ||
+      !path.extname(inFile).match('.html')) {
     return;
   }
 
   var cwd = process.cwd();
   var inputCwd = path.join(cwd, argv.cwd || '');
-  var outfile = path.join(cwd, filepath).replace(inputCwd, '');
-  var output = argv.o || argv.output;
-  outfile = path.join(output, outfile);
+  var outFile = path.join(cwd, inFile).replace(inputCwd, '');
+  var outRoot = argv.o || argv.outroot;
+  outFile = path.join(outRoot, outFile);
 
-  mkdirp.sync(path.dirname(outfile));
+  mkdirp.sync(path.dirname(outFile));
 
-  console.log('Compiling %s (%s)', filepath, outfile);
+  console.log('Compiling %s (%s)', inFile, outFile);
 
-  stream(filepath, outfile, function(file, fileMetadata) {
+  stream(inFile, outFile, outRoot, function(file, fileMetadata) {
     var metadata = _.extend({}, globalMetadata, fileMetadata);
     return compileTemplate(file, metadata);
-  }).pipe(fs.createWriteStream(outfile));
+  }).pipe(fs.createWriteStream(outFile));
 });
