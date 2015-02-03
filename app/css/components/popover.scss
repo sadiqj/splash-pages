@@ -19,6 +19,7 @@
   line-height: $line-height-base;
   margin-top: -5px;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  // stop popover flashing on screen on pageload
   display: none;
 }
 
@@ -32,6 +33,7 @@
 }
 
 .popover.ng-hide-add {
+  // stop `display: none;` above from overriding the hide animation
   display: block !important;
   animation: fadeUp 100ms cubic-bezier(.55,0,.1,1) reverse;
 }
