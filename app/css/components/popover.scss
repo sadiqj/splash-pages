@@ -1,0 +1,121 @@
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.popover {
+  position: absolute;
+  width: 200px;
+  margin-left: -100px;
+  left: 50%;
+  background: white;
+  border-radius:3px;
+  line-height: $line-height-base;
+  margin-top: -5px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  // stop popover flashing on screen on pageload
+  display: none;
+}
+
+.popover--large {
+  width: 260px;
+  margin-left: -130px;
+}
+
+.popover.ng-hide-remove {
+  animation: fadeUp 100ms cubic-bezier(.55,0,.1,1);
+}
+
+.popover.ng-hide-add {
+  // stop `display: none;` above from overriding the hide animation
+  display: block !important;
+  animation: fadeUp 100ms cubic-bezier(.55,0,.1,1) reverse;
+}
+
+// CSS triangle AND shadow
+.popover:after, .popover:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -12px;
+  border: 12px solid transparent;
+  content: "";
+  height: 0;
+}
+
+// CSS triangle (aka nipple)
+.popover:after {
+  border-bottom-color: white;
+}
+
+// triangle shadow
+.popover:before {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  filter: blur(1px);
+  margin-bottom: 1px;
+}
+
+.popover-link {
+  padding-right: 15px
+}
+
+.popover-link:after {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  border: 5px solid transparent;
+  border-top-color: $primary-color;
+  content: "";
+}
+
+.u-link-invert .popover-link:after {
+  border-top-color: white;
+}
+
+.popover--above {
+  bottom: 100%;
+  margin-bottom: 26px;
+  width: 230px;
+  margin-left: -110px;
+}
+
+.popover--above:after, .popover--above:before {
+  top: 100%;
+  border-color: transparent;
+}
+
+// CSS triangle (aka nipple)
+.popover--above:after {
+  border-top-color: white;
+}
+
+// triangle shadow
+.popover--above:before {
+  border-top-color: rgba(0, 0, 0, 0.1);
+  margin-top: 1px;
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.popover--above.ng-hide-remove {
+  animation: fadeDown 100ms cubic-bezier(.55,0,.1,1);
+}
+
+.popover--above.ng-hide-add {
+  animation: fadeDown 100ms cubic-bezier(.55,0,.1,1) reverse;
+}

@@ -1,0 +1,76 @@
+---
+language: fr
+other_languages:
+  en: /legal
+---
+
+{% extends "plain.html" %}
+
+{% block title %}Mentions Légales{% endblock %}
+
+{% block body %}
+
+<div class="site-wrapper">
+
+  <div class="u-background-white">
+    <div class="site-container u-cf">
+      {% include "fr/_site_header.html" %}
+    </div>
+  </div>
+
+  <div class="page-hero u-padding-Vxxl">
+    <h1 class="u-text-heading u-text-center u-color-invert u-text-xl u-text-light u-margin-Vxm">
+      Mentions Légales
+    </h1>
+  </div>
+
+  <div class="site-container u-padding-Vxxl grid">
+    <div class="u-padding-Vxl">
+      {% include "fr/legal/_sidebar.html" %}
+      <div class="grid__cell u-size-8of12">
+        <div class="row">
+          <h2 class="u-text-heading-light u-text-m u-color-heading">Mentions Légales</h2>
+          <p class="para">
+            Le présent site internet est édité par :
+          </p>
+          <p class="para">
+            GoCardless Ltd, société à responsabilité limitée par actions, au capital de $11.903.334,53 enregistrée au registre du commerce et des sociétés de Cardiff, Grande-Bretagne, sous le numéro 07495895.
+          </p>
+          <p class="para">
+            Siège social : 338-346 Goswell Road, Londres, EC1V 7LQ, Grande-Bretagne.
+          </p>
+          <p class="para">
+            TVA non applicable.
+          </p>
+          <p class="para">
+            Téléphone : +33 (0) 9 75 18 42 95 et email : <a href="mailto:france@gocardless.com" class="u-link-color-p u-text-underline">france@gocardless.com</a>
+          </p>
+          <p class="para">
+            Les directeurs de la publication sont : Matt Robinson et Hiroki Takeuchi.
+          </p>
+          <p class="para">
+            GoCardless Ltd est un Etablissement de Paiement Agréé, régulé par l’autorité britannique FCA (Financial Conduct Authority), domiciliée au 25 The North Colonnade Londres E14 5HS Grande-Bretagne, et dont le numéro d’agrément est 597190.
+          </p>
+          <p class="para">
+            GoCardless Ltd est habilité à collecter des paiements à travers l’Union Européenne.
+          </p>
+          <p class="para">
+            Le présent site internet est hébergé par :
+          </p>
+          <p class="para">
+            <ul class="u-color-p">
+              <li>SoftLayer</li>
+              <li>Siège social : 4849 Alpha Road, Dallas, TX 75244, Etats-Unis</li>
+              <li>Téléphone : 00 1 214 442 0600</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "fr/_site_footer.html" %}
+
+</div>
+
+{% endblock %}
