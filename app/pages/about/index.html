@@ -247,15 +247,6 @@ other_languages:
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/developer-support" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Developer Support
-                  </a>
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
                   <a href="#jobs/support-analyst" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
@@ -323,11 +314,6 @@ other_languages:
                 </div>
               </div>
 
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/developer-support">
-                <div ng-if="$isActive">
-                  {% include "about/_developer_support.html" %}
-                </div>
-              </div>
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/support-analyst">
                 <div ng-if="$isActive">
                   {% include "about/_support_analyst.html" %}
