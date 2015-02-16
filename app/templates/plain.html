@@ -7,10 +7,10 @@
     <title>{% block title %}{% endblock %} - GoCardless</title>
     {% block meta_tags %}{% endblock %}
     <meta name="viewport" content="width=device-width">
-    <meta name="og:image" content="https://gocardless.com/images/logos/gocardless-square.png">
-    <meta name="og:image:secure_url" content="https://gocardless.com/images/logos/gocardless-square.png">
+    <meta name="og:image" content="{{ LOGO }}">
+    <meta name="og:image:secure_url" content="{{ LOGO }}">
     <meta name="google-site-verification" content="Y80kah87ghJhwiDqw-5ap234p9wCcGt6kMRxvnamtHU">
-    <link href="https://plus.google.com/+Gocardless" rel="publisher">
+    <link href="{{ SOCIAL_LINKS.google }}" rel="publisher">
     {%- macro hreflang_tag(language_code, path) -%}
       <link rel="alternate" href="https://gocardless.com{{path}}" hreflang="{{language_code}}" />
       {% if language_code == "en" -%}
