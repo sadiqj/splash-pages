@@ -77,8 +77,6 @@
         </div>
       </div>
 
-      <p class="u-color-p u-margin-Txxl u-padding-Tm">Vous voulez en apprendre plus sur le prélèvement SEPA?<a href="https://gocardless.com/fr/guides/sepa"> Lisez notre guide</a></p>
-
     </div>
   </div>
 
@@ -86,46 +84,29 @@
 
   <div class="site-container u-text-center u-padding-Vxxl">
     <h2 class="u-text-l u-text-heading u-color-heading u-text-light u-margin-Tl">
-      What are you looking for?
+      Notre offre
     </h2>
     <div class="product-grid grid u-margin-Vxxl">
       <a href="/features" id="track-cta-features" class="u-link-clean u-text-center grid__cell u-size-1of3">
-        <div class="product-grid__container u-padding-Vl">
-          <figure class="svg-icon u-center">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-green" data-src="/images/icons/shop-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/shop-icon.svg">
-          </figure>
-          <p class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
-            Super simple<br>online payments
-          </p>
-        </div>
-        <div class="product-grid__btn btn u-size-full">Discover GoCardless</div>
+
       </a>
-      <a href="/pro" id="track-cta-pro" class="u-link-clean u-text-center grid__cell u-size-1of3">
+      <a href="/pro" id="track-cta-pro" class="u-link-clean u-text-center grid__cell u-size-2of3">
         <div class="product-grid__container u-padding-Vl">
           <figure class="svg-icon u-center">
             <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-yellow" data-src="/images/icons/pro-icon.svg">
             <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/pro-icon.svg">
           </figure>
           <p class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
-            Complete control<br>over Direct Debit
+            Le contrôle total<br>du prélèvement
           </p>
         </div>
-        <div class="product-grid__btn btn u-size-full">Discover GoCardless Pro</div>
+        <div class="product-grid__btn btn u-size-full">Découvrez GoCardless Pro</div>
       </a>
       <a href="/partners" id="track-cta-partners" class="u-link-clean u-text-center grid__cell u-size-1of3">
-        <div class="product-grid__container u-padding-Vl">
-          <figure class="svg-icon u-center">
-            <img ng-gc-svg-injector class="svg-icon__image svg-icon__image--shadow u-fill-blue" data-src="/images/icons/integrations-icon.svg">
-            <img ng-gc-svg-injector class="svg-icon__image u-fill-dark-gray" data-src="/images/icons/integrations-icon.svg">
-          </figure>
-          <p class="u-text-heading u-color-heading u-text-light u-text-no-smoothing u-text-m u-margin-Tm">
-            Help your customers<br>collect payments
-          </p>
-        </div>
-        <div class="product-grid__btn btn u-size-full">Discover our partners</div>
+
       </a>
     </div>
+    <p class="u-color-p u-margin-Txxl u-padding-Tm">Vous voulez en apprendre plus sur le prélèvement SEPA?<a href="https://gocardless.com/fr/guides/sepa"> Lisez notre guide</a></p>
   </div>
 
   <hr class="u-margin-An">
@@ -134,14 +115,65 @@
     <div class="u-padding-Txl">
       <div class="u-size-1of2 u-center">
         <h2 class="u-text-heading u-color-heading u-text-light u-text-l">
-          Trusted by thousands of businesses
+          Entre de bonnes mains
         </h2>
         <p class="u-text-s u-color-p u-margin-Txs">
-          We’re a Bacs approved bureau that collects millions of pounds for our merchants every day. Whatever your scale, GoCardless works for you.
+          Nous collections des millions pour nos clients chaque jour, en conformité avec les règles SEPA et sous la supervision de la FCA. Nous aidons les start-ups comme les plus grandes entreprises.
         </p>
       </div>
-      <div class="u-text-center u-margin-Vl u-padding-Vs u-center">
-        <img src="/images/logos/pro-logos@2x.png">
+    </div>
+    <div class="u-padding-Vxl">
+      <div class="stories-testimonials__grid grid u-text-center">
+        <a href="#guardian"
+        class="grid__cell u-padding-Hl stories-testimonials__link--guardian u-size-1of3 stories-testimonials__link u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'guardian'
+        }">
+          <img src="/images/stories/guardian-logo@2x.jpg">
+        </a>
+        <a href="#funding-circle"
+        class="grid__cell u-padding-Hl stories-testimonials__link--funding-circle u-size-1of3 stories-testimonials__link u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'funding-circle'
+        }">
+          <img class="stories-testimonials__link-image--funding-circle" src="/images/stories/funding-circle-logo@2x.jpg">
+        </a>
+        <a href="#lendable"
+        class="grid__cell u-padding-Hl stories-testimonials__link--lendable u-size-1of3 stories-testimonials__link u-link-clean"
+        ng-click="$activate($event)"
+        ng-class="{ 'is-active': $isActive }"
+        ng-gc-tabby-trigger="{
+          $href: 'lendable'
+        }">
+          <img class="stories-testimonials__link-image--lendable" src="/images/stories/lendable-logo@2x.jpg">
+        </a>
+      </div>
+      <div id="guardian" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <div class="stories-testimonials__quote stories-testimonials__quote--guardian u-relative u-margin-Txxl u-padding-Al">
+            <p class="u-text-heading u-color-heading u-text-light u-text-m">"The Guardian recherche toujours à donner la meilleure expérience client et a choisi GoCardless pour simplifier l'expérience du paiement récurrent."</p>
+          </div>
+        </div>
+      </div>
+      <div id="funding-circle" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <div class="stories-testimonials__quote stories-testimonials__quote--funding-circle u-relative u-margin-Txxl u-padding-Al">
+            <p class="u-text-heading u-color-heading u-text-light u-text-m">"
+              Nous avons migrer sur GoCardless pour que nos prélèvements puissent être gérés par une personne au lieu de tout un département. C'est un plaisir de travailler avec une société de technologie financière qui s'engage également à aider les entreprises."</p>
+          </div>
+        </div>
+      </div>
+      <div id="lendable" ng-gc-tabby-content prevent-location-update>
+        <div ng-if="$isActive">
+          <div class="stories-testimonials__quote stories-testimonials__quote--lendable u-relative u-margin-Txxl u-padding-Al">
+            <p class="u-text-heading u-color-heading u-text-light u-text-m">"
+              GoCardless est une des meilleures entreprises de paiements avec laquelle j'ai travaillé. Leur API est simple à intégrer et nous permet d'utiliser le prélèvement de façon entièrement automatisée. Je les recommende fortement à toutes les entreprises qui ont pour priorités une bonne expérience client et d'utiliser la meilleure technologie disponible pour leurs prélèvements en Europe."</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -152,12 +184,12 @@
     <div class="site-container u-padding-Vxl">
       <div class="u-size-2of3 u-center">
         <h2 class="u-text-heading u-color-heading u-text-light u-text-l">
-          Simple, transparent pricing for everyone
+          Un prix simple, transparent pour tous
         </h2>
         <p class="u-text-s u-color-p u-margin-Vxs">
-          Competitive rates for everyone from individuals through to large corporations
+          Pas de frais d'implémentation ou de frais cachés
         </p>
-        <a href="/pricing" id="track-cta-pricing" class="btn btn--hollow u-margin-Tm">Learn about our pricing</a>
+        <a href="/fr/tarifs" id="track-cta-pricing" class="btn btn--hollow u-margin-Tm">En apprendre plus sur nos tarifs</a>
       </div>
     </div>
   </div>
@@ -166,12 +198,12 @@
 
   <div class="site-container u-text-center u-padding-Vxxl">
     <div class="u-padding-Vxl">
-      <a href="/merchants/new" id="track-cta-sign-up" class="btn">{{ CTA_BASIC }}</a>
-      <p class="u-color-p u-margin-Ts">No set up costs, no monthly fees, no hidden charges</p>
+        <a href="https://manage-sandbox.gocardless.com/registrations/new" id="track-cta-try-pro-dash" class="btn">Essayez gratuitement</a>
+      <p class="u-color-p u-margin-Ts">Accédez à notre sandbox immédiatement</p>
     </div>
   </div>
 
-  {% include "_site_footer.html" %}
+  {% include "fr/_site_footer.html" %}
 
 </div>
 
