@@ -209,41 +209,41 @@ other_languages:
           }">
             Customer info
           </a>
-          <a href="#payment-status"
+          <a href="#payment-history"
           id="track-dashboard-payment"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
-            $href: 'payment-status'
+            $href: 'payment-history'
           }">
-            Payment status
+            Payment history
           </a>
-          <a href="#admin"
+          <a href="#filtering"
           id="track-dashboard-admin"
           class="tab-link u-padding-Vxxs u-margin-Hs u-inline-block u-padding-Hs u-link-clean"
           ng-click="$activate($event)"
           ng-class="{ 'is-active': $isActive }"
           ng-gc-tabby-trigger="{
-            $href: 'admin'
+            $href: 'filtering'
           }">
-            Admin
+            Filtering
           </a>
         </div>
 
         <div id="customer-info" ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
-            <img src="/images/pro/pro-customer-info.png" class="pro-page__dashboard-image">
+            <img src="/images/pro/customer.jpg" class="pro-page__dashboard-image u-shadow-medium">
           </div>
         </div>
-        <div id="payment-status" ng-gc-tabby-content prevent-location-update>
+        <div id="payment-history" ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
-            <img src="/images/pro/pro-payment-status.png" class="pro-page__dashboard-image">
+            <img src="/images/pro/payment.jpg" class="pro-page__dashboard-image u-shadow-medium">
           </div>
         </div>
-        <div id="admin" ng-gc-tabby-content prevent-location-update>
+        <div id="filtering" ng-gc-tabby-content prevent-location-update>
           <div ng-if="$isActive">
-            <img src="/images/pro/pro-admin.png" class="pro-page__dashboard-image">
+            <img src="/images/pro/payments-list.jpg" class="pro-page__dashboard-image u-shadow-medium">
           </div>
         </div>
 
