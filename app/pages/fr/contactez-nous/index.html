@@ -57,7 +57,7 @@ other_languages:
           Contactez nous
         </button>
         <hr>
-        <p class="u-text-center u-color-meta u-margin-Bs"><b>Vous souhaitez parler à un expert tout de suite ?</b><br>Appelez le +33 (0) 9 75 18 42 95 (FR)<br>+32 78 48 09 94 (BE)</p>
+        <p class="u-text-center u-color-meta u-margin-Bs"><b>Vous souhaitez parler à un expert tout de suite ?</b><br>Appelez le {{ GOCARDLESS.FR.SALES.PHONE_FULL }} (FR)<br>{{ GOCARDLESS.BE.SALES.PHONE_FULL }} (BE)</p>
         <hr>
         <p class="u-text-center u-color-meta u-margin-Bs"><b>Vos données sont sécurisées et ne seront jamais vendues ou partagées.</b></p>
       </form>
@@ -67,5 +67,8 @@ other_languages:
   {% include "fr/_site_footer.html" %}
 
 </div>
+
+{# Please don't delete this... it contains machine-readable schema.org organizational data #}
+<script type="application/ld+json">{{ SCHEMA_ORGANIZATION }}</script>
 
 {% endblock %}
