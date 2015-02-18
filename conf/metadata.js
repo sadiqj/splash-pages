@@ -11,52 +11,71 @@ var mixpanelToken = isProduction() ? mixpanelProduction : mixpanelTest;
 var metadata = {
   ENV_PRODUCTION: isProduction(),
   MIXPANEL_TOKEN: mixpanelToken,
-  TRADING_ADDRESS: '338-346 Goswell Road<br>London, EC1V 7LQ',
-  SUPPORT_CONTACT_NUMBER: '020 7183 8674',
-  SUPPORT_EMAIL: 'help@gocardless.com',
   CTA_BASIC: 'Start taking payments',
   CTA_PRO: 'Contact sales',
-
   LOGO: 'https://gocardless.com/images/logos/gocardless-square.png',
-  SOCIAL_LINKS: {
-    facebook: 'https://www.facebook.com/GoCardless',
-    twitter: 'https://twitter.com/gocardless',
-    google: 'https://plus.google.com/+Gocardless',
-    linkedin: 'https://www.linkedin.com/company/gocardless',
-    github: 'http://github.com/gocardless'
-  },
-  CONTACT_POINTS: {
-    // Country Code (e.g. GB, FR, BE)
-    //   To comply with schema.org requirements, the country code should use ISO-3166-2
-    //   See http://en.wikipedia.org/wiki/ISO_3166-2 for a list of valid country codes
-    // Contact type (e.g. customer service, sales)
-    //   See https://developers.google.com/structured-data/customize/contact-points
-    'GB': {
-      'customer service': {
-        'phone_full': '+44 20 7183 8674',
-        'phone_local': '020 7183 8674',
-        'email': 'help@gocardless.com'
+  
+  // Details of international offices & contact numbers
+  // The country code (e.g. GB, FR, BE) should use ISO-3166-2
+  // See http://en.wikipedia.org/wiki/ISO_3166-2 for a list of valid country codes
+  GOCARDLESS: {
+    GB: {
+      HOMEPAGE: 'https://gocardless.com/',
+      POSTAL_ADDRESS: {
+        STREET_ADDRESS: '338-346 Goswell Road',
+        ADDRESS_LOCALITY: 'London',
+        POSTAL_CODE: 'EC1V 7LQ',
+        ADDRESS_COUNTRY: '',
+        ADDRESS_COUNTRY_ISO: 'GB'
       },
-      'sales': {
-        'phone_full': '+44 20 7183 8674',
-        'phone_local': '020 7183 8674',
-        'email': 'help@gocardless.com'
+      SALES: {
+        PHONE_FULL: '+44 20 7183 8674',
+        PHONE_LOCAL: '020 7183 8674',
+        EMAIL: 'help@gocardless.com'
+      },
+      SUPPORT: {
+        PHONE_FULL: '+44 20 7183 8674',
+        PHONE_LOCAL: '020 7183 8674',
+        EMAIL: 'help@gocardless.com'
       }
     },
-    'FR': {
-      'sales': {
-        'phone_full': '+33 9 75 18 42 95',
-        'phone_local': '09 75 18 42 95',
-        'email': 'france@gocardless.com'
+    FR: {
+      HOMEPAGE: 'https://gocardless.com/fr',
+      POSTAL_ADDRESS: {
+        STREET_ADDRESS: '338-346 Goswell Road',
+        ADDRESS_LOCALITY: 'Londres',
+        POSTAL_CODE: 'EC1V 7LQ',
+        ADDRESS_COUNTRY: '',
+        ADDRESS_COUNTRY_ISO: 'GB'
+      },
+      SALES: {
+        PHONE_FULL: '+33 9 75 18 42 95',
+        PHONE_LOCAL: '09 75 18 42 95',
+        EMAIL: 'france@gocardless.com'
       }
     },
-    'BE': {
-      'sales': {
-        'phone_full': '+32 78 48 09 94',
-        'phone_local': '078 48 09 94',
-        'email': 'belgium@gocardless.com'
+    BE: {
+      HOMEPAGE: 'https://gocardless.com/fr',
+      POSTAL_ADDRESS: {
+        STREET_ADDRESS: '338-346 Goswell Road',
+        ADDRESS_LOCALITY: 'Londres',
+        POSTAL_CODE: 'EC1V 7LQ',
+        ADDRESS_COUNTRY: '',
+        ADDRESS_COUNTRY_ISO: 'GB'
+      },
+      SALES: {
+        PHONE_FULL: '+32 78 48 09 94',
+        PHONE_LOCAL: '078 48 09 94',
+        EMAIL: 'belgium@gocardless.com'
       }
     }
+  },
+  SOCIAL_LINKS: {
+    FACEBOOK: 'https://www.facebook.com/GoCardless',
+    TWITTER: 'https://twitter.com/gocardless',
+    GOOGLE: 'https://plus.google.com/+Gocardless',
+    LINKEDIN: 'https://www.linkedin.com/company/gocardless',
+    GITHUB: 'http://github.com/gocardless'
   }
 };
 
@@ -76,23 +95,37 @@ function buildSchemaDotOrgOrganization(metadata) {
     "contactPoint" : [],
   }
   
+  // Add social network links to sameAs
   for (var network in metadata.SOCIAL_LINKS) {
     organization.sameAs.push(metadata.SOCIAL_LINKS[network]);
   }
   
-  for (var country_code in metadata.CONTACT_POINTS) {
-    for (var contact_type in metadata.CONTACT_POINTS[country_code]) {
-      var contactInfo = metadata.CONTACT_POINTS[country_code][contact_type];
-      if (contactInfo.hasOwnProperty('full')) {
-        organization.contactPoint.push(
-          {
-            "@type" : "ContactPoint",
-            "telephone" : contactInfo.full,
-            "contactType" : contact_type,
-            "areaServed" : country_code
-          }
-        );
-      }
+  // Add contact details for office in each country
+  // See https://support.google.com/webmasters/answer/4620709?hl=en for supported contactType
+  for (var country_code in metadata.GOCARDLESS) {
+    // Sales number (contactType = sales)
+    if (metadata.GOCARDLESS[country_code].SALES) {
+      organization.contactPoint.push(
+        {
+          "@type" : "ContactPoint",
+          "telephone" : metadata.GOCARDLESS[country_code].SALES.PHONE_FULL,
+          "email" : metadata.GOCARDLESS[country_code].SALES.EMAIL,
+          "contactType" : "sales",
+          "areaServed" : country_code
+        }
+      );
+    }
+    // Customer support number (contactType = customer support)
+    if (metadata.GOCARDLESS[country_code].SUPPORT) {
+      organization.contactPoint.push(
+        {
+          "@type" : "ContactPoint",
+          "telephone" : metadata.GOCARDLESS[country_code].SUPPORT.PHONE_FULL,
+          "email" : metadata.GOCARDLESS[country_code].SUPPORT.EMAIL,
+          "contactType" : "customer support",
+          "areaServed" : country_code
+        }
+      );
     }
   }
   

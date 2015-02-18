@@ -29,24 +29,30 @@
     </div>
     <div class="grid__cell u-size-1of2">
       <div class="u-pull-end">
-        <div class="u-text-heading u-text-xxs u-color-invert u-margin-Bm">
-          GoCardless Ltd. 338-346 Goswell Road,
-          Londres, EC1V 7LQ <br>
-          FR: {{ CONTACT_POINTS.FR.sales.phone_full }},
-          <a href="mailto:{{ CONTACT_POINTS.FR.sales.email }}" class="u-link-clean u-link-invert u-text-heavy">
-            {{ CONTACT_POINTS.FR.sales.email }}
-          </a><br>
-          BE: {{ CONTACT_POINTS.BE.sales.phone_full }},
-          <a href="mailto:{{ CONTACT_POINTS.BE.sales.email }}" class="u-link-clean u-link-invert u-text-heavy">
-            {{ CONTACT_POINTS.BE.sales.email }}
-          </a>
-        </div>
-        <div class="u-text-heading u-text-xxs u-color-invert">
+        <p class="u-text-heading u-text-xxs u-color-invert u-margin-Bm" itemscope itemtype="http://schema.org/Organization">
+          <span itemprop="name">GoCardless Ltd.</span>
+          <meta itemprop="url" content="{{ GOCARDLESS.FR.HOMEPAGE }}" />
+          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">{{ GOCARDLESS.FR.POSTAL_ADDRESS.STREET_ADDRESS }}</span>,
+            <span itemprop="addressLocality">{{ GOCARDLESS.FR.POSTAL_ADDRESS.ADDRESS_LOCALITY }}</span>,
+            <span itemprop="postalCode">{{ GOCARDLESS.FR.POSTAL_ADDRESS.POSTAL_CODE }}</span>.
+            <span itemprop="addressCountry" content="{{ GOCARDLESS.FR.POSTAL_ADDRESS.ADDRESS_COUNTRY_ISO }}">{{ GOCARDLESS.FR.POSTAL_ADDRESS.ADDRESS_COUNTRY }}</span>
+          </span>
+          <br>
+          FR: <span itemprop="telephone" content="{{ GOCARDLESS.FR.SALES.PHONE_FULL }}">{{ GOCARDLESS.FR.SALES.PHONE_FULL }}</span>,
+          <a href="mailto:{{ GOCARDLESS.FR.SALES.EMAIL }}" class="u-link-clean u-link-invert" itemprop="email">{{ GOCARDLESS.FR.SALES.EMAIL }}</a>
+          <br>
+          BE: <span itemprop="telephone" content="{{ GOCARDLESS.BE.SALES.PHONE_FULL }}">{{ GOCARDLESS.BE.SALES.PHONE_FULL }}</span>,
+          <a href="mailto:{{ GOCARDLESS.BE.SALES.EMAIL }}" class="u-link-clean u-link-invert" itemprop="email">{{ GOCARDLESS.BE.SALES.EMAIL }}</a>
+        </p>
+        
+        <p class="u-text-heading u-text-xxs u-color-invert u-margin-Bm">
           GoCardless est un Etablissement de Paiement Agréé, régulé par l’autorité britannique FCA (Financial Conduct Authority) et habilité à collecter des paiements à travers l’Union Européenne.
-        </div>
-        <div class="u-text-heading u-text-xxs u-color-invert">
+        </p>
+        
+        <p class="u-text-heading u-text-xxs u-color-invert">
           En continuant votre visite sur notre site vous acceptez nos cookies. <a href="/fr/legal/politique-de-confidentialite?l=2#cookies" class="u-link-clean u-link-invert u-text-heavy">Apprenez-en plus</a>.
-        </div>
+        </p>
       </div>
     </div>
   </div>
