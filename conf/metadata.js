@@ -87,12 +87,12 @@ var metadata = {
 //   http://schema.org/Organization
 function buildSchemaDotOrgOrganization(metadata) {
   var organization = {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "url": "https://gocardless.com/",
-    "logo": metadata.LOGO,
-    "sameAs" : [],
-    "contactPoint" : [],
+    '@context': 'http://schema.org',
+    '@type': 'Organization',
+    'url': 'https://gocardless.com/',
+    'logo': metadata.LOGO,
+    'sameAs' : [],
+    'contactPoint' : [],
   }
   
   // Add social network links to sameAs
@@ -102,28 +102,28 @@ function buildSchemaDotOrgOrganization(metadata) {
   
   // Add contact details for office in each country
   // See https://support.google.com/webmasters/answer/4620709?hl=en for supported contactType
-  for (var country_code in metadata.GOCARDLESS) {
+  for (var countryCode in metadata.GOCARDLESS) {
     // Sales number (contactType = sales)
-    if (metadata.GOCARDLESS[country_code].SALES) {
+    if ('SALES' in metadata.GOCARDLESS[countryCode]) {
       organization.contactPoint.push(
         {
-          "@type" : "ContactPoint",
-          "telephone" : metadata.GOCARDLESS[country_code].SALES.PHONE_FULL,
-          "email" : metadata.GOCARDLESS[country_code].SALES.EMAIL,
-          "contactType" : "sales",
-          "areaServed" : country_code
+          '@type' : 'ContactPoint',
+          'telephone' : metadata.GOCARDLESS[countryCode].SALES.PHONE_FULL,
+          'email' : metadata.GOCARDLESS[countryCode].SALES.EMAIL,
+          'contactType' : 'sales',
+          'areaServed' : countryCode
         }
       );
     }
     // Customer support number (contactType = customer support)
-    if (metadata.GOCARDLESS[country_code].SUPPORT) {
+    if ('SUPPORT' in metadata.GOCARDLESS[countryCode]) {
       organization.contactPoint.push(
         {
-          "@type" : "ContactPoint",
-          "telephone" : metadata.GOCARDLESS[country_code].SUPPORT.PHONE_FULL,
-          "email" : metadata.GOCARDLESS[country_code].SUPPORT.EMAIL,
-          "contactType" : "customer support",
-          "areaServed" : country_code
+          '@type' : 'ContactPoint',
+          'telephone' : metadata.GOCARDLESS[countryCode].SUPPORT.PHONE_FULL,
+          'email' : metadata.GOCARDLESS[countryCode].SUPPORT.EMAIL,
+          'contactType' : 'customer support',
+          'areaServed' : countryCode
         }
       );
     }
