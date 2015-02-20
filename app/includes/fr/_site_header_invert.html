@@ -1,5 +1,5 @@
 <div class="u-pull-start">
-  <a href="/fr/pro" id="track-nav-home" class="header-logo u-relative u-block u-padding-Vl">
+  <a href="/fr" id="track-nav-home" class="header-logo u-relative u-block u-padding-Vl">
     <img ng-gc-svg-injector class="site-logo__image u-fill-invert" data-src="/images/logos/site-logo.svg">
   </a>
 </div>
@@ -20,6 +20,18 @@
           Tarifs
         </div>
       </a>
+    </div>
+    <div class="nav__item u-relative">
+      <popover-container>
+        <a popover-toggle href="" id="track-nav-more" class="u-padding-Vl u-block u-link-clean u-link-invert">
+          <div class="nav__item-link popover-link">
+            Plus
+          </div>
+        </a>
+        <popover-content class="popover">
+          {% include "fr/_more_dropdown_list.html" %}
+        </popover-content>
+      </popover-container>
     </div>
   </nav>
 
