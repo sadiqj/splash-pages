@@ -31,9 +31,13 @@ function stream(inFile, outFile, outRoot, compile) {
   }, function(file, enc, cb) {
     var _this = this;
     var parsed = frontMatter(file.toString());
-
+    
     // Strip output folder and trailing /index.html to get the path on website
     var destinationUrl = outFile.replace(outRoot, '').replace('/index.html', '');
+    // Add a trailing slash for language homepages (e.g. /, /fr/, /de/, etc.)
+    if (parsed.attributes.is_homepage) { 
+      destinationUrl = destinationUrl + '/';
+    }
     parsed.attributes.path = destinationUrl;
 
     compile(new Buffer(parsed.body), parsed.attributes)
