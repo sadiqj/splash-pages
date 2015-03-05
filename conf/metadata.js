@@ -40,7 +40,7 @@ var metadata = {
       }
     },
     FR: {
-      HOMEPAGE: 'https://gocardless.com/fr',
+      HOMEPAGE: 'https://gocardless.com/fr/',
       POSTAL_ADDRESS: {
         STREET_ADDRESS: '338-346 Goswell Road',
         ADDRESS_LOCALITY: 'Londres',
@@ -55,7 +55,7 @@ var metadata = {
       }
     },
     BE: {
-      HOMEPAGE: 'https://gocardless.com/fr',
+      HOMEPAGE: 'https://gocardless.com/fr/',
       POSTAL_ADDRESS: {
         STREET_ADDRESS: '338-346 Goswell Road',
         ADDRESS_LOCALITY: 'Londres',
