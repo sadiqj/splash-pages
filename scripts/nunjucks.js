@@ -32,14 +32,11 @@ function stream(inFile, outFile, outRoot, compile) {
     var _this = this;
     var parsed = frontMatter(file.toString());
     
-    if (parsed.attributes.is_homepage) {
-      // Strip output folder and index.html to get the path on the website (leave trailing slash)
-      // e.g. /, /fr/, /de/, etc.
-      var destinationUrl = outFile.replace(outRoot, '').replace('index.html', '');
-    } else {
-      // Strip output folder and trailing /index.html to get the path on website
-      // e.g. /about, /pricing, etc.
-      var destinationUrl = outFile.replace(outRoot, '').replace('/index.html', '');
+    // Strip output folder and trailing /index.html to get the path on website
+    var destinationUrl = outFile.replace(outRoot, '').replace('/index.html', '');
+    // Add a trailing slash for language homepages (e.g. /, /fr/, /de/, etc.)
+    if (parsed.attributes.is_homepage) { 
+      destinationUrl = destinationUrl + '/';
     }
     parsed.attributes.path = destinationUrl;
 
