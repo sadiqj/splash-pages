@@ -216,24 +216,6 @@ other_languages:
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/head-of-marketing" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Head of Marketing
-                  </a>
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/account-manager" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Account Manager
-                  </a>
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
                   <a href="#jobs/sales-executive" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
@@ -293,18 +275,6 @@ other_languages:
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead">
                 <div ng-if="$isActive">
                   {% include "about/_country_lead.html" %}
-                </div>
-              </div>
-
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/head-of-marketing">
-                <div ng-if="$isActive">
-                  {% include "about/_head_of_marketing.html" %}
-                </div>
-              </div>
-
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/account-manager">
-                <div ng-if="$isActive">
-                  {% include "about/_account_manager.html" %}
                 </div>
               </div>
 
