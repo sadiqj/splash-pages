@@ -190,34 +190,38 @@ other_languages:
                 </li>
 
                 <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
+                  Country Leads
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/country-lead-de-at" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Germany &amp; Austria
+                  </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/country-lead-nl-be" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Netherlands &amp; Belgium
+                  </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/country-lead-es" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Spain
+                  </a>
+                </li>
+
+                <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
                   Business Development
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/country-lead-germany-austria" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Country Lead: Germany & Austria
-                  </a>
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/country-lead-spain" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Country Lead: Spain
-                  </a>
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/country-lead-netherlands-belgium" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Country Lead: Netherlands & Belgium
-                  </a>
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
@@ -231,24 +235,6 @@ other_languages:
 
                 <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
                   Sales &amp; marketing
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/head-of-marketing" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Head of Marketing
-                  </a>
-                </li>
-
-                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/account-manager" class="nav-tabs__link"
-                  ng-click="$activate($event)"
-                  ng-class="{ 'is-active': $isActive }"
-                  ng-gc-tabby-trigger>
-                    Account Manager
-                  </a>
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
@@ -308,33 +294,21 @@ other_languages:
                 </div>
               </div>
 
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-germany-austria">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-de-at">
                 <div ng-if="$isActive">
-                  {% include "about/_country_lead_germany_austria.html" %}
+                  {% include "about/_country_lead_de_at.html" %}
                 </div>
               </div>
 
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-spain">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-nl-be">
                 <div ng-if="$isActive">
-                  {% include "about/_country_lead_spain.html" %}
+                  {% include "about/_country_lead_nl_be.html" %}
                 </div>
               </div>
 
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-netherlands-belgium">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-es">
                 <div ng-if="$isActive">
-                  {% include "about/_country_lead_netherlands_belgium.html" %}
-                </div>
-              </div>
-
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/head-of-marketing">
-                <div ng-if="$isActive">
-                  {% include "about/_head_of_marketing.html" %}
-                </div>
-              </div>
-
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/account-manager">
-                <div ng-if="$isActive">
-                  {% include "about/_account_manager.html" %}
+                  {% include "about/_country_lead_es.html" %}
                 </div>
               </div>
 
