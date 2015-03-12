@@ -190,16 +190,38 @@ other_languages:
                 </li>
 
                 <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
-                  Business Development
+                  Country Leads
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/country-lead" class="nav-tabs__link"
+                  <a href="#jobs/country-lead-de-at" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
-                    Country Lead
+                    Germany &amp; Austria
                   </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/country-lead-nl-be" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Netherlands &amp; Belgium
+                  </a>
+                </li>
+
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/country-lead-es" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Spain
+                  </a>
+                </li>
+
+                <li class="u-text-heading u-text-xs u-text-upcase u-color-p u-padding-Tm u-padding-Bs">
+                  Business Development
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
@@ -229,16 +251,16 @@ other_languages:
                 </li>
 
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
-                  <a href="#jobs/support-analyst" class="nav-tabs__link"
+                  <a href="#jobs/customer-support" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
                   ng-gc-tabby-trigger>
-                    Support Analyst
+                    Customer Support
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="grid__cell u-size-2of3 u-padding-Tl">
+            <div class="grid__cell u-size-2of3 u-padding-Tl u-padding-Ll">
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/software-engineer">
                 <div ng-if="$isActive">
                   {% include "about/_software_engineer.html" %}
@@ -272,21 +294,31 @@ other_languages:
                 </div>
               </div>
 
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-de-at">
                 <div ng-if="$isActive">
-                  {% include "about/_country_lead.html" %}
+                  {% include "about/_country_lead_de_at.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-nl-be">
+                <div ng-if="$isActive">
+                  {% include "about/_country_lead_nl_be.html" %}
                 </div>
               </div>
 
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/country-lead-es">
+                <div ng-if="$isActive">
+                  {% include "about/_country_lead_es.html" %}
+                </div>
+              </div>
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/sales-executive">
                 <div ng-if="$isActive">
                   {% include "about/_sales_executive.html" %}
                 </div>
               </div>
 
-              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/support-analyst">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/customer-support">
                 <div ng-if="$isActive">
-                  {% include "about/_support_analyst.html" %}
+                  {% include "about/_customer_support.html" %}
                 </div>
               </div>
             </div>
