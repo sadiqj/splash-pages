@@ -39,6 +39,11 @@ function stream(inFile, outFile, outRoot, compile) {
       destinationUrl = destinationUrl + '/';
     }
     parsed.attributes.path = destinationUrl;
+    
+    // If language isn't set in the front-matter, change it to the DEFAULT_LANGUAGE config variable (en if DEFAULT_LANGUAGE is missing)
+    if (!parsed.attributes.language) {
+        parsed.attributes.language = _.has(globalMetadata, 'DEFAULT_LANGUAGE') ? globalMetadata.DEFAULT_LANGUAGE : 'en';
+    }
 
     compile(new Buffer(parsed.body), parsed.attributes)
       .then(function(result) {

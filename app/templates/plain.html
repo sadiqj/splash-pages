@@ -11,18 +11,17 @@
     <meta name="og:image:secure_url" content="{{ LOGO }}">
     <meta name="google-site-verification" content="Y80kah87ghJhwiDqw-5ap234p9wCcGt6kMRxvnamtHU">
     <link href="{{ SOCIAL_LINKS.GOOGLE }}" rel="publisher">
+    <link rel="canonical" href="https://gocardless.com{{path}}">
     {%- macro hreflang_tag(language_code, path) -%}
-      <link rel="alternate" href="https://gocardless.com{{path}}" hreflang="{{language_code}}" />
+      <link rel="alternate" href="https://gocardless.com{{path}}" hreflang="{{language_code}}">
       {% if language_code == "en" -%}
-        <link rel="alternate" href="https://gocardless.com{{path}}" hreflang="x-default" />
+        <link rel="alternate" href="https://gocardless.com{{path}}" hreflang="x-default">
       {%- endif %}
-    {%- endmacro -%}
-    {% if language %}
+    {%- endmacro %}
+    {{ hreflang_tag(language, path) }}
+    {% for language, path in other_languages -%}
       {{ hreflang_tag(language, path) }}
-      {% for language, path in other_languages -%}
-        {{ hreflang_tag(language, path) }}
-      {%- endfor -%}
-    {%- endif %}
+    {%- endfor -%}
     <!--[if lt IE 9]>
     <script>
       (function() {

@@ -14,6 +14,7 @@ var metadata = {
   CTA_BASIC: 'Start taking payments',
   CTA_PRO: 'Contact sales',
   LOGO: 'https://gocardless.com/images/logos/gocardless-square.png',
+  DEFAULT_LANGUAGE: 'en',
   
   // Details of international offices & contact numbers
   // The country code (e.g. GB, FR, BE) should use ISO-3166-2
