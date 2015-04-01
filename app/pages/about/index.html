@@ -168,6 +168,14 @@ other_languages:
                   </a>
                 </li>
                 <li class="u-padding-Bs u-text-light u-text-no-smoothing">
+                  <a href="#jobs/developer-relations" class="nav-tabs__link"
+                  ng-click="$activate($event)"
+                  ng-class="{ 'is-active': $isActive }"
+                  ng-gc-tabby-trigger>
+                    Developer Relations
+                  </a>
+                </li>
+                <li class="u-padding-Bs u-text-light u-text-no-smoothing">
                   <a href="#jobs/engineering-interns" class="nav-tabs__link"
                   ng-click="$activate($event)"
                   ng-class="{ 'is-active': $isActive }"
@@ -266,9 +274,14 @@ other_languages:
                   {% include "about/_software_engineer.html" %}
                 </div>
               </div>
-               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/engineering-interns">
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/engineering-interns">
                 <div ng-if="$isActive">
                   {% include "about/_engineering_interns.html" %}
+                </div>
+              </div>
+              <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/developer-relations">
+                <div ng-if="$isActive">
+                  {% include "about/_developer_relations.html" %}
                 </div>
               </div>
               <div ng-gc-tabby-content class="section-scroll-target--jobs" scroll-into-view id="jobs/web-ops">
