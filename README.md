@@ -75,7 +75,7 @@ Production is deployed once tests on the `master` branch pass. Merge `dev` into
 Set up AWS credentials (web ops):
 ```
 export GC_AWS_ACCESS_KEY=ask webops
-export GC_AWS_ACCESS_KEY=ask webops
+export GC_AWS_SECRET=ask webops
 ```
 
 Testing:
